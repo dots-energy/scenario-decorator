@@ -6,7 +6,7 @@ authors = [ { name = "Leo van Schooten", email = "l.g.t.v.schooten@tue.nl" } ]
 readme = "README.md"
 license = "MIT"
 license-files = [
-    "LICENSE",
+    "LICENSE"
 ]
 requires-python = ">=3.10"
 classifiers = [
@@ -28,6 +28,4 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
-dots-esdl-decorator = "esdl_decorator:main"
-
-
+dots-esdl-decorator = "dots_esdl_decorator.esdl_decorator:main"

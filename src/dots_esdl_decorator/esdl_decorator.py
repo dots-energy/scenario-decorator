@@ -50,7 +50,7 @@ class EsdlDecorator:
                     i += 1
                 else:
                     logging.warning(f"Data missing for date {data_date}, using previous value {prev_value} for column {column_name}")
-                timeseries_profile.values.append(value)
+                timeseries_profile.values.append(float(value))
                 data_date += timedelta(seconds=delta_t)
             return timeseries_profile
 
@@ -71,33 +71,16 @@ class EsdlDecorator:
         da_market = EnergyMarket(name='DA-market', id=str(uuid.uuid4()))
         services = Services(id=str(uuid.uuid4()))
         # 01-01-2009 00:00
-        df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='%d-%m-%Y %H:%M')
+        df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='%Y-%m-%d %H:%M:%S')
+        print(df.index.dtype)
+        df.sort_index(ascending=True)
 
-        da_price_datetime_profile = self.create_time_series_profile_from_df(df, 'Day-ahead Price [EUR-MWh]')
-
-        da_market.marketPrice = da_price_datetime_profile
-        services.service.append(da_market)
-        self.energy_system.services = services
-
-    def add_da_market(self, day_ahead_prices_file: Path):
-        da_market = EnergyMarket(name='DA-market', id=str(uuid.uuid4()))
-        services = Services(id=str(uuid.uuid4()))
-        df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True)
-        data_numpy = df.reset_index().to_numpy()
-
-        da_price_datetime_profile = DateTimeProfile()
-        for i in range(data_numpy.shape[0] - 1):
-            value = float(data_numpy[i][1])
-            from_date = data_numpy[i][0].to_pydatetime()
-            to_date = data_numpy[i + 1][0].to_pydatetime()
-            profile_element_da_price = ProfileElement(from_=from_date,
-                                                      to=to_date,
-                                                      value=value)
-            da_price_datetime_profile.element.append(profile_element_da_price)
+        da_price_datetime_profile = self.create_time_series_profile_from_df(df, 'Day-ahead Price [EUR/MWh]')
 
         da_market.marketPrice = da_price_datetime_profile
         services.service.append(da_market)
         self.energy_system.services = services
+
 
     def add_pvs_and_batteries_to_houses(self, fraction_houses_pv : float, fraction_houses_pv_battery : float):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
@@ -272,7 +255,7 @@ def main():
 
     path_market_data_file = Path(da_market_file)
     if path_weather_file.exists():
-        esdl_decorator.add_da_market(path_market_data_file)
+        esdl_decorator.add_da_market_timeseries_profile(path_market_data_file)
     else:
         logging.info("Skip adding market data as the file was not found")
 

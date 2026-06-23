@@ -1,0 +1,9 @@
+{
+    "fraction_houses_pv" : 0.5,
+    "fraction_houses_pv_battery" : 0.1,
+    "fraction_houses_hp" : 0.2,
+    "fraction_houses_ev" : 0.3,
+    "fraction_houses_dyn" : 0.5,
+    "weather_file" : "test/input_files/weather-data.csv",
+    "da_market_file" : "test/input_files/df_da_prices_2023_fixed.csv"
+}

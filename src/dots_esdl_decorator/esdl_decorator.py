@@ -4,12 +4,14 @@ import argparse
 import json
 import logging
 
-from esdl import Battery, Building, DateTimeProfile, EConnection, EVChargingStation, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatPump, InPort, OutPort, PVInstallation, Parties, Party, Point, ProfileElement, Services, TimeSeriesProfile
+from esdl import Battery, Building, EConnection, EVChargingStation, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatPump, HeatingDemand, InPort, OutPort, PVInstallation, Parties, Party, Point, Services, TimeSeriesProfile, HeatDemandTypeEnum
 import numpy as np
 import pandas as pd
 from datetime import timedelta
 import random
 from esdl.esdl_handler import EnergySystemHandler
+
+from dots_esdl_decorator.dataclasses import DhwProfileMetaData
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -19,6 +21,7 @@ class EsdlDecorator:
         self.esdl_name = esdl_name
         self.energy_system = esh.load_file(esdl_name)
         self.area = self.energy_system.instance[0].area
+        self.dhw_profiles_mapping :dict[str, DhwProfileMetaData] = {} 
 
     def add_dso(self):
         dso = Party(name='DSO', id=str(uuid.uuid4()))
@@ -81,6 +84,31 @@ class EsdlDecorator:
         services.service.append(da_market)
         self.energy_system.services = services
 
+    def add_dhw_profiles(self, dhw_profile_file : Path, amount_of_profiles : int, dhw_profile_name : str):
+        random.seed(42)
+
+        dhw_profiles = pd.read_csv(dhw_profile_file, index_col=0, parse_dates=True, date_format='%Y-%m-%d %H:%M:%S')
+        column_choices = list(range(len(dhw_profiles.columns)))
+
+        for i in range(amount_of_profiles):
+            col_nr = random.choice(column_choices)
+            column_choices.remove(col_nr)
+
+            time_series_profile = self.create_time_series_profile_from_df(dhw_profiles, dhw_profiles.columns[col_nr])
+
+            heating_demand = HeatingDemand(type=HeatDemandTypeEnum.from_string('HOT_TAPWATER'))
+            if dhw_profile_name not in self.dhw_profiles_mapping:
+                self.dhw_profiles_mapping[dhw_profile_name] = DhwProfileMetaData()
+            esdl_dhw_profile_name = f"{dhw_profile_name}{len(self.dhw_profiles_mapping[dhw_profile_name].ports)}"
+
+            heating_demand.name = esdl_dhw_profile_name
+            in_port = InPort(id=str(uuid.uuid4()), name="In")
+            heating_demand.port.append(in_port)
+            heating_demand.port.append(OutPort(id=str(uuid.uuid4()), name="Out"))
+            heating_demand.port[1].profile.append(time_series_profile)
+            self.dhw_profiles_mapping[dhw_profile_name].ports.append(in_port)
+            self.energy_system.instance[0].area.asset.append(heating_demand)
+
 
     def add_pvs_and_batteries_to_houses(self, fraction_houses_pv : float, fraction_houses_pv_battery : float):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
@@ -120,6 +148,19 @@ class EsdlDecorator:
                 if i in house_indices_bat:
                     self.add_consuming_asset_to_other_asset(battery, grid, house)
 
+    def connect_dhw_heatpump_to_profile(self, heatpump : HeatPump, dhw_profile_name : str):
+        if len(self.dhw_profiles_mapping) > 0:
+            meta_data = self.dhw_profiles_mapping[dhw_profile_name]
+            print(meta_data.index_to_pick)
+            connected_to = meta_data.ports[meta_data.index_to_pick]
+            out_port = OutPort(id=str(uuid.uuid4()), connectedTo=[connected_to])
+            connected_to.connectedTo.append(out_port)
+            heatpump.port.append(out_port)
+            amount_of_profiles = len(self.dhw_profiles_mapping[dhw_profile_name].ports)
+            self.dhw_profiles_mapping[dhw_profile_name].index_to_pick = (self.dhw_profiles_mapping[dhw_profile_name].index_to_pick + 1) % amount_of_profiles
+        else:
+            logging.warning("No domestic hot water profiles loaded so not connecting hot water profiles")
+
     def add_heat_pump_to_houses(self, fraction_houses_hp : float):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
         n_houses = len(houses)
@@ -139,6 +180,8 @@ class EsdlDecorator:
             # add heat pump
             heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_power, powerFactor=0.98,
                                  assetType='air_water')
+            
+            self.connect_dhw_heatpump_to_profile(heat_pump, "test_name")
 
             # add to a random phase
             phase = random.randint(0, len(phase_grids) - 1)
@@ -189,16 +232,12 @@ class EsdlDecorator:
                 self.add_producing_asset_to_other_asset(charging_station, phase_grids[phase], house)
 
 
-
     def save_esdl(self):
         esh = EnergySystemHandler(energy_system=self.energy_system)
-        try:
-            input_path = Path(self.esdl_name)
-            out_name = 'decorated_' + input_path.name
-        except Exception:
-            out_name = 'decorated_' + str(self.esdl_name)
+        input_path = Path(self.esdl_name)
+        out_name = 'decorated_' + input_path.name
         esh.save(out_name)
-        
+
 
     @staticmethod
     def add_consuming_asset_to_other_asset(asset : EnergyAsset, other_asset : EnergyAsset, background):
@@ -209,6 +248,7 @@ class EsdlDecorator:
         inport_asset = InPort(id=str(uuid.uuid4()), connectedTo=[outport_other_asset])
         asset.port.append(inport_asset)
 
+
     @staticmethod
     def add_producing_asset_to_other_asset(asset : EnergyAsset, other_asset : EnergyAsset, background):
         # background refers to the non-energy asset to which the new asset is added (area, house, etc.)
@@ -217,6 +257,7 @@ class EsdlDecorator:
         other_asset.port.append(inport_other_asset)
         outport_asset = OutPort(id=str(uuid.uuid4()), connectedTo=[inport_other_asset])
         asset.port.append(outport_asset)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Decorate an ESDL file using JSON parameters")
@@ -258,6 +299,16 @@ def main():
         esdl_decorator.add_da_market_timeseries_profile(path_market_data_file)
     else:
         logging.info("Skip adding market data as the file was not found")
+
+    dhw_profiles = params.get('dhw_profiles', [])
+    for profile in dhw_profiles:
+        path = Path(profile["profile_file"])
+        if path.exists():
+            profile_name = profile["profile_name"]
+            amount_of_profiles = profile["amount_of_profiles"]
+            esdl_decorator.add_dhw_profiles(path, amount_of_profiles, profile_name)
+        else:
+            logging.info(f"Skip adding domestic hot water profile because file {str(path)} does not exist")
 
     esdl_decorator.add_pvs_and_batteries_to_houses(fraction_houses_pv, fraction_houses_pv_battery)
     esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp)

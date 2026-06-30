@@ -5,5 +5,12 @@
     "fraction_houses_ev" : 0.3,
     "fraction_houses_dyn" : 0.5,
     "weather_file" : "test/input_files/weather-data.csv",
-    "da_market_file" : "test/input_files/df_da_prices_2023_fixed.csv"
+    "da_market_file" : "test/input_files/df_da_prices_2023_fixed.csv",
+    "dhw_profiles" : [
+        {
+            "profile_name" : "test_name",
+            "profile_file" : "test/input_files/dhw_profiles.csv",
+            "amount_of_profiles" : 5
+        }
+    ]
 }

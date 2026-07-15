@@ -17,6 +17,7 @@ dependencies = [
     "numpy==2.4.6",
     "pandas==3.0.3",
     "pyESDL==26.5",
+    "dataclasses-json==0.6.7"
 ]
 
 [project.urls]

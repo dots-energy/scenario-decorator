@@ -11,5 +11,5 @@ pip install dots-esdl-decorator
 ## Usage
 Parameters must be configured using a json file an example can be found here. 
 ```
-dots-esdl-decorator test/input_files/test.esdl params_example.json
+dots-esdl-decorator test/input_files/test.esdl example_params/params_example.json
 ```

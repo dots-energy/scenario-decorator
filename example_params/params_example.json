@@ -1,11 +1,27 @@
 {
-    "fraction_houses_pv" : 0.5,
+    "pv_specification" : {
+        "fraction_houses_pv" : 0.2,
+        "power_range_values" : [2500,2750, 3000, 3250, 3500],
+        "panel_angle_values" : [15, 20, 25, 30],
+        "orientation_min" : 90,
+        "orientation_max" : 270,
+        "surface_area_min" : 6,
+        "surface_area_max" : 16
+    },
     "fraction_houses_pv_battery" : 0.1,
     "fraction_houses_hp" : 0.2,
     "fraction_houses_ev" : 0.3,
     "fraction_houses_dyn" : 0.5,
-    "weather_file" : "test/input_files/weather-data.csv",
-    "da_market_file" : "test/input_files/df_da_prices_2023_fixed.csv",
+    "weather_data" : {
+        "path": "test/input_files/weather-data.csv",
+        "soil_temperature_column": "soil_temperature_celcius",
+        "solar_irradiance_column": "solar_radiation_W/m2",
+        "outside_temperature_column": "air_temperature_celcius"
+    },
+    "da_market_data" : {
+        "path": "test/input_files/df_da_prices_2023_fixed.csv",
+        "price_column" : "Day-ahead Price [EUR/MWh]"
+    },
     "dhw_profiles" : [
         {
             "profile_name" : "test_name",

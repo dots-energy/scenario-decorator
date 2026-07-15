@@ -11,7 +11,7 @@ from datetime import timedelta
 import random
 from esdl.esdl_handler import EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import DhwProfileMetaData
+from dots_esdl_decorator.dataclasses import DhwProfileMetaData, PvSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -60,32 +60,39 @@ class EsdlDecorator:
         logging.warning(f"column {column_name} not found in provided input data")
         return TimeSeriesProfile()
 
-    def add_weather(self, data_file : Path):
+    def add_weather(self, data_file : Path, column_mapping: dict[str, str] | None = None):
         energy_system_information = EnergySystemInformation(id=str(uuid.uuid4()))
         weather = EnvironmentalProfiles(name='weather', id=str(uuid.uuid4()))
         energy_system_information.environmentalProfiles = weather
         self.energy_system.energySystemInformation = energy_system_information
         df = pd.read_csv(data_file, index_col=0, parse_dates=True)
-        weather.soilTemperatureProfile = self.create_time_series_profile_from_df(df, 'soil_temperature_celcius')
-        weather.solarIrradianceProfile = self.create_time_series_profile_from_df(df, 'solar_radiation_W/m2')
-        weather.outsideTemperatureProfile = self.create_time_series_profile_from_df(df, 'air_temperature_celcius')
 
-    def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path):
+        weather.soilTemperatureProfile = self.create_time_series_profile_from_df(
+            df,
+            column_mapping.get('soil_temperature', 'soil_temperature_celcius'),
+        )
+        weather.solarIrradianceProfile = self.create_time_series_profile_from_df(
+            df,
+            column_mapping.get('solar_irradiance', 'solar_radiation_W/m2'),
+        )
+        weather.outsideTemperatureProfile = self.create_time_series_profile_from_df(
+            df,
+            column_mapping.get('outside_temperature', 'air_temperature_celcius'),
+        )
+
+    def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str):
         da_market = EnergyMarket(name='DA-market', id=str(uuid.uuid4()))
         services = Services(id=str(uuid.uuid4()))
-        # 01-01-2009 00:00
         df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='%Y-%m-%d %H:%M:%S')
-        print(df.index.dtype)
         df.sort_index(ascending=True)
 
-        da_price_datetime_profile = self.create_time_series_profile_from_df(df, 'Day-ahead Price [EUR/MWh]')
+        da_price_datetime_profile = self.create_time_series_profile_from_df(df, price_column)
 
         da_market.marketPrice = da_price_datetime_profile
         services.service.append(da_market)
         self.energy_system.services = services
 
     def add_dhw_profiles(self, dhw_profile_file : Path, amount_of_profiles : int, dhw_profile_name : str):
-        random.seed(42)
 
         dhw_profiles = pd.read_csv(dhw_profile_file, index_col=0, parse_dates=True, date_format='%Y-%m-%d %H:%M:%S')
         column_choices = list(range(len(dhw_profiles.columns)))
@@ -110,24 +117,23 @@ class EsdlDecorator:
             self.energy_system.instance[0].area.asset.append(heating_demand)
 
 
-    def add_pvs_and_batteries_to_houses(self, fraction_houses_pv : float, fraction_houses_pv_battery : float):
+    def add_pvs_and_batteries_to_houses(self, pv_specification : PvSpecification, fraction_houses_pv_battery : float):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
         n_houses = len(houses)
-        n_pv = round(fraction_houses_pv * n_houses)
+        n_pv = round(pv_specification.fraction_houses_pv * n_houses)
         n_bat = round(fraction_houses_pv_battery * n_pv)
 
-        random.seed(0)
         house_indices_pv = random.sample(range(0, n_houses), n_pv)
         house_indices_bat = random.sample(house_indices_pv, n_bat)
 
         for i in house_indices_pv:
             house = houses[i]
             surface_area = random.randint(6, 16)  # 1 panel 1mx1.60m, 4-10 panels
-            power_range = [2500,2750, 3000, 3250, 3500]
+            power_range = pv_specification.power_range_values
             power = float(random.choice(power_range))
-            panel_angles = [15, 20, 25, 30]
+            panel_angles = pv_specification.panel_angle_values
             panel_angle = random.choice(panel_angles)
-            orientation = random.randint(90,270)
+            orientation = random.randint(pv_specification.orientation_min, pv_specification.orientation_max)
             pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=power, angle=panel_angle,
                                              orientation=orientation, powerFactor=1.0, surfaceArea=surface_area) # ISIE
 
@@ -151,7 +157,6 @@ class EsdlDecorator:
     def connect_dhw_heatpump_to_profile(self, heatpump : HeatPump, dhw_profile_name : str):
         if len(self.dhw_profiles_mapping) > 0:
             meta_data = self.dhw_profiles_mapping[dhw_profile_name]
-            print(meta_data.index_to_pick)
             connected_to = meta_data.ports[meta_data.index_to_pick]
             out_port = OutPort(id=str(uuid.uuid4()), connectedTo=[connected_to])
             connected_to.connectedTo.append(out_port)
@@ -259,7 +264,7 @@ class EsdlDecorator:
         asset.port.append(outport_asset)
 
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(description="Decorate an ESDL file using JSON parameters")
     parser.add_argument('esdl', help='Path to the input ESDL file')
     parser.add_argument('params', help='Path to a JSON file with parameters')
@@ -272,14 +277,11 @@ def main():
         logging.exception(f"Failed to load params file {args.params}: {e}")
         return 2
 
-    fraction_houses_pv = params.get('fraction_houses_pv', 0.0)
+    pv_specification = PvSpecification.from_dict(params.get('pv_specification'))
     fraction_houses_pv_battery = params.get('fraction_houses_pv_battery', 0.0)
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     fraction_houses_ev = params.get('fraction_houses_ev', 0.0)
     fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
-
-    weather_file = params.get('weather_file', 'weather-data.csv')
-    da_market_file = params.get('da_market_file', 'df_da_prices_2023_fixed.csv')
 
     esdl_path = Path(args.esdl)
     if esdl_path.exists():
@@ -288,17 +290,28 @@ def main():
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2
 
-    path_weather_file = Path(weather_file)
-    if path_weather_file.exists():
-        esdl_decorator.add_weather(path_weather_file)
-    else:
-        logging.info("Skip adding weather data as the file was not found")
+    weather_data = params.get('weather_data', '')
+    if isinstance(weather_data, dict):
+        weather_path = weather_data.get('path', 'weather-data.csv')
+        weather_columns = {
+            'soil_temperature': weather_data.get('soil_temperature_column', 'soil_temperature_celcius'),
+            'solar_irradiance': weather_data.get('solar_irradiance_column', 'solar_radiation_W/m2'),
+            'outside_temperature': weather_data.get('outside_temperature_column', 'air_temperature_celcius')
+        }
+        path_weather_file = Path(weather_path)
+        if path_weather_file.exists():
+            esdl_decorator.add_weather(path_weather_file, weather_columns)
+        else:
+            logging.info("Skip adding weather data as the file was not found")
 
-    path_market_data_file = Path(da_market_file)
-    if path_weather_file.exists():
-        esdl_decorator.add_da_market_timeseries_profile(path_market_data_file)
-    else:
-        logging.info("Skip adding market data as the file was not found")
+    da_market_data = params.get('da_market_data', 'df_da_prices_2023_fixed.csv')
+    if isinstance(da_market_data, dict):
+        path_market_data_file = Path(da_market_data.get('path', 'weather-data.csv'))
+        if path_weather_file.exists():
+            price_column = da_market_data.get('price_column', 'Day-ahead Price [EUR/MWh]')
+            esdl_decorator.add_da_market_timeseries_profile(path_market_data_file, price_column)
+        else:
+            logging.info("Skip adding market data as the file was not found")
 
     dhw_profiles = params.get('dhw_profiles', [])
     for profile in dhw_profiles:
@@ -310,7 +323,7 @@ def main():
         else:
             logging.info(f"Skip adding domestic hot water profile because file {str(path)} does not exist")
 
-    esdl_decorator.add_pvs_and_batteries_to_houses(fraction_houses_pv, fraction_houses_pv_battery)
+    esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, fraction_houses_pv_battery)
     esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp)
     esdl_decorator.add_ev_chargingstation(fraction_houses_ev)
     esdl_decorator.add_econnection_information(fraction_houses_dyn)

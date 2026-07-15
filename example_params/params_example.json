@@ -27,12 +27,20 @@
     },
     "da_market_data" : {
         "path": "test/input_files/df_da_prices_2023_fixed.csv",
-        "price_column" : "Day-ahead Price [EUR/MWh]"
+        "price_column" : "Day-ahead Price [EUR/MWh]",
+        "price_unit" : "EUR/MWh"
     },
     "dhw_profiles" : [
         {
-            "profile_name" : "test_name",
-            "profile_file" : "test/input_files/dhw_profiles.csv",
+            "profile_name" : "test_name_hw",
+            "profile_file" : "test/input_files/dhw_profiles_example.csv",
+            "amount_of_profiles" : 5
+        }
+    ],
+    "space_heating_profiles" : [
+        {
+            "profile_name" : "test_name_sh",
+            "profile_file" : "test/input_files/sh_profiles_example.csv",
             "amount_of_profiles" : 5
         }
     ]

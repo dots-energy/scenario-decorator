@@ -4,7 +4,7 @@ from dataclasses_json import dataclass_json
 from esdl import InPort
 
 @dataclass
-class DhwProfileMetaData:
+class ProfileMetaData:
     ports : list[InPort] = field(default_factory=list)
     index_to_pick : int = 0
 

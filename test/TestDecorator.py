@@ -6,7 +6,7 @@ from pathlib import Path
 from esdl import Battery, Building, EVChargingStation, HeatPump, PVInstallation, TimeSeriesProfile
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
-from dots_esdl_decorator.esdl_decorator import EsdlDecorator
+from dots_esdl_decorator.esdl_decorator import EsdlBuilder
 
 class Test(unittest.TestCase):
 
@@ -14,7 +14,7 @@ class Test(unittest.TestCase):
         esdl_test_file_path = Path(__file__).parent / "input_files" / "test.esdl"
         self.da_prices_file = Path(__file__).parent / "input_files" / "df_da_prices_2023_fixed.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
-        self.esdl_decorator = EsdlDecorator(str(esdl_test_file_path))
+        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path))
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
         self.default_weather_col_mapping = {
@@ -104,6 +104,15 @@ class Test(unittest.TestCase):
         self.assertListEqual(market_profile.values, expected_market_values)
         self.assertEqual(market_profile.startDateTime, datetime.strptime('2023-01-01 00:00:00', '%Y-%m-%d %H:%M:%S'))
         self.assertEqual(market_profile.timestep, 900)
+
+    def test_add_dhw_profiles(self):
+        pass
+
+    def test_add_sh_profiles(self):
+        pass
+
+    def test_add_ev_profiles(self):
+        pass
 
 
 if __name__ == '__main__':

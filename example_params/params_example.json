@@ -8,7 +8,14 @@
         "surface_area_min" : 6,
         "surface_area_max" : 16
     },
-    "fraction_houses_pv_battery" : 0.1,
+    "battery_specification" : {
+        "fraction_houses_pv_battery" : 0.1,
+        "min_capacity_kwh" : 10.0,
+        "max_capacity_kwh" : 16.0,
+        "min_charge_rate_kw" : 5.0,
+        "max_charge_rate_kw" : 7.5
+    },
+    
     "fraction_houses_hp" : 0.2,
     "fraction_houses_ev" : 0.3,
     "fraction_houses_dyn" : 0.5,

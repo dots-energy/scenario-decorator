@@ -11,7 +11,7 @@ from datetime import timedelta
 import random
 from esdl.esdl_handler import EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import DhwProfileMetaData, PvSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, DhwProfileMetaData, PvSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -69,15 +69,15 @@ class EsdlDecorator:
 
         weather.soilTemperatureProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping.get('soil_temperature', 'soil_temperature_celcius'),
+            column_mapping['soil_temperature'],
         )
         weather.solarIrradianceProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping.get('solar_irradiance', 'solar_radiation_W/m2'),
+            column_mapping['solar_irradiance'],
         )
         weather.outsideTemperatureProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping.get('outside_temperature', 'air_temperature_celcius'),
+            column_mapping['outside_temperature'],
         )
 
     def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str):
@@ -117,11 +117,11 @@ class EsdlDecorator:
             self.energy_system.instance[0].area.asset.append(heating_demand)
 
 
-    def add_pvs_and_batteries_to_houses(self, pv_specification : PvSpecification, fraction_houses_pv_battery : float):
+    def add_pvs_and_batteries_to_houses(self, pv_specification : PvSpecification, battery_specification : BatterySpecification):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
         n_houses = len(houses)
         n_pv = round(pv_specification.fraction_houses_pv * n_houses)
-        n_bat = round(fraction_houses_pv_battery * n_pv)
+        n_bat = round(battery_specification.fraction_houses_pv_battery * n_pv)
 
         house_indices_pv = random.sample(range(0, n_houses), n_pv)
         house_indices_bat = random.sample(house_indices_pv, n_bat)
@@ -140,9 +140,9 @@ class EsdlDecorator:
             pv_installation.geometry = Point(CRS="Simple", lon=236.0, lat=415.0)
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
-                capacity = random.uniform(10.0, 16.0) * 3.6e6
+                capacity = random.uniform(battery_specification.min_capacity_kwh, battery_specification.max_capacity_kwh) * 3.6e6
                 fill_level = random.uniform(0.3, 0.7)  # fraction of total capacity
-                charge_rate = random.uniform(5.0, 7.5) * 1.0e3
+                charge_rate = random.uniform(battery_specification.min_charge_rate_kw, battery_specification.max_charge_rate_kw) * 1.0e3
                 battery = Battery(name='battery_' + house.name, id=str(uuid.uuid4()),
                                   capacity=capacity,
                                   chargeEfficiency=0.95, dischargeEfficiency=0.95,
@@ -278,7 +278,7 @@ def main() -> int:
         return 2
 
     pv_specification = PvSpecification.from_dict(params.get('pv_specification'))
-    fraction_houses_pv_battery = params.get('fraction_houses_pv_battery', 0.0)
+    battery_specification = BatterySpecification.from_dict(params.get('battery_specification'))
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     fraction_houses_ev = params.get('fraction_houses_ev', 0.0)
     fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
@@ -323,7 +323,7 @@ def main() -> int:
         else:
             logging.info(f"Skip adding domestic hot water profile because file {str(path)} does not exist")
 
-    esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, fraction_houses_pv_battery)
+    esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, battery_specification)
     esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp)
     esdl_decorator.add_ev_chargingstation(fraction_houses_ev)
     esdl_decorator.add_econnection_information(fraction_houses_dyn)

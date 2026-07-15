@@ -5,6 +5,7 @@ from pathlib import Path
 
 from esdl import Battery, Building, EVChargingStation, HeatPump, PVInstallation, TimeSeriesProfile
 
+from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlDecorator
 
 class Test(unittest.TestCase):
@@ -16,6 +17,11 @@ class Test(unittest.TestCase):
         self.esdl_decorator = EsdlDecorator(str(esdl_test_file_path))
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
+        self.default_weather_col_mapping = {
+            'soil_temperature': 'soil_temperature_celcius',
+            'solar_irradiance': 'solar_radiation_W/m2',
+            'outside_temperature': 'air_temperature_celcius'
+        }
 
     def get_amount_of_assets_with_type_in_building(self, asset_type):
         ret_val = 0
@@ -30,16 +36,16 @@ class Test(unittest.TestCase):
 
     def test_add_pvs_and_batteries_counts_houses(self):
 
-        fraction_houses_pv = 0.5
-        fraction_houses_pv_battery = 0.1
+        pv_specification = PvSpecification(0.5)
+        battery_specification = BatterySpecification(0.1)
 
-        self.esdl_decorator.add_pvs_and_batteries_to_houses(fraction_houses_pv, fraction_houses_pv_battery)
+        self.esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, battery_specification)
 
         houses_with_pv = self.get_amount_of_assets_with_type_in_building(PVInstallation)
         houses_with_battery = self.get_amount_of_assets_with_type_in_building(Battery)
 
-        expected_pv = round(fraction_houses_pv * self.n_buildings)
-        expected_batt = round(fraction_houses_pv_battery * expected_pv)
+        expected_pv = round(pv_specification.fraction_houses_pv * self.n_buildings)
+        expected_batt = round(battery_specification.fraction_houses_pv_battery * expected_pv)
         self.assertEqual(houses_with_pv, expected_pv)
         self.assertEqual(houses_with_battery, expected_batt)
 
@@ -67,7 +73,7 @@ class Test(unittest.TestCase):
 
     def test_add_weather_data(self):
 
-        self.esdl_decorator.add_weather(self.weather_data_file)
+        self.esdl_decorator.add_weather(self.weather_data_file, self.default_weather_col_mapping)
 
         expected_irradiance_values = [2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 2, 2, 1, 2, 1, 1, 2]
         expected_soil_temperature_values = [9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7]
@@ -89,7 +95,7 @@ class Test(unittest.TestCase):
 
     def test_add_market_data(self):
 
-        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file)
+        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]')
 
         expected_market_values = [-3.61, -3.61, -3.61, -3.61, -1.46, -1.46, -1.46, -1.46, -1.52, -1.52, -1.52, -1.52, -5.0, -5.0, -5.0, -5.0, -4.6, -4.6, -4.6, -4.6, -4.05, -4.05, -4.05, -4.05]
 

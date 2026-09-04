@@ -15,7 +15,7 @@
         "min_charge_rate_kw" : 5.0,
         "max_charge_rate_kw" : 7.5
     },
-    
+    "harmonize_profile_dates" : true,
     "fraction_houses_hp" : 0.2,
     "fraction_houses_ev" : 0.3,
     "fraction_houses_dyn" : 0.5,
@@ -43,5 +43,19 @@
             "profile_file" : "test/input_files/sh_profiles_example.csv",
             "amount_of_profiles" : 5
         }
-    ]
+    ],
+    "base_load_profiles" : [
+        {
+            "profile_file" : "test/input_files/base_load_profiles_example.csv",
+            "normalize" : true
+        }
+    ],
+    "ev_profiles" : {
+        "profile_file" : "test/input_files/ev_profiles_example.csv",
+        "connection_start_date_time_column" : "ConnectionStartDateTime",
+        "connection_end_date_time_column" : "ConnectionEndDateTime",
+        "charging_station_identifier_column" : "household",
+        "energy_demand_column" : "Energy",
+        "charging_power_column" : "Power"
+    }
 }

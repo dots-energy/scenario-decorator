@@ -1,9 +1,10 @@
 from datetime import datetime
 from pathlib import Path
+import pandas as pd
 import unittest
 from pathlib import Path
 
-from esdl import Battery, Building, EVChargingStation, HeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatPump, PVInstallation, TimeSeriesProfile
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
@@ -114,6 +115,21 @@ class Test(unittest.TestCase):
     def test_add_ev_profiles(self):
         pass
 
+    def test_add_base_load_profiles(self):
+        test_profiles_file = Path(__file__).parent / "input_files" / "base_load_profiles_example.csv"
+        profiles_df = pd.read_csv(test_profiles_file, index_col=0, parse_dates=True)
+        self.esdl_decorator.add_base_load_profiles(test_profiles_file, normalize=True)
+
+        e_demands = [obj for obj in self.esdl_decorator.energy_system.eAllContents() if isinstance(obj, ElectricityDemand)]
+
+        self.assertEqual(len(e_demands), 2)
+
+        for e_demand in e_demands:
+            time_series_profile = e_demand.port[1].profile[0]
+            total_value = float(e_demand.name.split(" ")[1])
+            col_name = e_demand.description.split("_")[-1]
+            for value, expected in zip(time_series_profile.values, profiles_df[col_name]):
+                self.assertAlmostEqual(value * total_value, expected, places=2)
 
 if __name__ == '__main__':
     unittest.main()

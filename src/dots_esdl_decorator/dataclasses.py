@@ -27,3 +27,13 @@ class BatterySpecification:
     max_capacity_kwh : float = 16.0
     min_charge_rate_kw : float = 5.0
     max_charge_rate_kw : float = 7.5
+
+@dataclass_json
+@dataclass
+class EvSpecification:
+    profile_file : str
+    connection_start_date_time_column : str
+    connection_end_date_time_column : str
+    charging_station_identifier_column : str
+    energy_demand_column : str
+    charging_power_column : str

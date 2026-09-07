@@ -13,7 +13,7 @@ class Test(unittest.TestCase):
 
     def setUp(self):
         esdl_test_file_path = Path(__file__).parent / "input_files" / "test.esdl"
-        self.da_prices_file = Path(__file__).parent / "input_files" / "df_da_prices_2023_fixed.csv"
+        self.da_prices_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
         self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path), None)
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
@@ -65,7 +65,7 @@ class Test(unittest.TestCase):
 
         fraction_houses_ev = 0.5
 
-        self.esdl_decorator.add_ev_chargingstation(fraction_houses_ev)
+        self.esdl_decorator.add_ev_chargingstation(fraction_houses_ev, ev_specification=None)
 
         houses_with_ev = self.get_amount_of_assets_with_type_in_building(EVChargingStation)
 
@@ -96,7 +96,7 @@ class Test(unittest.TestCase):
 
     def test_add_market_data(self):
 
-        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]')
+        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]', "EUR/MWh")
 
         expected_market_values = [-3.61, -3.61, -3.61, -3.61, -1.46, -1.46, -1.46, -1.46, -1.52, -1.52, -1.52, -1.52, -5.0, -5.0, -5.0, -5.0, -4.6, -4.6, -4.6, -4.6, -4.05, -4.05, -4.05, -4.05]
 
@@ -134,7 +134,7 @@ class Test(unittest.TestCase):
     def test_harmonize_profile_dates(self):
         harmonize_date = datetime(2050, 1, 1)
         esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_profile_dates=harmonize_date)
-        test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
+        test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
         esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
 
         market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice

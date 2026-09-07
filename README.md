@@ -11,6 +11,8 @@ normalizes them in terms of the total
 
 ev format from to energy and power and identifier
 
+date format ISO8601
+
 ## Installation
 ```
 pip install dots-esdl-decorator

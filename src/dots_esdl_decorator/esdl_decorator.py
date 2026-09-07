@@ -20,7 +20,7 @@ class EsdlBuilder:
     def __init__(self, esdl_name : str, harmonize_profile_dates : datetime | None = None):
         esh = EnergySystemHandler()
         self.esdl_name = esdl_name
-        self.harmonize_profile_dates = harmonize_profile_dates
+        self.harmonize_profile_dates_to : datetime | None = harmonize_profile_dates
         self.energy_system = esh.load_file(esdl_name)
         self.amount_of_connections = self.get_amount_number_of_type_in_esdl(EConnection)
         self.area = self.energy_system.instance[0].area
@@ -51,11 +51,11 @@ class EsdlBuilder:
 
     def _build_time_series_profile(self, delta_t, min_date, values):
         profile_start = min_date
-        if self.harmonize_profile_dates is not None:
+        if self.harmonize_profile_dates_to is not None:
             target_start = min_date.replace(
-                    year=self.harmonize_profile_dates.year,
-                    month=self.harmonize_profile_dates.month,
-                    day=self.harmonize_profile_dates.day,
+                    year=self.harmonize_profile_dates_to.year,
+                    month=self.harmonize_profile_dates_to.month,
+                    day=self.harmonize_profile_dates_to.day,
                 )
             target_day_of_week = target_start.weekday()
             days_to_shift = (target_day_of_week - min_date.weekday()) % 7
@@ -327,7 +327,7 @@ class EsdlBuilder:
         house_indices_ev = random.sample(range(0, n_houses), n_ev)
 
         ev_entities_in_data = []
-        if ev_specification.profile_file is not None and ev_specification.profile_file != '' and Path(ev_specification.profile_file).exists():
+        if ev_specification is not None and ev_specification.profile_file != '' and Path(ev_specification.profile_file).exists():
             data = pd.read_csv(ev_specification.profile_file)
             charging_stations = data[ev_specification.charging_station_identifier_column].unique()
             ev_entities_in_data = np.random.choice(charging_stations, size=n_ev)
@@ -461,9 +461,14 @@ def main() -> int:
 
     esdl_path = Path(args.esdl)
     if esdl_path.exists():
+        harmonize_profile_dates_to = params.get('harmonize_profile_dates_to', None)
+        harmonize_profile_dates_to_datetime = None
+        if harmonize_profile_dates_to is not None:
+            harmonize_profile_dates_to_datetime = datetime.strptime(harmonize_profile_dates_to, '%Y-%m-%d')
+
         esdl_decorator = EsdlBuilder(
             str(esdl_path),
-            params.get('harmonize_profile_dates'),
+            harmonize_profile_dates_to_datetime,
         )
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")

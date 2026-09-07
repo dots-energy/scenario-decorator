@@ -12,7 +12,9 @@ normalizes them in terms of the total
 ev format from to energy and power and identifier
 
 date format ISO8601
-
+filling missing values
+todo:
+document shifting values in case of harmonizing year
 ## Installation
 ```
 pip install dots-esdl-decorator

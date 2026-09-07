@@ -17,10 +17,10 @@ from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecificatio
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
 class EsdlBuilder:
-    def __init__(self, esdl_name : str, harmonize_profile_dates : datetime | None = None):
+    def __init__(self, esdl_name : str, harmonize_profiles_to_year : int ):
         esh = EnergySystemHandler()
         self.esdl_name = esdl_name
-        self.harmonize_profile_dates_to : datetime | None = harmonize_profile_dates
+        self.harmonize_profiles_to_year : int = harmonize_profiles_to_year
         self.energy_system = esh.load_file(esdl_name)
         self.amount_of_connections = self.get_amount_number_of_type_in_esdl(EConnection)
         self.area = self.energy_system.instance[0].area
@@ -49,13 +49,13 @@ class EsdlBuilder:
         logging.warning(f"column {column_name} not found in provided input data")
         return TimeSeriesProfile()
 
-    def _build_time_series_profile(self, delta_t, min_date, values):
+    def _build_time_series_profile(self, delta_t : int, min_date : datetime, values):
         profile_start = min_date
-        if self.harmonize_profile_dates_to is not None:
+        if self.harmonize_profiles_to_year is not None:
             target_start = min_date.replace(
-                    year=self.harmonize_profile_dates_to.year,
-                    month=self.harmonize_profile_dates_to.month,
-                    day=self.harmonize_profile_dates_to.day,
+                    year=self.harmonize_profiles_to_year,
+                    month=1,
+                    day=1,
                 )
             target_day_of_week = target_start.weekday()
             days_to_shift = (target_day_of_week - min_date.weekday()) % 7
@@ -182,13 +182,27 @@ class EsdlBuilder:
     def add_ev_profile(self, entity : str, profile_data : pd.DataFrame, ev_specification : EvSpecification) -> MobilityDemand:
 
         profile = DateTimeProfile()
+        days_to_shift = 0
+        min_date_data: datetime = profile_data[ev_specification.connection_start_date_time_column].min()
+        target_year = min_date_data.year 
+        source_date_start = datetime(target_year, 1, 1) 
+        if self.harmonize_profiles_to_year is not None:
+            target_year = self.harmonize_profiles_to_year
+            target_start = datetime(year=self.harmonize_profiles_to_year, month=1, day=1)
+            target_day_of_week = target_start.weekday()
+            days_to_shift = (target_day_of_week - source_date_start.weekday()) % 7
+
         for index, profile_data_row in profile_data.iterrows():
-            start_date_time_session_str = profile_data_row[ev_specification.connection_start_date_time_column]
-            end_date_time_session_str = profile_data_row[ev_specification.connection_end_date_time_column]
-            start_date_time_session = datetime.strptime(start_date_time_session_str, '%Y-%m-%dT%H:%M:%S')
-            end_date_time_session = datetime.strptime(end_date_time_session_str, '%Y-%m-%dT%H:%M:%S')
-            energy_consumed = profile_data_row[ev_specification.energy_demand_column]
-            profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=energy_consumed))
+            start_date_time_session : datetime = profile_data_row[ev_specification.connection_start_date_time_column]
+            end_date_time_session : datetime = profile_data_row[ev_specification.connection_end_date_time_column]
+            if start_date_time_session > source_date_start + timedelta(days=days_to_shift):
+                start_date_time_session = start_date_time_session - timedelta(days=days_to_shift)
+                end_date_time_session = end_date_time_session - timedelta(days=days_to_shift)
+                start_date_time_session = start_date_time_session.replace(year=target_year)
+                end_date_time_session = end_date_time_session.replace(year=target_year)
+
+                energy_consumed = profile_data_row[ev_specification.energy_demand_column]
+                profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=energy_consumed))
 
         mobility_demand = MobilityDemand(fuelType=MobilityFuelTypeEnum.from_string('ELECTRICITY'))
 
@@ -329,6 +343,8 @@ class EsdlBuilder:
         ev_entities_in_data = []
         if ev_specification is not None and ev_specification.profile_file != '' and Path(ev_specification.profile_file).exists():
             data = pd.read_csv(ev_specification.profile_file)
+            data[ev_specification.connection_start_date_time_column] = pd.to_datetime(data[ev_specification.connection_start_date_time_column], format='ISO8601')
+            data[ev_specification.connection_end_date_time_column] = pd.to_datetime(data[ev_specification.connection_end_date_time_column], format='ISO8601')
             charging_stations = data[ev_specification.charging_station_identifier_column].unique()
             ev_entities_in_data = np.random.choice(charging_stations, size=n_ev)
 
@@ -461,14 +477,14 @@ def main() -> int:
 
     esdl_path = Path(args.esdl)
     if esdl_path.exists():
-        harmonize_profile_dates_to = params.get('harmonize_profile_dates_to', None)
-        harmonize_profile_dates_to_datetime = None
+        harmonize_profile_dates_to = params.get('harmonize_profiles_to_year', None)
+        harmonize_profile_dates_to_year = None
         if harmonize_profile_dates_to is not None:
-            harmonize_profile_dates_to_datetime = datetime.strptime(harmonize_profile_dates_to, '%Y-%m-%d')
+            harmonize_profile_dates_to_year = harmonize_profile_dates_to
 
         esdl_decorator = EsdlBuilder(
             str(esdl_path),
-            harmonize_profile_dates_to_datetime,
+            harmonize_profile_dates_to_year,
         )
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")

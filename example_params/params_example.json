@@ -15,7 +15,7 @@
         "min_charge_rate_kw" : 5.0,
         "max_charge_rate_kw" : 7.5
     },
-    "harmonize_profile_dates_to" : "2050-01-01",
+    "harmonize_profiles_to_year" : 2060,
     "fraction_houses_hp" : 0.2,
     "fraction_houses_ev" : 0.3,
     "fraction_houses_dyn" : 0.5,

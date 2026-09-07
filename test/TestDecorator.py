@@ -132,14 +132,14 @@ class Test(unittest.TestCase):
                 self.assertAlmostEqual(value * total_value, expected, places=2)
 
     def test_harmonize_profile_dates(self):
-        harmonize_date = datetime(2050, 1, 1)
-        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_profile_dates=harmonize_date)
+        harmonize_year = 2050
+        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_year)
         test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
         esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
 
         market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
 
-        self.assertEqual(market_profile.startDateTime, harmonize_date)
+        self.assertEqual(market_profile.startDateTime, datetime(harmonize_year, 1, 1, 0, 0))
         self.assertEqual(market_profile.values[0], 130.01)
         self.assertEqual(market_profile.values[-1], 124.22)
 

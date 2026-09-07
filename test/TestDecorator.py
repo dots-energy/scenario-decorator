@@ -15,7 +15,7 @@ class Test(unittest.TestCase):
         esdl_test_file_path = Path(__file__).parent / "input_files" / "test.esdl"
         self.da_prices_file = Path(__file__).parent / "input_files" / "df_da_prices_2023_fixed.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
-        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path))
+        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path), None)
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
         self.default_weather_col_mapping = {
@@ -130,6 +130,18 @@ class Test(unittest.TestCase):
             col_name = e_demand.description.split("_")[-1]
             for value, expected in zip(time_series_profile.values, profiles_df[col_name]):
                 self.assertAlmostEqual(value * total_value, expected, places=2)
+
+    def test_harmonize_profile_dates(self):
+        harmonize_date = datetime(2050, 1, 1)
+        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_profile_dates=harmonize_date)
+        test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
+        esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
+
+        market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
+
+        self.assertEqual(market_profile.startDateTime, harmonize_date)
+        self.assertEqual(market_profile.values[0], 130.01)
+        self.assertEqual(market_profile.values[-1], 124.22)
 
 if __name__ == '__main__':
     unittest.main()

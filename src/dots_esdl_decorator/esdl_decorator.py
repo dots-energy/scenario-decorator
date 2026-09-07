@@ -17,9 +17,10 @@ from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecificatio
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
 class EsdlBuilder:
-    def __init__(self, esdl_name : str):
+    def __init__(self, esdl_name : str, harmonize_profile_dates : datetime | None = None):
         esh = EnergySystemHandler()
         self.esdl_name = esdl_name
+        self.harmonize_profile_dates = harmonize_profile_dates
         self.energy_system = esh.load_file(esdl_name)
         self.amount_of_connections = self.get_amount_number_of_type_in_esdl(EConnection)
         self.area = self.energy_system.instance[0].area
@@ -40,31 +41,62 @@ class EsdlBuilder:
             delta_t = int((df.index[1] - df.index[0]).total_seconds())
             min_date = df.index[0].to_pydatetime()
             max_date = df.index[-1].to_pydatetime()
-            timeseries_profile = TimeSeriesProfile(startDateTime=min_date, timestep=delta_t)
-            data_date = min_date
-            prev_value = 0
-            data = df[column_name].reset_index().to_numpy()
-            i = 0 
-            while data_date <= max_date:
-                value = prev_value
-                data_instance = data[i]
-                pandas_timestampe  = data_instance[0]
-                date = pandas_timestampe.to_pydatetime()
-                if data_date == date:
-                    if np.isnan(data_instance[1]):
-                        logging.warning(f"Data has a nan value for date {data_date}, using previous value {prev_value} for column {column_name}")
-                    else:
-                        value = data_instance[1]
-                        prev_value = value
-                    i += 1
-                else:
-                    logging.warning(f"Data missing for date {data_date}, using previous value {prev_value} for column {column_name}")
-                timeseries_profile.values.append(float(value))
-                data_date += timedelta(seconds=delta_t)
+            values = self._get_values_for_timeseries(df, column_name, delta_t, min_date, max_date)
+
+            timeseries_profile = self._build_time_series_profile(delta_t, min_date, values)
             return timeseries_profile
 
         logging.warning(f"column {column_name} not found in provided input data")
         return TimeSeriesProfile()
+
+    def _build_time_series_profile(self, delta_t, min_date, values):
+        profile_start = min_date
+        if self.harmonize_profile_dates is not None:
+            target_start = min_date.replace(
+                    year=self.harmonize_profile_dates.year,
+                    month=self.harmonize_profile_dates.month,
+                    day=self.harmonize_profile_dates.day,
+                )
+            target_day_of_week = target_start.weekday()
+            days_to_shift = (target_day_of_week - min_date.weekday()) % 7
+            samples_per_day, remainder = divmod(24 * 60 * 60, delta_t)
+            if remainder:
+                logging.warning(
+                        "Cannot harmonize profile dates for timestep %s seconds because it does not divide a day",
+                        delta_t,
+                    )
+            else:
+                samples_to_shift = days_to_shift * samples_per_day
+                values = values[samples_to_shift:] + values[:samples_to_shift]
+            profile_start = target_start
+
+        timeseries_profile = TimeSeriesProfile(startDateTime=profile_start, timestep=delta_t)
+        timeseries_profile.values.extend(values)
+        return timeseries_profile
+
+    def _get_values_for_timeseries(self, df, column_name, delta_t, min_date, max_date):
+        data_date = min_date
+        prev_value = 0
+        data = df[column_name].reset_index().to_numpy()
+        i = 0 
+        values = []
+        while data_date <= max_date:
+            value = prev_value
+            data_instance = data[i]
+            pandas_timestampe  = data_instance[0]
+            date = pandas_timestampe.to_pydatetime()
+            if data_date == date:
+                if np.isnan(data_instance[1]):
+                    logging.warning(f"Data has a nan value for date {data_date}, using previous value {prev_value} for column {column_name}")
+                else:
+                    value = data_instance[1]
+                    prev_value = value
+                i += 1
+            else:
+                logging.warning(f"Data missing for date {data_date}, using previous value {prev_value} for column {column_name}")
+            values.append(float(value))
+            data_date += timedelta(seconds=delta_t)
+        return values
 
     def add_weather(self, data_file : Path, column_mapping: dict[str, str] | None = None):
         energy_system_information = EnergySystemInformation(id=str(uuid.uuid4()))
@@ -429,7 +461,10 @@ def main() -> int:
 
     esdl_path = Path(args.esdl)
     if esdl_path.exists():
-        esdl_decorator = EsdlBuilder(str(esdl_path))
+        esdl_decorator = EsdlBuilder(
+            str(esdl_path),
+            params.get('harmonize_profile_dates'),
+        )
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2

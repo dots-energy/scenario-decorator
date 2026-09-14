@@ -27,6 +27,7 @@ class EsdlBuilder:
         self.area = self.energy_system.instance[0].area
         self.heat_profiles_mapping :dict[str, HeatingProfileMetaData] = {} 
         self.base_load_profiles : ProfileMetaData = ProfileMetaData()
+        self.rng = np.random.default_rng(42)
 
     def get_amount_number_of_type_in_esdl(self, esdl_type : type) -> int:
         return len([esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, esdl_type)])
@@ -145,7 +146,7 @@ class EsdlBuilder:
 
         column_choices = list(range(len(heat_profiles.columns)))
         amount_of_profiles_to_chose = amount_of_profiles if amount_of_profiles > 0 else len(heat_profiles.columns)
-        cols = np.random.choice(column_choices, size=amount_of_profiles_to_chose)
+        cols = self.rng.choice(column_choices, size=amount_of_profiles_to_chose)
         for col, temp in zip(cols, temps):
             
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col])
@@ -173,7 +174,7 @@ class EsdlBuilder:
             base_load_profiles = base_load_profiles.div(totals.to_numpy(), axis=1)
 
         column_choices = base_load_profiles.columns
-        cols = column_choices if self.amount_of_connections >= len(column_choices) else np.random.choice(column_choices, size=self.amount_of_connections, replace=False )
+        cols = column_choices if self.amount_of_connections >= len(column_choices) else self.rng.choice(column_choices, size=self.amount_of_connections, replace=False )
         for col_name in cols:
             time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name)
 
@@ -205,11 +206,14 @@ class EsdlBuilder:
         for index, profile_data_row in profile_data.iterrows():
             start_date_time_session : datetime = profile_data_row[ev_specification.connection_start_date_time_column]
             end_date_time_session : datetime = profile_data_row[ev_specification.connection_end_date_time_column]
+            goes_to_next_year = start_date_time_session.year != end_date_time_session.year
             if start_date_time_session > source_date_start + timedelta(days=days_to_shift):
                 start_date_time_session = start_date_time_session - timedelta(days=days_to_shift)
                 end_date_time_session = end_date_time_session - timedelta(days=days_to_shift)
                 start_date_time_session = start_date_time_session.replace(year=target_year)
                 end_date_time_session = end_date_time_session.replace(year=target_year)
+                if goes_to_next_year:
+                    end_date_time_session = end_date_time_session.replace(year=target_year + 1)
 
                 energy_consumed = profile_data_row[ev_specification.energy_demand_column]
                 profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=energy_consumed))
@@ -231,31 +235,30 @@ class EsdlBuilder:
         n_pv = round(pv_specification.fraction_houses_pv * n_houses)
         n_bat = round(battery_specification.fraction_houses_pv_battery * n_pv)
 
-        house_indices_pv = random.sample(range(0, n_houses), n_pv)
-        house_indices_bat = random.sample(house_indices_pv, n_bat)
+        house_indices_pv = self.rng.choice(range(0, n_houses), size=n_pv, replace=False)
+        house_indices_bat = self.rng.choice(house_indices_pv, size=n_bat, replace=False)
 
         for i in house_indices_pv:
             house = houses[i]
-            surface_area = random.randint(6, 16)  # 1 panel 1mx1.60m, 4-10 panels
-            power = random.normalvariate(pv_specification.power_mean_kw, pv_specification.power_std_kw)
+            surface_area = self.rng.integers(low=6, high=16, endpoint=True)  # 1 panel 1mx1.60m, 4-10 panels
+            power = self.rng.normal(pv_specification.power_mean_kw, pv_specification.power_std_kw)
             panel_angles = pv_specification.panel_angle_values
-            panel_angle = random.choice(panel_angles)
-            orientation = random.randint(pv_specification.orientation_min, pv_specification.orientation_max)
-            pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=power, angle=panel_angle,
-                                             orientation=orientation, powerFactor=1.0, surfaceArea=surface_area) # ISIE
-
+            panel_angle = self.rng.choice(panel_angles)
+            orientation = self.rng.integers(pv_specification.orientation_min, pv_specification.orientation_max, endpoint=True)
+            pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power), angle=int(panel_angle),
+                                             orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area)) # ISIE
             pv_installation.geometry = Point(CRS="Simple", lon=236.0, lat=415.0)
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
-                capacity_kwh = random.normalvariate(battery_specification.capacity_kwh_mean, battery_specification.capacity_kwh_std)
+                capacity_kwh = self.rng.normal(battery_specification.capacity_kwh_mean, battery_specification.capacity_kwh_std)
                 capacity_j = capacity_kwh * 3.6e6
-                fill_level = random.uniform(0.3, 0.7)  # fraction of total capacity
+                fill_level = self.rng.uniform(0.3, 0.7)  # fraction of total capacity
                 charge_rate = capacity_kwh / battery_specification.power_kw_to_energy_kwh_ratio
                 battery = Battery(name='battery_' + house.name, id=str(uuid.uuid4()),
-                                  capacity=capacity_j,
+                                  capacity=float(capacity_j),
                                   chargeEfficiency=battery_specification.efficiency, dischargeEfficiency=battery_specification.efficiency,
-                                  fillLevel=fill_level,
-                                  maxChargeRate=charge_rate, maxDischargeRate=charge_rate,
+                                  fillLevel=float(fill_level),
+                                  maxChargeRate=float(charge_rate), maxDischargeRate=float(charge_rate),
                                   powerFactor=1.0)
             for grid in phase_grids:
                 self.add_producing_asset_to_other_asset(pv_installation, grid, house)
@@ -285,7 +288,7 @@ class EsdlBuilder:
             port = self.base_load_profiles.ports[self.base_load_profiles.index_to_pick]
             self.base_load_profiles.index_to_pick = (self.base_load_profiles.index_to_pick + 1) % len(self.base_load_profiles.ports)
             phase_grids = [asset for asset in econnection.eContainer().asset if isinstance(asset, ElectricityNetwork)]
-            phase_port = random.choice(phase_grids).port[1]
+            phase_port = self.rng.choice(phase_grids).port[1]
             phase_port.connectedTo.append(port)
             port.connectedTo.append(phase_port)
         else:
@@ -302,21 +305,21 @@ class EsdlBuilder:
         n_hp = round(fraction_houses_hp * n_houses)
         n_hhp = round(fraction_houses_hhp * n_houses)
         # Generate random house indices
-        house_indices_hp = random.sample(house_indices, n_hp)
+        house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
 
         for i in house_indices_hp:
             house_indices.remove(i)
 
-        houses_indices_hhp = random.sample(house_indices, n_hhp)
+        houses_indices_hhp = self.rng.choice(house_indices, size=n_hhp, replace=False)
 
         # add pv to all phases for now
-        for i in house_indices_hp + houses_indices_hhp:
+        for i in np.concatenate((house_indices_hp, houses_indices_hhp)):
             house = houses[i]
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
 
             possible_nominal_powers = [2.0, 2.5, 3.0]
 
-            nominal_power = random.choice(possible_nominal_powers) * 1000
+            nominal_power = self.rng.choice(possible_nominal_powers) * 1000
 
             # add heat pump
             if i in house_indices_hp:
@@ -329,11 +332,11 @@ class EsdlBuilder:
             self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
 
             dhw_names_options = ["dhw_profiles_family", "dhw_profiles_one_person", "dhw_profiles_two_person"]
-            profile_name = random.choice(dhw_names_options)
+            profile_name = self.rng.choice(dhw_names_options)
             self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
 
             # add to a random phase
-            phase = random.randint(0, len(phase_grids) - 1)
+            phase = np.random.default_rng().integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
             self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
 
 
@@ -342,7 +345,7 @@ class EsdlBuilder:
                   isinstance(esdl_element, Building)]
         n_houses = len(houses)
         n_dyn = round(fraction_houses_dyn * n_houses)
-        house_indices_dyn = random.sample(range(0, n_houses), n_dyn)
+        house_indices_dyn = self.rng.choice(range(0, n_houses), size=n_dyn, replace=False)
 
         econnections = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                         isinstance(esdl_element, EConnection)]
@@ -369,7 +372,7 @@ class EsdlBuilder:
         n_houses = len(houses)
         n_ev = round(fraction_houses_ev * n_houses)
         # Generate random house indices
-        house_indices_ev = random.sample(range(0, n_houses), n_ev)
+        house_indices_ev = self.rng.choice(range(0, n_houses), size=n_ev, replace=False)
 
         ev_entities_in_data = []
         if ev_specification is not None and ev_specification.profile_file != '' and Path(ev_specification.profile_file).exists():
@@ -377,15 +380,15 @@ class EsdlBuilder:
             data[ev_specification.connection_start_date_time_column] = pd.to_datetime(data[ev_specification.connection_start_date_time_column], format='ISO8601')
             data[ev_specification.connection_end_date_time_column] = pd.to_datetime(data[ev_specification.connection_end_date_time_column], format='ISO8601')
             charging_stations = data[ev_specification.charging_station_identifier_column].unique()
-            ev_entities_in_data = np.random.choice(charging_stations, size=n_ev)
+            ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev, replace=False)
 
         for i, house_index in enumerate(house_indices_ev):
             house = houses[house_index]
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
 
             power_range = [3700, 11000]
-            power = float(random.choice(power_range))
-            annual_load = random.randint(1800000,4000000)
+            power = float(self.rng.choice(power_range))
+            annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
             powerfactor = 0.95  
 
             mobility_demand = None
@@ -405,7 +408,7 @@ class EsdlBuilder:
                 for connection_ph in phase_grids:
                     self.add_consuming_asset_to_other_asset(charging_station, connection_ph, house)
             else:
-                phase = random.randint(0, len(phase_grids) - 1)
+                phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True)
                 self.add_producing_asset_to_other_asset(charging_station, phase_grids[phase], house)
 
             if mobility_demand is not None:
@@ -430,7 +433,7 @@ class EsdlBuilder:
 
 
     def add_congestion_measure(self, congestion_management_active : bool):
-        congestion_measure = Measure(name="congestion management active", id=str(uuid.uuid4()))
+        congestion_measure = Measure(name="congestion_management_active", id=str(uuid.uuid4()))
         congestion_measure.description = str(congestion_management_active)
         self.energy_system.measures.measure.append(congestion_measure)
 

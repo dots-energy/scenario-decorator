@@ -54,7 +54,7 @@ class Test(unittest.TestCase):
 
         fraction_houses_hp = 0.5
 
-        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp)
+        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp=0.0)
 
         houses_with_heatpump = self.get_amount_of_assets_with_type_in_building(HeatPump)
 
@@ -69,8 +69,8 @@ class Test(unittest.TestCase):
 
         houses_with_ev = self.get_amount_of_assets_with_type_in_building(EVChargingStation)
 
-        expected_hp = round(fraction_houses_ev * self.n_buildings)
-        self.assertEqual(houses_with_ev, expected_hp)
+        expected_ev = round(fraction_houses_ev * self.n_buildings)
+        self.assertEqual(houses_with_ev, expected_ev)
 
     def test_add_weather_data(self):
 

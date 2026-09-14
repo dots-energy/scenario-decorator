@@ -20,7 +20,7 @@
     "fraction_houses_hp" : 0.23,
     "fraction_houses_hpp" : 0.77,
     "fraction_houses_ev" : 0.3,
-    "congestion_management_active" : true,
+    "congestion_management_active" : false,
     "weather_data" : {
         "path": "D:/datasets/ISIE/weather-data.csv",
         "soil_temperature_column": "soil_temperature_celcius",
@@ -210,7 +210,7 @@
     "base_load_profiles" : [
         {
             "profile_file" : "D:/datasets/ISIE/unnormalized_profiles.csv",
-            "normalize" : true
+            "normalize" : false
         }
     ],
     "ev_profiles" : {

@@ -4,7 +4,7 @@ import pandas as pd
 import unittest
 from pathlib import Path
 
-from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
@@ -53,13 +53,17 @@ class Test(unittest.TestCase):
     def test_add_hp_counts_houses(self):
 
         fraction_houses_hp = 0.5
+        fraction_houses_hhp = 0.5
 
-        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp=0.0)
+        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp)
 
         houses_with_heatpump = self.get_amount_of_assets_with_type_in_building(HeatPump)
+        houses_with_heatpump_hhp = self.get_amount_of_assets_with_type_in_building(HybridHeatPump)
 
         expected_hp = round(fraction_houses_hp * self.n_buildings)
+        expected_hpp = round(fraction_houses_hhp * self.n_buildings)
         self.assertEqual(houses_with_heatpump, expected_hp)
+        self.assertEqual(houses_with_heatpump_hhp, expected_hpp)
 
     def test_add_ev_counts_houses(self):
 

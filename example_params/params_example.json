@@ -18,7 +18,7 @@
     },
     "harmonize_profiles_to_year" : 2060,
     "fraction_houses_hp" : 0.23,
-    "fraction_houses_hpp" : 0.77,
+    "fraction_houses_hhp" : 0.77,
     "fraction_houses_ev" : 0.3,
     "weather_data" : {
         "path": "test/input_files/weather-data.csv",

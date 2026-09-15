@@ -4,12 +4,12 @@ import uuid
 import argparse
 import json
 import logging
+import random
 
-from esdl import Battery, Building, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, OutPort, PVInstallation, Parties, Party, Point, ProfileElement, Services, TimeSeriesProfile
+from esdl import Battery, Building, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, MultiplierEnum, OutPort, PhysicalQuantityEnum, PVInstallation, Parties, Party, Point, ProfileElement, QuantityAndUnitType, Services, TimeSeriesProfile, UnitEnum
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
-import random
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification
@@ -17,10 +17,11 @@ from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecificatio
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
 class EsdlBuilder:
-    def __init__(self, esdl_name : str, harmonize_profiles_to_year : int ):
+    def __init__(self, esdl_name : str, harmonize_profiles_to_year : int, target_days: int):
         esh = EnergySystemHandler()
         self.esdl_name = esdl_name
         self.harmonize_profiles_to_year : int = harmonize_profiles_to_year
+        self.target_days: int = target_days
         self.energy_system = esh.load_file(esdl_name)
         self.energy_system.measures = Measures()
         self.amount_of_connections = self.get_amount_number_of_type_in_esdl(EConnection)
@@ -38,20 +39,43 @@ class EsdlBuilder:
         parties.party.append(dso)
         self.energy_system.parties = parties
 
-    def create_time_series_profile_from_df(self, df : pd.DataFrame, column_name : str) -> TimeSeriesProfile:
+    def _equalize_timeseries_length(self, values:list[float], delta_t: int, target_days: int) -> list[float]:
+        intervals_per_day = int(24* 3600 / delta_t)
+        target_length = target_days * intervals_per_day
+        current_length = len(values)
+
+        if current_length == target_length:
+            return values
+
+        # Too many values -> truncate
+        if current_length > target_length:
+            logging.info(f"Truncating timeseries from "
+                         f"{current_length} to {target_length} values")
+            return values[:target_length]
+
+        # Too few values -> repeat first values
+        missing = target_length - current_length
+        logging.info(f"Extending timeseries from "
+                     f"{current_length} to {target_length} values")
+        return values + values[:missing]
+
+    def create_time_series_profile_from_df(self, df : pd.DataFrame, column_name : str, unit : QuantityAndUnitType | None = None, target_days: int | None = None) -> TimeSeriesProfile:
         if column_name in df.columns:
             delta_t = int((df.index[1] - df.index[0]).total_seconds())
             min_date = df.index[0].to_pydatetime()
             max_date = df.index[-1].to_pydatetime()
             values = self._get_values_for_timeseries(df, column_name, delta_t, min_date, max_date)
 
-            timeseries_profile = self._build_time_series_profile(delta_t, min_date, values)
+            if target_days is not None:
+                values = self._equalize_timeseries_length(values, delta_t, target_days)
+
+            timeseries_profile = self._build_time_series_profile(delta_t, min_date, values, unit)
             return timeseries_profile
 
         logging.warning(f"column {column_name} not found in provided input data")
         return TimeSeriesProfile()
 
-    def _build_time_series_profile(self, delta_t : int, min_date : datetime, values):
+    def _build_time_series_profile(self, delta_t : int, min_date : datetime, values, unit : QuantityAndUnitType | None):
         profile_start = min_date
         if self.harmonize_profiles_to_year is not None:
             target_start = min_date.replace(
@@ -73,6 +97,7 @@ class EsdlBuilder:
             profile_start = target_start
 
         timeseries_profile = TimeSeriesProfile(startDateTime=profile_start, timestep=delta_t)
+        timeseries_profile.profileQuantityAndUnit = unit
         timeseries_profile.values.extend(values)
         return timeseries_profile
 
@@ -110,15 +135,16 @@ class EsdlBuilder:
         weather.soilTemperatureProfile = self.create_time_series_profile_from_df(
             df,
             column_mapping['soil_temperature'],
+            QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days
         )
         weather.solarIrradianceProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping['solar_irradiance'],
+            column_mapping['solar_irradiance'], target_days=self.target_days
         )
         weather.outsideTemperatureProfile = self.create_time_series_profile_from_df(
             df,
             column_mapping['outside_temperature'],
-        )
+            QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days)
 
     def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str, price_unit : str):
         da_market = EnergyMarket(name=f'DA-market in {price_unit}', id=str(uuid.uuid4()))
@@ -126,13 +152,14 @@ class EsdlBuilder:
         df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='ISO8601')
         df.sort_index(ascending=True)
 
-        da_price_datetime_profile = self.create_time_series_profile_from_df(df, price_column)
+        da_price_datetime_profile = self.create_time_series_profile_from_df(df, price_column,target_days=self.target_days)
 
         da_market.marketPrice = da_price_datetime_profile
         services.service.append(da_market)
         self.energy_system.services = services
 
     def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum):
+
 
         if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
             heat_profiles = pd.read_csv(heat_profile_file)
@@ -148,8 +175,11 @@ class EsdlBuilder:
         amount_of_profiles_to_chose = amount_of_profiles if amount_of_profiles > 0 else len(heat_profiles.columns)
         cols = self.rng.choice(column_choices, size=amount_of_profiles_to_chose)
         for col, temp in zip(cols, temps):
+            quantity_and_unit = None
+            if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
+                quantity_and_unit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('POWER'), unit=UnitEnum.from_string('WATT'), multiplier=MultiplierEnum.from_string('KILO'))
             
-            time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col])
+            time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
 
             heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp, maxTemperature=temp)
             if heat_profile_name not in self.heat_profiles_mapping:
@@ -175,10 +205,11 @@ class EsdlBuilder:
 
         column_choices = base_load_profiles.columns
         cols = column_choices if self.amount_of_connections >= len(column_choices) else self.rng.choice(column_choices, size=self.amount_of_connections, replace=False )
-        for col_name in cols:
-            time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name)
 
-            electricity_demand = ElectricityDemand()
+        for col_name in cols:
+            quantity_and_unit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('POWER'), unit=UnitEnum.from_string('WATT'), multiplier=MultiplierEnum.from_string('KILO'))
+            time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name, quantity_and_unit, target_days=self.target_days)
+            electricity_demand = ElectricityDemand(id=str(uuid.uuid4()))
             esdl_base_load_profile_name = f"base_load_{col_name}"
 
             electricity_demand.description = esdl_base_load_profile_name
@@ -193,6 +224,7 @@ class EsdlBuilder:
     def add_ev_profile(self, entity : str, profile_data : pd.DataFrame, ev_specification : EvSpecification) -> MobilityDemand:
 
         profile = DateTimeProfile()
+        profile.profileQuantityAndUnit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('ENERGY'), unit=UnitEnum.from_string('WATTHOUR'), multiplier=MultiplierEnum.from_string('KILO'))
         days_to_shift = 0
         min_date_data: datetime = profile_data[ev_specification.connection_start_date_time_column].min()
         target_year = min_date_data.year 
@@ -219,7 +251,7 @@ class EsdlBuilder:
                 profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=energy_consumed))
 
         mobility_demand = MobilityDemand(fuelType=MobilityFuelTypeEnum.from_string('ELECTRICITY'))
-
+        profile.physicalQuantityAndUnit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('ENERGY'), unit=UnitEnum.from_string('WATTHOUR'), multiplier=MultiplierEnum.from_string('KILO'))
         mobility_demand.name = f"ev_profile_{entity} in kWh"
         in_port = InPort(id=str(uuid.uuid4()), name="In")
         mobility_demand.port.append(in_port)
@@ -246,7 +278,7 @@ class EsdlBuilder:
             panel_angle = self.rng.choice(panel_angles)
             orientation = self.rng.integers(pv_specification.orientation_min, pv_specification.orientation_max, endpoint=True)
             pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power), angle=int(panel_angle),
-                                             orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area)) # ISIE
+                                             orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area), panelEfficiency=0.2) # ISIE
             pv_installation.geometry = Point(CRS="Simple", lon=236.0, lat=415.0)
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
@@ -295,7 +327,7 @@ class EsdlBuilder:
             logging.warning("No heat profiles loaded so not connecting base load profiles to econnection")
 
 
-    def add_heat_pump_to_houses(self, fraction_houses_hp : float, fraction_houses_hhp : float):
+    def add_heat_pump_to_houses(self, fraction_houses_hp : float, fraction_houses_hhp : float, hw_profile_names : list[str]):
         if fraction_houses_hhp + fraction_houses_hp > 1.0:
             raise ValueError("Fraciton of houses for heatpump and hybrid heatpump should at most sum to 1.0")
 
@@ -307,6 +339,10 @@ class EsdlBuilder:
         # Generate random house indices
         house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
 
+        dhw_names_options = hw_profile_names
+        profile_name = self.rng.choice(dhw_names_options)
+        dhw_profile_name = profile_name.replace("dhw_profiles_", "")
+
         for i in house_indices_hp:
             house_indices.remove(i)
 
@@ -317,21 +353,123 @@ class EsdlBuilder:
             house = houses[i]
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
 
-            possible_nominal_powers = [2.0, 2.5, 3.0]
-
-            nominal_power = self.rng.choice(possible_nominal_powers) * 1000
+            # # Old version to give certain output values
+            # possible_nominal_powers = [5.0]
+            # nominal_power = self.rng.choice(possible_nominal_powers) * 1000
+            # HybridheatPumpThermalPower = 6000.0
 
             # add heat pump
             if i in house_indices_hp:
-                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_power, powerFactor=0.98,
+                # Set fixed buffer properties
+                buffer_temp_set = 40.0 + 273.15
+                buffer_temp_min = 25.0 + 273.15
+                buffer_temp_max = 65.0 + 273.15
+                buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10)  # some random variation
+
+                # Set fixed dhw tank properties
+                dhw_temp_set = 55.0 + 273.15
+                dhw_temp_min = 25.0 + 273.15
+                dhw_temp_max = 85.0 + 273.15  # 70.0 does not give enough space for pre-heating
+                dhw_temp_0 = 55.0 + 273.15 + random.uniform(-10, 10)
+                dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
+                heat_element = 3000.0
+                cop_element = 1.0
+
+                # Set house temperature properties
+                # TODO: use some temperatures based on data
+                house_temp_set = random.choice([18.5, 19.0, 19.5, 20.0, 20.5, 21.0, 21.5]) + 273.15
+                house_temp_min = house_temp_set - 0.8
+                house_temp_max = house_temp_set + 0.8
+                house_temp_0 = house_temp_set + random.uniform(-0.4, 0.4)
+
+                with open('house_hp_map.json') as f:
+                    house_hp_map = json.load(f)
+                map_key_elements = house.assetType.split('_')
+                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[
+                    2] + "_" + dhw_profile_name
+                print(map_key)
+                nominal_heat = house_hp_map[map_key]['nominal_heat']
+                dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
+                buffer_volume = house_hp_map[map_key]['sh_tank_mass']
+                buffer_capacitance = buffer_volume * 4183
+                dhw_capacitance = dhw_volume * 4183
+                print(nominal_heat, dhw_volume, buffer_volume)
+
+                description_dict = {'buffer_capacitance': buffer_capacitance,
+                                    'buffer_temp_set': buffer_temp_set,
+                                    'buffer_temp_min': buffer_temp_min,
+                                    'buffer_temp_max': buffer_temp_max,
+                                    'buffer_temp_0': buffer_temp_0,
+                                    'buffer_temp_hor': buffer_temp_set,
+                                    'dhw_capacitance': dhw_capacitance,
+                                    'dhw_temp_set': dhw_temp_set,
+                                    'dhw_temp_min': dhw_temp_min,
+                                    'dhw_temp_max': dhw_temp_max,
+                                    'dhw_temp_0': dhw_temp_0,
+                                    'dhw_temp_hor': dhw_temp_set,
+                                    'dhw_temp_tap': dhw_temp_tap,
+                                    'heat_element': heat_element,
+                                    'cop_element': cop_element,
+                                    'house_temp_set': house_temp_set,
+                                    'house_temp_min': house_temp_min,
+                                    'house_temp_max': house_temp_max,
+                                    'house_temp_0': house_temp_0,
+                                    'house_temp_hor': house_temp_set}
+                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_heat, powerFactor=0.98,
                                  assetType='air_water')
+                heat_pump.description = json.dumps(description_dict)
+                heat_pump.COP = 3.5
+
+
             elif i in houses_indices_hhp:
-                heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), power=nominal_power, powerFactor=0.98,
-                                             assetType='air_water')
+                # Set fixed buffer properties
+                buffer_temp_set = 40.0 + 273.15
+                buffer_temp_min = 25.0 + 273.15
+                buffer_temp_max = 65.0 + 273.15
+                buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10)  # some random variation
+
+                # Set house temperature properties
+                # TODO: use some temperatures based on data
+                house_temp_set = random.choice([18.5, 19.0, 19.5, 20.0, 20.5, 21.0, 21.5]) + 273.15
+                house_temp_min = house_temp_set - 0.8
+                house_temp_max = house_temp_set + 0.8
+                house_temp_0 = house_temp_set + random.uniform(-0.4, 0.4)
+
+                map_key_elements = house.assetType.split('_')
+                print(map_key_elements)
+
+                print(profile_name)
+                with open('house_hhp_map.json') as f:
+                    house_hhp_map = json.load(f)
+                map_key_elements = house.assetType.split('_')
+                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[
+                    2]
+                print(map_key)
+                nominal_heat = house_hhp_map[map_key]['nominal_heat']
+                buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
+                buffer_capacitance = buffer_volume * 4183
+
+                description_dict = {'buffer_capacitance': buffer_capacitance,
+                                    'buffer_temp_set': buffer_temp_set,
+                                    'buffer_temp_min': buffer_temp_min,
+                                    'buffer_temp_max': buffer_temp_max,
+                                    'buffer_temp_0': buffer_temp_0,
+                                    'buffer_temp_hor': buffer_temp_set,
+                                    'house_temp_set': house_temp_set,
+                                    'house_temp_min': house_temp_min,
+                                    'house_temp_max': house_temp_max,
+                                    'house_temp_0': house_temp_0,
+                                    'house_temp_hor': house_temp_set}
+                heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
+                                           assetType='air_water', heatPumpThermalPower=nominal_heat)
+                heat_pump.description = json.dumps(description_dict)
+                heat_pump.COP = 3.5
 
             self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
 
-            dhw_names_options = ["dhw_profiles_family", "dhw_profiles_one_person", "dhw_profiles_two_person"]
+            dhw_names_options = hw_profile_names
             profile_name = self.rng.choice(dhw_names_options)
             self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
 
@@ -528,6 +666,7 @@ def main() -> int:
         logging.exception(f"Failed to load params file {args.params}: {e}")
         return 2
 
+    no_target_days = 365
     pv_specification = PvSpecification.from_dict(params.get('pv_specification'))
     battery_specification = BatterySpecification.from_dict(params.get('battery_specification'))
 
@@ -535,13 +674,18 @@ def main() -> int:
     if esdl_path.exists():
         harmonize_profile_dates_to = params.get('harmonize_profiles_to_year', None)
         harmonize_profile_dates_to_year = None
+        no_target_days = params.get('target_days', None)
         if harmonize_profile_dates_to is not None:
             harmonize_profile_dates_to_year = harmonize_profile_dates_to
-
-        esdl_decorator = EsdlBuilder(
-            str(esdl_path),
-            harmonize_profile_dates_to_year,
-        )
+            if no_target_days is not None:
+                esdl_decorator = EsdlBuilder(
+                    str(esdl_path),
+                    harmonize_profile_dates_to_year,
+                no_target_days)
+        # esdl_decorator = EsdlBuilder(
+        #     str(esdl_path),
+        #     harmonize_profile_dates_to_year,
+        # )
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2
@@ -564,8 +708,13 @@ def main() -> int:
     congestion_management_active = params.get('congestion_management_active', False)
     esdl_decorator.add_congestion_measure(congestion_management_active)
 
+    dhw_profile_names = [
+        profile["profile_name"]
+        for profile in params["dhw_profiles"]
+    ]
+
     esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, battery_specification)
-    esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp)
+    esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp, dhw_profile_names)
     ev_profile_params : EvSpecification =  EvSpecification.from_dict(params.get('ev_profiles'))
     esdl_decorator.add_ev_chargingstation(fraction_houses_ev, ev_profile_params)
     esdl_decorator.add_econnection_information(fraction_houses_dyn)

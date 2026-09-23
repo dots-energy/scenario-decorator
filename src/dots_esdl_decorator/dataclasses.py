@@ -44,3 +44,15 @@ class EvSpecification:
     charging_station_identifier_column : str
     energy_demand_column : str
     charging_power_column : str
+
+@dataclass
+class BufferTemperatures:
+    buffer_temp_set : float
+    buffer_temp_min : float
+    buffer_temp_max : float
+    buffer_temp_0 : float
+
+@dataclass
+class BufferCapacitances:
+    buffer_capacitance : float
+    hw_buffer_capacitance : float

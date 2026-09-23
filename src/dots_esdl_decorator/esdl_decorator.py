@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, BufferCapacitances, BufferTemperatures, EvSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -285,12 +285,12 @@ class EsdlBuilder:
                 capacity_kwh = self.rng.normal(battery_specification.capacity_kwh_mean, battery_specification.capacity_kwh_std)
                 capacity_j = capacity_kwh * 3.6e6
                 fill_level = self.rng.uniform(0.3, 0.7)  # fraction of total capacity
-                charge_rate = capacity_kwh / battery_specification.power_kw_to_energy_kwh_ratio
+                charge_rate_w = capacity_kwh / battery_specification.power_kw_to_energy_kwh_ratio * 1000
                 battery = Battery(name='battery_' + house.name, id=str(uuid.uuid4()),
                                   capacity=float(capacity_j),
                                   chargeEfficiency=battery_specification.efficiency, dischargeEfficiency=battery_specification.efficiency,
                                   fillLevel=float(fill_level),
-                                  maxChargeRate=float(charge_rate), maxDischargeRate=float(charge_rate),
+                                  maxChargeRate=float(charge_rate_w), maxDischargeRate=float(charge_rate_w),
                                   powerFactor=1.0)
             for grid in phase_grids:
                 self.add_producing_asset_to_other_asset(pv_installation, grid, house)
@@ -298,12 +298,14 @@ class EsdlBuilder:
                     self.add_consuming_asset_to_other_asset(battery, grid, house)
 
 
-    def connect_heating_demand_heatpump_to_profile(self, heatpump : HeatPump, dhw_profile_name : str):
+    def connect_heating_demand_heatpump_to_profile(self, heatpump : HeatPump, dhw_profile_name : str) -> HeatingDemand | None:
+        heating_demand = None
         if len(self.heat_profiles_mapping) > 0 and dhw_profile_name in self.heat_profiles_mapping:
             meta_data = self.heat_profiles_mapping[dhw_profile_name]
             if not meta_data.added_to_esdl[meta_data.index_to_pick]:
                 self.energy_system.instance[0].area.asset.append(meta_data.demands[meta_data.index_to_pick])
                 meta_data.added_to_esdl[meta_data.index_to_pick] = True
+                heating_demand = meta_data.demands[meta_data.index_to_pick]
 
             connected_to = meta_data.ports[meta_data.index_to_pick]
             out_port = OutPort(id=str(uuid.uuid4()), connectedTo=[connected_to])
@@ -313,6 +315,8 @@ class EsdlBuilder:
             self.heat_profiles_mapping[dhw_profile_name].index_to_pick = (self.heat_profiles_mapping[dhw_profile_name].index_to_pick + 1) % amount_of_profiles
         else:
             logging.warning(f"No heat profile found with name: {dhw_profile_name}")
+
+        return heating_demand
 
 
     def connect_base_load_to_econnection(self, econnection : EConnection):
@@ -348,134 +352,117 @@ class EsdlBuilder:
 
         houses_indices_hhp = self.rng.choice(house_indices, size=n_hhp, replace=False)
 
-        # add pv to all phases for now
         for i in np.concatenate((house_indices_hp, houses_indices_hhp)):
             house = houses[i]
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
 
-            # # Old version to give certain output values
-            # possible_nominal_powers = [5.0]
-            # nominal_power = self.rng.choice(possible_nominal_powers) * 1000
-            # HybridheatPumpThermalPower = 6000.0
+            buffer_temp_set = 40.0 + 273.15
+            buffer_temp_min = 25.0 + 273.15
+            buffer_temp_max = 65.0 + 273.15
+            buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10) 
+            buffer_temperatures = BufferTemperatures(buffer_temp_set, buffer_temp_min, buffer_temp_max, buffer_temp_0)
 
             # add heat pump
             if i in house_indices_hp:
-                # Set fixed buffer properties
-                buffer_temp_set = 40.0 + 273.15
-                buffer_temp_min = 25.0 + 273.15
-                buffer_temp_max = 65.0 + 273.15
-                buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10)  # some random variation
 
-                # Set fixed dhw tank properties
-                dhw_temp_set = 55.0 + 273.15
-                dhw_temp_min = 25.0 + 273.15
-                dhw_temp_max = 85.0 + 273.15  # 70.0 does not give enough space for pre-heating
-                dhw_temp_0 = 55.0 + 273.15 + random.uniform(-10, 10)
-                dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
-                heat_element = 3000.0
-                cop_element = 1.0
-
-                # Set house temperature properties
-                # TODO: use some temperatures based on data
-                house_temp_set = random.choice([18.5, 19.0, 19.5, 20.0, 20.5, 21.0, 21.5]) + 273.15
-                house_temp_min = house_temp_set - 0.8
-                house_temp_max = house_temp_set + 0.8
-                house_temp_0 = house_temp_set + random.uniform(-0.4, 0.4)
-
-                with open('house_hp_map.json') as f:
-                    house_hp_map = json.load(f)
-                map_key_elements = house.assetType.split('_')
-                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[
-                    2] + "_" + dhw_profile_name
-                print(map_key)
-                nominal_heat = house_hp_map[map_key]['nominal_heat']
-                dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
-                buffer_volume = house_hp_map[map_key]['sh_tank_mass']
-                buffer_capacitance = buffer_volume * 4183
-                dhw_capacitance = dhw_volume * 4183
-                print(nominal_heat, dhw_volume, buffer_volume)
-
-                description_dict = {'buffer_capacitance': buffer_capacitance,
-                                    'buffer_temp_set': buffer_temp_set,
-                                    'buffer_temp_min': buffer_temp_min,
-                                    'buffer_temp_max': buffer_temp_max,
-                                    'buffer_temp_0': buffer_temp_0,
-                                    'buffer_temp_hor': buffer_temp_set,
-                                    'dhw_capacitance': dhw_capacitance,
-                                    'dhw_temp_set': dhw_temp_set,
-                                    'dhw_temp_min': dhw_temp_min,
-                                    'dhw_temp_max': dhw_temp_max,
-                                    'dhw_temp_0': dhw_temp_0,
-                                    'dhw_temp_hor': dhw_temp_set,
-                                    'dhw_temp_tap': dhw_temp_tap,
-                                    'heat_element': heat_element,
-                                    'cop_element': cop_element,
-                                    'house_temp_set': house_temp_set,
-                                    'house_temp_min': house_temp_min,
-                                    'house_temp_max': house_temp_max,
-                                    'house_temp_0': house_temp_0,
-                                    'house_temp_hor': house_temp_set}
-                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_heat, powerFactor=0.98,
-                                 assetType='air_water')
-                heat_pump.description = json.dumps(description_dict)
+                nominal_heat, buffer_capacitances = self._get_buffer_and_power_params_hp(dhw_profile_name, house)
+                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_heat, powerFactor=0.98, assetType='air_water')
                 heat_pump.COP = 3.5
-
+                description_dict = self._generate_description_dict_heatpump(buffer_temperatures, buffer_capacitances.buffer_capacitance, buffer_capacitances.hw_buffer_capacitance)
 
             elif i in houses_indices_hhp:
-                # Set fixed buffer properties
-                buffer_temp_set = 40.0 + 273.15
-                buffer_temp_min = 25.0 + 273.15
-                buffer_temp_max = 65.0 + 273.15
-                buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10)  # some random variation
 
-                # Set house temperature properties
-                # TODO: use some temperatures based on data
-                house_temp_set = random.choice([18.5, 19.0, 19.5, 20.0, 20.5, 21.0, 21.5]) + 273.15
-                house_temp_min = house_temp_set - 0.8
-                house_temp_max = house_temp_set + 0.8
-                house_temp_0 = house_temp_set + random.uniform(-0.4, 0.4)
+                nominal_heat, buffer_capacitance = self._get_buffer_and_power_params_hhp(house)
 
-                map_key_elements = house.assetType.split('_')
-                print(map_key_elements)
-
-                print(profile_name)
-                with open('house_hhp_map.json') as f:
-                    house_hhp_map = json.load(f)
-                map_key_elements = house.assetType.split('_')
-                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[
-                    2]
-                print(map_key)
-                nominal_heat = house_hhp_map[map_key]['nominal_heat']
-                buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
-                buffer_capacitance = buffer_volume * 4183
-
-                description_dict = {'buffer_capacitance': buffer_capacitance,
-                                    'buffer_temp_set': buffer_temp_set,
-                                    'buffer_temp_min': buffer_temp_min,
-                                    'buffer_temp_max': buffer_temp_max,
-                                    'buffer_temp_0': buffer_temp_0,
-                                    'buffer_temp_hor': buffer_temp_set,
-                                    'house_temp_set': house_temp_set,
-                                    'house_temp_min': house_temp_min,
-                                    'house_temp_max': house_temp_max,
-                                    'house_temp_0': house_temp_0,
-                                    'house_temp_hor': house_temp_set}
+                description_dict = self._generate_description_dict_hybridheatpump(buffer_temperatures, buffer_capacitance)
                 heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
                                            assetType='air_water', heatPumpThermalPower=nominal_heat)
-                heat_pump.description = json.dumps(description_dict)
                 heat_pump.COP = 3.5
 
-            self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
+            demand_sh = self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
 
             dhw_names_options = hw_profile_names
             profile_name = self.rng.choice(dhw_names_options)
-            self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
+            demand_hw = self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
+
+            if demand_sh is not None:
+                house_temp_set = demand_sh.minTemperature + 273.15
+                description_dict['house_temp_set'] = demand_sh.minTemperature + 273.15
+                description_dict['house_temp_min'] = house_temp_set - 0.8
+                description_dict['house_temp_max'] = house_temp_set + 0.8
+                description_dict['house_temp_0'] = house_temp_set + random.uniform(-0.4, 0.4)
+                description_dict['house_temp_hor'] = house_temp_set
 
             # add to a random phase
             phase = np.random.default_rng().integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
+            
+            heat_pump.description = json.dumps(description_dict)
             self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
+
+    def _get_buffer_and_power_params_hhp(self, house : Building) -> tuple[float, float]:
+        map_key_elements = house.assetType.split('_')
+
+        with open('house_hhp_map.json') as f:
+            house_hhp_map = json.load(f)
+
+        map_key_elements = house.assetType.split('_')
+        map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+        map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2]
+        nominal_heat = house_hhp_map[map_key]['nominal_heat']
+        buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
+        buffer_capacitance = buffer_volume * 4183
+        return nominal_heat,buffer_capacitance
+
+    def _get_buffer_and_power_params_hp(self, dhw_profile_name : str, house : Building) -> tuple[float, BufferCapacitances]:
+        with open('house_hp_map.json') as f:
+            house_hp_map = json.load(f)
+
+        map_key_elements = house.assetType.split('_')
+        map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+        map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2] + "_" + dhw_profile_name
+
+        nominal_heat = house_hp_map[map_key]['nominal_heat']
+        dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
+        buffer_volume = house_hp_map[map_key]['sh_tank_mass']
+        buffer_capacitance = buffer_volume * 4183
+        dhw_capacitance = dhw_volume * 4183
+        return nominal_heat, BufferCapacitances(buffer_capacitance, dhw_capacitance)
+
+    def _generate_description_dict_hybridheatpump(self, buffer_temperatures : BufferTemperatures, buffer_capacitance):
+        description_dict = {'buffer_capacitance': buffer_capacitance,
+                            'buffer_temp_set': buffer_temperatures.buffer_temp_set,
+                            'buffer_temp_min': buffer_temperatures.buffer_temp_min,
+                            'buffer_temp_max': buffer_temperatures.buffer_temp_max,
+                            'buffer_temp_0': buffer_temperatures.buffer_temp_0,
+                            'buffer_temp_hor': buffer_temperatures.buffer_temp_set}
+        return description_dict
+
+    def _generate_description_dict_heatpump(self, buffer_temperatures : BufferTemperatures, buffer_capacitance : float, dhw_capacitance : float):
+        # Set fixed dhw tank properties
+        dhw_temp_set = 55.0 + 273.15
+        dhw_temp_min = 25.0 + 273.15
+        dhw_temp_max = 85.0 + 273.15  # 70.0 does not give enough space for pre-heating
+        dhw_temp_0 = 55.0 + 273.15 + random.uniform(-10, 10)
+        dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
+        heat_element = 3000.0
+        cop_element = 1.0
+
+        description_dict = {'buffer_capacitance': buffer_capacitance,
+                                     'buffer_temp_set': buffer_temperatures.buffer_temp_set,
+                                     'buffer_temp_min': buffer_temperatures.buffer_temp_min,
+                                     'buffer_temp_max': buffer_temperatures.buffer_temp_max,
+                                     'buffer_temp_0': buffer_temperatures.buffer_temp_0,
+                                     'buffer_temp_hor': buffer_temperatures.buffer_temp_set,
+                                     'dhw_capacitance': dhw_capacitance,
+                                     'dhw_temp_set': dhw_temp_set,
+                                     'dhw_temp_min': dhw_temp_min,
+                                     'dhw_temp_max': dhw_temp_max,
+                                     'dhw_temp_0': dhw_temp_0,
+                                     'dhw_temp_hor': dhw_temp_set,
+                                     'dhw_temp_tap': dhw_temp_tap,
+                                     'heat_element': heat_element,
+                                     'cop_element': cop_element}
+        return description_dict
 
 
     def add_econnection_information(self, fraction_houses_dyn : float):
@@ -525,8 +512,7 @@ class EsdlBuilder:
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
 
             power_range = [3700, 11000]
-            power = float(self.rng.choice(power_range))
-            annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
+            power_w = float(self.rng.choice(power_range))
             powerfactor = 0.95  
 
             mobility_demand = None
@@ -534,14 +520,14 @@ class EsdlBuilder:
                 entity = ev_entities_in_data[i]
                 data_entity = data[data[ev_specification.charging_station_identifier_column] == entity] 
                 mobility_demand = self.add_ev_profile(entity, data_entity, ev_specification)
-                power = data_entity[ev_specification.charging_power_column].mean()
+                power_w = data_entity[ev_specification.charging_power_column].mean() * 1000
                 annual_load = data_entity[ev_specification.energy_demand_column].sum()
 
             charging_station = EVChargingStation(name='chargingstation_' + house.name, id=str(uuid.uuid4()),
-                                                      power=power, fullLoadHours=int(annual_load/power),
+                                                      power=power_w, fullLoadHours=int(annual_load/power_w),
                                                       powerFactor=powerfactor, assetType='privateEV')  # , description=sessions_car_json)
-            cut_off_charge_rate_3_pahses_kw = 3700
-            if power > cut_off_charge_rate_3_pahses_kw:
+            cut_off_charge_rate_3_pahses_w = 3700
+            if power_w > cut_off_charge_rate_3_pahses_w:
                 # Add to all phases
                 for connection_ph in phase_grids:
                     self.add_consuming_asset_to_other_asset(charging_station, connection_ph, house)

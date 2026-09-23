@@ -10,6 +10,7 @@ base load power kw values
 normalizes them in terms of the total
 
 ev format from to energy and power and identifier
+energy in kwh power in kw
 
 date format ISO8601
 filling missing values

@@ -1,4 +1,4 @@
-time,profile_1,profile_2
+timestamp,profile_1,profile_2
 2020-01-01T00:00:00,1,1
 2020-01-01T00:15:00,2,2
 2020-01-01T00:30:00,3,3

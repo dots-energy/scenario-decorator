@@ -162,7 +162,8 @@ class EsdlBuilder:
 
         if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
             heat_profiles = pd.read_csv(heat_profile_file)
-            temps = list(heat_profiles.iloc[-1][1:])
+            temps_np = list(heat_profiles.iloc[-1][1:])
+            temps = [float(temp) for temp in temps_np]
             heat_profiles.drop(heat_profiles.index[-1], inplace=True)
             heat_profiles['timestamp'] = pd.to_datetime(heat_profiles["timestamp"], format='ISO8601')
             heat_profiles = heat_profiles.set_index('timestamp')
@@ -512,6 +513,7 @@ class EsdlBuilder:
 
             power_range = [3700, 11000]
             power_w = float(self.rng.choice(power_range))
+            annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
             powerfactor = 0.95  
 
             mobility_demand = None

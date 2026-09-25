@@ -4,7 +4,7 @@ import pandas as pd
 import unittest
 from pathlib import Path
 
-from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
@@ -15,7 +15,7 @@ class Test(unittest.TestCase):
         esdl_test_file_path = Path(__file__).parent / "input_files" / "test.esdl"
         self.da_prices_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
-        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path), None)
+        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path), None, None)
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
         self.default_weather_col_mapping = {
@@ -55,7 +55,7 @@ class Test(unittest.TestCase):
         fraction_houses_hp = 0.5
         fraction_houses_hhp = 0.5
 
-        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp)
+        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp, ['profile1', 'profile2'])
 
         houses_with_heatpump = self.get_amount_of_assets_with_type_in_building(HeatPump)
         houses_with_heatpump_hhp = self.get_amount_of_assets_with_type_in_building(HybridHeatPump)
@@ -111,10 +111,24 @@ class Test(unittest.TestCase):
         self.assertEqual(market_profile.timestep, 900)
 
     def test_add_dhw_profiles(self):
-        pass
+        test_profiles_file = Path(__file__).parent / "input_files" / "dhw_profiles_example.csv"
+        self.esdl_decorator.add_heat_profiles(test_profiles_file, 2, "hw", HeatDemandTypeEnum.from_string("HOT_TAPWATER"))
+        heating_demands = self.esdl_decorator.heat_profiles_mapping['hw'].demands
+
+        self.assertEqual(len(heating_demands), 2)
+        self.assertTrue(all(demand.type == HeatDemandTypeEnum.from_string("HOT_TAPWATER") for demand in heating_demands))
 
     def test_add_sh_profiles(self):
-        pass
+        test_profiles_file = Path(__file__).parent / "input_files" / "sh_profiles_example.csv"
+        self.esdl_decorator.add_heat_profiles(test_profiles_file, 2, "sh", HeatDemandTypeEnum.from_string("SPACE_HEATING"))
+        heating_demands = self.esdl_decorator.heat_profiles_mapping['sh'].demands
+        heating_demands_18_degrees = [demand for demand in heating_demands if demand.minTemperature == 18 and demand.maxTemperature == 18]
+        heating_demands_21_degrees = [demand for demand in heating_demands if demand.minTemperature == 21 and demand.maxTemperature == 21]
+        self.assertEqual(len(heating_demands), 2)
+        self.assertEqual(len(heating_demands_18_degrees), 1)
+        self.assertEqual(len(heating_demands_21_degrees), 1)
+        self.assertTrue(all(demand.type == HeatDemandTypeEnum.from_string("SPACE_HEATING") for demand in heating_demands))
+        
 
     def test_add_ev_profiles(self):
         pass
@@ -140,7 +154,7 @@ class Test(unittest.TestCase):
 
     def test_harmonize_profile_dates(self):
         harmonize_year = 2050
-        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_year)
+        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_year, None)
         test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
         esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
 

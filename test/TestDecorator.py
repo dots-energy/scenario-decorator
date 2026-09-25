@@ -119,6 +119,9 @@ class Test(unittest.TestCase):
     def test_add_ev_profiles(self):
         pass
 
+    def test_target_days_profiles(self):
+        pass
+
     def test_add_base_load_profiles(self):
         test_profiles_file = Path(__file__).parent / "input_files" / "base_load_profiles_example.csv"
         profiles_df = pd.read_csv(test_profiles_file, index_col=0, parse_dates=True)

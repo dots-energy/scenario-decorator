@@ -56,7 +56,7 @@ class EsdlBuilder:
         # Too few values -> repeat first values
         missing = target_length - current_length
         logging.info(f"Extending timeseries from "
-                     f"{current_length} to {target_length} values")
+                     f"{current_length} to {target_length} values by repeating values")
         return values + values[:missing]
 
     def create_time_series_profile_from_df(self, df : pd.DataFrame, column_name : str, unit : QuantityAndUnitType | None = None, target_days: int | None = None) -> TimeSeriesProfile:
@@ -159,7 +159,6 @@ class EsdlBuilder:
         self.energy_system.services = services
 
     def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum):
-
 
         if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
             heat_profiles = pd.read_csv(heat_profile_file)
@@ -652,7 +651,6 @@ def main() -> int:
         logging.exception(f"Failed to load params file {args.params}: {e}")
         return 2
 
-    no_target_days = 365
     pv_specification = PvSpecification.from_dict(params.get('pv_specification'))
     battery_specification = BatterySpecification.from_dict(params.get('battery_specification'))
 
@@ -660,18 +658,10 @@ def main() -> int:
     if esdl_path.exists():
         harmonize_profile_dates_to = params.get('harmonize_profiles_to_year', None)
         harmonize_profile_dates_to_year = None
-        no_target_days = params.get('target_days', None)
+        no_target_days = params.get('target_days', 365)
         if harmonize_profile_dates_to is not None:
             harmonize_profile_dates_to_year = harmonize_profile_dates_to
-            if no_target_days is not None:
-                esdl_decorator = EsdlBuilder(
-                    str(esdl_path),
-                    harmonize_profile_dates_to_year,
-                no_target_days)
-        # esdl_decorator = EsdlBuilder(
-        #     str(esdl_path),
-        #     harmonize_profile_dates_to_year,
-        # )
+            esdl_decorator = EsdlBuilder(str(esdl_path), harmonize_profile_dates_to_year, no_target_days)
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2

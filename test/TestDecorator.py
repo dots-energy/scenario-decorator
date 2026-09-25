@@ -6,16 +6,16 @@ from pathlib import Path
 
 from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, PvSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
 
 class Test(unittest.TestCase):
 
     def setUp(self):
-        esdl_test_file_path = Path(__file__).parent / "input_files" / "test.esdl"
+        self.esdl_test_file_path = str(Path(__file__).parent / "input_files" / "test.esdl")
         self.da_prices_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
-        self.esdl_decorator = EsdlBuilder(str(esdl_test_file_path), None, None)
+        self.esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, None)
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
         self.default_weather_col_mapping = {
@@ -131,7 +131,26 @@ class Test(unittest.TestCase):
         
 
     def test_add_ev_profiles(self):
-        pass
+        test_params = [
+            # harmonize year, household,       amount-of_sessions
+            (None,            'Household0001', 134),
+            (2055,            'Household0001', 131)
+        ]
+        for i in range(len(test_params)):
+            test_param = test_params[i]
+            with self.subTest(i=i, params = test_params[i]):
+                esdl_decorator = EsdlBuilder(self.esdl_test_file_path, test_param[0], None)
+                test_profiles_file = Path(__file__).parent / "input_files" / "ev_profiles_example.csv"
+                df = pd.read_csv(test_profiles_file)
+                ev_specification = EvSpecification(test_profiles_file, "ConnectionStartDateTime", "ConnectionEndDateTime", "household", "Energy", "Power")
+                df[ev_specification.connection_start_date_time_column] = pd.to_datetime(df[ev_specification.connection_start_date_time_column], format='ISO8601')
+                df[ev_specification.connection_end_date_time_column] = pd.to_datetime(df[ev_specification.connection_end_date_time_column], format='ISO8601')
+                df_household = df[df['household'] == test_param[1]]
+                demand = esdl_decorator.add_ev_profile(test_param[1], df_household, ev_specification)
+                date_time_profile = demand.port[1].profile[0]
+
+                self.assertEqual(len(date_time_profile.element), test_param[2])
+
 
     def test_target_days_profiles(self):
         pass
@@ -154,7 +173,7 @@ class Test(unittest.TestCase):
 
     def test_harmonize_profile_dates(self):
         harmonize_year = 2050
-        esdl_decorator = EsdlBuilder(str(Path(__file__).parent / "input_files" / "test.esdl"), harmonize_year, None)
+        esdl_decorator = EsdlBuilder(self.esdl_test_file_path, harmonize_year, None)
         test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
         esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
 

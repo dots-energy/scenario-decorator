@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, BufferCapacitances, BufferTemperatures, EvSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, BufferTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -360,23 +360,26 @@ class EsdlBuilder:
             buffer_temp_max = 65.0 + 273.15
             buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10) 
             buffer_temperatures = BufferTemperatures(buffer_temp_set, buffer_temp_min, buffer_temp_max, buffer_temp_0)
-
+            description_dict = {}
             # add heat pump
             if i in house_indices_hp:
 
-                nominal_heat, buffer_capacitances = self._get_buffer_and_power_params_hp(dhw_profile_name, house)
-                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=nominal_heat, powerFactor=0.98, assetType='air_water')
+                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=10000.0, powerFactor=0.98, assetType='air_water')
                 heat_pump.COP = 3.5
-                description_dict = self._generate_description_dict_heatpump(buffer_temperatures, buffer_capacitances.buffer_capacitance, buffer_capacitances.hw_buffer_capacitance)
+                hp_params = self._get_buffer_and_power_params_hp(dhw_profile_name, house)
+                if hp_params is not None:
+                    heat_pump.power = hp_params.nominal_heat
+                    description_dict = self._generate_description_dict_heatpump(buffer_temperatures, hp_params.buffer_capacitance, hp_params.hw_buffer_capacitance)
 
             elif i in houses_indices_hhp:
 
-                nominal_heat, buffer_capacitance = self._get_buffer_and_power_params_hhp(house)
+                hhp_params = self._get_buffer_and_power_params_hhp(house)
 
-                description_dict = self._generate_description_dict_hybridheatpump(buffer_temperatures, buffer_capacitance)
                 heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
-                                           assetType='air_water', heatPumpThermalPower=nominal_heat)
-                heat_pump.COP = 3.5
+                                           assetType='air_water', heatPumpThermalPower=10000.0)
+                if hhp_params is not None:
+                    heat_pump.heatPumpThermalPower = hhp_params.nominal_heat
+                    description_dict = self._generate_description_dict_hybridheatpump(buffer_temperatures, hhp_params.buffer_capacitance)
 
             demand_sh = self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
 
@@ -398,34 +401,38 @@ class EsdlBuilder:
             heat_pump.description = json.dumps(description_dict)
             self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
 
-    def _get_buffer_and_power_params_hhp(self, house : Building) -> tuple[float, float]:
-        map_key_elements = house.assetType.split('_')
+    def _get_buffer_and_power_params_hhp(self, house : Building, hhp_spec_info : Path = Path('house_hhp_map.json')) -> HhpParams | None:
 
-        with open('house_hhp_map.json') as f:
-            house_hhp_map = json.load(f)
+        if hhp_spec_info.exists():
+            with open(hhp_spec_info) as f:
+                house_hhp_map = json.load(f)
 
-        map_key_elements = house.assetType.split('_')
-        map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-        map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2]
-        nominal_heat = house_hhp_map[map_key]['nominal_heat']
-        buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
-        buffer_capacitance = buffer_volume * 4183
-        return nominal_heat,buffer_capacitance
+            map_key_elements = house.assetType.split('_')
+            map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+            map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2]
+            nominal_heat = house_hhp_map[map_key]['nominal_heat']
+            buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
+            buffer_capacitance = buffer_volume * 4183
+            return HhpParams(buffer_capacitance, nominal_heat)
+        else:
+            return None
 
-    def _get_buffer_and_power_params_hp(self, dhw_profile_name : str, house : Building) -> tuple[float, BufferCapacitances]:
-        with open('house_hp_map.json') as f:
-            house_hp_map = json.load(f)
+    def _get_buffer_and_power_params_hp(self, dhw_profile_name : str, house : Building, hp_spec_info : Path = Path('house_hp_map.json')) -> HpParams | None:
+        if hp_spec_info.exists():
+            with open(hp_spec_info) as f:
+                house_hp_map = json.load(f)
 
-        map_key_elements = house.assetType.split('_')
-        map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-        map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2] + "_" + dhw_profile_name
-
-        nominal_heat = house_hp_map[map_key]['nominal_heat']
-        dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
-        buffer_volume = house_hp_map[map_key]['sh_tank_mass']
-        buffer_capacitance = buffer_volume * 4183
-        dhw_capacitance = dhw_volume * 4183
-        return nominal_heat, BufferCapacitances(buffer_capacitance, dhw_capacitance)
+                map_key_elements = house.assetType.split('_')
+                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
+                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2] + "_" + dhw_profile_name
+        
+                nominal_heat = house_hp_map[map_key]['nominal_heat']
+                dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
+                buffer_volume = house_hp_map[map_key]['sh_tank_mass']
+                buffer_capacitance = buffer_volume * 4183
+                dhw_capacitance = dhw_volume * 4183
+                return HpParams(buffer_capacitance, dhw_capacitance, nominal_heat)
+        return None
 
     def _generate_description_dict_hybridheatpump(self, buffer_temperatures : BufferTemperatures, buffer_capacitance):
         description_dict = {'buffer_capacitance': buffer_capacitance,
@@ -539,16 +546,21 @@ class EsdlBuilder:
                 self.connect_ev_profile_to_chargingstation(charging_station, mobility_demand)
 
 
-    def add_measures(self, tou_data_path : Path, from_date_time_col : str, to_date_time_col : str, value_col : str):
-        df = pd.read_csv(tou_data_path)
+    def add_tou_measure(self, tou_spec : TouSpecification):
+        tou_df = pd.read_csv(tou_spec.profile_file)
+        tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='%mT%H:%M')
+        tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%mT%H:%M')
 
         tou_measure = Measure()
         cost_information = CostInformation(id=str(uuid.uuid4()), name="time of use")
         tou_profile = DateTimeProfile()
-        for index, profile_data_row in df.iterrows():
-            start_date_time_session : datetime = profile_data_row[from_date_time_col]
-            end_date_time_session : datetime = profile_data_row[to_date_time_col]
-            tou_weight : float = profile_data_row[value_col]
+        for index, profile_data_row in tou_df.iterrows():
+            start_date_time_session : datetime = profile_data_row[tou_spec.from_date_time_col]
+            end_date_time_session : datetime = profile_data_row[tou_spec.to_date_time_col]
+            if self.harmonize_profiles_to_year is not None:
+                start_date_time_session.year = self.harmonize_profiles_to_year
+                end_date_time_session.year = self.harmonize_profiles_to_year
+            tou_weight : float = profile_data_row[tou_spec.value_col]
             tou_profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=tou_weight))
 
         cost_information.variableMaintenanceCosts = tou_profile
@@ -622,6 +634,16 @@ def parse_market_data(params : dict, esdl_decorator : EsdlBuilder):
         else:
             logging.info("Skip adding market data as the file was not found")
 
+
+def parse_tou_data(params : dict, esdl_decorator : EsdlBuilder):
+    tou_spec = params.get('tou_specification', {})
+    if tou_spec != {}:
+        tou_spec = TouSpecification.from_dict(tou_spec)
+        path_tou_data_file = Path(tou_spec.profile_file)
+        if path_tou_data_file.exists():
+            esdl_decorator.add_tou_measure(tou_spec)
+        else:
+            logging.info("Skip adding market data as the file was not found")
 
 def parse_weather_data(params : dict, esdl_decorator : EsdlBuilder):
     weather_data = params.get('weather_data', '')

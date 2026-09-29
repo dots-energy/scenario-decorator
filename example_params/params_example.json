@@ -58,5 +58,11 @@
         "charging_station_identifier_column" : "household",
         "energy_demand_column" : "Energy",
         "charging_power_column" : "Power"
+    },
+    "tou_specification" : {
+      "profile_file" : "test/input_files/tou_tariff.csv",
+      "from_date_time_col" : "from_tou_month_hour_val",
+      "to_date_time_col" : "to_tou_month_hour_val",
+      "value_col" : "tou_weight"
     }
 }

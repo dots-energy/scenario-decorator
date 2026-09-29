@@ -45,6 +45,14 @@ class EvSpecification:
     energy_demand_column : str
     charging_power_column : str
 
+@dataclass_json
+@dataclass
+class TouSpecification:
+    profile_file : str
+    from_date_time_col : str
+    to_date_time_col : str
+    value_col : str
+
 @dataclass
 class BufferTemperatures:
     buffer_temp_set : float
@@ -53,6 +61,13 @@ class BufferTemperatures:
     buffer_temp_0 : float
 
 @dataclass
-class BufferCapacitances:
+class HpParams:
     buffer_capacitance : float
     hw_buffer_capacitance : float
+    nominal_heat : float
+
+@dataclass
+class HhpParams:
+    buffer_capacitance : float
+    nominal_heat : float
+

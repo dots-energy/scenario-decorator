@@ -279,7 +279,6 @@ class EsdlBuilder:
             orientation = self.rng.integers(pv_specification.orientation_min, pv_specification.orientation_max, endpoint=True)
             pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power), angle=int(panel_angle),
                                              orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area), panelEfficiency=0.2) # ISIE
-            pv_installation.geometry = Point(CRS="Simple", lon=236.0, lat=415.0)
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
                 capacity_kwh = self.rng.normal(battery_specification.capacity_kwh_mean, battery_specification.capacity_kwh_std)
@@ -514,19 +513,19 @@ class EsdlBuilder:
             power_range = [3700, 11000]
             power_w = float(self.rng.choice(power_range))
             annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
-            powerfactor = 0.95  
+            powerfactor = 0.95
 
             mobility_demand = None
             if len(ev_entities_in_data) > 0:
                 entity = ev_entities_in_data[i]
-                data_entity = data[data[ev_specification.charging_station_identifier_column] == entity] 
+                data_entity = data[data[ev_specification.charging_station_identifier_column] == entity]
                 mobility_demand = self.add_ev_profile(entity, data_entity, ev_specification)
                 power_w = data_entity[ev_specification.charging_power_column].mean() * 1000
                 annual_load = data_entity[ev_specification.energy_demand_column].sum()
 
             charging_station = EVChargingStation(name='chargingstation_' + house.name, id=str(uuid.uuid4()),
                                                       power=power_w, fullLoadHours=int(annual_load/power_w),
-                                                      powerFactor=powerfactor, assetType='privateEV')  # , description=sessions_car_json)
+                                                      powerFactor=powerfactor, assetType='privateEV')
             cut_off_charge_rate_3_pahses_w = 3700
             if power_w > cut_off_charge_rate_3_pahses_w:
                 # Add to all phases

@@ -32,7 +32,8 @@
       "profile_file" : "",
       "from_date_time_col" : "from_tou_month_hour_val",
       "to_date_time_col" : "to_tou_month_hour_val",
-      "value_col" : "tou_weight"
+      "value_col" : "tou_weight",
+      "fixed_tou_rate" : 0.06
     },
     "dhw_profiles" : [
         {

@@ -44,6 +44,7 @@ class EvSpecification:
 @dataclass
 class TouSpecification:
     profile_file : str
+    fixed_tou_rate_eur : float
     from_date_time_col : str
     to_date_time_col : str
     value_col : str

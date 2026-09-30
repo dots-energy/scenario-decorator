@@ -564,7 +564,7 @@ class EsdlBuilder:
         tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%mT%H:%M')
 
         tou_measure = Measure()
-        cost_information = CostInformation(id=str(uuid.uuid4()), name="time of use")
+        cost_information = CostInformation(id=str(uuid.uuid4()), name="time of use fixed costs are in eur", fixedOperationalCosts=tou_spec.fixed_tou_rate_eur)
         tou_profile = DateTimeProfile()
         for index, profile_data_row in tou_df.iterrows():
             start_date_time_session : datetime = profile_data_row[tou_spec.from_date_time_col].to_pydatetime()

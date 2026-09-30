@@ -4,7 +4,7 @@ import pandas as pd
 import unittest
 from pathlib import Path
 
-from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
 from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecification, PvSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
@@ -153,6 +153,22 @@ class Test(unittest.TestCase):
 
 
     def test_target_days_profiles(self):
+        test_params = [
+            50,
+            2,
+            200
+        ]
+        for i in range(len(test_params)):
+            target_days = test_params[i]
+            with self.subTest(i=i, params = test_params[i]):
+                 esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, target_days)
+                 test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_example_lengthen_timeseries.csv"
+                 esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
+                 market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
+                 self.assertEqual(len(market_profile.values), target_days*24*4)
+
+
+    def test_add_tou(self):
         pass
 
     def test_add_base_load_profiles(self):

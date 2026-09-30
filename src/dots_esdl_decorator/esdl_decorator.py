@@ -57,7 +57,17 @@ class EsdlBuilder:
         missing = target_length - current_length
         logging.info(f"Extending timeseries {name} from "
                      f"{current_length} to {target_length} values by repeating values")
-        return values + values[:missing]
+        if missing < current_length:
+            return values + values[:missing]
+        else:
+            ret_val = values
+            for i in range(0, missing, current_length):
+                if len(ret_val) + current_length < target_length:
+                    ret_val = ret_val + values
+                else:
+                    ret_val = ret_val + values[:target_length - len(ret_val)]
+            return ret_val
+
 
     def create_time_series_profile_from_df(self, df : pd.DataFrame, column_name : str, unit : QuantityAndUnitType | None = None, target_days: int | None = None) -> TimeSeriesProfile:
         if column_name in df.columns:

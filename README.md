@@ -17,8 +17,10 @@ filling missing values
 todo:
 document shifting values in case of harmonizing year
 
-panel power rating based on efficiency and surface area
+panel power rating based on efficiency and surface area see: https://www.heavengreenenergy.com/glossary/standard-test-conditions
 panel orientation and angle based on: https://verdasol.nl/kennisbank/optimale-hoek-en-richting-voor-zonnepanelen/
+
+document harmonizing length of profiles
 
 ## Installation
 ```

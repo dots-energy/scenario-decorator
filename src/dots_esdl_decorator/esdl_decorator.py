@@ -214,6 +214,7 @@ class EsdlBuilder:
 
             electricity_demand.description = esdl_base_load_profile_name
             electricity_demand.name = f"Total: {totals[col_name]} kwh"
+            electricity_demand.powerFactor = 0.95
             in_port = InPort(id=str(uuid.uuid4()), name="In")
             electricity_demand.port.append(in_port)
             electricity_demand.port.append(OutPort(id=str(uuid.uuid4()), name="Out"))
@@ -486,7 +487,7 @@ class EsdlBuilder:
         n_dyn = round(fraction_houses_dyn * n_houses)
         house_indices_dyn = self.rng.choice(range(0, n_houses), size=n_dyn, replace=False)
 
-        econnections = [esdl_element for esdl_element in self.energy_system.eAllContents() if
+        econnections : list[EConnection] = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                         isinstance(esdl_element, EConnection)]
         counter_ems = 0
         for econnection in econnections:

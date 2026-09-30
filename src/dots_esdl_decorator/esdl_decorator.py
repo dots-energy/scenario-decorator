@@ -39,7 +39,7 @@ class EsdlBuilder:
         parties.party.append(dso)
         self.energy_system.parties = parties
 
-    def _equalize_timeseries_length(self, values:list[float], delta_t: int, target_days: int) -> list[float]:
+    def _equalize_timeseries_length(self, values:list[float], delta_t: int, target_days: int, name : str) -> list[float]:
         intervals_per_day = int(24* 3600 / delta_t)
         target_length = target_days * intervals_per_day
         current_length = len(values)
@@ -49,13 +49,13 @@ class EsdlBuilder:
 
         # Too many values -> truncate
         if current_length > target_length:
-            logging.info(f"Truncating timeseries from "
+            logging.info(f"Truncating timeseries {name} from  "
                          f"{current_length} to {target_length} values")
             return values[:target_length]
 
         # Too few values -> repeat first values
         missing = target_length - current_length
-        logging.info(f"Extending timeseries from "
+        logging.info(f"Extending timeseries {name} from "
                      f"{current_length} to {target_length} values by repeating values")
         return values + values[:missing]
 
@@ -67,7 +67,7 @@ class EsdlBuilder:
             values = self._get_values_for_timeseries(df, column_name, delta_t, min_date, max_date)
 
             if target_days is not None:
-                values = self._equalize_timeseries_length(values, delta_t, target_days)
+                values = self._equalize_timeseries_length(values, delta_t, target_days, column_name)
 
             timeseries_profile = self._build_time_series_profile(delta_t, min_date, values, unit)
             return timeseries_profile
@@ -176,8 +176,11 @@ class EsdlBuilder:
         cols = self.rng.choice(column_choices, size=amount_of_profiles_to_chose)
         for col, temp in zip(cols, temps):
             quantity_and_unit = None
+            description = ""
             if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
                 quantity_and_unit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('POWER'), unit=UnitEnum.from_string('WATT'), multiplier=MultiplierEnum.from_string('KILO'))
+            if heating_demand_type == HeatDemandTypeEnum.from_string('HOT_TAPWATER'):
+                description = "Unit: L/S"
             
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
 
@@ -189,6 +192,7 @@ class EsdlBuilder:
             heating_demand.name = esdl_heat_profile_name
             in_port = InPort(id=str(uuid.uuid4()), name="In")
             heating_demand.port.append(in_port)
+            heating_demand.description = description
             heating_demand.port.append(OutPort(id=str(uuid.uuid4()), name="Out"))
             heating_demand.port[1].profile.append(time_series_profile)
             self.heat_profiles_mapping[heat_profile_name].ports.append(in_port)
@@ -398,11 +402,11 @@ class EsdlBuilder:
 
             if demand_sh is not None:
                 house_temp_set = demand_sh.minTemperature + 273.15
-                description_dict['house_temp_set'] = demand_sh.minTemperature + 273.15
-                description_dict['house_temp_min'] = house_temp_set - 0.8
-                description_dict['house_temp_max'] = house_temp_set + 0.8
-                description_dict['house_temp_0'] = house_temp_set + random.uniform(-0.4, 0.4)
-                description_dict['house_temp_hor'] = house_temp_set
+                description_dict['house_temp_set_k'] = demand_sh.minTemperature + 273.15
+                description_dict['house_temp_min_k'] = house_temp_set - 0.8
+                description_dict['house_temp_max_k'] = house_temp_set + 0.8
+                description_dict['house_temp_0_k'] = house_temp_set + random.uniform(-0.4, 0.4)
+                description_dict['house_temp_hor_k'] = house_temp_set
 
             # add to a random phase
             phase = np.random.default_rng().integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
@@ -564,7 +568,7 @@ class EsdlBuilder:
         tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%mT%H:%M')
 
         tou_measure = Measure()
-        cost_information = CostInformation(id=str(uuid.uuid4()), name="time of use fixed costs are in eur", fixedOperationalCosts=tou_spec.fixed_tou_rate_eur)
+        cost_information = CostInformation(id=str(uuid.uuid4()), name=f"time of use, fixed costs: €{tou_spec.fixed_tou_rate_eur}")
         tou_profile = DateTimeProfile()
         for index, profile_data_row in tou_df.iterrows():
             start_date_time_session : datetime = profile_data_row[tou_spec.from_date_time_col].to_pydatetime()

@@ -18,13 +18,8 @@ class HeatingProfileMetaData(ProfileMetaData):
 @dataclass
 class PvSpecification:
     fraction_houses_pv : float
-    power_mean_kw : float = 7
-    power_std_kw : float = 1
-    orientation_min : int = 90
-    orientation_max : int = 270
     surface_area_min : int = 6
     surface_area_max : int = 16
-    panel_angle_values : list[int] = field(default_factory=lambda: [15, 20, 25, 30])
 
 @dataclass_json
 @dataclass

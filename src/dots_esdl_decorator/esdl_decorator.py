@@ -273,11 +273,19 @@ class EsdlBuilder:
         for i in house_indices_pv:
             house = houses[i]
             surface_area = self.rng.integers(low=6, high=16, endpoint=True)  # 1 panel 1mx1.60m, 4-10 panels
-            power = self.rng.normal(pv_specification.power_mean_kw, pv_specification.power_std_kw)
-            panel_angles = pv_specification.panel_angle_values
-            panel_angle = self.rng.choice(panel_angles)
-            orientation = self.rng.integers(pv_specification.orientation_min, pv_specification.orientation_max, endpoint=True)
-            pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power), angle=int(panel_angle),
+            orientation = self.rng.choice([45, 90, 135, 180, 225, 270, 315]) 
+            orientation_angle_mapping = {
+                45 : self.rng.integers(low=30, high=40, endpoint=True), # northeast
+                90 : self.rng.integers(low=30, high=40, endpoint=True), # east
+                135 : self.rng.integers(low=30, high=35, endpoint=True), # southeast
+                180 : 35, # south
+                225 : self.rng.integers(low=30, high=35, endpoint=True), # southwest
+                270 : self.rng.integers(low=30, high=40, endpoint=True), # west
+                315 : self.rng.integers(low=30, high=40, endpoint=True), # northwest
+            }
+            panel_efficiency = 0.2
+            power_w = surface_area * 1000 * panel_efficiency
+            pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power_w), angle=int(orientation_angle_mapping[orientation]),
                                              orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area), panelEfficiency=0.2) # ISIE
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
@@ -511,7 +519,10 @@ class EsdlBuilder:
             data[ev_specification.connection_start_date_time_column] = pd.to_datetime(data[ev_specification.connection_start_date_time_column], format='ISO8601')
             data[ev_specification.connection_end_date_time_column] = pd.to_datetime(data[ev_specification.connection_end_date_time_column], format='ISO8601')
             charging_stations = data[ev_specification.charging_station_identifier_column].unique()
-            ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev, replace=False)
+            if len(charging_stations) > n_ev:
+                ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev, replace=False)
+            else:
+                ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev)
 
         for i, house_index in enumerate(house_indices_ev):
             house = houses[house_index]
@@ -555,11 +566,11 @@ class EsdlBuilder:
         cost_information = CostInformation(id=str(uuid.uuid4()), name="time of use")
         tou_profile = DateTimeProfile()
         for index, profile_data_row in tou_df.iterrows():
-            start_date_time_session : datetime = profile_data_row[tou_spec.from_date_time_col]
-            end_date_time_session : datetime = profile_data_row[tou_spec.to_date_time_col]
+            start_date_time_session : datetime = profile_data_row[tou_spec.from_date_time_col].to_pydatetime()
+            end_date_time_session : datetime = profile_data_row[tou_spec.to_date_time_col].to_pydatetime()
             if self.harmonize_profiles_to_year is not None:
-                start_date_time_session.year = self.harmonize_profiles_to_year
-                end_date_time_session.year = self.harmonize_profiles_to_year
+                start_date_time_session = start_date_time_session.replace(year=self.harmonize_profiles_to_year)
+                end_date_time_session = end_date_time_session.replace(year=self.harmonize_profiles_to_year)
             tou_weight : float = profile_data_row[tou_spec.value_col]
             tou_profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=tou_weight))
 
@@ -698,6 +709,8 @@ def main() -> int:
     parse_heating_profile(params, 'space_heating_profiles', 'other_space_heating', HeatDemandTypeEnum.from_string('SPACE_HEATING'), esdl_decorator)
 
     parse_base_load_profile(params, esdl_decorator)
+
+    parse_tou_data(params, esdl_decorator)
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     fraction_houses_hhp = params.get('fraction_houses_hhp', 0.0)

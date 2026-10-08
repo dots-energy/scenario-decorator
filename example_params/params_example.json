@@ -15,6 +15,7 @@
     "fraction_houses_hp" : 0.23,
     "fraction_houses_hhp" : 0.77,
     "fraction_houses_ev" : 0.3,
+    "gass_price_eur_m3" : 1.0,
     "weather_data" : {
         "path": "test/input_files/weather-data.csv",
         "soil_temperature_column": "soil_temperature_celcius",
@@ -59,6 +60,6 @@
       "from_date_time_col" : "from_tou_month_hour_val",
       "to_date_time_col" : "to_tou_month_hour_val",
       "value_col" : "tou_weight",
-      "fixed_tou_rate_eur" : 0.06
+      "fixed_tou_rate_eur" : 0.60
     }
 }

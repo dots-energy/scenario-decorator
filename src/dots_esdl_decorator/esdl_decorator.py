@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, BufferTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -156,17 +156,26 @@ class EsdlBuilder:
             column_mapping['outside_temperature'],
             QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days)
 
-    def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str, price_unit : str):
-        da_market = EnergyMarket(name=f'DA-market in {price_unit}', id=str(uuid.uuid4()))
-        services = Services(id=str(uuid.uuid4()))
-        df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='ISO8601')
-        df.sort_index(ascending=True)
+    def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str, price_unit : str, gass_price : float):
+        file_exists = day_ahead_prices_file.exists()
+        if file_exists or gass_price > 0:
+            da_market = EnergyMarket(name=f'DA-market in {price_unit}', id=str(uuid.uuid4()))
+            services = Services(id=str(uuid.uuid4()))
+            if file_exists:
+                df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='ISO8601')
+                df.sort_index(ascending=True)
 
-        da_price_datetime_profile = self.create_time_series_profile_from_df(df, price_column,target_days=self.target_days)
+                da_price_datetime_profile = self.create_time_series_profile_from_df(df, price_column,target_days=self.target_days)
 
-        da_market.marketPrice = da_price_datetime_profile
-        services.service.append(da_market)
-        self.energy_system.services = services
+                da_market.marketPrice = da_price_datetime_profile
+            else:
+                logging.warning(f"Skipped adding day ahead price data file {str(day_ahead_prices_file)} not found")
+
+            if gass_price > 0:
+                da_market.description = f"Gass price {gass_price} EUR/m3"
+        
+            services.service.append(da_market)
+            self.energy_system.services = services
 
     def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum):
 
@@ -377,12 +386,13 @@ class EsdlBuilder:
         for i in np.concatenate((house_indices_hp, houses_indices_hhp)):
             house = houses[i]
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
-
+            dhw_temp_set = 55.0 + 273.15
+            dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
             buffer_temp_set = 40.0 + 273.15
             buffer_temp_min = 25.0 + 273.15
             buffer_temp_max = 65.0 + 273.15
             buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10) 
-            buffer_temperatures = BufferTemperatures(buffer_temp_set, buffer_temp_min, buffer_temp_max, buffer_temp_0)
+            generic_temperatures = GenericHeatpumpTemperatures(buffer_temp_set, buffer_temp_min, buffer_temp_max, buffer_temp_0, dhw_temp_set, dhw_temp_tap)
             description_dict = {}
             # add heat pump
             if i in house_indices_hp:
@@ -392,7 +402,7 @@ class EsdlBuilder:
                 hp_params = self._get_buffer_and_power_params_hp(dhw_profile_name, house)
                 if hp_params is not None:
                     heat_pump.power = hp_params.nominal_heat
-                    description_dict = self._generate_description_dict_heatpump(buffer_temperatures, hp_params.buffer_capacitance, hp_params.hw_buffer_capacitance)
+                    description_dict = self._generate_description_dict_heatpump(generic_temperatures, hp_params.buffer_capacitance, hp_params.hw_buffer_capacitance)
 
             elif i in houses_indices_hhp:
 
@@ -402,7 +412,7 @@ class EsdlBuilder:
                                            assetType='air_water', heatPumpThermalPower=10000.0)
                 if hhp_params is not None:
                     heat_pump.heatPumpThermalPower = hhp_params.nominal_heat
-                    description_dict = self._generate_description_dict_hybridheatpump(buffer_temperatures, hhp_params.buffer_capacitance)
+                    description_dict = self._generate_description_dict_hybridheatpump(generic_temperatures, hhp_params.buffer_capacitance)
 
             demand_sh = self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
 
@@ -419,7 +429,7 @@ class EsdlBuilder:
                 description_dict['house_temp_hor_k'] = house_temp_set
 
             # add to a random phase
-            phase = np.random.default_rng().integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
+            phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
             
             heat_pump.description = json.dumps(description_dict)
             self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
@@ -457,40 +467,40 @@ class EsdlBuilder:
                 return HpParams(buffer_capacitance, dhw_capacitance, nominal_heat)
         return None
 
-    def _generate_description_dict_hybridheatpump(self, buffer_temperatures : BufferTemperatures, buffer_capacitance):
+    def _generate_description_dict_hybridheatpump(self, generic_temperatures : GenericHeatpumpTemperatures, buffer_capacitance):
         description_dict = {'buffer_capacitance': buffer_capacitance,
-                            'buffer_temp_set': buffer_temperatures.buffer_temp_set,
-                            'buffer_temp_min': buffer_temperatures.buffer_temp_min,
-                            'buffer_temp_max': buffer_temperatures.buffer_temp_max,
-                            'buffer_temp_0': buffer_temperatures.buffer_temp_0,
-                            'buffer_temp_hor': buffer_temperatures.buffer_temp_set}
+                            'buffer_temp_set': generic_temperatures.buffer_temp_set,
+                            'buffer_temp_min': generic_temperatures.buffer_temp_min,
+                            'buffer_temp_max': generic_temperatures.buffer_temp_max,
+                            'buffer_temp_0': generic_temperatures.buffer_temp_0,
+                            'buffer_temp_hor': generic_temperatures.buffer_temp_set,
+                            'dhw_temp_tap': generic_temperatures.dhw_temp_tap,
+                            'dhw_temp_set': generic_temperatures.dhw_temp_set}
         return description_dict
 
-    def _generate_description_dict_heatpump(self, buffer_temperatures : BufferTemperatures, buffer_capacitance : float, dhw_capacitance : float):
+    def _generate_description_dict_heatpump(self, generic_temperatures : GenericHeatpumpTemperatures, buffer_capacitance : float, dhw_capacitance : float):
         # Set fixed dhw tank properties
-        dhw_temp_set = 55.0 + 273.15
         dhw_temp_min = 25.0 + 273.15
         dhw_temp_max = 85.0 + 273.15  # 70.0 does not give enough space for pre-heating
         dhw_temp_0 = 55.0 + 273.15 + random.uniform(-10, 10)
-        dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
         heat_element = 3000.0
         cop_element = 1.0
 
         description_dict = {'buffer_capacitance': buffer_capacitance,
-                                     'buffer_temp_set': buffer_temperatures.buffer_temp_set,
-                                     'buffer_temp_min': buffer_temperatures.buffer_temp_min,
-                                     'buffer_temp_max': buffer_temperatures.buffer_temp_max,
-                                     'buffer_temp_0': buffer_temperatures.buffer_temp_0,
-                                     'buffer_temp_hor': buffer_temperatures.buffer_temp_set,
-                                     'dhw_capacitance': dhw_capacitance,
-                                     'dhw_temp_set': dhw_temp_set,
-                                     'dhw_temp_min': dhw_temp_min,
-                                     'dhw_temp_max': dhw_temp_max,
-                                     'dhw_temp_0': dhw_temp_0,
-                                     'dhw_temp_hor': dhw_temp_set,
-                                     'dhw_temp_tap': dhw_temp_tap,
-                                     'heat_element': heat_element,
-                                     'cop_element': cop_element}
+                            'buffer_temp_set': generic_temperatures.buffer_temp_set,
+                            'buffer_temp_min': generic_temperatures.buffer_temp_min,
+                            'buffer_temp_max': generic_temperatures.buffer_temp_max,
+                            'buffer_temp_0': generic_temperatures.buffer_temp_0,
+                            'buffer_temp_hor': generic_temperatures.buffer_temp_set,
+                            'dhw_capacitance': dhw_capacitance,
+                            'dhw_temp_set': generic_temperatures.dhw_temp_set,
+                            'dhw_temp_min': dhw_temp_min,
+                            'dhw_temp_max': dhw_temp_max,
+                            'dhw_temp_0': dhw_temp_0,
+                            'dhw_temp_hor': generic_temperatures.dhw_temp_set,
+                            'dhw_temp_tap': generic_temperatures.dhw_temp_tap,
+                            'heat_element': heat_element,
+                            'cop_element': cop_element}
         return description_dict
 
 
@@ -509,7 +519,7 @@ class EsdlBuilder:
             if counter_ems in house_indices_dyn:
                 econnection.description = 'dynamic_contract'
             else:
-                econnection.description = 'fixed_contract'
+                econnection.description = 'fixed_contract' 
             counter_ems += 1
 
 
@@ -574,10 +584,10 @@ class EsdlBuilder:
 
     def add_tou_measure(self, tou_spec : TouSpecification):
         tou_df = pd.read_csv(tou_spec.profile_file)
-        tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='%mT%H:%M')
-        tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%mT%H:%M')
+        tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='%m-%dT%H:%M')
+        tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%m-%dT%H:%M')
 
-        tou_measure = Measure()
+        tou_measure = Measure(name = "time of use")
         cost_information = CostInformation(id=str(uuid.uuid4()), name=f"time of use, fixed costs: €{tou_spec.fixed_tou_rate_eur}")
         tou_profile = DateTimeProfile()
         for index, profile_data_row in tou_df.iterrows():
@@ -589,7 +599,7 @@ class EsdlBuilder:
             tou_weight : float = profile_data_row[tou_spec.value_col]
             tou_profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=tou_weight))
 
-        cost_information.variableMaintenanceCosts = tou_profile
+        cost_information.variableOperationalCosts = tou_profile
         tou_measure.costInformation = cost_information
         self.energy_system.measures.measure.append(tou_measure)
 
@@ -653,12 +663,10 @@ def parse_market_data(params : dict, esdl_decorator : EsdlBuilder):
     da_market_data = params.get('da_market_data', 'df_da_prices_2023_fixed.csv')
     if isinstance(da_market_data, dict):
         path_market_data_file = Path(da_market_data.get('path', 'weather-data.csv'))
-        if path_market_data_file.exists():
-            price_column = da_market_data.get('price_column', 'Day-ahead Price [EUR/MWh]')
-            price_unit = da_market_data.get('price_unit', 'EUR/MWh')
-            esdl_decorator.add_da_market_timeseries_profile(path_market_data_file, price_column, price_unit)
-        else:
-            logging.info("Skip adding market data as the file was not found")
+        price_column = da_market_data.get('price_column', 'Day-ahead Price [EUR/MWh]')
+        price_unit = da_market_data.get('price_unit', 'EUR/MWh')
+        gass_price = params.get('gass_price_eur_m3', 0.0)
+        esdl_decorator.add_da_market_timeseries_profile(path_market_data_file, price_column, price_unit, gass_price)
 
 
 def parse_tou_data(params : dict, esdl_decorator : EsdlBuilder):

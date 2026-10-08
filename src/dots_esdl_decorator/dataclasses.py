@@ -50,11 +50,13 @@ class TouSpecification:
     value_col : str
 
 @dataclass
-class BufferTemperatures:
+class GenericHeatpumpTemperatures:
     buffer_temp_set : float
     buffer_temp_min : float
     buffer_temp_max : float
     buffer_temp_0 : float
+    dhw_temp_set : float
+    dhw_temp_tap : float
 
 @dataclass
 class HpParams:

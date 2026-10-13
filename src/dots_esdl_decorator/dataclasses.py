@@ -43,6 +43,21 @@ class EvSpecification:
 
 @dataclass_json
 @dataclass
+class HeatProfileSpecification:
+    profile_file : str
+    profile_name : str = ""
+    amount_of_profiles : int = -1
+    unit : str = "kW"
+
+@dataclass_json
+@dataclass
+class BaseLoadProfileSpecification:
+    profile_file : str
+    normalize : bool = False
+    unit : str = "kW"
+
+@dataclass_json
+@dataclass
 class TouSpecification:
     profile_file : str
     fixed_tou_rate_eur : float

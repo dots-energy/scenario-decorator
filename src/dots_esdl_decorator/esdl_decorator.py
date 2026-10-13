@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatProfileSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -214,7 +214,8 @@ class EsdlBuilder:
             services.service.append(da_market)
             self.energy_system.services = services
 
-    def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum, unit: str = "kW"):
+    def add_heat_profiles(self, heat_profile_specification: HeatProfileSpecification, heating_demand_type: EEnum):
+        heat_profile_file = Path(heat_profile_specification.profile_file)
 
         if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
             heat_profiles = pd.read_csv(heat_profile_file)
@@ -228,19 +229,24 @@ class EsdlBuilder:
             temps = [None for col in heat_profiles.columns]
 
         column_choices = list(range(len(heat_profiles.columns)))
-        amount_of_profiles_to_chose = amount_of_profiles if amount_of_profiles > 0 else len(heat_profiles.columns)
+        amount_of_profiles_to_chose = (
+            heat_profile_specification.amount_of_profiles
+            if heat_profile_specification.amount_of_profiles > 0
+            else len(heat_profiles.columns)
+        )
         cols = self.rng.choice(column_choices, size=amount_of_profiles_to_chose)
         for col, temp in zip(cols, temps):
             quantity_and_unit = None
             description = ""
             if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
-                quantity_and_unit = _parse_esdl_unit(unit)
+                quantity_and_unit = _parse_esdl_unit(heat_profile_specification.unit)
             if heating_demand_type == HeatDemandTypeEnum.from_string('HOT_TAPWATER'):
                 description = "Unit: L/S"
             
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
 
             heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp, maxTemperature=temp)
+            heat_profile_name = heat_profile_specification.profile_name
             if heat_profile_name not in self.heat_profiles_mapping:
                 self.heat_profiles_mapping[heat_profile_name] = HeatingProfileMetaData()
             esdl_heat_profile_name = f"{heat_profile_name}{len(self.heat_profiles_mapping[heat_profile_name].ports)}"
@@ -255,19 +261,20 @@ class EsdlBuilder:
             self.heat_profiles_mapping[heat_profile_name].demands.append(heating_demand)
             self.heat_profiles_mapping[heat_profile_name].added_to_esdl.append(False)
 
-    def add_base_load_profiles(self, base_load_profile_file : Path, normalize : bool, unit: str = "kW"):
+    def add_base_load_profiles(self, base_load_profile_specification: BaseLoadProfileSpecification):
+        base_load_profile_file = Path(base_load_profile_specification.profile_file)
         base_load_profiles = pd.read_csv(base_load_profile_file, index_col=0, parse_dates=True, date_format='ISO8601')
         delta_t = int((base_load_profiles.index[1] - base_load_profiles.index[0]).total_seconds())
         delta_t_hours = delta_t / 3600.0
         totals = base_load_profiles.sum(axis=0) * delta_t_hours
-        if normalize:
+        if base_load_profile_specification.normalize:
             base_load_profiles = base_load_profiles.div(totals.to_numpy(), axis=1)
 
         column_choices = base_load_profiles.columns
         cols = column_choices if self.amount_of_connections >= len(column_choices) else self.rng.choice(column_choices, size=self.amount_of_connections, replace=False )
 
         for col_name in cols:
-            quantity_and_unit = _parse_esdl_unit(unit)
+            quantity_and_unit = _parse_esdl_unit(base_load_profile_specification.unit)
             time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name, quantity_and_unit, target_days=self.target_days)
             electricity_demand = ElectricityDemand(id=str(uuid.uuid4()))
             esdl_base_load_profile_name = f"base_load_{col_name}"
@@ -681,14 +688,14 @@ class EsdlBuilder:
 
 
 def parse_heating_profile(params : dict, params_key : str, default_profile_name : str, profile_enum_type : EEnum, esdl_decorator : EsdlBuilder):
-    dhw_profiles = params.get(params_key, [])
-    for profile in dhw_profiles:
-        path = Path(profile["profile_file"])
+    heat_profiles = params.get(params_key, [])
+    for profile in heat_profiles:
+        heat_profile_specification = HeatProfileSpecification.from_dict(
+            {**profile, "profile_name": profile.get("profile_name", default_profile_name)}
+        )
+        path = Path(heat_profile_specification.profile_file)
         if path.exists():
-            profile_name = profile.get("profile_name", default_profile_name)
-            amount_of_profiles = profile.get("amount_of_profiles", -1)
-            unit = profile.get("unit", "kW")
-            esdl_decorator.add_heat_profiles(path, amount_of_profiles, profile_name, profile_enum_type, unit)
+            esdl_decorator.add_heat_profiles(heat_profile_specification, profile_enum_type)
         else:
             logging.info(f"Skip adding {default_profile_name} profile because file {str(path)} does not exist")
 
@@ -696,9 +703,10 @@ def parse_heating_profile(params : dict, params_key : str, default_profile_name 
 def parse_base_load_profile(params : dict, esdl_decorator : EsdlBuilder):
     base_load_profiles = params.get('base_load_profiles', [])
     for profile in base_load_profiles:
-        path = Path(profile["profile_file"])
+        base_load_profile_specification = BaseLoadProfileSpecification.from_dict(profile)
+        path = Path(base_load_profile_specification.profile_file)
         if path.exists():
-            esdl_decorator.add_base_load_profiles(path, profile.get("normalize", False), profile.get("unit", "kW"))
+            esdl_decorator.add_base_load_profiles(base_load_profile_specification)
         else:
             logging.info(f"Skip adding base load profile because file {str(path)} does not exist")
 

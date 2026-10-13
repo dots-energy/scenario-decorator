@@ -16,11 +16,15 @@
     "fraction_houses_hhp" : 0.77,
     "fraction_houses_ev" : 0.3,
     "gass_price_eur_m3" : 1.0,
+    "defalut_lon" : 51.532534,
+    "defalut_lat" : 3.882267,
     "weather_data" : {
         "path": "test/input_files/weather-data.csv",
         "soil_temperature_column": "soil_temperature_celcius",
         "solar_irradiance_column": "solar_radiation_W/m2",
-        "outside_temperature_column": "air_temperature_celcius"
+        "outside_temperature_column": "air_temperature_celcius",
+        "measure_data_location_lat" : 51.532534,
+        "measure_data_location_lon" : 3.882267
     },
     "da_market_data" : {
         "path": "test/input_files/df_da_prices_2023_fixed.csv",

@@ -49,6 +49,16 @@ class TouSpecification:
     to_date_time_col : str
     value_col : str
 
+@dataclass_json
+@dataclass
+class WeatherDataSpecification:
+    path: str = ''
+    soil_temperature_column: str = ''
+    solar_irradiance_column: str = ''
+    outside_temperature_column: str = ''
+    measure_data_location_lat : float | None = None
+    measure_data_location_lon : float | None = None
+
 @dataclass
 class GenericHeatpumpTemperatures:
     buffer_temp_set : float

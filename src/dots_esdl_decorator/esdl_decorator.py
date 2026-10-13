@@ -12,12 +12,12 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification
+from dots_esdl_decorator.dataclasses import BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
 class EsdlBuilder:
-    def __init__(self, esdl_name : str, harmonize_profiles_to_year : int, target_days: int):
+    def __init__(self, esdl_name : str, harmonize_profiles_to_year : int, target_days: int, default_pv_lon, default_pv_lat):
         esh = EnergySystemHandler()
         self.esdl_name = esdl_name
         self.harmonize_profiles_to_year : int = harmonize_profiles_to_year
@@ -29,6 +29,8 @@ class EsdlBuilder:
         self.heat_profiles_mapping :dict[str, HeatingProfileMetaData] = {} 
         self.base_load_profiles : ProfileMetaData = ProfileMetaData()
         self.rng = np.random.default_rng(42)
+        self.weather_data_lon : float = default_pv_lon
+        self.weather_data_lat : float = default_pv_lat
 
     def get_amount_number_of_type_in_esdl(self, esdl_type : type) -> int:
         return len([esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, esdl_type)])
@@ -135,25 +137,27 @@ class EsdlBuilder:
             data_date += timedelta(seconds=delta_t)
         return values
 
-    def add_weather(self, data_file : Path, column_mapping: dict[str, str] | None = None):
+    def add_weather(self, data_file : Path, weather_specification: WeatherDataSpecification):
         energy_system_information = EnergySystemInformation(id=str(uuid.uuid4()))
         weather = EnvironmentalProfiles(name='weather', id=str(uuid.uuid4()))
         energy_system_information.environmentalProfiles = weather
         self.energy_system.energySystemInformation = energy_system_information
         df = pd.read_csv(data_file, index_col=0, parse_dates=True)
-
+        if weather_specification.measure_data_location_lon is not None and weather_specification.measure_data_location_lat is not None:
+            self.weather_data_lon = weather_specification.measure_data_location_lon
+            self.weather_data_lat = weather_specification.measure_data_location_lat
         weather.soilTemperatureProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping['soil_temperature'],
+            weather_specification.soil_temperature_column,
             QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days
         )
         weather.solarIrradianceProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping['solar_irradiance'], target_days=self.target_days
+            weather_specification.solar_irradiance_column, target_days=self.target_days
         )
         weather.outsideTemperatureProfile = self.create_time_series_profile_from_df(
             df,
-            column_mapping['outside_temperature'],
+            weather_specification.outside_temperature_column,
             QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days)
 
     def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str, price_unit : str, gass_price : float):
@@ -311,6 +315,11 @@ class EsdlBuilder:
             power_w = surface_area * 1000 * panel_efficiency
             pv_installation = PVInstallation(name='pv_' + house.name, id=str(uuid.uuid4()), power=float(power_w), angle=int(orientation_angle_mapping[orientation]),
                                              orientation=int(orientation), powerFactor=1.0, surfaceArea=int(surface_area), panelEfficiency=0.2) # ISIE
+            if house.geometry is not None and isinstance(house, Point):
+                pv_installation.geometry = Point(lon=house.geometry.lon, lat=house.geometry.lat)
+            elif self.weather_data_lon is not None and self.weather_data_lat is not None:
+                pv_installation.geometry = Point(lon=self.weather_data_lon, lat=self.weather_data_lat)
+
             phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
             if i in house_indices_bat:
                 capacity_kwh = self.rng.normal(battery_specification.capacity_kwh_mean, battery_specification.capacity_kwh_std)
@@ -682,15 +691,10 @@ def parse_tou_data(params : dict, esdl_decorator : EsdlBuilder):
 def parse_weather_data(params : dict, esdl_decorator : EsdlBuilder):
     weather_data = params.get('weather_data', '')
     if isinstance(weather_data, dict):
-        weather_path = weather_data.get('path', 'weather-data.csv')
-        weather_columns = {
-            'soil_temperature': weather_data.get('soil_temperature_column', 'soil_temperature_celcius'),
-            'solar_irradiance': weather_data.get('solar_irradiance_column', 'solar_radiation_W/m2'),
-            'outside_temperature': weather_data.get('outside_temperature_column', 'air_temperature_celcius')
-        }
-        path_weather_file = Path(weather_path)
+        weather_spec : WeatherDataSpecification = WeatherDataSpecification.from_dict(params.get('weather_data'))
+        path_weather_file = Path(weather_spec.path)
         if path_weather_file.exists():
-            esdl_decorator.add_weather(path_weather_file, weather_columns)
+            esdl_decorator.add_weather(path_weather_file, weather_spec)
         else:
             logging.info("Skip adding weather data as the file was not found")
 
@@ -716,9 +720,11 @@ def main() -> int:
         harmonize_profile_dates_to = params.get('harmonize_profiles_to_year', None)
         harmonize_profile_dates_to_year = None
         no_target_days = params.get('target_days', 365)
+        default_lon = params.get('default_lon', 51.532534)
+        default_lat = params.get('default_lat', 3.882267)
         if harmonize_profile_dates_to is not None:
             harmonize_profile_dates_to_year = harmonize_profile_dates_to
-            esdl_decorator = EsdlBuilder(str(esdl_path), harmonize_profile_dates_to_year, no_target_days)
+            esdl_decorator = EsdlBuilder(str(esdl_path), harmonize_profile_dates_to_year, no_target_days, default_lon, default_lat)
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2

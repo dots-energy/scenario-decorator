@@ -12,6 +12,7 @@
         "power_kw_to_energy_kwh_ratio" : 4
     },
     "harmonize_profiles_to_year" : 2060,
+    "target_days": 365,
     "fraction_houses_hp" : 0.23,
     "fraction_houses_hhp" : 0.77,
     "fraction_houses_ev" : 0.3,

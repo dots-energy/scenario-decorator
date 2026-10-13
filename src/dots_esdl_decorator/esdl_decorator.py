@@ -341,16 +341,16 @@ class EsdlBuilder:
 
         for i in house_indices_pv:
             house = houses[i]
-            surface_area = self.rng.integers(low=6, high=16, endpoint=True)  # 1 panel 1mx1.60m, 4-10 panels
+            surface_area = self.rng.integers(low=pv_specification.surface_area_min, high=pv_specification.surface_area_max, endpoint=True)  # 1 panel 1mx1.60m, 4-10 panels
             orientation = self.rng.choice([45, 90, 135, 180, 225, 270, 315]) 
             orientation_angle_mapping = {
-                45 : self.rng.integers(low=30, high=40, endpoint=True), # northeast
-                90 : self.rng.integers(low=30, high=40, endpoint=True), # east
-                135 : self.rng.integers(low=30, high=35, endpoint=True), # southeast
-                180 : 35, # south
-                225 : self.rng.integers(low=30, high=35, endpoint=True), # southwest
-                270 : self.rng.integers(low=30, high=40, endpoint=True), # west
-                315 : self.rng.integers(low=30, high=40, endpoint=True), # northwest
+                45 : self.rng.integers(low=15, high=30, endpoint=True), # northeast
+                90 : self.rng.integers(low=15, high=30, endpoint=True), # east
+                135 : self.rng.integers(low=15, high=30, endpoint=True), # southeast
+                180 : 30, # south
+                225 : self.rng.integers(low=30, high=45, endpoint=True), # southwest
+                270 : self.rng.integers(low=15, high=30, endpoint=True), # west
+                315 : self.rng.integers(low=75, high=65, endpoint=True), # northwest
             }
             panel_efficiency = 0.2
             power_w = surface_area * 1000 * panel_efficiency

@@ -16,6 +16,39 @@ from dots_esdl_decorator.dataclasses import BatterySpecification, GenericHeatpum
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
+
+def _parse_esdl_unit(unit: str, expected_physical_quantity: str | None = None) -> QuantityAndUnitType:
+    unit_definitions = {
+        "W": ("POWER", "WATT", None),
+        "kW": ("POWER", "WATT", "KILO"),
+        "MW": ("POWER", "WATT", "MEGA"),
+        "Wh": ("ENERGY", "WATTHOUR", None),
+        "kWh": ("ENERGY", "WATTHOUR", "KILO"),
+        "MWh": ("ENERGY", "WATTHOUR", "MEGA"),
+        "J": ("ENERGY", "JOULE", None),
+        "kJ": ("ENERGY", "JOULE", "KILO"),
+        "MJ": ("ENERGY", "JOULE", "MEGA"),
+        "GJ": ("ENERGY", "JOULE", "GIGA"),
+    }
+    unit = unit.strip()
+    if unit not in unit_definitions:
+        supported_units = ", ".join(unit_definitions)
+        raise ValueError(f"Unsupported unit '{unit}'. Supported units: {supported_units}")
+
+    physical_quantity, unit_name, multiplier = unit_definitions[unit]
+    if expected_physical_quantity is not None and physical_quantity != expected_physical_quantity:
+        raise ValueError(
+            f"Unit '{unit}' has physical quantity {physical_quantity}; "
+            f"expected {expected_physical_quantity}"
+        )
+
+    return QuantityAndUnitType(
+        physicalQuantity=PhysicalQuantityEnum.from_string(physical_quantity),
+        unit=UnitEnum.from_string(unit_name),
+        multiplier=MultiplierEnum.from_string(multiplier or "NONE"),
+    )
+
+
 class EsdlBuilder:
     def __init__(self, esdl_name : str, harmonize_profiles_to_year : int, target_days: int, default_pv_lon, default_pv_lat):
         esh = EnergySystemHandler()
@@ -181,7 +214,7 @@ class EsdlBuilder:
             services.service.append(da_market)
             self.energy_system.services = services
 
-    def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum):
+    def add_heat_profiles(self, heat_profile_file : Path, amount_of_profiles : int, heat_profile_name : str, heating_demand_type : EEnum, unit: str = "kW"):
 
         if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
             heat_profiles = pd.read_csv(heat_profile_file)
@@ -201,7 +234,7 @@ class EsdlBuilder:
             quantity_and_unit = None
             description = ""
             if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
-                quantity_and_unit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('POWER'), unit=UnitEnum.from_string('WATT'), multiplier=MultiplierEnum.from_string('KILO'))
+                quantity_and_unit = _parse_esdl_unit(unit)
             if heating_demand_type == HeatDemandTypeEnum.from_string('HOT_TAPWATER'):
                 description = "Unit: L/S"
             
@@ -222,7 +255,7 @@ class EsdlBuilder:
             self.heat_profiles_mapping[heat_profile_name].demands.append(heating_demand)
             self.heat_profiles_mapping[heat_profile_name].added_to_esdl.append(False)
 
-    def add_base_load_profiles(self, base_load_profile_file : Path, normalize : bool):
+    def add_base_load_profiles(self, base_load_profile_file : Path, normalize : bool, unit: str = "kW"):
         base_load_profiles = pd.read_csv(base_load_profile_file, index_col=0, parse_dates=True, date_format='ISO8601')
         delta_t = int((base_load_profiles.index[1] - base_load_profiles.index[0]).total_seconds())
         delta_t_hours = delta_t / 3600.0
@@ -234,7 +267,7 @@ class EsdlBuilder:
         cols = column_choices if self.amount_of_connections >= len(column_choices) else self.rng.choice(column_choices, size=self.amount_of_connections, replace=False )
 
         for col_name in cols:
-            quantity_and_unit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('POWER'), unit=UnitEnum.from_string('WATT'), multiplier=MultiplierEnum.from_string('KILO'))
+            quantity_and_unit = _parse_esdl_unit(unit)
             time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name, quantity_and_unit, target_days=self.target_days)
             electricity_demand = ElectricityDemand(id=str(uuid.uuid4()))
             esdl_base_load_profile_name = f"base_load_{col_name}"
@@ -252,7 +285,8 @@ class EsdlBuilder:
     def add_ev_profile(self, entity : str, profile_data : pd.DataFrame, ev_specification : EvSpecification) -> MobilityDemand:
 
         profile = DateTimeProfile()
-        profile.profileQuantityAndUnit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('ENERGY'), unit=UnitEnum.from_string('WATTHOUR'), multiplier=MultiplierEnum.from_string('KILO'))
+        quantity_and_unit = _parse_esdl_unit(ev_specification.unit, expected_physical_quantity="ENERGY")
+        profile.profileQuantityAndUnit = quantity_and_unit
         days_to_shift = 0
         min_date_data: datetime = profile_data[ev_specification.connection_start_date_time_column].min()
         target_year = min_date_data.year 
@@ -279,8 +313,8 @@ class EsdlBuilder:
                 profile.element.append(ProfileElement(from_=start_date_time_session, to=end_date_time_session, value=energy_consumed))
 
         mobility_demand = MobilityDemand(fuelType=MobilityFuelTypeEnum.from_string('ELECTRICITY'))
-        profile.physicalQuantityAndUnit = QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('ENERGY'), unit=UnitEnum.from_string('WATTHOUR'), multiplier=MultiplierEnum.from_string('KILO'))
-        mobility_demand.name = f"ev_profile_{entity} in kWh"
+        profile.physicalQuantityAndUnit = quantity_and_unit
+        mobility_demand.name = f"ev_profile_{entity} in {ev_specification.unit}"
         in_port = InPort(id=str(uuid.uuid4()), name="In")
         mobility_demand.port.append(in_port)
         mobility_demand.port.append(OutPort(id=str(uuid.uuid4()), name="Out"))
@@ -653,7 +687,8 @@ def parse_heating_profile(params : dict, params_key : str, default_profile_name 
         if path.exists():
             profile_name = profile.get("profile_name", default_profile_name)
             amount_of_profiles = profile.get("amount_of_profiles", -1)
-            esdl_decorator.add_heat_profiles(path, amount_of_profiles, profile_name, profile_enum_type)
+            unit = profile.get("unit", "kW")
+            esdl_decorator.add_heat_profiles(path, amount_of_profiles, profile_name, profile_enum_type, unit)
         else:
             logging.info(f"Skip adding {default_profile_name} profile because file {str(path)} does not exist")
 
@@ -663,7 +698,7 @@ def parse_base_load_profile(params : dict, esdl_decorator : EsdlBuilder):
     for profile in base_load_profiles:
         path = Path(profile["profile_file"])
         if path.exists():
-            esdl_decorator.add_base_load_profiles(path, profile.get("normalize", False))
+            esdl_decorator.add_base_load_profiles(path, profile.get("normalize", False), profile.get("unit", "kW"))
         else:
             logging.info(f"Skip adding base load profile because file {str(path)} does not exist")
 

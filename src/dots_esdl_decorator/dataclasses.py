@@ -39,6 +39,7 @@ class EvSpecification:
     charging_station_identifier_column : str
     energy_demand_column : str
     charging_power_column : str
+    unit : str = "kWh"
 
 @dataclass_json
 @dataclass
@@ -78,4 +79,3 @@ class HpParams:
 class HhpParams:
     buffer_capacitance : float
     nominal_heat : float
-

@@ -42,13 +42,15 @@
         {
             "profile_name" : "test_name_sh",
             "profile_file" : "test/input_files/sh_profiles_example.csv",
-            "amount_of_profiles" : 5
+            "amount_of_profiles" : 5,
+            "unit" : "kW"
         }
     ],
     "base_load_profiles" : [
         {
             "profile_file" : "test/input_files/base_load_profiles_example.csv",
-            "normalize" : false
+            "normalize" : false,
+            "unit" : "kW"
         }
     ],
     "ev_profiles" : {
@@ -57,6 +59,7 @@
         "connection_end_date_time_column" : "ConnectionEndDateTime",
         "charging_station_identifier_column" : "household",
         "energy_demand_column" : "Energy",
+        "unit" : "kWh",
         "charging_power_column" : "Power"
     },
     "tou_specification" : {

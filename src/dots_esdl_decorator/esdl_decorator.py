@@ -170,12 +170,12 @@ class EsdlBuilder:
             data_date += timedelta(seconds=delta_t)
         return values
 
-    def add_weather(self, data_file : Path, weather_specification: WeatherDataSpecification):
+    def add_weather(self, weather_specification: WeatherDataSpecification):
         energy_system_information = EnergySystemInformation(id=str(uuid.uuid4()))
         weather = EnvironmentalProfiles(name='weather', id=str(uuid.uuid4()))
         energy_system_information.environmentalProfiles = weather
         self.energy_system.energySystemInformation = energy_system_information
-        df = pd.read_csv(data_file, index_col=0, parse_dates=True)
+        df = pd.read_csv(weather_specification.path, index_col=0, parse_dates=True)
         if weather_specification.measure_data_location_lon is not None and weather_specification.measure_data_location_lat is not None:
             self.weather_data_lon = weather_specification.measure_data_location_lon
             self.weather_data_lat = weather_specification.measure_data_location_lat
@@ -347,10 +347,10 @@ class EsdlBuilder:
                 45 : self.rng.integers(low=15, high=30, endpoint=True), # northeast
                 90 : self.rng.integers(low=15, high=30, endpoint=True), # east
                 135 : self.rng.integers(low=15, high=30, endpoint=True), # southeast
-                180 : 30, # south
+                180 : self.rng.integers(low=15, high=30, endpoint=True), # south
                 225 : self.rng.integers(low=30, high=45, endpoint=True), # southwest
                 270 : self.rng.integers(low=15, high=30, endpoint=True), # west
-                315 : self.rng.integers(low=75, high=65, endpoint=True), # northwest
+                315 : self.rng.integers(low=15, high=30, endpoint=True), # northwest
             }
             panel_efficiency = 0.2
             power_w = surface_area * 1000 * panel_efficiency
@@ -405,9 +405,10 @@ class EsdlBuilder:
             port = self.base_load_profiles.ports[self.base_load_profiles.index_to_pick]
             self.base_load_profiles.index_to_pick = (self.base_load_profiles.index_to_pick + 1) % len(self.base_load_profiles.ports)
             phase_grids = [asset for asset in econnection.eContainer().asset if isinstance(asset, ElectricityNetwork)]
-            phase_port = self.rng.choice(phase_grids).port[1]
-            phase_port.connectedTo.append(port)
-            port.connectedTo.append(phase_port)
+            for phase_grid in phase_grids:
+                phase_port = phase_grid.port[1]
+                phase_port.connectedTo.append(port)
+                port.connectedTo.append(phase_port)
         else:
             logging.warning("No heat profiles loaded so not connecting base load profiles to econnection")
 
@@ -737,7 +738,7 @@ def parse_weather_data(params : dict, esdl_decorator : EsdlBuilder):
         weather_spec : WeatherDataSpecification = WeatherDataSpecification.from_dict(params.get('weather_data'))
         path_weather_file = Path(weather_spec.path)
         if path_weather_file.exists():
-            esdl_decorator.add_weather(path_weather_file, weather_spec)
+            esdl_decorator.add_weather(weather_spec)
         else:
             logging.info("Skip adding weather data as the file was not found")
 

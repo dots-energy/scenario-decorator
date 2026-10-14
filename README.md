@@ -238,14 +238,17 @@ The angle values depend on the orientation value and are also sampled from a dis
 ### Battery
 The capacity of the battery is drawn from a normal distribution. The mean can be specified using the `capacity_kwh_mean` parameter and the standard deviation can be specified by the `capacity_kwh_std` parameter. The charge rate value of the batteries is calculated  using the `power_kw_to_energy_kwh_ratio` using the following formula: `charge_rate_kw = capacity_kwh / battery_specification.power_kw_to_energy_kwh_ratio`. 
 
-### Heatpump and HybridHeatpump
+### Heatpump and HybridHeatpump demands
 The input esdls specify a buildingtype per connection. This building type can be associated with a heating demand. Heating demands are specified in a dataset and express the amount of energy demanded by a specific building to maintain a certain setpoint temperature inside the building. 
 
 For example consider the following building in the esdl file: 
 ```xml
 <asset xsi:type="esdl:Building" id="acbf09b0-0c31-4e88-a15d-86b6f53757e8" name="Home90_1" originalIdInSource="901" assetType="test_name_sh" energyLabel="LABEL_E">
 ```
-The asset type of the building specifies the set of possible heating demands it can get connected to. The tool will search the added heating demands names for a demand matching the asset type. So, in the above case the building will only get connected to a heating demand if the input parameters specify a heating demand dataset with the specified the name `test_name_sh`. This only holds for the space heating demands. For hot tap water demands the tool will assign one randomly.
+The asset type of the building specifies the set of possible heating demands it can get connected to. The tool will search the added heating demands names for a demand matching the asset type. In the example above, the building will only be assigned a heating demand if the input parameters specify a heating demand dataset named `test_name_sh`. This only holds for the space heating demands. For hot tap water demands the tool will assign one randomly.
+
+### Phases connections 
+New assets are connected to a random phase of a connection. Baseloads are assumed to be uniformly distributed amoung the different phases. Hence, these are connected to all three phases. Each connection is connected to one of the supplied base load profiles.
 
 ## Installation
 ```

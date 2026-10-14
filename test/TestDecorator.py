@@ -6,7 +6,7 @@ from pathlib import Path
 
 from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BatterySpecification, EvSpecification, PvSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder
 
 class Test(unittest.TestCase):
@@ -15,13 +15,13 @@ class Test(unittest.TestCase):
         self.esdl_test_file_path = str(Path(__file__).parent / "input_files" / "test.esdl")
         self.da_prices_file = Path(__file__).parent / "input_files" / "da_prices_example.csv"
         self.weather_data_file = Path(__file__).parent / "input_files" / "weather-data.csv"
-        self.esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, None)
+        self.esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, None, None, None)
         buildings = [e for e in self.esdl_decorator.energy_system.instance[0].area.asset if isinstance(e, Building)]
         self.n_buildings = len(buildings)
         self.default_weather_col_mapping = {
-            'soil_temperature': 'soil_temperature_celcius',
-            'solar_irradiance': 'solar_radiation_W/m2',
-            'outside_temperature': 'air_temperature_celcius'
+            'soil_temperature_column': 'soil_temperature_celcius',
+            'solar_irradiance_column': 'solar_radiation_W/m2',
+            'outside_temperature_column': 'air_temperature_celcius'
         }
 
     def get_amount_of_assets_with_type_in_building(self, asset_type):
@@ -78,7 +78,8 @@ class Test(unittest.TestCase):
 
     def test_add_weather_data(self):
 
-        self.esdl_decorator.add_weather(self.weather_data_file, self.default_weather_col_mapping)
+        spec = WeatherDataSpecification(self.weather_data_file, **self.default_weather_col_mapping)
+        self.esdl_decorator.add_weather(spec)
 
         expected_irradiance_values = [2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 2, 2, 1, 2, 1, 1, 2]
         expected_soil_temperature_values = [9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7, 9.7]
@@ -100,7 +101,7 @@ class Test(unittest.TestCase):
 
     def test_add_market_data(self):
 
-        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]', "EUR/MWh")
+        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]', "EUR/MWh", 0.0)
 
         expected_market_values = [-3.61, -3.61, -3.61, -3.61, -1.46, -1.46, -1.46, -1.46, -1.52, -1.52, -1.52, -1.52, -5.0, -5.0, -5.0, -5.0, -4.6, -4.6, -4.6, -4.6, -4.05, -4.05, -4.05, -4.05]
 
@@ -112,7 +113,8 @@ class Test(unittest.TestCase):
 
     def test_add_dhw_profiles(self):
         test_profiles_file = Path(__file__).parent / "input_files" / "dhw_profiles_example.csv"
-        self.esdl_decorator.add_heat_profiles(test_profiles_file, 2, "hw", HeatDemandTypeEnum.from_string("HOT_TAPWATER"))
+        heat_profile_specification = HeatProfileSpecification(test_profiles_file, "hw", 2, "kW")
+        self.esdl_decorator.add_heat_profiles(heat_profile_specification, HeatDemandTypeEnum.from_string("HOT_TAPWATER"))
         heating_demands = self.esdl_decorator.heat_profiles_mapping['hw'].demands
 
         self.assertEqual(len(heating_demands), 2)
@@ -120,7 +122,8 @@ class Test(unittest.TestCase):
 
     def test_add_sh_profiles(self):
         test_profiles_file = Path(__file__).parent / "input_files" / "sh_profiles_example.csv"
-        self.esdl_decorator.add_heat_profiles(test_profiles_file, 2, "sh", HeatDemandTypeEnum.from_string("SPACE_HEATING"))
+        sh_spec = HeatProfileSpecification(test_profiles_file, "sh", 2, "kW")
+        self.esdl_decorator.add_heat_profiles(sh_spec, HeatDemandTypeEnum.from_string("SPACE_HEATING"))
         heating_demands = self.esdl_decorator.heat_profiles_mapping['sh'].demands
         heating_demands_18_degrees = [demand for demand in heating_demands if demand.minTemperature == 18 and demand.maxTemperature == 18]
         heating_demands_21_degrees = [demand for demand in heating_demands if demand.minTemperature == 21 and demand.maxTemperature == 21]
@@ -132,14 +135,14 @@ class Test(unittest.TestCase):
 
     def test_add_ev_profiles(self):
         test_params = [
-            # harmonize year, household,       amount-of_sessions
+            # harmonize year,  household,       amount-of_sessions
             (None,            'Household0001', 134),
             (2055,            'Household0001', 131)
         ]
         for i in range(len(test_params)):
             test_param = test_params[i]
             with self.subTest(i=i, params = test_params[i]):
-                esdl_decorator = EsdlBuilder(self.esdl_test_file_path, test_param[0], None)
+                esdl_decorator = EsdlBuilder(self.esdl_test_file_path, test_param[0], None, None, None)
                 test_profiles_file = Path(__file__).parent / "input_files" / "ev_profiles_example.csv"
                 df = pd.read_csv(test_profiles_file)
                 ev_specification = EvSpecification(test_profiles_file, "ConnectionStartDateTime", "ConnectionEndDateTime", "household", "Energy", "Power")
@@ -161,9 +164,9 @@ class Test(unittest.TestCase):
         for i in range(len(test_params)):
             target_days = test_params[i]
             with self.subTest(i=i, params = test_params[i]):
-                 esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, target_days)
+                 esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, target_days, None, None)
                  test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_example_lengthen_timeseries.csv"
-                 esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
+                 esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
                  market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
                  self.assertEqual(len(market_profile.values), target_days*24*4)
 
@@ -174,7 +177,8 @@ class Test(unittest.TestCase):
     def test_add_base_load_profiles(self):
         test_profiles_file = Path(__file__).parent / "input_files" / "base_load_profiles_example.csv"
         profiles_df = pd.read_csv(test_profiles_file, index_col=0, parse_dates=True)
-        self.esdl_decorator.add_base_load_profiles(test_profiles_file, normalize=True)
+        baseload_profile_spec = BaseLoadProfileSpecification(test_profiles_file, True, "kW")
+        self.esdl_decorator.add_base_load_profiles(baseload_profile_spec)
 
         e_demands = [obj for obj in self.esdl_decorator.energy_system.eAllContents() if isinstance(obj, ElectricityDemand)]
 
@@ -189,9 +193,9 @@ class Test(unittest.TestCase):
 
     def test_harmonize_profile_dates(self):
         harmonize_year = 2050
-        esdl_decorator = EsdlBuilder(self.esdl_test_file_path, harmonize_year, None)
+        esdl_decorator = EsdlBuilder(self.esdl_test_file_path, harmonize_year, None, None, None)
         test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
-        esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh")
+        esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
 
         market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
 

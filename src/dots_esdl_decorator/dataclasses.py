@@ -75,6 +75,17 @@ class WeatherDataSpecification:
     measure_data_location_lat : float | None = None
     measure_data_location_lon : float | None = None
 
+@dataclass_json
+@dataclass
+class BuildingIsolationSpecification:
+    isolation_params_file: str = ""
+    building_year_col: str = ""
+    rcFloor_col: str = ""
+    rcRoof_col: str = ""
+    rcWall_col: str = ""
+    uDoor: str = ""
+    uWindow: str = ""
+
 @dataclass
 class GenericHeatpumpTemperatures:
     buffer_temp_set : float

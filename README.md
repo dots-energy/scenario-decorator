@@ -78,9 +78,21 @@ Below an overview of all paramters and their description can be found. Some gene
       "to_date_time_col" : "to_tou_month_hour_val", // column name of to timestamp of the tou interval
       "value_col" : "tou_weight", // column name of the tou weight value
       "fixed_tou_rate_eur" : 0.60 // fixed rate in euro of time of use
+    },
+    "building_isolation" : {
+        "isolation_params_file" : "test/input_files/building_isolation_params.csv",
+        "building_year_col" : "buildingYear",
+        "rcFloor_col" : "rcFloor",
+        "rcRoof_col" : "rcRoof",
+        "rcWall_col" : "rcWall",
+        "uDoor" : "uDoor",
+        "uWindow" : "uWindow"
     }
 }
 ```
+### Parameter `building_isolation`
+This optional parameter adds building year and structure information to each building. The CSV must include an `ID` column whose value exactly matches each building's `assetType`. The configured `building_year_col` supplies `buildingYear`; the other configured columns supply `rcFloor`, `rcRoof`, `rcWall`, `uDoor`, and `uWindow` in the building's `BuildingStructureInformation`. If an asset type has multiple matching rows, the first row in the CSV is used. 
+
 ### Parameter `harmonize_profiles_to_year`
 This parameter specifies the year all datasets should be harmonized to. Meaning that the year of the timestamp in the datasets will be transformed to the year specified by the parameter. Day of the week will be preserved meaning that values that are associated with a certain day of the week are still associated with the same day of the week after the transformation. Values that are skipped at the beginning will be appended at the end of the dataset. If no year is specified the datasets will be put in the esdl's as specified in the files.
 

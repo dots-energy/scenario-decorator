@@ -2,12 +2,12 @@ from datetime import datetime
 from pathlib import Path
 import pandas as pd
 import unittest
-from pathlib import Path
+from unittest.mock import patch
 
-from esdl import Battery, Building, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, BuildingStructureInformation, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
-from dots_esdl_decorator.esdl_decorator import EsdlBuilder
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
+from dots_esdl_decorator.esdl_decorator import EsdlBuilder, parse_isolation_parameters
 
 class Test(unittest.TestCase):
 
@@ -98,6 +98,66 @@ class Test(unittest.TestCase):
         self.assertListEqual(air_temperature_profile.values, expected_air_temperature_values)
         self.assertEqual(air_temperature_profile.startDateTime, datetime.strptime('2022-12-31T23:50:00Z', '%Y-%m-%dT%H:%M:%S%z'))
         self.assertEqual(air_temperature_profile.timestep, 600)
+
+    def test_add_building_isolation(self):
+        isolation_file = Path(__file__).parent / "input_files" / "building_isolation_params.csv"
+        specification = BuildingIsolationSpecification(
+            str(isolation_file),
+            "buildingYear",
+            "rcFloor",
+            "rcRoof",
+            "rcWall",
+            "uDoor",
+            "uWindow",
+        )
+        buildings = [asset for asset in self.esdl_decorator.energy_system.eAllContents() if isinstance(asset, Building)]
+        for building in buildings:
+            building.assetType = "vrijstaande woning_before_1965"
+
+        self.esdl_decorator.add_building_isolation(specification)
+
+        self.assertEqual(len(buildings), self.n_buildings)
+        self.assertTrue(all(building.buildingYear == 1964 for building in buildings))
+        self.assertTrue(all(len(building.buildinginformation) == 1 for building in buildings))
+        building_information : BuildingStructureInformation = buildings[0].buildinginformation[0]
+        self.assertIsInstance(building_information, BuildingStructureInformation)
+        self.assertAlmostEqual(building_information.rcFloor, 3.5)
+        self.assertAlmostEqual(building_information.rcRoof, 3.5)
+        self.assertAlmostEqual(building_information.rcWall, 1.7)
+        self.assertAlmostEqual(building_information.uDoor, 1.4)
+        self.assertAlmostEqual(building_information.uWindow, 1.4)
+
+    def test_parse_building_isolation_parameters(self):
+        isolation_file = Path(__file__).parent / "input_files" / "building_isolation_params.csv"
+        with patch.object(self.esdl_decorator, "add_building_isolation") as add_isolation:
+            parse_isolation_parameters(
+                {
+                    "building_isolation": {
+                        "isolation_params_file": str(isolation_file),
+                        "building_year_col": "buildingYear",
+                        "rcFloor_col": "rcFloor",
+                        "rcRoof_col": "rcRoof",
+                        "rcWall_col": "rcWall",
+                        "uDoor": "uDoor",
+                        "uWindow": "uWindow",
+                    }
+                },
+                self.esdl_decorator,
+            )
+
+        add_isolation.assert_called_once()
+        self.assertEqual(
+            add_isolation.call_args.args[0],
+            BuildingIsolationSpecification(
+                str(isolation_file),
+                "buildingYear",
+                "rcFloor",
+                "rcRoof",
+                "rcWall",
+                "uDoor",
+                "uWindow",
+            ),
+        )
 
     def test_add_market_data(self):
 
@@ -205,4 +265,3 @@ class Test(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

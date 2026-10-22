@@ -6,13 +6,13 @@ import json
 import logging
 import random
 
-from esdl import Battery, Building, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, MultiplierEnum, OutPort, PhysicalQuantityEnum, PVInstallation, Parties, Party, Point, ProfileElement, QuantityAndUnitType, Services, TimeSeriesProfile, UnitEnum
+from esdl import Battery, Building, BuildingStructureInformation, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, MultiplierEnum, OutPort, PhysicalQuantityEnum, PVInstallation, Parties, Party, Point, ProfileElement, QuantityAndUnitType, Services, TimeSeriesProfile, UnitEnum
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, GenericHeatpumpTemperatures, EvSpecification, HeatProfileSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, GenericHeatpumpTemperatures, EvSpecification, HeatProfileSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -244,8 +244,8 @@ class EsdlBuilder:
                 description = "Unit: L/S"
             
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
-
-            heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp, maxTemperature=temp)
+            comfort_range = 0.8
+            heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp - comfort_range, maxTemperature=temp + comfort_range)
             heat_profile_name = heat_profile_specification.profile_name
             if heat_profile_name not in self.heat_profiles_mapping:
                 self.heat_profiles_mapping[heat_profile_name] = HeatingProfileMetaData()
@@ -472,8 +472,8 @@ class EsdlBuilder:
             demand_hw = self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
 
             if demand_sh is not None:
-                house_temp_set = demand_sh.minTemperature + 273.15
-                description_dict['house_temp_set_k'] = demand_sh.minTemperature + 273.15
+                house_temp_set = (demand_sh.minTemperature + demand_sh.maxTemperature) / 2
+                description_dict['house_temp_set_k'] = demand_sh.minTemperature
                 description_dict['house_temp_min_k'] = house_temp_set - 0.8
                 description_dict['house_temp_max_k'] = house_temp_set + 0.8
                 description_dict['house_temp_0_k'] = house_temp_set + random.uniform(-0.4, 0.4)
@@ -655,6 +655,29 @@ class EsdlBuilder:
         self.energy_system.measures.measure.append(tou_measure)
 
 
+    def add_building_isolation(self, isolation_specification: BuildingIsolationSpecification):
+        isolation_data = pd.read_csv(isolation_specification.isolation_params_file)
+
+        buildings = [
+            esdl_element
+            for esdl_element in self.energy_system.eAllContents()
+            if isinstance(esdl_element, Building)
+        ]
+        for building in buildings:
+            matching_rows = isolation_data.loc[isolation_data["ID"] == building.assetType]
+            if matching_rows.empty:
+                logging.warning(f"No building isolation parameters found for asset type '{building.assetType}'")
+            row = matching_rows.iloc[0]
+            building_information = BuildingStructureInformation(
+                rcFloor=float(row[isolation_specification.rcFloor_col]),
+                rcRoof=float(row[isolation_specification.rcRoof_col]),
+                rcWall=float(row[isolation_specification.rcWall_col]),
+                uDoor=float(row[isolation_specification.uDoor]),
+                uWindow=float(row[isolation_specification.uWindow]),
+            )
+            building.buildinginformation.append(building_information)
+
+
     def add_congestion_measure(self, congestion_management_active : bool):
         congestion_measure = Measure(name="congestion_management_active", id=str(uuid.uuid4()))
         congestion_measure.description = str(congestion_management_active)
@@ -743,6 +766,17 @@ def parse_weather_data(params : dict, esdl_decorator : EsdlBuilder):
             logging.info("Skip adding weather data as the file was not found")
 
 
+def parse_isolation_parameters(params : dict, esdl_decorator : EsdlBuilder):
+    isolation_params = params.get('building_isolation', None)
+    if isinstance(isolation_params, dict):
+        isolation_specification = BuildingIsolationSpecification.from_dict(isolation_params)
+        path_isolation_file = Path(isolation_specification.isolation_params_file)
+        if path_isolation_file.exists():
+            esdl_decorator.add_building_isolation(isolation_specification)
+        else:
+            logging.info("Skip adding building isolation because the file was not found")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Decorate an ESDL file using JSON parameters")
     parser.add_argument('esdl', help='Path to the input ESDL file')
@@ -784,6 +818,8 @@ def main() -> int:
     parse_base_load_profile(params, esdl_decorator)
 
     parse_tou_data(params, esdl_decorator)
+
+    parse_isolation_parameters(params, esdl_decorator)
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     fraction_houses_hhp = params.get('fraction_houses_hhp', 0.0)

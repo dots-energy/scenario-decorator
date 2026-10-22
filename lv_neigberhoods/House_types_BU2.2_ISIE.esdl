@@ -2517,7 +2517,7 @@
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="47.97476748339615" lon="3.313542365310774"/>
         <port xsi:type="esdl:OutPort" id="2222a380-4002-4f1b-b0df-4add2d06d6ef" name="Out" connectedTo="5358f119-7c45-415f-b471-e52ef529dd24"/>
       </asset>
-      <asset xsi:type="esdl:Building" id="1fc9fffe-2019-419f-86e2-02833a211608" name="Home57_1" originalIdInSource="571" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="1fc9fffe-2019-419f-86e2-02833a211608" name="Home57_1" originalIdInSource="571" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68040903268627" lon="-11.793811798010973"/>
         <asset xsi:type="esdl:EConnection" id="2b3d44ca-2391-47fb-9268-6a0c50e6f492" name="ConnectionHome57_1" originalIdInSource="571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2541,6 +2541,7 @@
           <port xsi:type="esdl:InPort" id="b56ae62b-728e-499b-9298-f4e5159af2c9" name="In" connectedTo="2035066f-6e1f-443c-ae01-607744fccd41"/>
           <port xsi:type="esdl:OutPort" id="f7028f53-98bf-4899-92f8-b985ca192c6b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="49f4f11c-4e49-488a-8810-7b6b064cec4c" name="CableHome57_1" originalIdInSource="571" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.5">
         <port xsi:type="esdl:InPort" id="b5ae4a2a-815f-4866-84e9-22f700f96f00" name="In" connectedTo="46c60a5b-dd4c-4dba-ab22-fbeb5e57de4b"/>
@@ -2550,7 +2551,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68040903268627" lon="-11.793811798010973"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3040a222-9768-4d12-b3bb-e8d9bdb8205e" name="Home75_1" originalIdInSource="751" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="3040a222-9768-4d12-b3bb-e8d9bdb8205e" name="Home75_1" originalIdInSource="751" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68907534245556" lon="-11.832040522746391"/>
         <asset xsi:type="esdl:EConnection" id="eea9ca06-6cc7-4669-b14f-f7f4bd1e1003" name="ConnectionHome75_1" originalIdInSource="751" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2574,6 +2575,7 @@
           <port xsi:type="esdl:InPort" id="0ac3e81a-a44d-48d3-89a4-6f1af8319bf5" name="In" connectedTo="4cd94055-9759-4d23-96f3-a8d30492dac4"/>
           <port xsi:type="esdl:OutPort" id="52481632-0065-4f9f-ab7a-b01e661f00c5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f1ce4c56-354e-4bd1-a37e-e59181117def" name="CableHome75_1" originalIdInSource="751" assetType="4x16Cu_as16__VG_YMVK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="46aaa0a0-ad03-4ca6-8972-3e947dcaee5d" name="In" connectedTo="57fdfe73-f72d-4ca7-83d5-a9c32b6c8fa8"/>
@@ -2583,7 +2585,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68907534245556" lon="-11.832040522746391"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b12a9907-4d40-42cf-b229-26c0bdb2f979" name="Home80_1" originalIdInSource="801" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="b12a9907-4d40-42cf-b229-26c0bdb2f979" name="Home80_1" originalIdInSource="801" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69211090966468" lon="-11.839479275455483"/>
         <asset xsi:type="esdl:EConnection" id="eb4ef5f1-1394-409c-b270-cad5a39663ad" name="ConnectionHome80_1" originalIdInSource="801" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2607,6 +2609,7 @@
           <port xsi:type="esdl:InPort" id="112f90d4-4c29-43f7-b512-43ae4cfa5fca" name="In" connectedTo="b9d6f604-f224-4858-9cfc-2b8fc28d6c60"/>
           <port xsi:type="esdl:OutPort" id="a72e3320-e99c-4d10-8a01-6f2f831451c0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3620b337-e3aa-4ffa-ba4b-df1ba67e5948" name="CableHome80_1" originalIdInSource="801" assetType="4x16Cu_as16__VG_YMVK_asmb" length="25.9">
         <port xsi:type="esdl:InPort" id="b2233845-6f55-42fd-b4e8-a419e4789627" name="In" connectedTo="e3bc49cd-1693-44e9-90fe-f1ef24093f37"/>
@@ -2616,7 +2619,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69211090966468" lon="-11.839479275455483"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="acde60ee-d33d-4a46-ad95-ab9fc29f1119" name="Home83_1" originalIdInSource="831" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="acde60ee-d33d-4a46-ad95-ab9fc29f1119" name="Home83_1" originalIdInSource="831" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.668344624489656" lon="-11.795506890064777"/>
         <asset xsi:type="esdl:EConnection" id="e6a2c67f-680b-4be2-aba9-e1c20faa2806" name="ConnectionHome83_1" originalIdInSource="831" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2640,6 +2643,7 @@
           <port xsi:type="esdl:InPort" id="fff13762-0836-40aa-b9e0-2bad46c9669c" name="In" connectedTo="3cdfc577-b81d-44b5-99bf-9a20b0b4aca9"/>
           <port xsi:type="esdl:OutPort" id="ed9852f0-bc9c-4f2e-aff0-2144d41486e4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4f1f85fc-444c-4e4e-a00b-c3fcd7d0c760" name="CableHome83_1" originalIdInSource="831" assetType="4x16Cu_as16__VG_YMVK_asmb" length="2.5">
         <port xsi:type="esdl:InPort" id="a873a0a7-4b90-44d4-ad87-fca4d9661ea8" name="In" connectedTo="33c3a7fc-85db-4aed-80c1-1fe67d5a2a41"/>
@@ -2649,7 +2653,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.668344624489656" lon="-11.795506890064777"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bccf6c2d-f730-46a0-8942-c81605dd3864" name="Home84_1" originalIdInSource="841" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="bccf6c2d-f730-46a0-8942-c81605dd3864" name="Home84_1" originalIdInSource="841" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67113343044394" lon="-11.796119198253352"/>
         <asset xsi:type="esdl:EConnection" id="dfa2a1dc-52fe-4ec7-a8d8-8c55389804b1" name="ConnectionHome84_1" originalIdInSource="841" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2673,6 +2677,7 @@
           <port xsi:type="esdl:InPort" id="a188e985-0429-421e-a144-a7f6fa2ff12c" name="In" connectedTo="50fe455c-06c7-4e99-a021-649f58ad4976"/>
           <port xsi:type="esdl:OutPort" id="058b4f69-119f-4349-9aef-02b358611c71" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="026d7263-72ef-472f-b8f1-016574035b8c" name="CableHome84_1" originalIdInSource="841" assetType="4x16Cu_as16__VG_YMVK_asmb" length="2.6">
         <port xsi:type="esdl:InPort" id="7813c74b-8013-445e-ac45-abeff1afca8a" name="In" connectedTo="8d301221-13c7-46f1-b15c-550c48676031"/>
@@ -2682,7 +2687,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67113343044394" lon="-11.796119198253352"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="25e79a42-3a1a-4044-a7d9-8b76c58f28a0" name="Home85_1" originalIdInSource="851" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="25e79a42-3a1a-4044-a7d9-8b76c58f28a0" name="Home85_1" originalIdInSource="851" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67388344733888" lon="-11.796952420848738"/>
         <asset xsi:type="esdl:EConnection" id="f13c1f4d-ca95-4024-9116-40dc8b00eea1" name="ConnectionHome85_1" originalIdInSource="851" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2706,6 +2711,7 @@
           <port xsi:type="esdl:InPort" id="04f77952-40fc-4a17-ba97-3f1cbbb7491d" name="In" connectedTo="99eab90e-5682-4aa5-8335-1aa1adc2be60"/>
           <port xsi:type="esdl:OutPort" id="ecc2ff9a-b11e-48e8-8191-4d330a250a11" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="413c63dc-dc21-414d-a04c-a5be9de63073" name="CableHome85_1" originalIdInSource="851" assetType="4x16Cu_as16__VG_YMVK_asmb" length="4.5">
         <port xsi:type="esdl:InPort" id="adba0b97-1178-4054-8126-8279048b3ab2" name="In" connectedTo="e534b74a-8630-4623-9e47-5e9e300f9b06"/>
@@ -2715,7 +2721,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67388344733888" lon="-11.796952420848738"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5c32a192-e142-4210-9b7a-ceb208e60e12" name="Home100_1" originalIdInSource="1001" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="5c32a192-e142-4210-9b7a-ceb208e60e12" name="Home100_1" originalIdInSource="1001" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_B" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.677964153443895" lon="-11.800515304921879"/>
         <asset xsi:type="esdl:EConnection" id="ebca2e9a-7baa-478f-8bd0-5ec6dc606a32" name="ConnectionHome100_1" originalIdInSource="1001" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2739,6 +2745,7 @@
           <port xsi:type="esdl:InPort" id="780a75fd-dcbd-4550-8488-45fc911716dc" name="In" connectedTo="f14a24e5-3599-4419-b019-14bf054c7cb1"/>
           <port xsi:type="esdl:OutPort" id="b52bab3d-1b6a-4650-a2d7-3c8761523645" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="71e1f0ae-c12d-44b2-9883-e96f421106d8" name="CableHome100_1" originalIdInSource="1001" assetType="4x10Cu__GPLK" length="15.0">
         <port xsi:type="esdl:InPort" id="4ff13214-b315-4504-83d6-e5d9c46a5c02" name="In" connectedTo="0608c7a9-1f2b-4eec-b4e3-728c4e8e675b"/>
@@ -2748,7 +2755,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.677964153443895" lon="-11.800515304921879"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5f0d21c2-afe6-4065-a31f-cdba472a4b8c" name="Home102_1" originalIdInSource="1021" assetType="mansionette_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5f0d21c2-afe6-4065-a31f-cdba472a4b8c" name="Home102_1" originalIdInSource="1021" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="42.89" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.680714169317405" lon="-11.801348864103053"/>
         <asset xsi:type="esdl:EConnection" id="597be6ed-6114-4a27-bb1a-399d2c64181e" name="ConnectionHome102_1" originalIdInSource="1021" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2772,6 +2779,7 @@
           <port xsi:type="esdl:InPort" id="87b7f052-9c66-4b8c-8a0b-1d123b0aa19b" name="In" connectedTo="c502c1e5-a05f-41f0-b483-90e6dec81ed5"/>
           <port xsi:type="esdl:OutPort" id="e4591a6c-7614-4ed3-b892-3158e89df835" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="18.48" height="11.0" windowArea="11.159999999999998" doorArea="4.35" slantedRoofArea="63.87"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="80482333-8814-4d68-8cd0-889c65fbb03a" name="CableHome102_1" originalIdInSource="1021" assetType="4x10Cu__GPLK" length="12.7">
         <port xsi:type="esdl:InPort" id="fb89a58d-00c4-4e44-8032-3dabe950ea75" name="In" connectedTo="2cd11da2-56e0-49bb-b379-0f95aaa4090f"/>
@@ -2781,7 +2789,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.680714169317405" lon="-11.801348864103053"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="842d3ed2-efe0-41f9-a149-0ff3e6ae09e8" name="Home107_1" originalIdInSource="1071" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="842d3ed2-efe0-41f9-a149-0ff3e6ae09e8" name="Home107_1" originalIdInSource="1071" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.680381466575156" lon="-11.797060420027266"/>
         <asset xsi:type="esdl:EConnection" id="cc5bbfcc-24a8-45cf-920a-de82fc0391f2" name="ConnectionHome107_1" originalIdInSource="1071" assetType="1x16A" capacity="3680.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2805,6 +2813,7 @@
           <port xsi:type="esdl:InPort" id="4d856cdf-7151-4cbe-96f3-91740c59fbbe" name="In" connectedTo="6a89a628-f430-435f-bead-e5de4335c724"/>
           <port xsi:type="esdl:OutPort" id="0c8592e0-185d-4acd-ba30-635bf1c658ef" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5da0f85d-50dd-4862-a10c-492883279f07" name="CableHome107_1" originalIdInSource="1071" assetType="3x2p5Cu__VMVK_as" length="2.7">
         <port xsi:type="esdl:InPort" id="a6c31e7c-4b49-4a4c-a432-f1370ce1c4ef" name="In" connectedTo="27dd2b17-4c55-4888-9e21-d503ce13a50d"/>
@@ -2814,7 +2823,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.680381466575156" lon="-11.797060420027266"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e26edc6e-329d-4586-b5c3-9d9f87f9ce99" name="Home160_1" originalIdInSource="1601" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e26edc6e-329d-4586-b5c3-9d9f87f9ce99" name="Home160_1" originalIdInSource="1601" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67819296880022" lon="-11.828036966410883"/>
         <asset xsi:type="esdl:EConnection" id="eadb35b4-4dd1-4b97-be79-e4dd4292d93b" name="ConnectionHome160_1" originalIdInSource="1601" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2826,6 +2835,7 @@
           <port xsi:type="esdl:InPort" id="7dd376b8-c796-46d6-9492-8e9a0184d8a6" name="In" connectedTo="b7ce1ab0-7eb5-4e16-836e-3d2e4fb950ca"/>
           <port xsi:type="esdl:OutPort" id="8b73dbbe-43ea-4eab-af85-23d201d151d2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="71d6b2b4-f305-4e00-9875-e42ceb09be10" name="CableHome160_1" originalIdInSource="1601" assetType="4x10Cu__GPLK" length="3.2">
         <port xsi:type="esdl:InPort" id="d8941a92-76e5-4fcc-b58f-221564bf68f7" name="In" connectedTo="bcee84da-6a8b-4743-bd8c-67375529923f"/>
@@ -2835,7 +2845,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67819296880022" lon="-11.828036966410883"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="23675cc5-8be1-46cf-b87c-b3b13d3e9d18" name="Home168_1" originalIdInSource="1681" assetType="mansionette_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="23675cc5-8be1-46cf-b87c-b3b13d3e9d18" name="Home168_1" originalIdInSource="1681" assetType="maisonnette_before_1964" energyLabel="LABEL_B" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.676961253108594" lon="-11.830920074694811"/>
         <asset xsi:type="esdl:EConnection" id="2b2e999c-0ed6-4864-b1a0-ae766a71a3a8" name="ConnectionHome168_1" originalIdInSource="1681" assetType="1x10A" capacity="2300.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2859,6 +2869,7 @@
           <port xsi:type="esdl:InPort" id="f0e03fd3-4115-426b-8276-595294976ecc" name="In" connectedTo="ed971b7b-708f-4c17-a1cf-b92714315ba3"/>
           <port xsi:type="esdl:OutPort" id="9ab7e37b-de6a-47c8-b65d-8ebd7bba74ad" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="011e0b8d-3279-42f5-8ec4-6990e71787a0" name="CableHome168_1" originalIdInSource="1681" assetType="4x10Cu_as10__VO_YMvK_asmb" length="10.3">
         <port xsi:type="esdl:InPort" id="acc10f09-1eef-490b-a8b3-5548ad080669" name="In" connectedTo="03ffc589-6b19-48f8-8ea2-8e1a6f34ca7f"/>
@@ -2868,7 +2879,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.676961253108594" lon="-11.830920074694811"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c284685d-b575-43e5-a64c-1d9e8f3b6142" name="Home188_1" originalIdInSource="1881" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="c284685d-b575-43e5-a64c-1d9e8f3b6142" name="Home188_1" originalIdInSource="1881" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.680930406233884" lon="-11.799087935100209"/>
         <asset xsi:type="esdl:EConnection" id="8a4f2416-ec27-4e1d-a6ec-47e5884a9147" name="ConnectionHome188_1" originalIdInSource="1881" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2892,6 +2903,7 @@
           <port xsi:type="esdl:InPort" id="8bfbee66-90a1-4cbe-8850-74d7ee6c607c" name="In" connectedTo="ea4ac733-22eb-47de-816b-12ce853be76c"/>
           <port xsi:type="esdl:OutPort" id="91cdcd32-3621-4544-ab0f-820d3722ff26" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bf0d7ec6-610b-4ede-b29b-4a4bef1febd0" name="CableHome188_1" originalIdInSource="1881" assetType="4x10Cu__VO_YMvKas" length="6.6">
         <port xsi:type="esdl:InPort" id="892840a7-41f2-4fca-8c7c-9ba8a51401d1" name="In" connectedTo="e80454a0-1b09-46da-a0b4-2186a174b35d"/>
@@ -2901,7 +2913,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.680930406233884" lon="-11.799087935100209"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="95237bbe-f585-4151-bcf0-587e2067c5b3" name="Home190_1" originalIdInSource="1901" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="95237bbe-f585-4151-bcf0-587e2067c5b3" name="Home190_1" originalIdInSource="1901" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69220220176142" lon="-11.793662300546613"/>
         <asset xsi:type="esdl:EConnection" id="72a16b80-f8d3-4ced-bb64-6b8e8ba6d0bb" name="ConnectionHome190_1" originalIdInSource="1901" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2925,6 +2937,7 @@
           <port xsi:type="esdl:InPort" id="3c336329-1e8e-4b99-a401-25ca94cfb3cc" name="In" connectedTo="eb6db23e-6db3-468a-bb6b-cebdad0a2d4f"/>
           <port xsi:type="esdl:OutPort" id="abcead50-f06f-4d45-bf87-64b5a441e259" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="792a3af7-2ca7-4182-8fc7-416067892b60" name="CableHome190_1" originalIdInSource="1901" assetType="4x10Cu__VO_YMvKas" length="18.4">
         <port xsi:type="esdl:InPort" id="ec87d246-6436-445f-8354-88d87fa78bb2" name="In" connectedTo="6a68d68d-7638-4158-891e-30553a677cc6"/>
@@ -2934,7 +2947,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69220220176142" lon="-11.793662300546613"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5d0d5c18-9f3d-4396-8156-abd434a3c507" name="Home197_1" originalIdInSource="1971" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5d0d5c18-9f3d-4396-8156-abd434a3c507" name="Home197_1" originalIdInSource="1971" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.692269180493525" lon="-11.831381813329399"/>
         <asset xsi:type="esdl:EConnection" id="cf05177d-e125-4a9a-b8bb-72070c15b5a9" name="ConnectionHome197_1" originalIdInSource="1971" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2958,6 +2971,7 @@
           <port xsi:type="esdl:InPort" id="207f3b7a-a0eb-4fd5-92f5-1f59fe382a5f" name="In" connectedTo="b06f782d-cb6c-4207-8246-755e0a077b6c"/>
           <port xsi:type="esdl:OutPort" id="3a951e2d-0be1-4b54-b785-7c177537f957" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5ea2b945-ca5c-4200-bda4-4f0490bdf1bb" name="CableHome197_1" originalIdInSource="1971" assetType="4x10Cu__VO_YMvKas" length="9.0">
         <port xsi:type="esdl:InPort" id="d5200ec8-7862-4e29-9b83-f4a1633026fe" name="In" connectedTo="0e4c2cfe-a263-40d4-a561-feecf87db0a8"/>
@@ -2967,7 +2981,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.692269180493525" lon="-11.831381813329399"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ec6c0c37-461d-42b6-adde-473d1cfa5a5f" name="Home198_1" originalIdInSource="1981" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="ec6c0c37-461d-42b6-adde-473d1cfa5a5f" name="Home198_1" originalIdInSource="1981" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="26012d4b-a6ab-49dd-bd6a-c082154f0c0c" name="ConnectionHome198_1" originalIdInSource="1981" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -2991,6 +3005,7 @@
           <port xsi:type="esdl:InPort" id="eede4d08-375b-4701-94f3-1060110d91db" name="In" connectedTo="24c2949a-23d3-4cf7-9076-c3c0503cc175"/>
           <port xsi:type="esdl:OutPort" id="dbb6719c-f55b-4b4f-89f7-49f12ac61e2f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a030da69-69ec-4901-bff3-3307b60e7e7c" name="CableHome198_1" originalIdInSource="1981" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="64706e49-aa63-449d-87b8-ac2b921c0be1" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3000,7 +3015,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fa26c4a6-b1ff-47bd-a5cf-043f9f0f2b36" name="Home198_2" originalIdInSource="1982" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="fa26c4a6-b1ff-47bd-a5cf-043f9f0f2b36" name="Home198_2" originalIdInSource="1982" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="3f467a3d-03de-40b0-a951-ca50a50ed72e" name="ConnectionHome198_2" originalIdInSource="1982" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3024,6 +3039,7 @@
           <port xsi:type="esdl:InPort" id="b398a38f-1843-4f66-836d-3296dffe454c" name="In" connectedTo="a9420a19-19f1-43fa-ae8e-fc6b8715e0dd"/>
           <port xsi:type="esdl:OutPort" id="d5d4857a-1476-4e15-8d6e-8eef7526f5d8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9daf7195-29d5-460c-ad2d-f74296254240" name="CableHome198_2" originalIdInSource="1982" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="2caa6e0b-1612-4876-afca-4dcf2f2cab68" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3033,7 +3049,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="165199ac-1111-43a1-886a-433a88bd1899" name="Home198_3" originalIdInSource="1983" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="165199ac-1111-43a1-886a-433a88bd1899" name="Home198_3" originalIdInSource="1983" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="7054fe86-e84e-4f8e-bc2c-46665c846950" name="ConnectionHome198_3" originalIdInSource="1983" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3057,6 +3073,7 @@
           <port xsi:type="esdl:InPort" id="c41abb60-31de-41e0-91a1-82f90e4d5e8a" name="In" connectedTo="c41db72c-c8e3-48b4-9568-8d3a7002ed9b"/>
           <port xsi:type="esdl:OutPort" id="0656e3eb-cb7b-45d0-9263-08609f06dda5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4762e848-aa0c-4261-ab2f-2742e54197cb" name="CableHome198_3" originalIdInSource="1983" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3047ac57-10e6-4661-84b2-e256ad5834d2" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3066,7 +3083,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0397afc6-95e4-46c1-959f-f17c7b324b32" name="Home198_4" originalIdInSource="1984" assetType="appartement_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="0397afc6-95e4-46c1-959f-f17c7b324b32" name="Home198_4" originalIdInSource="1984" assetType="appartement_before_1964" energyLabel="LABEL_G" floorArea="22.33333333333333" buildingYear="1955" surfaceArea="67" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="12d85026-65d0-48f5-8271-e5424560f17f" name="ConnectionHome198_4" originalIdInSource="1984" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3090,6 +3107,7 @@
           <port xsi:type="esdl:InPort" id="61a96173-7768-4c80-9193-fd36240e7ced" name="In" connectedTo="fa896636-e927-4514-8e92-252a97bd61be"/>
           <port xsi:type="esdl:OutPort" id="229177cf-7656-40d5-924f-e4abea9ecf8e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="25.026666666666667" height="12.0" windowArea="14.226666666666665" doorArea="5.67" flatRoofArea="22.33333333333333"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="80f97668-28a1-4699-830d-97cdfd097ea4" name="CableHome198_4" originalIdInSource="1984" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e8e2bde4-7419-4b6e-a9ec-91bbe95a57ed" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3099,7 +3117,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="deb64a73-10cd-49be-845e-4dce90be6970" name="Home198_5" originalIdInSource="1985" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="deb64a73-10cd-49be-845e-4dce90be6970" name="Home198_5" originalIdInSource="1985" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="1d3f99ef-0809-41eb-b0df-fb0e0d43148c" name="ConnectionHome198_5" originalIdInSource="1985" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3123,6 +3141,7 @@
           <port xsi:type="esdl:InPort" id="39c20914-bed1-4979-a47d-2820a8e2203b" name="In" connectedTo="71e79937-559d-4dfd-a185-5d0290a44a67"/>
           <port xsi:type="esdl:OutPort" id="cb5c0a62-d688-43d6-9288-2a8cf96c8569" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="235f4576-d987-4444-bfd2-db15d7423e0e" name="CableHome198_5" originalIdInSource="1985" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="44ea639a-7d3b-4acf-ad83-caca967d56bf" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3132,7 +3151,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="833e88b6-140d-41bf-9422-00608621194a" name="Home198_6" originalIdInSource="1986" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="833e88b6-140d-41bf-9422-00608621194a" name="Home198_6" originalIdInSource="1986" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="7da49032-2f65-4326-8661-a9b9b8b96116" name="ConnectionHome198_6" originalIdInSource="1986" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3156,6 +3175,7 @@
           <port xsi:type="esdl:InPort" id="e073874b-4a6f-4020-b615-331bba6bef4c" name="In" connectedTo="7229775e-01ce-4b21-87ee-a7521a0add4d"/>
           <port xsi:type="esdl:OutPort" id="9698492a-c80a-4bcc-9ec4-5b5dbf230b2c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8e452a5e-8069-4c6b-9c0a-7bc2aa43211e" name="CableHome198_6" originalIdInSource="1986" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="91c42912-6bab-4017-bb6b-3b699fed6ad3" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3165,7 +3185,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fbce5ca9-1dc0-4360-9acc-97d3fd8429fa" name="Home198_7" originalIdInSource="1987" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="fbce5ca9-1dc0-4360-9acc-97d3fd8429fa" name="Home198_7" originalIdInSource="1987" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="4e39c2c2-b046-4a15-a4e5-7c354c8b3528" name="ConnectionHome198_7" originalIdInSource="1987" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3189,6 +3209,7 @@
           <port xsi:type="esdl:InPort" id="347159fa-7332-49ed-ad28-30314e832c0a" name="In" connectedTo="752f79e1-846c-4676-8397-14ed2467a099"/>
           <port xsi:type="esdl:OutPort" id="c0d5fffd-b203-413a-be0f-9a64faac2209" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8d72fc8b-589c-4d4f-8d1a-083f18a61d09" name="CableHome198_7" originalIdInSource="1987" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b2e599f4-f1ab-41dd-b1c0-448321564993" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3198,7 +3219,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1292e9aa-6422-437d-b4e3-0fa61b9cd0ab" name="Home198_8" originalIdInSource="1988" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="1292e9aa-6422-437d-b4e3-0fa61b9cd0ab" name="Home198_8" originalIdInSource="1988" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="a7f3846f-2997-4e75-bee2-97356352923a" name="ConnectionHome198_8" originalIdInSource="1988" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3222,6 +3243,7 @@
           <port xsi:type="esdl:InPort" id="478d1f05-3fd6-4200-84b5-bfa73a07043e" name="In" connectedTo="4ee8811d-c78d-44ab-bfac-9aad877999dc"/>
           <port xsi:type="esdl:OutPort" id="2820dace-e40d-4eb3-b7c3-ce3654ce1998" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7d2e793e-ef77-4714-8aba-a4cca379733b" name="CableHome198_8" originalIdInSource="1988" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="1a24d471-94d6-4bb9-9b2a-e9647179598f" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3231,7 +3253,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e0546e64-98ce-4164-8180-597488dfa3f7" name="Home198_9" originalIdInSource="1989" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e0546e64-98ce-4164-8180-597488dfa3f7" name="Home198_9" originalIdInSource="1989" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         <asset xsi:type="esdl:EConnection" id="95cd25cf-3d98-4ec2-acec-9e9b9704c689" name="ConnectionHome198_9" originalIdInSource="1989" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3255,6 +3277,7 @@
           <port xsi:type="esdl:InPort" id="3da9a25e-3558-465b-a631-d70236107bac" name="In" connectedTo="ad14c78e-8ad9-4653-b61b-cbb9f8189339"/>
           <port xsi:type="esdl:OutPort" id="5c440590-29e3-4490-a925-2b24d9f10203" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4dfdee92-f356-42e4-a369-d2637461ba2d" name="CableHome198_9" originalIdInSource="1989" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="df57c191-609c-443e-a1b4-11ec11d8f3d6" name="In" connectedTo="58da842f-1767-4754-9b5b-0ecaed2527f6"/>
@@ -3264,7 +3287,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67650040088765" lon="-11.797512777290104"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="556e2003-bf2f-468a-a7b0-998f0593c312" name="Home199_1" originalIdInSource="1991" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="556e2003-bf2f-468a-a7b0-998f0593c312" name="Home199_1" originalIdInSource="1991" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="d958c21b-5772-4164-8333-dbc7edda1e81" name="ConnectionHome199_1" originalIdInSource="1991" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3288,6 +3311,7 @@
           <port xsi:type="esdl:InPort" id="313cd036-7c14-4e06-be96-5f4a5919c4dc" name="In" connectedTo="c9964294-ae15-4cb5-b255-937cbdf81bf9"/>
           <port xsi:type="esdl:OutPort" id="851fe9e9-4678-4a33-a926-1a7f34e769c9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4ccb0f02-7cf2-44f3-844d-8634cc5a157e" name="CableHome199_1" originalIdInSource="1991" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="9b7d3f18-5a72-43dc-9839-9a69a27c6a1b" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3297,7 +3321,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="630e12d3-7133-460f-8ab3-4675f33fde02" name="Home199_2" originalIdInSource="1992" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="630e12d3-7133-460f-8ab3-4675f33fde02" name="Home199_2" originalIdInSource="1992" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="cd48018a-0290-4db6-8397-552dbe21c240" name="ConnectionHome199_2" originalIdInSource="1992" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3321,6 +3345,7 @@
           <port xsi:type="esdl:InPort" id="023627f0-889b-4b5f-a84f-60811ef786b0" name="In" connectedTo="f322522d-da3b-4ff1-aeea-7a6dc1bf5f7d"/>
           <port xsi:type="esdl:OutPort" id="bbc99731-eb87-4fdd-8acf-952b8af89dbf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1f013e54-4552-4b11-84ba-f2150785dad3" name="CableHome199_2" originalIdInSource="1992" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="fccaac87-f043-48be-8087-3d6c744329ef" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3330,7 +3355,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="384fc219-4f4e-4042-8236-9980c04c20c7" name="Home199_3" originalIdInSource="1993" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="384fc219-4f4e-4042-8236-9980c04c20c7" name="Home199_3" originalIdInSource="1993" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="88bc5e6c-d694-4a60-b989-8dfa34294754" name="ConnectionHome199_3" originalIdInSource="1993" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3354,6 +3379,7 @@
           <port xsi:type="esdl:InPort" id="caa006cd-3cea-4993-9de9-7ebd4112c999" name="In" connectedTo="6dd6b6fc-d00c-4738-ad65-2123357d15a3"/>
           <port xsi:type="esdl:OutPort" id="0309075c-c7e6-4d23-9961-464525f5caf0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f6712e7f-bc2e-4244-9749-4428d8eee4f8" name="CableHome199_3" originalIdInSource="1993" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e5c0e9c3-7f57-4767-b9a6-8c5c8f9c3e8a" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3363,7 +3389,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7181a63d-7c8f-4860-a16d-15a8bcc904cb" name="Home199_4" originalIdInSource="1994" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="7181a63d-7c8f-4860-a16d-15a8bcc904cb" name="Home199_4" originalIdInSource="1994" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="35aed4e5-a1de-46b3-8b6b-3a591461781b" name="ConnectionHome199_4" originalIdInSource="1994" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3387,6 +3413,7 @@
           <port xsi:type="esdl:InPort" id="021a16de-a8d5-4fa5-ab62-741631f614d5" name="In" connectedTo="fa5eb572-cc2a-41b1-b218-9116ebc014f3"/>
           <port xsi:type="esdl:OutPort" id="252e22ff-9de2-4979-86a2-41a100ddf46f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c538b558-9c11-4138-8b8a-3d5f48f5a72f" name="CableHome199_4" originalIdInSource="1994" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="5acbb4ac-829c-4eac-942f-4bfd7673a1d7" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3396,7 +3423,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5ad9eb7a-dfe5-4cbe-a184-16e1bde032c0" name="Home199_5" originalIdInSource="1995" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5ad9eb7a-dfe5-4cbe-a184-16e1bde032c0" name="Home199_5" originalIdInSource="1995" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="87a2053b-54e2-432a-bac6-035cbe273f86" name="ConnectionHome199_5" originalIdInSource="1995" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3420,6 +3447,7 @@
           <port xsi:type="esdl:InPort" id="400cf660-50b3-4a34-ac0d-b968760f54a9" name="In" connectedTo="502c8ef7-dcf0-42ec-8305-a8b6ef35c147"/>
           <port xsi:type="esdl:OutPort" id="7284c710-64ee-4431-bba2-3b9fca00c993" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0e332a2e-fe5f-4fb4-b562-c1c905ec61a8" name="CableHome199_5" originalIdInSource="1995" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="72403b51-28db-4d73-a046-c8bc0c22bc7b" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3429,7 +3457,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ee102dbb-4f5b-43cf-80fd-5ea30efd2aea" name="Home199_6" originalIdInSource="1996" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="ee102dbb-4f5b-43cf-80fd-5ea30efd2aea" name="Home199_6" originalIdInSource="1996" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="1cd8947d-c598-4484-b3e8-fa25bc531064" name="ConnectionHome199_6" originalIdInSource="1996" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3453,6 +3481,7 @@
           <port xsi:type="esdl:InPort" id="2f770520-4d9e-4db6-81e5-afc2e2e3490d" name="In" connectedTo="4a4f69fb-87a3-4801-8dae-446e7ce52ef6"/>
           <port xsi:type="esdl:OutPort" id="7f684910-4c8a-4daf-bb67-df9a7a27d07c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="df53e36f-8aa3-485b-8fb6-4575ca4f5426" name="CableHome199_6" originalIdInSource="1996" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="374ed82e-f920-427f-8886-eb57237608ec" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3462,7 +3491,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b853f993-6583-466f-b915-232f807f78df" name="Home199_7" originalIdInSource="1997" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="b853f993-6583-466f-b915-232f807f78df" name="Home199_7" originalIdInSource="1997" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="5dbfe8fe-24f9-4be5-a958-cf5199bfbc2d" name="ConnectionHome199_7" originalIdInSource="1997" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3486,6 +3515,7 @@
           <port xsi:type="esdl:InPort" id="88cbf696-35c7-4055-af5e-b11e1250d7f7" name="In" connectedTo="243a671f-f7be-4f72-8c19-9f40e60759c5"/>
           <port xsi:type="esdl:OutPort" id="b3ce62ec-d646-469c-b313-6610a90b9cc0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="414cbc54-3854-4128-a864-e259a3066f6c" name="CableHome199_7" originalIdInSource="1997" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e76b1f20-a3e0-44bc-8383-939681b3e15d" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3495,7 +3525,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c2274b3f-989f-4d9a-ab08-51f1c95e3143" name="Home199_8" originalIdInSource="1998" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="c2274b3f-989f-4d9a-ab08-51f1c95e3143" name="Home199_8" originalIdInSource="1998" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         <asset xsi:type="esdl:EConnection" id="bd40c1fb-27a5-40d8-a874-fad1aae35343" name="ConnectionHome199_8" originalIdInSource="1998" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3519,6 +3549,7 @@
           <port xsi:type="esdl:InPort" id="ab623e71-70cc-40d8-b494-595bcf4d01c5" name="In" connectedTo="1e2c8fee-77e2-4971-b489-391c49c0e0ca"/>
           <port xsi:type="esdl:OutPort" id="59bfb6d5-a396-49fa-83e6-3c58fb37c04f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="27f0f3d6-a487-4485-88ac-f88858df7a40" name="CableHome199_8" originalIdInSource="1998" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0a3ff8f2-e23a-4210-99ae-09a4f263ec0c" name="In" connectedTo="d7929946-15fb-4b54-bf51-2b22c46d0fd5"/>
@@ -3528,7 +3559,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691531466040836" lon="-11.801603389619979"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="15605b7d-cb1b-4f24-b307-99de0ac09f30" name="Home200_1" originalIdInSource="2001" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="15605b7d-cb1b-4f24-b307-99de0ac09f30" name="Home200_1" originalIdInSource="2001" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68255492687478" lon="-11.799114997069152"/>
         <asset xsi:type="esdl:EConnection" id="ef205b38-e302-4fe7-8d8c-94033813909b" name="ConnectionHome200_1" originalIdInSource="2001" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3552,6 +3583,7 @@
           <port xsi:type="esdl:InPort" id="d959a487-135e-4dcb-a8e0-0a7430592768" name="In" connectedTo="3a124118-9da2-4518-bc4c-5e1ad315e349"/>
           <port xsi:type="esdl:OutPort" id="cab8bcfc-59af-4a31-a20e-d0ff724f918c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="47b5229f-2ff1-49a6-9a69-7d94a7beb0ed" name="CableHome200_1" originalIdInSource="2001" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="922ffb55-e851-43d4-94ab-a85b8494b3c4" name="In" connectedTo="d6111713-33ca-4804-b742-d137c70eda12"/>
@@ -3561,7 +3593,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68255492687478" lon="-11.799114997069152"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fc70b3e9-a332-48f7-be9d-a48a54bccd42" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="fc70b3e9-a332-48f7-be9d-a48a54bccd42" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="47aac584-08f6-4dae-a7c5-ecd068d859b3" name="ConnectionHome201_1" originalIdInSource="2011" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3585,6 +3617,7 @@
           <port xsi:type="esdl:InPort" id="517dd570-e3af-41dd-a264-8feadcb2af2c" name="In" connectedTo="f15ace54-a9fd-49f2-a12d-f062d0a7b18b"/>
           <port xsi:type="esdl:OutPort" id="61e6b9a2-0ab2-48a5-85a5-5c8ef2af6501" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1587845a-1377-4beb-be7d-022a6e168ad8" name="CableHome201_1" originalIdInSource="2011" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d89fda33-7053-4753-be95-37f2a8cf01dd" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3594,7 +3627,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ea180e0e-f6ac-4b13-aa0a-d6f7e1ca14ee" name="Home201_2" originalIdInSource="2012" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="ea180e0e-f6ac-4b13-aa0a-d6f7e1ca14ee" name="Home201_2" originalIdInSource="2012" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="a0c27e4e-1d9b-46c4-b27a-819121930948" name="ConnectionHome201_2" originalIdInSource="2012" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3618,6 +3651,7 @@
           <port xsi:type="esdl:InPort" id="6ad28252-b53b-47b2-90f9-6a8a1337ae66" name="In" connectedTo="f1be4d80-b443-48a4-afdd-151abd5dee57"/>
           <port xsi:type="esdl:OutPort" id="32b3ccc3-0378-42ba-8729-950a7058282a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="57fd828d-ce31-4882-b5e2-6f0c978a37c8" name="CableHome201_2" originalIdInSource="2012" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6f01141d-e9c6-425c-ab27-111bb042ea76" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3627,7 +3661,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2d882965-9725-4b62-9d29-51a87076a27b" name="Home201_3" originalIdInSource="2013" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="2d882965-9725-4b62-9d29-51a87076a27b" name="Home201_3" originalIdInSource="2013" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="031bf3c8-e082-4681-9a07-5f07064eadaf" name="ConnectionHome201_3" originalIdInSource="2013" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3651,6 +3685,7 @@
           <port xsi:type="esdl:InPort" id="9620d3b1-e759-413a-b89f-df2e6550cdac" name="In" connectedTo="d06b74ce-1acc-43d4-b7c8-4af86d697cac"/>
           <port xsi:type="esdl:OutPort" id="c276bf49-d474-43a6-b1cb-6ea16c7b4da3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c4fa43fa-9aa1-457d-a7aa-56230b6df053" name="CableHome201_3" originalIdInSource="2013" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ff93da90-1da8-49c2-bd92-3253665a7b8d" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3660,7 +3695,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1d3ff402-9a3e-4df6-acdc-7ed9ed38633e" name="Home201_4" originalIdInSource="2014" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="1d3ff402-9a3e-4df6-acdc-7ed9ed38633e" name="Home201_4" originalIdInSource="2014" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="2b50dccb-32a5-4827-90b1-8c17776e68c8" name="ConnectionHome201_4" originalIdInSource="2014" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3684,6 +3719,7 @@
           <port xsi:type="esdl:InPort" id="3a2b64e0-4c71-4234-bd39-4e7535f255a3" name="In" connectedTo="e071ada6-af82-4f0d-a0a9-bc71b96fc6c4"/>
           <port xsi:type="esdl:OutPort" id="9bf01de2-4e29-442a-a0f5-d10765109aab" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8ff520a6-0b71-4553-9c64-823302fdedf7" name="CableHome201_4" originalIdInSource="2014" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="5d25d6bf-9756-46a8-b4de-42e0c26fbf73" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3693,7 +3729,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5d85c3a8-ec77-4e5c-9403-08003680033d" name="Home201_5" originalIdInSource="2015" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="5d85c3a8-ec77-4e5c-9403-08003680033d" name="Home201_5" originalIdInSource="2015" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="ad8373c3-4a79-4dc9-87e3-bb021b0fcbf9" name="ConnectionHome201_5" originalIdInSource="2015" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3717,6 +3753,7 @@
           <port xsi:type="esdl:InPort" id="df0823db-932c-4c79-b6ad-57ff4ea5ab3d" name="In" connectedTo="b036793e-59b6-45aa-9303-05533761fa70"/>
           <port xsi:type="esdl:OutPort" id="64041e5f-5a56-4d5d-96b3-1c0a4fe13656" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0b2b2591-cff0-47c3-a753-d6d78f9b4599" name="CableHome201_5" originalIdInSource="2015" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6135c6d7-0c8a-418e-be82-68a8a4320fa8" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3726,7 +3763,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9ad5fbb8-3064-4064-89d7-f59e2ab1f1d9" name="Home201_6" originalIdInSource="2016" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9ad5fbb8-3064-4064-89d7-f59e2ab1f1d9" name="Home201_6" originalIdInSource="2016" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="2691c73f-4230-4b8f-abb6-eb52b5763f87" name="ConnectionHome201_6" originalIdInSource="2016" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3750,6 +3787,7 @@
           <port xsi:type="esdl:InPort" id="9fb0820e-f809-474d-b90e-55a30296ce4b" name="In" connectedTo="ea3831c5-863e-4d44-beba-1f48b10cb722"/>
           <port xsi:type="esdl:OutPort" id="da39dc8b-9a9f-436b-9fc4-97999e613b4e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="eb1ead85-8278-4e2d-a4d3-dc4c84833ced" name="CableHome201_6" originalIdInSource="2016" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b8d9506f-21af-49c8-94bb-014971179582" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3759,7 +3797,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8fa80143-7476-4643-9b43-16ab683e7d65" name="Home201_7" originalIdInSource="2017" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="8fa80143-7476-4643-9b43-16ab683e7d65" name="Home201_7" originalIdInSource="2017" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="0c73680c-6853-44fa-8b98-98dcdeedc07d" name="ConnectionHome201_7" originalIdInSource="2017" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3783,6 +3821,7 @@
           <port xsi:type="esdl:InPort" id="9e5f9e7d-29fb-43f3-8183-536f049f560a" name="In" connectedTo="6262173d-8492-4867-8b62-017bf19319ae"/>
           <port xsi:type="esdl:OutPort" id="07314148-2d17-4ad8-b928-3403d6f9c944" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="875f9971-9cef-49b8-b236-7310b761d121" name="CableHome201_7" originalIdInSource="2017" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="bfd437df-1baa-4963-98d2-e33860cc80e3" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3792,7 +3831,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2550bff3-98da-47e9-8078-52f83e72897e" name="Home201_8" originalIdInSource="2018" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2550bff3-98da-47e9-8078-52f83e72897e" name="Home201_8" originalIdInSource="2018" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="f64c7798-b414-42aa-a098-d7a20e2243a2" name="ConnectionHome201_8" originalIdInSource="2018" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3816,6 +3855,7 @@
           <port xsi:type="esdl:InPort" id="c6b6f44f-f885-4ea3-a729-a66a4a9b9303" name="In" connectedTo="561eec54-42e6-4c77-bab9-d7c2aa9b14e8"/>
           <port xsi:type="esdl:OutPort" id="24803fe1-610d-49d3-9a9f-192e5651954e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="39965a78-0ba6-4f43-81b4-b371d65a111f" name="CableHome201_8" originalIdInSource="2018" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="985caa8d-a163-45d6-97b2-771787891257" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3825,7 +3865,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e48f5265-d382-4e62-a395-e4aedd36defc" name="Home201_9" originalIdInSource="2019" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e48f5265-d382-4e62-a395-e4aedd36defc" name="Home201_9" originalIdInSource="2019" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         <asset xsi:type="esdl:EConnection" id="473db432-3513-4d92-8445-a9c78a7f15c3" name="ConnectionHome201_9" originalIdInSource="2019" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3849,6 +3889,7 @@
           <port xsi:type="esdl:InPort" id="f3a7acbb-a22f-476e-9b79-43d7cf0a582e" name="In" connectedTo="1f804019-a935-4b82-84c4-f3e27a8b16d9"/>
           <port xsi:type="esdl:OutPort" id="71691a03-d9f8-4932-adc6-e67e88385faa" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a0c0bcca-a10b-4c67-be9a-1b33fa55fc9b" name="CableHome201_9" originalIdInSource="2019" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3cff34b1-1ff9-4570-bcfb-4d532d12dc1b" name="In" connectedTo="121aba6d-614f-4e17-a923-2b815ab29bfc"/>
@@ -3858,7 +3899,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68513310638849" lon="-11.799896441889425"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b3c707ac-187c-4776-98f0-23355477a243" name="Home202_1" originalIdInSource="2021" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="b3c707ac-187c-4776-98f0-23355477a243" name="Home202_1" originalIdInSource="2021" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="0b973513-22c8-48cd-afb0-1c80806dc150" name="ConnectionHome202_1" originalIdInSource="2021" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3882,6 +3923,7 @@
           <port xsi:type="esdl:InPort" id="9a264309-1569-4ab9-9596-291b0171bc3d" name="In" connectedTo="01f14c3e-3e06-45cd-b75e-e4fe8baa0419"/>
           <port xsi:type="esdl:OutPort" id="e0310647-9d94-4a55-9723-990dcb99c6c7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2b27b7f4-30c9-45fd-9d5c-c80a340d21d4" name="CableHome202_1" originalIdInSource="2021" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="82271245-e6f6-4ec0-ad25-2641f4e38eb1" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -3891,7 +3933,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0b15ccd2-d4d9-4753-90c1-ba939cc86e68" name="Home202_2" originalIdInSource="2022" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0b15ccd2-d4d9-4753-90c1-ba939cc86e68" name="Home202_2" originalIdInSource="2022" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="b14c98bf-44d5-41f7-b7c4-65594f0ce7eb" name="ConnectionHome202_2" originalIdInSource="2022" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3915,6 +3957,7 @@
           <port xsi:type="esdl:InPort" id="bd4d681c-8dcc-47c6-a227-1d7f479fc09f" name="In" connectedTo="44611285-bd22-4736-8a73-fbfadb3f53c7"/>
           <port xsi:type="esdl:OutPort" id="32e4371b-dcb7-4975-9346-1b9363d98ad1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cf2579dc-66a5-45c0-b072-e8d24e828860" name="CableHome202_2" originalIdInSource="2022" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c6bdca70-5996-4a9c-a7dd-790025da3ef4" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -3924,7 +3967,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7191341d-1a11-46c0-8702-e113ad1832df" name="Home202_3" originalIdInSource="2023" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="7191341d-1a11-46c0-8702-e113ad1832df" name="Home202_3" originalIdInSource="2023" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="da0b11e9-55b6-4b1f-a07e-3f80e06f2108" name="ConnectionHome202_3" originalIdInSource="2023" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3948,6 +3991,7 @@
           <port xsi:type="esdl:InPort" id="f1203456-bec5-4e6b-8b25-1977ad95710c" name="In" connectedTo="e3d3f4fc-437e-447b-b441-2d110b6970ac"/>
           <port xsi:type="esdl:OutPort" id="659aa25f-7d6d-4342-82bb-de89f2c1fa71" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1c06ca46-bc8c-46cb-9af7-57e0804f726b" name="CableHome202_3" originalIdInSource="2023" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="52d6a5c6-8e06-4050-90a8-1df49dad9584" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -3957,7 +4001,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3ad5b66b-bd8c-41aa-9686-ed2f6e628821" name="Home202_4" originalIdInSource="2024" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="3ad5b66b-bd8c-41aa-9686-ed2f6e628821" name="Home202_4" originalIdInSource="2024" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="dba0c41b-02b3-4f56-b358-37eb8792d123" name="ConnectionHome202_4" originalIdInSource="2024" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3981,6 +4025,7 @@
           <port xsi:type="esdl:InPort" id="d986264e-32ab-4c09-9b0f-6f33be315351" name="In" connectedTo="787e449d-1915-451b-a928-a7154d84355a"/>
           <port xsi:type="esdl:OutPort" id="a5ac8669-4de7-49cd-b750-fdbc2f8394e6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5b46758b-717d-490c-be71-984eec82cfb3" name="CableHome202_4" originalIdInSource="2024" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3b38ac7b-bed5-4cbd-9e88-70b6905b3789" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -3990,7 +4035,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1ff156d9-612c-4212-838b-b067d7b9a323" name="Home202_5" originalIdInSource="2025" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="1ff156d9-612c-4212-838b-b067d7b9a323" name="Home202_5" originalIdInSource="2025" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="a2b7087b-f37b-4b29-856c-26d153c1f534" name="ConnectionHome202_5" originalIdInSource="2025" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4014,6 +4059,7 @@
           <port xsi:type="esdl:InPort" id="605dbc2f-17fa-4cf0-b086-7a22593b8f5f" name="In" connectedTo="cdf72661-dbb5-4ae8-b70a-973c4d03074c"/>
           <port xsi:type="esdl:OutPort" id="1fd5ab57-a4d8-4c0e-ab81-06dc27548850" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a69e2eae-34e9-4390-a270-d958b39081bd" name="CableHome202_5" originalIdInSource="2025" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="9ed1c8a1-b571-4f40-815a-d9e186a2a92c" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -4023,7 +4069,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ad3b4329-fcb6-4e13-b3c5-3a909090a5ff" name="Home202_6" originalIdInSource="2026" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="ad3b4329-fcb6-4e13-b3c5-3a909090a5ff" name="Home202_6" originalIdInSource="2026" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="3b33da11-e90f-4302-94ab-f0b2cf2224db" name="ConnectionHome202_6" originalIdInSource="2026" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4047,6 +4093,7 @@
           <port xsi:type="esdl:InPort" id="47794a5c-a069-4fcf-b6c0-ba5029d151fe" name="In" connectedTo="b72dc073-340d-4ecc-8a5e-bd4c5960aeca"/>
           <port xsi:type="esdl:OutPort" id="c3e0f25d-e965-4252-94e9-1d60134c20de" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7fea3cdd-6b88-482d-87fd-8fb9bc660ba1" name="CableHome202_6" originalIdInSource="2026" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="785fe144-ede0-44d6-8db2-f7c893a864dd" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -4056,7 +4103,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fa5fc260-4dfe-4366-b44e-95d96f2e1df0" name="Home202_7" originalIdInSource="2027" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="fa5fc260-4dfe-4366-b44e-95d96f2e1df0" name="Home202_7" originalIdInSource="2027" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="0cc5b4f5-a668-4b5a-9df9-193ca96daaee" name="ConnectionHome202_7" originalIdInSource="2027" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4080,6 +4127,7 @@
           <port xsi:type="esdl:InPort" id="a84906ad-c749-4b69-8292-73805f693b8b" name="In" connectedTo="0e0685da-d6b5-44f2-a012-239bcdec486e"/>
           <port xsi:type="esdl:OutPort" id="9675a730-07e9-42e3-92d6-e92d6c7e5f2d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f6ee6b5f-2ea4-49d6-adad-2f712af9fe0a" name="CableHome202_7" originalIdInSource="2027" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="59e3f2e8-960b-4044-8d9a-a895892e65fe" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -4089,7 +4137,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="32c4fa88-1c9c-4d5f-86a0-d9f87dcbe6f1" name="Home202_8" originalIdInSource="2028" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="32c4fa88-1c9c-4d5f-86a0-d9f87dcbe6f1" name="Home202_8" originalIdInSource="2028" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="78323cfa-199b-4241-a52e-f18c371e1900" name="ConnectionHome202_8" originalIdInSource="2028" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4113,6 +4161,7 @@
           <port xsi:type="esdl:InPort" id="921ae0a2-7f24-4424-8698-143d4c25c6fe" name="In" connectedTo="b951c76b-fb4e-4b52-83fb-77572fcc17d0"/>
           <port xsi:type="esdl:OutPort" id="4a4e80e7-e59e-493b-902b-7ea2a60752e5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a2353f5a-a346-4a97-b8be-2e01daf3eea9" name="CableHome202_8" originalIdInSource="2028" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4f37c16c-ddf1-4007-b23e-a314afa391b6" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -4122,7 +4171,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ae156d6e-7c17-48ef-b1ba-35f441921851" name="Home202_9" originalIdInSource="2029" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="ae156d6e-7c17-48ef-b1ba-35f441921851" name="Home202_9" originalIdInSource="2029" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         <asset xsi:type="esdl:EConnection" id="b3842427-5b47-490e-b538-cf2e5613b4ef" name="ConnectionHome202_9" originalIdInSource="2029" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4146,6 +4195,7 @@
           <port xsi:type="esdl:InPort" id="839b34a4-1f20-4ace-9090-d140a540fabc" name="In" connectedTo="a290922a-ac1e-4ac3-8948-808d947d0464"/>
           <port xsi:type="esdl:OutPort" id="57ae0763-3047-417c-95bb-5a221451dc26" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="eba36dc5-e127-421f-9c56-884e81b7daf7" name="CableHome202_9" originalIdInSource="2029" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="23da8fc7-7f7b-4347-b34d-b8c31979b7c6" name="In" connectedTo="72a9de19-138d-4438-b2ad-18cb651d1d44"/>
@@ -4155,7 +4205,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69273462917214" lon="-11.801968168362437"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c82367cf-c296-410c-9c00-d5bcaabc512a" name="Home203_1" originalIdInSource="2031" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="c82367cf-c296-410c-9c00-d5bcaabc512a" name="Home203_1" originalIdInSource="2031" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="660f14e7-04a1-4f60-b73f-ac45c721bb25" name="ConnectionHome203_1" originalIdInSource="2031" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4179,6 +4229,7 @@
           <port xsi:type="esdl:InPort" id="83f8334c-c62e-4f30-abfc-95868d2ddcab" name="In" connectedTo="477a3baf-1de8-4dd3-8519-eb97623c66ab"/>
           <port xsi:type="esdl:OutPort" id="218575c6-1a5c-408d-8f02-6838c6c87ea3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4f367e22-707e-4c18-bfb9-1231433c32bd" name="CableHome203_1" originalIdInSource="2031" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e7397366-7b25-4d34-b6de-a4fb76dbcaa7" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4188,7 +4239,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1cb38e49-16b0-42ae-a1e5-5431ee174686" name="Home203_2" originalIdInSource="2032" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="1cb38e49-16b0-42ae-a1e5-5431ee174686" name="Home203_2" originalIdInSource="2032" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="96acace6-b348-46c5-badc-9f098c1f3e85" name="ConnectionHome203_2" originalIdInSource="2032" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4212,6 +4263,7 @@
           <port xsi:type="esdl:InPort" id="6bd09891-f091-418c-a730-2d07cf6cfecf" name="In" connectedTo="d27d5293-ddc3-4eb0-8602-fa6642d3131b"/>
           <port xsi:type="esdl:OutPort" id="0a2719ae-c280-4988-9cff-ef8daf567379" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8f6877d0-3556-4ddc-b04d-71c888e5bc16" name="CableHome203_2" originalIdInSource="2032" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ce768a4e-32e4-42a6-8d9b-b4c74cda3769" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4221,7 +4273,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1f92854c-1b4b-47dc-9bfb-b40e6e185b47" name="Home203_3" originalIdInSource="2033" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="1f92854c-1b4b-47dc-9bfb-b40e6e185b47" name="Home203_3" originalIdInSource="2033" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="26abfb0a-c2dc-4c05-b145-1d214d1c8db6" name="ConnectionHome203_3" originalIdInSource="2033" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4245,6 +4297,7 @@
           <port xsi:type="esdl:InPort" id="ea08d40f-5c61-4bc3-81d9-e7c9f049588e" name="In" connectedTo="d8246151-ab97-437d-90ab-ed3831c192a6"/>
           <port xsi:type="esdl:OutPort" id="c814045b-7b1c-4fe7-b2d7-f13c2669b47e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e00e1d12-b6a7-4b94-b9b3-8521c417c57c" name="CableHome203_3" originalIdInSource="2033" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6c2de318-3c79-41c4-97ca-7860977e5661" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4254,7 +4307,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="10fc3c5e-1af0-4da2-b1cc-ea02ff07ccb1" name="Home203_4" originalIdInSource="2034" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="10fc3c5e-1af0-4da2-b1cc-ea02ff07ccb1" name="Home203_4" originalIdInSource="2034" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="bf1e517a-22a3-48af-aac1-68d3479bd98d" name="ConnectionHome203_4" originalIdInSource="2034" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4278,6 +4331,7 @@
           <port xsi:type="esdl:InPort" id="a1c1621b-186a-4786-b4f8-feeafed4b4d0" name="In" connectedTo="578ce7e6-0be1-43a2-a87b-bceb68aa4035"/>
           <port xsi:type="esdl:OutPort" id="d36531d0-5114-460a-88e1-4fe044c50aab" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="884d8607-fa43-4fd5-bb53-2fa2078a5a36" name="CableHome203_4" originalIdInSource="2034" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b0f473bd-882d-4081-abbe-1dcadd563392" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4287,7 +4341,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="859a408b-6806-471c-ac0d-beac56a798f0" name="Home203_5" originalIdInSource="2035" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="859a408b-6806-471c-ac0d-beac56a798f0" name="Home203_5" originalIdInSource="2035" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="d3e5df53-8684-4f9a-a271-c6ca5ccf0616" name="ConnectionHome203_5" originalIdInSource="2035" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4311,6 +4365,7 @@
           <port xsi:type="esdl:InPort" id="64cb998c-f3f4-433b-b22f-814d6b0ad48d" name="In" connectedTo="e54e20d9-54bb-49c7-9125-aae38ab6df61"/>
           <port xsi:type="esdl:OutPort" id="9d2ad9be-22da-4e6f-801f-bc9c67590f16" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a6da6281-8ffa-461f-afb6-8f887326f9e3" name="CableHome203_5" originalIdInSource="2035" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c95b286f-2907-4e27-b70c-ce6e0edaa081" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4320,7 +4375,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fcc2af2d-6d60-41fb-bf9a-e9170f6758f0" name="Home203_6" originalIdInSource="2036" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="fcc2af2d-6d60-41fb-bf9a-e9170f6758f0" name="Home203_6" originalIdInSource="2036" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="8bb16621-4746-45eb-ac5e-d6bb878f66a9" name="ConnectionHome203_6" originalIdInSource="2036" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4344,6 +4399,7 @@
           <port xsi:type="esdl:InPort" id="b7c03d92-abcd-45e0-9585-63a99a43d58d" name="In" connectedTo="81e3261f-7f93-46c4-bae1-856cc225f6db"/>
           <port xsi:type="esdl:OutPort" id="f6b6b872-23bb-433d-ad6e-55d0cfa66360" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="47a04de9-867f-45fa-9064-2029762ebfe7" name="CableHome203_6" originalIdInSource="2036" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="02a08d99-ae3f-4f71-9b5a-f6e0153d027e" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4353,7 +4409,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f98db46f-720c-4e8c-85c4-a1c4cd321233" name="Home203_7" originalIdInSource="2037" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="f98db46f-720c-4e8c-85c4-a1c4cd321233" name="Home203_7" originalIdInSource="2037" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="2cddfaa0-3727-4ed4-8fdc-5233c9b44b02" name="ConnectionHome203_7" originalIdInSource="2037" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4377,6 +4433,7 @@
           <port xsi:type="esdl:InPort" id="3ac82663-9e04-43c0-9cc3-8940628bab07" name="In" connectedTo="e7820558-3e94-4dd2-b8ec-8cc7e0392260"/>
           <port xsi:type="esdl:OutPort" id="a4f92a84-d5d2-47da-a195-afd216ee47bd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6f2c87fb-4e66-4168-8902-ab0607132b66" name="CableHome203_7" originalIdInSource="2037" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c5a0cfdc-22a5-4779-89b3-9bfcd612b239" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4386,7 +4443,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b983aa7a-4a83-4ac8-a56f-659a91ff4a88" name="Home203_8" originalIdInSource="2038" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="b983aa7a-4a83-4ac8-a56f-659a91ff4a88" name="Home203_8" originalIdInSource="2038" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="b1a7c728-d4c3-477c-ac44-803272b197dd" name="ConnectionHome203_8" originalIdInSource="2038" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4410,6 +4467,7 @@
           <port xsi:type="esdl:InPort" id="c73a48aa-64f5-4fab-8015-e5fbe42aa4e8" name="In" connectedTo="15b66c19-957c-45f1-b103-07571a2331a1"/>
           <port xsi:type="esdl:OutPort" id="b02eeb69-179e-408d-a485-6080cdfc0f4b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="283ffe3d-57a4-483f-a149-9b29e23647aa" name="CableHome203_8" originalIdInSource="2038" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a8c1009f-5c6b-4aaf-aab2-7fb2633e55c7" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4419,7 +4477,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f1821bbb-459d-42de-9067-95723aa5da5a" name="Home203_9" originalIdInSource="2039" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="f1821bbb-459d-42de-9067-95723aa5da5a" name="Home203_9" originalIdInSource="2039" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         <asset xsi:type="esdl:EConnection" id="03cac8fe-02bf-44ac-b908-c43741172a5d" name="ConnectionHome203_9" originalIdInSource="2039" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4443,6 +4501,7 @@
           <port xsi:type="esdl:InPort" id="f12bf64f-1d20-4fc2-8ef8-162c5d6810f6" name="In" connectedTo="33a71980-00ec-4b56-b7ee-248811a67f4d"/>
           <port xsi:type="esdl:OutPort" id="3fc52cd9-22b3-4614-970c-bf346203a2c7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3652ebb4-7e44-4236-b549-95921f0c402c" name="CableHome203_9" originalIdInSource="2039" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e6369986-c24e-498f-9516-a4461314557c" name="In" connectedTo="521d38da-1583-4bb4-a00e-c729cbec2903"/>
@@ -4452,7 +4511,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.688953265033874" lon="-11.800821774715141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8b8330bd-fe79-441a-9965-d37d47fbc59b" name="Home211_1" originalIdInSource="2111" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="8b8330bd-fe79-441a-9965-d37d47fbc59b" name="Home211_1" originalIdInSource="2111" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68780554426644" lon="-11.801171892268057"/>
         <asset xsi:type="esdl:EConnection" id="c22da3cc-b277-4ddd-9c0f-b817169626e2" name="ConnectionHome211_1" originalIdInSource="2111" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4476,6 +4535,7 @@
           <port xsi:type="esdl:InPort" id="01c862f0-5b01-42f5-be17-b27e953e8c57" name="In" connectedTo="15c89d0d-cc66-4d77-abed-cfcb69d74886"/>
           <port xsi:type="esdl:OutPort" id="d45f0c74-9653-4991-ab67-32a025c40370" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="abd60113-a976-432b-95fc-687822e0f81c" name="CableHome211_1" originalIdInSource="2111" assetType="5x10Cu__YMvK_mb" length="3.5">
         <port xsi:type="esdl:InPort" id="9cee28dd-86d9-4861-93e8-04c8914d3e42" name="In" connectedTo="00c01e2f-7916-4910-bd74-afafd51eef7f"/>
@@ -4485,7 +4545,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68780554426644" lon="-11.801171892268057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4c12c8f4-9559-44a3-b727-a919e020fb7a" name="Home215_1" originalIdInSource="2151" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="4c12c8f4-9559-44a3-b727-a919e020fb7a" name="Home215_1" originalIdInSource="2151" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68655886949278" lon="-11.829879819362018"/>
         <asset xsi:type="esdl:EConnection" id="fae87503-c7d1-45dc-a828-6d773b385815" name="ConnectionHome215_1" originalIdInSource="2151" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4509,6 +4569,7 @@
           <port xsi:type="esdl:InPort" id="e73e2adf-9078-48ee-96f3-171a76978f7a" name="In" connectedTo="0cb4e873-88c4-475f-a8c6-a6567818438b"/>
           <port xsi:type="esdl:OutPort" id="c3ed5e68-4818-4abb-af97-7e7e27b260eb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c1b8d700-6587-4027-b08d-0dd13b5a37c5" name="CableHome215_1" originalIdInSource="2151" assetType="5x10Cu__YMvK_mb" length="2.5">
         <port xsi:type="esdl:InPort" id="875c1fcb-c801-4795-b45a-634e5d1a88fb" name="In" connectedTo="08033f1d-00be-4bd2-a470-5243aada8551"/>
@@ -4518,7 +4579,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68655886949278" lon="-11.829879819362018"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="eef7d7ac-1cf7-4970-919b-045f788fbdda" name="Home219_1" originalIdInSource="2191" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="eef7d7ac-1cf7-4970-919b-045f788fbdda" name="Home219_1" originalIdInSource="2191" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         <asset xsi:type="esdl:EConnection" id="c83256b6-d077-43a4-93d5-f7f478ef7d7d" name="ConnectionHome219_1" originalIdInSource="2191" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4542,6 +4603,7 @@
           <port xsi:type="esdl:InPort" id="bca6ad32-3851-4ba3-a181-10f5b3552a05" name="In" connectedTo="fbe2aae2-865e-493d-bd34-b3f96beae5e9"/>
           <port xsi:type="esdl:OutPort" id="38e94574-4331-4c21-8678-f4f080c5dd55" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0e8f9f48-114e-4e1f-b603-30dd8cccd991" name="CableHome219_1" originalIdInSource="2191" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="11c9de5b-769d-44f5-94a0-1ed030013160" name="In" connectedTo="c57eef43-664d-44ac-9a90-dd1e65d61fb3"/>
@@ -4551,7 +4613,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5fb7184f-9254-4221-beae-360e684e01d2" name="Home219_2" originalIdInSource="2192" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5fb7184f-9254-4221-beae-360e684e01d2" name="Home219_2" originalIdInSource="2192" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         <asset xsi:type="esdl:EConnection" id="a8350fac-1c59-44b5-a4a3-49d128563a4e" name="ConnectionHome219_2" originalIdInSource="2192" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4575,6 +4637,7 @@
           <port xsi:type="esdl:InPort" id="090b01b4-f5d9-40ed-b194-9b05aa6b4a6a" name="In" connectedTo="0c21d14a-91c0-4a41-9602-da8a63fa5912"/>
           <port xsi:type="esdl:OutPort" id="ef3f17cb-f68c-4116-8d10-ec01ee1356ad" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bcf42377-6ab2-4658-b438-89456ebd941a" name="CableHome219_2" originalIdInSource="2192" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="905e2397-f313-4478-b90a-e9fe12b28d3d" name="In" connectedTo="c57eef43-664d-44ac-9a90-dd1e65d61fb3"/>
@@ -4584,7 +4647,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2df8569d-4439-4823-b887-f9aeda1f87eb" name="Home219_3" originalIdInSource="2193" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2df8569d-4439-4823-b887-f9aeda1f87eb" name="Home219_3" originalIdInSource="2193" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         <asset xsi:type="esdl:EConnection" id="1a63820f-4dfe-4fa6-a451-c93b317ff746" name="ConnectionHome219_3" originalIdInSource="2193" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4608,6 +4671,7 @@
           <port xsi:type="esdl:InPort" id="4d51d963-236a-4eeb-97b3-51a42004a9c7" name="In" connectedTo="88037c00-6856-47ed-bbaf-e05bd87cece9"/>
           <port xsi:type="esdl:OutPort" id="37e6ddf8-562c-4277-93f9-4b0592a404fd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a6e05b24-08a5-47c9-b95f-bbf4da8c4089" name="CableHome219_3" originalIdInSource="2193" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="86277745-3bf3-42dd-b962-7bd8fb1e8875" name="In" connectedTo="c57eef43-664d-44ac-9a90-dd1e65d61fb3"/>
@@ -4617,7 +4681,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="44a1eebb-d5b9-4aa4-93d0-9d5b3e9a21c3" name="Home219_4" originalIdInSource="2194" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="44a1eebb-d5b9-4aa4-93d0-9d5b3e9a21c3" name="Home219_4" originalIdInSource="2194" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         <asset xsi:type="esdl:EConnection" id="ad69665f-222e-4ac6-9994-dd325bd78778" name="ConnectionHome219_4" originalIdInSource="2194" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4641,6 +4705,7 @@
           <port xsi:type="esdl:InPort" id="e4820150-7a96-4321-ac8d-df226d36cb6b" name="In" connectedTo="aa261376-5f85-4805-b33a-350b1f216667"/>
           <port xsi:type="esdl:OutPort" id="e60f6926-3a1c-4d22-b346-f187d7182187" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3fc7f611-6f94-4835-ad84-bc1c11d818b1" name="CableHome219_4" originalIdInSource="2194" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="da16051b-b3da-482d-8976-e3c9788ce632" name="In" connectedTo="c57eef43-664d-44ac-9a90-dd1e65d61fb3"/>
@@ -4650,7 +4715,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69270699565646" lon="-11.831980287507351"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9345d58a-017f-47f6-9e0b-ab738eac9b41" name="Home220_1" originalIdInSource="2201" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="9345d58a-017f-47f6-9e0b-ab738eac9b41" name="Home220_1" originalIdInSource="2201" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="63f6f1d9-9e63-465c-823b-3beecd036780" name="ConnectionHome220_1" originalIdInSource="2201" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4674,6 +4739,7 @@
           <port xsi:type="esdl:InPort" id="d3ac54dc-b4ac-4d94-a2ff-a4214130ee0e" name="In" connectedTo="ed76b8ea-03a1-47c3-83d7-730e5b7d0226"/>
           <port xsi:type="esdl:OutPort" id="9abba016-5444-44cf-86d6-f766d2690071" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="db097fae-2bb8-4f78-ad27-a3c2d1dbdf2f" name="CableHome220_1" originalIdInSource="2201" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c4e17449-5c74-4cf6-b6ea-0bd83f2f17a4" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4683,7 +4749,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="33f66a12-804b-4205-801d-75a2c144048c" name="Home220_2" originalIdInSource="2202" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="33f66a12-804b-4205-801d-75a2c144048c" name="Home220_2" originalIdInSource="2202" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="65870285-310e-4192-808b-db2319f573dd" name="ConnectionHome220_2" originalIdInSource="2202" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4707,6 +4773,7 @@
           <port xsi:type="esdl:InPort" id="62e7b24f-b90f-422a-946d-74cf2a48be6e" name="In" connectedTo="03fecaed-5ebc-4bad-9c75-8e872f777020"/>
           <port xsi:type="esdl:OutPort" id="a95e5e2e-1af5-48e9-bf48-f61cc8f55678" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d283ba6e-901c-49be-99ca-fc63e6664564" name="CableHome220_2" originalIdInSource="2202" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="2a0c4273-b5bc-46fc-b4ee-81a909a752ca" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4716,7 +4783,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="04a590ea-dbb6-4bcf-85d5-60beadd1befd" name="Home220_3" originalIdInSource="2203" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="04a590ea-dbb6-4bcf-85d5-60beadd1befd" name="Home220_3" originalIdInSource="2203" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="43ee460c-20fc-4931-9665-0aeca16928c6" name="ConnectionHome220_3" originalIdInSource="2203" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4740,6 +4807,7 @@
           <port xsi:type="esdl:InPort" id="3fa36795-2cb5-4daa-957a-2bdb386d20c1" name="In" connectedTo="f1aae5db-c49a-4af0-8bf7-b2e8787092cd"/>
           <port xsi:type="esdl:OutPort" id="6b32b971-d92c-40d1-ad7c-e1476bf8a49a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c27f9bdb-e115-4c89-9def-8871b8f3262a" name="CableHome220_3" originalIdInSource="2203" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="1cb03771-a1dd-4eb4-a369-6ef2628da7d8" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4749,7 +4817,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3853d80c-b970-478d-945b-3137b21182eb" name="Home220_4" originalIdInSource="2204" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3853d80c-b970-478d-945b-3137b21182eb" name="Home220_4" originalIdInSource="2204" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="0d556f99-2c87-41e1-9a54-09cf41a93741" name="ConnectionHome220_4" originalIdInSource="2204" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4773,6 +4841,7 @@
           <port xsi:type="esdl:InPort" id="ce46a6a3-617a-4d80-92f3-466a0145c365" name="In" connectedTo="ef7bc8e6-68cb-49a0-99b2-e3e67d309839"/>
           <port xsi:type="esdl:OutPort" id="1e9efc66-2582-4040-88da-9acee9fbd739" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a63e0aae-194f-4d39-a749-5278a66d4e54" name="CableHome220_4" originalIdInSource="2204" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="30569e55-f857-4f38-bf70-59573a920ffe" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4782,7 +4851,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a776f55-7460-40e5-b39f-cf8f051795de" name="Home220_5" originalIdInSource="2205" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="0a776f55-7460-40e5-b39f-cf8f051795de" name="Home220_5" originalIdInSource="2205" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_A" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="01a4707b-b2ba-4805-a341-aa28df23eb67" name="ConnectionHome220_5" originalIdInSource="2205" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4806,6 +4875,7 @@
           <port xsi:type="esdl:InPort" id="34e25e7f-b69f-44ad-9bd1-6e8ec1e0e1fd" name="In" connectedTo="49399fb8-2c98-40f9-83af-2a4ab568d37f"/>
           <port xsi:type="esdl:OutPort" id="0b80111d-6ba7-434e-b710-3d31433b3a0f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4b5ac7ba-31ed-4f56-bc1a-3f6ebcecf79a" name="CableHome220_5" originalIdInSource="2205" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b5cbd8ba-e37e-451d-ae44-514733209512" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4815,7 +4885,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="02b8e90b-1d57-40f5-bf7e-28e37c2e8799" name="Home220_6" originalIdInSource="2206" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="02b8e90b-1d57-40f5-bf7e-28e37c2e8799" name="Home220_6" originalIdInSource="2206" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="051051b2-2b6e-4f73-86a6-dd7465a5a237" name="ConnectionHome220_6" originalIdInSource="2206" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4839,6 +4909,7 @@
           <port xsi:type="esdl:InPort" id="e9adec34-0c9b-46c5-a9ad-99aff6630727" name="In" connectedTo="1851e355-5c0b-4064-976c-18b0bd956fef"/>
           <port xsi:type="esdl:OutPort" id="b5d78426-d9a2-4924-806a-50b9b395d4f3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b12a172f-4fbd-49f9-a2ec-65d117d5e3f8" name="CableHome220_6" originalIdInSource="2206" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d00a0b9f-7402-4816-8e9e-cf5396704842" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4848,7 +4919,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b50d2b29-c122-4ca4-98d7-bdeb05a6a1f2" name="Home220_7" originalIdInSource="2207" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="b50d2b29-c122-4ca4-98d7-bdeb05a6a1f2" name="Home220_7" originalIdInSource="2207" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="f0b94c87-13ed-49b5-90d0-e58ef6be8c7f" name="ConnectionHome220_7" originalIdInSource="2207" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4872,6 +4943,7 @@
           <port xsi:type="esdl:InPort" id="2b43f14b-83d4-48c5-8992-cb0d2970870e" name="In" connectedTo="ea588a23-f99c-4f42-9e31-e4301783ce98"/>
           <port xsi:type="esdl:OutPort" id="04461d48-b0f0-4a09-92ab-ac448fdff8b6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e1732e3a-bed0-4940-8e11-14ac80cbeb73" name="CableHome220_7" originalIdInSource="2207" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8365b2da-6ad7-453b-a435-39bb921e2f37" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4881,7 +4953,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c2969956-97a2-40f1-9758-8e0e40bf5a73" name="Home220_8" originalIdInSource="2208" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="c2969956-97a2-40f1-9758-8e0e40bf5a73" name="Home220_8" originalIdInSource="2208" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         <asset xsi:type="esdl:EConnection" id="5f39e0d5-c431-406f-971c-be3501bc7508" name="ConnectionHome220_8" originalIdInSource="2208" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4905,6 +4977,7 @@
           <port xsi:type="esdl:InPort" id="eb4611d2-1dd5-417b-a7ce-6fa75de9556f" name="In" connectedTo="7d344066-667b-4ba7-b6fc-24be3576f152"/>
           <port xsi:type="esdl:OutPort" id="7ae365aa-c605-45e0-8496-8467ac732466" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8ae6dfe6-8304-4ad7-867a-2064f45b0d56" name="CableHome220_8" originalIdInSource="2208" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="edba0e2c-e518-41e6-878f-9122faff40f9" name="In" connectedTo="9cd303bb-d2f6-4540-a5a3-d1435e51ebd3"/>
@@ -4914,7 +4987,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68888715880979" lon="-11.831052504303353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9ff66d52-b793-49d8-8a10-f82977cc6f1c" name="Home221_1" originalIdInSource="2211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="9ff66d52-b793-49d8-8a10-f82977cc6f1c" name="Home221_1" originalIdInSource="2211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="6348ddb5-8b97-4ded-b4d9-47ce90b7a0e5" name="ConnectionHome221_1" originalIdInSource="2211" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4926,6 +4999,7 @@
           <port xsi:type="esdl:InPort" id="e5ed8f19-6625-45ef-bdc1-6f19d9ee54e9" name="In" connectedTo="8a951d70-496d-4eea-b7bc-072c973ae88e"/>
           <port xsi:type="esdl:OutPort" id="26eb7d0d-b5ca-4138-89b3-402a6ed71c05" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a15b7522-6231-4dc2-9b10-8e751301c00d" name="CableHome221_1" originalIdInSource="2211" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="069dc94c-18e5-4f6f-8d29-2ea2c274a649" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -4935,7 +5009,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="88dcfdaa-c970-4fd9-9056-3a41140e501d" name="Home221_2" originalIdInSource="2212" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="88dcfdaa-c970-4fd9-9056-3a41140e501d" name="Home221_2" originalIdInSource="2212" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="4a78cae9-3961-470f-8d27-f138ceb524b2" name="ConnectionHome221_2" originalIdInSource="2212" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4959,6 +5033,7 @@
           <port xsi:type="esdl:InPort" id="b40d7109-a848-4bf5-ac55-005ff4cab603" name="In" connectedTo="c7f02e22-a73c-4ef6-8b7d-b9256d0db4d9"/>
           <port xsi:type="esdl:OutPort" id="796b9476-6385-4215-abc1-11ce03fccdc9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a9567687-417b-4f70-be48-82c0f1544a5a" name="CableHome221_2" originalIdInSource="2212" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="439b4bff-9999-4fb8-bf70-88d8dbf73217" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -4968,7 +5043,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="17d9bd92-ce6b-4db5-9f7a-323337dea0d4" name="Home221_3" originalIdInSource="2213" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="17d9bd92-ce6b-4db5-9f7a-323337dea0d4" name="Home221_3" originalIdInSource="2213" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="cac7620d-6e3c-493d-9a19-ba1b14c07995" name="ConnectionHome221_3" originalIdInSource="2213" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4992,6 +5067,7 @@
           <port xsi:type="esdl:InPort" id="4cd86e47-df92-445d-a772-2cbea308df0e" name="In" connectedTo="168ab497-9209-4ba2-a9f9-fef9ec9514e0"/>
           <port xsi:type="esdl:OutPort" id="4c0b14b0-88bc-46fe-aa3e-6abe39a4bb12" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c2febda9-7104-43cb-a5bc-e71e9dacd11c" name="CableHome221_3" originalIdInSource="2213" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7813b66a-0b20-49c2-9ab4-eab2348372c9" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -5001,7 +5077,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="be878018-87bd-4f9c-ade3-62c2f9b5ce1d" name="Home221_4" originalIdInSource="2214" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="be878018-87bd-4f9c-ade3-62c2f9b5ce1d" name="Home221_4" originalIdInSource="2214" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="1486af91-ef3a-4e4d-a440-c1f3403eb889" name="ConnectionHome221_4" originalIdInSource="2214" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5025,6 +5101,7 @@
           <port xsi:type="esdl:InPort" id="80db7a82-aefc-4c21-8932-ac9843789986" name="In" connectedTo="41642c87-8d8e-452e-96a9-2d0068606d04"/>
           <port xsi:type="esdl:OutPort" id="bc05d4f6-dc53-4779-984b-dade7ea37f04" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7e268caa-fc6d-44a1-bf9d-9fdef4b7cb66" name="CableHome221_4" originalIdInSource="2214" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d32a2f33-93f2-479f-b520-497473cc685f" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -5034,7 +5111,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ffdcb369-3d67-4a1f-835d-abb596740c2b" name="Home221_5" originalIdInSource="2215" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="ffdcb369-3d67-4a1f-835d-abb596740c2b" name="Home221_5" originalIdInSource="2215" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="ef801031-d65c-4776-8f40-3f900b1a2a82" name="ConnectionHome221_5" originalIdInSource="2215" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5058,6 +5135,7 @@
           <port xsi:type="esdl:InPort" id="3315f63b-9846-4bcf-a63c-57430347f014" name="In" connectedTo="c15ef3fd-303a-49cb-8ae6-e7b18ae1357a"/>
           <port xsi:type="esdl:OutPort" id="c168495b-10f9-4d38-8e96-f442885bf695" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ecad3760-fbaa-4a30-8b81-54cd2978db2b" name="CableHome221_5" originalIdInSource="2215" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="63644d07-b1e0-47eb-9f2b-eadc8b163612" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -5067,7 +5145,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a7fe542e-d970-42fe-acd3-fe28d5537299" name="Home221_6" originalIdInSource="2216" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="a7fe542e-d970-42fe-acd3-fe28d5537299" name="Home221_6" originalIdInSource="2216" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="ef1558cf-100b-43d4-bd35-231a18387d0e" name="ConnectionHome221_6" originalIdInSource="2216" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5091,6 +5169,7 @@
           <port xsi:type="esdl:InPort" id="a30f1106-defd-42c4-a36d-c5ab44bf8309" name="In" connectedTo="3c09781d-8e10-4e7a-88db-fb2c36f3f6c7"/>
           <port xsi:type="esdl:OutPort" id="376485ca-1510-459b-8e66-3bece2036ed3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="226d9721-8e44-4752-8991-2bd0be20d815" name="CableHome221_6" originalIdInSource="2216" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a9786e3a-79d3-49aa-93bf-fcc79a59df04" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -5100,7 +5179,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a2e8f162-f207-483e-a1c1-5f816738aaba" name="Home221_7" originalIdInSource="2217" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a2e8f162-f207-483e-a1c1-5f816738aaba" name="Home221_7" originalIdInSource="2217" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         <asset xsi:type="esdl:EConnection" id="a8fabc76-3475-43ac-b78e-1b87e03f0e58" name="ConnectionHome221_7" originalIdInSource="2217" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5124,6 +5203,7 @@
           <port xsi:type="esdl:InPort" id="6e8174fe-00f8-4190-bd41-eff67ffe4eb0" name="In" connectedTo="7a3bcf39-f1ca-47c5-8cf8-70f0da54df33"/>
           <port xsi:type="esdl:OutPort" id="3aef28af-bb8c-4952-89c1-6c634d00a71c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="dee46631-0558-4ab3-9180-b21e22f31d6a" name="CableHome221_7" originalIdInSource="2217" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0a3a273c-844a-4f2e-933f-e08aa088103d" name="In" connectedTo="764ee34f-255c-4444-80da-7e6832e0c16c"/>
@@ -5133,7 +5213,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.691332101441446" lon="-11.831562566697103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="029e0aa3-ac9d-416f-b5c5-8c116e89ada9" name="Home223_1" originalIdInSource="2231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="029e0aa3-ac9d-416f-b5c5-8c116e89ada9" name="Home223_1" originalIdInSource="2231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.66546154874013" lon="-11.79440094054541"/>
         <asset xsi:type="esdl:EConnection" id="6518f601-d2aa-43ab-b636-f179850487dc" name="ConnectionHome223_1" originalIdInSource="2231" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5157,6 +5237,7 @@
           <port xsi:type="esdl:InPort" id="3fad4bda-e5fe-42fc-a8bd-0f0ebc7afdc8" name="In" connectedTo="66b5161a-d786-4408-bb71-6955259b0883"/>
           <port xsi:type="esdl:OutPort" id="a2771ad3-9c6b-438f-b685-15b89ddb0b1d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="003fa631-4e72-40c1-887c-175c8234600c" name="CableHome223_1" originalIdInSource="2231" assetType="4x16Cu_as16__VG_YMVK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="ff6277a1-ae6c-40af-9b0f-d1a56e01df87" name="In" connectedTo="6ab1c275-d0a0-40c4-a2a5-123268f0a7fe"/>
@@ -5166,7 +5247,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.66546154874013" lon="-11.79440094054541"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9b262995-1288-48a5-9063-23ef206bf0b8" name="Home223_2" originalIdInSource="2232" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9b262995-1288-48a5-9063-23ef206bf0b8" name="Home223_2" originalIdInSource="2232" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.66559462785469" lon="-11.79467382285989"/>
         <asset xsi:type="esdl:EConnection" id="7c7c63ff-c4b9-43bc-bd77-e7768d557914" name="ConnectionHome223_2" originalIdInSource="2232" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5190,6 +5271,7 @@
           <port xsi:type="esdl:InPort" id="41d4a7f4-483e-46e8-8f95-f3c897ed45d2" name="In" connectedTo="09d8be4e-39e9-48e7-a44f-7566d2896a56"/>
           <port xsi:type="esdl:OutPort" id="a6c9c1a2-8c84-4061-a720-05fc9beaf92d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="84602b1f-0302-478d-88f1-b615d8c33fc5" name="CableHome223_2" originalIdInSource="2232" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="145fa34f-ca61-4403-8df2-70560cdb8636" name="In" connectedTo="6ab1c275-d0a0-40c4-a2a5-123268f0a7fe"/>
@@ -5199,7 +5281,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.66559462785469" lon="-11.79467382285989"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="789a18ce-1e06-4d39-acce-5cb93e2d7b55" name="Home255_1" originalIdInSource="2551" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="789a18ce-1e06-4d39-acce-5cb93e2d7b55" name="Home255_1" originalIdInSource="2551" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.677165385061194" lon="-11.791666030521968"/>
         <asset xsi:type="esdl:EConnection" id="4487a69d-794b-4f16-b171-1dfc917b547e" name="ConnectionHome255_1" originalIdInSource="2551" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5223,6 +5305,7 @@
           <port xsi:type="esdl:InPort" id="5137a22b-3bc0-4b24-9dd0-2c0ecec39f5d" name="In" connectedTo="f15a7861-26de-4871-9e53-f20369099da5"/>
           <port xsi:type="esdl:OutPort" id="8ef02f59-aa60-4731-9e6a-daa121e82777" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="79ddca2c-b85d-4a29-a7b8-1df698e278e5" name="CableHome255_1" originalIdInSource="2551" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="ebeab816-8138-4247-8935-313633b0fb1b" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5232,7 +5315,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.677165385061194" lon="-11.791666030521968"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="845770b2-c2e8-452b-97d3-5a45e94a1216" name="Home255_2" originalIdInSource="2552" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="845770b2-c2e8-452b-97d3-5a45e94a1216" name="Home255_2" originalIdInSource="2552" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="e74ae94a-073a-45ad-80e3-a30a9ec71024" name="ConnectionHome255_2" originalIdInSource="2552" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5256,6 +5339,7 @@
           <port xsi:type="esdl:InPort" id="ef4334c0-a185-47ea-9a1f-7dee4f66446f" name="In" connectedTo="d0c705af-9e90-4e80-9b20-73cf5a382203"/>
           <port xsi:type="esdl:OutPort" id="50ad8e15-aa07-4330-bbff-9b5124cc1cbe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f1a93394-b87e-491a-9066-7fc2eb8fa5e1" name="CableHome255_2" originalIdInSource="2552" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0f632eeb-225a-4af5-994b-83d551826bd0" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5265,7 +5349,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b07d72ee-c804-464d-97cc-da3e6759cd95" name="Home255_3" originalIdInSource="2553" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b07d72ee-c804-464d-97cc-da3e6759cd95" name="Home255_3" originalIdInSource="2553" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="1f6518b3-41b4-4d4e-9289-ac35e113445e" name="ConnectionHome255_3" originalIdInSource="2553" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5289,6 +5373,7 @@
           <port xsi:type="esdl:InPort" id="678f474b-2d18-47af-8e2c-4e83db3974c0" name="In" connectedTo="0c9e509e-1374-421d-8dc2-052eaa05afbe"/>
           <port xsi:type="esdl:OutPort" id="b9e9d3f7-3a54-4ec2-9d29-182bd3d1692e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="126.42" height="9.0" windowArea="31.4" doorArea="8.0" flatRoofArea="19.6" slantedRoofArea="100.86"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2bb9ed0f-36e7-4f96-961c-ab9041e7c381" name="CableHome255_3" originalIdInSource="2553" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="199f19cc-5f9f-4356-8044-3c3194bfecae" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5298,7 +5383,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2cf5651e-f0a4-440a-b5f1-1b5a68853c74" name="Home255_4" originalIdInSource="2554" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="2cf5651e-f0a4-440a-b5f1-1b5a68853c74" name="Home255_4" originalIdInSource="2554" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="ad383f43-a472-4b63-875c-fe9a7e8a8727" name="ConnectionHome255_4" originalIdInSource="2554" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5322,6 +5407,7 @@
           <port xsi:type="esdl:InPort" id="d2100443-a71d-4306-976e-f37367a0b67a" name="In" connectedTo="8a05e72b-a5d3-4546-8863-faa65e43829c"/>
           <port xsi:type="esdl:OutPort" id="a9522ffc-efbd-4e5b-a4e1-1aaf00fe50ee" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="07f6439e-658a-42a5-b328-3010e878d91a" name="CableHome255_4" originalIdInSource="2554" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4eb7b097-c7ad-46cb-af5b-45408c86fbdf" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5331,7 +5417,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="451c0ed9-60b9-4316-9f51-1c0e8fc4be7f" name="Home255_5" originalIdInSource="2555" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="451c0ed9-60b9-4316-9f51-1c0e8fc4be7f" name="Home255_5" originalIdInSource="2555" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="be7e6671-0c7c-461f-8f89-e7e4eaf1a395" name="ConnectionHome255_5" originalIdInSource="2555" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5355,6 +5441,7 @@
           <port xsi:type="esdl:InPort" id="1683ef54-2cfb-472f-b0e1-b7ac2e808403" name="In" connectedTo="0c474dee-ebbd-4f2d-8ff0-1a12b5672fbb"/>
           <port xsi:type="esdl:OutPort" id="e191eb00-8110-44c7-80a5-eeaba26345bc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f2128fe0-5c81-4179-b658-65cac258f1a5" name="CableHome255_5" originalIdInSource="2555" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b779d010-e15b-42dd-be84-41429a678bfd" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5364,7 +5451,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6d198e9f-b186-4450-85d8-a36dee6491e0" name="Home255_6" originalIdInSource="2556" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="6d198e9f-b186-4450-85d8-a36dee6491e0" name="Home255_6" originalIdInSource="2556" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="12739b7e-9c63-4146-9a87-4e45f2ecac7c" name="ConnectionHome255_6" originalIdInSource="2556" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5388,6 +5475,7 @@
           <port xsi:type="esdl:InPort" id="52291161-4c39-4143-a522-522af927e51e" name="In" connectedTo="77c93708-6422-4e4c-bc65-050cb5c49d99"/>
           <port xsi:type="esdl:OutPort" id="249376ff-9d39-4f66-9beb-282c8794f37a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="55e4d51e-2a55-496b-b4fa-16d9c4be1888" name="CableHome255_6" originalIdInSource="2556" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7bb60db7-e73b-433f-8247-998248eddd83" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5397,7 +5485,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="92f92702-8509-45fc-9481-6b064bd166a7" name="Home255_7" originalIdInSource="2557" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="92f92702-8509-45fc-9481-6b064bd166a7" name="Home255_7" originalIdInSource="2557" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="1788b385-8c94-4d0f-95ed-46e72a5df113" name="ConnectionHome255_7" originalIdInSource="2557" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5421,6 +5509,7 @@
           <port xsi:type="esdl:InPort" id="20c48797-e206-4f26-8cf9-ee65ecd0bb53" name="In" connectedTo="d607a506-64b6-4b91-84b2-f4f8b51e163e"/>
           <port xsi:type="esdl:OutPort" id="1c7699ff-05e6-448d-9826-c6d693766ef7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8a7ac779-7231-4b9a-b9a1-aab7aea7b9b2" name="CableHome255_7" originalIdInSource="2557" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d36142cb-33fc-40b2-960d-6f290c8003b3" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5430,7 +5519,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="11391409-ef56-42af-a3a0-904b98f97e39" name="Home255_8" originalIdInSource="2558" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="11391409-ef56-42af-a3a0-904b98f97e39" name="Home255_8" originalIdInSource="2558" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         <asset xsi:type="esdl:EConnection" id="464f4530-bb0e-41d0-b8cb-bde6edbcb4a6" name="ConnectionHome255_8" originalIdInSource="2558" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5454,6 +5543,7 @@
           <port xsi:type="esdl:InPort" id="69473d6f-9a23-4903-b03c-88a21df530b2" name="In" connectedTo="0fd94809-2eee-4f6c-94c4-626ef7e2c382"/>
           <port xsi:type="esdl:OutPort" id="fe35c7ab-3cb9-420f-af2a-dc75f26cf6a5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="be4571be-49d6-427e-a12d-6f50233cdd39" name="CableHome255_8" originalIdInSource="2558" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="410bbadb-ef86-42b6-8a92-fa37631a5b20" name="In" connectedTo="fcfdd31b-6371-4214-a23d-dea338f250d0"/>
@@ -5463,7 +5553,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67729847440938" lon="-11.79193896741881"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a6f48cd2-a90d-4f37-89c3-13da1c04ec9f" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="a6f48cd2-a90d-4f37-89c3-13da1c04ec9f" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68587142646508" lon="-11.829671006242206"/>
         <asset xsi:type="esdl:EConnection" id="1de1d0c6-11fa-4c5c-9aae-21d6c5a58ee1" name="ConnectionHome257_1" originalIdInSource="2571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5475,6 +5565,7 @@
           <port xsi:type="esdl:InPort" id="4dc7cb24-d33e-44ec-a668-46e899189e05" name="In" connectedTo="ed1f392c-f49d-43ae-b8f2-e696afb6e161"/>
           <port xsi:type="esdl:OutPort" id="dd90bd6d-8bcf-4f2b-8df5-5a4016ee51cc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2bdf2c93-eff3-4758-8250-c5a6bbfc4639" name="CableHome257_1" originalIdInSource="2571" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="f5afafe5-3531-4f60-914e-71d6f36ce470" name="In" connectedTo="2b82fc75-9a8c-4e76-9686-ed918a2a7988"/>
@@ -5484,7 +5575,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68587142646508" lon="-11.829671006242206"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0c326aec-bac0-4592-8fb6-61b49c1047e1" name="Home257_2" originalIdInSource="2572" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="0c326aec-bac0-4592-8fb6-61b49c1047e1" name="Home257_2" originalIdInSource="2572" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         <asset xsi:type="esdl:EConnection" id="e8b0406c-f30c-4fe7-80df-fb75ed2045f5" name="ConnectionHome257_2" originalIdInSource="2572" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5508,6 +5599,7 @@
           <port xsi:type="esdl:InPort" id="a8f8e7f9-0c57-4a09-8d68-f0a620cd9688" name="In" connectedTo="c28ca69d-d0aa-421c-bf32-c75c7c9df708"/>
           <port xsi:type="esdl:OutPort" id="eafbe06d-5e95-4296-b7da-b645831be1f3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1adb530b-ea40-444d-a330-ef1b04882cd1" name="CableHome257_2" originalIdInSource="2572" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="cfffb6be-7569-44c3-b25c-2102e3a79b2e" name="In" connectedTo="2b82fc75-9a8c-4e76-9686-ed918a2a7988"/>
@@ -5517,7 +5609,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7a288199-e22a-4405-a132-d476dce5d4a4" name="Home257_3" originalIdInSource="2573" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7a288199-e22a-4405-a132-d476dce5d4a4" name="Home257_3" originalIdInSource="2573" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         <asset xsi:type="esdl:EConnection" id="cfb3b7a0-1c8e-49db-944d-a6c0da6f2139" name="ConnectionHome257_3" originalIdInSource="2573" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5541,6 +5633,7 @@
           <port xsi:type="esdl:InPort" id="ee256ef0-dbfc-4fb5-95a0-6002ff06e4d5" name="In" connectedTo="501593e2-3b4e-4135-b9c9-1816029b3af6"/>
           <port xsi:type="esdl:OutPort" id="98240338-7d37-4fe8-994c-7040034a6b60" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e48be8b6-7d68-4131-81c5-c7ab462e3924" name="CableHome257_3" originalIdInSource="2573" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="979697ec-0381-470a-bb6b-09afefbcef9e" name="In" connectedTo="2b82fc75-9a8c-4e76-9686-ed918a2a7988"/>
@@ -5550,7 +5643,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2a204f04-8932-430e-b947-b5c8c295de35" name="Home257_4" originalIdInSource="2574" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="2a204f04-8932-430e-b947-b5c8c295de35" name="Home257_4" originalIdInSource="2574" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         <asset xsi:type="esdl:EConnection" id="84b24758-224a-4af5-b331-a0248210c0b4" name="ConnectionHome257_4" originalIdInSource="2574" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5574,6 +5667,7 @@
           <port xsi:type="esdl:InPort" id="66b4bfdd-4fb5-4c98-8c1e-1bd3f96255ab" name="In" connectedTo="914c1b59-4c1a-48b3-a758-cd4b5a48004e"/>
           <port xsi:type="esdl:OutPort" id="0939b5ac-09a6-47a4-84f7-8465cf71ec6a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d2287bf5-3058-44df-8fc5-c045bb5376f0" name="CableHome257_4" originalIdInSource="2574" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3cb36623-e909-4ef1-9caa-c649da937a1a" name="In" connectedTo="2b82fc75-9a8c-4e76-9686-ed918a2a7988"/>
@@ -5583,7 +5677,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6860044071954" lon="-11.82994409569528"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="79a27e92-5a46-4820-a1a5-2e2ccc4796b2" name="Home258_1" originalIdInSource="2581" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="79a27e92-5a46-4820-a1a5-2e2ccc4796b2" name="Home258_1" originalIdInSource="2581" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68363724044014" lon="-11.828992399642962"/>
         <asset xsi:type="esdl:EConnection" id="20eaa938-94be-4312-b062-09539cdbfebd" name="ConnectionHome258_1" originalIdInSource="2581" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5607,6 +5701,7 @@
           <port xsi:type="esdl:InPort" id="8d0e9f5a-a969-434d-a11c-51a2926148ab" name="In" connectedTo="d2ae248a-694a-4770-ab38-d0f65b03a517"/>
           <port xsi:type="esdl:OutPort" id="a5ba1ff6-67e4-4fb9-84b0-06e7cddf8193" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="95.2" height="9.0" windowArea="19.22" doorArea="5.4" slantedRoofArea="61.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ec749bde-34a5-4528-90a6-56cfa3d0bc24" name="CableHome258_1" originalIdInSource="2581" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="0cb1a16f-921a-4283-b3bb-007f53544735" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5616,7 +5711,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68363724044014" lon="-11.828992399642962"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2c252ca2-c4b3-4452-86db-3aa2561ef7a4" name="Home258_2" originalIdInSource="2582" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2c252ca2-c4b3-4452-86db-3aa2561ef7a4" name="Home258_2" originalIdInSource="2582" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="d200c5e2-a552-4580-8226-4e014ecd2c6a" name="ConnectionHome258_2" originalIdInSource="2582" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5640,6 +5735,7 @@
           <port xsi:type="esdl:InPort" id="48afe6e7-f1a5-443c-9aa8-9592bd3d1df1" name="In" connectedTo="9bba0111-d0bd-49a2-afe9-b8bcf95726db"/>
           <port xsi:type="esdl:OutPort" id="374a7950-d57c-4cf4-8540-66c92df47cdf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="81fa56fb-caa7-4145-8554-d14498fcb647" name="CableHome258_2" originalIdInSource="2582" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="11291948-52f8-4ef6-9c51-026ba4788cd6" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5649,7 +5745,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="97b8da83-3c62-4e43-ac77-7418f4a58bc6" name="Home258_3" originalIdInSource="2583" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="97b8da83-3c62-4e43-ac77-7418f4a58bc6" name="Home258_3" originalIdInSource="2583" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="90a3f63c-2b3d-4301-a4b1-965f56e45586" name="ConnectionHome258_3" originalIdInSource="2583" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5673,6 +5769,7 @@
           <port xsi:type="esdl:InPort" id="c95ef899-01a2-40e2-a043-616fbdcef359" name="In" connectedTo="74d0904c-b583-4779-9ee6-dbca1c93cbee"/>
           <port xsi:type="esdl:OutPort" id="a3c3fb57-991f-4aa4-82c3-260b4e220424" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ec8e7594-9d75-4e22-9529-2ac172c995aa" name="CableHome258_3" originalIdInSource="2583" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="83116f89-8d51-4ba8-9fa0-0658a4fa6d22" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5682,7 +5779,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e8ee1228-bc6d-4d65-8c40-87c08cb4bc45" name="Home258_4" originalIdInSource="2584" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e8ee1228-bc6d-4d65-8c40-87c08cb4bc45" name="Home258_4" originalIdInSource="2584" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="cf556653-4c5b-4c92-9d2b-d033b8b1bb41" name="ConnectionHome258_4" originalIdInSource="2584" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5706,6 +5803,7 @@
           <port xsi:type="esdl:InPort" id="97ed7fcd-79ed-42ba-b2ad-844ecd82d2e1" name="In" connectedTo="55a73c6f-0a6a-4784-a751-734907b34485"/>
           <port xsi:type="esdl:OutPort" id="c8be5c1a-0fa4-4209-a4c8-616baf2d345d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="66f2f822-1bc6-44ba-b62a-c7a3811dc1e2" name="CableHome258_4" originalIdInSource="2584" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0c51afee-f4f6-4989-9de3-cbd62a67ddff" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5715,7 +5813,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="992295b8-a492-4488-bc38-45fd1da227ff" name="Home258_5" originalIdInSource="2585" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="992295b8-a492-4488-bc38-45fd1da227ff" name="Home258_5" originalIdInSource="2585" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="fe8faf6c-ca52-4fb8-b9a0-255dda36a50c" name="ConnectionHome258_5" originalIdInSource="2585" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5739,6 +5837,7 @@
           <port xsi:type="esdl:InPort" id="024cf15b-7f57-4361-9ab5-7b9b6a38a74b" name="In" connectedTo="f31c75dd-53e2-4ca9-b6c2-a05fc9a9fd41"/>
           <port xsi:type="esdl:OutPort" id="3f5389a7-7fc2-438d-95af-caeac9c47ad2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b4f81222-db14-4938-8077-f79d7be341dd" name="CableHome258_5" originalIdInSource="2585" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="68761cc0-7e13-4dd7-a22a-806cdda7f93e" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5748,7 +5847,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="46281cff-9b4b-4488-90be-1c61b9c41680" name="Home258_6" originalIdInSource="2586" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="46281cff-9b4b-4488-90be-1c61b9c41680" name="Home258_6" originalIdInSource="2586" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="8fb1f150-7daa-4aff-a9b8-6b5cd3fc10b0" name="ConnectionHome258_6" originalIdInSource="2586" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5760,6 +5859,7 @@
           <port xsi:type="esdl:InPort" id="8b6272e5-bde2-4f10-81fd-437e71024ee7" name="In" connectedTo="2ec189ba-e505-4324-a6d2-384bfc9bc564"/>
           <port xsi:type="esdl:OutPort" id="96472782-0263-4da9-ac1a-7962bf9a2954" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="620478e0-3a2d-4e64-829c-94f9cf501d3b" name="CableHome258_6" originalIdInSource="2586" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e10eb609-f776-4fff-8e21-78576873546d" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5769,7 +5869,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="09289956-50fb-47a3-aa50-cfae8547737d" name="Home258_7" originalIdInSource="2587" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="09289956-50fb-47a3-aa50-cfae8547737d" name="Home258_7" originalIdInSource="2587" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="fa4ea6d6-a41c-48d2-833e-88d0bf14f261" name="ConnectionHome258_7" originalIdInSource="2587" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5793,6 +5893,7 @@
           <port xsi:type="esdl:InPort" id="de614c92-997d-4e22-964f-2231a0676c77" name="In" connectedTo="45600eb2-cc18-400e-8339-14e2f29eee93"/>
           <port xsi:type="esdl:OutPort" id="dcafc87e-27ab-4b84-8041-11c0974dfced" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5748dc71-f9d5-41fc-b2e5-498f25b41d0f" name="CableHome258_7" originalIdInSource="2587" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="498f71ca-6740-4395-b22a-687d97640f21" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5802,7 +5903,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="aaf34036-eb0e-4eff-a722-78bd294bdef5" name="Home258_8" originalIdInSource="2588" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="aaf34036-eb0e-4eff-a722-78bd294bdef5" name="Home258_8" originalIdInSource="2588" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         <asset xsi:type="esdl:EConnection" id="9eb40f0d-f32b-416a-9286-8393a4c8973d" name="ConnectionHome258_8" originalIdInSource="2588" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5826,6 +5927,7 @@
           <port xsi:type="esdl:InPort" id="406a844a-b801-4a92-a884-fe0f04302de8" name="In" connectedTo="b05fbd2c-6e94-4e66-93e8-ca67d617ae87"/>
           <port xsi:type="esdl:OutPort" id="735913a9-5ed5-4578-aeeb-286813ab9486" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.6" height="9.0" windowArea="23.39" doorArea="7.0" flatRoofArea="17.33" slantedRoofArea="58.82"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="96caba42-64f8-4b98-8767-893492a2c223" name="CableHome258_8" originalIdInSource="2588" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4cc13350-7132-4dbd-b2d0-57e599f9934f" name="In" connectedTo="e51c4960-ee4e-46cc-8245-0d890689a080"/>
@@ -5835,7 +5937,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68377022270264" lon="-11.829265475325643"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="352aa8a1-7ea6-4904-8c24-61d8b10da670" name="Home260_1" originalIdInSource="2601" assetType="mansionette_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="352aa8a1-7ea6-4904-8c24-61d8b10da670" name="Home260_1" originalIdInSource="2601" assetType="maisonnette_before_1964" energyLabel="LABEL_B" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68080972973727" lon="-11.828598996208902"/>
         <asset xsi:type="esdl:EConnection" id="6bb44a24-cb85-408b-b538-e5665af65c01" name="ConnectionHome260_1" originalIdInSource="2601" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5859,6 +5961,7 @@
           <port xsi:type="esdl:InPort" id="f74f0726-91c0-4dce-ab3e-b50a972569c1" name="In" connectedTo="ddedd897-4cfd-45bd-b1dd-13710718b071"/>
           <port xsi:type="esdl:OutPort" id="8029592f-ece4-47ad-a4d1-7a4ce6b9ba3b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="965636b3-b7cd-42cf-8407-4326671f151d" name="CableHome260_1" originalIdInSource="2601" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="e11da858-6cec-4f99-900b-6198c7aa0d1c" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -5868,7 +5971,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68080972973727" lon="-11.828598996208902"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="21c885e9-dc3e-41d8-a73b-4e19243feb03" name="Home260_2" originalIdInSource="2602" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="21c885e9-dc3e-41d8-a73b-4e19243feb03" name="Home260_2" originalIdInSource="2602" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="c502b0d1-f8d5-42d5-b7ec-d69ad75582f4" name="ConnectionHome260_2" originalIdInSource="2602" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5892,6 +5995,7 @@
           <port xsi:type="esdl:InPort" id="9576ce6d-3084-44d7-8926-6ccd1585d20b" name="In" connectedTo="a5c801ec-fde3-4f51-a39e-7f0cc53d9dbb"/>
           <port xsi:type="esdl:OutPort" id="f5a6b0f8-8b20-4f86-9fbf-93d65658fee8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d2324adc-69a7-491e-8101-669105fbb278" name="CableHome260_2" originalIdInSource="2602" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="bc100445-158f-41d5-a82f-e36b91475e3a" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -5901,7 +6005,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e27ca572-2da7-4d77-b5bd-2594ba0739ef" name="Home260_3" originalIdInSource="2603" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e27ca572-2da7-4d77-b5bd-2594ba0739ef" name="Home260_3" originalIdInSource="2603" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="2cc2c504-5179-4790-bc27-dc3d8d1ccf0a" name="ConnectionHome260_3" originalIdInSource="2603" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5925,6 +6029,7 @@
           <port xsi:type="esdl:InPort" id="39d0e8aa-1168-4892-9db2-fe0c8b503fad" name="In" connectedTo="27e777d0-9b3b-47a8-b037-459434cd4dfd"/>
           <port xsi:type="esdl:OutPort" id="675a7f88-ac4f-42e3-80b9-76b09ca8086a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9bf4f59d-24b6-478c-b1dd-a966dfeb88e1" name="CableHome260_3" originalIdInSource="2603" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e0e000ef-212b-4a0f-b5ba-4d287b7d48d3" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -5934,7 +6039,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="eea74f5d-0e9c-4f32-b32f-4134c461a822" name="Home260_4" originalIdInSource="2604" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="eea74f5d-0e9c-4f32-b32f-4134c461a822" name="Home260_4" originalIdInSource="2604" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="02edf73c-3316-47a0-933b-65bb96452d66" name="ConnectionHome260_4" originalIdInSource="2604" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5958,6 +6063,7 @@
           <port xsi:type="esdl:InPort" id="627c2324-02cf-45db-973c-a14a20e26f1d" name="In" connectedTo="a2cb2774-2032-45f2-bea1-24096834a20f"/>
           <port xsi:type="esdl:OutPort" id="af0a5073-aaef-4772-a6f6-2964b6e0f72d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c1bd7648-8c70-45ae-9693-58074561cef9" name="CableHome260_4" originalIdInSource="2604" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="f2aeccec-47c7-4a97-8b79-34fc1c02981f" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -5967,7 +6073,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e981f25f-2fa6-4462-b24a-c57b412e1522" name="Home260_5" originalIdInSource="2605" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="e981f25f-2fa6-4462-b24a-c57b412e1522" name="Home260_5" originalIdInSource="2605" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="10f8f396-f3bb-4b76-811b-a31f962ff199" name="ConnectionHome260_5" originalIdInSource="2605" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5991,6 +6097,7 @@
           <port xsi:type="esdl:InPort" id="b5a9d1ee-5d81-4f18-911f-8571fbd96351" name="In" connectedTo="e73f66e8-512d-4ece-a77b-dc20e695e1e0"/>
           <port xsi:type="esdl:OutPort" id="a029ff31-6f80-44c7-9d67-71099bee74c1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="28d28d20-d003-4967-be5f-19f0a487dde5" name="CableHome260_5" originalIdInSource="2605" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0ce2731f-123f-451c-90c0-eef21e7f8981" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -6000,7 +6107,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="65cd8087-078b-4664-8389-fbf6a23ca48b" name="Home260_6" originalIdInSource="2606" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="65cd8087-078b-4664-8389-fbf6a23ca48b" name="Home260_6" originalIdInSource="2606" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="e50f0e09-7e38-4fed-8150-eb071ee4c6a7" name="ConnectionHome260_6" originalIdInSource="2606" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6024,6 +6131,7 @@
           <port xsi:type="esdl:InPort" id="c27ad8fc-398c-4fdb-ab33-5fbb3a80e263" name="In" connectedTo="2b4b7397-c101-4137-b8e2-ce7f1ff01144"/>
           <port xsi:type="esdl:OutPort" id="daddd6da-5830-469b-852c-1799aadfce56" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1c3d14db-d668-4b76-a431-d50f3849fa8a" name="CableHome260_6" originalIdInSource="2606" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ad0011b5-5119-440e-8d25-b38c59ff4ce7" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -6033,7 +6141,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="617e4e75-3fa0-4d6b-a815-aff68b94f952" name="Home260_7" originalIdInSource="2607" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="617e4e75-3fa0-4d6b-a815-aff68b94f952" name="Home260_7" originalIdInSource="2607" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="5efe2fc5-d21a-4eeb-94e7-9c17e67b12e5" name="ConnectionHome260_7" originalIdInSource="2607" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6057,6 +6165,7 @@
           <port xsi:type="esdl:InPort" id="0fc2f0d0-044c-4b12-8838-72b02b7cd53a" name="In" connectedTo="177039db-0435-4d20-b25f-7ae5c33df553"/>
           <port xsi:type="esdl:OutPort" id="acb140c9-53ed-4c1a-bb16-e7ba548783dc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ce60574d-5ea1-4d82-82d1-8990322e96e1" name="CableHome260_7" originalIdInSource="2607" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c7271eda-86c4-4b35-994b-7a205a7a7fae" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -6066,7 +6175,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d4ea990b-88ce-47fa-8e66-896f1ee362a6" name="Home260_8" originalIdInSource="2608" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="d4ea990b-88ce-47fa-8e66-896f1ee362a6" name="Home260_8" originalIdInSource="2608" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         <asset xsi:type="esdl:EConnection" id="48e0b604-5c26-43d0-81ad-b5451c7a7b3a" name="ConnectionHome260_8" originalIdInSource="2608" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6090,6 +6199,7 @@
           <port xsi:type="esdl:InPort" id="a43ceb97-e0bc-40bc-bf78-44c81851c90c" name="In" connectedTo="60206194-fd22-4c0a-a2db-6470f233a466"/>
           <port xsi:type="esdl:OutPort" id="c8dda6bb-9f64-4313-adc0-af5d283ad105" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="39914b9c-573a-4404-baef-a3d4a20743fe" name="CableHome260_8" originalIdInSource="2608" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8a8f20bb-ce0f-4645-a558-411ffe2484f4" name="In" connectedTo="43830b62-7d8c-4974-b1d8-37e3a56a7bde"/>
@@ -6099,7 +6209,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68094271258742" lon="-11.828872055765869"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="29d41081-f666-46f1-805a-ae43f82d48f6" name="Home262_1" originalIdInSource="2621" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="29d41081-f666-46f1-805a-ae43f82d48f6" name="Home262_1" originalIdInSource="2621" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689274735513735" lon="-11.794869424732228"/>
         <asset xsi:type="esdl:EConnection" id="cb58d4e1-8908-421b-8ab8-303f72470a84" name="ConnectionHome262_1" originalIdInSource="2621" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6123,6 +6233,7 @@
           <port xsi:type="esdl:InPort" id="70b91e08-f77e-4cb5-983a-a438298b4011" name="In" connectedTo="fd9aa041-ca04-4469-8e18-1eb8e37ce35a"/>
           <port xsi:type="esdl:OutPort" id="64639863-442d-490f-9d3b-db12c203dac4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="952d839d-bb6d-41f0-82c9-497a44f2ec51" name="CableHome262_1" originalIdInSource="2621" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="6b3e0d0b-cf6e-4de3-9912-c7beed2b5f3e" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6132,7 +6243,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689274735513735" lon="-11.794869424732228"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ab076a3f-fca2-4941-b08c-24349dfc6f87" name="Home262_2" originalIdInSource="2622" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="ab076a3f-fca2-4941-b08c-24349dfc6f87" name="Home262_2" originalIdInSource="2622" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="dd7d8f20-b542-4d84-b144-2fe0f8a9d798" name="ConnectionHome262_2" originalIdInSource="2622" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6156,6 +6267,7 @@
           <port xsi:type="esdl:InPort" id="381b8455-6e7f-45bf-b162-766fb88c2f73" name="In" connectedTo="1778528a-3f78-4712-93f3-c343436dbd63"/>
           <port xsi:type="esdl:OutPort" id="706b5cbb-abc4-48b7-8973-7a82d54368b6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="46d55d7c-938d-4b34-afe8-52d66e570e89" name="CableHome262_2" originalIdInSource="2622" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="926d49d2-57ef-4dea-9bb0-8a7591ab3543" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6165,7 +6277,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="79aa4bc1-53a5-47d6-a6ff-55d2a1ee4f18" name="Home262_3" originalIdInSource="2623" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="79aa4bc1-53a5-47d6-a6ff-55d2a1ee4f18" name="Home262_3" originalIdInSource="2623" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="5d84fd84-ec52-49cb-9e79-a0932f14dcf3" name="ConnectionHome262_3" originalIdInSource="2623" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6189,6 +6301,7 @@
           <port xsi:type="esdl:InPort" id="0ba129c9-310b-421b-b0b8-7b3edb4a0b41" name="In" connectedTo="25d75892-2334-4d8a-afe9-75ac07128277"/>
           <port xsi:type="esdl:OutPort" id="73e6af43-0c45-4f82-bb1e-458961347493" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d40927ea-0a5b-426a-8efe-2263fdd42174" name="CableHome262_3" originalIdInSource="2623" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c44f94ab-e3d6-4737-acef-7385fcf965e4" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6198,7 +6311,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0ae08ccc-3034-44e4-836f-b1b33aed37aa" name="Home262_4" originalIdInSource="2624" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0ae08ccc-3034-44e4-836f-b1b33aed37aa" name="Home262_4" originalIdInSource="2624" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="7615db1d-c85e-4abf-b0ed-ec57d8ca7539" name="ConnectionHome262_4" originalIdInSource="2624" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6210,6 +6323,7 @@
           <port xsi:type="esdl:InPort" id="7fd0a3e1-87b8-4e53-8fe0-4c5d1d5ea580" name="In" connectedTo="98e112e8-8dce-4463-a1a6-0c5fe03e3a62"/>
           <port xsi:type="esdl:OutPort" id="8bea863f-a9de-493a-9a4b-d1d713c74818" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9ad717ef-b300-4dce-b60b-3935bfd64be0" name="CableHome262_4" originalIdInSource="2624" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e105fbbe-4809-4b73-9997-1fa361680826" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6219,7 +6333,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d89044c4-27fe-4a81-9d9a-43cc3b8229d9" name="Home262_5" originalIdInSource="2625" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="d89044c4-27fe-4a81-9d9a-43cc3b8229d9" name="Home262_5" originalIdInSource="2625" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_A" floorArea="92.8" buildingYear="2016" surfaceArea="194" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="1ced90f6-86e5-4d37-a144-60908b59ab43" name="ConnectionHome262_5" originalIdInSource="2625" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6243,6 +6357,7 @@
           <port xsi:type="esdl:InPort" id="e50d3ee0-f7ea-4e66-a226-d8a8a4e7048c" name="In" connectedTo="8ed5667a-c0ec-4b41-b523-640fce7d5925"/>
           <port xsi:type="esdl:OutPort" id="d4d0db34-c87c-4d93-85d3-a55dcfa702b1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="176.12" height="9.0" windowArea="46.07999999999999" doorArea="9.35" flatRoofArea="19.51" slantedRoofArea="124.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4333e4df-1680-49d2-9b28-5ce73305bf6f" name="CableHome262_5" originalIdInSource="2625" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4ee0248e-6cb7-498c-b82b-7da848ed1e47" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6252,7 +6367,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="80b585f3-0ba0-41fc-8df0-ea78f6fd3ff9" name="Home262_6" originalIdInSource="2626" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="80b585f3-0ba0-41fc-8df0-ea78f6fd3ff9" name="Home262_6" originalIdInSource="2626" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="37bec4db-7be5-4307-86dc-0051ec294fd4" name="ConnectionHome262_6" originalIdInSource="2626" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6276,6 +6391,7 @@
           <port xsi:type="esdl:InPort" id="293b8d88-f1d6-4d19-a132-3c592dcc3da8" name="In" connectedTo="0218a4a1-1927-439d-ab98-bddbc2a004c8"/>
           <port xsi:type="esdl:OutPort" id="60cf9859-b8b5-447e-8d21-92cd74ec6c9f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1be50b95-7623-45ea-a92d-bc8f9cd29f52" name="CableHome262_6" originalIdInSource="2626" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="f6e16a41-2493-483a-8231-a4fc96b248ff" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6285,7 +6401,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="23b47a17-56b3-4057-9dea-33bcab419c9c" name="Home262_7" originalIdInSource="2627" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="23b47a17-56b3-4057-9dea-33bcab419c9c" name="Home262_7" originalIdInSource="2627" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="c5b7f7d9-abb6-482f-9012-efd5446bf11d" name="ConnectionHome262_7" originalIdInSource="2627" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6309,6 +6425,7 @@
           <port xsi:type="esdl:InPort" id="41eee410-fc41-4a02-9bc9-d0f71ce8eb25" name="In" connectedTo="00297141-0176-44f7-84fc-663ed2bd8255"/>
           <port xsi:type="esdl:OutPort" id="a4d9bfc5-1b05-43cc-8be2-99ecdbe014a6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bdf7fc93-dee4-4509-80a2-67bdf1b40582" name="CableHome262_7" originalIdInSource="2627" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="f3ee31ae-21be-46bf-833c-67dc6cd78b96" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6318,7 +6435,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5cd561ae-17e4-4b8d-9bdb-4ee76519e7f5" name="Home262_8" originalIdInSource="2628" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="5cd561ae-17e4-4b8d-9bdb-4ee76519e7f5" name="Home262_8" originalIdInSource="2628" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         <asset xsi:type="esdl:EConnection" id="1a5bc3f6-fd41-4bfa-82f0-4c8591a7d2c3" name="ConnectionHome262_8" originalIdInSource="2628" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6342,6 +6459,7 @@
           <port xsi:type="esdl:InPort" id="eca02c16-4592-4d4f-bfc3-8600e4898325" name="In" connectedTo="04bde507-c2f5-4929-bd64-c47ee9032243"/>
           <port xsi:type="esdl:OutPort" id="2e0c14c4-18d5-4df7-b6d3-388bbf614d98" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d9b6d347-db79-4e56-b42e-5ea46188606e" name="CableHome262_8" originalIdInSource="2628" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7a0c0bba-dfb0-4cce-aad8-57eb2b264bf9" name="In" connectedTo="c9691224-6893-4004-907e-fa927ab6dee0"/>
@@ -6351,7 +6469,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.689407817928426" lon="-11.795142434954192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3ac01f91-91cc-4873-969f-7c17e905633e" name="Home263_1" originalIdInSource="2631" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="3ac01f91-91cc-4873-969f-7c17e905633e" name="Home263_1" originalIdInSource="2631" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68597015462954" lon="-11.794100781975855"/>
         <asset xsi:type="esdl:EConnection" id="103280d7-8b43-417e-be55-b0115d7b21f9" name="ConnectionHome263_1" originalIdInSource="2631" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6375,6 +6493,7 @@
           <port xsi:type="esdl:InPort" id="ea1e017f-21cc-4123-b40c-d79282b217f6" name="In" connectedTo="c9ad700a-9a71-4e7e-9efa-f3bc2541bd50"/>
           <port xsi:type="esdl:OutPort" id="3a1f3cb8-ffef-41f9-89b2-490983ce88dd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3692744b-fd7c-4b7e-b663-34b49ebf8ce7" name="CableHome263_1" originalIdInSource="2631" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="d11084c5-36eb-4bf8-b0b2-2f7c5a6f80bc" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6384,7 +6503,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68597015462954" lon="-11.794100781975855"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e8e7103c-a783-4656-b697-ddf914764ec0" name="Home263_2" originalIdInSource="2632" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="e8e7103c-a783-4656-b697-ddf914764ec0" name="Home263_2" originalIdInSource="2632" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="c038f8db-e73b-4f19-9d9c-3fd8df8ea0cb" name="ConnectionHome263_2" originalIdInSource="2632" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6396,6 +6515,7 @@
           <port xsi:type="esdl:InPort" id="a9fbad1b-87e0-4040-9d1b-c956a8e62355" name="In" connectedTo="126cb3a0-fbbf-451a-abd6-3de6de9006e4"/>
           <port xsi:type="esdl:OutPort" id="2137c694-c6b0-41d1-8cf0-58b9adcedacd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5f432ae9-0333-44f7-b34f-8bb1fdbb5843" name="CableHome263_2" originalIdInSource="2632" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="9699b898-0841-48db-97df-070c6ac156c7" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6405,7 +6525,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d5080011-070b-4ff2-884b-c3702c0d91cb" name="Home263_3" originalIdInSource="2633" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="d5080011-070b-4ff2-884b-c3702c0d91cb" name="Home263_3" originalIdInSource="2633" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="970baaea-c8de-4505-8bed-2a8b5e2850a9" name="ConnectionHome263_3" originalIdInSource="2633" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6429,6 +6549,7 @@
           <port xsi:type="esdl:InPort" id="091a53aa-a43f-4e0a-bb81-4ee8a745d164" name="In" connectedTo="5e841ebb-610b-43ce-9756-a88abdaee932"/>
           <port xsi:type="esdl:OutPort" id="c9edcd82-956c-49bc-9747-0491d46f56a7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d59c6456-d46b-476f-8aac-4ba731254c4a" name="CableHome263_3" originalIdInSource="2633" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="80c21984-8c5d-41d4-819f-3e2fde788378" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6438,7 +6559,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e6d1ac93-3689-4d5d-b791-f6d0f2a87e3d" name="Home263_4" originalIdInSource="2634" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="e6d1ac93-3689-4d5d-b791-f6d0f2a87e3d" name="Home263_4" originalIdInSource="2634" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="60d94edc-5f4a-4d06-926d-f9c4771af5e2" name="ConnectionHome263_4" originalIdInSource="2634" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6462,6 +6583,7 @@
           <port xsi:type="esdl:InPort" id="9451c6dd-5d57-4312-bd0b-209ec7fa3da6" name="In" connectedTo="e9c3336c-7657-4f3a-9282-e9f8a5b45f39"/>
           <port xsi:type="esdl:OutPort" id="c9b90939-f628-4f09-b1f2-d15f1c891cd3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c13757e3-2d0e-4564-90ab-150126acf406" name="CableHome263_4" originalIdInSource="2634" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3d53ea61-6b9f-44d9-9493-39fa9a6f6266" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6471,7 +6593,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7cb6b4e7-9b18-4f6f-9a4b-66163a5e570c" name="Home263_5" originalIdInSource="2635" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="7cb6b4e7-9b18-4f6f-9a4b-66163a5e570c" name="Home263_5" originalIdInSource="2635" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="6a68214d-e0ba-4c89-a43e-07abce5221ad" name="ConnectionHome263_5" originalIdInSource="2635" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6495,6 +6617,7 @@
           <port xsi:type="esdl:InPort" id="604bc1ed-cd97-45e7-84db-66e5f8234d16" name="In" connectedTo="df1fdd89-e574-437c-9bf6-0a2e549abce7"/>
           <port xsi:type="esdl:OutPort" id="dfba0025-95b2-4827-8abd-a658fea1d55f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="879997aa-4b8c-4d21-8147-b934b62da354" name="CableHome263_5" originalIdInSource="2635" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7b2ea045-c5a1-4287-bc3e-ea408025518f" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6504,7 +6627,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="17520892-5867-45b0-be7a-67939121a401" name="Home263_6" originalIdInSource="2636" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="17520892-5867-45b0-be7a-67939121a401" name="Home263_6" originalIdInSource="2636" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="0cb6f0d4-9847-449c-bf32-f4cde06e14ae" name="ConnectionHome263_6" originalIdInSource="2636" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6528,6 +6651,7 @@
           <port xsi:type="esdl:InPort" id="f4bac959-ee8b-41b8-bae5-1c91ba98591b" name="In" connectedTo="bb4bb7c1-7cce-4266-bc55-b92b68977c82"/>
           <port xsi:type="esdl:OutPort" id="4fe91f56-dde3-4d74-9248-65669f81febd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f8932728-ae1b-4217-ba15-b039f66cae0b" name="CableHome263_6" originalIdInSource="2636" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d7766eed-4ac8-446d-9663-9fcdcb014fec" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6537,7 +6661,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3a05184f-2716-4008-a84e-499dd50a8cea" name="Home263_7" originalIdInSource="2637" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="3a05184f-2716-4008-a84e-499dd50a8cea" name="Home263_7" originalIdInSource="2637" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="b5cecf75-582d-443b-94a2-23aed7d6ed6f" name="ConnectionHome263_7" originalIdInSource="2637" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6561,6 +6685,7 @@
           <port xsi:type="esdl:InPort" id="658c3f40-bf4c-449b-9b7c-c6e4762dbd67" name="In" connectedTo="dbfc7be5-ddb0-4609-9f05-e1a44dd68f6d"/>
           <port xsi:type="esdl:OutPort" id="ce541a03-a4db-4c3a-8ac8-474951048201" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="16d8bf35-c08b-41c0-a032-a4b27862bf35" name="CableHome263_7" originalIdInSource="2637" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c3f0076b-2581-4468-87d6-107f4b8db8b0" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6570,7 +6695,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2b73a6e4-d3d3-4333-a047-eeb6e6df1d68" name="Home263_8" originalIdInSource="2638" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2b73a6e4-d3d3-4333-a047-eeb6e6df1d68" name="Home263_8" originalIdInSource="2638" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         <asset xsi:type="esdl:EConnection" id="560bde98-6e9a-42de-9520-eabededfcde6" name="ConnectionHome263_8" originalIdInSource="2638" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6594,6 +6719,7 @@
           <port xsi:type="esdl:InPort" id="65365135-6ea2-4a3b-85ed-ea298ae260ec" name="In" connectedTo="ce379374-a9d7-4d6b-ad9b-8efb810bb5b7"/>
           <port xsi:type="esdl:OutPort" id="25716e7d-6dc7-4c72-8e2d-7b8d59b9c8bb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="eebb14ff-fb1b-4b9f-a3ad-aaa6a1621d01" name="CableHome263_8" originalIdInSource="2638" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="bcecd686-a04f-4418-9ecb-54306935fe8e" name="In" connectedTo="a3681370-0459-495d-897b-50b55f8d07cf"/>
@@ -6603,7 +6729,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68610323863071" lon="-11.794373772484244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5c498d6a-40b5-4d03-86d1-6b294ac71fa0" name="Home264_1" originalIdInSource="2641" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="5c498d6a-40b5-4d03-86d1-6b294ac71fa0" name="Home264_1" originalIdInSource="2641" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68356379856466" lon="-11.793371702550063"/>
         <asset xsi:type="esdl:EConnection" id="e00412a5-2f45-4cab-b0d2-a83f42cfcae6" name="ConnectionHome264_1" originalIdInSource="2641" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6627,6 +6753,7 @@
           <port xsi:type="esdl:InPort" id="f095a031-3e89-43fc-999d-778afa65fec0" name="In" connectedTo="20b91819-1a6e-4df1-8138-f2f2d321ba2e"/>
           <port xsi:type="esdl:OutPort" id="791b3b28-fc0f-4454-8351-5b48eca5597b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="29569806-696a-41b6-a492-fab9a934bc50" name="CableHome264_1" originalIdInSource="2641" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="187ddab8-3192-4994-a451-557e9d77292d" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6636,7 +6763,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68356379856466" lon="-11.793371702550063"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3b51568f-9791-4a30-85be-f111e1fe5f74" name="Home264_2" originalIdInSource="2642" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3b51568f-9791-4a30-85be-f111e1fe5f74" name="Home264_2" originalIdInSource="2642" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="65512909-04fa-4660-b1a2-4672b2c4bc45" name="ConnectionHome264_2" originalIdInSource="2642" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6660,6 +6787,7 @@
           <port xsi:type="esdl:InPort" id="d0eeae61-0d86-4e42-8198-8bfd580bb956" name="In" connectedTo="d20ebddf-f0b5-4a3a-8e24-c263b27eb3d8"/>
           <port xsi:type="esdl:OutPort" id="d49685d5-2a6d-452d-bf42-5735b641c7d9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="752904c2-3866-4491-95ce-aec93b140e2b" name="CableHome264_2" originalIdInSource="2642" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="f0abb55d-fd42-4b23-9277-c28fc020eeec" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6669,7 +6797,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="482574c3-2fbd-4b61-8f53-223c4ab46b1d" name="Home264_3" originalIdInSource="2643" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="482574c3-2fbd-4b61-8f53-223c4ab46b1d" name="Home264_3" originalIdInSource="2643" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="eb0a98eb-d3c8-4d96-8863-43b182caf4f8" name="ConnectionHome264_3" originalIdInSource="2643" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6693,6 +6821,7 @@
           <port xsi:type="esdl:InPort" id="2f28abb4-9d93-40ed-a7df-df9a0f06b083" name="In" connectedTo="01ecbbd1-ab20-44d2-b299-a9cce94a20ba"/>
           <port xsi:type="esdl:OutPort" id="b664aab0-1e21-4388-99a6-d7e02e988920" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="041aadf6-0b88-4183-9736-8beccb5dd1de" name="CableHome264_3" originalIdInSource="2643" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e021cc52-0aa0-4d21-be96-6997bacfe035" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6702,7 +6831,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d34de98b-bd93-45d4-83ec-d61908258b92" name="Home264_4" originalIdInSource="2644" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="d34de98b-bd93-45d4-83ec-d61908258b92" name="Home264_4" originalIdInSource="2644" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="41248297-58b4-4943-9292-03d23449ee27" name="ConnectionHome264_4" originalIdInSource="2644" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6726,6 +6855,7 @@
           <port xsi:type="esdl:InPort" id="b8524d4c-361b-4fdb-9077-c3d6f6703337" name="In" connectedTo="8c5295d2-1454-413f-883b-f8326759df26"/>
           <port xsi:type="esdl:OutPort" id="3c3d1d6d-ecbb-4d69-9ec0-838ba749d908" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e7d169d8-ab85-4f99-ad9a-c66a4c706029" name="CableHome264_4" originalIdInSource="2644" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="dd95e8e2-8ad8-44a0-8f52-c4a373bf168e" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6735,7 +6865,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9c003624-ff9a-4f4f-83e3-954981bdfb78" name="Home264_5" originalIdInSource="2645" assetType="mansionette_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9c003624-ff9a-4f4f-83e3-954981bdfb78" name="Home264_5" originalIdInSource="2645" assetType="maisonnette_2006_2014" energyLabel="LABEL_A" floorArea="56.53" buildingYear="2010" surfaceArea="113" numberOfFloors="6">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="ca936339-5838-453a-9cd4-9db0d96938ea" name="ConnectionHome264_5" originalIdInSource="2645" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6759,6 +6889,7 @@
           <port xsi:type="esdl:InPort" id="5934aa4e-786d-45d9-a47c-ea31c9b48ae5" name="In" connectedTo="33edb9d1-acba-40ab-8734-90f14d48955c"/>
           <port xsi:type="esdl:OutPort" id="bf6f585c-f44b-47b9-89cd-f9c3a1b8e1df" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="27.13" height="17.0" windowArea="16.22" doorArea="6.77" flatRoofArea="56.53"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c58cd43c-90c3-4ed2-b96f-1782b7eb32e5" name="CableHome264_5" originalIdInSource="2645" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c92f9330-b47e-4d3a-9c4c-8ee02e7c3694" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6768,7 +6899,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="934ae827-9023-42f9-ada9-1f6b4e97852d" name="Home264_6" originalIdInSource="2646" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="934ae827-9023-42f9-ada9-1f6b4e97852d" name="Home264_6" originalIdInSource="2646" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="5a4a336d-16e7-422e-946f-5353310d60f6" name="ConnectionHome264_6" originalIdInSource="2646" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6780,6 +6911,7 @@
           <port xsi:type="esdl:InPort" id="c89f6d1c-748c-4eb0-af72-627b4ad0bb04" name="In" connectedTo="b585093e-e019-487d-88e1-38c5d2cd3b3f"/>
           <port xsi:type="esdl:OutPort" id="ab5627e0-fd2b-4490-ab2a-9e6d517f600f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bae63ea7-984f-48c3-849b-b1e7e9ee5626" name="CableHome264_6" originalIdInSource="2646" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c9c1738d-6293-4823-87e3-7e8e7f04e6ee" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6789,7 +6921,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d401d0ac-ebf3-4603-9ef0-3416fc75ae62" name="Home264_7" originalIdInSource="2647" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="d401d0ac-ebf3-4603-9ef0-3416fc75ae62" name="Home264_7" originalIdInSource="2647" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="6f35b652-ba90-4c46-b8f7-2cf8bae04c08" name="ConnectionHome264_7" originalIdInSource="2647" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6813,6 +6945,7 @@
           <port xsi:type="esdl:InPort" id="2a2d8f2f-a69d-4c94-ac99-9c52df070a7c" name="In" connectedTo="83e2dc7e-c73a-4a69-82ea-7faf94962aab"/>
           <port xsi:type="esdl:OutPort" id="a30bafb8-163a-463a-aa84-c34c7ac59117" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2a0d4f6e-e680-49e3-8f6f-620d86cdcd06" name="CableHome264_7" originalIdInSource="2647" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="806ec446-1a9b-401d-9c97-88f354d06702" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6822,7 +6955,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="86687199-cb37-457f-b9e1-338dfe7c1cf5" name="Home264_8" originalIdInSource="2648" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="86687199-cb37-457f-b9e1-338dfe7c1cf5" name="Home264_8" originalIdInSource="2648" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         <asset xsi:type="esdl:EConnection" id="105f60c7-a2c5-405c-b004-8804b208d06a" name="ConnectionHome264_8" originalIdInSource="2648" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6846,6 +6979,7 @@
           <port xsi:type="esdl:InPort" id="b1780e6a-bb79-439b-b05b-a1faae2c6e52" name="In" connectedTo="f65e0c36-b43b-47b5-911d-aff20cc70fe7"/>
           <port xsi:type="esdl:OutPort" id="cfacdc5c-c8ae-4ef5-8cf8-3fa60740e2a8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="097e1a04-2ca4-4b68-b199-0d635f7e64ec" name="CableHome264_8" originalIdInSource="2648" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ebce9481-cf11-4a30-a83a-cb892f12dd8f" name="In" connectedTo="126ff384-eb81-476a-8462-e21831bf6bd7"/>
@@ -6855,7 +6989,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.683696884212345" lon="-11.793644678229237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9ae5de11-2a2b-4722-a828-ac20a0be5c37" name="Home265_1" originalIdInSource="2651" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9ae5de11-2a2b-4722-a828-ac20a0be5c37" name="Home265_1" originalIdInSource="2651" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68132933116076" lon="-11.792694757495275"/>
         <asset xsi:type="esdl:EConnection" id="ee6e9924-f294-465d-af63-0491294924a0" name="ConnectionHome265_1" originalIdInSource="2651" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6867,6 +7001,7 @@
           <port xsi:type="esdl:InPort" id="a1eec783-ae04-4cdc-a090-da8c734b63ee" name="In" connectedTo="a55bc90d-41c5-429a-bbd1-659752227033"/>
           <port xsi:type="esdl:OutPort" id="8349e5f1-28db-46ea-9e56-682a0ddcc552" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a1457268-ea43-4ef4-8d96-b97d3f3c47d3" name="CableHome265_1" originalIdInSource="2651" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="5bae83e2-3106-4810-8c1d-f0ed845a5f17" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -6876,7 +7011,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68132933116076" lon="-11.792694757495275"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7541b38e-828c-4e9b-9218-43f6cb1367fb" name="Home265_2" originalIdInSource="2652" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="7541b38e-828c-4e9b-9218-43f6cb1367fb" name="Home265_2" originalIdInSource="2652" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="10b3d82c-68cf-4b3c-8183-c25da8ef89b7" name="ConnectionHome265_2" originalIdInSource="2652" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6900,6 +7035,7 @@
           <port xsi:type="esdl:InPort" id="e259678d-8a02-4524-a14f-3dd9cfe76e08" name="In" connectedTo="63255028-6500-4201-bb21-59c810086442"/>
           <port xsi:type="esdl:OutPort" id="fab6ca71-7c12-4b08-a06c-b1d301c59a43" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8d566daf-7ef5-44b9-85c3-5fbb2cc46f26" name="CableHome265_2" originalIdInSource="2652" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="9ccc0d1d-9bfa-47f4-b432-1097175f3b8c" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -6909,7 +7045,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="878a013c-b763-4163-a142-32fd1c9f503b" name="Home265_3" originalIdInSource="2653" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="878a013c-b763-4163-a142-32fd1c9f503b" name="Home265_3" originalIdInSource="2653" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="8d0907c4-04e0-4f29-bab7-cec50f480c6e" name="ConnectionHome265_3" originalIdInSource="2653" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6933,6 +7069,7 @@
           <port xsi:type="esdl:InPort" id="10c5c1a9-e939-4c10-b17f-b54c0d92a54f" name="In" connectedTo="a277920b-1e2d-46a3-92cc-a35803019021"/>
           <port xsi:type="esdl:OutPort" id="09852781-93ca-4e35-9b75-8f21dfb78577" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="19e7853a-3365-418e-b907-7bbc65053c35" name="CableHome265_3" originalIdInSource="2653" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="353deea2-de1b-4872-bd5b-8cbfaeb4ab2f" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -6942,7 +7079,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="606c03cb-131a-4289-8fa6-41ea84f5da35" name="Home265_4" originalIdInSource="2654" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="606c03cb-131a-4289-8fa6-41ea84f5da35" name="Home265_4" originalIdInSource="2654" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="6ec18181-6600-4408-afe8-0201a3231a45" name="ConnectionHome265_4" originalIdInSource="2654" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6966,6 +7103,7 @@
           <port xsi:type="esdl:InPort" id="76e8297d-a453-45ce-b9d1-ede3b2767aa4" name="In" connectedTo="2f05f171-0ceb-4b23-b463-3500d0588a13"/>
           <port xsi:type="esdl:OutPort" id="d088c376-f5de-4207-af09-d527e58d43d9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1c0ec96e-30a0-415d-bd38-4527090420a4" name="CableHome265_4" originalIdInSource="2654" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="eafcc4e4-bc87-42c0-8d36-f7f6a3075896" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -6975,7 +7113,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9cc6a11f-d423-47c9-bf59-1f65b6cfe796" name="Home265_5" originalIdInSource="2655" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="9cc6a11f-d423-47c9-bf59-1f65b6cfe796" name="Home265_5" originalIdInSource="2655" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="23bd8f5d-f746-4892-8992-00c02f4e1f31" name="ConnectionHome265_5" originalIdInSource="2655" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6999,6 +7137,7 @@
           <port xsi:type="esdl:InPort" id="6c2b4eb7-6e0e-4c32-ad99-0a4ab069f725" name="In" connectedTo="58c6084f-fbdd-42b7-962e-032695d9b0df"/>
           <port xsi:type="esdl:OutPort" id="dfbd2db5-6385-4c2c-90f3-705438d81c49" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bb9af162-8823-4998-9577-7ec74c7e1dbc" name="CableHome265_5" originalIdInSource="2655" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="06db2565-d9b8-452f-85b7-4fb63d716d68" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -7008,7 +7147,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="18d574e6-d936-4b6e-817c-0b7fefdee774" name="Home265_6" originalIdInSource="2656" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="18d574e6-d936-4b6e-817c-0b7fefdee774" name="Home265_6" originalIdInSource="2656" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="bbd72834-4d45-4732-9d3e-e8a7635b3dd4" name="ConnectionHome265_6" originalIdInSource="2656" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7032,6 +7171,7 @@
           <port xsi:type="esdl:InPort" id="f4070bbe-552d-4313-92a4-396e0af73196" name="In" connectedTo="f1f31d43-8b61-41a5-9374-2b4c64ca7518"/>
           <port xsi:type="esdl:OutPort" id="431bc546-0e28-4dc5-871b-559d8055d458" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="dcee3b37-7b32-4934-a932-12bbf7506e8c" name="CableHome265_6" originalIdInSource="2656" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4b571fca-c4e1-4298-9ff4-7be13e95c8ac" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -7041,7 +7181,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dfea7292-2098-4f69-ac42-be46d8d8c31b" name="Home265_7" originalIdInSource="2657" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="dfea7292-2098-4f69-ac42-be46d8d8c31b" name="Home265_7" originalIdInSource="2657" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_C" floorArea="50.0" buildingYear="1970" surfaceArea="115" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="a0c0270a-e751-4ae7-8600-e21b7e0c7840" name="ConnectionHome265_7" originalIdInSource="2657" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7065,6 +7205,7 @@
           <port xsi:type="esdl:InPort" id="3ee047a2-6d4d-4572-ae9e-24f40e341dd2" name="In" connectedTo="347d94d4-3bdc-47a7-97f6-2c7e2844e3ba"/>
           <port xsi:type="esdl:OutPort" id="4560d8a4-e0c8-4dfe-80a6-452bbf11072b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.4" height="9.0" windowArea="26.6" doorArea="4.8" slantedRoofArea="56.53"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="962d7381-d30b-48c7-adc3-485efe760cdb" name="CableHome265_7" originalIdInSource="2657" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3bde46a5-c6a0-492a-a32e-e52d768ade54" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -7074,7 +7215,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="65a51634-a4c6-4e40-bfc5-7b32c66e8bc9" name="Home265_8" originalIdInSource="2658" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="65a51634-a4c6-4e40-bfc5-7b32c66e8bc9" name="Home265_8" originalIdInSource="2658" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         <asset xsi:type="esdl:EConnection" id="d6f4470c-aa9c-4e7a-bd16-98af35e31e09" name="ConnectionHome265_8" originalIdInSource="2658" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7098,6 +7239,7 @@
           <port xsi:type="esdl:InPort" id="7211b35a-1f01-40a4-b400-5313149d9180" name="In" connectedTo="f87de049-0ae7-494b-82f0-477ff136bca7"/>
           <port xsi:type="esdl:OutPort" id="371fc499-9c9c-4563-b26a-a600ae6c1848" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="07864ea4-0163-4d9f-a26e-334f8d9b8f7c" name="CableHome265_8" originalIdInSource="2658" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="2054e6ed-2507-4fe8-94fa-23828f643ea9" name="In" connectedTo="a8801534-b82e-47bb-b832-3f9bb2cf50a0"/>
@@ -7107,7 +7249,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.681462418336935" lon="-11.792967719404105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="abe29f2d-9746-4f13-be35-ef6b5c6c717a" name="Home279_1" originalIdInSource="2791" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="abe29f2d-9746-4f13-be35-ef6b5c6c717a" name="Home279_1" originalIdInSource="2791" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68129053658934" lon="-11.79291564793264"/>
         <asset xsi:type="esdl:EConnection" id="79250ab9-6f58-49b0-96ad-0327dec67e2e" name="ConnectionHome279_1" originalIdInSource="2791" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7131,6 +7273,7 @@
           <port xsi:type="esdl:InPort" id="1433e4f9-ab65-45ff-a4d1-2d7ebe59541a" name="In" connectedTo="4b78da9d-ba46-4988-ab95-4aa57f60c9bd"/>
           <port xsi:type="esdl:OutPort" id="a3d027d0-568a-4224-9825-32a20748288e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5c05b453-a0a9-4398-9eb2-aa383d0b9314" name="CableHome279_1" originalIdInSource="2791" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="0fb19b11-9eb3-4d05-8558-fd60c6b58220" name="In" connectedTo="725df5f4-15f3-444a-9a1a-f495027c8544"/>
@@ -7140,7 +7283,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68129053658934" lon="-11.79291564793264"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="83c007e4-178b-4637-b265-1a8eb53a85fc" name="Home287_1" originalIdInSource="2871" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="83c007e4-178b-4637-b265-1a8eb53a85fc" name="Home287_1" originalIdInSource="2871" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67712659364736" lon="-11.791886903046882"/>
         <asset xsi:type="esdl:EConnection" id="556094ee-4be3-40be-9efc-38f44a97b321" name="ConnectionHome287_1" originalIdInSource="2871" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7164,6 +7307,7 @@
           <port xsi:type="esdl:InPort" id="ea52ea4e-22f3-444e-ade0-fafe96b904da" name="In" connectedTo="2bbfba14-9ef8-49b2-b10e-7e975737353f"/>
           <port xsi:type="esdl:OutPort" id="94cc0026-6f6b-49c6-9639-cef8c3d0edea" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="01a7c6f5-a33a-473b-9cc1-5e84e6b53691" name="CableHome287_1" originalIdInSource="2871" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="707ae071-54a4-4b27-9e2f-3ec3f0841603" name="In" connectedTo="fb4df574-2065-4525-845b-a35bd1ae0f5d"/>
@@ -7173,7 +7317,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67712659364736" lon="-11.791886903046882"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e5f95742-b6de-44aa-b146-1ff84b4eea94" name="Home296_1" originalIdInSource="2961" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="e5f95742-b6de-44aa-b146-1ff84b4eea94" name="Home296_1" originalIdInSource="2961" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667845084150144" lon="-11.789075911658424"/>
         <asset xsi:type="esdl:EConnection" id="c544d054-3e83-46b4-91d0-642a60cd83a5" name="ConnectionHome296_1" originalIdInSource="2961" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7197,6 +7341,7 @@
           <port xsi:type="esdl:InPort" id="2b566c22-026f-49e5-aa75-b10cac3502e9" name="In" connectedTo="d1a1889f-7f9b-408e-b99b-796fe589c60d"/>
           <port xsi:type="esdl:OutPort" id="8c77365f-4a1e-4e51-a4ee-60ff4c8aa0ea" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8cdc3768-962b-4a5e-a758-054b28f2ccc4" name="CableHome296_1" originalIdInSource="2961" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="b1c04805-02b7-4b7b-9904-f2e72a85d7a3" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7206,7 +7351,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667845084150144" lon="-11.789075911658424"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8661ce5e-4b31-4472-8240-ca229b9f5bdd" name="Home296_2" originalIdInSource="2962" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="8661ce5e-4b31-4472-8240-ca229b9f5bdd" name="Home296_2" originalIdInSource="2962" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="3c7a7a9f-11d5-417f-9d92-fcfc1467b258" name="ConnectionHome296_2" originalIdInSource="2962" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7230,6 +7375,7 @@
           <port xsi:type="esdl:InPort" id="bb652588-e92a-4215-bc36-e10123aef6e5" name="In" connectedTo="b8679603-ddbb-41c3-ba8f-42933086117c"/>
           <port xsi:type="esdl:OutPort" id="5a94e331-a679-4833-956b-6ffbe9f07867" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="10124644-fe1f-4cc2-b467-549493343e78" name="CableHome296_2" originalIdInSource="2962" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="fe05d185-7fb3-4d95-a907-86888072e92b" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7239,7 +7385,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ed63b2cd-499c-457b-a05c-09f88dd8e0be" name="Home296_3" originalIdInSource="2963" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="ed63b2cd-499c-457b-a05c-09f88dd8e0be" name="Home296_3" originalIdInSource="2963" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="ed955e43-5084-4503-8677-2e4effb27226" name="ConnectionHome296_3" originalIdInSource="2963" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7263,6 +7409,7 @@
           <port xsi:type="esdl:InPort" id="8fac8255-3cee-47d1-a4f7-422d6c7208a4" name="In" connectedTo="dfcd1898-84aa-4f2f-b2e2-f4ec1ea3964e"/>
           <port xsi:type="esdl:OutPort" id="5ec48966-70ac-4b4b-b2f7-5512a1bc8857" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7fa46970-dd25-44e5-a60a-37fe7af5a306" name="CableHome296_3" originalIdInSource="2963" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="df3378c3-3b90-4bc8-8dad-bc4c8d4c33af" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7272,7 +7419,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ef4f4270-b15e-43be-b357-8ee7dc012006" name="Home296_4" originalIdInSource="2964" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="ef4f4270-b15e-43be-b357-8ee7dc012006" name="Home296_4" originalIdInSource="2964" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="e1c5f878-2fdf-434c-9946-d14a90ac70d6" name="ConnectionHome296_4" originalIdInSource="2964" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7296,6 +7443,7 @@
           <port xsi:type="esdl:InPort" id="7f50aa00-4f64-43fc-b5e2-ebde49aca3eb" name="In" connectedTo="f1fd2e55-b546-4549-8f78-07d7466b5fba"/>
           <port xsi:type="esdl:OutPort" id="6d8cd347-3726-4379-b061-fa0ef12b581c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0d015999-0f72-4aee-8e18-87a6b808218f" name="CableHome296_4" originalIdInSource="2964" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="669d6200-1d00-4355-adba-3e77a056ba8b" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7305,7 +7453,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2049afc0-429a-476e-bc7f-e57ceebc99e1" name="Home296_5" originalIdInSource="2965" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="2049afc0-429a-476e-bc7f-e57ceebc99e1" name="Home296_5" originalIdInSource="2965" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="e34048bc-dbe5-4b05-879d-a5197f460ee3" name="ConnectionHome296_5" originalIdInSource="2965" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7329,6 +7477,7 @@
           <port xsi:type="esdl:InPort" id="d84cd6d3-a4ff-4492-9bcb-1c19ce5f6520" name="In" connectedTo="0f73b842-e4f9-4315-94a0-0d24dfcb6a61"/>
           <port xsi:type="esdl:OutPort" id="7a77e397-48a2-4e6f-a364-e6bddb78dec8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="75d6f6d7-ce6b-4f37-a81c-87b3b184be69" name="CableHome296_5" originalIdInSource="2965" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="68490ac9-5b4f-453d-8f1d-6babc3d5a5f8" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7338,7 +7487,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e6a16eea-799c-4158-83c3-65e6f6355230" name="Home296_6" originalIdInSource="2966" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e6a16eea-799c-4158-83c3-65e6f6355230" name="Home296_6" originalIdInSource="2966" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="fcb102e3-afa5-4f0f-8751-53d26bf73998" name="ConnectionHome296_6" originalIdInSource="2966" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7362,6 +7511,7 @@
           <port xsi:type="esdl:InPort" id="239462c0-c3d5-4781-ac0a-f94340e3f5d5" name="In" connectedTo="56495184-b8b3-446d-a876-7eabb7776f35"/>
           <port xsi:type="esdl:OutPort" id="5ca57551-14dc-47b1-b041-7cd0ef9e1b95" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="56157b18-9276-419c-a0b1-86537c77b78a" name="CableHome296_6" originalIdInSource="2966" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="437705b4-218f-4f78-b34e-b6a00a9bfe19" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7371,7 +7521,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a269a4f1-8fe3-4809-a0c0-a44effc22c40" name="Home296_7" originalIdInSource="2967" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a269a4f1-8fe3-4809-a0c0-a44effc22c40" name="Home296_7" originalIdInSource="2967" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="e1b57e84-a7be-41ac-a057-feb160e2b5bb" name="ConnectionHome296_7" originalIdInSource="2967" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7395,6 +7545,7 @@
           <port xsi:type="esdl:InPort" id="b04203d5-41fb-4810-84b9-215e338029e2" name="In" connectedTo="a84cc307-963c-40e9-b5ec-9ca5639518de"/>
           <port xsi:type="esdl:OutPort" id="8882c4c5-08d1-47c4-81d7-02d741deed99" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a9d9e0a0-6364-40b3-953c-b00db00879b5" name="CableHome296_7" originalIdInSource="2967" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="74a4f08d-30f4-4047-89cf-1b862bef2f10" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7404,7 +7555,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f925187b-b6fb-4f29-beb0-6df83e80b55f" name="Home296_8" originalIdInSource="2968" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="f925187b-b6fb-4f29-beb0-6df83e80b55f" name="Home296_8" originalIdInSource="2968" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         <asset xsi:type="esdl:EConnection" id="23a510d4-8c4d-4d9c-8458-1e734a5129cc" name="ConnectionHome296_8" originalIdInSource="2968" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7428,6 +7579,7 @@
           <port xsi:type="esdl:InPort" id="491e99ec-bbe7-440d-918f-089b3e44f24c" name="In" connectedTo="bcc7efef-06e1-4ef7-98cc-e74136532146"/>
           <port xsi:type="esdl:OutPort" id="377f3ea2-1e0b-445d-a092-1f790da1aeab" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="87b2e1d9-8a0b-4784-bd09-c507d6a04c44" name="CableHome296_8" originalIdInSource="2968" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ceb515a3-8082-45ed-847b-4bbba3644469" name="In" connectedTo="ada14bdc-f21c-44ca-bffe-2582f66a49ad"/>
@@ -7437,7 +7589,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.667978179191394" lon="-11.789348791760075"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ddc524b0-b55e-4970-aa31-28176d04ed15" name="Home311_1" originalIdInSource="3111" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="ddc524b0-b55e-4970-aa31-28176d04ed15" name="Home311_1" originalIdInSource="3111" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67884540283087" lon="-11.792407561452611"/>
         <asset xsi:type="esdl:EConnection" id="a47183f2-869e-428d-a4eb-0731e1f1c568" name="ConnectionHome311_1" originalIdInSource="3111" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7461,6 +7613,7 @@
           <port xsi:type="esdl:InPort" id="73c14f7c-0be4-4656-8a50-ed8291cb271e" name="In" connectedTo="e6eb9993-f024-41aa-9e9a-8a4cf899e62f"/>
           <port xsi:type="esdl:OutPort" id="c9127315-f5c8-442d-9f74-05d19b31cbb5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a63b5358-dc42-4dc1-a177-8da3ef47ce49" name="CableHome311_1" originalIdInSource="3111" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="5a193fc0-498f-483b-98c0-2c5a0c87de31" name="In" connectedTo="21a0b318-83ea-4a58-9265-78312898a528"/>
@@ -7470,7 +7623,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67884540283087" lon="-11.792407561452611"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="761c7967-6ca8-4d7d-bd75-105fc2585b00" name="Home312_1" originalIdInSource="3121" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="761c7967-6ca8-4d7d-bd75-105fc2585b00" name="Home312_1" originalIdInSource="3121" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.678884195767225" lon="-11.792186681598226"/>
         <asset xsi:type="esdl:EConnection" id="7358829f-9234-470c-8428-004929be90ef" name="ConnectionHome312_1" originalIdInSource="3121" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7494,6 +7647,7 @@
           <port xsi:type="esdl:InPort" id="86a85f32-fe23-40a3-a683-c3c7577a7dc8" name="In" connectedTo="3a1025b7-d20a-4fbb-bcc4-28a615dc694d"/>
           <port xsi:type="esdl:OutPort" id="4e878be8-626e-4126-99aa-adc5bbf9ca7c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="56aa1c99-54b9-429b-bd8e-3690f781109f" name="CableHome312_1" originalIdInSource="3121" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="249fb516-cfbc-4af6-ad05-0c7f6ff45c3d" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7503,7 +7657,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.678884195767225" lon="-11.792186681598226"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4b031a7e-89d9-411c-8ed9-55216368dd89" name="Home312_2" originalIdInSource="3122" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="4b031a7e-89d9-411c-8ed9-55216368dd89" name="Home312_2" originalIdInSource="3122" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="dbc1d01f-40e9-491c-bb66-ec0c90e47549" name="ConnectionHome312_2" originalIdInSource="3122" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7527,6 +7681,7 @@
           <port xsi:type="esdl:InPort" id="cbcb08c9-db5c-4047-96de-dc118ade3010" name="In" connectedTo="a839b6f4-ac96-4336-98de-f491b343e909"/>
           <port xsi:type="esdl:OutPort" id="251f0b09-3c57-4d3a-b538-ed6036d46d98" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="06cdce7c-215f-45ea-a495-2a8ccf722abd" name="CableHome312_2" originalIdInSource="3122" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="593c05af-dbef-4aa2-b50d-e43662ef12d5" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7536,7 +7691,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c406b2c8-2fb1-45aa-a130-c30da30da9e0" name="Home312_3" originalIdInSource="3123" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="c406b2c8-2fb1-45aa-a130-c30da30da9e0" name="Home312_3" originalIdInSource="3123" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="e790a26e-c9d6-439e-991f-a45b7f0fd14b" name="ConnectionHome312_3" originalIdInSource="3123" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7560,6 +7715,7 @@
           <port xsi:type="esdl:InPort" id="518feac6-2249-4a0a-8c81-f37e616b84b1" name="In" connectedTo="c75c9b9e-3bb1-4369-8cb0-77275a46ec89"/>
           <port xsi:type="esdl:OutPort" id="0a6f7f41-400d-45af-bf5d-5900487ec365" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fcb32a95-de19-42eb-9124-e2b51bf4fdef" name="CableHome312_3" originalIdInSource="3123" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0fdf9c15-a4aa-4cda-b6d4-2f974612b257" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7569,7 +7725,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1d752623-d5dd-463c-b4c6-644870871a3c" name="Home312_4" originalIdInSource="3124" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="1d752623-d5dd-463c-b4c6-644870871a3c" name="Home312_4" originalIdInSource="3124" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="77a571c0-e64c-4846-b3b7-592c1933bfed" name="ConnectionHome312_4" originalIdInSource="3124" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7593,6 +7749,7 @@
           <port xsi:type="esdl:InPort" id="0a75e3b4-f3ce-4f47-a83f-6d6e05749e69" name="In" connectedTo="d9aa7889-79e0-41b8-8c4e-5fb45e42ffe4"/>
           <port xsi:type="esdl:OutPort" id="7f50c858-5df1-4182-9a4c-1d74ab44f338" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1e5fbf35-b530-45fa-87a1-7181e296e650" name="CableHome312_4" originalIdInSource="3124" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4e463860-e1f1-405c-89e9-955a3e6836bd" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7602,7 +7759,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="81222224-592a-424f-b00b-1d04bb2f765b" name="Home312_5" originalIdInSource="3125" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="81222224-592a-424f-b00b-1d04bb2f765b" name="Home312_5" originalIdInSource="3125" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="1240a248-c21f-4d6e-9aaf-6c15c74625cd" name="ConnectionHome312_5" originalIdInSource="3125" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7626,6 +7783,7 @@
           <port xsi:type="esdl:InPort" id="8d046cbe-8668-4cff-88cb-0782382252e6" name="In" connectedTo="e5c5bf86-d403-4d5d-9e42-8b52d7055e18"/>
           <port xsi:type="esdl:OutPort" id="b76690f0-15c2-4231-a667-6a9985a3887c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="62a6e313-ee29-44cd-aa3d-a3545d0445f1" name="CableHome312_5" originalIdInSource="3125" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8da0fd2a-d341-4749-b085-e1ea0a6285a9" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7635,7 +7793,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cebac127-6759-4952-89f1-b1823cb3c23c" name="Home312_6" originalIdInSource="3126" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="cebac127-6759-4952-89f1-b1823cb3c23c" name="Home312_6" originalIdInSource="3126" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="4cb8bd02-a42b-4442-a0cb-efec97137b1f" name="ConnectionHome312_6" originalIdInSource="3126" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7659,6 +7817,7 @@
           <port xsi:type="esdl:InPort" id="25a60658-3bdc-4487-8553-aa714300e978" name="In" connectedTo="453677b5-5494-4697-b7ee-db5d28180e82"/>
           <port xsi:type="esdl:OutPort" id="ff3918b5-abdb-42dd-b5b5-fb7acebe4ffe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e46b9115-8163-4a15-af7f-8419803d8ef2" name="CableHome312_6" originalIdInSource="3126" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8c8febf4-6ec9-43b3-9d98-8ff0af3c5c03" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7668,7 +7827,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6308b140-e8be-43f6-9581-1470821da529" name="Home312_7" originalIdInSource="3127" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6308b140-e8be-43f6-9581-1470821da529" name="Home312_7" originalIdInSource="3127" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="05a6c6cb-4ccc-48e1-b6ed-8aa14181bb97" name="ConnectionHome312_7" originalIdInSource="3127" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7692,6 +7851,7 @@
           <port xsi:type="esdl:InPort" id="3d705a7c-345f-4d8d-be5b-21ce49e4a092" name="In" connectedTo="35dfeb67-3cba-432d-ac0b-8b63c697d2a9"/>
           <port xsi:type="esdl:OutPort" id="8ce4c798-761c-4a52-9109-6019a670c0ef" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="af71fc90-2e61-4fab-9bdc-baf17b65c197" name="CableHome312_7" originalIdInSource="3127" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c318ca76-b167-499e-9db6-f47ad7807bbd" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7701,7 +7861,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e9531c18-589c-456d-8f1e-632b13ed1816" name="Home312_8" originalIdInSource="3128" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e9531c18-589c-456d-8f1e-632b13ed1816" name="Home312_8" originalIdInSource="3128" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         <asset xsi:type="esdl:EConnection" id="8aac5196-ac9a-48af-a557-e6e87d358786" name="ConnectionHome312_8" originalIdInSource="3128" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7725,6 +7885,7 @@
           <port xsi:type="esdl:InPort" id="f91e56bc-6e09-4cc9-824e-001897dfce9d" name="In" connectedTo="f06ce561-8609-4098-9a18-2ca124519a71"/>
           <port xsi:type="esdl:OutPort" id="bbdc7c04-7edd-41f4-9153-cf7846de4f4e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="651174d2-a7ac-48cb-9f04-9454509103b6" name="CableHome312_8" originalIdInSource="3128" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d257f8fa-2514-447b-bd9b-6e490c68db3d" name="In" connectedTo="9e6bdc51-67a7-4618-ba57-0067a8379e6b"/>
@@ -7734,7 +7895,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.679017283940254" lon="-11.792459629088166"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d6b5fe85-55a2-4026-9f42-32f74b62d092" name="Home320_1" originalIdInSource="3201" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="d6b5fe85-55a2-4026-9f42-32f74b62d092" name="Home320_1" originalIdInSource="3201" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67025139168033" lon="-11.789804595807825"/>
         <asset xsi:type="esdl:EConnection" id="2c296a9c-348e-4300-bcbe-820cc36ca4a1" name="ConnectionHome320_1" originalIdInSource="3201" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7758,6 +7919,7 @@
           <port xsi:type="esdl:InPort" id="e9781a0b-28b5-4493-b016-b2df0b7da75d" name="In" connectedTo="6959d643-66cc-4355-b910-87f7b3098fb7"/>
           <port xsi:type="esdl:OutPort" id="9a041a5d-5aec-4721-8fe2-b4c05fe35684" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5cd2ed69-26d2-4402-98e0-bfb5d15799fa" name="CableHome320_1" originalIdInSource="3201" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="44b465d1-8a7f-43e1-9a02-df91c27dba60" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7767,7 +7929,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67025139168033" lon="-11.789804595807825"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="10401b52-78da-4af7-995d-c5eb32a42f97" name="Home320_2" originalIdInSource="3202" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="10401b52-78da-4af7-995d-c5eb32a42f97" name="Home320_2" originalIdInSource="3202" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="2263c212-f25c-43a1-ae59-bea6f0f95a9d" name="ConnectionHome320_2" originalIdInSource="3202" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7791,6 +7953,7 @@
           <port xsi:type="esdl:InPort" id="2cc1bbe3-4f7a-4a10-8aea-d1bae67e6e7e" name="In" connectedTo="c5c53d8c-08d0-49f8-8587-6303cb925258"/>
           <port xsi:type="esdl:OutPort" id="8f3e0050-33fe-4732-9cbe-15cf30baebc5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3fd61f97-ea4e-47f3-a2f6-b5baf27f736f" name="CableHome320_2" originalIdInSource="3202" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="be7900d8-3c89-466f-bfc4-03b431e5a428" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7800,7 +7963,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f6aaf8e8-413d-4370-badf-02fff106af36" name="Home320_3" originalIdInSource="3203" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="f6aaf8e8-413d-4370-badf-02fff106af36" name="Home320_3" originalIdInSource="3203" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="e25bfb7c-df83-41e1-a247-3e74334e281d" name="ConnectionHome320_3" originalIdInSource="3203" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7824,6 +7987,7 @@
           <port xsi:type="esdl:InPort" id="c0360530-b039-4c4b-9cdc-605271075d03" name="In" connectedTo="81c59675-7c26-4071-aaf1-89b1c2d28c0f"/>
           <port xsi:type="esdl:OutPort" id="dd66ce91-17e0-4e62-95a1-3239b6a0f7d0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9c2a5816-dc8e-4e6d-b337-5ac75355e300" name="CableHome320_3" originalIdInSource="3203" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e420ee9e-bfac-4e63-9801-aaf5fc757ccd" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7833,7 +7997,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0083211d-1a63-4984-8780-cd30c17c948a" name="Home320_4" originalIdInSource="3204" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="0083211d-1a63-4984-8780-cd30c17c948a" name="Home320_4" originalIdInSource="3204" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="27db462a-3f8f-4770-b0d8-3b736e81c6e6" name="ConnectionHome320_4" originalIdInSource="3204" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7857,6 +8021,7 @@
           <port xsi:type="esdl:InPort" id="4b6b7a17-70b1-41b6-a7a4-a646240b6358" name="In" connectedTo="2dde5995-7bbb-4b9c-9717-2040f995a33c"/>
           <port xsi:type="esdl:OutPort" id="75684e3c-492a-4fc3-a357-68329b5367d3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9f380eea-0815-4446-8bc0-9c91dc314085" name="CableHome320_4" originalIdInSource="3204" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="fa5aa6ef-f7be-41ca-8561-3b81d956c0f6" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7866,7 +8031,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1e65e4dc-9f88-447c-9bb1-79a59c05efef" name="Home320_5" originalIdInSource="3205" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="1e65e4dc-9f88-447c-9bb1-79a59c05efef" name="Home320_5" originalIdInSource="3205" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="7356541d-2542-4ab8-b2da-c9711c7e1f6f" name="ConnectionHome320_5" originalIdInSource="3205" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7890,6 +8055,7 @@
           <port xsi:type="esdl:InPort" id="d48ced9c-ab88-4c83-9de9-5ecffec16511" name="In" connectedTo="4d7c6cdf-62df-472a-b356-001cdadc878b"/>
           <port xsi:type="esdl:OutPort" id="4f8be565-7799-4327-851c-a19114e79115" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6a2f4729-1404-4366-af6f-987f10fb5acd" name="CableHome320_5" originalIdInSource="3205" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8872fabe-c451-4aae-aca9-180349f914d9" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7899,7 +8065,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ad0e99ad-486e-45d0-886b-2e240c7acf90" name="Home320_6" originalIdInSource="3206" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="ad0e99ad-486e-45d0-886b-2e240c7acf90" name="Home320_6" originalIdInSource="3206" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="edf56b05-7347-4f36-9a6e-3c9483c57dbc" name="ConnectionHome320_6" originalIdInSource="3206" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7923,6 +8089,7 @@
           <port xsi:type="esdl:InPort" id="b3b81410-baee-453b-888d-1000d3460c9e" name="In" connectedTo="f717973b-635d-47e7-a5c2-ed74f4a2004c"/>
           <port xsi:type="esdl:OutPort" id="85e11676-4b6d-4680-8b5f-5a955677ef2f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="035ffbf4-2926-4b5e-9f3e-c0c390b100bb" name="CableHome320_6" originalIdInSource="3206" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3d4b1782-4149-420f-a073-a4c83e53b59f" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7932,7 +8099,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="31a88fa6-de9a-4561-b415-84fb3dfd62f3" name="Home320_7" originalIdInSource="3207" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="31a88fa6-de9a-4561-b415-84fb3dfd62f3" name="Home320_7" originalIdInSource="3207" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="08e7d22f-b9c8-4dc4-8ae5-9eb475e1ded2" name="ConnectionHome320_7" originalIdInSource="3207" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7956,6 +8123,7 @@
           <port xsi:type="esdl:InPort" id="63d720c1-1e07-4848-bb2e-e1719679fcb3" name="In" connectedTo="77a4233b-f1fa-4c61-959e-f27f6427d076"/>
           <port xsi:type="esdl:OutPort" id="f635b90a-00d2-4039-8fe3-9b30753ae04b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2421e877-4da2-4689-bf68-4b95f14f5912" name="CableHome320_7" originalIdInSource="3207" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d6497221-501a-4536-907c-1800d68d8a8c" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7965,7 +8133,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e10302c5-efc1-4e23-8c5f-0df575e3ae3f" name="Home320_8" originalIdInSource="3208" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e10302c5-efc1-4e23-8c5f-0df575e3ae3f" name="Home320_8" originalIdInSource="3208" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         <asset xsi:type="esdl:EConnection" id="5b62e840-1302-4206-8ee7-ee6f87a735b2" name="ConnectionHome320_8" originalIdInSource="3208" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7989,6 +8157,7 @@
           <port xsi:type="esdl:InPort" id="95be83e4-a111-4b85-aede-00a72dec10f0" name="In" connectedTo="9f39ab5a-8eb1-4e06-9d57-d1f8f0245995"/>
           <port xsi:type="esdl:OutPort" id="5fccb8af-1be6-4991-9a42-e50dc0942b99" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="963dfd3b-3d84-4e06-97c6-bfe442e61c13" name="CableHome320_8" originalIdInSource="3208" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6313877c-5e6b-4ffe-a6af-71cedd455fc7" name="In" connectedTo="62073510-d88c-448a-8fa5-bf6485d1c2df"/>
@@ -7998,7 +8167,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.670384485078074" lon="-11.790077490741313"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="502af7a9-bcfe-41ae-b41e-1b648f6aaa10" name="Home328_1" originalIdInSource="3281" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="502af7a9-bcfe-41ae-b41e-1b648f6aaa10" name="Home328_1" originalIdInSource="3281" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69043911961791" lon="-11.795454956297556"/>
         <asset xsi:type="esdl:EConnection" id="0bc4334d-ce1b-4c80-bff5-0327df763075" name="ConnectionHome328_1" originalIdInSource="3281" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8022,6 +8191,7 @@
           <port xsi:type="esdl:InPort" id="0f192a63-d7c8-4b1f-8a7f-289736bcbedb" name="In" connectedTo="8f8a49c6-0fcc-4414-ae04-60d327c89a7f"/>
           <port xsi:type="esdl:OutPort" id="ed79764c-1830-47b5-8b2c-1352dfd67670" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ed30c83a-8347-4333-9763-b12128315839" name="CableHome328_1" originalIdInSource="3281" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="427f62c0-2f76-4d1d-b218-980893f74645" name="In" connectedTo="0f45833b-53f6-4aab-8ab3-d65bb3b7184c"/>
@@ -8031,7 +8201,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69043911961791" lon="-11.795454956297556"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="11a7da6a-33da-4c79-b510-d1dddb25f3e2" name="Home329_1" originalIdInSource="3291" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="11a7da6a-33da-4c79-b510-d1dddb25f3e2" name="Home329_1" originalIdInSource="3291" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69047792176296" lon="-11.795234026693903"/>
         <asset xsi:type="esdl:EConnection" id="cdc12775-0867-40a6-8d7e-f0f0a0c89a55" name="ConnectionHome329_1" originalIdInSource="3291" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8055,6 +8225,7 @@
           <port xsi:type="esdl:InPort" id="0c30ea33-1215-40fc-96c8-7e283a0d4775" name="In" connectedTo="5c43c126-3aa9-4267-a888-0dca5e6601a2"/>
           <port xsi:type="esdl:OutPort" id="2c28df87-c389-44a0-b804-d57e8cbe5af5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7dd31fa4-e24e-4c21-b508-08b1a8163ef8" name="CableHome329_1" originalIdInSource="3291" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="1789c4fe-53fc-49e1-bdb8-eb0eacc6f2b3" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8064,7 +8235,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69047792176296" lon="-11.795234026693903"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7029e1d4-d5b5-4fe3-a80d-d86f4a18c687" name="Home329_2" originalIdInSource="3292" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="7029e1d4-d5b5-4fe3-a80d-d86f4a18c687" name="Home329_2" originalIdInSource="3292" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="e017454a-e215-4eeb-a517-8c2263282222" name="ConnectionHome329_2" originalIdInSource="3292" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8088,6 +8259,7 @@
           <port xsi:type="esdl:InPort" id="e6607195-6547-4271-bf49-09681945d567" name="In" connectedTo="bb4b0fef-fd0a-41ff-a248-d9d5f19cc3ad"/>
           <port xsi:type="esdl:OutPort" id="d5324d70-4a14-432c-a3e6-308483871794" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9a930c23-a115-41b6-9bd4-4cd4a5d93e66" name="CableHome329_2" originalIdInSource="3292" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d547ed95-470e-48f1-a778-0230ad258e4f" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8097,7 +8269,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0b154012-eda3-49c9-ad11-32167f9d52ea" name="Home329_3" originalIdInSource="3293" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0b154012-eda3-49c9-ad11-32167f9d52ea" name="Home329_3" originalIdInSource="3293" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="526e9e51-214d-4276-a1d0-341c0ce6105e" name="ConnectionHome329_3" originalIdInSource="3293" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8121,6 +8293,7 @@
           <port xsi:type="esdl:InPort" id="24ff0044-ee71-4283-922e-620d1c09d0c6" name="In" connectedTo="be1be1d0-2064-44dc-a2f3-088436f2e58e"/>
           <port xsi:type="esdl:OutPort" id="57b46096-0826-45cb-83cb-ac962bdab6e7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="43b5dd04-3da6-4b3a-982a-4fbee2dfd491" name="CableHome329_3" originalIdInSource="3293" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6ec6cd1c-03de-4ee6-851d-cd3ea90d3a05" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8130,7 +8303,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="370162db-1a35-49fd-bd9b-f796f76e1441" name="Home329_4" originalIdInSource="3294" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="370162db-1a35-49fd-bd9b-f796f76e1441" name="Home329_4" originalIdInSource="3294" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="9dc25829-7a58-45de-812b-660181be0061" name="ConnectionHome329_4" originalIdInSource="3294" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8154,6 +8327,7 @@
           <port xsi:type="esdl:InPort" id="338e1af1-4d10-46ce-9c84-ab35cd59416e" name="In" connectedTo="5ae85789-0529-46e4-a6b6-7228edb0aec1"/>
           <port xsi:type="esdl:OutPort" id="b902f2fd-ab31-4d78-8cda-c65c249ce0b7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c1e188e3-77cb-4dae-ba2e-2eb45e274a51" name="CableHome329_4" originalIdInSource="3294" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a90fb98c-c9c8-4c42-8d58-84de6cbe7c4d" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8163,7 +8337,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bbe103a0-c71e-41e2-ba91-10f303a75d48" name="Home329_5" originalIdInSource="3295" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="bbe103a0-c71e-41e2-ba91-10f303a75d48" name="Home329_5" originalIdInSource="3295" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="60fc05ce-ffbf-45fb-9360-f23f8373a27a" name="ConnectionHome329_5" originalIdInSource="3295" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8187,6 +8361,7 @@
           <port xsi:type="esdl:InPort" id="64f1de65-8a23-4386-9984-3c03d06a136d" name="In" connectedTo="a1ad46f6-b16d-498d-b98f-e3786eafeaeb"/>
           <port xsi:type="esdl:OutPort" id="cc1901f1-e910-4cf3-9ada-24bf2da8e9b3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="effc3910-82f2-4936-8e91-91a6a1c08cff" name="CableHome329_5" originalIdInSource="3295" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="5cd14870-1fe8-44cb-a4bd-4cefc74ad68a" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8196,7 +8371,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="731d64c1-5cfb-4fb8-8d54-abb74f998620" name="Home329_6" originalIdInSource="3296" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="731d64c1-5cfb-4fb8-8d54-abb74f998620" name="Home329_6" originalIdInSource="3296" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="3066326e-ab93-4d54-b733-fc205768e6e9" name="ConnectionHome329_6" originalIdInSource="3296" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8220,6 +8395,7 @@
           <port xsi:type="esdl:InPort" id="0473bc94-8671-4b34-8d44-d92b2eb6b157" name="In" connectedTo="e37da5dc-5551-47cd-834f-2e8e470cfc46"/>
           <port xsi:type="esdl:OutPort" id="ae12fa42-72b4-430c-a0b2-29b6385f6e5c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f7617e46-4381-49e9-98d5-b0b5fabb86eb" name="CableHome329_6" originalIdInSource="3296" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="96fd982e-a092-4aab-a810-7e25d616dac8" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8229,7 +8405,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ae377f88-8719-4632-8fcc-42029f7d3997" name="Home329_7" originalIdInSource="3297" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="ae377f88-8719-4632-8fcc-42029f7d3997" name="Home329_7" originalIdInSource="3297" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="75b8f3ea-d9fe-4821-b230-2f263ab0f74f" name="ConnectionHome329_7" originalIdInSource="3297" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8253,6 +8429,7 @@
           <port xsi:type="esdl:InPort" id="0a14ff88-d7fe-44aa-8f52-5175aa8395d0" name="In" connectedTo="04a7b194-ea25-4db4-b7b3-fa8874ae1ef6"/>
           <port xsi:type="esdl:OutPort" id="908989a6-eb36-4242-a974-9f351069520e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c2a54c47-9611-4b29-afca-8533ec7434b1" name="CableHome329_7" originalIdInSource="3297" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="20523696-4499-4264-ae74-f3ade1b9706f" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8262,7 +8439,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a6cfd3b8-8523-49a3-9da1-8f91178ca160" name="Home329_8" originalIdInSource="3298" assetType="mansionette_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="a6cfd3b8-8523-49a3-9da1-8f91178ca160" name="Home329_8" originalIdInSource="3298" assetType="maisonnette_before_1964" energyLabel="LABEL_B" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         <asset xsi:type="esdl:EConnection" id="16b78410-da06-49ad-bae8-cbf1bd3092a2" name="ConnectionHome329_8" originalIdInSource="3298" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8286,6 +8463,7 @@
           <port xsi:type="esdl:InPort" id="67017673-c31a-44ea-97b2-cb22402b42a1" name="In" connectedTo="f257af96-f452-4b43-b93e-1e3f3c5b20ad"/>
           <port xsi:type="esdl:OutPort" id="c3b224d3-b153-40bf-82d4-85576a50f391" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9e8b70ec-f373-4e55-a186-74308c9af158" name="CableHome329_8" originalIdInSource="3298" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b92b2848-a910-4940-b4c5-db30feb17e43" name="In" connectedTo="4d446df1-8bf8-43b0-b07a-d2cc05e3caa3"/>
@@ -8295,7 +8473,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.69061100335391" lon="-11.795507044330057"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b2d7f2ea-eee5-4392-9cb5-b96a8628c4fe" name="Home337_1" originalIdInSource="3371" assetType="mansionette_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="b2d7f2ea-eee5-4392-9cb5-b96a8628c4fe" name="Home337_1" originalIdInSource="3371" assetType="maisonnette_before_1964" energyLabel="LABEL_B" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67420462601085" lon="-11.791001858659802"/>
         <asset xsi:type="esdl:EConnection" id="4a012e01-7bef-475c-a464-a94b6dc0315d" name="ConnectionHome337_1" originalIdInSource="3371" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8319,6 +8497,7 @@
           <port xsi:type="esdl:InPort" id="4400bee1-24fd-41cd-a18d-b8f9b798a245" name="In" connectedTo="e79e8ed7-0fa2-4250-be75-3844fbbf33b1"/>
           <port xsi:type="esdl:OutPort" id="ec2a5dc7-b12a-4c13-932e-b6aca4d18906" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8180c829-5644-4b68-bb33-3c4911e3455b" name="CableHome337_1" originalIdInSource="3371" assetType="5x10Cu__VMvK" length="1.0">
         <port xsi:type="esdl:InPort" id="ba49d8c3-d8a1-4d6d-b08d-d145d92d9a4b" name="In" connectedTo="8a488289-0bdf-4386-95dc-2abf9c2ff3ec"/>
@@ -8328,7 +8507,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67420462601085" lon="-11.791001858659802"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d6a07c7b-55b8-4d80-a54e-6683b5f7be31" name="Home338_1" originalIdInSource="3381" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="d6a07c7b-55b8-4d80-a54e-6683b5f7be31" name="Home338_1" originalIdInSource="3381" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67424341483649" lon="-11.79078099859514"/>
         <asset xsi:type="esdl:EConnection" id="48d8b09e-fd26-4b5c-8f71-31b8242617a9" name="ConnectionHome338_1" originalIdInSource="3381" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8352,6 +8531,7 @@
           <port xsi:type="esdl:InPort" id="75237ff1-486e-4b12-b8fe-3d95f97af5f2" name="In" connectedTo="c8bef966-7750-4955-b222-b763b89970a8"/>
           <port xsi:type="esdl:OutPort" id="a707b14b-0fe4-4bc1-a5dc-9ccb41f0ae14" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d875489e-e282-4c58-bb3e-a3b759b44f02" name="CableHome338_1" originalIdInSource="3381" assetType="5x10Cu__VMvK" length="1.0">
         <port xsi:type="esdl:InPort" id="3d807311-86d4-4af5-baa5-b379fbf68114" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8361,7 +8541,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67424341483649" lon="-11.79078099859514"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="282fbfd9-bcd6-4569-8e28-2cc7b97f41c2" name="Home338_2" originalIdInSource="3382" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="282fbfd9-bcd6-4569-8e28-2cc7b97f41c2" name="Home338_2" originalIdInSource="3382" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="c30e3e1b-e6ef-4b15-afc8-d19a029b407e" name="ConnectionHome338_2" originalIdInSource="3382" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8385,6 +8565,7 @@
           <port xsi:type="esdl:InPort" id="dac2f402-b797-4f2e-a9de-bb29d6021861" name="In" connectedTo="cd84daf4-919d-479c-bf57-0bfcd7f0857a"/>
           <port xsi:type="esdl:OutPort" id="4d5fb3a3-cc86-4917-b684-95648a0042fe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="03e59513-acdd-4c27-a572-7c30f1451572" name="CableHome338_2" originalIdInSource="3382" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3679ad7f-2e4a-455a-85f0-81d41593fb09" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8394,7 +8575,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="22a1d1bd-a462-4d81-8a44-aba6ef52eb1c" name="Home338_3" originalIdInSource="3383" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="22a1d1bd-a462-4d81-8a44-aba6ef52eb1c" name="Home338_3" originalIdInSource="3383" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="1eff9229-c468-4f81-bf67-ec802d857ab9" name="ConnectionHome338_3" originalIdInSource="3383" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8418,6 +8599,7 @@
           <port xsi:type="esdl:InPort" id="59b28af4-74f0-49d9-93c3-0ba22e9d2f59" name="In" connectedTo="6befb9c8-8d02-47e7-9baa-ba39aaafe6af"/>
           <port xsi:type="esdl:OutPort" id="981530e1-bae0-4ff5-8b3a-4ea7b244918c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="87dc785a-e8b6-4518-8eb9-94e5526f19ef" name="CableHome338_3" originalIdInSource="3383" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="dd127c33-2732-495b-97e5-f0a6976a93aa" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8427,7 +8609,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5b833b5d-8369-4eb4-b012-a7d11a9df73a" name="Home338_4" originalIdInSource="3384" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="5b833b5d-8369-4eb4-b012-a7d11a9df73a" name="Home338_4" originalIdInSource="3384" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="7868fbcf-5d44-4846-bd9e-963fbb0ac1ed" name="ConnectionHome338_4" originalIdInSource="3384" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8451,6 +8633,7 @@
           <port xsi:type="esdl:InPort" id="432ed80d-8b5d-424b-96ba-6cc59c67daff" name="In" connectedTo="164514ae-fb09-4359-9db4-307e20481a40"/>
           <port xsi:type="esdl:OutPort" id="044488a7-4ea9-461f-884b-d965b2267da9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="93763094-754e-4885-a7b5-2eaee6e5d05d" name="CableHome338_4" originalIdInSource="3384" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="db309461-6864-4615-a710-38331644e939" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8460,7 +8643,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3deed7f9-ce4a-4b64-8a18-0968251b01dc" name="Home338_5" originalIdInSource="3385" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="3deed7f9-ce4a-4b64-8a18-0968251b01dc" name="Home338_5" originalIdInSource="3385" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="558cdbc3-8fb8-4bda-b9af-b18c2f3d9084" name="ConnectionHome338_5" originalIdInSource="3385" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8484,6 +8667,7 @@
           <port xsi:type="esdl:InPort" id="ab0824ed-c3c0-4e89-b0bf-57059622392b" name="In" connectedTo="167f8aee-3c24-49e5-b195-f3d77157b5ca"/>
           <port xsi:type="esdl:OutPort" id="c4e2b4e7-1250-4321-8b07-2c9490c45ad1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="dc3aeb83-b2a1-484e-ae4c-195044d06963" name="CableHome338_5" originalIdInSource="3385" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e85a717e-1e1a-459d-a878-742599e98517" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8493,7 +8677,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="353b2d62-26d1-4b6e-8e94-9a5f27cb557b" name="Home338_6" originalIdInSource="3386" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="353b2d62-26d1-4b6e-8e94-9a5f27cb557b" name="Home338_6" originalIdInSource="3386" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="20f47d17-2513-4549-8300-9cbc6a351da4" name="ConnectionHome338_6" originalIdInSource="3386" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8517,6 +8701,7 @@
           <port xsi:type="esdl:InPort" id="877fc4a0-da62-4924-b85f-a4e7667a287b" name="In" connectedTo="a7ed189a-922c-4eac-9545-6e13ef915d47"/>
           <port xsi:type="esdl:OutPort" id="8f3c665b-9e21-4926-b74e-cf2513c6211f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="60bc8435-3eca-4f88-85a5-0f0504be0092" name="CableHome338_6" originalIdInSource="3386" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d9d035e4-8eab-4cc1-a1f6-eb20e817b413" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8526,7 +8711,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8b27a58d-17e4-4b86-94a8-4e458dd7b5b9" name="Home338_7" originalIdInSource="3387" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8b27a58d-17e4-4b86-94a8-4e458dd7b5b9" name="Home338_7" originalIdInSource="3387" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="702a13d9-0e97-4b10-8110-1d23946a554a" name="ConnectionHome338_7" originalIdInSource="3387" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8550,6 +8735,7 @@
           <port xsi:type="esdl:InPort" id="e85ac327-b731-4c7a-bfd7-dc4df3c4f0b3" name="In" connectedTo="728e7a70-fbe5-4d5e-9ea7-78c25dd2a5ca"/>
           <port xsi:type="esdl:OutPort" id="3e509154-f145-4009-af53-8082713558e4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3b9efce3-ad12-4270-9061-6da309c6797f" name="CableHome338_7" originalIdInSource="3387" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ffe3cd0f-8b38-4f49-8fdb-b1f514f51b85" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8559,7 +8745,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="728805e1-dbef-4bb0-8e89-28a9397a6278" name="Home338_8" originalIdInSource="3388" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="728805e1-dbef-4bb0-8e89-28a9397a6278" name="Home338_8" originalIdInSource="3388" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         <asset xsi:type="esdl:EConnection" id="0adc314d-c27e-4b87-8ba4-c59292debca2" name="ConnectionHome338_8" originalIdInSource="3388" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8571,6 +8757,7 @@
           <port xsi:type="esdl:InPort" id="48f0ef31-af79-4ef5-a6ad-0244411d76a6" name="In" connectedTo="2d35021f-a30d-49e3-be67-8081f08f192e"/>
           <port xsi:type="esdl:OutPort" id="e3dea288-7efa-4039-bde3-da05b649e71f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f947046c-7c3c-4c76-b310-9f97506177f9" name="CableHome338_8" originalIdInSource="3388" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b4e18e14-2805-4c97-be86-272c777cca21" name="In" connectedTo="02b5bdf7-f950-4071-b32a-67a92109747c"/>
@@ -8580,7 +8767,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6743765061819" lon="-11.791053917483252"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f6457bdd-93b1-4fe5-814f-c7b809697f38" name="Home346_1" originalIdInSource="3461" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="f6457bdd-93b1-4fe5-814f-c7b809697f38" name="Home346_1" originalIdInSource="3461" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68923593443461" lon="-11.795090349205582"/>
         <asset xsi:type="esdl:EConnection" id="42cfa4fd-5e36-4941-ac07-fa7a59e1727a" name="ConnectionHome346_1" originalIdInSource="3461" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8604,6 +8791,7 @@
           <port xsi:type="esdl:InPort" id="58a6ba8c-f8c5-462e-a7ce-65917e8398c7" name="In" connectedTo="e6a84ac8-4f32-4c69-a8a9-07b9bbc14db3"/>
           <port xsi:type="esdl:OutPort" id="c8e17975-5354-4edc-bffe-0a477735ad7f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="570e1f1e-6a74-4553-a795-aabc47476eb8" name="CableHome346_1" originalIdInSource="3461" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="107904c8-d88f-4258-8583-2849f9958df1" name="In" connectedTo="109292af-57b7-473a-83cd-825826985e30"/>
@@ -8613,7 +8801,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68923593443461" lon="-11.795090349205582"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5679d982-bb8e-453d-b5b3-7e1fa39eb832" name="Home361_1" originalIdInSource="3611" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="5679d982-bb8e-453d-b5b3-7e1fa39eb832" name="Home361_1" originalIdInSource="3611" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.66578254027591" lon="-11.788451376169908"/>
         <asset xsi:type="esdl:EConnection" id="eaf463ac-edfb-4a17-a5ea-a831d5d2544a" name="ConnectionHome361_1" originalIdInSource="3611" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8637,6 +8825,7 @@
           <port xsi:type="esdl:InPort" id="c4092b95-76ec-4d58-8e0c-5a16bb7b6633" name="In" connectedTo="444afa68-0ee6-47b3-9e87-cf928f12e7c5"/>
           <port xsi:type="esdl:OutPort" id="2bc64705-35a6-4512-a6c3-e8da33ffdefc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3d1c2d17-407d-4b18-8e5b-6ca1b070452b" name="CableHome361_1" originalIdInSource="3611" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="2a651d2e-02a5-4d0e-8706-2ed6b23c0013" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8646,7 +8835,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.66578254027591" lon="-11.788451376169908"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b796114f-26be-4967-bf1b-f4a4dcf78bae" name="Home361_2" originalIdInSource="3612" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b796114f-26be-4967-bf1b-f4a4dcf78bae" name="Home361_2" originalIdInSource="3612" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="75543bc4-b3a9-4ade-9214-9223b5f192e2" name="ConnectionHome361_2" originalIdInSource="3612" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8670,6 +8859,7 @@
           <port xsi:type="esdl:InPort" id="bcd9a693-4cb5-41e6-b336-45edd75ac382" name="In" connectedTo="11b0d0f7-57a2-4f71-b421-2a0c6a32c2f1"/>
           <port xsi:type="esdl:OutPort" id="81b02918-b769-480a-9fbd-f6ff8d4cbe9b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="100f0f53-f26a-433b-a23b-552ce95da199" name="CableHome361_2" originalIdInSource="3612" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7a5f885d-121f-4b0d-aa13-fed283b2a7d2" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8679,7 +8869,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="afe27fe0-a2ef-4b6f-829b-5393d2b155fd" name="Home361_3" originalIdInSource="3613" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="afe27fe0-a2ef-4b6f-829b-5393d2b155fd" name="Home361_3" originalIdInSource="3613" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="fb97b417-2970-4815-9443-b284d9cfca95" name="ConnectionHome361_3" originalIdInSource="3613" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8703,6 +8893,7 @@
           <port xsi:type="esdl:InPort" id="147200f7-e0bf-4ee3-84a9-ea78eb0ddb81" name="In" connectedTo="efadfd7e-f948-40b4-8a8d-5d8a703e2fbf"/>
           <port xsi:type="esdl:OutPort" id="11c35a36-abc5-4c7a-b406-81d7a56e04cd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bdd2d10e-01e9-41ed-9ade-1cdb7cd677c9" name="CableHome361_3" originalIdInSource="3613" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="28983357-3297-4de1-8ee0-714a848a91b6" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8712,7 +8903,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b1033f02-7282-4b99-abdf-722d37e0d549" name="Home361_4" originalIdInSource="3614" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="b1033f02-7282-4b99-abdf-722d37e0d549" name="Home361_4" originalIdInSource="3614" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="fc8d5d3f-70d0-4abf-b317-1979332dec3d" name="ConnectionHome361_4" originalIdInSource="3614" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8736,6 +8927,7 @@
           <port xsi:type="esdl:InPort" id="192cef4b-8b04-4ace-9dd8-76f93b21307a" name="In" connectedTo="c80b9f48-459f-4df4-81fd-a56a8db3b3e0"/>
           <port xsi:type="esdl:OutPort" id="9b56f2c4-7e1a-4aee-9b43-78ad43f7ec46" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f501ba53-d97b-47bc-833d-41e5c0762fd8" name="CableHome361_4" originalIdInSource="3614" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="5e82bb3c-371b-49f8-a6d6-bd610d4eecc6" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8745,7 +8937,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ade72996-efdd-4c3b-bdfb-cc6edb66f998" name="Home361_5" originalIdInSource="3615" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="ade72996-efdd-4c3b-bdfb-cc6edb66f998" name="Home361_5" originalIdInSource="3615" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="f94c504a-e8c8-42d5-9c62-57dbf2e1c40a" name="ConnectionHome361_5" originalIdInSource="3615" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8769,6 +8961,7 @@
           <port xsi:type="esdl:InPort" id="fbce8950-0781-4c46-8979-7e015c8e4b19" name="In" connectedTo="3ab90e26-8437-42c6-8955-5bb00338807b"/>
           <port xsi:type="esdl:OutPort" id="30a91697-d09b-438a-8c44-707e34cb7625" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="076a0759-adf9-4f48-9a53-c3ebdb5f35b5" name="CableHome361_5" originalIdInSource="3615" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="110e68fd-bb7c-4674-9325-dcd0c226efb3" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8778,7 +8971,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="61dbdd41-5ea5-4098-a841-7d902c5a2eb8" name="Home361_6" originalIdInSource="3616" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="61dbdd41-5ea5-4098-a841-7d902c5a2eb8" name="Home361_6" originalIdInSource="3616" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="9ad21c78-a3db-456b-bade-5d0cc4bb8361" name="ConnectionHome361_6" originalIdInSource="3616" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8802,6 +8995,7 @@
           <port xsi:type="esdl:InPort" id="3b792864-8dd7-41a7-9e30-ea932e8d1367" name="In" connectedTo="9f57292c-11fc-4e33-8be8-7e957174e6a1"/>
           <port xsi:type="esdl:OutPort" id="add194c7-a0f1-427e-9023-39965da09736" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cfcc1afc-90c3-4544-949b-3abcc5eb7512" name="CableHome361_6" originalIdInSource="3616" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d972082d-187b-4c76-a4bc-b1879183e897" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8811,7 +9005,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2953d15d-9cb2-46d5-90fa-b868ee971ffb" name="Home361_7" originalIdInSource="3617" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="2953d15d-9cb2-46d5-90fa-b868ee971ffb" name="Home361_7" originalIdInSource="3617" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="88f701d8-bc43-4514-a5f2-18d08244ea86" name="ConnectionHome361_7" originalIdInSource="3617" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8835,6 +9029,7 @@
           <port xsi:type="esdl:InPort" id="64aedf6a-ba59-42e9-93c4-0ee1907f9b7e" name="In" connectedTo="77ac5956-65ce-4fe7-91f8-4431093f161f"/>
           <port xsi:type="esdl:OutPort" id="375ff813-24c1-4eeb-9e86-6e9badabb4fe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4644f54d-8449-4589-96c1-14c3ac974f29" name="CableHome361_7" originalIdInSource="3617" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8ad98c40-8097-4dee-872a-35ed6aaa74d9" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8844,7 +9039,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d531a5e3-49d4-495b-969c-b4871059af02" name="Home361_8" originalIdInSource="3618" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="d531a5e3-49d4-495b-969c-b4871059af02" name="Home361_8" originalIdInSource="3618" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         <asset xsi:type="esdl:EConnection" id="c2be3005-1cd6-4955-92ae-2e9e2a8e872b" name="ConnectionHome361_8" originalIdInSource="3618" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8868,6 +9063,7 @@
           <port xsi:type="esdl:InPort" id="e5e7a6e2-b315-49f0-9a39-4ba019e116b7" name="In" connectedTo="09c91963-59f8-4e8d-bbcd-79b693ab91be"/>
           <port xsi:type="esdl:OutPort" id="061b1b1a-558d-4cbb-a252-dc79caba5e67" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d487164d-ed6e-4bf2-afb5-2d19d84c212a" name="CableHome361_8" originalIdInSource="3618" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="83728ac2-d976-464e-8551-c778697f67dd" name="In" connectedTo="c83e156d-77da-423a-96cd-b84c73b91347"/>
@@ -8877,7 +9073,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.665915636725515" lon="-11.788724243558237"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a5ad30f8-a29c-4d67-8171-53ace6a5d3ac" name="Home369_1" originalIdInSource="3691" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="a5ad30f8-a29c-4d67-8171-53ace6a5d3ac" name="Home369_1" originalIdInSource="3691" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.672447038413914" lon="-11.790702140790275"/>
         <asset xsi:type="esdl:EConnection" id="5b129780-b13e-4b88-9ce2-6154121dd13a" name="ConnectionHome369_1" originalIdInSource="3691" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8901,6 +9097,7 @@
           <port xsi:type="esdl:InPort" id="33eda117-2174-4f15-9040-661f8d152fc5" name="In" connectedTo="a0515c88-4f99-4132-8fa1-bee1bc473be0"/>
           <port xsi:type="esdl:OutPort" id="4321f4ea-ab09-4ca1-a546-5a6643f80578" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4384b8c6-ca25-4761-bcfc-3016ba963ab3" name="CableHome369_1" originalIdInSource="3691" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="ec49dbba-c79c-411b-a937-e5596176f4a2" name="In" connectedTo="94bed82a-b658-4b07-884e-b2565005c10a"/>
@@ -8910,7 +9107,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.672447038413914" lon="-11.790702140790275"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c44acb24-0182-4e34-9ae2-cb0e6e4b0033" name="Home370_1" originalIdInSource="3701" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="c44acb24-0182-4e34-9ae2-cb0e6e4b0033" name="Home370_1" originalIdInSource="3701" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67248582621362" lon="-11.790481288377153"/>
         <asset xsi:type="esdl:EConnection" id="d49a5d45-5c0e-40fd-a884-87a6f115916d" name="ConnectionHome370_1" originalIdInSource="3701" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8934,6 +9131,7 @@
           <port xsi:type="esdl:InPort" id="d13cd8ff-fa1c-4d52-af46-f5c9f65531b0" name="In" connectedTo="8a60d18c-67d4-4cc5-b34d-acebe1974ac9"/>
           <port xsi:type="esdl:OutPort" id="36dd5ba3-1212-4a24-8993-73b4e8db34a7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05702c25-4944-435d-aec8-fe635f850fdd" name="CableHome370_1" originalIdInSource="3701" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="887dbc77-c14d-44a4-b160-4f3a4eb2567c" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -8943,7 +9141,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67248582621362" lon="-11.790481288377153"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="09288c24-132f-47ca-bb83-d707e862c02c" name="Home370_2" originalIdInSource="3702" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="09288c24-132f-47ca-bb83-d707e862c02c" name="Home370_2" originalIdInSource="3702" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="1f8da511-8ab2-451c-b4c8-0c159ca084d1" name="ConnectionHome370_2" originalIdInSource="3702" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8967,6 +9165,7 @@
           <port xsi:type="esdl:InPort" id="f262f451-7fe3-4b70-bd92-cbe300121fad" name="In" connectedTo="79e62ef9-4103-4e61-8349-2b079f6a916c"/>
           <port xsi:type="esdl:OutPort" id="2bf109ad-5f36-47b5-913f-84a5b93954d4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="356079d0-52cb-44d2-b1a1-f8e4b2c79ce1" name="CableHome370_2" originalIdInSource="3702" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="335d608a-484e-49fb-9fce-c6db6c93e715" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -8976,7 +9175,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="640d23d6-e003-4bb2-92fe-95b2235dffcb" name="Home370_3" originalIdInSource="3703" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="640d23d6-e003-4bb2-92fe-95b2235dffcb" name="Home370_3" originalIdInSource="3703" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="2754c356-da65-4e46-8d98-021821cff09e" name="ConnectionHome370_3" originalIdInSource="3703" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9000,6 +9199,7 @@
           <port xsi:type="esdl:InPort" id="c374ea73-d229-4aea-9900-8ab1cc1a2887" name="In" connectedTo="55695adc-765c-44db-85d2-b1c68ac34aa2"/>
           <port xsi:type="esdl:OutPort" id="613bd4f4-dd34-4ada-a8e0-3a1aa6597837" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9b15a219-a392-4c69-9959-37f96aca528d" name="CableHome370_3" originalIdInSource="3703" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a491f888-5674-4ad3-b2a4-33f64741460e" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9009,7 +9209,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="743f0077-be83-4914-886a-42b39a22c081" name="Home370_4" originalIdInSource="3704" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="743f0077-be83-4914-886a-42b39a22c081" name="Home370_4" originalIdInSource="3704" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="b8d942ae-8ceb-46a3-b204-e2586e42daaa" name="ConnectionHome370_4" originalIdInSource="3704" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9033,6 +9233,7 @@
           <port xsi:type="esdl:InPort" id="0fa06265-aad2-4430-8d13-2b2339b6185c" name="In" connectedTo="aadd2374-259c-4fac-bb70-39f84acc65f6"/>
           <port xsi:type="esdl:OutPort" id="d3860194-c49b-4021-a86b-8effb03d2147" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="88038435-d58d-45bc-978c-41792cc887de" name="CableHome370_4" originalIdInSource="3704" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="cb1a2e35-5be8-4db4-9cf7-b31d82094a43" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9042,7 +9243,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="04368e5f-1542-401c-a732-8bb936bfefaa" name="Home370_5" originalIdInSource="3705" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="04368e5f-1542-401c-a732-8bb936bfefaa" name="Home370_5" originalIdInSource="3705" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="7c601b13-1d77-48b5-95cb-17a5498254fd" name="ConnectionHome370_5" originalIdInSource="3705" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9066,6 +9267,7 @@
           <port xsi:type="esdl:InPort" id="4d79129d-1225-47b8-afaf-4f3d1874b328" name="In" connectedTo="ee5f6c9a-abe6-472b-8a7d-55cc9cc386ad"/>
           <port xsi:type="esdl:OutPort" id="edfd3867-fa05-4572-a1e0-c606e90fc522" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="30e5edc5-b78b-4ddb-bae0-346da1edce3c" name="CableHome370_5" originalIdInSource="3705" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a36e61fb-ce17-45eb-ae40-c57303860d50" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9075,7 +9277,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0bb2ae62-fa0d-4f78-82b6-25a8a3026c43" name="Home370_6" originalIdInSource="3706" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="0bb2ae62-fa0d-4f78-82b6-25a8a3026c43" name="Home370_6" originalIdInSource="3706" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_AP" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="c1d4ee7e-88a1-4390-a849-6a97e24b7091" name="ConnectionHome370_6" originalIdInSource="3706" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9099,6 +9301,7 @@
           <port xsi:type="esdl:InPort" id="217b02e9-ab47-4435-aaed-191f070d5e7f" name="In" connectedTo="b1557e7b-9da3-4761-9f29-988b9bb816f8"/>
           <port xsi:type="esdl:OutPort" id="4472b402-1a6a-49a2-9b63-10de81348f7d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d4df0be6-3939-4cdf-b98b-8a3cf44c47a4" name="CableHome370_6" originalIdInSource="3706" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="2d360f4e-983b-4e5b-bf76-e2d2114e2b75" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9108,7 +9311,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fd10cbf8-0aad-4d0c-be10-f462de0e436a" name="Home370_7" originalIdInSource="3707" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="fd10cbf8-0aad-4d0c-be10-f462de0e436a" name="Home370_7" originalIdInSource="3707" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="456dc9ab-59fc-4acb-a87f-3e385059d1ab" name="ConnectionHome370_7" originalIdInSource="3707" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9132,6 +9335,7 @@
           <port xsi:type="esdl:InPort" id="7c8a3d7e-0805-4a92-b1d4-35da66b4b32a" name="In" connectedTo="34c2a68c-c374-4164-83c9-a4f8d4ed1dcf"/>
           <port xsi:type="esdl:OutPort" id="2b984f6e-e569-4352-95bf-1dc5e9c2a2c0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9e69a749-e5b2-4eb1-a139-2d732304d1c9" name="CableHome370_7" originalIdInSource="3707" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="9f824452-df1c-41c2-b31c-f9e4bc0eb05c" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9141,7 +9345,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ffa42f31-feca-4869-aeed-755142bc8b6c" name="Home370_8" originalIdInSource="3708" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="ffa42f31-feca-4869-aeed-755142bc8b6c" name="Home370_8" originalIdInSource="3708" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         <asset xsi:type="esdl:EConnection" id="4703bf1e-9c06-4e45-b4fd-78066eeabd5c" name="ConnectionHome370_8" originalIdInSource="3708" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9165,6 +9369,7 @@
           <port xsi:type="esdl:InPort" id="06d429f8-3325-49a3-befc-029e89febea1" name="In" connectedTo="b50da514-40cb-495d-bceb-ec1c17b8fc84"/>
           <port xsi:type="esdl:OutPort" id="d59e2a7c-b1aa-4640-b951-c2f302c11084" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="916fab1c-ceff-45b7-9ac9-156e976b0870" name="CableHome370_8" originalIdInSource="3708" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8fe0091f-d5ab-463a-a0f2-84957877dea0" name="In" connectedTo="7fa1e3a0-4b5e-4760-a2df-d0e1248e9fba"/>
@@ -9174,7 +9379,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.67261891808483" lon="-11.7907541970827"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f977157a-3da1-4e22-9a2a-e1e7c90fbce8" name="Home378_1" originalIdInSource="3781" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="f977157a-3da1-4e22-9a2a-e1e7c90fbce8" name="Home378_1" originalIdInSource="3781" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.6873675349371" lon="-11.800573753450594"/>
         <asset xsi:type="esdl:EConnection" id="f6f6cc73-a2ef-4ab9-83c2-1bbec0e8859b" name="ConnectionHome378_1" originalIdInSource="3781" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9198,6 +9403,7 @@
           <port xsi:type="esdl:InPort" id="acff0c8b-ae4c-45a9-a3b6-aa71f008cb53" name="In" connectedTo="32d9e4c9-b085-469b-bbcf-fe35862cea82"/>
           <port xsi:type="esdl:OutPort" id="5de60d23-1aee-4449-a707-0d05df8c8020" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6da83eb5-e5fb-4fe1-8f51-b03577173976" name="CableHome378_1" originalIdInSource="3781" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="e87ac4c5-eb6d-4192-a25e-18295fc1daf6" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9207,7 +9413,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.6873675349371" lon="-11.800573753450594"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bab28e48-1ae6-4ddb-9eb9-06a5c4918fd0" name="Home378_2" originalIdInSource="3782" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="bab28e48-1ae6-4ddb-9eb9-06a5c4918fd0" name="Home378_2" originalIdInSource="3782" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="b6a542af-d59e-4adc-a982-d1e7fc945981" name="ConnectionHome378_2" originalIdInSource="3782" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9231,6 +9437,7 @@
           <port xsi:type="esdl:InPort" id="7dade4b7-0d48-46d7-ba3c-927dd9df31c0" name="In" connectedTo="14020961-adbf-4479-a6c2-e67bd9c9b10d"/>
           <port xsi:type="esdl:OutPort" id="91be536d-20df-4252-a7ac-b0d677c8db82" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="94.22" height="9.0" windowArea="24.229999999999997" doorArea="6.51" flatRoofArea="14.8" slantedRoofArea="64.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e2492354-c018-49f5-9e6d-9c94f6f31677" name="CableHome378_2" originalIdInSource="3782" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ab8ff2cc-08f8-4922-bcb2-76c408a42c89" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9240,7 +9447,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b58d1d2f-4138-49e5-b8a9-985cc40003f1" name="Home378_3" originalIdInSource="3783" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="b58d1d2f-4138-49e5-b8a9-985cc40003f1" name="Home378_3" originalIdInSource="3783" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="dbdaa42f-e30d-407b-ba60-49aecbd9eae4" name="ConnectionHome378_3" originalIdInSource="3783" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9264,6 +9471,7 @@
           <port xsi:type="esdl:InPort" id="4fbe1584-2501-408f-8509-755804883c55" name="In" connectedTo="d2c9322d-bdba-4d1d-af50-a7817aa7f662"/>
           <port xsi:type="esdl:OutPort" id="2bb84c35-8066-464f-9b69-5097b44f383b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b2511586-68fa-46e6-8a14-ab5bba556e00" name="CableHome378_3" originalIdInSource="3783" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4a2d5606-a8fe-4edd-9dbc-c703a299da85" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9273,7 +9481,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9f1b09f0-bc8e-4d3e-92b8-743c48830a68" name="Home378_4" originalIdInSource="3784" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="9f1b09f0-bc8e-4d3e-92b8-743c48830a68" name="Home378_4" originalIdInSource="3784" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="5a0a5678-16bb-4b70-bf8d-c5db73d8fd09" name="ConnectionHome378_4" originalIdInSource="3784" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9297,6 +9505,7 @@
           <port xsi:type="esdl:InPort" id="16b6c1eb-5a24-499d-b925-0cf690f57f59" name="In" connectedTo="cc59c5dd-27f9-4b66-ba6b-7a94a0f782a1"/>
           <port xsi:type="esdl:OutPort" id="3b98b200-f060-4a7b-aaf8-545f4124ffe1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1c8239c7-dfed-4dee-96da-24f8ac19a78f" name="CableHome378_4" originalIdInSource="3784" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="d7df34c9-a489-4209-ae5a-b74a356f0a17" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9306,7 +9515,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cf3227aa-c174-4ac0-8667-17564a968eb9" name="Home378_5" originalIdInSource="3785" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="cf3227aa-c174-4ac0-8667-17564a968eb9" name="Home378_5" originalIdInSource="3785" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="43dc1e2b-711c-44d2-9ea7-b7c1196517b7" name="ConnectionHome378_5" originalIdInSource="3785" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9330,6 +9539,7 @@
           <port xsi:type="esdl:InPort" id="d863cec6-0793-40cf-bf4f-8a60a3db7d35" name="In" connectedTo="d6fecbd6-ca72-4eb0-9d83-b5c71ddc37a4"/>
           <port xsi:type="esdl:OutPort" id="2a4f96b8-46f9-4d73-a984-5c7cb1c2f75f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5856d99f-8c93-48a0-bf15-32d6d4bc2660" name="CableHome378_5" originalIdInSource="3785" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="12bc8dcf-fca7-406a-b25f-512f793523cb" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9339,7 +9549,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0cff12ce-c33d-4b12-b6d2-e01feff0b708" name="Home378_6" originalIdInSource="3786" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="0cff12ce-c33d-4b12-b6d2-e01feff0b708" name="Home378_6" originalIdInSource="3786" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="8e54de7b-cf85-488b-ba79-fbb76045e017" name="ConnectionHome378_6" originalIdInSource="3786" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9363,6 +9573,7 @@
           <port xsi:type="esdl:InPort" id="4ddde0be-fbd0-43a9-b4b4-59637bef877d" name="In" connectedTo="6566269b-c4b3-43fd-8d1e-fac9946eaaea"/>
           <port xsi:type="esdl:OutPort" id="eab3692a-300b-4c2c-a832-7fb43d46df26" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3c73c3cf-11de-4b98-b1a4-ccf5b1646fc8" name="CableHome378_6" originalIdInSource="3786" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b7bf0899-bc29-4eb7-8e58-a1d9c2d67dfd" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9372,7 +9583,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="38f9024a-050c-4162-a7ee-608cfe195917" name="Home378_7" originalIdInSource="3787" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="38f9024a-050c-4162-a7ee-608cfe195917" name="Home378_7" originalIdInSource="3787" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="04d79158-d1b4-4cbc-8276-680a78edbad9" name="ConnectionHome378_7" originalIdInSource="3787" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9396,6 +9607,7 @@
           <port xsi:type="esdl:InPort" id="f8e8230e-2e03-4a29-8dcf-441ae2486b6f" name="In" connectedTo="f10b44cd-189c-4c7a-87be-3eb083adb52c"/>
           <port xsi:type="esdl:OutPort" id="572ce703-acac-4522-a2d5-e43762226ed5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="42.29" height="9.0" windowArea="18.0" doorArea="5.25" flatRoofArea="10.15" slantedRoofArea="60.24"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a3931120-31cc-4410-a7d6-b541d6592a02" name="CableHome378_7" originalIdInSource="3787" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="0b81d048-d29c-4b77-978e-3ff43c7239d5" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9405,7 +9617,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7d5a15aa-45b2-43e8-baf4-96082ea344ae" name="Home378_8" originalIdInSource="3788" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7d5a15aa-45b2-43e8-baf4-96082ea344ae" name="Home378_8" originalIdInSource="3788" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         <asset xsi:type="esdl:EConnection" id="630b06aa-e935-412d-8dd3-89b91601db71" name="ConnectionHome378_8" originalIdInSource="3788" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9429,6 +9641,7 @@
           <port xsi:type="esdl:InPort" id="648e746c-8c31-44fd-b118-14e484d85d66" name="In" connectedTo="62a90bda-9a8c-49a2-a058-4510ee871ba4"/>
           <port xsi:type="esdl:OutPort" id="e4f2005a-4428-4421-9c31-a301987757c7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="93f9901b-bc87-40ad-9712-31caaab1ebbd" name="CableHome378_8" originalIdInSource="3788" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="fe377ba2-839d-40cb-8f35-af1ac163a7f3" name="In" connectedTo="fa5781a5-edc6-443f-9728-4aa34a5cc170"/>
@@ -9438,7 +9651,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.687500600422" lon="-11.800846769478303"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="23852a49-883b-4cd3-9f5f-8a382671ba54" name="Home394_1" originalIdInSource="3941" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="23852a49-883b-4cd3-9f5f-8a382671ba54" name="Home394_1" originalIdInSource="3941" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68593135594702" lon="-11.794321692202184"/>
         <asset xsi:type="esdl:EConnection" id="93f6d35a-dcca-46ad-b6d4-50bfcedbc796" name="ConnectionHome394_1" originalIdInSource="3941" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9462,6 +9675,7 @@
           <port xsi:type="esdl:InPort" id="0f224666-28c9-4e3e-bbe6-6fd9facb9833" name="In" connectedTo="38e5df4c-76f7-4d0e-87e1-2aca3eb41f0d"/>
           <port xsi:type="esdl:OutPort" id="d388747b-380a-4342-92d7-0abc580a56d6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="adb65b09-c932-4661-8591-efa415476307" name="CableHome394_1" originalIdInSource="3941" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="da1d53f3-b528-4776-89db-f16c752caffd" name="In" connectedTo="011a2547-d1be-4b15-8ca9-808bd7d95c11"/>
@@ -9471,7 +9685,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68593135594702" lon="-11.794321692202184"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="87710efb-2e54-4887-95d7-0fbaaa2c67ef" name="Home410_1" originalIdInSource="4101" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="87710efb-2e54-4887-95d7-0fbaaa2c67ef" name="Home410_1" originalIdInSource="4101" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68604328717023" lon="-11.82972320903294"/>
         <asset xsi:type="esdl:EConnection" id="bc5e0012-c229-43e3-9a1a-5418cacaa49a" name="ConnectionHome410_1" originalIdInSource="4101" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9495,6 +9709,7 @@
           <port xsi:type="esdl:InPort" id="8d4eb710-4eb3-4c6e-92fb-6670a329f0e1" name="In" connectedTo="d9610b83-0a95-49af-9516-3a0f96e3fe1f"/>
           <port xsi:type="esdl:OutPort" id="5d6147c9-2577-4ecc-af62-66f5b25d88da" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8fb8f817-ac6e-4516-a50a-f3cebd90bd29" name="CableHome410_1" originalIdInSource="4101" assetType="5x10Cu__YMvK_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="e5af7bc3-62a0-4466-a294-964468657bb6" name="In" connectedTo="1e29d456-d2a6-4543-a4e1-85fca4b8109b"/>
@@ -9504,7 +9719,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68604328717023" lon="-11.82972320903294"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2832d070-0379-4720-86cb-1d981c353883" name="Home410_2" originalIdInSource="4102" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="2832d070-0379-4720-86cb-1d981c353883" name="Home410_2" originalIdInSource="4102" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68617626778267" lon="-11.829996299545256"/>
         <asset xsi:type="esdl:EConnection" id="de70f5c6-3ad8-4fca-9718-438f826389fc" name="ConnectionHome410_2" originalIdInSource="4102" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9528,6 +9743,7 @@
           <port xsi:type="esdl:InPort" id="7d63e689-3e3c-4b18-ad8c-3bdfddf87bca" name="In" connectedTo="7a556a08-9ca4-458c-9bdc-e893bf05ffc4"/>
           <port xsi:type="esdl:OutPort" id="58b613af-e3e6-4899-b3ab-f221372aca41" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e5b8b304-9324-4da0-8a96-14093855ab33" name="CableHome410_2" originalIdInSource="4102" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6f307e2b-993b-497c-8a66-5c1dda96271a" name="In" connectedTo="1e29d456-d2a6-4543-a4e1-85fca4b8109b"/>
@@ -9537,7 +9753,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68617626778267" lon="-11.829996299545256"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ecf68299-a3fd-4eb0-8387-69131f579d1e" name="Home410_3" originalIdInSource="4103" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="ecf68299-a3fd-4eb0-8387-69131f579d1e" name="Home410_3" originalIdInSource="4103" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68617626778267" lon="-11.829996299545256"/>
         <asset xsi:type="esdl:EConnection" id="7cd2ceb9-a307-4e08-9d9a-a28fba7101a6" name="ConnectionHome410_3" originalIdInSource="4103" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9561,6 +9777,7 @@
           <port xsi:type="esdl:InPort" id="56a50c4d-89d9-4c2a-aab4-a1d4d9173bab" name="In" connectedTo="3db18f1b-6769-4ee2-b2f0-6fbc134c31ef"/>
           <port xsi:type="esdl:OutPort" id="000ba613-5a02-4851-81ee-09fa94855e5d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3b404e28-5dba-4f67-890b-d82b26fe6809" name="CableHome410_3" originalIdInSource="4103" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ad935832-e541-4802-9485-d16ae87d284b" name="In" connectedTo="1e29d456-d2a6-4543-a4e1-85fca4b8109b"/>
@@ -9570,7 +9787,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="39.68617626778267" lon="-11.829996299545256"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="faa75bfd-fef5-425a-8613-4fd8bdfe8788" name="Home410_4" originalIdInSource="4104" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="faa75bfd-fef5-425a-8613-4fd8bdfe8788" name="Home410_4" originalIdInSource="4104" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="39.68617626778267" lon="-11.829996299545256"/>
         <asset xsi:type="esdl:EConnection" id="74c4c9d6-8880-47d7-a9f1-c6fa30460584" name="ConnectionHome410_4" originalIdInSource="4104" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9594,6 +9811,7 @@
           <port xsi:type="esdl:InPort" id="aa9a1515-6097-4a86-b271-fde4176a2207" name="In" connectedTo="edbdfa66-43f2-43e6-a43f-b7d84a6ce506"/>
           <port xsi:type="esdl:OutPort" id="388729a9-9294-4d64-9bd8-ae94453198fe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="190abe7b-3472-4ac7-92f8-1bbe8ea1312c" name="CableHome410_4" originalIdInSource="4104" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e0d65d06-dcf3-4745-b176-5db3218944f9" name="In" connectedTo="1e29d456-d2a6-4543-a4e1-85fca4b8109b"/>

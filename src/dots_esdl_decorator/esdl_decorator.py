@@ -226,7 +226,8 @@ class EsdlBuilder:
             heat_profiles = heat_profiles.set_index('timestamp')
         else:
             heat_profiles = pd.read_csv(heat_profile_file, index_col=0, parse_dates=True, date_format='ISO8601')
-            temps = [None for col in heat_profiles.columns]
+            tap_water_setpoint = 55
+            temps = [tap_water_setpoint for col in heat_profiles.columns]
 
         column_choices = list(range(len(heat_profiles.columns)))
         amount_of_profiles_to_chose = (
@@ -664,18 +665,20 @@ class EsdlBuilder:
             if isinstance(esdl_element, Building)
         ]
         for building in buildings:
-            matching_rows = isolation_data.loc[isolation_data["ID"] == building.assetType]
+            isolation_data["ID"] = isolation_data["ID"].apply(lambda id: id.lower())
+            matching_rows = isolation_data.loc[isolation_data["ID"] == building.assetType.lower()]
             if matching_rows.empty:
                 logging.warning(f"No building isolation parameters found for asset type '{building.assetType}'")
-            row = matching_rows.iloc[0]
-            building_information = BuildingStructureInformation(
-                rcFloor=float(row[isolation_specification.rcFloor_col]),
-                rcRoof=float(row[isolation_specification.rcRoof_col]),
-                rcWall=float(row[isolation_specification.rcWall_col]),
-                uDoor=float(row[isolation_specification.uDoor]),
-                uWindow=float(row[isolation_specification.uWindow]),
-            )
-            building.buildinginformation.append(building_information)
+            else:
+                row = matching_rows.iloc[0]
+                building_information = BuildingStructureInformation(
+                    rcFloor=float(row[isolation_specification.rcFloor_col]),
+                    rcRoof=float(row[isolation_specification.rcRoof_col]),
+                    rcWall=float(row[isolation_specification.rcWall_col]),
+                    uDoor=float(row[isolation_specification.uDoor]),
+                    uWindow=float(row[isolation_specification.uWindow]),
+                )
+                building.buildinginformation.append(building_information)
 
 
     def add_congestion_measure(self, congestion_management_active : bool):

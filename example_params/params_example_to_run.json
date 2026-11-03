@@ -228,5 +228,12 @@
         "charging_station_identifier_column" : "household",
         "energy_demand_column" : "Energy",
         "charging_power_column" : "Power"
+    },
+    "ev_specification" : {
+        "fraction_houses_ev" : 0.3,
+        "min_charge_rate_kwh" : 4.2,
+        "min_soc_percentage" : 0.3,
+        "max_soc_kwh" : 75,
+        "efficiency" : 0.95
     }
 }

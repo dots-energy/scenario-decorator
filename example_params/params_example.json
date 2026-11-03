@@ -11,11 +11,17 @@
         "efficiency" : 0.9,
         "power_kw_to_energy_kwh_ratio" : 4
     },
+    "ev_specification" : {
+        "fraction_houses_ev" : 0.3,
+        "min_charge_rate_kwh" : 4.2,
+        "min_soc_percentage" : 0.3,
+        "max_soc_kwh" : 75,
+        "efficiency" : 0.95
+    },
     "harmonize_profiles_to_year" : 2060,
     "target_days": 365,
     "fraction_houses_hp" : 0.23,
     "fraction_houses_hhp" : 0.77,
-    "fraction_houses_ev" : 0.3,
     "gass_price_eur_m3" : 1.0,
     "defalut_lon" : 51.532534,
     "defalut_lat" : 3.882267,

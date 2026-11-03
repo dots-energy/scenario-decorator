@@ -33,6 +33,16 @@ class BatterySpecification:
 @dataclass_json
 @dataclass
 class EvSpecification:
+    fraction_houses_ev : float
+    min_charge_rate_kwh : float = 4.2
+    min_soc_percentage : float = 0.3
+    max_soc_kwh : float = 75
+    efficiency : float = 0.95
+    soc_upon_arrival : float = 0.8
+
+@dataclass_json
+@dataclass
+class EvProfileSpecification:
     profile_file : str
     connection_start_date_time_column : str
     connection_end_date_time_column : str

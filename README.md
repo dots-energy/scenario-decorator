@@ -24,7 +24,6 @@ Below an overview of all paramters and their description can be found. Some gene
     "target_days": 365, // the amount of days all the datasets should contain
     "fraction_houses_hp" : 0.23, // fraction of houses that have a heatpump
     "fraction_houses_hhp" : 0.77, // fraction of houses that have a hybridheatpump
-    "fraction_houses_ev" : 0.3, // fraction of houses that have an electric vehicle charging station
     "gass_price_eur_m3" : 1.0, // the assumed global gass price per m3
     "defalut_lon" : 51.532534, // default longitude for the location of rooftop pv
     "defalut_lat" : 3.882267, // default latitude for the location of rooftop pv
@@ -63,6 +62,13 @@ Below an overview of all paramters and their description can be found. Some gene
             "unit" : "kW" // unit of the profile values
         }
     ],
+    "ev_specification" : {
+        "fraction_houses_ev" : 0.3, // fraction of houses that have an electric vehicle charging station
+        "min_charge_rate_kw" : 4.2, // the minimal charge rate of the ev in KW
+        "min_soc_percentage" : 0.3, // the minimal soc percentage an must always when implementing v2g behaviour
+        "max_soc_kwh" : 75, // the maximum soc in kwh of the ev
+        "efficiency" : 0.95 // the (dis)charge efficiency of the evs
+    },
     "ev_profiles" : {
         "profile_file" : "test/input_files/ev_profiles_example.csv", // path to the ev profiles dataset
         "connection_start_date_time_column" : "ConnectionStartDateTime", // column name of the arrival time of the ev
@@ -80,18 +86,28 @@ Below an overview of all paramters and their description can be found. Some gene
       "fixed_tou_rate_eur" : 0.60 // fixed rate in euro of time of use
     },
     "building_isolation" : {
-        "isolation_params_file" : "test/input_files/building_isolation_params.csv",
-        "building_year_col" : "buildingYear",
-        "rcFloor_col" : "rcFloor",
-        "rcRoof_col" : "rcRoof",
-        "rcWall_col" : "rcWall",
-        "uDoor" : "uDoor",
-        "uWindow" : "uWindow"
+        "isolation_params_file" : "test/input_files/building_isolation_params.csv", // path to file containing isolation parameters
+        "asset_type_col" : "ID", // column containing the assettype it needs to match
+        "rcFloor_col" : "rcFloor", // Thermal insulation value of the floor in m²K/W.
+        "rcRoof_col" : "rcRoof", // Thermal insulation value of the roof in m²K/W.
+        "rcWall_col" : "rcWall", // Thermal insulation value of the walls in m²K/W.
+        "uDoor_col" : "uDoor", // Heat transfer coefficient of the doors in W/m²K.
+        "uWindow_col" : "uWindow", // Heat transfer coefficient of the windows in W/m²K.
+        "heatPumpThermalPower_col" : "heatPumpThermalPower", // column name describing the power value of the heatpump in watts
+        "sh_buffer_volume_col" : "sh_buffer_volume", // column name describing the volume of the space heating buffer in m3
+        "dhw_buffer_volume_col" : "dhw_buffer_volume" // column name describing the volume of the hot water buffer in m3
     }
 }
 ```
 ### Parameter `building_isolation`
-This optional parameter adds building year and structure information to each building. The CSV must include an `ID` column whose value exactly matches each building's `assetType`. The configured `building_year_col` supplies `buildingYear`; the other configured columns supply `rcFloor`, `rcRoof`, `rcWall`, `uDoor`, and `uWindow` in the building's `BuildingStructureInformation`. If an asset type has multiple matching rows, the first row in the CSV is used. 
+This optional parameter adds building year and structure information to each building. The CSV must include an `ID` column whose value exactly matches each building's `assetType`. The configured `building_year_col` supplies `buildingYear`; the other configured columns supply `rcFloor`, `rcRoof`, `rcWall`, `uDoor`, and `uWindow` in the building's `BuildingStructureInformation`. If an asset type has multiple matching rows, the first row in the CSV is used. An example of the data format for building information can be found below:
+
+| ID | type | buildingYear | rcFloor | rcRoof | rcWall | uDoor | uWindow | heatPumpThermalPower | sh_buffer_volume | dhw_buffer_volume |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| vrijstaande woning_before_1964 | vrijstaande woning | 1964 | 3.5 | 3.5 | 1.7 | 1.4 | 1.4 | 14000 | 280 | 200 |
+| vrijstaande woning_1965_1974 | vrijstaande woning | 1970 | 3.5 | 3.5 | 1.7 | 1.4 | 1.4 | 14000 | 280 | 200 |
+| vrijstaande woning_1975_1991 | vrijstaande woning | 1983 | 3.5 | 3.5 | 1.7 | 1.4 | 1.4 | 14000 | 280 | 200 |
+| vrijstaande woning_1992_2005 | vrijstaande woning | 1998 | 3.5 | 3.5 | 2.5 | 1.4 | 1.4 | 14000 | 280 | 200 |
 
 ### Parameter `harmonize_profiles_to_year`
 This parameter specifies the year all datasets should be harmonized to. Meaning that the year of the timestamp in the datasets will be transformed to the year specified by the parameter. Day of the week will be preserved meaning that values that are associated with a certain day of the week are still associated with the same day of the week after the transformation. Values that are skipped at the beginning will be appended at the end of the dataset. If no year is specified the datasets will be put in the esdl's as specified in the files.

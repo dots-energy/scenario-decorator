@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 from esdl import Battery, Building, BuildingStructureInformation, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvProfileSpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder, parse_isolation_parameters
 
 class Test(unittest.TestCase):
@@ -69,7 +69,7 @@ class Test(unittest.TestCase):
 
         fraction_houses_ev = 0.5
 
-        self.esdl_decorator.add_ev_chargingstation(fraction_houses_ev, ev_specification=None)
+        self.esdl_decorator.add_ev_chargingstation(EvSpecification(fraction_houses_ev), None)
 
         houses_with_ev = self.get_amount_of_assets_with_type_in_building(EVChargingStation)
 
@@ -103,12 +103,17 @@ class Test(unittest.TestCase):
         isolation_file = Path(__file__).parent / "input_files" / "building_isolation_params.csv"
         specification = BuildingIsolationSpecification(
             str(isolation_file),
-            "buildingYear",
+            "ID",
             "rcFloor",
             "rcRoof",
             "rcWall",
             "uDoor",
             "uWindow",
+            "heatPumpThermalPower",
+            "sh_buffer_volume",
+            "dhw_buffer_volume",
+            "hybridheatPumpThermalPower",
+            "hhp_sh_buffer_volume"
         )
         buildings = [asset for asset in self.esdl_decorator.energy_system.eAllContents() if isinstance(asset, Building)]
         for building in buildings:
@@ -127,41 +132,9 @@ class Test(unittest.TestCase):
         self.assertAlmostEqual(building_information.uDoor, 1.4)
         self.assertAlmostEqual(building_information.uWindow, 1.4)
 
-    def test_parse_building_isolation_parameters(self):
-        isolation_file = Path(__file__).parent / "input_files" / "building_isolation_params.csv"
-        with patch.object(self.esdl_decorator, "add_building_isolation") as add_isolation:
-            parse_isolation_parameters(
-                {
-                    "building_isolation": {
-                        "isolation_params_file": str(isolation_file),
-                        "building_year_col": "buildingYear",
-                        "rcFloor_col": "rcFloor",
-                        "rcRoof_col": "rcRoof",
-                        "rcWall_col": "rcWall",
-                        "uDoor": "uDoor",
-                        "uWindow": "uWindow",
-                    }
-                },
-                self.esdl_decorator,
-            )
-
-        add_isolation.assert_called_once()
-        self.assertEqual(
-            add_isolation.call_args.args[0],
-            BuildingIsolationSpecification(
-                str(isolation_file),
-                "buildingYear",
-                "rcFloor",
-                "rcRoof",
-                "rcWall",
-                "uDoor",
-                "uWindow",
-            ),
-        )
-
     def test_add_market_data(self):
 
-        self.esdl_decorator.add_da_market_timeseries_profile(self.da_prices_file, 'Day-ahead Price [EUR/MWh]', "EUR/MWh", 0.0)
+        self.esdl_decorator.add_market_data(self.da_prices_file, 'Day-ahead Price [EUR/MWh]', "EUR/MWh", 0.0)
 
         expected_market_values = [-3.61, -3.61, -3.61, -3.61, -1.46, -1.46, -1.46, -1.46, -1.52, -1.52, -1.52, -1.52, -5.0, -5.0, -5.0, -5.0, -4.6, -4.6, -4.6, -4.6, -4.05, -4.05, -4.05, -4.05]
 
@@ -205,7 +178,7 @@ class Test(unittest.TestCase):
                 esdl_decorator = EsdlBuilder(self.esdl_test_file_path, test_param[0], None, None, None)
                 test_profiles_file = Path(__file__).parent / "input_files" / "ev_profiles_example.csv"
                 df = pd.read_csv(test_profiles_file)
-                ev_specification = EvSpecification(test_profiles_file, "ConnectionStartDateTime", "ConnectionEndDateTime", "household", "Energy", "Power")
+                ev_specification = EvProfileSpecification(test_profiles_file, "ConnectionStartDateTime", "ConnectionEndDateTime", "household", "Energy", "Power")
                 df[ev_specification.connection_start_date_time_column] = pd.to_datetime(df[ev_specification.connection_start_date_time_column], format='ISO8601')
                 df[ev_specification.connection_end_date_time_column] = pd.to_datetime(df[ev_specification.connection_end_date_time_column], format='ISO8601')
                 df_household = df[df['household'] == test_param[1]]
@@ -226,7 +199,7 @@ class Test(unittest.TestCase):
             with self.subTest(i=i, params = test_params[i]):
                  esdl_decorator = EsdlBuilder(self.esdl_test_file_path, None, target_days, None, None)
                  test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_example_lengthen_timeseries.csv"
-                 esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
+                 esdl_decorator.add_market_data(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
                  market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
                  self.assertEqual(len(market_profile.values), target_days*24*4)
 
@@ -255,7 +228,7 @@ class Test(unittest.TestCase):
         harmonize_year = 2050
         esdl_decorator = EsdlBuilder(self.esdl_test_file_path, harmonize_year, None, None, None)
         test_profiles_file = Path(__file__).parent / "input_files" / "da_prices_harmonize_test_example.csv"
-        esdl_decorator.add_da_market_timeseries_profile(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
+        esdl_decorator.add_market_data(test_profiles_file, "Day-ahead Price [EUR/MWh]", "EUR/MWh", 0.0)
 
         market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
 

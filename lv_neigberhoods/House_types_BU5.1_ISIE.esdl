@@ -3763,7 +3763,7 @@
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="47.97476748339615" lon="3.313542365310774"/>
         <port xsi:type="esdl:OutPort" id="dc32b2d4-e8ce-462a-be2a-76ce388fbc1b" name="Out" connectedTo="7df3a76b-222b-40d5-b325-2f236930ae25"/>
       </asset>
-      <asset xsi:type="esdl:Building" id="ee38930a-9883-4200-be00-28a8695ea0ea" name="Home3_1" originalIdInSource="31" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ee38930a-9883-4200-be00-28a8695ea0ea" name="Home3_1" originalIdInSource="31" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.3923997433115" lon="-14.8961932590412"/>
         <asset xsi:type="esdl:EConnection" id="5752ead1-7330-4989-84dc-ea07b80127d4" name="ConnectionHome3_1" originalIdInSource="31" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3797,7 +3797,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.3923997433115" lon="-14.8961932590412"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5a63b42e-c7e1-4d92-9936-4d98d1243454" name="Home4_1" originalIdInSource="41" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="5a63b42e-c7e1-4d92-9936-4d98d1243454" name="Home4_1" originalIdInSource="41" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39582289650955" lon="-14.897223483810487"/>
         <asset xsi:type="esdl:EConnection" id="87e6e27b-b730-4992-b8d8-b8f84be27f03" name="ConnectionHome4_1" originalIdInSource="41" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3831,7 +3831,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39582289650955" lon="-14.897223483810487"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c2b7eb6f-4c1d-4ef2-8ddb-bf97b3c81b8b" name="Home6_1" originalIdInSource="61" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c2b7eb6f-4c1d-4ef2-8ddb-bf97b3c81b8b" name="Home6_1" originalIdInSource="61" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39636495154764" lon="-14.892240797055889"/>
         <asset xsi:type="esdl:EConnection" id="e58dba86-22a2-4c1a-a186-cf764e312715" name="ConnectionHome6_1" originalIdInSource="61" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3865,7 +3865,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39636495154764" lon="-14.892240797055889"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d0067000-71d6-4d14-a5eb-661524b416b6" name="Home7_1" originalIdInSource="71" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_B" floorArea="48.3" buildingYear="1970" surfaceArea="114" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d0067000-71d6-4d14-a5eb-661524b416b6" name="Home7_1" originalIdInSource="71" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_B" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.397847579691614" lon="-14.889630447267775"/>
         <asset xsi:type="esdl:EConnection" id="54a7f3a7-0ac5-430b-a239-527e9985342a" name="ConnectionHome7_1" originalIdInSource="71" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3899,7 +3899,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.397847579691614" lon="-14.889630447267775"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="13421beb-9390-4506-bb6e-1912c43a8736" name="Home8_1" originalIdInSource="81" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="13421beb-9390-4506-bb6e-1912c43a8736" name="Home8_1" originalIdInSource="81" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39634106640178" lon="-14.888177083078544"/>
         <asset xsi:type="esdl:EConnection" id="e3d2f6f0-c3a8-4512-921c-d5a5b1ce19c4" name="ConnectionHome8_1" originalIdInSource="81" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3933,7 +3933,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39634106640178" lon="-14.888177083078544"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4f98a3ad-a2e7-4edb-b949-b8a036d2f126" name="Home9_1" originalIdInSource="91" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4f98a3ad-a2e7-4edb-b949-b8a036d2f126" name="Home9_1" originalIdInSource="91" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.38934136903628" lon="-14.893494911121683"/>
         <asset xsi:type="esdl:EConnection" id="06178a1e-b548-43ac-aa6a-df007986044b" name="ConnectionHome9_1" originalIdInSource="91" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -3967,7 +3967,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.38934136903628" lon="-14.893494911121683"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8e5c1aa2-f993-4d82-8b3a-e054e322ed9f" name="Home9_2" originalIdInSource="92" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="8e5c1aa2-f993-4d82-8b3a-e054e322ed9f" name="Home9_2" originalIdInSource="92" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.38925018381376" lon="-14.8939119666819"/>
         <asset xsi:type="esdl:EConnection" id="b4cfc0a1-75ef-402a-b8ff-bb8870f3ef7a" name="ConnectionHome9_2" originalIdInSource="92" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4001,7 +4001,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.38925018381376" lon="-14.8939119666819"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ae6bc948-3693-4ffb-a580-553cf3ef78a3" name="Home10_1" originalIdInSource="101" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_B" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ae6bc948-3693-4ffb-a580-553cf3ef78a3" name="Home10_1" originalIdInSource="101" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_B" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39580226688651" lon="-14.88730377619496"/>
         <asset xsi:type="esdl:EConnection" id="c4aaf3bb-22ef-40d3-b57d-5e64978b9d8a" name="ConnectionHome10_1" originalIdInSource="101" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4035,7 +4035,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39580226688651" lon="-14.88730377619496"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1417bd7e-1b3b-4fdb-87b7-982be5d2a60d" name="Home11_1" originalIdInSource="111" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_AP" floorArea="92.8" buildingYear="2016" surfaceArea="194" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1417bd7e-1b3b-4fdb-87b7-982be5d2a60d" name="Home11_1" originalIdInSource="111" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_AP" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.391119096898606" lon="-14.88536208569324"/>
         <asset xsi:type="esdl:EConnection" id="ee6753c2-38de-4737-ab4c-2c3c0b6f8697" name="ConnectionHome11_1" originalIdInSource="111" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4069,7 +4069,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.391119096898606" lon="-14.88536208569324"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a294c12e-056b-4c74-8c55-ed35e60cf868" name="Home11_2" originalIdInSource="112" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a294c12e-056b-4c74-8c55-ed35e60cf868" name="Home11_2" originalIdInSource="112" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39116467005871" lon="-14.885153545652775"/>
         <asset xsi:type="esdl:EConnection" id="3aeeafde-452b-48dd-91ab-5bae1c85a9c6" name="ConnectionHome11_2" originalIdInSource="112" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4103,7 +4103,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39116467005871" lon="-14.885153545652775"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ba1fc826-293d-409a-b6fd-f05fa70f1584" name="Home12_1" originalIdInSource="121" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="68.08" buildingYear="2010" surfaceArea="152" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ba1fc826-293d-409a-b6fd-f05fa70f1584" name="Home12_1" originalIdInSource="121" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.390663338881886" lon="-14.88744746944399"/>
         <asset xsi:type="esdl:EConnection" id="79fac2eb-a1ee-4d17-8597-4afb983b78f7" name="ConnectionHome12_1" originalIdInSource="121" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4137,7 +4137,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.390663338881886" lon="-14.88744746944399"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d3600506-7c19-4e91-92a9-d19602821845" name="Home12_2" originalIdInSource="122" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d3600506-7c19-4e91-92a9-d19602821845" name="Home12_2" originalIdInSource="122" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.3907544943275" lon="-14.887030395116122"/>
         <asset xsi:type="esdl:EConnection" id="705e8f83-3730-4f1e-a996-38f9174e43dd" name="ConnectionHome12_2" originalIdInSource="122" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4171,7 +4171,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.3907544943275" lon="-14.887030395116122"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d23013db-c2ad-4d6a-83d5-1c439cce4cdd" name="Home20_1" originalIdInSource="201" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d23013db-c2ad-4d6a-83d5-1c439cce4cdd" name="Home20_1" originalIdInSource="201" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.396987137801304" lon="-14.88188106331239"/>
         <asset xsi:type="esdl:EConnection" id="2ee5ce5f-7d3d-4539-a868-b89478b8199a" name="ConnectionHome20_1" originalIdInSource="201" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4205,7 +4205,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.396987137801304" lon="-14.88188106331239"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="51d79664-89fb-4241-8d31-07182d8030c3" name="Home21_1" originalIdInSource="211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="51d79664-89fb-4241-8d31-07182d8030c3" name="Home21_1" originalIdInSource="211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39738840531539" lon="-14.897572403817511"/>
         <asset xsi:type="esdl:EConnection" id="d2c6d60b-6522-47fd-ac8a-3c0671f4fdf5" name="ConnectionHome21_1" originalIdInSource="211" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4239,7 +4239,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39738840531539" lon="-14.897572403817511"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2ce811c6-6a2d-4bdb-8c93-fcd5557c5889" name="Home24_1" originalIdInSource="241" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2ce811c6-6a2d-4bdb-8c93-fcd5557c5889" name="Home24_1" originalIdInSource="241" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.390298697888184" lon="-14.889115754645095"/>
         <asset xsi:type="esdl:EConnection" id="d561bf3d-8e4f-4bf5-bf6b-bca4c9950280" name="ConnectionHome24_1" originalIdInSource="241" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4273,7 +4273,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.390298697888184" lon="-14.889115754645095"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ac195e83-064d-4251-85ff-1c83cc3e3857" name="Home24_2" originalIdInSource="242" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_A" floorArea="92.8" buildingYear="2016" surfaceArea="194" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ac195e83-064d-4251-85ff-1c83cc3e3857" name="Home24_2" originalIdInSource="242" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_A" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39020753283698" lon="-14.889532822917955"/>
         <asset xsi:type="esdl:EConnection" id="65eaee7c-48a1-4942-95a1-15b83c2b4460" name="ConnectionHome24_2" originalIdInSource="242" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4307,7 +4307,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39020753283698" lon="-14.889532822917955"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="de5a4174-58fc-4dd4-802c-3df3310080e7" name="Home25_1" originalIdInSource="251" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_A" floorArea="54.04" buildingYear="1998" surfaceArea="124" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="de5a4174-58fc-4dd4-802c-3df3310080e7" name="Home25_1" originalIdInSource="251" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_A" floorArea="124.45" buildingYear="1998" surfaceArea="54" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39392579530028" lon="-14.885039200422396"/>
         <asset xsi:type="esdl:EConnection" id="16ea8930-6db4-493a-ba65-c767cf628075" name="ConnectionHome25_1" originalIdInSource="251" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4341,7 +4341,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39392579530028" lon="-14.885039200422396"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9e8ff0c2-4325-4cda-a0b0-b3a1956b1e35" name="Home26_1" originalIdInSource="261" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_D" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="9e8ff0c2-4325-4cda-a0b0-b3a1956b1e35" name="Home26_1" originalIdInSource="261" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_D" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40463685533264" lon="-14.926146920171805"/>
         <asset xsi:type="esdl:EConnection" id="773a400a-d310-4bc4-9f33-8ed72e505ef6" name="ConnectionHome26_1" originalIdInSource="261" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4375,7 +4375,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40463685533264" lon="-14.926146920171805"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2c3dc7e2-9dbb-4bb0-a38e-b48f5d0b4a3b" name="Home27_1" originalIdInSource="271" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2c3dc7e2-9dbb-4bb0-a38e-b48f5d0b4a3b" name="Home27_1" originalIdInSource="271" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.400579750198716" lon="-14.905502471449728"/>
         <asset xsi:type="esdl:EConnection" id="1091d1fb-1161-41d1-9d59-16eb35558e4f" name="ConnectionHome27_1" originalIdInSource="271" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4409,7 +4409,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.400579750198716" lon="-14.905502471449728"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b5cdc92a-a57a-4959-b96f-3f5fc589744c" name="Home28_1" originalIdInSource="281" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b5cdc92a-a57a-4959-b96f-3f5fc589744c" name="Home28_1" originalIdInSource="281" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39432649584437" lon="-14.900729661860565"/>
         <asset xsi:type="esdl:EConnection" id="2c710109-a7ca-43f8-858e-fd4b22d8b060" name="ConnectionHome28_1" originalIdInSource="281" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4443,7 +4443,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39432649584437" lon="-14.900729661860565"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6a3158a9-91b5-4640-bc8b-8b6516ecdd54" name="Home28_2" originalIdInSource="282" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6a3158a9-91b5-4640-bc8b-8b6516ecdd54" name="Home28_2" originalIdInSource="282" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.3944953711475" lon="-14.900791616594782"/>
         <asset xsi:type="esdl:EConnection" id="b3787336-77a9-4825-bb4a-62f532198003" name="ConnectionHome28_2" originalIdInSource="282" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4477,7 +4477,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.3944953711475" lon="-14.900791616594782"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="33875769-f26f-4480-9cc3-48cf8ededc55" name="Home29_1" originalIdInSource="291" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="33875769-f26f-4480-9cc3-48cf8ededc55" name="Home29_1" originalIdInSource="291" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.397362291855835" lon="-14.907701329114806"/>
         <asset xsi:type="esdl:EConnection" id="105cfd61-dcbe-4ffe-8371-b69b4208278b" name="ConnectionHome29_1" originalIdInSource="291" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4511,7 +4511,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.397362291855835" lon="-14.907701329114806"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="abb0ee82-9eee-476e-9685-96f5ac1bc2c2" name="Home30_1" originalIdInSource="301" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="abb0ee82-9eee-476e-9685-96f5ac1bc2c2" name="Home30_1" originalIdInSource="301" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39840267128842" lon="-14.922954690892341"/>
         <asset xsi:type="esdl:EConnection" id="4c7910f6-c932-47d6-b2d3-cd95380fc99d" name="ConnectionHome30_1" originalIdInSource="301" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4545,7 +4545,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39840267128842" lon="-14.922954690892341"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ad59cae1-8180-432c-b62d-0c87d727300b" name="Home30_2" originalIdInSource="302" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ad59cae1-8180-432c-b62d-0c87d727300b" name="Home30_2" originalIdInSource="302" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39835701009559" lon="-14.923163251662642"/>
         <asset xsi:type="esdl:EConnection" id="16a70b0b-4eed-4f98-80b8-9f16f80556bc" name="ConnectionHome30_2" originalIdInSource="302" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4579,7 +4579,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39835701009559" lon="-14.923163251662642"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="296b1d9d-befd-4c9f-b6c7-0037c9e716f1" name="Home31_1" originalIdInSource="311" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="296b1d9d-befd-4c9f-b6c7-0037c9e716f1" name="Home31_1" originalIdInSource="311" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4008029852749" lon="-14.901979294097659"/>
         <asset xsi:type="esdl:EConnection" id="9a4dfa08-3558-4acf-9e12-05ed87d2930e" name="ConnectionHome31_1" originalIdInSource="311" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4613,7 +4613,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4008029852749" lon="-14.901979294097659"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="940611a7-7380-46d5-8700-61bbfcee3508" name="Home31_2" originalIdInSource="312" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="940611a7-7380-46d5-8700-61bbfcee3508" name="Home31_2" originalIdInSource="312" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40075737251323" lon="-14.90218787458077"/>
         <asset xsi:type="esdl:EConnection" id="7f057b40-af00-4c87-8652-6fb59c78d250" name="ConnectionHome31_2" originalIdInSource="312" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4647,7 +4647,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40075737251323" lon="-14.90218787458077"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="73edecea-c8b1-4bdc-8ebb-9bc1352e267a" name="Home32_1" originalIdInSource="321" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="73edecea-c8b1-4bdc-8ebb-9bc1352e267a" name="Home32_1" originalIdInSource="321" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39660943970883" lon="-14.915310862062006"/>
         <asset xsi:type="esdl:EConnection" id="bed7a1ad-1470-4411-96e1-9d4ae37d3efb" name="ConnectionHome32_1" originalIdInSource="321" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4681,7 +4681,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39660943970883" lon="-14.915310862062006"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e4b934cb-9b77-4246-a25a-c435c5b11e81" name="Home33_1" originalIdInSource="331" assetType="maisonnette_1965_1974" energyLabel="LABEL_D" floorArea="40.63" buildingYear="1970" surfaceArea="81" numberOfFloors="6">
+      <asset xsi:type="esdl:Building" id="e4b934cb-9b77-4246-a25a-c435c5b11e81" name="Home33_1" originalIdInSource="331" assetType="maisonnette_1965_1974" energyLabel="LABEL_D" floorArea="81.26" buildingYear="1970" surfaceArea="20" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.405879033364656" lon="-14.917137775143013"/>
         <asset xsi:type="esdl:EConnection" id="a8a0a002-0755-4222-9976-9c6318f9e44a" name="ConnectionHome33_1" originalIdInSource="331" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4715,7 +4715,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.405879033364656" lon="-14.917137775143013"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a6b33515-0fb4-411c-8a36-c2a93223d763" name="Home34_1" originalIdInSource="341" assetType="2 onder 1 kap woning_1965_1974" energyLabel="LABEL_C" floorArea="61.45" buildingYear="1970" surfaceArea="133" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a6b33515-0fb4-411c-8a36-c2a93223d763" name="Home34_1" originalIdInSource="341" assetType="2 onder 1 kap woning_1965_1974" energyLabel="LABEL_C" floorArea="133.99" buildingYear="1970" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4029565810125" lon="-14.93048752806793"/>
         <asset xsi:type="esdl:EConnection" id="dfe8f493-f234-41bc-b16e-1befb922286b" name="ConnectionHome34_1" originalIdInSource="341" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4749,7 +4749,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4029565810125" lon="-14.93048752806793"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="84ea7808-ddb9-4e11-bb02-2443af62d508" name="Home35_1" originalIdInSource="351" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="84ea7808-ddb9-4e11-bb02-2443af62d508" name="Home35_1" originalIdInSource="351" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.401943413698405" lon="-14.930115086461806"/>
         <asset xsi:type="esdl:EConnection" id="531c8e88-0bd1-4853-b738-2ea45976c7e6" name="ConnectionHome35_1" originalIdInSource="351" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4783,7 +4783,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.401943413698405" lon="-14.930115086461806"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b752af19-a6d1-4a45-b9b6-7985e98e11ba" name="Home35_2" originalIdInSource="352" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b752af19-a6d1-4a45-b9b6-7985e98e11ba" name="Home35_2" originalIdInSource="352" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4017745526606" lon="-14.93005301394315"/>
         <asset xsi:type="esdl:EConnection" id="8b63698a-ae4b-4fd6-ae0c-c483dc383606" name="ConnectionHome35_2" originalIdInSource="352" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4817,7 +4817,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4017745526606" lon="-14.93005301394315"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0acfed88-139a-429b-9e5a-8bb5cccce6ee" name="Home36_1" originalIdInSource="361" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0acfed88-139a-429b-9e5a-8bb5cccce6ee" name="Home36_1" originalIdInSource="361" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.397485538494486" lon="-14.907971874692945"/>
         <asset xsi:type="esdl:EConnection" id="6c4e639f-5e76-4fc9-b2f3-72ccc40cf23f" name="ConnectionHome36_1" originalIdInSource="361" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4851,7 +4851,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.397485538494486" lon="-14.907971874692945"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6156b94a-16c4-43fe-8ce0-4a9f94fdcadf" name="Home37_1" originalIdInSource="371" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_D" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6156b94a-16c4-43fe-8ce0-4a9f94fdcadf" name="Home37_1" originalIdInSource="371" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_D" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.405139182389256" lon="-14.923852411187605"/>
         <asset xsi:type="esdl:EConnection" id="4e2dddab-7ae9-403e-891b-33c166f3ae7b" name="ConnectionHome37_1" originalIdInSource="371" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4885,7 +4885,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.405139182389256" lon="-14.923852411187605"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6f902ffb-61d6-4a3e-aa3d-26b1098c6d21" name="Home38_1" originalIdInSource="381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6f902ffb-61d6-4a3e-aa3d-26b1098c6d21" name="Home38_1" originalIdInSource="381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.393573336030315" lon="-14.90000280107177"/>
         <asset xsi:type="esdl:EConnection" id="000abc15-f90b-446d-a7cb-17a55e4837c2" name="ConnectionHome38_1" originalIdInSource="381" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4919,7 +4919,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.393573336030315" lon="-14.90000280107177"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c6b9f9b8-28d1-4840-8b47-5470b7c9740e" name="Home39_1" originalIdInSource="391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c6b9f9b8-28d1-4840-8b47-5470b7c9740e" name="Home39_1" originalIdInSource="391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39953368804504" lon="-14.929454663454058"/>
         <asset xsi:type="esdl:EConnection" id="c028d359-8d3a-4247-b662-212894b1ff9b" name="ConnectionHome39_1" originalIdInSource="391" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4953,7 +4953,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39953368804504" lon="-14.929454663454058"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="aa009239-f45e-48df-9c7c-7548337cd741" name="Home39_2" originalIdInSource="392" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="aa009239-f45e-48df-9c7c-7548337cd741" name="Home39_2" originalIdInSource="392" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39953368804504" lon="-14.929454663454058"/>
         <asset xsi:type="esdl:EConnection" id="40dff2e9-7893-4af3-8f8c-635959312540" name="ConnectionHome39_2" originalIdInSource="392" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4987,7 +4987,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39953368804504" lon="-14.929454663454058"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dfeb3d97-2a19-46da-b818-86351bcad197" name="Home40_1" originalIdInSource="401" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="dfeb3d97-2a19-46da-b818-86351bcad197" name="Home40_1" originalIdInSource="401" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39656379633338" lon="-14.915519417013828"/>
         <asset xsi:type="esdl:EConnection" id="bd1dd3e5-952a-43fd-aaf6-953a45719349" name="ConnectionHome40_1" originalIdInSource="401" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5021,7 +5021,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39656379633338" lon="-14.915519417013828"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0846140d-a7c7-4cd8-b2ec-9ddc719a83cf" name="Home41_1" originalIdInSource="411" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0846140d-a7c7-4cd8-b2ec-9ddc719a83cf" name="Home41_1" originalIdInSource="411" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40434900741459" lon="-14.928294872094858"/>
         <asset xsi:type="esdl:EConnection" id="5bab9967-3b7f-4fc5-9b17-413fbd7482ed" name="ConnectionHome41_1" originalIdInSource="411" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5055,7 +5055,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40434900741459" lon="-14.928294872094858"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="de780a80-0b5a-4bf5-8ade-ba5da068ab6f" name="Home42_1" originalIdInSource="421" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="de780a80-0b5a-4bf5-8ade-ba5da068ab6f" name="Home42_1" originalIdInSource="421" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.397048742668176" lon="-14.889112321381335"/>
         <asset xsi:type="esdl:EConnection" id="c49e5300-26e1-4aa9-b768-20204d1533ab" name="ConnectionHome42_1" originalIdInSource="421" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5089,7 +5089,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.397048742668176" lon="-14.889112321381335"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2d6d4ea5-1923-4dce-8f29-91fb47cd44b7" name="Home44_1" originalIdInSource="441" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2d6d4ea5-1923-4dce-8f29-91fb47cd44b7" name="Home44_1" originalIdInSource="441" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.3897060907158" lon="-14.891826676774867"/>
         <asset xsi:type="esdl:EConnection" id="b65cec17-a8d0-48ec-936c-89ad0ebe320f" name="ConnectionHome44_1" originalIdInSource="441" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5123,7 +5123,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.3897060907158" lon="-14.891826676774867"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1b005763-3d12-4657-98e2-a2b5863e4db2" name="Home44_2" originalIdInSource="442" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1b005763-3d12-4657-98e2-a2b5863e4db2" name="Home44_2" originalIdInSource="442" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.389797266333005" lon="-14.891409615161505"/>
         <asset xsi:type="esdl:EConnection" id="3145a5f3-28f7-4cf3-acce-5e51ff346cb6" name="ConnectionHome44_2" originalIdInSource="442" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5157,7 +5157,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.389797266333005" lon="-14.891409615161505"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3c16c777-54d7-4209-9a86-297add5d1be1" name="Home45_1" originalIdInSource="451" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3c16c777-54d7-4209-9a86-297add5d1be1" name="Home45_1" originalIdInSource="451" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39526346017688" lon="-14.886430490715552"/>
         <asset xsi:type="esdl:EConnection" id="138ba415-fdff-4ee2-849d-bf12ce262f9f" name="ConnectionHome45_1" originalIdInSource="451" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5191,7 +5191,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39526346017688" lon="-14.886430490715552"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8857c841-a3fb-45b5-ad82-59247e0252cb" name="Home48_1" originalIdInSource="481" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="8857c841-a3fb-45b5-ad82-59247e0252cb" name="Home48_1" originalIdInSource="481" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39223086626906" lon="-14.896131323156373"/>
         <asset xsi:type="esdl:EConnection" id="baf1fa1a-6a96-41d0-9bfd-472ec8e13dba" name="ConnectionHome48_1" originalIdInSource="481" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5225,7 +5225,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39223086626906" lon="-14.896131323156373"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="86bd1f24-e63a-4d2a-a524-055ac9ef4287" name="Home49_1" originalIdInSource="491" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_A" floorArea="56.8" buildingYear="2010" surfaceArea="136" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="86bd1f24-e63a-4d2a-a524-055ac9ef4287" name="Home49_1" originalIdInSource="491" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_A" floorArea="136.67" buildingYear="2010" surfaceArea="56" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40682818500558" lon="-14.907795786701096"/>
         <asset xsi:type="esdl:EConnection" id="49540562-6ab5-486b-a6fc-ce61fe50d59f" name="ConnectionHome49_1" originalIdInSource="491" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5259,7 +5259,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40682818500558" lon="-14.907795786701096"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a7c5df4-c7a2-4601-a8e6-87f07061c504" name="Home50_1" originalIdInSource="501" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0a7c5df4-c7a2-4601-a8e6-87f07061c504" name="Home50_1" originalIdInSource="501" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39176248903631" lon="-14.915783967443959"/>
         <asset xsi:type="esdl:EConnection" id="9886a772-50b0-4bd8-82ea-8f5ceb9efc44" name="ConnectionHome50_1" originalIdInSource="501" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5293,7 +5293,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39176248903631" lon="-14.915783967443959"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="86d83c6e-56c0-4e6a-9b5e-491e7b05e1bc" name="Home50_2" originalIdInSource="502" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="86d83c6e-56c0-4e6a-9b5e-491e7b05e1bc" name="Home50_2" originalIdInSource="502" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.391593624533456" lon="-14.915721955065523"/>
         <asset xsi:type="esdl:EConnection" id="6eed9e6a-6317-42ff-960f-ea9dfa143d65" name="ConnectionHome50_2" originalIdInSource="502" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5327,7 +5327,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.391593624533456" lon="-14.915721955065523"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="73f4f0a8-54b5-4d17-8342-c509500216ac" name="Home51_1" originalIdInSource="511" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="73f4f0a8-54b5-4d17-8342-c509500216ac" name="Home51_1" originalIdInSource="511" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40610726712526" lon="-14.91609477364583"/>
         <asset xsi:type="esdl:EConnection" id="03f2d1a6-89dc-4977-8228-ec1b8fc05874" name="ConnectionHome51_1" originalIdInSource="511" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5361,7 +5361,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40610726712526" lon="-14.91609477364583"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bdf311f8-34c7-41b4-9006-8ebaf0ba4216" name="Home51_2" originalIdInSource="512" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="bdf311f8-34c7-41b4-9006-8ebaf0ba4216" name="Home51_2" originalIdInSource="512" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40615291243682" lon="-14.91588617244088"/>
         <asset xsi:type="esdl:EConnection" id="144fc3a8-52ee-48bb-a380-a53d25536fd8" name="ConnectionHome51_2" originalIdInSource="512" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5395,7 +5395,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40615291243682" lon="-14.91588617244088"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b98efff9-7e98-43c6-9ad1-0840e1bcc45e" name="Home52_1" originalIdInSource="521" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="68.95" buildingYear="1998" surfaceArea="143" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b98efff9-7e98-43c6-9ad1-0840e1bcc45e" name="Home52_1" originalIdInSource="521" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39058043860793" lon="-14.915349887299692"/>
         <asset xsi:type="esdl:EConnection" id="59281096-7cba-46c7-a52d-54db71aafadf" name="ConnectionHome52_1" originalIdInSource="521" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5429,7 +5429,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39058043860793" lon="-14.915349887299692"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="be19c392-f987-4244-89b8-1e84c6139552" name="Home53_1" originalIdInSource="531" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="be19c392-f987-4244-89b8-1e84c6139552" name="Home53_1" originalIdInSource="531" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.388677294551485" lon="-14.914876308806226"/>
         <asset xsi:type="esdl:EConnection" id="a3b5c046-d4ab-402d-8b81-86b34b14df7b" name="ConnectionHome53_1" originalIdInSource="531" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5463,7 +5463,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.388677294551485" lon="-14.914876308806226"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0b4ff1ea-da70-4b9b-8fa1-c98cbff7568a" name="Home54_1" originalIdInSource="541" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0b4ff1ea-da70-4b9b-8fa1-c98cbff7568a" name="Home54_1" originalIdInSource="541" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.406992287670754" lon="-14.905377127053326"/>
         <asset xsi:type="esdl:EConnection" id="7d3d00b6-af87-422e-b5a4-de81c04e247b" name="ConnectionHome54_1" originalIdInSource="541" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5497,7 +5497,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.406992287670754" lon="-14.905377127053326"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f1ffebb9-edcc-4c45-b624-5948298e74d7" name="Home54_2" originalIdInSource="542" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_B" floorArea="92.8" buildingYear="2016" surfaceArea="194" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="f1ffebb9-edcc-4c45-b624-5948298e74d7" name="Home54_2" originalIdInSource="542" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_B" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40694666664349" lon="-14.905585736365522"/>
         <asset xsi:type="esdl:EConnection" id="d9d5d871-f654-4e00-8a0c-e2517816f81f" name="ConnectionHome54_2" originalIdInSource="542" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5531,7 +5531,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40694666664349" lon="-14.905585736365522"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6cd66aac-004a-4ab0-8799-526fa7522c18" name="Home55_1" originalIdInSource="551" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6cd66aac-004a-4ab0-8799-526fa7522c18" name="Home55_1" originalIdInSource="551" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4063309112486" lon="-14.912571099594809"/>
         <asset xsi:type="esdl:EConnection" id="dfd91f46-6eed-43b1-9e11-e40853484c08" name="ConnectionHome55_1" originalIdInSource="551" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5565,7 +5565,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4063309112486" lon="-14.912571099594809"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ba9df3d6-4348-42e3-bbbc-098cb4acab92" name="Home55_2" originalIdInSource="552" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_APPP" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ba9df3d6-4348-42e3-bbbc-098cb4acab92" name="Home55_2" originalIdInSource="552" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_APPP" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.406376548414144" lon="-14.912362495955021"/>
         <asset xsi:type="esdl:EConnection" id="c2847c55-5dfb-405a-bca1-ce4e2ea9bd18" name="ConnectionHome55_2" originalIdInSource="552" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5599,7 +5599,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.406376548414144" lon="-14.912362495955021"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7fb3ec16-0ca3-4f57-843e-5fcf591041c6" name="Home56_1" originalIdInSource="561" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7fb3ec16-0ca3-4f57-843e-5fcf591041c6" name="Home56_1" originalIdInSource="561" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.385829351254486" lon="-14.90955067665074"/>
         <asset xsi:type="esdl:EConnection" id="402003cb-2bdc-409f-92ff-2974b734dfde" name="ConnectionHome56_1" originalIdInSource="561" assetType="3x63A" capacity="43647.6803507357">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5633,7 +5633,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.385829351254486" lon="-14.90955067665074"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="123d57b1-cb97-4387-b8ed-808ba1695058" name="Home57_1" originalIdInSource="571" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="123d57b1-cb97-4387-b8ed-808ba1695058" name="Home57_1" originalIdInSource="571" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4066640176516" lon="-14.910214446169762"/>
         <asset xsi:type="esdl:EConnection" id="410da814-c85a-444e-87ac-28feadc9c2d0" name="ConnectionHome57_1" originalIdInSource="571" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5667,7 +5667,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4066640176516" lon="-14.910214446169762"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="eef7de75-73d1-409f-b6cf-7be0c2c78671" name="Home57_2" originalIdInSource="572" assetType="maisonnette_2006_2014" energyLabel="LABEL_A" floorArea="28.265" buildingYear="2010" surfaceArea="113" numberOfFloors="6">
+      <asset xsi:type="esdl:Building" id="eef7de75-73d1-409f-b6cf-7be0c2c78671" name="Home57_2" originalIdInSource="572" assetType="maisonnette_2006_2014" energyLabel="LABEL_A" floorArea="113.05" buildingYear="2010" surfaceArea="28" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4066640176516" lon="-14.910214446169762"/>
         <asset xsi:type="esdl:EConnection" id="043e202c-303a-48e8-8a29-65eae33fae43" name="ConnectionHome57_2" originalIdInSource="572" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5701,7 +5701,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4066640176516" lon="-14.910214446169762"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dd603895-8b34-4737-bc99-68a1a2416d55" name="Home58_1" originalIdInSource="581" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="dd603895-8b34-4737-bc99-68a1a2416d55" name="Home58_1" originalIdInSource="581" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.400684589006495" lon="-14.90418902602944"/>
         <asset xsi:type="esdl:EConnection" id="0efdba02-2354-4d4f-8d75-50c1e2c4eb6d" name="ConnectionHome58_1" originalIdInSource="581" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5735,7 +5735,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.400684589006495" lon="-14.90418902602944"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c092b7f6-d444-48ab-9618-93d8efc81b88" name="Home59_1" originalIdInSource="591" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c092b7f6-d444-48ab-9618-93d8efc81b88" name="Home59_1" originalIdInSource="591" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40468252382949" lon="-14.925938329954176"/>
         <asset xsi:type="esdl:EConnection" id="6b09a915-061e-4880-8bd2-024feb29eec3" name="ConnectionHome59_1" originalIdInSource="591" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5769,7 +5769,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40468252382949" lon="-14.925938329954176"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4409301d-55b8-4082-b266-09b5fa329fc2" name="Home60_1" originalIdInSource="601" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="68.08" buildingYear="2010" surfaceArea="152" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4409301d-55b8-4082-b266-09b5fa329fc2" name="Home60_1" originalIdInSource="601" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.406212258870276" lon="-14.914781147411636"/>
         <asset xsi:type="esdl:EConnection" id="a3dc824e-1d14-40c5-ae4b-028cd1b8979d" name="ConnectionHome60_1" originalIdInSource="601" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5803,7 +5803,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.406212258870276" lon="-14.914781147411636"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1b980ca5-5289-469f-9c43-ea94b7014a7f" name="Home61_1" originalIdInSource="611" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1b980ca5-5289-469f-9c43-ea94b7014a7f" name="Home61_1" originalIdInSource="611" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.3926524567869" lon="-14.91588549852427"/>
         <asset xsi:type="esdl:EConnection" id="75ae729e-497c-4f97-b146-521464fb5ade" name="ConnectionHome61_1" originalIdInSource="611" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5837,7 +5837,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.3926524567869" lon="-14.91588549852427"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b690e284-4cca-46ca-94bb-1086f1f3140d" name="Home62_1" originalIdInSource="621" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="b690e284-4cca-46ca-94bb-1086f1f3140d" name="Home62_1" originalIdInSource="621" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40430333348177" lon="-14.928503459793584"/>
         <asset xsi:type="esdl:EConnection" id="e908ed73-cf1d-443b-882c-9375b20c9359" name="ConnectionHome62_1" originalIdInSource="621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5871,7 +5871,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40430333348177" lon="-14.928503459793584"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a2ce989f-7805-405e-8852-579fb236c96f" name="Home63_1" originalIdInSource="631" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a2ce989f-7805-405e-8852-579fb236c96f" name="Home63_1" originalIdInSource="631" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40047489230297" lon="-14.90681591588365"/>
         <asset xsi:type="esdl:EConnection" id="c04738c3-23ab-468d-802c-7eb52d51402b" name="ConnectionHome63_1" originalIdInSource="631" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5905,7 +5905,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40047489230297" lon="-14.90681591588365"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="38a460f7-bf17-41ea-9830-0e3cac8987cc" name="Home64_1" originalIdInSource="641" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="38a460f7-bf17-41ea-9830-0e3cac8987cc" name="Home64_1" originalIdInSource="641" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39773573469199" lon="-14.92766708038578"/>
         <asset xsi:type="esdl:EConnection" id="c0413ce0-8eed-48b6-9d3f-762891de7e89" name="ConnectionHome64_1" originalIdInSource="641" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5939,7 +5939,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39773573469199" lon="-14.92766708038578"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3ae81d98-43e9-4f23-be6d-195284077eef" name="Home65_1" originalIdInSource="651" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3ae81d98-43e9-4f23-be6d-195284077eef" name="Home65_1" originalIdInSource="651" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40733878258847" lon="-14.902124020041326"/>
         <asset xsi:type="esdl:EConnection" id="d9bfb8b2-63a0-4ac2-b074-7e12f03c8c15" name="ConnectionHome65_1" originalIdInSource="651" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5973,7 +5973,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40733878258847" lon="-14.902124020041326"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4b519f44-096d-4e98-80e0-dc423ac3a7bf" name="Home66_1" originalIdInSource="661" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4b519f44-096d-4e98-80e0-dc423ac3a7bf" name="Home66_1" originalIdInSource="661" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39885925680744" lon="-14.920869066590035"/>
         <asset xsi:type="esdl:EConnection" id="88dc1f21-4903-410d-80db-f04c3e5bafd5" name="ConnectionHome66_1" originalIdInSource="661" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6007,7 +6007,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39885925680744" lon="-14.920869066590035"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a6163932-42c0-4877-9166-9d30a16ea6c0" name="Home68_1" originalIdInSource="681" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a6163932-42c0-4877-9166-9d30a16ea6c0" name="Home68_1" originalIdInSource="681" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_B" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.38578372190491" lon="-14.909759181292094"/>
         <asset xsi:type="esdl:EConnection" id="1d111927-1377-4745-9922-020e662fb162" name="ConnectionHome68_1" originalIdInSource="681" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6041,7 +6041,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.38578372190491" lon="-14.909759181292094"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d21fc0ac-02dc-49f3-9fd8-fee34a24e76c" name="Home70_1" originalIdInSource="701" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_APP" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d21fc0ac-02dc-49f3-9fd8-fee34a24e76c" name="Home70_1" originalIdInSource="701" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_APP" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.394302994248704" lon="-14.896666023371266"/>
         <asset xsi:type="esdl:EConnection" id="b7c3ffc5-3dc9-4238-b946-662f247cf471" name="ConnectionHome70_1" originalIdInSource="701" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6075,7 +6075,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.394302994248704" lon="-14.896666023371266"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b67fdf38-859e-47f7-9fba-baf226e780e2" name="Home71_1" originalIdInSource="711" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b67fdf38-859e-47f7-9fba-baf226e780e2" name="Home71_1" originalIdInSource="711" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422929154785095" lon="-14.895898069307878"/>
         <asset xsi:type="esdl:EConnection" id="5c68256f-960f-457f-8290-d26061c524fa" name="ConnectionHome71_1" originalIdInSource="711" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6109,7 +6109,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422929154785095" lon="-14.895898069307878"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f6711a0d-9bfe-49f0-8a8a-22caba2e0224" name="Home111_1" originalIdInSource="1111" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="f6711a0d-9bfe-49f0-8a8a-22caba2e0224" name="Home111_1" originalIdInSource="1111" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42268921996377" lon="-14.914520701768895"/>
         <asset xsi:type="esdl:EConnection" id="26796367-1f2a-439e-b7c5-107af5451b5a" name="ConnectionHome111_1" originalIdInSource="1111" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6143,7 +6143,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42268921996377" lon="-14.914520701768895"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="39b44d17-0d08-44a0-9d73-761bfb31c420" name="Home114_1" originalIdInSource="1141" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="39b44d17-0d08-44a0-9d73-761bfb31c420" name="Home114_1" originalIdInSource="1141" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40727959084469" lon="-14.903229047631426"/>
         <asset xsi:type="esdl:EConnection" id="54bba4e1-9ed6-4135-bb87-2e0a5e621225" name="ConnectionHome114_1" originalIdInSource="1141" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6177,7 +6177,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40727959084469" lon="-14.903229047631426"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8020f83e-0d29-442f-a032-8c99812c59b7" name="Home114_2" originalIdInSource="1142" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B" floorArea="68.95" buildingYear="1998" surfaceArea="143" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="8020f83e-0d29-442f-a032-8c99812c59b7" name="Home114_2" originalIdInSource="1142" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.407325206435175" lon="-14.903020435794248"/>
         <asset xsi:type="esdl:EConnection" id="86133351-ccd6-4280-b252-79cc65c47201" name="ConnectionHome114_2" originalIdInSource="1142" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6211,7 +6211,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.407325206435175" lon="-14.903020435794248"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2f8962b4-fa56-412e-80d0-0e8356270e3c" name="Home130_1" originalIdInSource="1301" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2f8962b4-fa56-412e-80d0-0e8356270e3c" name="Home130_1" originalIdInSource="1301" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40773076592472" lon="-14.898662278692038"/>
         <asset xsi:type="esdl:EConnection" id="ffe9960b-1e21-4e7e-91e5-e872b90a80ec" name="ConnectionHome130_1" originalIdInSource="1301" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6245,7 +6245,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40773076592472" lon="-14.898662278692038"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bc9229c2-fecd-44fb-aa2a-485b5df32b6a" name="Home131_1" originalIdInSource="1311" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="bc9229c2-fecd-44fb-aa2a-485b5df32b6a" name="Home131_1" originalIdInSource="1311" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40757541459006" lon="-14.897703917058754"/>
         <asset xsi:type="esdl:EConnection" id="143b2584-d89b-4f6a-ac42-1781421c1d16" name="ConnectionHome131_1" originalIdInSource="1311" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6279,7 +6279,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40757541459006" lon="-14.897703917058754"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dcb5bd4a-ab2a-4907-bbe9-cd45b88e49b4" name="Home133_1" originalIdInSource="1331" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_B" floorArea="54.04" buildingYear="1998" surfaceArea="124" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="dcb5bd4a-ab2a-4907-bbe9-cd45b88e49b4" name="Home133_1" originalIdInSource="1331" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_B" floorArea="124.45" buildingYear="1998" surfaceArea="54" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40766661973573" lon="-14.8972866859543"/>
         <asset xsi:type="esdl:EConnection" id="20162535-4146-4855-8516-74ff7e5a2b45" name="ConnectionHome133_1" originalIdInSource="1331" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6313,7 +6313,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40766661973573" lon="-14.8972866859543"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0145f5e1-b9c3-4d21-9b26-42e2b5cbc33d" name="Home136_1" originalIdInSource="1361" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0145f5e1-b9c3-4d21-9b26-42e2b5cbc33d" name="Home136_1" originalIdInSource="1361" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="119.7" buildingYear="2016" surfaceArea="55" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40769364960546" lon="-14.895493869983264"/>
         <asset xsi:type="esdl:EConnection" id="f1290c7e-6f66-45b5-ac1e-50265175c007" name="ConnectionHome136_1" originalIdInSource="1361" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6347,7 +6347,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40769364960546" lon="-14.895493869983264"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="942b1011-4cab-4f63-8fba-b52f6f147b2b" name="Home137_1" originalIdInSource="1371" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="942b1011-4cab-4f63-8fba-b52f6f147b2b" name="Home137_1" originalIdInSource="1371" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.407739247307276" lon="-14.895285253155594"/>
         <asset xsi:type="esdl:EConnection" id="10696e0e-a5d7-415c-99f0-77eea66c3a9e" name="ConnectionHome137_1" originalIdInSource="1371" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6381,7 +6381,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.407739247307276" lon="-14.895285253155594"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2aa6d6bb-44e9-4918-85d0-f251294002ae" name="Home139_1" originalIdInSource="1391" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2aa6d6bb-44e9-4918-85d0-f251294002ae" name="Home139_1" originalIdInSource="1391" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40772064400762" lon="-14.893701061445851"/>
         <asset xsi:type="esdl:EConnection" id="f6f86c03-0872-40de-9bbf-12a2a69cc658" name="ConnectionHome139_1" originalIdInSource="1391" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6415,7 +6415,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40772064400762" lon="-14.893701061445851"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="91ee45cf-2adb-4117-8736-099762086f31" name="Home141_1" originalIdInSource="1411" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="91ee45cf-2adb-4117-8736-099762086f31" name="Home141_1" originalIdInSource="1411" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.407597350599474" lon="-14.893430512333685"/>
         <asset xsi:type="esdl:EConnection" id="0ff7d8c8-aad7-434f-8079-48851aaaa28b" name="ConnectionHome141_1" originalIdInSource="1411" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6449,7 +6449,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.407597350599474" lon="-14.893430512333685"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7c444b87-48e5-4274-a085-3cb1a6ef4e4c" name="Home144_1" originalIdInSource="1441" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7c444b87-48e5-4274-a085-3cb1a6ef4e4c" name="Home144_1" originalIdInSource="1441" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.402745239777886" lon="-14.891426040806406"/>
         <asset xsi:type="esdl:EConnection" id="c1823bba-e822-495a-8ba4-6f38bea94daf" name="ConnectionHome144_1" originalIdInSource="1441" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6483,7 +6483,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.402745239777886" lon="-14.891426040806406"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b6e6819d-c776-469c-87cc-3de86529a664" name="Home146_1" originalIdInSource="1461" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="b6e6819d-c776-469c-87cc-3de86529a664" name="Home146_1" originalIdInSource="1461" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40358966834436" lon="-14.89173565226456"/>
         <asset xsi:type="esdl:EConnection" id="44a274c7-aaf2-4891-aace-8601a09e128c" name="ConnectionHome146_1" originalIdInSource="1461" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6517,7 +6517,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40358966834436" lon="-14.89173565226456"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="96af3a8d-0978-4d98-8327-0a0cd66d1aad" name="Home148_1" originalIdInSource="1481" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="96af3a8d-0978-4d98-8327-0a0cd66d1aad" name="Home148_1" originalIdInSource="1481" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40656538847843" lon="-14.891474790066633"/>
         <asset xsi:type="esdl:EConnection" id="cb411c1c-ba76-4863-ab6a-6c5c61d7bc85" name="ConnectionHome148_1" originalIdInSource="1481" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6551,7 +6551,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40656538847843" lon="-14.891474790066633"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="319ca061-4d95-4faa-b989-99186c9b6148" name="Home154_1" originalIdInSource="1541" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="319ca061-4d95-4faa-b989-99186c9b6148" name="Home154_1" originalIdInSource="1541" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.415335904459866" lon="-14.920611571554522"/>
         <asset xsi:type="esdl:EConnection" id="a5fae51a-5867-4eb1-99ed-89baa5ae9a98" name="ConnectionHome154_1" originalIdInSource="1541" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6585,7 +6585,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.415335904459866" lon="-14.920611571554522"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2660b1dc-62e2-4d89-b187-807c8f9d9421" name="Home155_1" originalIdInSource="1551" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_APPPP" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2660b1dc-62e2-4d89-b187-807c8f9d9421" name="Home155_1" originalIdInSource="1551" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_APPPP" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40921973010884" lon="-14.906870707478754"/>
         <asset xsi:type="esdl:EConnection" id="9a2d4418-a181-43a6-a6c7-1f46534a8368" name="ConnectionHome155_1" originalIdInSource="1551" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6619,7 +6619,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40921973010884" lon="-14.906870707478754"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="281a1aad-9c24-4862-9fc3-ec877f5b4de1" name="Home156_1" originalIdInSource="1561" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_B" floorArea="54.04" buildingYear="1998" surfaceArea="124" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="281a1aad-9c24-4862-9fc3-ec877f5b4de1" name="Home156_1" originalIdInSource="1561" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_B" floorArea="124.45" buildingYear="1998" surfaceArea="54" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40548109053765" lon="-14.901442421281244"/>
         <asset xsi:type="esdl:EConnection" id="1be73039-cd24-4c77-83df-d676ecb3d83a" name="ConnectionHome156_1" originalIdInSource="1561" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6653,7 +6653,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40548109053765" lon="-14.901442421281244"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7cac6fd9-8083-45ad-ad6c-768c71c5f8b0" name="Home157_1" originalIdInSource="1571" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="7cac6fd9-8083-45ad-ad6c-768c71c5f8b0" name="Home157_1" originalIdInSource="1571" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.408320806441566" lon="-14.91848538362382"/>
         <asset xsi:type="esdl:EConnection" id="63e11af1-ff55-4c7b-bb87-2401f860c311" name="ConnectionHome157_1" originalIdInSource="1571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6687,7 +6687,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.408320806441566" lon="-14.91848538362382"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d08eef7a-3cb8-4665-9772-51c99cc78186" name="Home159_1" originalIdInSource="1591" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d08eef7a-3cb8-4665-9772-51c99cc78186" name="Home159_1" originalIdInSource="1591" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39595606648355" lon="-14.902453969011527"/>
         <asset xsi:type="esdl:EConnection" id="b08ed903-c5d3-4c90-b9dc-5fa703924757" name="ConnectionHome159_1" originalIdInSource="1591" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6721,7 +6721,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39595606648355" lon="-14.902453969011527"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7e1fe34e-b1a0-4742-87b5-00d6b48e5c0b" name="Home159_2" originalIdInSource="1592" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7e1fe34e-b1a0-4742-87b5-00d6b48e5c0b" name="Home159_2" originalIdInSource="1592" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.395618316432945" lon="-14.902330045666085"/>
         <asset xsi:type="esdl:EConnection" id="1fb0d9e5-f416-43cf-8b39-1cb14ec0f971" name="ConnectionHome159_2" originalIdInSource="1592" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6755,7 +6755,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.395618316432945" lon="-14.902330045666085"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="87f4c321-de4a-44df-9581-e2bc47287193" name="Home160_1" originalIdInSource="1601" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="87f4c321-de4a-44df-9581-e2bc47287193" name="Home160_1" originalIdInSource="1601" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39649472326109" lon="-14.9033274981913"/>
         <asset xsi:type="esdl:EConnection" id="d3fba45c-2f01-4678-bf40-4761b7fc72e5" name="ConnectionHome160_1" originalIdInSource="1601" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6789,7 +6789,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39649472326109" lon="-14.9033274981913"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e91d8722-b854-4c07-a71d-dac11d9525f2" name="Home161_1" originalIdInSource="1611" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e91d8722-b854-4c07-a71d-dac11d9525f2" name="Home161_1" originalIdInSource="1611" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.399571483944136" lon="-14.915947982993858"/>
         <asset xsi:type="esdl:EConnection" id="61c09f4c-0b6d-4b1b-9e6a-ee118396a1f1" name="ConnectionHome161_1" originalIdInSource="1611" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6823,7 +6823,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.399571483944136" lon="-14.915947982993858"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="da0631c6-6297-4298-9adf-5f2154e8d11f" name="Home161_2" originalIdInSource="1612" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="da0631c6-6297-4298-9adf-5f2154e8d11f" name="Home161_2" originalIdInSource="1612" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39952583890581" lon="-14.91615655212822"/>
         <asset xsi:type="esdl:EConnection" id="0e8eeba3-c838-45bc-a47f-5e1ccfee3ea6" name="ConnectionHome161_2" originalIdInSource="1612" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6857,7 +6857,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39952583890581" lon="-14.91615655212822"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="45f8d30d-a80a-47b2-89ae-c5bfb4185ab9" name="Home162_1" originalIdInSource="1621" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="45f8d30d-a80a-47b2-89ae-c5bfb4185ab9" name="Home162_1" originalIdInSource="1621" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39973580715595" lon="-14.91352968824899"/>
         <asset xsi:type="esdl:EConnection" id="9c532cce-5937-4468-bf64-6db726314a62" name="ConnectionHome162_1" originalIdInSource="1621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6891,7 +6891,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39973580715595" lon="-14.91352968824899"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c5bd8b43-6448-4d83-8db2-acaad599fbd1" name="Home162_2" originalIdInSource="1622" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c5bd8b43-6448-4d83-8db2-acaad599fbd1" name="Home162_2" originalIdInSource="1622" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39969016770837" lon="-14.91373825910768"/>
         <asset xsi:type="esdl:EConnection" id="ec667242-4652-421a-b48c-f838df1a9674" name="ConnectionHome162_2" originalIdInSource="1622" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6925,7 +6925,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39969016770837" lon="-14.91373825910768"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c72f9641-6539-414a-a86c-1b20a37dd7af" name="Home163_1" originalIdInSource="1631" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c72f9641-6539-414a-a86c-1b20a37dd7af" name="Home163_1" originalIdInSource="1631" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39997766900565" lon="-14.911590537413767"/>
         <asset xsi:type="esdl:EConnection" id="adea1171-fea2-4d26-94e9-ca5abe86323f" name="ConnectionHome163_1" originalIdInSource="1631" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6959,7 +6959,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39997766900565" lon="-14.911590537413767"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0d6d0bd0-466f-4ca8-8d5f-5745d3d3f849" name="Home163_2" originalIdInSource="1632" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="0d6d0bd0-466f-4ca8-8d5f-5745d3d3f849" name="Home163_2" originalIdInSource="1632" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40002330349692" lon="-14.911381964333481"/>
         <asset xsi:type="esdl:EConnection" id="8156d578-987a-42bd-906e-47a8aec1aacd" name="ConnectionHome163_2" originalIdInSource="1632" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6993,7 +6993,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40002330349692" lon="-14.911381964333481"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1216ff97-ea1e-488a-aef9-a05cd6be5e70" name="Home164_1" originalIdInSource="1641" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1216ff97-ea1e-488a-aef9-a05cd6be5e70" name="Home164_1" originalIdInSource="1641" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40018750452009" lon="-14.90896366157723"/>
         <asset xsi:type="esdl:EConnection" id="e53414e0-dac6-41d3-8ef5-6371446b1424" name="ConnectionHome164_1" originalIdInSource="1641" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7027,7 +7027,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40018750452009" lon="-14.90896366157723"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c60a6da5-d2f3-437f-9b99-4bd0351502e8" name="Home164_2" originalIdInSource="1642" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c60a6da5-d2f3-437f-9b99-4bd0351502e8" name="Home164_2" originalIdInSource="1642" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.400141875619724" lon="-14.909172236383123"/>
         <asset xsi:type="esdl:EConnection" id="ace70177-9be0-497e-80dd-95c7a76f5b55" name="ConnectionHome164_2" originalIdInSource="1642" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7061,7 +7061,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.400141875619724" lon="-14.909172236383123"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d313e239-6566-49af-a4a6-963979feef20" name="Home165_1" originalIdInSource="1651" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d313e239-6566-49af-a4a6-963979feef20" name="Home165_1" originalIdInSource="1651" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40053412929045" lon="-14.905711049492782"/>
         <asset xsi:type="esdl:EConnection" id="7546970a-faf9-4831-a22a-fadff90b5ace" name="ConnectionHome165_1" originalIdInSource="1651" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7095,7 +7095,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40053412929045" lon="-14.905711049492782"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7f1edeb4-e643-4fda-bd31-3d2c93f1d625" name="Home166_1" originalIdInSource="1661" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7f1edeb4-e643-4fda-bd31-3d2c93f1d625" name="Home166_1" originalIdInSource="1661" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39694261605209" lon="-14.912954734002591"/>
         <asset xsi:type="esdl:EConnection" id="8f2529c6-728f-4cf2-b1ae-698cf530924c" name="ConnectionHome166_1" originalIdInSource="1661" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7129,7 +7129,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39694261605209" lon="-14.912954734002591"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6f643880-beaf-4919-89d3-b7432a8cb7b3" name="Home166_2" originalIdInSource="1662" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6f643880-beaf-4919-89d3-b7432a8cb7b3" name="Home166_2" originalIdInSource="1662" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="119.7" buildingYear="2016" surfaceArea="55" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.396896978113105" lon="-14.913163291477963"/>
         <asset xsi:type="esdl:EConnection" id="431a315f-4894-402e-8679-57f8dea33f3a" name="ConnectionHome166_2" originalIdInSource="1662" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7163,7 +7163,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.396896978113105" lon="-14.913163291477963"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="abc8310b-6ce8-4678-b780-4ed5af9b8ead" name="Home167_1" originalIdInSource="1671" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="abc8310b-6ce8-4678-b780-4ed5af9b8ead" name="Home167_1" originalIdInSource="1671" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39700192873052" lon="-14.911849942742107"/>
         <asset xsi:type="esdl:EConnection" id="822e57d3-3766-413b-82c0-128723d3d196" name="ConnectionHome167_1" originalIdInSource="1671" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7197,7 +7197,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39700192873052" lon="-14.911849942742107"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2bbc8523-6afd-43d2-8224-c64cdb3372f6" name="Home168_1" originalIdInSource="1681" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2bbc8523-6afd-43d2-8224-c64cdb3372f6" name="Home168_1" originalIdInSource="1681" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39728938485114" lon="-14.909702353201192"/>
         <asset xsi:type="esdl:EConnection" id="824edb5e-86c2-428c-b2a5-5f58b4f763fb" name="ConnectionHome168_1" originalIdInSource="1681" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7231,7 +7231,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39728938485114" lon="-14.909702353201192"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a4357730-504c-4144-a415-90d59952e729" name="Home169_1" originalIdInSource="1691" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_B" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="a4357730-504c-4144-a415-90d59952e729" name="Home169_1" originalIdInSource="1691" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_B" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.397636036551674" lon="-14.906449953580891"/>
         <asset xsi:type="esdl:EConnection" id="8bc53b30-9cdf-4a7e-9f1f-874fec8612ec" name="ConnectionHome169_1" originalIdInSource="1691" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7265,7 +7265,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.397636036551674" lon="-14.906449953580891"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="df11224f-04c0-44a4-af8b-b18ed525bad1" name="Home170_1" originalIdInSource="1701" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_A" floorArea="48.3" buildingYear="1970" surfaceArea="114" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="df11224f-04c0-44a4-af8b-b18ed525bad1" name="Home170_1" originalIdInSource="1701" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_A" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40081159834443" lon="-14.898602752739764"/>
         <asset xsi:type="esdl:EConnection" id="8f1142a0-0491-450f-b6cb-b8d8701330e2" name="ConnectionHome170_1" originalIdInSource="1701" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7299,7 +7299,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40081159834443" lon="-14.898602752739764"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="09e8f8d6-789f-4df2-b894-4fc73f5244ab" name="Home171_1" originalIdInSource="1711" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="09e8f8d6-789f-4df2-b894-4fc73f5244ab" name="Home171_1" originalIdInSource="1711" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40057857512572" lon="-14.8971654246968"/>
         <asset xsi:type="esdl:EConnection" id="c1867e51-457a-4116-97a8-67a80e6f0842" name="ConnectionHome171_1" originalIdInSource="1711" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7333,7 +7333,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40057857512572" lon="-14.8971654246968"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="beb2e261-ebfb-40ae-b043-9e08681e6078" name="Home171_2" originalIdInSource="1712" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="beb2e261-ebfb-40ae-b043-9e08681e6078" name="Home171_2" originalIdInSource="1712" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40070185424926" lon="-14.8974359500114"/>
         <asset xsi:type="esdl:EConnection" id="72851310-adfa-474a-bf32-d491db51ee46" name="ConnectionHome171_2" originalIdInSource="1712" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7367,7 +7367,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40070185424926" lon="-14.8974359500114"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2db89775-b0b0-4622-9875-5361b8d4bf39" name="Home172_1" originalIdInSource="1721" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2db89775-b0b0-4622-9875-5361b8d4bf39" name="Home172_1" originalIdInSource="1721" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40051441117381" lon="-14.895790054854656"/>
         <asset xsi:type="esdl:EConnection" id="0be0ce5e-b92f-4a93-8d0a-ff47cb659592" name="ConnectionHome172_1" originalIdInSource="1721" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7401,7 +7401,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40051441117381" lon="-14.895790054854656"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a9d05277-ff17-4c32-aaf7-8b897f2a1213" name="Home173_1" originalIdInSource="1731" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a9d05277-ff17-4c32-aaf7-8b897f2a1213" name="Home173_1" originalIdInSource="1731" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422947729117936" lon="-14.89748280249169"/>
         <asset xsi:type="esdl:EConnection" id="35a3183d-fd6a-469a-aa50-9e22c3c2d779" name="ConnectionHome173_1" originalIdInSource="1731" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7435,7 +7435,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422947729117936" lon="-14.89748280249169"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fffc79f4-0776-4675-a2ad-10c38f280a55" name="Home174_1" originalIdInSource="1741" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="fffc79f4-0776-4675-a2ad-10c38f280a55" name="Home174_1" originalIdInSource="1741" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41393030872454" lon="-14.915361670309261"/>
         <asset xsi:type="esdl:EConnection" id="846018ef-ebcf-487f-8a76-dde6ac3a37c3" name="ConnectionHome174_1" originalIdInSource="1741" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7469,7 +7469,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41393030872454" lon="-14.915361670309261"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="df0d3bef-b587-492d-bb66-ff71855e956c" name="Home174_2" originalIdInSource="1742" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="df0d3bef-b587-492d-bb66-ff71855e956c" name="Home174_2" originalIdInSource="1742" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.414021596464536" lon="-14.914944390875482"/>
         <asset xsi:type="esdl:EConnection" id="4933494b-f579-4b3b-9220-70b2e457d4f8" name="ConnectionHome174_2" originalIdInSource="1742" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7503,7 +7503,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.414021596464536" lon="-14.914944390875482"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c18d6d5b-f660-4b8a-b0b9-422916ea3caf" name="Home175_1" originalIdInSource="1751" assetType="appartement_1992_2005" energyLabel="LABEL_G" floorArea="87.9" buildingYear="1998" surfaceArea="87" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="c18d6d5b-f660-4b8a-b0b9-422916ea3caf" name="Home175_1" originalIdInSource="1751" assetType="appartement_1992_2005" energyLabel="LABEL_G" floorArea="87.9" buildingYear="1998" surfaceArea="29" numberOfFloors="1">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.414094610907895" lon="-14.912942597374423"/>
         <asset xsi:type="esdl:EConnection" id="37cbb18f-8c7a-446d-a8ac-1293f4b6f869" name="ConnectionHome175_1" originalIdInSource="1751" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7537,7 +7537,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.414094610907895" lon="-14.912942597374423"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="74415502-18bb-4b98-90f9-3dd4b8ff010b" name="Home175_2" originalIdInSource="1752" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="74415502-18bb-4b98-90f9-3dd4b8ff010b" name="Home175_2" originalIdInSource="1752" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.414185887466424" lon="-14.91252531449434"/>
         <asset xsi:type="esdl:EConnection" id="621c503e-a2df-4f81-9891-aa28ef2f4bbb" name="ConnectionHome175_2" originalIdInSource="1752" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7571,7 +7571,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.414185887466424" lon="-14.91252531449434"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b4ef86bc-5931-45d1-a586-872a01bed55b" name="Home176_1" originalIdInSource="1761" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="42.89" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="b4ef86bc-5931-45d1-a586-872a01bed55b" name="Home176_1" originalIdInSource="1761" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.414258848404245" lon="-14.910523524280757"/>
         <asset xsi:type="esdl:EConnection" id="c139fa1a-c9ef-4498-a9d1-594118cc4457" name="ConnectionHome176_1" originalIdInSource="1761" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7605,7 +7605,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.414258848404245" lon="-14.910523524280757"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7831d26b-25f6-4cf6-a80e-cfea52084cb1" name="Home176_2" originalIdInSource="1762" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7831d26b-25f6-4cf6-a80e-cfea52084cb1" name="Home176_2" originalIdInSource="1762" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.414304481332785" lon="-14.9103148812678"/>
         <asset xsi:type="esdl:EConnection" id="cd6ea2e2-c36b-4a7e-bccb-75f1d9c46766" name="ConnectionHome176_2" originalIdInSource="1762" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7639,7 +7639,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.414304481332785" lon="-14.9103148812678"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="93f614d0-6828-4017-87b6-864cd3044967" name="Home177_1" originalIdInSource="1771" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="93f614d0-6828-4017-87b6-864cd3044967" name="Home177_1" originalIdInSource="1771" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41442302121258" lon="-14.908104451020078"/>
         <asset xsi:type="esdl:EConnection" id="5256bd09-78d7-42a6-9539-857d1e90e64b" name="ConnectionHome177_1" originalIdInSource="1771" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7673,7 +7673,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41442302121258" lon="-14.908104451020078"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="20f9a57a-4c26-449e-8062-8cf888e19744" name="Home177_2" originalIdInSource="1772" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="20f9a57a-4c26-449e-8062-8cf888e19744" name="Home177_2" originalIdInSource="1772" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41446864855021" lon="-14.90789580628262"/>
         <asset xsi:type="esdl:EConnection" id="a8997492-73f9-4dba-ba78-8b4dabe7ba25" name="ConnectionHome177_2" originalIdInSource="1772" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7707,7 +7707,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41446864855021" lon="-14.90789580628262"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bd78c7f1-fb75-47aa-82f4-fe8fb6829086" name="Home178_1" originalIdInSource="1781" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="bd78c7f1-fb75-47aa-82f4-fe8fb6829086" name="Home178_1" originalIdInSource="1781" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41471039001644" lon="-14.905956006746804"/>
         <asset xsi:type="esdl:EConnection" id="a438d7cb-7eed-4484-bb51-ba68d4a75f0b" name="ConnectionHome178_1" originalIdInSource="1781" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7741,7 +7741,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41471039001644" lon="-14.905956006746804"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="deb17aab-fe87-4512-a0c5-452d39b36bf1" name="Home178_2" originalIdInSource="1782" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="deb17aab-fe87-4512-a0c5-452d39b36bf1" name="Home178_2" originalIdInSource="1782" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41463275107854" lon="-14.90547673112164"/>
         <asset xsi:type="esdl:EConnection" id="c16345b1-af65-4946-b59a-f55cec5f2476" name="ConnectionHome178_2" originalIdInSource="1782" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7775,7 +7775,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41463275107854" lon="-14.90547673112164"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="af8a401c-6d44-4b8a-bc94-602fee32ad8a" name="Home179_1" originalIdInSource="1791" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="af8a401c-6d44-4b8a-bc94-602fee32ad8a" name="Home179_1" originalIdInSource="1791" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41487444063116" lon="-14.903536925455024"/>
         <asset xsi:type="esdl:EConnection" id="d47f33e1-2b11-4517-98c4-56e4ae0ecc17" name="ConnectionHome179_1" originalIdInSource="1791" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7809,7 +7809,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41487444063116" lon="-14.903536925455024"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="82a5e46c-31ef-4309-af12-2863cc787499" name="Home180_1" originalIdInSource="1801" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="82a5e46c-31ef-4309-af12-2863cc787499" name="Home180_1" originalIdInSource="1801" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41488801978723" lon="-14.902640358493494"/>
         <asset xsi:type="esdl:EConnection" id="7960926b-9342-4f70-b174-5df1b5e4eb48" name="ConnectionHome180_1" originalIdInSource="1801" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7843,7 +7843,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41488801978723" lon="-14.902640358493494"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fb5416af-4b91-4840-aae5-6368e21708f5" name="Home181_1" originalIdInSource="1811" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="fb5416af-4b91-4840-aae5-6368e21708f5" name="Home181_1" originalIdInSource="1811" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41491515149949" lon="-14.900847230154783"/>
         <asset xsi:type="esdl:EConnection" id="455cfd50-4f32-4699-bbd2-6697aa1269cc" name="ConnectionHome181_1" originalIdInSource="1811" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7877,7 +7877,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41491515149949" lon="-14.900847230154783"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="68ec4e1d-a272-476d-8cb4-36c0dfcb9362" name="Home181_2" originalIdInSource="1812" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="48.3" buildingYear="1970" surfaceArea="114" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="68ec4e1d-a272-476d-8cb4-36c0dfcb9362" name="Home181_2" originalIdInSource="1812" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41500637214805" lon="-14.90042993002246"/>
         <asset xsi:type="esdl:EConnection" id="23494568-2f8d-40c5-98e2-73ebccdc73e0" name="ConnectionHome181_2" originalIdInSource="1812" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7911,7 +7911,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41500637214805" lon="-14.90042993002246"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9a6edc21-8c2e-47c8-a702-9723dd91d250" name="Home182_1" originalIdInSource="1821" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="9a6edc21-8c2e-47c8-a702-9723dd91d250" name="Home182_1" originalIdInSource="1821" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41507906554576" lon="-14.898428156144801"/>
         <asset xsi:type="esdl:EConnection" id="3ccc7bcb-a163-4b4b-aa2c-a5bba4af6d59" name="ConnectionHome182_1" originalIdInSource="1821" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7945,7 +7945,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41507906554576" lon="-14.898428156144801"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="50c10f37-70bb-473c-940f-8babe5961867" name="Home182_2" originalIdInSource="1822" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="50c10f37-70bb-473c-940f-8babe5961867" name="Home182_2" originalIdInSource="1822" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41495578256745" lon="-14.898157551601278"/>
         <asset xsi:type="esdl:EConnection" id="3fcd98b6-1aa9-45dd-bbc8-841ecb505cdc" name="ConnectionHome182_2" originalIdInSource="1822" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7979,7 +7979,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41495578256745" lon="-14.898157551601278"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="163ac61d-86f3-4b63-adc1-1e8d81686834" name="Home183_1" originalIdInSource="1831" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="163ac61d-86f3-4b63-adc1-1e8d81686834" name="Home183_1" originalIdInSource="1831" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41502842579984" lon="-14.896155789895884"/>
         <asset xsi:type="esdl:EConnection" id="c32d8172-ae11-486b-b432-d353067ce718" name="ConnectionHome183_1" originalIdInSource="1831" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8013,7 +8013,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41502842579984" lon="-14.896155789895884"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f7347ecc-ea63-4889-aebe-5afa31c2f1cd" name="Home184_1" originalIdInSource="1841" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="f7347ecc-ea63-4889-aebe-5afa31c2f1cd" name="Home184_1" originalIdInSource="1841" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40853083956548" lon="-14.915857991344796"/>
         <asset xsi:type="esdl:EConnection" id="8936bd51-953a-4d59-8f7e-c81e621547e1" name="ConnectionHome184_1" originalIdInSource="1841" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8047,7 +8047,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40853083956548" lon="-14.915857991344796"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ca02958a-c095-4c22-bdd1-7be4ccda254a" name="Home185_1" originalIdInSource="1851" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="48.3" buildingYear="1970" surfaceArea="114" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ca02958a-c095-4c22-bdd1-7be4ccda254a" name="Home185_1" originalIdInSource="1851" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40877275170075" lon="-14.913918450517711"/>
         <asset xsi:type="esdl:EConnection" id="e474cf14-c7de-42b3-9631-060cc1c95ada" name="ConnectionHome185_1" originalIdInSource="1851" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8081,7 +8081,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40877275170075" lon="-14.913918450517711"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="86813dcb-11fa-4d19-b643-b9df484965dd" name="Home185_2" originalIdInSource="1852" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="86813dcb-11fa-4d19-b643-b9df484965dd" name="Home185_2" originalIdInSource="1852" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40864951720998" lon="-14.913647824500229"/>
         <asset xsi:type="esdl:EConnection" id="83c7fa2d-e31c-4014-862b-81b38b9576cb" name="ConnectionHome185_2" originalIdInSource="1852" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8115,7 +8115,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40864951720998" lon="-14.913647824500229"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="04edb7d5-ceae-4a0e-a5f2-045234e6e338" name="Home186_1" originalIdInSource="1861" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="04edb7d5-ceae-4a0e-a5f2-045234e6e338" name="Home186_1" originalIdInSource="1861" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.408937017240596" lon="-14.911499663044937"/>
         <asset xsi:type="esdl:EConnection" id="d5b8f238-181c-4a36-bfd8-8b3341772a38" name="ConnectionHome186_1" originalIdInSource="1861" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8149,7 +8149,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.408937017240596" lon="-14.911499663044937"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="85b0f129-5b5b-4281-8b38-94096d17fafc" name="Home186_2" originalIdInSource="1862" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="85b0f129-5b5b-4281-8b38-94096d17fafc" name="Home186_2" originalIdInSource="1862" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.409028286460305" lon="-14.911082429270094"/>
         <asset xsi:type="esdl:EConnection" id="44409cf9-7506-4dd8-979f-487ce59147c6" name="ConnectionHome186_2" originalIdInSource="1862" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8183,7 +8183,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.409028286460305" lon="-14.911082429270094"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f959b530-c561-4640-8005-d5bf2fb4463f" name="Home187_1" originalIdInSource="1871" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="f959b530-c561-4640-8005-d5bf2fb4463f" name="Home187_1" originalIdInSource="1871" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40910121809306" lon="-14.90908087540645"/>
         <asset xsi:type="esdl:EConnection" id="25926361-fd87-44d8-971f-b3ea5735ae8c" name="ConnectionHome187_1" originalIdInSource="1871" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8217,7 +8217,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40910121809306" lon="-14.90908087540645"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="096a8093-666d-42c2-8a99-4b71103af847" name="Home187_2" originalIdInSource="1872" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="096a8093-666d-42c2-8a99-4b71103af847" name="Home187_2" originalIdInSource="1872" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40914684735213" lon="-14.908872256945253"/>
         <asset xsi:type="esdl:EConnection" id="a067e816-2bdc-4769-91bb-f6d1eac23fac" name="ConnectionHome187_2" originalIdInSource="1872" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8251,7 +8251,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40914684735213" lon="-14.908872256945253"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="823edde7-a41d-4a6f-8eaa-f9e2a54b7f20" name="Home188_1" originalIdInSource="1881" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="823edde7-a41d-4a6f-8eaa-f9e2a54b7f20" name="Home188_1" originalIdInSource="1881" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41376594185518" lon="-14.917780743093383"/>
         <asset xsi:type="esdl:EConnection" id="8a8d22c4-a553-4fe8-a93e-97f9fcfa86ea" name="ConnectionHome188_1" originalIdInSource="1881" assetType="3x80A" capacity="55425.62584220407">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8285,7 +8285,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41376594185518" lon="-14.917780743093383"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8bf19cc8-4d0d-48ca-8061-bbb81e7d1806" name="Home189_1" originalIdInSource="1891" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="8bf19cc8-4d0d-48ca-8061-bbb81e7d1806" name="Home189_1" originalIdInSource="1891" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.410593707819245" lon="-14.919771072690766"/>
         <asset xsi:type="esdl:EConnection" id="18cbdd14-3a67-4631-93a0-7071db0caf48" name="ConnectionHome189_1" originalIdInSource="1891" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8319,7 +8319,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.410593707819245" lon="-14.919771072690766"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1605e8c0-1f84-44cd-b0fc-7c08825feedc" name="Home190_1" originalIdInSource="1901" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1605e8c0-1f84-44cd-b0fc-7c08825feedc" name="Home190_1" originalIdInSource="1901" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40953482228981" lon="-14.919607481317621"/>
         <asset xsi:type="esdl:EConnection" id="4dc4898e-6d36-40d5-8511-e937272769ef" name="ConnectionHome190_1" originalIdInSource="1901" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8353,7 +8353,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40953482228981" lon="-14.919607481317621"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="509ce859-0734-44ea-bd4a-49f259546f9a" name="Home191_1" originalIdInSource="1911" assetType="2 onder 1 kap woning_1965_1974" energyLabel="LABEL_C" floorArea="61.45" buildingYear="1970" surfaceArea="133" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="509ce859-0734-44ea-bd4a-49f259546f9a" name="Home191_1" originalIdInSource="1911" assetType="2 onder 1 kap woning_1965_1974" energyLabel="LABEL_C" floorArea="133.99" buildingYear="1970" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40856277496287" lon="-14.916545850820158"/>
         <asset xsi:type="esdl:EConnection" id="c6f85efe-adf0-4d02-82e0-529c09eaf83b" name="ConnectionHome191_1" originalIdInSource="1911" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8387,7 +8387,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40856277496287" lon="-14.916545850820158"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="79def729-cc74-4574-8a5a-2dff215ca928" name="Home192_1" originalIdInSource="1921" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="50.52" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="79def729-cc74-4574-8a5a-2dff215ca928" name="Home192_1" originalIdInSource="1921" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42295767145208" lon="-14.902445743140218"/>
         <asset xsi:type="esdl:EConnection" id="fcec7680-89eb-4fa1-9e75-371fd8471d2a" name="ConnectionHome192_1" originalIdInSource="1921" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8421,7 +8421,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42295767145208" lon="-14.902445743140218"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="82f53921-ceeb-4b3b-8cfa-defefe75e5cd" name="Home193_1" originalIdInSource="1931" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="82f53921-ceeb-4b3b-8cfa-defefe75e5cd" name="Home193_1" originalIdInSource="1931" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_G" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422952734200265" lon="-14.899964263365634"/>
         <asset xsi:type="esdl:EConnection" id="5fb2dded-9e35-4254-b4ae-43a6a19687b7" name="ConnectionHome193_1" originalIdInSource="1931" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8455,7 +8455,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422952734200265" lon="-14.899964263365634"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1e84080d-7ddb-472d-a584-95f475b635a2" name="Home194_1" originalIdInSource="1941" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1e84080d-7ddb-472d-a584-95f475b635a2" name="Home194_1" originalIdInSource="1941" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42296124619574" lon="-14.89658608956598"/>
         <asset xsi:type="esdl:EConnection" id="8f35f70f-5854-420d-877b-399938c1364d" name="ConnectionHome194_1" originalIdInSource="1941" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8489,7 +8489,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42296124619574" lon="-14.89658608956598"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="06ac6a56-7719-47e4-a2d0-ed2c60258337" name="Home196_1" originalIdInSource="1961" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="06ac6a56-7719-47e4-a2d0-ed2c60258337" name="Home196_1" originalIdInSource="1961" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.423060818750976" lon="-14.892790564101519"/>
         <asset xsi:type="esdl:EConnection" id="e1899232-aa5f-4e77-a048-c348b092f699" name="ConnectionHome196_1" originalIdInSource="1961" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8523,7 +8523,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.423060818750976" lon="-14.892790564101519"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="036c24f8-575c-4b2b-be3c-8aa7deb8e664" name="Home197_1" originalIdInSource="1971" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="036c24f8-575c-4b2b-be3c-8aa7deb8e664" name="Home197_1" originalIdInSource="1971" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42298825375012" lon="-14.894792669289947"/>
         <asset xsi:type="esdl:EConnection" id="bc758463-dd2c-4787-9595-49d2bbfd934d" name="ConnectionHome197_1" originalIdInSource="1971" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8557,7 +8557,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42298825375012" lon="-14.894792669289947"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7a313325-d3bf-4874-aafd-887436ee2bba" name="Home198_1" originalIdInSource="1981" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7a313325-d3bf-4874-aafd-887436ee2bba" name="Home198_1" originalIdInSource="1981" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422950983483034" lon="-14.891623236452523"/>
         <asset xsi:type="esdl:EConnection" id="34b009d8-ccbb-4f82-aafc-a68b99ed83ef" name="ConnectionHome198_1" originalIdInSource="1981" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8591,7 +8591,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422950983483034" lon="-14.891623236452523"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a6735c9a-1031-4a97-81df-f79d9f939939" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_D" floorArea="50.0" buildingYear="1970" surfaceArea="115" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a6735c9a-1031-4a97-81df-f79d9f939939" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_D" floorArea="115.96" buildingYear="1970" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42284113332801" lon="-14.890455918442074"/>
         <asset xsi:type="esdl:EConnection" id="e4a6ca32-0fb0-41b2-9410-7bcbf183b776" name="ConnectionHome201_1" originalIdInSource="2011" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8625,7 +8625,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42284113332801" lon="-14.890455918442074"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="45ac69f1-976c-4526-b6b3-841ea5ddc835" name="Home202_1" originalIdInSource="2021" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_APP" floorArea="102.21" buildingYear="1998" surfaceArea="178" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="45ac69f1-976c-4526-b6b3-841ea5ddc835" name="Home202_1" originalIdInSource="2021" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_APP" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42294575037622" lon="-14.88914183820694"/>
         <asset xsi:type="esdl:EConnection" id="e71c5cf4-c8bc-44a0-a08c-fd1eeeeb0445" name="ConnectionHome202_1" originalIdInSource="2021" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8659,7 +8659,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42294575037622" lon="-14.88914183820694"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7e955a50-d3ac-44b7-aa3a-ddda5f2133a5" name="Home203_1" originalIdInSource="2031" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="68.95" buildingYear="1998" surfaceArea="143" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7e955a50-d3ac-44b7-aa3a-ddda5f2133a5" name="Home203_1" originalIdInSource="2031" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42300476691099" lon="-14.888036451178875"/>
         <asset xsi:type="esdl:EConnection" id="777d8e7a-9d23-4269-a8d0-aa8a53c9a7fb" name="ConnectionHome203_1" originalIdInSource="2031" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8693,7 +8693,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42300476691099" lon="-14.888036451178875"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2c598887-2b6c-4eee-8980-6b8c5c17d6ae" name="Home204_1" originalIdInSource="2041" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2c598887-2b6c-4eee-8980-6b8c5c17d6ae" name="Home204_1" originalIdInSource="2041" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42298602766732" lon="-14.886451764398865"/>
         <asset xsi:type="esdl:EConnection" id="378380d4-bdf6-4c54-8e0f-46928fc4823a" name="ConnectionHome204_1" originalIdInSource="2041" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8727,7 +8727,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42298602766732" lon="-14.886451764398865"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="384b45b5-7509-482c-95f3-f468725be8a7" name="Home205_1" originalIdInSource="2051" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="48.3" buildingYear="1970" surfaceArea="114" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="384b45b5-7509-482c-95f3-f468725be8a7" name="Home205_1" originalIdInSource="2051" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42293508065652" lon="-14.88417909829427"/>
         <asset xsi:type="esdl:EConnection" id="7fc38838-eebc-4dc3-971f-eb62e688203f" name="ConnectionHome205_1" originalIdInSource="2051" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8761,7 +8761,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42293508065652" lon="-14.88417909829427"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b2f8cee9-434b-4658-9e00-4771db73d5d8" name="Home206_1" originalIdInSource="2061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b2f8cee9-434b-4658-9e00-4771db73d5d8" name="Home206_1" originalIdInSource="2061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42302622514987" lon="-14.883761707276113"/>
         <asset xsi:type="esdl:EConnection" id="54aab401-ba0c-454b-8cc9-f4ba370cea96" name="ConnectionHome206_1" originalIdInSource="2061" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8795,7 +8795,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42302622514987" lon="-14.883761707276113"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="89d24c6c-20e0-4ee1-8f48-e8492fe4d306" name="Home207_1" originalIdInSource="2071" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="89d24c6c-20e0-4ee1-8f48-e8492fe4d306" name="Home207_1" originalIdInSource="2071" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.423130744996506" lon="-14.882447632222702"/>
         <asset xsi:type="esdl:EConnection" id="c8ebe304-40fe-496d-b794-431c0bd7c427" name="ConnectionHome207_1" originalIdInSource="2071" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8829,7 +8829,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.423130744996506" lon="-14.882447632222702"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1fb5e133-67da-48e8-9fe7-7d2c4b214d22" name="Home208_1" originalIdInSource="2081" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1fb5e133-67da-48e8-9fe7-7d2c4b214d22" name="Home208_1" originalIdInSource="2081" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42306634282254" lon="-14.881071666827475"/>
         <asset xsi:type="esdl:EConnection" id="8d409d8e-1e3b-422d-b9eb-cea2e43c173b" name="ConnectionHome208_1" originalIdInSource="2081" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8863,7 +8863,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42306634282254" lon="-14.881071666827475"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e59a1d4c-380d-4173-a247-db6a19dd95e3" name="Home209_1" originalIdInSource="2091" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="e59a1d4c-380d-4173-a247-db6a19dd95e3" name="Home209_1" originalIdInSource="2091" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42300191985994" lon="-14.87969571092607"/>
         <asset xsi:type="esdl:EConnection" id="5044413c-df2e-46c1-978f-9600f26cc856" name="ConnectionHome209_1" originalIdInSource="2091" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8897,7 +8897,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42300191985994" lon="-14.87969571092607"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e975c078-b449-4b2b-a491-18b1b700ccbf" name="Home210_1" originalIdInSource="2101" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="e975c078-b449-4b2b-a491-18b1b700ccbf" name="Home210_1" originalIdInSource="2101" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42279418631658" lon="-14.913206587313974"/>
         <asset xsi:type="esdl:EConnection" id="9d40441c-267e-4c68-a712-99ae7c2bf13b" name="ConnectionHome210_1" originalIdInSource="2101" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8931,7 +8931,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42279418631658" lon="-14.913206587313974"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9cd66c76-220d-4ae8-9ef4-f1c0bb8d8ae9" name="Home211_1" originalIdInSource="2111" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="9cd66c76-220d-4ae8-9ef4-f1c0bb8d8ae9" name="Home211_1" originalIdInSource="2111" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42286715803756" lon="-14.911204410302767"/>
         <asset xsi:type="esdl:EConnection" id="4d8d72a9-f438-4b7e-b0cf-432a21d7afb8" name="ConnectionHome211_1" originalIdInSource="2111" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8965,7 +8965,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42286715803756" lon="-14.911204410302767"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2d573514-daf9-41ac-8888-d76ba028bbd0" name="Home212_1" originalIdInSource="2121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2d573514-daf9-41ac-8888-d76ba028bbd0" name="Home212_1" originalIdInSource="2121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422757559014904" lon="-14.910036978838482"/>
         <asset xsi:type="esdl:EConnection" id="34682b48-4981-4de6-a6f5-ace93228fbc2" name="ConnectionHome212_1" originalIdInSource="2121" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8999,7 +8999,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422757559014904" lon="-14.910036978838482"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="39382ee6-3057-4ec4-8c19-93903325e4a9" name="Home214_1" originalIdInSource="2141" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="39382ee6-3057-4ec4-8c19-93903325e4a9" name="Home214_1" originalIdInSource="2141" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42281683049603" lon="-14.908931554886378"/>
         <asset xsi:type="esdl:EConnection" id="b932897e-9b81-4803-a488-6c4b5e2c2ca4" name="ConnectionHome214_1" originalIdInSource="2141" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9033,7 +9033,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42281683049603" lon="-14.908931554886378"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="72ff0834-d2a4-46b6-a6fa-04a50c4f0763" name="Home215_1" originalIdInSource="2151" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="72ff0834-d2a4-46b6-a6fa-04a50c4f0763" name="Home215_1" originalIdInSource="2151" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42286246028548" lon="-14.90872286962236"/>
         <asset xsi:type="esdl:EConnection" id="265cb770-42b1-4c6b-9f9a-4152b7269de3" name="ConnectionHome215_1" originalIdInSource="2151" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9067,7 +9067,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42286246028548" lon="-14.90872286962236"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="674f49ef-11d0-4b73-96e8-af80e35b858c" name="Home216_1" originalIdInSource="2161" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="674f49ef-11d0-4b73-96e8-af80e35b858c" name="Home216_1" originalIdInSource="2161" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.421958208103774" lon="-14.926201079831985"/>
         <asset xsi:type="esdl:EConnection" id="1f16a5da-f402-4245-b5e8-e78e94880078" name="ConnectionHome216_1" originalIdInSource="2161" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9101,7 +9101,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.421958208103774" lon="-14.926201079831985"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e439cb5a-4e5c-41e6-8ea1-558c3d53471b" name="Home217_1" originalIdInSource="2171" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="21.445" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="e439cb5a-4e5c-41e6-8ea1-558c3d53471b" name="Home217_1" originalIdInSource="2171" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42215467694772" lon="-14.924469616647999"/>
         <asset xsi:type="esdl:EConnection" id="6ff638e7-b4ac-4929-a9c1-4724e4cf1fea" name="ConnectionHome217_1" originalIdInSource="2171" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9135,7 +9135,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42215467694772" lon="-14.924469616647999"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="db19663b-0367-4ae8-984f-c95c4fe1e8ba" name="Home218_1" originalIdInSource="2181" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="db19663b-0367-4ae8-984f-c95c4fe1e8ba" name="Home218_1" originalIdInSource="2181" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42230545044285" lon="-14.922946824687125"/>
         <asset xsi:type="esdl:EConnection" id="5945fc4f-a837-42ad-b6e2-e56504804816" name="ConnectionHome218_1" originalIdInSource="2181" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9169,7 +9169,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42230545044285" lon="-14.922946824687125"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="305facab-995e-4f34-84e5-8f4b474d74f1" name="Home219_1" originalIdInSource="2191" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="305facab-995e-4f34-84e5-8f4b474d74f1" name="Home219_1" originalIdInSource="2191" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="119.7" buildingYear="2016" surfaceArea="55" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42220975979401" lon="-14.920882582006849"/>
         <asset xsi:type="esdl:EConnection" id="06dcde95-1b63-431a-affb-bb23e8a26f9d" name="ConnectionHome219_1" originalIdInSource="2191" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9203,7 +9203,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42220975979401" lon="-14.920882582006849"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="76d630c5-1921-4cbc-a184-892e7f00e34d" name="Home220_1" originalIdInSource="2201" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="76d630c5-1921-4cbc-a184-892e7f00e34d" name="Home220_1" originalIdInSource="2201" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422827455359695" lon="-14.877152525155141"/>
         <asset xsi:type="esdl:EConnection" id="40335205-d2a6-46e2-9a38-0dc68e995df5" name="ConnectionHome220_1" originalIdInSource="2201" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9237,7 +9237,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422827455359695" lon="-14.877152525155141"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7f1a0714-cf5a-4f7f-88a5-a2fc745e8359" name="Home221_1" originalIdInSource="2211" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="7f1a0714-cf5a-4f7f-88a5-a2fc745e8359" name="Home221_1" originalIdInSource="2211" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41678261321712" lon="-14.906491170382838"/>
         <asset xsi:type="esdl:EConnection" id="e65e7dbc-0dc1-4fcd-b345-d9c998144fbd" name="ConnectionHome221_1" originalIdInSource="2211" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9271,7 +9271,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41678261321712" lon="-14.906491170382838"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e9da7e63-4977-4d70-9cd7-61c1e99df3fe" name="Home223_1" originalIdInSource="2231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e9da7e63-4977-4d70-9cd7-61c1e99df3fe" name="Home223_1" originalIdInSource="2231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41729146874751" lon="-14.892478128868882"/>
         <asset xsi:type="esdl:EConnection" id="d0271cad-da45-41fe-9b3b-62e92d1c4f9f" name="ConnectionHome223_1" originalIdInSource="2231" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9305,7 +9305,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41729146874751" lon="-14.892478128868882"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bcc4c0cc-3fd1-4d0b-a09b-a8f36a08c1d3" name="Home226_1" originalIdInSource="2261" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="bcc4c0cc-3fd1-4d0b-a09b-a8f36a08c1d3" name="Home226_1" originalIdInSource="2261" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41358333825049" lon="-14.918615291450747"/>
         <asset xsi:type="esdl:EConnection" id="6e3b1eeb-3b22-4a1a-bb62-69a445199361" name="ConnectionHome226_1" originalIdInSource="2261" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9339,7 +9339,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41358333825049" lon="-14.918615291450747"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d9d27bd6-65b2-4b6c-898e-0c6d7d144c8a" name="Home238_1" originalIdInSource="2381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d9d27bd6-65b2-4b6c-898e-0c6d7d144c8a" name="Home238_1" originalIdInSource="2381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.415984229716116" lon="-14.91431269340204"/>
         <asset xsi:type="esdl:EConnection" id="b4c9cee5-b4aa-4ce8-975f-d458159d5415" name="ConnectionHome238_1" originalIdInSource="2381" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9373,7 +9373,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.415984229716116" lon="-14.91431269340204"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4eb662b0-54a7-4da0-99ef-419b3365dc38" name="Home239_1" originalIdInSource="2391" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4eb662b0-54a7-4da0-99ef-419b3365dc38" name="Home239_1" originalIdInSource="2391" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41725934817012" lon="-14.891790204950988"/>
         <asset xsi:type="esdl:EConnection" id="a6910b80-58e8-4f8f-bf3e-f20a9061bcf2" name="ConnectionHome239_1" originalIdInSource="2391" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9407,7 +9407,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41725934817012" lon="-14.891790204950988"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="714a345d-a04c-42e3-8102-55350f04f03f" name="Home242_1" originalIdInSource="2421" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="714a345d-a04c-42e3-8102-55350f04f03f" name="Home242_1" originalIdInSource="2421" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41599791507714" lon="-14.913416078735493"/>
         <asset xsi:type="esdl:EConnection" id="1f6edf2a-8e6a-4799-9bbd-03a48646409b" name="ConnectionHome242_1" originalIdInSource="2421" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9441,7 +9441,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41599791507714" lon="-14.913416078735493"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b9a44499-ee44-4ff9-a783-012412d1cb6e" name="Home244_1" originalIdInSource="2441" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="b9a44499-ee44-4ff9-a783-012412d1cb6e" name="Home244_1" originalIdInSource="2441" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42191253791129" lon="-14.92640975404"/>
         <asset xsi:type="esdl:EConnection" id="eb3473f5-ef1e-41c1-901a-0caed30adcd0" name="ConnectionHome244_1" originalIdInSource="2441" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9475,7 +9475,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42191253791129" lon="-14.92640975404"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1df93963-01de-4aed-9b58-c29f90c40b98" name="Home245_1" originalIdInSource="2451" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1df93963-01de-4aed-9b58-c29f90c40b98" name="Home245_1" originalIdInSource="2451" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41533198313703" lon="-14.88725225863161"/>
         <asset xsi:type="esdl:EConnection" id="f347aa9b-7b74-435e-9862-0035bbed82c3" name="ConnectionHome245_1" originalIdInSource="2451" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9509,7 +9509,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41533198313703" lon="-14.88725225863161"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="151e1b98-33a3-434a-bec0-3ef5a4de8b8d" name="Home247_1" originalIdInSource="2471" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="151e1b98-33a3-434a-bec0-3ef5a4de8b8d" name="Home247_1" originalIdInSource="2471" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41574603241436" lon="-14.927074138903018"/>
         <asset xsi:type="esdl:EConnection" id="986617c3-005a-4536-872a-bb0187620b92" name="ConnectionHome247_1" originalIdInSource="2471" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9543,7 +9543,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41574603241436" lon="-14.927074138903018"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="658901a8-ad90-442f-9b5a-78d1a676f0ab" name="Home248_1" originalIdInSource="2481" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="658901a8-ad90-442f-9b5a-78d1a676f0ab" name="Home248_1" originalIdInSource="2481" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40524428690404" lon="-14.922538800985501"/>
         <asset xsi:type="esdl:EConnection" id="e90b4881-3c1b-40d1-83a9-3d2a864c90fc" name="ConnectionHome248_1" originalIdInSource="2481" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9577,7 +9577,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40524428690404" lon="-14.922538800985501"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c40f77ba-5d72-470c-a4d3-3c59df6cee15" name="Home249_1" originalIdInSource="2491" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c40f77ba-5d72-470c-a4d3-3c59df6cee15" name="Home249_1" originalIdInSource="2491" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.398069233711325" lon="-14.925310894952089"/>
         <asset xsi:type="esdl:EConnection" id="f8f3841a-9dc2-4491-ae2e-2754311661a5" name="ConnectionHome249_1" originalIdInSource="2491" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9611,7 +9611,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.398069233711325" lon="-14.925310894952089"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="843639d7-238d-4ca6-84e8-ccd25360b241" name="Home250_1" originalIdInSource="2501" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="843639d7-238d-4ca6-84e8-ccd25360b241" name="Home250_1" originalIdInSource="2501" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_AP" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.405184845604346" lon="-14.923643817651831"/>
         <asset xsi:type="esdl:EConnection" id="d8be2526-4cbd-447d-abd5-aecfda25b39f" name="ConnectionHome250_1" originalIdInSource="2501" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9645,7 +9645,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.405184845604346" lon="-14.923643817651831"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="99ed5319-52c3-4a6d-9df5-b088b2d9461d" name="Home251_1" originalIdInSource="2511" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="99ed5319-52c3-4a6d-9df5-b088b2d9461d" name="Home251_1" originalIdInSource="2511" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.398520527872364" lon="-14.929082254168206"/>
         <asset xsi:type="esdl:EConnection" id="1cf6db4a-022b-4087-af92-791373c2cc8b" name="ConnectionHome251_1" originalIdInSource="2511" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9679,7 +9679,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.398520527872364" lon="-14.929082254168206"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6a492f96-cb67-4089-b36f-f60f4f09b62b" name="Home252_1" originalIdInSource="2521" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6a492f96-cb67-4089-b36f-f60f4f09b62b" name="Home252_1" originalIdInSource="2521" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.423057489247704" lon="-14.898650164606787"/>
         <asset xsi:type="esdl:EConnection" id="6c3e584e-1866-4f21-b85a-7a266c81ab77" name="ConnectionHome252_1" originalIdInSource="2521" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9713,7 +9713,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.423057489247704" lon="-14.898650164606787"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ef53108c-96b4-4859-9dcd-fb88df6fb4f8" name="Home253_1" originalIdInSource="2531" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ef53108c-96b4-4859-9dcd-fb88df6fb4f8" name="Home253_1" originalIdInSource="2531" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.418370440152266" lon="-14.927587854316213"/>
         <asset xsi:type="esdl:EConnection" id="600ee015-f8a5-428b-beb0-c3f6f96936fd" name="ConnectionHome253_1" originalIdInSource="2531" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9747,7 +9747,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.418370440152266" lon="-14.927587854316213"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fb90c816-1f9f-43a3-a392-1e553433418b" name="Home254_1" originalIdInSource="2541" assetType="Vrijstaande woning_1965_1974" energyLabel="LABEL_E" floorArea="112.9" buildingYear="1970" surfaceArea="174" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="fb90c816-1f9f-43a3-a392-1e553433418b" name="Home254_1" originalIdInSource="2541" assetType="Vrijstaande woning_1965_1974" energyLabel="LABEL_E" floorArea="174.92" buildingYear="1970" surfaceArea="112" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422561817928695" lon="-14.8750267724027"/>
         <asset xsi:type="esdl:EConnection" id="8116d1cf-f33f-4dc9-9921-8892cca0ca09" name="ConnectionHome254_1" originalIdInSource="2541" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9781,7 +9781,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422561817928695" lon="-14.8750267724027"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dad69566-7a01-4dd3-9229-30070c73ce49" name="Home255_1" originalIdInSource="2551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="dad69566-7a01-4dd3-9229-30070c73ce49" name="Home255_1" originalIdInSource="2551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422781898670884" lon="-14.877361222408817"/>
         <asset xsi:type="esdl:EConnection" id="66c0ef7c-81ed-4d9d-8789-3eeeed6472a9" name="ConnectionHome255_1" originalIdInSource="2551" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9815,7 +9815,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422781898670884" lon="-14.877361222408817"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9469cab0-d0a8-4177-a8c5-449e30bef8d4" name="Home256_1" originalIdInSource="2561" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="9469cab0-d0a8-4177-a8c5-449e30bef8d4" name="Home256_1" originalIdInSource="2561" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.398023567082376" lon="-14.925519453201845"/>
         <asset xsi:type="esdl:EConnection" id="c9d6704c-9f85-4e01-805f-165e58320696" name="ConnectionHome256_1" originalIdInSource="2561" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9849,7 +9849,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.398023567082376" lon="-14.925519453201845"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d5a15f72-bcb0-49f0-a4a6-028bdfbca4e8" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d5a15f72-bcb0-49f0-a4a6-028bdfbca4e8" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.39890491271839" lon="-14.92066050249978"/>
         <asset xsi:type="esdl:EConnection" id="44becac5-a34f-41a1-985b-ee63512344ed" name="ConnectionHome257_1" originalIdInSource="2571" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9883,7 +9883,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.39890491271839" lon="-14.92066050249978"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b9debb4c-7bbd-4160-89ef-205e85d742a3" name="Home259_1" originalIdInSource="2591" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_D" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="b9debb4c-7bbd-4160-89ef-205e85d742a3" name="Home259_1" originalIdInSource="2591" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_D" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42293918372997" lon="-14.900860984140072"/>
         <asset xsi:type="esdl:EConnection" id="f4b94a94-760d-4685-ba10-4c2ee9a8d693" name="ConnectionHome259_1" originalIdInSource="2591" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9917,7 +9917,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42293918372997" lon="-14.900860984140072"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="433f0a9c-f49f-4b10-97ba-67dedf5696e2" name="Home260_1" originalIdInSource="2601" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="433f0a9c-f49f-4b10-97ba-67dedf5696e2" name="Home260_1" originalIdInSource="2601" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42241505707775" lon="-14.907431468343878"/>
         <asset xsi:type="esdl:EConnection" id="570bd22a-60c5-4238-b973-fed1e0f96e50" name="ConnectionHome260_1" originalIdInSource="2601" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9951,7 +9951,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42241505707775" lon="-14.907431468343878"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ff7f9f1d-77c1-4a19-8df1-2b29591fbbbd" name="Home261_1" originalIdInSource="2611" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ff7f9f1d-77c1-4a19-8df1-2b29591fbbbd" name="Home261_1" originalIdInSource="2611" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42209091152776" lon="-14.92309344855695"/>
         <asset xsi:type="esdl:EConnection" id="2f8ec8c8-6218-4e4d-9f89-0fd67de17c58" name="ConnectionHome261_1" originalIdInSource="2611" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9985,7 +9985,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42209091152776" lon="-14.92309344855695"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a9ad7091-babe-49f4-b159-a5a6a446f6b4" name="Home262_1" originalIdInSource="2621" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="a9ad7091-babe-49f4-b159-a5a6a446f6b4" name="Home262_1" originalIdInSource="2621" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41711081286673" lon="-14.926674009825392"/>
         <asset xsi:type="esdl:EConnection" id="d51e03aa-8ec8-49bd-a286-1299d6dfc08c" name="ConnectionHome262_1" originalIdInSource="2621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10019,7 +10019,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41711081286673" lon="-14.926674009825392"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="79ee64aa-6690-479a-ad7e-67dc90470e2f" name="Home263_1" originalIdInSource="2631" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="79ee64aa-6690-479a-ad7e-67dc90470e2f" name="Home263_1" originalIdInSource="2631" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42231510666917" lon="-14.874485651045743"/>
         <asset xsi:type="esdl:EConnection" id="be25e499-169a-4a50-bbac-adb500e14419" name="ConnectionHome263_1" originalIdInSource="2631" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10053,7 +10053,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42231510666917" lon="-14.874485651045743"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fe5bf8c9-f506-4a0f-b879-235b02d5d68f" name="Home263_2" originalIdInSource="2632" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="fe5bf8c9-f506-4a0f-b879-235b02d5d68f" name="Home263_2" originalIdInSource="2632" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="119.7" buildingYear="2016" surfaceArea="55" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42231510666917" lon="-14.874485651045743"/>
         <asset xsi:type="esdl:EConnection" id="a148d0ec-cd33-47cd-a939-2b17d4bd07c4" name="ConnectionHome263_2" originalIdInSource="2632" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10087,7 +10087,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42231510666917" lon="-14.874485651045743"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c9116274-3a03-4990-b0e8-8307f367773d" name="Home264_1" originalIdInSource="2641" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c9116274-3a03-4990-b0e8-8307f367773d" name="Home264_1" originalIdInSource="2641" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42269078385236" lon="-14.877778616008515"/>
         <asset xsi:type="esdl:EConnection" id="228d1d2e-a381-4805-83a4-5f2c8d669b9b" name="ConnectionHome264_1" originalIdInSource="2641" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10121,7 +10121,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42269078385236" lon="-14.877778616008515"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1cd95dc3-72eb-40e7-94ee-c1a983caf3f7" name="Home264_2" originalIdInSource="2642" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1cd95dc3-72eb-40e7-94ee-c1a983caf3f7" name="Home264_2" originalIdInSource="2642" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42269078385236" lon="-14.877778616008515"/>
         <asset xsi:type="esdl:EConnection" id="d47fea4e-b998-4eb5-9967-58b4e579a501" name="ConnectionHome264_2" originalIdInSource="2642" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10143,7 +10143,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42269078385236" lon="-14.877778616008515"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4fe8b151-e6cf-472b-bf21-0d083abf4ef9" name="Home265_1" originalIdInSource="2651" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4fe8b151-e6cf-472b-bf21-0d083abf4ef9" name="Home265_1" originalIdInSource="2651" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42185383712853" lon="-14.919173678185134"/>
         <asset xsi:type="esdl:EConnection" id="203c38e2-3f92-4f1f-b0f6-6b1ebe1693f8" name="ConnectionHome265_1" originalIdInSource="2651" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10177,7 +10177,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42185383712853" lon="-14.919173678185134"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="590f39e5-4e8b-4114-b11d-f021d5a9d068" name="Home266_1" originalIdInSource="2661" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="590f39e5-4e8b-4114-b11d-f021d5a9d068" name="Home266_1" originalIdInSource="2661" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.420388427173194" lon="-14.906687586760453"/>
         <asset xsi:type="esdl:EConnection" id="2272066a-d1c3-4f4d-aded-a4348ceec365" name="ConnectionHome266_1" originalIdInSource="2661" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10211,7 +10211,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.420388427173194" lon="-14.906687586760453"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="02e647f5-ea33-49f4-8488-b78716b15870" name="Home267_1" originalIdInSource="2671" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="02e647f5-ea33-49f4-8488-b78716b15870" name="Home267_1" originalIdInSource="2671" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42200841866665" lon="-14.90344995988855"/>
         <asset xsi:type="esdl:EConnection" id="1212ec7f-f843-4665-81b5-822003e77236" name="ConnectionHome267_1" originalIdInSource="2671" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10245,7 +10245,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42200841866665" lon="-14.90344995988855"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="61d547a6-0212-426b-940d-dc7aa0a91cc4" name="Home267_2" originalIdInSource="2672" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_D" floorArea="50.0" buildingYear="1970" surfaceArea="115" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="61d547a6-0212-426b-940d-dc7aa0a91cc4" name="Home267_2" originalIdInSource="2672" assetType="Rijwoning hoek_1965_1974" energyLabel="LABEL_D" floorArea="115.96" buildingYear="1970" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42213168940869" lon="-14.903720620226986"/>
         <asset xsi:type="esdl:EConnection" id="070e8124-8302-4075-9cad-498fd3a7a387" name="ConnectionHome267_2" originalIdInSource="2672" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10279,7 +10279,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42213168940869" lon="-14.903720620226986"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ff22d12b-5fcd-4faa-b512-955fa2595979" name="Home267_3" originalIdInSource="2673" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="21.445" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="ff22d12b-5fcd-4faa-b512-955fa2595979" name="Home267_3" originalIdInSource="2673" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.422177307090095" lon="-14.903511936301241"/>
         <asset xsi:type="esdl:EConnection" id="ad4d07ab-2728-4442-a2aa-2e5cb719cb2e" name="ConnectionHome267_3" originalIdInSource="2673" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10313,7 +10313,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.422177307090095" lon="-14.903511936301241"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e3ad59dd-a0f9-4fed-8d08-49e3c20ab2f8" name="Home268_1" originalIdInSource="2681" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e3ad59dd-a0f9-4fed-8d08-49e3c20ab2f8" name="Home268_1" originalIdInSource="2681" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4220540357135" lon="-14.903241276458752"/>
         <asset xsi:type="esdl:EConnection" id="e6a2c948-5c5c-4776-ab99-f8023a4b748c" name="ConnectionHome268_1" originalIdInSource="2681" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10347,7 +10347,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4220540357135" lon="-14.903241276458752"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5914932f-5f19-466c-a3c9-df6a48171a95" name="Home269_1" originalIdInSource="2691" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="5914932f-5f19-466c-a3c9-df6a48171a95" name="Home269_1" originalIdInSource="2691" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.413733864807796" lon="-14.908753044422577"/>
         <asset xsi:type="esdl:EConnection" id="168087f6-eb3b-4882-a2c8-f328644daeab" name="ConnectionHome269_1" originalIdInSource="2691" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10381,7 +10381,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.413733864807796" lon="-14.908753044422577"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d8c2d235-f010-4789-995e-ef3ae140e805" name="Home279_1" originalIdInSource="2791" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d8c2d235-f010-4789-995e-ef3ae140e805" name="Home279_1" originalIdInSource="2791" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.405970168234376" lon="-14.908382256042168"/>
         <asset xsi:type="esdl:EConnection" id="54157531-d990-49ad-ba69-f06c3cd503e3" name="ConnectionHome279_1" originalIdInSource="2791" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10415,7 +10415,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.405970168234376" lon="-14.908382256042168"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3ca29355-f2d4-4192-b283-02172bae7832" name="Home325_1" originalIdInSource="3251" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_C" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3ca29355-f2d4-4192-b283-02172bae7832" name="Home325_1" originalIdInSource="3251" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_C" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="01137dc5-548f-42b0-8b81-16e297224e6e" name="ConnectionHome325_1" originalIdInSource="3251" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10449,7 +10449,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="593d8d72-683c-4dc2-8495-32435c51424d" name="Home325_2" originalIdInSource="3252" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="593d8d72-683c-4dc2-8495-32435c51424d" name="Home325_2" originalIdInSource="3252" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="18df82fb-dbb7-4c22-bd37-516472136130" name="ConnectionHome325_2" originalIdInSource="3252" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10483,7 +10483,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2892b229-9bfd-4c66-ba98-da0b7f055df9" name="Home325_3" originalIdInSource="3253" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2892b229-9bfd-4c66-ba98-da0b7f055df9" name="Home325_3" originalIdInSource="3253" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="377d87ad-0ddb-459f-ac55-b22fc6a49eec" name="ConnectionHome325_3" originalIdInSource="3253" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10517,7 +10517,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9130efee-29e8-4a9b-b38b-21b65aea4518" name="Home325_4" originalIdInSource="3254" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="9130efee-29e8-4a9b-b38b-21b65aea4518" name="Home325_4" originalIdInSource="3254" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="2a5d9a62-43be-4ede-88ad-df8acd402eca" name="ConnectionHome325_4" originalIdInSource="3254" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10551,7 +10551,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a89b9c93-c49e-4761-871c-881114905466" name="Home325_5" originalIdInSource="3255" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="a89b9c93-c49e-4761-871c-881114905466" name="Home325_5" originalIdInSource="3255" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="63c86e8d-a6e3-4171-b5c1-11b276bca829" name="ConnectionHome325_5" originalIdInSource="3255" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10585,7 +10585,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="71ffc1b1-b946-4665-8a36-edc75faf00c7" name="Home325_6" originalIdInSource="3256" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="25.26" buildingYear="1964" surfaceArea="101" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="71ffc1b1-b946-4665-8a36-edc75faf00c7" name="Home325_6" originalIdInSource="3256" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         <asset xsi:type="esdl:EConnection" id="28d8674e-7652-4f0e-baf2-e71a39062c64" name="ConnectionHome325_6" originalIdInSource="3256" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10619,7 +10619,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.42217785251926" lon="-14.920194505882092"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3e5c04d6-b80c-4954-bd62-30504edfeb7d" name="Home326_1" originalIdInSource="3261" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3e5c04d6-b80c-4954-bd62-30504edfeb7d" name="Home326_1" originalIdInSource="3261" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_E" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="f9c5182b-8f86-45f6-b88e-d956de3906e2" name="ConnectionHome326_1" originalIdInSource="3261" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10653,7 +10653,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ea5e9ce0-3bb9-4aeb-a992-54f38df5a998" name="Home326_2" originalIdInSource="3262" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="52.3" buildingYear="2016" surfaceArea="117" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ea5e9ce0-3bb9-4aeb-a992-54f38df5a998" name="Home326_2" originalIdInSource="3262" assetType="Rijwoning tussen_2015_2018" energyLabel="LABEL_A" floorArea="117.0" buildingYear="2016" surfaceArea="52" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="70ff9ac8-7734-4ba5-ad08-2f69d07af949" name="ConnectionHome326_2" originalIdInSource="3262" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10687,7 +10687,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e7c55277-58e9-4cf9-bbc9-2627726bc5bf" name="Home326_3" originalIdInSource="3263" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e7c55277-58e9-4cf9-bbc9-2627726bc5bf" name="Home326_3" originalIdInSource="3263" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="9e73e546-9152-4511-a2ff-6ba02478e840" name="ConnectionHome326_3" originalIdInSource="3263" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10721,7 +10721,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="29cb192b-ff34-4854-90e1-3b11702f3ddc" name="Home326_4" originalIdInSource="3264" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="29cb192b-ff34-4854-90e1-3b11702f3ddc" name="Home326_4" originalIdInSource="3264" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="5e37391a-9050-4532-a5e5-1855e501093a" name="ConnectionHome326_4" originalIdInSource="3264" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10755,7 +10755,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="986a0a1c-2ca0-4dba-ab83-603100065b76" name="Home326_5" originalIdInSource="3265" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="986a0a1c-2ca0-4dba-ab83-603100065b76" name="Home326_5" originalIdInSource="3265" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="01318696-0a49-458a-9910-8513e85ff4c4" name="ConnectionHome326_5" originalIdInSource="3265" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10789,7 +10789,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b1982353-8e9e-4f8b-b9a1-0507729e08db" name="Home326_6" originalIdInSource="3266" assetType="maisonnette_1975_1991" energyLabel="LABEL_B" floorArea="21.445" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="b1982353-8e9e-4f8b-b9a1-0507729e08db" name="Home326_6" originalIdInSource="3266" assetType="maisonnette_1975_1991" energyLabel="LABEL_B" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         <asset xsi:type="esdl:EConnection" id="b6b433fc-e50f-4636-bf6c-03ac445b2441" name="ConnectionHome326_6" originalIdInSource="3266" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10823,7 +10823,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4226937590853" lon="-14.91700227664345"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e0613615-e007-47e7-8f55-4125cabd54d0" name="Home349_1" originalIdInSource="3491" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e0613615-e007-47e7-8f55-4125cabd54d0" name="Home349_1" originalIdInSource="3491" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.40160862884484" lon="-14.890784009071739"/>
         <asset xsi:type="esdl:EConnection" id="879047dd-c8c5-4bb0-8905-c22949a2e93e" name="ConnectionHome349_1" originalIdInSource="3491" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10857,7 +10857,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.40160862884484" lon="-14.890784009071739"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bfa0ec7c-3707-498a-b2cc-9a42afda4552" name="Home349_2" originalIdInSource="3492" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="bfa0ec7c-3707-498a-b2cc-9a42afda4552" name="Home349_2" originalIdInSource="3492" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.401517454604665" lon="-14.891201186208422"/>
         <asset xsi:type="esdl:EConnection" id="a3fa4536-9a7d-4dcd-ad1a-99b16970e03d" name="ConnectionHome349_2" originalIdInSource="3492" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10891,7 +10891,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.401517454604665" lon="-14.891201186208422"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ef18eab8-1124-4bee-8209-964456a92d27" name="Home418_1" originalIdInSource="4181" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ef18eab8-1124-4bee-8209-964456a92d27" name="Home418_1" originalIdInSource="4181" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41333689159683" lon="-14.91807395720941"/>
         <asset xsi:type="esdl:EConnection" id="9ab2730b-328f-413d-bace-a50aee9487ab" name="ConnectionHome418_1" originalIdInSource="4181" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10925,7 +10925,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41333689159683" lon="-14.91807395720941"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3c03ce99-3a4d-4af0-904f-07af59ade73f" name="Home419_1" originalIdInSource="4191" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3c03ce99-3a4d-4af0-904f-07af59ade73f" name="Home419_1" originalIdInSource="4191" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41333689159683" lon="-14.91807395720941"/>
         <asset xsi:type="esdl:EConnection" id="7d4984f0-f4c6-4ab4-9a59-63db2fa187b2" name="ConnectionHome419_1" originalIdInSource="4191" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10959,7 +10959,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41333689159683" lon="-14.91807395720941"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ad398728-d19e-4578-ad34-e9e159739d9c" name="Home423_1" originalIdInSource="4231" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_B" floorArea="50.0" buildingYear="1983" surfaceArea="112" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ad398728-d19e-4578-ad34-e9e159739d9c" name="Home423_1" originalIdInSource="4231" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_B" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41646323350005" lon="-14.907951759794694"/>
         <asset xsi:type="esdl:EConnection" id="94a0cff8-fa0b-48b5-acb4-21e7f442a080" name="ConnectionHome423_1" originalIdInSource="4231" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10993,7 +10993,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41646323350005" lon="-14.907951759794694"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="398b5c9b-fdb8-4efb-ab23-079aafe055af" name="Home423_2" originalIdInSource="4232" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="49.15" buildingYear="1983" surfaceArea="113" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="398b5c9b-fdb8-4efb-ab23-079aafe055af" name="Home423_2" originalIdInSource="4232" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41661848437113" lon="-14.908910365998784"/>
         <asset xsi:type="esdl:EConnection" id="e6f35ce1-f29b-475a-8c96-c28fb7d417e9" name="ConnectionHome423_2" originalIdInSource="4232" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11027,7 +11027,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41661848437113" lon="-14.908910365998784"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="11ffae79-590a-4aaa-a412-d13f8470a517" name="Home430_1" originalIdInSource="4301" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="11ffae79-590a-4aaa-a412-d13f8470a517" name="Home430_1" originalIdInSource="4301" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.410977106605436" lon="-14.919686521232913"/>
         <asset xsi:type="esdl:EConnection" id="6cbc0830-2aff-441d-873d-55362aa1c8ab" name="ConnectionHome430_1" originalIdInSource="4301" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11061,7 +11061,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.410977106605436" lon="-14.919686521232913"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9dc10ca6-54c8-49a2-bc9e-ee62b3afed6b" name="Home430_2" originalIdInSource="4302" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_B" floorArea="93.0" buildingYear="1983" surfaceArea="161" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="9dc10ca6-54c8-49a2-bc9e-ee62b3afed6b" name="Home430_2" originalIdInSource="4302" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_B" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41110032445054" lon="-14.919957180829895"/>
         <asset xsi:type="esdl:EConnection" id="b8f36163-59e0-4b92-9752-8a26a1200786" name="ConnectionHome430_2" originalIdInSource="4302" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11095,7 +11095,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41110032445054" lon="-14.919957180829895"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3507b87f-94d3-40ed-a3ea-c421e3f8c16f" name="Home434_1" originalIdInSource="4341" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3507b87f-94d3-40ed-a3ea-c421e3f8c16f" name="Home434_1" originalIdInSource="4341" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41706506378768" lon="-14.901861438591174"/>
         <asset xsi:type="esdl:EConnection" id="d32d780e-cecb-40d6-ad9a-13e156af0226" name="ConnectionHome434_1" originalIdInSource="4341" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11129,7 +11129,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41706506378768" lon="-14.901861438591174"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ee20d383-7ec7-4330-ab4d-1ab778322270" name="Home434_2" originalIdInSource="4342" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="ee20d383-7ec7-4330-ab4d-1ab778322270" name="Home434_2" originalIdInSource="4342" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417097108062016" lon="-14.902549387366664"/>
         <asset xsi:type="esdl:EConnection" id="f03ef1ba-6bb9-455b-86b6-5537c12e99d8" name="ConnectionHome434_2" originalIdInSource="4342" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11163,7 +11163,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417097108062016" lon="-14.902549387366664"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="628b9971-7523-482a-9e46-1bd3791c1b64" name="Home439_1" originalIdInSource="4391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="628b9971-7523-482a-9e46-1bd3791c1b64" name="Home439_1" originalIdInSource="4391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41709561226131" lon="-14.89420937357736"/>
         <asset xsi:type="esdl:EConnection" id="ea054e20-9b6d-4a84-a83d-a633ec34a2cd" name="ConnectionHome439_1" originalIdInSource="4391" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11197,7 +11197,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41709561226131" lon="-14.89420937357736"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1ae0efd8-804c-43d4-a698-d8c3e3e4a47d" name="Home439_2" originalIdInSource="4392" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1ae0efd8-804c-43d4-a698-d8c3e3e4a47d" name="Home439_2" originalIdInSource="4392" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41725100804951" lon="-14.895167906186925"/>
         <asset xsi:type="esdl:EConnection" id="a90c636b-7073-448c-8e39-1f4aa3d89cc7" name="ConnectionHome439_2" originalIdInSource="4392" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11231,7 +11231,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41725100804951" lon="-14.895167906186925"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8afb0893-0ac3-4b35-9d35-33451d2014b9" name="Home440_1" originalIdInSource="4401" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_AP" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="8afb0893-0ac3-4b35-9d35-33451d2014b9" name="Home440_1" originalIdInSource="4401" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_AP" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41625343233198" lon="-14.910579596037353"/>
         <asset xsi:type="esdl:EConnection" id="d61e77d7-ef66-4cb6-af22-7c3d6ee0583c" name="ConnectionHome440_1" originalIdInSource="4401" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11265,7 +11265,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41625343233198" lon="-14.910579596037353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="882cbe8f-b062-49e8-b24e-e37566a24f1c" name="Home440_2" originalIdInSource="4402" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="882cbe8f-b062-49e8-b24e-e37566a24f1c" name="Home440_2" originalIdInSource="4402" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.416285410339356" lon="-14.91126755672754"/>
         <asset xsi:type="esdl:EConnection" id="3c1deda4-2a54-49df-8150-3740446dd2b4" name="ConnectionHome440_2" originalIdInSource="4402" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11299,7 +11299,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.416285410339356" lon="-14.91126755672754"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="838d1dd5-e208-47f3-9c53-686b112bdb2e" name="Home444_1" originalIdInSource="4441" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="838d1dd5-e208-47f3-9c53-686b112bdb2e" name="Home444_1" originalIdInSource="4441" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41557343180095" lon="-14.916190529484778"/>
         <asset xsi:type="esdl:EConnection" id="ba3f1335-0f3b-4e88-b1be-6e2ee0879419" name="ConnectionHome444_1" originalIdInSource="4441" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11333,7 +11333,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41557343180095" lon="-14.916190529484778"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="865552d9-9670-4302-a797-89802744de0e" name="Home444_2" originalIdInSource="4442" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="865552d9-9670-4302-a797-89802744de0e" name="Home444_2" originalIdInSource="4442" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41577424374637" lon="-14.916940521899038"/>
         <asset xsi:type="esdl:EConnection" id="5392bdda-1800-45e8-962e-073119fa9c17" name="ConnectionHome444_2" originalIdInSource="4442" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11367,7 +11367,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41577424374637" lon="-14.916940521899038"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="358750ee-3608-4e25-bd6b-f105f013e97b" name="Home445_1" originalIdInSource="4451" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_A" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="358750ee-3608-4e25-bd6b-f105f013e97b" name="Home445_1" originalIdInSource="4451" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_A" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417299708687594" lon="-14.889100451146502"/>
         <asset xsi:type="esdl:EConnection" id="2d5d9789-1c8d-4aba-ad86-c659773dd6fe" name="ConnectionHome445_1" originalIdInSource="4451" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11401,7 +11401,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417299708687594" lon="-14.889100451146502"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="09532df6-5ae8-4547-b168-731e05eb514c" name="Home445_2" originalIdInSource="4452" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="61.4" buildingYear="1983" surfaceArea="129" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="09532df6-5ae8-4547-b168-731e05eb514c" name="Home445_2" originalIdInSource="4452" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_C" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41733184964069" lon="-14.889788368262236"/>
         <asset xsi:type="esdl:EConnection" id="85101b16-7f0f-4bd5-bd37-80b803713c2a" name="ConnectionHome445_2" originalIdInSource="4452" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11435,7 +11435,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41733184964069" lon="-14.889788368262236"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="51e70024-474a-45d8-8947-725eade4c3f9" name="Home446_1" originalIdInSource="4461" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="68.95" buildingYear="1998" surfaceArea="143" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="51e70024-474a-45d8-8947-725eade4c3f9" name="Home446_1" originalIdInSource="4461" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_A" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.415050278050444" lon="-14.891881700039592"/>
         <asset xsi:type="esdl:EConnection" id="0e3e2fd2-86f8-405c-976c-dcc3ee3efaaf" name="ConnectionHome446_1" originalIdInSource="4461" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11469,7 +11469,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.415050278050444" lon="-14.891881700039592"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="da8c6247-b5f5-48ea-bfe5-cf75b0e62fef" name="Home446_2" originalIdInSource="4462" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="da8c6247-b5f5-48ea-bfe5-cf75b0e62fef" name="Home446_2" originalIdInSource="4462" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41518704604321" lon="-14.891255737063103"/>
         <asset xsi:type="esdl:EConnection" id="d8015bc5-9af3-4a1e-b259-21973af5dfc8" name="ConnectionHome446_2" originalIdInSource="4462" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11503,7 +11503,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41518704604321" lon="-14.891255737063103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c97032bb-2b8f-4b60-9dd4-278b714da65b" name="Home448_1" originalIdInSource="4481" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="62.03" buildingYear="1998" surfaceArea="128" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c97032bb-2b8f-4b60-9dd4-278b714da65b" name="Home448_1" originalIdInSource="4481" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_A" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41504505904231" lon="-14.889400732182613"/>
         <asset xsi:type="esdl:EConnection" id="01a6ccfe-3c8a-4c2b-9c99-b10ab13820cd" name="ConnectionHome448_1" originalIdInSource="4481" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11537,7 +11537,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41504505904231" lon="-14.889400732182613"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="529a508f-91a7-4d1f-a002-87eb4b167b11" name="Home448_2" originalIdInSource="4482" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_A" floorArea="54.04" buildingYear="1998" surfaceArea="124" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="529a508f-91a7-4d1f-a002-87eb4b167b11" name="Home448_2" originalIdInSource="4482" assetType="Rijwoning tussen_1992_2005" energyLabel="LABEL_A" floorArea="124.45" buildingYear="1998" surfaceArea="54" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41518180979723" lon="-14.888774766410085"/>
         <asset xsi:type="esdl:EConnection" id="e6b63441-e9ee-4d93-a8eb-0a9cdd0aab48" name="ConnectionHome448_2" originalIdInSource="4482" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11571,7 +11571,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41518180979723" lon="-14.888774766410085"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e5f8a941-33c6-4f65-afcf-ee4e6d1eee21" name="Home449_1" originalIdInSource="4491" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e5f8a941-33c6-4f65-afcf-ee4e6d1eee21" name="Home449_1" originalIdInSource="4491" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4153633911939" lon="-14.91881833976644"/>
         <asset xsi:type="esdl:EConnection" id="d6cfe4e6-abdd-484a-9d0d-00bd1496d4d5" name="ConnectionHome449_1" originalIdInSource="4491" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11605,7 +11605,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4153633911939" lon="-14.91881833976644"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e674f37d-ef96-43d4-b05b-3e720690b369" name="Home449_2" originalIdInSource="4492" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="e674f37d-ef96-43d4-b05b-3e720690b369" name="Home449_2" originalIdInSource="4492" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41539530653904" lon="-14.91950630991096"/>
         <asset xsi:type="esdl:EConnection" id="bd40f560-0870-4bc5-9de9-971a22be64d0" name="ConnectionHome449_2" originalIdInSource="4492" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11639,7 +11639,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41539530653904" lon="-14.91950630991096"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f4688cf6-b251-45b4-b883-65a2c9958650" name="Home452_1" originalIdInSource="4521" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="42.89" buildingYear="1983" surfaceArea="85" numberOfFloors="4">
+      <asset xsi:type="esdl:Building" id="f4688cf6-b251-45b4-b883-65a2c9958650" name="Home452_1" originalIdInSource="4521" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4173399893986" lon="-14.88641071403933"/>
         <asset xsi:type="esdl:EConnection" id="d3409fe6-a70b-4297-9e38-e450d7f1df24" name="ConnectionHome452_1" originalIdInSource="4521" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11673,7 +11673,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4173399893986" lon="-14.88641071403933"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1ac64fbd-e5c7-4271-8572-94233c2d2bcc" name="Home452_2" originalIdInSource="4522" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1ac64fbd-e5c7-4271-8572-94233c2d2bcc" name="Home452_2" originalIdInSource="4522" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.4173265713624" lon="-14.887307291220479"/>
         <asset xsi:type="esdl:EConnection" id="db2bacb6-f07c-4789-96e1-b000bd9625c6" name="ConnectionHome452_2" originalIdInSource="4522" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11707,7 +11707,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.4173265713624" lon="-14.887307291220479"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d5fb0bde-8005-4cb7-8f42-df9ce081909b" name="Home454_1" originalIdInSource="4541" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B" floorArea="68.95" buildingYear="1998" surfaceArea="143" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="d5fb0bde-8005-4cb7-8f42-df9ce081909b" name="Home454_1" originalIdInSource="4541" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417060115837806" lon="-14.89938028561428"/>
         <asset xsi:type="esdl:EConnection" id="9cc01a20-ad03-4c9b-b968-ca5abda427b8" name="ConnectionHome454_1" originalIdInSource="4541" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11741,7 +11741,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417060115837806" lon="-14.89938028561428"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4d4bfe01-165f-47cd-9696-cd4315ec7918" name="Home454_2" originalIdInSource="4542" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4d4bfe01-165f-47cd-9696-cd4315ec7918" name="Home454_2" originalIdInSource="4542" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41709217889155" lon="-14.9000682274686"/>
         <asset xsi:type="esdl:EConnection" id="76f7cb4a-e315-40fe-8ba9-5dccc31f8649" name="ConnectionHome454_2" originalIdInSource="4542" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11775,7 +11775,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41709217889155" lon="-14.9000682274686"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4b826b35-8578-4350-99d0-b0e17cd1f7ac" name="Home455_1" originalIdInSource="4551" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="66.06" buildingYear="2016" surfaceArea="159" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4b826b35-8578-4350-99d0-b0e17cd1f7ac" name="Home455_1" originalIdInSource="4551" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_AP" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.415101024782814" lon="-14.894154033679305"/>
         <asset xsi:type="esdl:EConnection" id="b8dcd6bc-1baf-4cbe-8fbf-6524a715ff71" name="ConnectionHome455_1" originalIdInSource="4551" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11809,7 +11809,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.415101024782814" lon="-14.894154033679305"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4a038e31-6fbd-42a0-b32f-519a041fbe55" name="Home455_2" originalIdInSource="4552" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="55.7" buildingYear="2016" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="4a038e31-6fbd-42a0-b32f-519a041fbe55" name="Home455_2" originalIdInSource="4552" assetType="Rijwoning hoek_2015_2018" energyLabel="LABEL_A" floorArea="119.7" buildingYear="2016" surfaceArea="55" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41514661985959" lon="-14.893945380285073"/>
         <asset xsi:type="esdl:EConnection" id="ab82e5d1-eb30-4c8b-aebb-5c015faf8f13" name="ConnectionHome455_2" originalIdInSource="4552" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11843,7 +11843,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41514661985959" lon="-14.893945380285073"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3fb7f077-34ef-41ac-879f-cac11191352a" name="Home458_1" originalIdInSource="4581" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="51.48" buildingYear="2010" surfaceArea="119" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="3fb7f077-34ef-41ac-879f-cac11191352a" name="Home458_1" originalIdInSource="4581" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.409242732410505" lon="-14.919274797932173"/>
         <asset xsi:type="esdl:EConnection" id="1b8e9cf2-3f91-4d72-b15c-091e84e814b6" name="ConnectionHome458_1" originalIdInSource="4581" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11877,7 +11877,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.409242732410505" lon="-14.919274797932173"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0102ff31-a05d-4cdd-b71e-64d10591d7cb" name="Home458_2" originalIdInSource="4582" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="0102ff31-a05d-4cdd-b71e-64d10591d7cb" name="Home458_2" originalIdInSource="4582" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.409365950647285" lon="-14.919545446947795"/>
         <asset xsi:type="esdl:EConnection" id="5d84eac4-5e4d-43a8-8e4c-67181f278305" name="ConnectionHome458_2" originalIdInSource="4582" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11911,7 +11911,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.409365950647285" lon="-14.919545446947795"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1ac69f64-1c63-4eb3-8ce7-4d36f9b681a6" name="Home465_1" originalIdInSource="4651" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="1ac69f64-1c63-4eb3-8ce7-4d36f9b681a6" name="Home465_1" originalIdInSource="4651" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417283614003324" lon="-14.88165729730458"/>
         <asset xsi:type="esdl:EConnection" id="24def306-5c37-46b6-b68f-47d1c0e17838" name="ConnectionHome465_1" originalIdInSource="4651" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11945,7 +11945,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417283614003324" lon="-14.88165729730458"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6fd2fd26-5632-4b5b-802a-40bb339fac9f" name="Home465_2" originalIdInSource="4652" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="66.58" buildingYear="1964" surfaceArea="122" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="6fd2fd26-5632-4b5b-802a-40bb339fac9f" name="Home465_2" originalIdInSource="4652" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41753027839059" lon="-14.88219841616952"/>
         <asset xsi:type="esdl:EConnection" id="2909d0e6-f9a3-42ca-b943-536de8e39e8e" name="ConnectionHome465_2" originalIdInSource="4652" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11979,7 +11979,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41753027839059" lon="-14.88219841616952"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2ca7d5b3-f3d5-4833-9ca9-c3277e1b8838" name="Home468_1" originalIdInSource="4681" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="44.21" buildingYear="1955" surfaceArea="97" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="2ca7d5b3-f3d5-4833-9ca9-c3277e1b8838" name="Home468_1" originalIdInSource="4681" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417100701617855" lon="-14.89669048969217"/>
         <asset xsi:type="esdl:EConnection" id="1fc5f396-5e40-4fa0-941b-78bbd237af28" name="ConnectionHome468_1" originalIdInSource="4681" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -12013,7 +12013,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417100701617855" lon="-14.89669048969217"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="06899078-1bc1-481c-a491-e1531a4b12b2" name="Home468_2" originalIdInSource="4682" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="46.6" buildingYear="1955" surfaceArea="100" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="06899078-1bc1-481c-a491-e1531a4b12b2" name="Home468_2" originalIdInSource="4682" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41725607133756" lon="-14.89764903799452"/>
         <asset xsi:type="esdl:EConnection" id="ecbdbec8-4098-4474-a917-48ee00bfb225" name="ConnectionHome468_2" originalIdInSource="4682" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -12047,7 +12047,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.41725607133756" lon="-14.89764903799452"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="26a0cfd7-7cd1-4534-b76a-c5d0f8a1bc03" name="Home470_1" originalIdInSource="4701" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="89.59" buildingYear="1964" surfaceArea="153" numberOfFloors="2">
+      <asset xsi:type="esdl:Building" id="26a0cfd7-7cd1-4534-b76a-c5d0f8a1bc03" name="Home470_1" originalIdInSource="4701" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.417289046734034" lon="-14.884138329735686"/>
         <asset xsi:type="esdl:EConnection" id="a9166b8b-451b-48b5-a14f-99fdfe04abaf" name="ConnectionHome470_1" originalIdInSource="4701" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -12081,7 +12081,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="37.417289046734034" lon="-14.884138329735686"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c1bc1efc-3a6a-4e8d-95ce-93cd0f8e0471" name="Home470_2" originalIdInSource="4702" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP" floorArea="110.82" buildingYear="2010" surfaceArea="201" numberOfFloors="3">
+      <asset xsi:type="esdl:Building" id="c1bc1efc-3a6a-4e8d-95ce-93cd0f8e0471" name="Home470_2" originalIdInSource="4702" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="37.41736679886834" lon="-14.884617565238655"/>
         <asset xsi:type="esdl:EConnection" id="6a79e106-6e16-42d1-9bda-9de7e9397d8a" name="ConnectionHome470_2" originalIdInSource="4702" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>

@@ -4245,7 +4245,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000453775539185" lon="4.107440306563548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e9ef1371-b591-4c1a-9dd5-0a750d1bb121" name="Home53_1" originalIdInSource="531" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e9ef1371-b591-4c1a-9dd5-0a750d1bb121" name="Home53_1" originalIdInSource="531" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.004097758544255" lon="4.063058873827159"/>
         <asset xsi:type="esdl:EConnection" id="89dcdb00-8662-41b8-8d6d-161785a618a0" name="ConnectionHome53_1" originalIdInSource="531" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4344,7 +4344,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="726a3c72-bb02-4349-985c-07e16d4d9795" name="Home58_1" originalIdInSource="581" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="726a3c72-bb02-4349-985c-07e16d4d9795" name="Home58_1" originalIdInSource="581" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.983185177461706" lon="4.042130132622103"/>
         <asset xsi:type="esdl:EConnection" id="93d48375-bfe9-40d4-bbef-cdf3f3fb30b8" name="ConnectionHome58_1" originalIdInSource="581" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4377,7 +4377,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.983185177461706" lon="4.042130132622103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a49c4ff9-0ae8-4633-9403-f4811c5d0f1c" name="Home59_1" originalIdInSource="591" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a49c4ff9-0ae8-4633-9403-f4811c5d0f1c" name="Home59_1" originalIdInSource="591" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.983368228303156" lon="4.042415809293487"/>
         <asset xsi:type="esdl:EConnection" id="58c67ffb-c31d-44f1-95d6-4a7557ce6925" name="ConnectionHome59_1" originalIdInSource="591" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4410,7 +4410,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.983368228303156" lon="4.042415809293487"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7b0a75ab-de8b-4f38-b458-b57ca2e819d1" name="Home62_1" originalIdInSource="621" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="7b0a75ab-de8b-4f38-b458-b57ca2e819d1" name="Home62_1" originalIdInSource="621" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.962330597146675" lon="4.042173144212071"/>
         <asset xsi:type="esdl:EConnection" id="24a50aff-a9f5-4e25-bb4e-8b06aee19361" name="ConnectionHome62_1" originalIdInSource="621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4608,7 +4608,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a93f07a0-d330-4c3e-bea8-4977a5331ec8" name="Home70_1" originalIdInSource="701" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="a93f07a0-d330-4c3e-bea8-4977a5331ec8" name="Home70_1" originalIdInSource="701" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         <asset xsi:type="esdl:EConnection" id="580eabaf-cdf7-41a4-870a-15fc6779f9b8" name="ConnectionHome70_1" originalIdInSource="701" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4641,7 +4641,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="961e4dbc-12f5-4ec4-a6b2-112b5a79ccfd" name="Home74_1" originalIdInSource="741" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="961e4dbc-12f5-4ec4-a6b2-112b5a79ccfd" name="Home74_1" originalIdInSource="741" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         <asset xsi:type="esdl:EConnection" id="89d0aa78-28f6-405e-94c9-e34f352e2b26" name="ConnectionHome74_1" originalIdInSource="741" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4773,7 +4773,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98662255462023" lon="4.092111043281382"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dbd89cc1-ac92-4104-8da7-e818d8ab9291" name="Home82_1" originalIdInSource="821" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="dbd89cc1-ac92-4104-8da7-e818d8ab9291" name="Home82_1" originalIdInSource="821" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995995370216235" lon="4.0461145634847036"/>
         <asset xsi:type="esdl:EConnection" id="30b758de-70d7-46fc-9049-c8f37cdce2c1" name="ConnectionHome82_1" originalIdInSource="821" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -4839,7 +4839,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98593039915184" lon="4.0306916580281"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="032bfb9e-c719-4fbc-ae6c-1fe9db930e0f" name="Home88_1" originalIdInSource="881" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="032bfb9e-c719-4fbc-ae6c-1fe9db930e0f" name="Home88_1" originalIdInSource="881" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.984469108346865" lon="4.028697637303527"/>
         <asset xsi:type="esdl:EConnection" id="3564374d-e14d-4744-8b1f-ef3c9b112a70" name="ConnectionHome88_1" originalIdInSource="881" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5070,7 +5070,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9872085819911" lon="4.032400146358162"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9b73dca3-a42b-4e8e-a523-5dcf7a4ed8fa" name="Home102_1" originalIdInSource="1021" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="9b73dca3-a42b-4e8e-a523-5dcf7a4ed8fa" name="Home102_1" originalIdInSource="1021" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99655112276953" lon="4.047554197901023"/>
         <asset xsi:type="esdl:EConnection" id="2c91343e-7e27-4dae-914b-67568108b3d6" name="ConnectionHome102_1" originalIdInSource="1021" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5367,7 +5367,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99702626604627" lon="4.073752857412012"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="07b7aee2-e27a-4b9f-9754-622c11517b33" name="Home116_1" originalIdInSource="1161" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="07b7aee2-e27a-4b9f-9754-622c11517b33" name="Home116_1" originalIdInSource="1161" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99738571548057" lon="4.073742327067185"/>
         <asset xsi:type="esdl:EConnection" id="3db008d9-147a-4f25-9fb9-031dca19b251" name="ConnectionHome116_1" originalIdInSource="1161" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5400,7 +5400,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99738571548057" lon="4.073742327067185"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="438c7b46-8068-41c4-92b8-be2eda105019" name="Home119_1" originalIdInSource="1191" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="438c7b46-8068-41c4-92b8-be2eda105019" name="Home119_1" originalIdInSource="1191" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         <asset xsi:type="esdl:EConnection" id="d0f29654-c3d9-4770-9efd-48f92aa5f283" name="ConnectionHome119_1" originalIdInSource="1191" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5631,7 +5631,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99468984422906" lon="4.073821299911845"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f23c3623-da5d-45ce-8c48-25037a88b82e" name="Home130_1" originalIdInSource="1301" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="f23c3623-da5d-45ce-8c48-25037a88b82e" name="Home130_1" originalIdInSource="1301" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.005476572837765" lon="4.073796555820037"/>
         <asset xsi:type="esdl:EConnection" id="c79311a6-4db4-41a6-b824-66f306cc09dc" name="ConnectionHome130_1" originalIdInSource="1301" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5697,7 +5697,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.001469099023886" lon="4.085273962774436"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b51d9255-6f48-4f3b-86d7-2ad24ac35e51" name="Home135_1" originalIdInSource="1351" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b51d9255-6f48-4f3b-86d7-2ad24ac35e51" name="Home135_1" originalIdInSource="1351" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.996755258569884" lon="4.065605747831391"/>
         <asset xsi:type="esdl:EConnection" id="6b51a480-bd4f-4af1-94ee-3d255d1c8a1d" name="ConnectionHome135_1" originalIdInSource="1351" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5862,7 +5862,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00142808741507" lon="4.065467990078896"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7f9023b1-1bc7-4e93-b120-9b7f382a8ca3" name="Home142_1" originalIdInSource="1421" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7f9023b1-1bc7-4e93-b120-9b7f382a8ca3" name="Home142_1" originalIdInSource="1421" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00160781153269" lon="4.065462691043026"/>
         <asset xsi:type="esdl:EConnection" id="ff4cee92-cf3d-4bfe-9aa4-5573b68a5768" name="ConnectionHome142_1" originalIdInSource="1421" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -5928,7 +5928,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96190267683086" lon="4.020649935920257"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="57854ba2-7c50-4061-b73c-4c6d1df3db39" name="Home148_1" originalIdInSource="1481" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="57854ba2-7c50-4061-b73c-4c6d1df3db39" name="Home148_1" originalIdInSource="1481" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.961899295839174" lon="4.0203590108510525"/>
         <asset xsi:type="esdl:EConnection" id="22df0735-9fe3-40c3-bd0a-2527003cf020" name="ConnectionHome148_1" originalIdInSource="1481" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6027,7 +6027,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97603894404782" lon="4.0304085251783555"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dafee15b-7f9e-44f0-9218-f13cefa91884" name="Home150_1" originalIdInSource="1501" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="dafee15b-7f9e-44f0-9218-f13cefa91884" name="Home150_1" originalIdInSource="1501" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98006986725738" lon="4.036982941366732"/>
         <asset xsi:type="esdl:EConnection" id="5173bcda-b986-4e5c-88b1-eeb5fd584cb4" name="ConnectionHome150_1" originalIdInSource="1501" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6060,7 +6060,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98006986725738" lon="4.036982941366732"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a549b0d8-43a0-43cf-9bc0-213c7029ea07" name="Home151_1" originalIdInSource="1511" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a549b0d8-43a0-43cf-9bc0-213c7029ea07" name="Home151_1" originalIdInSource="1511" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980256270107496" lon="4.037559622934728"/>
         <asset xsi:type="esdl:EConnection" id="57a5343b-bfa5-48b9-838f-6e0903a08dcc" name="ConnectionHome151_1" originalIdInSource="1511" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6192,7 +6192,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96163760650835" lon="4.028806737789221"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8ea3a40a-2441-40d9-9833-c64eb8b4e727" name="Home157_1" originalIdInSource="1571" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="8ea3a40a-2441-40d9-9833-c64eb8b4e727" name="Home157_1" originalIdInSource="1571" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99333418829162" lon="4.114050514327976"/>
         <asset xsi:type="esdl:EConnection" id="32e35862-2a11-4a57-9b05-dcab812b4c0d" name="ConnectionHome157_1" originalIdInSource="1571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6258,7 +6258,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99441885026033" lon="4.114602185032073"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cb5c38c1-9fd5-4928-bbf3-dad811680bd0" name="Home161_1" originalIdInSource="1611" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="cb5c38c1-9fd5-4928-bbf3-dad811680bd0" name="Home161_1" originalIdInSource="1611" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995676940104886" lon="4.114566476913853"/>
         <asset xsi:type="esdl:EConnection" id="f81d8e5b-2f0f-496b-b7ba-688965b1d95c" name="ConnectionHome161_1" originalIdInSource="1611" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6324,7 +6324,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9969381784735" lon="4.114821927800637"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4b54a70a-d0cf-4b05-ae38-5bf6d2d0a130" name="Home163_1" originalIdInSource="1631" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="4b54a70a-d0cf-4b05-ae38-5bf6d2d0a130" name="Home163_1" originalIdInSource="1631" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.997117905555015" lon="4.114816827289207"/>
         <asset xsi:type="esdl:EConnection" id="5e144d12-967d-42ed-8323-b53119492198" name="ConnectionHome163_1" originalIdInSource="1631" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6489,7 +6489,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99269384756002" lon="4.040388773676428"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="02f9c09e-1685-4eae-b743-8593bcf2980a" name="Home168_1" originalIdInSource="1681" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="02f9c09e-1685-4eae-b743-8593bcf2980a" name="Home168_1" originalIdInSource="1681" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995263198641396" lon="4.044971490126336"/>
         <asset xsi:type="esdl:EConnection" id="d42466a1-a4c6-46bb-8fb9-b6f60506d604" name="ConnectionHome168_1" originalIdInSource="1681" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6588,7 +6588,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.0010781962034" lon="4.115286980557033"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a7043264-18d6-429a-86bf-0f07768840f6" name="Home174_1" originalIdInSource="1741" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="a7043264-18d6-429a-86bf-0f07768840f6" name="Home174_1" originalIdInSource="1741" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99745968020398" lon="4.048400822184394"/>
         <asset xsi:type="esdl:EConnection" id="a63068aa-233e-473b-a0be-970a9c95e118" name="ConnectionHome174_1" originalIdInSource="1741" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6654,7 +6654,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000002285761916" lon="4.050655082060491"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="37df6716-3010-4fbb-92ed-99298140c014" name="Home177_1" originalIdInSource="1771" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="37df6716-3010-4fbb-92ed-99298140c014" name="Home177_1" originalIdInSource="1771" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.000600870244355" lon="4.05588023213326"/>
         <asset xsi:type="esdl:EConnection" id="75b72d10-7aa7-4cad-ac36-49c8d3a89403" name="ConnectionHome177_1" originalIdInSource="1771" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -6918,7 +6918,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99434464355002" lon="4.043251563134586"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e8869831-aac4-453e-9a07-01a764bc6559" name="Home190_1" originalIdInSource="1901" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e8869831-aac4-453e-9a07-01a764bc6559" name="Home190_1" originalIdInSource="1901" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98967789692418" lon="4.09202280694053"/>
         <asset xsi:type="esdl:EConnection" id="fee3e8d3-3dd1-4b3a-a44d-1a13c2f70ffc" name="ConnectionHome190_1" originalIdInSource="1901" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7050,7 +7050,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01109022715249" lon="4.077419522116778"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="77b5cf4b-9a3b-4c50-9bbd-a4b9e2f16ee7" name="Home195_1" originalIdInSource="1951" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="77b5cf4b-9a3b-4c50-9bbd-a4b9e2f16ee7" name="Home195_1" originalIdInSource="1951" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.012005047607566" lon="4.078849537396982"/>
         <asset xsi:type="esdl:EConnection" id="343b1f84-77b6-4c10-bb19-bce81b8a3764" name="ConnectionHome195_1" originalIdInSource="1951" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7347,7 +7347,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01636680302534" lon="4.099410039370296"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cccb7b49-0170-438b-8505-2fcacf564db4" name="Home205_1" originalIdInSource="2051" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="cccb7b49-0170-438b-8505-2fcacf564db4" name="Home205_1" originalIdInSource="2051" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.0167485456562" lon="4.101438729438632"/>
         <asset xsi:type="esdl:EConnection" id="25dfe95d-dad4-4f68-8989-4604654fcc99" name="ConnectionHome205_1" originalIdInSource="2051" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7413,7 +7413,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01660060309637" lon="4.104356765368789"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="10653c7a-2b47-4a76-b057-cbcdeee2fa6b" name="Home208_1" originalIdInSource="2081" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="10653c7a-2b47-4a76-b057-cbcdeee2fa6b" name="Home208_1" originalIdInSource="2081" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99020646787092" lon="4.074826238522048"/>
         <asset xsi:type="esdl:EConnection" id="02f7766c-ce58-44ac-ac4b-c540f4844426" name="ConnectionHome208_1" originalIdInSource="2081" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7479,7 +7479,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99023566375094" lon="4.077446265685393"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3d9bd4fb-9579-4d59-87c8-c10fb4ecc8c8" name="Home210_1" originalIdInSource="2101" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3d9bd4fb-9579-4d59-87c8-c10fb4ecc8c8" name="Home210_1" originalIdInSource="2101" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.016770801605084" lon="4.103477752307344"/>
         <asset xsi:type="esdl:EConnection" id="1294d8e6-139b-4560-8704-cd3f322dff38" name="ConnectionHome210_1" originalIdInSource="2101" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7710,7 +7710,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96632048168819" lon="4.029538152638649"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="eba158b1-c92c-4936-a631-daeaaa10a0ad" name="Home227_1" originalIdInSource="2271" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="eba158b1-c92c-4936-a631-daeaaa10a0ad" name="Home227_1" originalIdInSource="2271" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98565590708735" lon="4.102330196081115"/>
         <asset xsi:type="esdl:EConnection" id="80533813-7a38-46c8-bbc6-be8f302c7e50" name="ConnectionHome227_1" originalIdInSource="2271" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -7809,7 +7809,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.962672302252216" lon="4.009567235087716"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f1a1a687-9f74-4ea9-975e-28ce4b223743" name="Home251_2" originalIdInSource="2512" assetType="mansionette_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="f1a1a687-9f74-4ea9-975e-28ce4b223743" name="Home251_2" originalIdInSource="2512" assetType="maisonnette_1975_1991" energyLabel="LABEL_B">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9626757099565" lon="4.009858164102798"/>
         <asset xsi:type="esdl:EConnection" id="50b49c7e-2fec-4328-b2fc-767cd8ada0ab" name="ConnectionHome251_2" originalIdInSource="2512" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8127,7 +8127,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01595946671116" lon="4.095051117877247"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="90e59295-89bd-4347-bbfb-993b476aafab" name="Home263_1" originalIdInSource="2631" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="90e59295-89bd-4347-bbfb-993b476aafab" name="Home263_1" originalIdInSource="2631" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01592745333154" lon="4.092138289349981"/>
         <asset xsi:type="esdl:EConnection" id="19d8d7bd-690e-4e3a-bbd5-b18471551d01" name="ConnectionHome263_1" originalIdInSource="2631" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8193,7 +8193,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01591141961379" lon="4.090681876885667"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="25ff710f-6d11-4070-8a29-9fd3d96b277f" name="Home266_1" originalIdInSource="2661" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="25ff710f-6d11-4070-8a29-9fd3d96b277f" name="Home266_1" originalIdInSource="2661" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99583776004019" lon="4.1128144506701725"/>
         <asset xsi:type="esdl:EConnection" id="142fb677-d190-4e48-b7cf-ee91ee611e1e" name="ConnectionHome266_1" originalIdInSource="2661" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8226,7 +8226,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99583776004019" lon="4.1128144506701725"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="52bda3b3-fa31-4521-beee-30fefd9947bf" name="Home267_1" originalIdInSource="2671" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="52bda3b3-fa31-4521-beee-30fefd9947bf" name="Home267_1" originalIdInSource="2671" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.001481979736255" lon="4.086438715262987"/>
         <asset xsi:type="esdl:EConnection" id="048af3ed-ff2e-49db-bf54-12da1d473c4f" name="ConnectionHome267_1" originalIdInSource="2671" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8391,7 +8391,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="00b2ddb7-6a37-42d9-b506-1df4842aa1a5" name="Home308_1" originalIdInSource="3081" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="00b2ddb7-6a37-42d9-b506-1df4842aa1a5" name="Home308_1" originalIdInSource="3081" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.962150873383244" lon="4.04217853045701"/>
         <asset xsi:type="esdl:EConnection" id="b9aea3bb-9d4e-4c39-b8ca-6823262c63e8" name="ConnectionHome308_1" originalIdInSource="3081" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8808,7 +8808,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="312e447f-9ba1-4745-a3b5-949121d3591a" name="Home322_1" originalIdInSource="3221" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="312e447f-9ba1-4745-a3b5-949121d3591a" name="Home322_1" originalIdInSource="3221" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         <asset xsi:type="esdl:EConnection" id="bc419cf3-abaa-44e8-aad4-dfb7c0730e14" name="ConnectionHome322_1" originalIdInSource="3221" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -8940,7 +8940,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.966704384308116" lon="4.0161378206969385"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="01e87400-b6c9-4d31-92ea-f3d33af8fc40" name="Home333_2" originalIdInSource="3332" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="01e87400-b6c9-4d31-92ea-f3d33af8fc40" name="Home333_2" originalIdInSource="3332" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.966880714104505" lon="4.015841372533365"/>
         <asset xsi:type="esdl:EConnection" id="a079c486-b3e6-4807-a78b-a8b662b397b7" name="ConnectionHome333_2" originalIdInSource="3332" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9336,7 +9336,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3b421ac7-a9a3-417e-b371-ad53305aa6d0" name="Home346_2" originalIdInSource="3462" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3b421ac7-a9a3-417e-b371-ad53305aa6d0" name="Home346_2" originalIdInSource="3462" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.978788404973045" lon="4.034983555856922"/>
         <asset xsi:type="esdl:EConnection" id="0e266523-6797-4f6d-8e4f-71bdfd51b5c6" name="ConnectionHome346_2" originalIdInSource="3462" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9666,7 +9666,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.991438254299695" lon="4.056443491444652"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a44b4e9-0298-48a7-a3e4-8b1c3fa786d4" name="Home381_2" originalIdInSource="3812" assetType="mansionette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="0a44b4e9-0298-48a7-a3e4-8b1c3fa786d4" name="Home381_2" originalIdInSource="3812" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99161468503651" lon="4.05614703648031"/>
         <asset xsi:type="esdl:EConnection" id="96efb114-bfd0-436c-a849-31b5f74f424d" name="ConnectionHome381_2" originalIdInSource="3812" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9864,7 +9864,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00098020870601" lon="4.073637012918354"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d6e2773e-00a1-4193-9de8-186cea0fa97e" name="Home398_1" originalIdInSource="3981" assetType="mansionette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="d6e2773e-00a1-4193-9de8-186cea0fa97e" name="Home398_1" originalIdInSource="3981" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.002783954257666" lon="4.074166739491368"/>
         <asset xsi:type="esdl:EConnection" id="afa35ba2-233f-4710-9716-f5bcdf60af25" name="ConnectionHome398_1" originalIdInSource="3981" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9897,7 +9897,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.002783954257666" lon="4.074166739491368"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="11b5d64e-090d-4f0a-843b-2daea0136c81" name="Home398_2" originalIdInSource="3982" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="11b5d64e-090d-4f0a-843b-2daea0136c81" name="Home398_2" originalIdInSource="3982" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.002960429340554" lon="4.073870278457093"/>
         <asset xsi:type="esdl:EConnection" id="efd51c06-5e3f-40a2-a363-609952483567" name="ConnectionHome398_2" originalIdInSource="3982" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -9963,7 +9963,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.990503814023235" lon="4.037542423045395"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="385a9b3f-3797-479c-89ef-e462bb41a94c" name="Home409_2" originalIdInSource="4092" assetType="mansionette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="385a9b3f-3797-479c-89ef-e462bb41a94c" name="Home409_2" originalIdInSource="4092" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99068019691516" lon="4.037245900367235"/>
         <asset xsi:type="esdl:EConnection" id="514c8401-0895-4476-a2fe-03ca9c8a8467" name="ConnectionHome409_2" originalIdInSource="4092" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10050,7 +10050,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992385057755996" lon="4.109417922468816"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="74dfaf1b-2462-4b5a-9d6d-03f2079f42f1" name="Home415_1" originalIdInSource="4151" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="74dfaf1b-2462-4b5a-9d6d-03f2079f42f1" name="Home415_1" originalIdInSource="4151" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99235974121354" lon="4.10708887375933"/>
         <asset xsi:type="esdl:EConnection" id="b027fb48-df7c-45aa-b76d-64f8ee702479" name="ConnectionHome415_1" originalIdInSource="4151" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10083,7 +10083,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99235974121354" lon="4.10708887375933"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ed3e13f1-9f01-4b07-88a3-a831da52cb33" name="Home415_2" originalIdInSource="4152" assetType="mansionette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="ed3e13f1-9f01-4b07-88a3-a831da52cb33" name="Home415_2" originalIdInSource="4152" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99253313160637" lon="4.106501478897132"/>
         <asset xsi:type="esdl:EConnection" id="3e3bd0e1-cd24-421f-b950-9ed58e9a93af" name="ConnectionHome415_2" originalIdInSource="4152" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10182,7 +10182,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992681133095466" lon="4.103585016691568"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a90a5bb9-bdf3-4e1f-8c67-ef4030d16040" name="Home419_1" originalIdInSource="4191" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="a90a5bb9-bdf3-4e1f-8c67-ef4030d16040" name="Home419_1" originalIdInSource="4191" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99266206338046" lon="4.1018382215718585"/>
         <asset xsi:type="esdl:EConnection" id="cd80aa3a-f8b5-4081-8e9c-b1a04686ad60" name="ConnectionHome419_1" originalIdInSource="4191" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10314,7 +10314,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99282587851799" lon="4.100377402533337"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e5add44e-ad1c-403a-81ce-02fd3278edb5" name="Home422_1" originalIdInSource="4221" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e5add44e-ad1c-403a-81ce-02fd3278edb5" name="Home422_1" originalIdInSource="4221" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992813136497766" lon="4.099212869692134"/>
         <asset xsi:type="esdl:EConnection" id="a0fadae5-d76c-451d-8624-9637e40e042c" name="ConnectionHome422_1" originalIdInSource="4221" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10743,7 +10743,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99333952446526" lon="4.081724038946178"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8fb9a64a-26a2-4a8f-bbed-8e109fed0411" name="Home439_1" originalIdInSource="4391" assetType="mansionette_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8fb9a64a-26a2-4a8f-bbed-8e109fed0411" name="Home439_1" originalIdInSource="4391" assetType="maisonnette_1975_1991" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         <asset xsi:type="esdl:EConnection" id="175e08a8-734d-45c8-b8c1-8cd214943e28" name="ConnectionHome439_1" originalIdInSource="4391" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10776,7 +10776,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="356e1cc6-b33a-4ef9-9d36-3279a80905bf" name="Home440_1" originalIdInSource="4401" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="356e1cc6-b33a-4ef9-9d36-3279a80905bf" name="Home440_1" originalIdInSource="4401" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         <asset xsi:type="esdl:EConnection" id="bb6d92ab-3957-430b-add6-0187441116f1" name="ConnectionHome440_1" originalIdInSource="4401" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -10941,7 +10941,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98971310470894" lon="4.095225042863392"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f8245d0f-6707-485a-8f83-06c2f568632b" name="Home444_1" originalIdInSource="4441" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="f8245d0f-6707-485a-8f83-06c2f568632b" name="Home444_1" originalIdInSource="4441" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98789665042962" lon="4.093530215107103"/>
         <asset xsi:type="esdl:EConnection" id="dcc47770-e1c4-4f05-91c5-cd3d45887b52" name="ConnectionHome444_1" originalIdInSource="4441" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11259,7 +11259,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98943970113183" lon="4.103095393829407"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="751bcdd7-1d5f-4c22-a9c8-d11f32baea17" name="Home478_1" originalIdInSource="4781" assetType="mansionette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="751bcdd7-1d5f-4c22-a9c8-d11f32baea17" name="Home478_1" originalIdInSource="4781" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98958761888924" lon="4.1001791224051765"/>
         <asset xsi:type="esdl:EConnection" id="caceb801-dff4-4721-a3bd-8379f7e7f01a" name="ConnectionHome478_1" originalIdInSource="4781" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11346,7 +11346,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01598183319244" lon="4.097090100696548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8438c48a-5afe-489e-84b0-23bc71aa4faa" name="Home491_1" originalIdInSource="4911" assetType="mansionette_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8438c48a-5afe-489e-84b0-23bc71aa4faa" name="Home491_1" originalIdInSource="4911" assetType="maisonnette_1975_1991" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99895038006264" lon="4.053016577475479"/>
         <asset xsi:type="esdl:EConnection" id="a725a91b-c644-4884-927d-27415c403073" name="ConnectionHome491_1" originalIdInSource="4911" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11412,7 +11412,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a90eb473-290a-4781-91eb-ef07136396cc" name="Home491_3" originalIdInSource="4913" assetType="mansionette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a90eb473-290a-4781-91eb-ef07136396cc" name="Home491_3" originalIdInSource="4913" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         <asset xsi:type="esdl:EConnection" id="ae3ea1e5-d0c6-409c-b1e1-5539b946d782" name="ConnectionHome491_3" originalIdInSource="4913" assetType="3x50A" capacity="34641.016151377546">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
@@ -11445,7 +11445,7 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d08e78dd-ecd4-46ff-a2c6-7bc76a932182" name="Home496_1" originalIdInSource="4961" assetType="mansionette_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="d08e78dd-ecd4-46ff-a2c6-7bc76a932182" name="Home496_1" originalIdInSource="4961" assetType="maisonnette_1975_1991" energyLabel="LABEL_B">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989420624559855" lon="4.101348725237434"/>
         <asset xsi:type="esdl:EConnection" id="5d0143da-3cfb-4929-9cac-fe7a33f56da7" name="ConnectionHome496_1" originalIdInSource="4961" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>

@@ -78,11 +78,15 @@
     },
     "building_isolation" : {
         "isolation_params_file" : "test/input_files/building_isolation_params.csv",
+        "asset_type_col" : "ID",
         "building_year_col" : "buildingYear",
         "rcFloor_col" : "rcFloor",
         "rcRoof_col" : "rcRoof",
         "rcWall_col" : "rcWall",
-        "uDoor" : "uDoor",
-        "uWindow" : "uWindow"
+        "uDoor_col" : "uDoor",
+        "uWindow_col" : "uWindow",
+        "heatPumpThermalPower_col" : "heatPumpThermalPower",
+        "sh_buffer_volume_col" : "sh_buffer_volume",
+        "dhw_buffer_volume_col" : "dhw_buffer_volume"
     }
 }

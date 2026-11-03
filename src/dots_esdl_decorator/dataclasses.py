@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+import pandas as pd
 from dataclasses_json import dataclass_json
 
 from esdl import HeatingDemand, InPort
@@ -7,6 +8,11 @@ from esdl import HeatingDemand, InPort
 class ProfileMetaData:
     ports : list[InPort] = field(default_factory=list)
     index_to_pick : int = 0
+
+@dataclass
+class BuildingIsolationMetaData:
+    data : pd.DataFrame
+    spec : BuildingIsolationSpecification
 
 
 @dataclass
@@ -17,14 +23,14 @@ class HeatingProfileMetaData(ProfileMetaData):
 @dataclass_json
 @dataclass
 class PvSpecification:
-    fraction_houses_pv : float
+    fraction_houses_pv : float = 0.0
     surface_area_min : int = 6
     surface_area_max : int = 16
 
 @dataclass_json
 @dataclass
 class BatterySpecification:
-    fraction_houses_pv_battery : float
+    fraction_houses_pv_battery : float = 0.0
     capacity_kwh_mean : float = 10.0
     capacity_kwh_std : float = 16.0
     efficiency : float = 5.0
@@ -33,22 +39,22 @@ class BatterySpecification:
 @dataclass_json
 @dataclass
 class EvSpecification:
-    fraction_houses_ev : float
+    fraction_houses_ev : float = 0.0
     min_charge_rate_kwh : float = 4.2
-    min_soc_percentage : float = 0.3
-    max_soc_kwh : float = 75
+    min_soc_percentage_v2g : float = 0.3
+    capacity_kwh_mean : float = 75
+    capacity_kwh_std : float = 0.0
     efficiency : float = 0.95
-    soc_upon_arrival : float = 0.8
 
 @dataclass_json
 @dataclass
 class EvProfileSpecification:
-    profile_file : str
-    connection_start_date_time_column : str
-    connection_end_date_time_column : str
-    charging_station_identifier_column : str
-    energy_demand_column : str
-    charging_power_column : str
+    profile_file : str = ''
+    connection_start_date_time_column : str = ''
+    connection_end_date_time_column : str = ''
+    charging_station_identifier_column : str = ''
+    energy_demand_column : str = ''
+    charging_power_column : str = ''
     unit : str = "kWh"
 
 @dataclass_json
@@ -89,29 +95,16 @@ class WeatherDataSpecification:
 @dataclass
 class BuildingIsolationSpecification:
     isolation_params_file: str = ""
-    building_year_col: str = ""
+    asset_type_col : str = ""
     rcFloor_col: str = ""
     rcRoof_col: str = ""
     rcWall_col: str = ""
-    uDoor: str = ""
-    uWindow: str = ""
+    uDoor_col: str = ""
+    uWindow_col: str = ""
+    heatPumpThermalPower_col : str = ""
+    sh_buffer_volume_hp_col : str = ""
+    dhw_buffer_volume_hp_col : str = ""
+    hybridheatPumpThermalPower_col : str = ""
+    hhp_sh_buffer_volume_col : str = ""
 
-@dataclass
-class GenericHeatpumpTemperatures:
-    buffer_temp_set : float
-    buffer_temp_min : float
-    buffer_temp_max : float
-    buffer_temp_0 : float
-    dhw_temp_set : float
-    dhw_temp_tap : float
 
-@dataclass
-class HpParams:
-    buffer_capacitance : float
-    hw_buffer_capacitance : float
-    nominal_heat : float
-
-@dataclass
-class HhpParams:
-    buffer_capacitance : float
-    nominal_heat : float

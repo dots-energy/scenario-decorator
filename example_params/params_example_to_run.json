@@ -235,5 +235,17 @@
         "min_soc_percentage" : 0.3,
         "max_soc_kwh" : 75,
         "efficiency" : 0.95
+    },
+    "building_isolation" : {
+        "isolation_params_file" : "test/input_files/building_isolation_params.csv",
+        "building_year_col" : "buildingYear",
+        "rcFloor_col" : "rcFloor",
+        "rcRoof_col" : "rcRoof",
+        "rcWall_col" : "rcWall",
+        "uDoor_col" : "uDoor",
+        "uWindow_col" : "uWindow",
+        "heatPumpThermalPower_col" : "heatPumpThermalPower",
+        "sh_buffer_volume_col" : "sh_buffer_volume",
+        "dhw_buffer_volume_col" : "dhw_buffer_volume"
     }
 }

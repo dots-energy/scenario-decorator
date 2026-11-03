@@ -1,3 +1,4 @@
+from dataclasses import asdict
 from modulefinder import test
 from pathlib import Path
 import uuid
@@ -6,13 +7,13 @@ import json
 import logging
 import random
 
-from esdl import Battery, Building, BuildingStructureInformation, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, MultiplierEnum, OutPort, PhysicalQuantityEnum, PVInstallation, Parties, Party, Point, ProfileElement, QuantityAndUnitType, Services, TimeSeriesProfile, UnitEnum
+from esdl import Battery, Building, BuildingStructureInformation, ConnectableAsset, CostInformation, DateTimeProfile, EConnection, EVChargingStation, ElectricityDemand, ElectricityNetwork, EnergyAsset, EnergyMarket, EnergySystemInformation, EnvironmentalProfiles, HeatDemandTypeEnum, HeatPump, HeatingDemand, HybridHeatPump, InPort, Measure, Measures, MobilityDemand, MobilityFuelTypeEnum, MultiplierEnum, OutPort, PhysicalQuantityEnum, PVInstallation, Parties, Party, Point, ProfileElement, QuantityAndUnitType, Services, TimeSeriesProfile, UnitEnum, WaterBuffer
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, GenericHeatpumpTemperatures, EvSpecification, HeatProfileSpecification, HeatingProfileMetaData, HhpParams, HpParams, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationMetaData, BuildingIsolationSpecification, EvSpecification, EvProfileSpecification, HeatProfileSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -57,6 +58,7 @@ class EsdlBuilder:
         self.target_days: int = target_days
         self.energy_system = esh.load_file(esdl_name)
         self.energy_system.measures = Measures()
+        self.energy_system.services = Services(id=str(uuid.uuid4()))
         self.amount_of_connections = self.get_amount_number_of_type_in_esdl(EConnection)
         self.area = self.energy_system.instance[0].area
         self.heat_profiles_mapping :dict[str, HeatingProfileMetaData] = {} 
@@ -64,6 +66,7 @@ class EsdlBuilder:
         self.rng = np.random.default_rng(42)
         self.weather_data_lon : float = default_pv_lon
         self.weather_data_lat : float = default_pv_lat
+        self.isolation_params_data : BuildingIsolationMetaData = BuildingIsolationMetaData(data=pd.DataFrame(), spec=BuildingIsolationSpecification())
 
     def get_amount_number_of_type_in_esdl(self, esdl_type : type) -> int:
         return len([esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, esdl_type)])
@@ -193,11 +196,10 @@ class EsdlBuilder:
             weather_specification.outside_temperature_column,
             QuantityAndUnitType(physicalQuantity=PhysicalQuantityEnum.from_string('TEMPERATURE'), unit=UnitEnum.from_string('DEGREES_CELSIUS')), target_days=self.target_days)
 
-    def add_da_market_timeseries_profile(self, day_ahead_prices_file: Path, price_column : str, price_unit : str, gass_price : float):
-        file_exists = day_ahead_prices_file.exists()
+    def add_market_data(self, day_ahead_prices_file: Path | None, price_column : str, price_unit : str, gass_price : float):
+        file_exists = day_ahead_prices_file is not None and day_ahead_prices_file.exists()
         if file_exists or gass_price > 0:
             da_market = EnergyMarket(name=f'DA-market in {price_unit}', id=str(uuid.uuid4()))
-            services = Services(id=str(uuid.uuid4()))
             if file_exists:
                 df = pd.read_csv(day_ahead_prices_file, index_col=0, parse_dates=True, date_format='ISO8601')
                 df.sort_index(ascending=True)
@@ -210,9 +212,8 @@ class EsdlBuilder:
 
             if gass_price > 0:
                 da_market.description = f"Gass price {gass_price} EUR/m3"
-        
-            services.service.append(da_market)
-            self.energy_system.services = services
+
+            self.energy_system.services.service.append(da_market)
 
     def add_heat_profiles(self, heat_profile_specification: HeatProfileSpecification, heating_demand_type: EEnum):
         heat_profile_file = Path(heat_profile_specification.profile_file)
@@ -226,7 +227,7 @@ class EsdlBuilder:
             heat_profiles = heat_profiles.set_index('timestamp')
         else:
             heat_profiles = pd.read_csv(heat_profile_file, index_col=0, parse_dates=True, date_format='ISO8601')
-            tap_water_setpoint = 55
+            tap_water_setpoint = 55.0
             temps = [tap_water_setpoint for col in heat_profiles.columns]
 
         column_choices = list(range(len(heat_profiles.columns)))
@@ -245,8 +246,8 @@ class EsdlBuilder:
                 description = "Unit: L/S"
             
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
-            comfort_range = 0.8
-            heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp - comfort_range, maxTemperature=temp + comfort_range)
+            comfort_range = 4.0
+            heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp, maxTemperature=temp + comfort_range)
             heat_profile_name = heat_profile_specification.profile_name
             if heat_profile_name not in self.heat_profiles_mapping:
                 self.heat_profiles_mapping[heat_profile_name] = HeatingProfileMetaData()
@@ -290,7 +291,7 @@ class EsdlBuilder:
             self.base_load_profiles.ports.append(in_port)
             self.energy_system.instance[0].area.asset.append(electricity_demand)
 
-    def add_ev_profile(self, entity : str, profile_data : pd.DataFrame, ev_specification : EvSpecification) -> MobilityDemand:
+    def add_ev_profile(self, entity : str, profile_data : pd.DataFrame, ev_specification : EvProfileSpecification) -> MobilityDemand:
 
         profile = DateTimeProfile()
         quantity_and_unit = _parse_esdl_unit(ev_specification.unit, expected_physical_quantity="ENERGY")
@@ -380,7 +381,7 @@ class EsdlBuilder:
                     self.add_consuming_asset_to_other_asset(battery, grid, house)
 
 
-    def connect_heating_demand_heatpump_to_profile(self, heatpump : HeatPump, dhw_profile_name : str) -> HeatingDemand | None:
+    def connect_heating_demand_heatpump_to_profile(self, asset_to_connect_to : ConnectableAsset, dhw_profile_name : str) -> HeatingDemand | None:
         heating_demand = None
         if len(self.heat_profiles_mapping) > 0 and dhw_profile_name in self.heat_profiles_mapping:
             meta_data = self.heat_profiles_mapping[dhw_profile_name]
@@ -392,7 +393,7 @@ class EsdlBuilder:
             connected_to = meta_data.ports[meta_data.index_to_pick]
             out_port = OutPort(id=str(uuid.uuid4()), connectedTo=[connected_to])
             connected_to.connectedTo.append(out_port)
-            heatpump.port.append(out_port)
+            asset_to_connect_to.port.append(out_port)
             amount_of_profiles = len(self.heat_profiles_mapping[dhw_profile_name].ports)
             self.heat_profiles_mapping[dhw_profile_name].index_to_pick = (self.heat_profiles_mapping[dhw_profile_name].index_to_pick + 1) % amount_of_profiles
         else:
@@ -407,162 +408,114 @@ class EsdlBuilder:
             self.base_load_profiles.index_to_pick = (self.base_load_profiles.index_to_pick + 1) % len(self.base_load_profiles.ports)
             phase_grids = [asset for asset in econnection.eContainer().asset if isinstance(asset, ElectricityNetwork)]
             for phase_grid in phase_grids:
-                phase_port = phase_grid.port[1]
+                phase_port = next((port for port in phase_grid.port if isinstance(port, OutPort) and len(port.connectedTo) == 0), None)
+                if phase_port is None:
+                    new_phase_out_port = OutPort(id=str(uuid.uuid4()), name=f"Out")
+                    phase_grid.port.append(new_phase_out_port)
+                    phase_port = new_phase_out_port
                 phase_port.connectedTo.append(port)
                 port.connectedTo.append(phase_port)
         else:
             logging.warning("No heat profiles loaded so not connecting base load profiles to econnection")
 
 
+    def connect_heatpump_and_buffer(self, heatpump : HeatPump, buffer : WaterBuffer):
+        inport_buffer = InPort(id=str(uuid.uuid4()), name="In")
+        outport_buffer = OutPort(id=str(uuid.uuid4()), name=f"Out_{buffer.name}")
+        inport_buffer.connectedTo.append(outport_buffer)
+        outport_buffer.connectedTo.append(inport_buffer)
+        buffer.port.append(inport_buffer)
+        heatpump.port.append(outport_buffer)
+
+
     def add_heat_pump_to_houses(self, fraction_houses_hp : float, fraction_houses_hhp : float, hw_profile_names : list[str]):
         if fraction_houses_hhp + fraction_houses_hp > 1.0:
             raise ValueError("Fraciton of houses for heatpump and hybrid heatpump should at most sum to 1.0")
 
-        houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
-        n_houses = len(houses)
-        house_indices = list(range(n_houses))
-        n_hp = round(fraction_houses_hp * n_houses)
-        n_hhp = round(fraction_houses_hhp * n_houses)
-        # Generate random house indices
-        house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
-
-        dhw_names_options = hw_profile_names
-        profile_name = self.rng.choice(dhw_names_options)
-        dhw_profile_name = profile_name.replace("dhw_profiles_", "")
-
-        for i in house_indices_hp:
-            house_indices.remove(i)
-
-        houses_indices_hhp = self.rng.choice(house_indices, size=n_hhp, replace=False)
-
-        for i in np.concatenate((house_indices_hp, houses_indices_hhp)):
-            house = houses[i]
-            phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
-            dhw_temp_set = 55.0 + 273.15
-            dhw_temp_tap = 15.0 + 273.15  # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
-            buffer_temp_set = 40.0 + 273.15
-            buffer_temp_min = 25.0 + 273.15
-            buffer_temp_max = 65.0 + 273.15
-            buffer_temp_0 = buffer_temp_set + random.uniform(-10, 10) 
-            generic_temperatures = GenericHeatpumpTemperatures(buffer_temp_set, buffer_temp_min, buffer_temp_max, buffer_temp_0, dhw_temp_set, dhw_temp_tap)
-            description_dict = {}
-            # add heat pump
-            if i in house_indices_hp:
-
-                heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=10000.0, powerFactor=0.98, assetType='air_water')
-                heat_pump.COP = 3.5
-                hp_params = self._get_buffer_and_power_params_hp(dhw_profile_name, house)
-                if hp_params is not None:
-                    heat_pump.power = hp_params.nominal_heat
-                    description_dict = self._generate_description_dict_heatpump(generic_temperatures, hp_params.buffer_capacitance, hp_params.hw_buffer_capacitance)
-
-            elif i in houses_indices_hhp:
-
-                hhp_params = self._get_buffer_and_power_params_hhp(house)
-
-                heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
-                                           assetType='air_water', heatPumpThermalPower=10000.0)
-                if hhp_params is not None:
-                    heat_pump.heatPumpThermalPower = hhp_params.nominal_heat
-                    description_dict = self._generate_description_dict_hybridheatpump(generic_temperatures, hhp_params.buffer_capacitance)
-
-            demand_sh = self.connect_heating_demand_heatpump_to_profile(heat_pump, house.assetType.lower())
-
+        if fraction_houses_hhp + fraction_houses_hp > 0.0:
+            houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
+            n_houses = len(houses)
+            house_indices = list(range(n_houses))
+            n_hp = round(fraction_houses_hp * n_houses)
+            n_hhp = round(fraction_houses_hhp * n_houses)
+            # Generate random house indices
+            house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
+    
             dhw_names_options = hw_profile_names
             profile_name = self.rng.choice(dhw_names_options)
-            demand_hw = self.connect_heating_demand_heatpump_to_profile(heat_pump, profile_name)
-
-            if demand_sh is not None:
-                house_temp_set = (demand_sh.minTemperature + demand_sh.maxTemperature) / 2
-                description_dict['house_temp_set_k'] = demand_sh.minTemperature
-                description_dict['house_temp_min_k'] = house_temp_set - 0.8
-                description_dict['house_temp_max_k'] = house_temp_set + 0.8
-                description_dict['house_temp_0_k'] = house_temp_set + random.uniform(-0.4, 0.4)
-                description_dict['house_temp_hor_k'] = house_temp_set
-
-            # add to a random phase
-            phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
-            
-            heat_pump.description = json.dumps(description_dict)
-            self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
-
-    def _get_buffer_and_power_params_hhp(self, house : Building, hhp_spec_info : Path = Path('house_hhp_map.json')) -> HhpParams | None:
-
-        if hhp_spec_info.exists():
-            with open(hhp_spec_info) as f:
-                house_hhp_map = json.load(f)
-
-            map_key_elements = house.assetType.split('_')
-            map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-            map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2]
-            nominal_heat = house_hhp_map[map_key]['nominal_heat']
-            buffer_volume = house_hhp_map[map_key]['sh_tank_mass']
-            buffer_capacitance = buffer_volume * 4183
-            return HhpParams(buffer_capacitance, nominal_heat)
-        else:
-            return None
-
-    def _get_buffer_and_power_params_hp(self, dhw_profile_name : str, house : Building, hp_spec_info : Path = Path('house_hp_map.json')) -> HpParams | None:
-        if hp_spec_info.exists():
-            with open(hp_spec_info) as f:
-                house_hp_map = json.load(f)
-
-                map_key_elements = house.assetType.split('_')
-                map_key_elements[1] = '>2012' if map_key_elements[1] == '2012' else map_key_elements[1]
-                map_key = map_key_elements[0] + "_" + map_key_elements[1] + "_" + map_key_elements[2] + "_" + dhw_profile_name
-        
-                nominal_heat = house_hp_map[map_key]['nominal_heat']
-                dhw_volume = house_hp_map[map_key]['dhw_tank_mass']
-                buffer_volume = house_hp_map[map_key]['sh_tank_mass']
-                buffer_capacitance = buffer_volume * 4183
-                dhw_capacitance = dhw_volume * 4183
-                return HpParams(buffer_capacitance, dhw_capacitance, nominal_heat)
-        return None
-
-    def _generate_description_dict_hybridheatpump(self, generic_temperatures : GenericHeatpumpTemperatures, buffer_capacitance):
-        description_dict = {'buffer_capacitance': buffer_capacitance,
-                            'buffer_temp_set': generic_temperatures.buffer_temp_set,
-                            'buffer_temp_min': generic_temperatures.buffer_temp_min,
-                            'buffer_temp_max': generic_temperatures.buffer_temp_max,
-                            'buffer_temp_0': generic_temperatures.buffer_temp_0,
-                            'buffer_temp_hor': generic_temperatures.buffer_temp_set,
-                            'dhw_temp_tap': generic_temperatures.dhw_temp_tap,
-                            'dhw_temp_set': generic_temperatures.dhw_temp_set}
-        return description_dict
-
-    def _generate_description_dict_heatpump(self, generic_temperatures : GenericHeatpumpTemperatures, buffer_capacitance : float, dhw_capacitance : float):
-        # Set fixed dhw tank properties
-        dhw_temp_min = 25.0 + 273.15
-        dhw_temp_max = 85.0 + 273.15  # 70.0 does not give enough space for pre-heating
-        dhw_temp_0 = 55.0 + 273.15 + random.uniform(-10, 10)
-        heat_element = 3000.0
-        cop_element = 1.0
-
-        description_dict = {'buffer_capacitance': buffer_capacitance,
-                            'buffer_temp_set': generic_temperatures.buffer_temp_set,
-                            'buffer_temp_min': generic_temperatures.buffer_temp_min,
-                            'buffer_temp_max': generic_temperatures.buffer_temp_max,
-                            'buffer_temp_0': generic_temperatures.buffer_temp_0,
-                            'buffer_temp_hor': generic_temperatures.buffer_temp_set,
-                            'dhw_capacitance': dhw_capacitance,
-                            'dhw_temp_set': generic_temperatures.dhw_temp_set,
-                            'dhw_temp_min': dhw_temp_min,
-                            'dhw_temp_max': dhw_temp_max,
-                            'dhw_temp_0': dhw_temp_0,
-                            'dhw_temp_hor': generic_temperatures.dhw_temp_set,
-                            'dhw_temp_tap': generic_temperatures.dhw_temp_tap,
-                            'heat_element': heat_element,
-                            'cop_element': cop_element}
-        return description_dict
-
-
+            dhw_profile_name = profile_name.replace("dhw_profiles_", "")
+    
+            for i in house_indices_hp:
+                house_indices.remove(i)
+    
+            houses_indices_hhp = self.rng.choice(house_indices, size=n_hhp, replace=False)
+    
+            for i in np.concatenate((house_indices_hp, houses_indices_hhp)):
+                house = houses[i]
+                phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
+                dhw_temp_set = 55.0
+                dhw_temp_tap = 15.0 # 10.0 is only in the winter, 20.0 in the summer - >15.0 on average
+                buffer_temp_min = 25.0
+                buffer_temp_max = 65.0
+    
+                isolation_df = self.isolation_params_data.data
+                isolation_params = None
+                if not isolation_df.empty:
+                    isolation_params = isolation_df[isolation_df[self.isolation_params_data.spec.asset_type_col].str.lower() == house.assetType.lower()]
+                    if isolation_params.empty:
+                        logging.warning(f"No isolation parameters found for house with assetType {house.assetType} in isolation parameters data")
+                hw_buffer = None
+                sh_buffer = None
+                # add heat pump
+                if i in house_indices_hp:
+                    heat_pump = HeatPump(name='hp_' + house.name, id=str(uuid.uuid4()), power=10000.0, powerFactor=0.98, assetType='air_water')
+                    if isolation_params is not None and not isolation_params.empty:
+                        hw_buffer_size = float(isolation_params.iloc[0][self.isolation_params_data.spec.dhw_buffer_volume_hp_col])
+                        sh_buffer_size = float(isolation_params.iloc[0][self.isolation_params_data.spec.sh_buffer_volume_hp_col])
+                        hw_power = float(isolation_params.iloc[0][self.isolation_params_data.spec.heatPumpThermalPower_col])
+                        hw_buffer = WaterBuffer(name='hw_buffer_' + house.assetType, id=str(uuid.uuid4()), selfDischargeRate=0.0, volume=hw_buffer_size, minStorageTemperature=dhw_temp_tap, maxStorageTemperature=dhw_temp_set, description="Hot water buffer temperatures in celsius")
+                        sh_buffer = WaterBuffer(name='sh_buffer_' + house.assetType, id=str(uuid.uuid4()), selfDischargeRate=0.0, volume=sh_buffer_size, minStorageTemperature=buffer_temp_min, maxStorageTemperature=buffer_temp_max, description="Space heating buffer temperatures in celsius")
+                        heat_pump.power = hw_power
+                        self.connect_heatpump_and_buffer(heat_pump, hw_buffer)
+                        self.connect_heatpump_and_buffer(heat_pump, sh_buffer)
+                        house.asset.append(hw_buffer)
+                        house.asset.append(sh_buffer)
+    
+                    heat_pump.COP = 3.5
+    
+                elif i in houses_indices_hhp:
+    
+                    heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
+                                               assetType='air_water', heatPumpThermalPower=10000.0, gasHeaterThermalPower=18000.0)
+                    if isolation_params is not None and not isolation_params.empty:
+                        w_power = float(isolation_params.iloc[0][self.isolation_params_data.spec.hybridheatPumpThermalPower_col])
+                        sh_buffer_size = float(isolation_params.iloc[0][self.isolation_params_data.spec.hhp_sh_buffer_volume_col])
+                        heat_pump.heatPumpThermalPower = w_power
+                        sh_buffer = WaterBuffer(name='sh_buffer_' + house.assetType, id=str(uuid.uuid4()), volume=sh_buffer_size, minStorageTemperature=buffer_temp_min, selfDischargeRate=0.0, maxStorageTemperature=buffer_temp_max, description="Space heating buffer temperatures in celsius")
+                        house.asset.append(sh_buffer)
+                        self.connect_heatpump_and_buffer(heat_pump, sh_buffer)
+    
+                sh_profile_connecting_asset = heat_pump if sh_buffer is None else sh_buffer
+                hw_profile_connecting_asset = heat_pump if hw_buffer is None else hw_buffer
+                demand_sh = self.connect_heating_demand_heatpump_to_profile(sh_profile_connecting_asset, house.assetType.lower())
+    
+                dhw_names_options = hw_profile_names
+                profile_name = self.rng.choice(dhw_names_options)
+                demand_hw = self.connect_heating_demand_heatpump_to_profile(hw_profile_connecting_asset, profile_name)
+    
+                # add to a random phase
+                phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
+                
+                self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
+    
+    
     def add_econnection_information(self, fraction_houses_dyn : float):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                   isinstance(esdl_element, Building)]
         n_houses = len(houses)
         n_dyn = round(fraction_houses_dyn * n_houses)
         house_indices_dyn = self.rng.choice(range(0, n_houses), size=n_dyn, replace=False)
-
+    
         econnections : list[EConnection] = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                         isinstance(esdl_element, EConnection)]
         counter_ems = 0
@@ -583,55 +536,61 @@ class EsdlBuilder:
         mobility_demand.port[0].connectedTo.append(out_port)
 
 
-    def add_ev_chargingstation(self, fraction_houses_ev : float, ev_specification : EvSpecification):
-        houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
-        n_houses = len(houses)
-        n_ev = round(fraction_houses_ev * n_houses)
-        # Generate random house indices
-        house_indices_ev = self.rng.choice(range(0, n_houses), size=n_ev, replace=False)
-
-        ev_entities_in_data = []
-        if ev_specification is not None and ev_specification.profile_file != '' and Path(ev_specification.profile_file).exists():
-            data = pd.read_csv(ev_specification.profile_file)
-            data[ev_specification.connection_start_date_time_column] = pd.to_datetime(data[ev_specification.connection_start_date_time_column], format='ISO8601')
-            data[ev_specification.connection_end_date_time_column] = pd.to_datetime(data[ev_specification.connection_end_date_time_column], format='ISO8601')
-            charging_stations = data[ev_specification.charging_station_identifier_column].unique()
-            if len(charging_stations) > n_ev:
-                ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev, replace=False)
-            else:
-                ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev)
-
-        for i, house_index in enumerate(house_indices_ev):
-            house = houses[house_index]
-            phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
-
-            power_range = [3700, 11000]
-            power_w = float(self.rng.choice(power_range))
-            annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
-            powerfactor = 0.95
-
-            mobility_demand = None
-            if len(ev_entities_in_data) > 0:
-                entity = ev_entities_in_data[i]
-                data_entity = data[data[ev_specification.charging_station_identifier_column] == entity]
-                mobility_demand = self.add_ev_profile(entity, data_entity, ev_specification)
-                power_w = data_entity[ev_specification.charging_power_column].mean() * 1000
-                annual_load = data_entity[ev_specification.energy_demand_column].sum()
-
-            charging_station = EVChargingStation(name='chargingstation_' + house.name, id=str(uuid.uuid4()),
-                                                      power=power_w, fullLoadHours=int(annual_load/power_w),
-                                                      powerFactor=powerfactor, assetType='privateEV')
-            cut_off_charge_rate_3_pahses_w = 3700
-            if power_w > cut_off_charge_rate_3_pahses_w:
-                # Add to all phases
-                for connection_ph in phase_grids:
-                    self.add_consuming_asset_to_other_asset(charging_station, connection_ph, house)
-            else:
-                phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True)
-                self.add_producing_asset_to_other_asset(charging_station, phase_grids[phase], house)
-
-            if mobility_demand is not None:
-                self.connect_ev_profile_to_chargingstation(charging_station, mobility_demand)
+    def add_ev_chargingstation(self, ev_specification : EvSpecification, ev_profile_params : EvProfileSpecification):
+        if ev_specification.fraction_houses_ev > 0.0:
+            houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if isinstance(esdl_element, Building)]
+            n_houses = len(houses)
+            n_ev = round(ev_specification.fraction_houses_ev * n_houses)
+            # Generate random house indices
+            house_indices_ev = self.rng.choice(range(0, n_houses), size=n_ev, replace=False)
+    
+            ev_entities_in_data = []
+            if ev_profile_params is not None and ev_profile_params.profile_file != '' and Path(ev_profile_params.profile_file).exists():
+                data = pd.read_csv(ev_profile_params.profile_file)
+                data[ev_profile_params.connection_start_date_time_column] = pd.to_datetime(data[ev_profile_params.connection_start_date_time_column], format='ISO8601')
+                data[ev_profile_params.connection_end_date_time_column] = pd.to_datetime(data[ev_profile_params.connection_end_date_time_column], format='ISO8601')
+                charging_stations = data[ev_profile_params.charging_station_identifier_column].unique()
+                if len(charging_stations) > n_ev:
+                    ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev, replace=False)
+                else:
+                    ev_entities_in_data = self.rng.choice(charging_stations, size=n_ev)
+    
+            for i, house_index in enumerate(house_indices_ev):
+                house = houses[house_index]
+                phase_grids = [asset for asset in house.asset if isinstance(asset, ElectricityNetwork)]
+    
+                power_range = [3700, 11000]
+                power_w = float(self.rng.choice(power_range))
+                annual_load = self.rng.integers(low=1800000, high=4000000, endpoint=True)
+                powerfactor = 0.95
+    
+                mobility_demand = None
+                if len(ev_entities_in_data) > 0:
+                    entity = ev_entities_in_data[i]
+                    data_entity = data[data[ev_profile_params.charging_station_identifier_column] == entity]
+                    mobility_demand = self.add_ev_profile(entity, data_entity, ev_profile_params)
+                    power_w = data_entity[ev_profile_params.charging_power_column].mean() * 1000
+                    annual_load = data_entity[ev_profile_params.energy_demand_column].sum()
+    
+                ev_specification_dict = asdict(ev_specification) 
+                ev_specification_dict.pop('fraction_houses_ev', None)
+                ev_specification_dict.pop('capacity_kwh_mean', None)
+                ev_specification_dict.pop('capacity_kwh_std', None)
+                ev_specification_dict['capacity_kwh'] = self.rng.normal(ev_specification.capacity_kwh_mean, ev_specification.capacity_kwh_std)
+                charging_station = EVChargingStation(name='chargingstation_' + house.name, id=str(uuid.uuid4()),
+                                                          power=power_w, fullLoadHours=int(annual_load/power_w),
+                                                          powerFactor=powerfactor, assetType='privateEV', description=json.dumps(ev_specification_dict))
+                cut_off_charge_rate_3_pahses_w = 3700
+                if power_w > cut_off_charge_rate_3_pahses_w:
+                    # Add to all phases
+                    for connection_ph in phase_grids:
+                        self.add_consuming_asset_to_other_asset(charging_station, connection_ph, house)
+                else:
+                    phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True)
+                    self.add_producing_asset_to_other_asset(charging_station, phase_grids[phase], house)
+    
+                if mobility_demand is not None:
+                    self.connect_ev_profile_to_chargingstation(charging_station, mobility_demand)
 
 
     def add_tou_measure(self, tou_spec : TouSpecification):
@@ -639,7 +598,7 @@ class EsdlBuilder:
         tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='%m-%dT%H:%M')
         tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%m-%dT%H:%M')
 
-        tou_measure = Measure(name = "time of use")
+        tou_measure = Measure(name = "time of use", id=str(uuid.uuid4()))
         cost_information = CostInformation(id=str(uuid.uuid4()), name=f"time of use, fixed costs: €{tou_spec.fixed_tou_rate_eur}")
         tou_profile = DateTimeProfile()
         for index, profile_data_row in tou_df.iterrows():
@@ -658,15 +617,15 @@ class EsdlBuilder:
 
     def add_building_isolation(self, isolation_specification: BuildingIsolationSpecification):
         isolation_data = pd.read_csv(isolation_specification.isolation_params_file)
-
+        self.isolation_params_data = BuildingIsolationMetaData(data=isolation_data, spec=isolation_specification)
         buildings = [
             esdl_element
             for esdl_element in self.energy_system.eAllContents()
             if isinstance(esdl_element, Building)
         ]
         for building in buildings:
-            isolation_data["ID"] = isolation_data["ID"].apply(lambda id: id.lower())
-            matching_rows = isolation_data.loc[isolation_data["ID"] == building.assetType.lower()]
+            isolation_data[isolation_specification.asset_type_col] = isolation_data[isolation_specification.asset_type_col].apply(lambda id: id.lower())
+            matching_rows = isolation_data.loc[isolation_data[isolation_specification.asset_type_col] == building.assetType.lower()]
             if matching_rows.empty:
                 logging.warning(f"No building isolation parameters found for asset type '{building.assetType}'")
             else:
@@ -675,8 +634,8 @@ class EsdlBuilder:
                     rcFloor=float(row[isolation_specification.rcFloor_col]),
                     rcRoof=float(row[isolation_specification.rcRoof_col]),
                     rcWall=float(row[isolation_specification.rcWall_col]),
-                    uDoor=float(row[isolation_specification.uDoor]),
-                    uWindow=float(row[isolation_specification.uWindow]),
+                    uDoor=float(row[isolation_specification.uDoor_col]),
+                    uWindow=float(row[isolation_specification.uWindow_col]),
                 )
                 building.buildinginformation.append(building_information)
 
@@ -740,12 +699,16 @@ def parse_base_load_profile(params : dict, esdl_decorator : EsdlBuilder):
 
 def parse_market_data(params : dict, esdl_decorator : EsdlBuilder):
     da_market_data = params.get('da_market_data', 'df_da_prices_2023_fixed.csv')
+    path_market_data_file = None
+    price_column = ''
+    price_unit = ''
     if isinstance(da_market_data, dict):
         path_market_data_file = Path(da_market_data.get('path', 'weather-data.csv'))
         price_column = da_market_data.get('price_column', 'Day-ahead Price [EUR/MWh]')
         price_unit = da_market_data.get('price_unit', 'EUR/MWh')
-        gass_price = params.get('gass_price_eur_m3', 0.0)
-        esdl_decorator.add_da_market_timeseries_profile(path_market_data_file, price_column, price_unit, gass_price)
+
+    gass_price = params.get('gass_price_eur_m3', 0.0)
+    esdl_decorator.add_market_data(path_market_data_file, price_column, price_unit, gass_price)
 
 
 def parse_tou_data(params : dict, esdl_decorator : EsdlBuilder):
@@ -793,8 +756,9 @@ def main() -> int:
         logging.exception(f"Failed to load params file {args.params}: {e}")
         return 2
 
-    pv_specification = PvSpecification.from_dict(params.get('pv_specification'))
-    battery_specification = BatterySpecification.from_dict(params.get('battery_specification'))
+    pv_specification = PvSpecification.from_dict(params.get('pv_specification', {}))
+    battery_specification = BatterySpecification.from_dict(params.get('battery_specification', {}))
+    ev_specification = EvSpecification.from_dict(params.get('ev_specification', {}))
 
     esdl_path = Path(args.esdl)
     if esdl_path.exists():
@@ -826,21 +790,22 @@ def main() -> int:
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     fraction_houses_hhp = params.get('fraction_houses_hhp', 0.0)
-    fraction_houses_ev = params.get('fraction_houses_ev', 0.0)
-    fraction_houses_dyn = params.get('fraction_houses_dyn', 1.0)
+    fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
 
     congestion_management_active = params.get('congestion_management_active', False)
     esdl_decorator.add_congestion_measure(congestion_management_active)
 
-    dhw_profile_names = [
-        profile["profile_name"]
-        for profile in params["dhw_profiles"]
-    ]
+    dhw_profile_names = []
+    if "dhw_profiles" in params:
+        dhw_profile_names = [
+            profile["profile_name"]
+            for profile in params["dhw_profiles"]
+        ]
 
     esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, battery_specification)
     esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp, dhw_profile_names)
-    ev_profile_params : EvSpecification =  EvSpecification.from_dict(params.get('ev_profiles'))
-    esdl_decorator.add_ev_chargingstation(fraction_houses_ev, ev_profile_params)
+    ev_profile_params : EvProfileSpecification =  EvProfileSpecification.from_dict(params.get('ev_profiles', {}))
+    esdl_decorator.add_ev_chargingstation(ev_specification, ev_profile_params)
     esdl_decorator.add_econnection_information(fraction_houses_dyn)
     esdl_decorator.save_esdl()
 

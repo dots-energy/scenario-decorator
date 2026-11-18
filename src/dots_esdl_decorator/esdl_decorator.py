@@ -13,7 +13,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationMetaData, BuildingIsolationSpecification, EvSpecification, EvProfileSpecification, HeatProfileSpecification, HeatingProfileMetaData, HybridHeatpumpSpecification, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationMetaData, BuildingIsolationSpecification, EConnectionSpecification, EvSpecification, EvProfileSpecification, HeatProfileSpecification, HeatingProfileMetaData, HybridHeatpumpSpecification, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -513,24 +513,49 @@ class EsdlBuilder:
                 phase = self.rng.integers(low=0, high=len(phase_grids) - 1, endpoint=True) 
                 
                 self.add_producing_asset_to_other_asset(heat_pump, phase_grids[phase], house)
+
+    def _define_econnection_description_full(self, econnection_spec : EConnectionSpecification, counter_ems : int, house_indices_dyn : np.ndarray, house_indices_ems : np.ndarray) -> str:
+        prop_dict = {}
+        if counter_ems in house_indices_dyn:
+            prop_dict['energy_contract'] = 'dynamic_contract'
+            prop_dict['flat_price'] = econnection_spec.flat_rate_dyn
+        else:
+            prop_dict['energy_contract'] = 'fixed_contract'
+            prop_dict['price'] = econnection_spec.static_price_contract
+        if counter_ems in house_indices_ems:
+            prop_dict['got_ems'] = True
+        return json.dumps(prop_dict)
+
+    def _define_econnection_description_min(self, counter_ems : int, house_indices_dyn : np.ndarray) -> str:
+        ret_val = {}
+        if counter_ems in house_indices_dyn:
+            ret_val = 'dynamic_contract'
+        else:
+            ret_val = 'fixed_contract'
+        return ret_val
+        
+
     
-    
-    def add_econnection_information(self, fraction_houses_dyn : float):
+    def add_econnection_information(self, econnection_spec : EConnectionSpecification):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                   isinstance(esdl_element, Building)]
         n_houses = len(houses)
-        n_dyn = round(fraction_houses_dyn * n_houses)
+        n_dyn = round(econnection_spec.fraction_houses_dyn * n_houses)
+        n_ems = round(econnection_spec.fraction_houses_ems * n_houses)
         house_indices_dyn = self.rng.choice(range(0, n_houses), size=n_dyn, replace=False)
+        house_indices_ems = self.rng.choice(range(0, n_houses), size=n_ems, replace=False)
+
+        full_description = econnection_spec.static_price_contract > 0 and econnection_spec.flat_rate_dyn > 0 and econnection_spec.fraction_houses_ems > 0
     
         econnections : list[EConnection] = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                         isinstance(esdl_element, EConnection)]
         counter_ems = 0
         for econnection in econnections:
             self.connect_base_load_to_econnection(econnection)
-            if counter_ems in house_indices_dyn:
-                econnection.description = 'dynamic_contract'
+            if full_description:
+                econnection.description = self._define_econnection_description_full(econnection_spec, counter_ems, house_indices_dyn, house_indices_ems)
             else:
-                econnection.description = 'fixed_contract' 
+                econnection.description = self._define_econnection_description_min(counter_ems, house_indices_dyn)
             counter_ems += 1
 
 
@@ -795,11 +820,7 @@ def main() -> int:
     parse_isolation_parameters(params, esdl_decorator)
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
-    hybrid_heatpump_specification_params = params.get(
-        'hybrid_heatpump_specification',
-        {'fraction_houses_hhp': params.get('fraction_houses_hhp', 0.0)},
-    )
-    hybrid_heatpump_specification = HybridHeatpumpSpecification.from_dict(hybrid_heatpump_specification_params)
+    hybrid_heatpump_specification = HybridHeatpumpSpecification.from_dict(params.get('hybrid_heatpump_specification',{} ))
     fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
 
     congestion_management_active = params.get('congestion_management_active', False)
@@ -816,7 +837,8 @@ def main() -> int:
     esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, hybrid_heatpump_specification, dhw_profile_names)
     ev_profile_params : EvProfileSpecification =  EvProfileSpecification.from_dict(params.get('ev_profiles', {}))
     esdl_decorator.add_ev_chargingstation(ev_specification, ev_profile_params)
-    esdl_decorator.add_econnection_information(fraction_houses_dyn)
+    econnection_spec = EConnectionSpecification.from_dict(params.get('econnection_specification',{}))
+    esdl_decorator.add_econnection_information(econnection_spec)
     esdl_decorator.save_esdl()
 
     return 0

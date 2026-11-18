@@ -37,6 +37,14 @@ class HybridHeatpumpSpecification:
 
 @dataclass_json
 @dataclass
+class EConnectionSpecification:
+    fraction_houses_dyn : float = 0.0
+    flat_rate_dyn : float = 0.0
+    static_price_contract : float = 0.0
+    fraction_houses_ems : float = 0.0
+
+@dataclass_json
+@dataclass
 class BatterySpecification:
     fraction_houses_pv_battery : float = 0.0
     capacity_kwh_mean : float = 10.0

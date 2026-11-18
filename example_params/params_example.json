@@ -14,17 +14,29 @@
     "ev_specification" : {
         "fraction_houses_ev" : 0.3,
         "min_charge_rate_kwh" : 4.2,
-        "min_soc_percentage" : 0.3,
-        "max_soc_kwh" : 75,
+        "min_soc_percentage_v2g" : 0.3,
+        "capacity_kwh_mean" : 75,
+        "capacity_kwh_std" : 0.0,
         "efficiency" : 0.95
     },
     "harmonize_profiles_to_year" : 2060,
     "target_days": 365,
     "fraction_houses_hp" : 0.23,
-    "fraction_houses_hhp" : 0.77,
+    "hybrid_heatpump_specification" : {
+        "fraction_houses_hhp" : 0.77,
+        "gas_heater_efficiency" : 0.96,
+        "gass_thermal_power_mean" : 18000.0,
+        "gass_thermal_power_std" : 0.0
+    },
     "gass_price_eur_m3" : 1.0,
     "defalut_lon" : 51.532534,
     "defalut_lat" : 3.882267,
+    "econnection_specification" : {
+        "fraction_houses_dyn" : 0.5,
+        "flat_rate_dyn" : 0.35,
+        "static_price_contract" :  0.08,
+        "fraction_houses_ems" : 0.5
+    },
     "weather_data" : {
         "path": "test/input_files/weather-data.csv",
         "soil_temperature_column": "soil_temperature_celcius",
@@ -34,7 +46,7 @@
         "measure_data_location_lon" : 3.882267
     },
     "da_market_data" : {
-        "path": "test/input_files/df_da_prices_2023_fixed.csv",
+        "path": "test/input_files/da_prices_example.csv",
         "price_column" : "Day-ahead Price [EUR/MWh]",
         "price_unit" : "EUR/MWh"
     },
@@ -70,7 +82,7 @@
         "charging_power_column" : "Power"
     },
     "tou_specification" : {
-      "profile_file" : "test/input_files/tou_tariff.csv",
+      "profile_file" : "test/input_files/tou_dataset.csv",
       "from_date_time_col" : "from_tou_month_hour_val",
       "to_date_time_col" : "to_tou_month_hour_val",
       "value_col" : "tou_weight",
@@ -86,7 +98,9 @@
         "uDoor_col" : "uDoor",
         "uWindow_col" : "uWindow",
         "heatPumpThermalPower_col" : "heatPumpThermalPower",
-        "sh_buffer_volume_col" : "sh_buffer_volume",
-        "dhw_buffer_volume_col" : "dhw_buffer_volume"
+        "sh_buffer_volume_hp_col" : "sh_buffer_volume",
+        "dhw_buffer_volume_hp_col" : "dhw_buffer_volume",
+        "hybridheatPumpThermalPower_col" : "hybridheatPumpThermalPower",
+        "hhp_sh_buffer_volume_col" : "hhp_sh_buffer_volume"
     }
 }

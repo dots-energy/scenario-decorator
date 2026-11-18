@@ -56,7 +56,7 @@ class BatterySpecification:
 @dataclass
 class EvSpecification:
     fraction_houses_ev : float = 0.0
-    min_charge_rate_kwh : float = 4.2
+    min_charge_rate_kw : float = 4.2
     min_soc_percentage_v2g : float = 0.3
     capacity_kwh_mean : float = 75
     capacity_kwh_std : float = 0.0

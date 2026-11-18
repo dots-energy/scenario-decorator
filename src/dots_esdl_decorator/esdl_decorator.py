@@ -798,9 +798,8 @@ def main() -> int:
         no_target_days = params.get('target_days', 365)
         default_lon = params.get('default_lon', 51.532534)
         default_lat = params.get('default_lat', 3.882267)
-        if harmonize_profile_dates_to is not None:
-            harmonize_profile_dates_to_year = harmonize_profile_dates_to
-            esdl_decorator = EsdlBuilder(str(esdl_path), harmonize_profile_dates_to_year, no_target_days, default_lon, default_lat)
+        harmonize_profile_dates_to_year = harmonize_profile_dates_to
+        esdl_decorator = EsdlBuilder(str(esdl_path), harmonize_profile_dates_to_year, no_target_days, default_lon, default_lat)
     else:
         logging.error(f"ESDL file {str(esdl_path)} does not exist")
         return 2

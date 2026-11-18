@@ -23,7 +23,12 @@ Below an overview of all paramters and their description can be found. Some gene
     "harmonize_profiles_to_year" : 2060, // year to harmonize all the data to
     "target_days": 365, // the amount of days all the datasets should contain
     "fraction_houses_hp" : 0.23, // fraction of houses that have a heatpump
-    "fraction_houses_hhp" : 0.77, // fraction of houses that have a hybridheatpump
+    "hybrid_heatpump_specification" : {
+        "fraction_houses_hhp" : 0.77, // fraction of houses that have a hybridheatpump
+        "gas_heater_efficiency" : 0.96, // efficiency of the hybrid heat pump gas heater
+        "gass_thermal_power_mean" : 18000.0, // mean gas heater thermal power
+        "gass_thermal_power_std" : 0.0 // standard deviation of gas heater thermal power
+    },
     "gass_price_eur_m3" : 1.0, // the assumed global gass price per m3
     "defalut_lon" : 51.532534, // default longitude for the location of rooftop pv
     "defalut_lat" : 3.882267, // default latitude for the location of rooftop pv
@@ -268,6 +273,8 @@ The capacity of the battery is drawn from a normal distribution. The mean can be
 
 ### Heatpump and HybridHeatpump demands
 The input esdls specify a buildingtype per connection. This building type can be associated with a heating demand. Heating demands are specified in a dataset and express the amount of energy demanded by a specific building to maintain a certain setpoint temperature inside the building. 
+
+Hybrid heat-pump gas-heater thermal power is sampled from a normal distribution using `gass_thermal_power_mean` and `gass_thermal_power_std`; each generated hybrid heat pump also receives `gas_heater_efficiency`.
 
 For example consider the following building in the esdl file: 
 ```xml

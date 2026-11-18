@@ -4146,30 +4146,31 @@
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="47.97476748339615" lon="3.313542365310774"/>
         <port xsi:type="esdl:OutPort" id="7e21da71-869a-4a55-b407-2c8695c39c82" name="Out" connectedTo="26ed934d-24d6-4324-bc2b-767929d88bf9"/>
       </asset>
-      <asset xsi:type="esdl:Building" id="83ad2bcb-84da-4284-a64e-d9fe3e589ba9" name="Home11_1" originalIdInSource="111" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="83ad2bcb-84da-4284-a64e-d9fe3e589ba9" name="Home11_1" originalIdInSource="111" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.990628274033696" lon="4.064330263793114"/>
         <asset xsi:type="esdl:EConnection" id="31b0419c-31ba-4b2d-899b-c8e86498d82c" name="ConnectionHome11_1" originalIdInSource="111" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a4d16e72-f330-4cca-a04b-b3c6637bae1f" name="In" connectedTo="6ad35010-8d72-46ec-bc3c-5aaf155a8627"/>
-          <port xsi:type="esdl:OutPort" id="fb807a36-65d8-403a-a71c-29969111ed92" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e592cd78-30a5-423f-9bf4-2876f79e9122" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="c8c4f930-2701-463b-b8d5-4ea2048970e4" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fb807a36-65d8-403a-a71c-29969111ed92" name="OutPh1" connectedTo="6f93fb7c-ab0c-4442-90f0-41014caa5226"/>
+          <port xsi:type="esdl:OutPort" id="e592cd78-30a5-423f-9bf4-2876f79e9122" name="OutPh2" connectedTo="7a502b52-e528-4edf-9c2e-406c869347fd"/>
+          <port xsi:type="esdl:OutPort" id="c8c4f930-2701-463b-b8d5-4ea2048970e4" name="OutPh3" connectedTo="4ad76780-6843-4714-9105-62258221a5e0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="271873bb-f0ab-453f-9f9f-6231518f568e" name="PhasegridHome11_1_Ph1" originalIdInSource="111">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6f93fb7c-ab0c-4442-90f0-41014caa5226" name="In"/>
+          <port xsi:type="esdl:InPort" id="6f93fb7c-ab0c-4442-90f0-41014caa5226" name="In" connectedTo="fb807a36-65d8-403a-a71c-29969111ed92"/>
           <port xsi:type="esdl:OutPort" id="6c370942-3dd7-4bad-a3fc-ac86d0a37e18" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="afc0d671-72f3-4513-abc9-e81f4a9476f9" name="PhasegridHome11_1_Ph2" originalIdInSource="111">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7a502b52-e528-4edf-9c2e-406c869347fd" name="In"/>
+          <port xsi:type="esdl:InPort" id="7a502b52-e528-4edf-9c2e-406c869347fd" name="In" connectedTo="e592cd78-30a5-423f-9bf4-2876f79e9122"/>
           <port xsi:type="esdl:OutPort" id="5ea40978-8a72-4342-8c52-ec95481ce938" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b94567b9-b63a-44e9-8b64-dded2fecd6a2" name="PhasegridHome11_1_Ph3" originalIdInSource="111">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4ad76780-6843-4714-9105-62258221a5e0" name="In"/>
+          <port xsi:type="esdl:InPort" id="4ad76780-6843-4714-9105-62258221a5e0" name="In" connectedTo="c8c4f930-2701-463b-b8d5-4ea2048970e4"/>
           <port xsi:type="esdl:OutPort" id="4b96c239-726a-4980-af74-6957a27918c9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1eedd23f-7a6b-45df-83a6-ce9721cc938d" name="CableHome11_1" originalIdInSource="111" assetType="4x10Cu_as10__VO_YMvK_asmb" length="15.2">
         <port xsi:type="esdl:InPort" id="7dd73f4f-c3c5-4eed-a1d0-44bb0ea3b8f9" name="In" connectedTo="969328af-21f4-4436-ac25-0be0ceb1ff6b"/>
@@ -4179,30 +4180,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.990628274033696" lon="4.064330263793114"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e3731ffd-a8c4-41d8-865a-f46e9b4fab6e" name="Home17_1" originalIdInSource="171" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e3731ffd-a8c4-41d8-865a-f46e9b4fab6e" name="Home17_1" originalIdInSource="171" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99386331132484" lon="4.064234821544614"/>
         <asset xsi:type="esdl:EConnection" id="6952e991-0f26-4eeb-bdae-c6f249291f73" name="ConnectionHome17_1" originalIdInSource="171" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2c8bf43c-4bba-493f-bfb4-bb4768f1b652" name="In" connectedTo="cdc7ec21-60af-45b0-9e46-060bbdf600e5"/>
-          <port xsi:type="esdl:OutPort" id="c0369261-711f-45da-b681-818657a83ec1" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="00864f26-664f-4a62-9e66-d7f32cdd6357" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="588bcef2-2e76-465e-84e3-9860ad772408" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c0369261-711f-45da-b681-818657a83ec1" name="OutPh1" connectedTo="c092967b-4b7a-48b2-834b-1ef0806146b3"/>
+          <port xsi:type="esdl:OutPort" id="00864f26-664f-4a62-9e66-d7f32cdd6357" name="OutPh2" connectedTo="0a1f85ce-b54f-4ff0-8aac-ff6a975e6b26"/>
+          <port xsi:type="esdl:OutPort" id="588bcef2-2e76-465e-84e3-9860ad772408" name="OutPh3" connectedTo="946e2c96-dd28-4b6f-ad56-b51967cc7b69"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="38406670-7f8e-47a8-a254-cfa223440227" name="PhasegridHome17_1_Ph1" originalIdInSource="171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c092967b-4b7a-48b2-834b-1ef0806146b3" name="In"/>
+          <port xsi:type="esdl:InPort" id="c092967b-4b7a-48b2-834b-1ef0806146b3" name="In" connectedTo="c0369261-711f-45da-b681-818657a83ec1"/>
           <port xsi:type="esdl:OutPort" id="3e654a5b-f5ec-41a4-93b8-d5429fe0cfe6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="17b02d83-12b7-4716-93b0-74168da7ae24" name="PhasegridHome17_1_Ph2" originalIdInSource="171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0a1f85ce-b54f-4ff0-8aac-ff6a975e6b26" name="In"/>
+          <port xsi:type="esdl:InPort" id="0a1f85ce-b54f-4ff0-8aac-ff6a975e6b26" name="In" connectedTo="00864f26-664f-4a62-9e66-d7f32cdd6357"/>
           <port xsi:type="esdl:OutPort" id="ddf737b2-1870-4ee4-88b1-2e0161ec3d18" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9e5cf114-4e43-4c72-9b5b-a02533427c7b" name="PhasegridHome17_1_Ph3" originalIdInSource="171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="946e2c96-dd28-4b6f-ad56-b51967cc7b69" name="In"/>
+          <port xsi:type="esdl:InPort" id="946e2c96-dd28-4b6f-ad56-b51967cc7b69" name="In" connectedTo="588bcef2-2e76-465e-84e3-9860ad772408"/>
           <port xsi:type="esdl:OutPort" id="93e76804-1bb2-490f-b061-5292ce70ddb2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="88.7" height="9.0" windowArea="18.82" doorArea="4.57" slantedRoofArea="58.46"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="50368acb-5b7c-4b15-966b-be926843c0cd" name="CableHome17_1" originalIdInSource="171" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.3">
         <port xsi:type="esdl:InPort" id="9df33293-78a8-4c19-80c3-304308120cb5" name="In" connectedTo="7e2d620b-30d0-4289-b8ef-c1560f381e90"/>
@@ -4212,30 +4214,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99386331132484" lon="4.064234821544614"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c29951be-784d-4db3-ac17-66700b63ce9b" name="Home22_1" originalIdInSource="221" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP">
+      <asset xsi:type="esdl:Building" id="c29951be-784d-4db3-ac17-66700b63ce9b" name="Home22_1" originalIdInSource="221" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.000453775539185" lon="4.107440306563548"/>
         <asset xsi:type="esdl:EConnection" id="c07e7ba9-73e2-4a86-a8c6-671d4d30d225" name="ConnectionHome22_1" originalIdInSource="221" assetType="3x35A" capacity="24248.71130596428">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a512442e-4398-412b-893b-ce58ece240db" name="In" connectedTo="1f428cf4-a0ba-4f93-8395-14a64d0472ff"/>
-          <port xsi:type="esdl:OutPort" id="5c0de644-540c-4e60-9155-bffadf8437a3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="83396e86-f994-4f14-bf55-dc3b5ccc0b46" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="53e1024b-c3c8-4acd-8d31-03d78e5dd9dd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5c0de644-540c-4e60-9155-bffadf8437a3" name="OutPh1" connectedTo="ebba8750-6f29-4a39-b3fe-db9606b6d0b7"/>
+          <port xsi:type="esdl:OutPort" id="83396e86-f994-4f14-bf55-dc3b5ccc0b46" name="OutPh2" connectedTo="6d81249b-bd5e-4e13-9124-c40eeb56df34"/>
+          <port xsi:type="esdl:OutPort" id="53e1024b-c3c8-4acd-8d31-03d78e5dd9dd" name="OutPh3" connectedTo="c1008a13-ef98-471c-8772-ae8375afbbfd"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fde944c9-fc36-4574-8994-4311f7e92a92" name="PhasegridHome22_1_Ph1" originalIdInSource="221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ebba8750-6f29-4a39-b3fe-db9606b6d0b7" name="In"/>
+          <port xsi:type="esdl:InPort" id="ebba8750-6f29-4a39-b3fe-db9606b6d0b7" name="In" connectedTo="5c0de644-540c-4e60-9155-bffadf8437a3"/>
           <port xsi:type="esdl:OutPort" id="68b8839e-a29c-415f-8191-fe06ba9eb88c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a15e4e55-f6af-4e08-a709-cb21a010efc7" name="PhasegridHome22_1_Ph2" originalIdInSource="221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6d81249b-bd5e-4e13-9124-c40eeb56df34" name="In"/>
+          <port xsi:type="esdl:InPort" id="6d81249b-bd5e-4e13-9124-c40eeb56df34" name="In" connectedTo="83396e86-f994-4f14-bf55-dc3b5ccc0b46"/>
           <port xsi:type="esdl:OutPort" id="9544dcb7-7e49-4326-8125-3844c6911fbc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5bb7d936-e6a0-40a6-b1e1-5d45c98c3236" name="PhasegridHome22_1_Ph3" originalIdInSource="221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c1008a13-ef98-471c-8772-ae8375afbbfd" name="In"/>
+          <port xsi:type="esdl:InPort" id="c1008a13-ef98-471c-8772-ae8375afbbfd" name="In" connectedTo="53e1024b-c3c8-4acd-8d31-03d78e5dd9dd"/>
           <port xsi:type="esdl:OutPort" id="e84cf5f8-d551-4751-954f-270644bbddf3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="01cad9e1-c9a0-4f56-b798-7ae9664cfa0a" name="CableHome22_1" originalIdInSource="221" assetType="4x16Cu_as16__YMvK_asmb" length="2.1">
         <port xsi:type="esdl:InPort" id="cdaf83f2-aca8-45c2-8791-899e2a86e6e4" name="In" connectedTo="2c84b34a-d6e6-4d85-96a1-fe5924ec13e8"/>
@@ -4245,30 +4248,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000453775539185" lon="4.107440306563548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e9ef1371-b591-4c1a-9dd5-0a750d1bb121" name="Home53_1" originalIdInSource="531" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e9ef1371-b591-4c1a-9dd5-0a750d1bb121" name="Home53_1" originalIdInSource="531" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.004097758544255" lon="4.063058873827159"/>
         <asset xsi:type="esdl:EConnection" id="89dcdb00-8662-41b8-8d6d-161785a618a0" name="ConnectionHome53_1" originalIdInSource="531" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="73aa7076-1d4c-4fb1-92be-9243ced8058f" name="In" connectedTo="4445b926-a391-495f-be10-047105638a23"/>
-          <port xsi:type="esdl:OutPort" id="e05c1483-33ba-4659-91d6-b9538e81bd7a" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="386ef0d3-b16b-448f-aa28-7f054462928e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2b8a717a-8b40-41fc-8b4f-7572ab16f49a" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e05c1483-33ba-4659-91d6-b9538e81bd7a" name="OutPh1" connectedTo="5c1fd169-f4de-4842-b41f-df034b09c06e"/>
+          <port xsi:type="esdl:OutPort" id="386ef0d3-b16b-448f-aa28-7f054462928e" name="OutPh2" connectedTo="6e620525-c8db-4c2e-9b3d-15d8ef4be056"/>
+          <port xsi:type="esdl:OutPort" id="2b8a717a-8b40-41fc-8b4f-7572ab16f49a" name="OutPh3" connectedTo="b90fb841-9905-4bff-9696-e4b6b8cbf688"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c5af92c0-6baa-4c63-8cbf-2148c57d93e2" name="PhasegridHome53_1_Ph1" originalIdInSource="531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5c1fd169-f4de-4842-b41f-df034b09c06e" name="In"/>
+          <port xsi:type="esdl:InPort" id="5c1fd169-f4de-4842-b41f-df034b09c06e" name="In" connectedTo="e05c1483-33ba-4659-91d6-b9538e81bd7a"/>
           <port xsi:type="esdl:OutPort" id="48ccd1d7-b973-4dc3-9852-3ce8a5db9bc3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="29abff3a-59f4-4113-833e-f1f89bed5556" name="PhasegridHome53_1_Ph2" originalIdInSource="531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6e620525-c8db-4c2e-9b3d-15d8ef4be056" name="In"/>
+          <port xsi:type="esdl:InPort" id="6e620525-c8db-4c2e-9b3d-15d8ef4be056" name="In" connectedTo="386ef0d3-b16b-448f-aa28-7f054462928e"/>
           <port xsi:type="esdl:OutPort" id="a169b22a-0a43-4760-92bb-59a1afec242d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="64ed14fe-bbc3-402d-bf6e-0e19c04ef088" name="PhasegridHome53_1_Ph3" originalIdInSource="531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b90fb841-9905-4bff-9696-e4b6b8cbf688" name="In"/>
+          <port xsi:type="esdl:InPort" id="b90fb841-9905-4bff-9696-e4b6b8cbf688" name="In" connectedTo="2b8a717a-8b40-41fc-8b4f-7572ab16f49a"/>
           <port xsi:type="esdl:OutPort" id="08ef7bbb-c528-4d6d-9443-1c24a683b376" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="16fe43b0-c3e2-46f7-89b7-e475495de9df" name="CableHome53_1" originalIdInSource="531" assetType="4x10Cu_as10__VG_YMVK_asmb" length="6.0">
         <port xsi:type="esdl:InPort" id="0050efab-8de2-4f2b-ba75-106aebed46fc" name="In" connectedTo="a6df0cb2-b047-455d-8fdb-a4bed1be6a70"/>
@@ -4278,30 +4282,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.004097758544255" lon="4.063058873827159"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5ed3aa2a-423b-4d7f-bcbd-86a58942b25e" name="Home55_1" originalIdInSource="551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5ed3aa2a-423b-4d7f-bcbd-86a58942b25e" name="Home55_1" originalIdInSource="551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98954935319556" lon="4.0966857786578394"/>
         <asset xsi:type="esdl:EConnection" id="782e8f5e-1355-491a-a2c8-e2843721d841" name="ConnectionHome55_1" originalIdInSource="551" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c16bba06-3fce-472d-8abb-f1f6eebef941" name="In" connectedTo="b406e45d-74b6-47fc-b561-c1adfed15db9"/>
-          <port xsi:type="esdl:OutPort" id="4bcbfbb9-4ca2-457b-80b3-efa65ad55d37" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="799518a5-30f5-4621-8848-615bc6229f02" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f8baf56d-a564-4c33-8deb-ed0be920a043" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4bcbfbb9-4ca2-457b-80b3-efa65ad55d37" name="OutPh1" connectedTo="1be9b315-35e6-46fb-be28-becbc9fec5bf"/>
+          <port xsi:type="esdl:OutPort" id="799518a5-30f5-4621-8848-615bc6229f02" name="OutPh2" connectedTo="e7750e6b-e846-484a-a5c2-32dff2c45072"/>
+          <port xsi:type="esdl:OutPort" id="f8baf56d-a564-4c33-8deb-ed0be920a043" name="OutPh3" connectedTo="f1f200f3-35fe-4ec5-8df9-afee9723b808"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="54e4bf01-2ac1-43ca-8460-973bace3a478" name="PhasegridHome55_1_Ph1" originalIdInSource="551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1be9b315-35e6-46fb-be28-becbc9fec5bf" name="In"/>
+          <port xsi:type="esdl:InPort" id="1be9b315-35e6-46fb-be28-becbc9fec5bf" name="In" connectedTo="4bcbfbb9-4ca2-457b-80b3-efa65ad55d37"/>
           <port xsi:type="esdl:OutPort" id="de218902-b0c0-4aab-9cd7-d64a1d74b3c6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="659976ae-d97b-4761-8e06-b93934e1c702" name="PhasegridHome55_1_Ph2" originalIdInSource="551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e7750e6b-e846-484a-a5c2-32dff2c45072" name="In"/>
+          <port xsi:type="esdl:InPort" id="e7750e6b-e846-484a-a5c2-32dff2c45072" name="In" connectedTo="799518a5-30f5-4621-8848-615bc6229f02"/>
           <port xsi:type="esdl:OutPort" id="da91fb55-4c41-4111-8287-6829bfc13fd2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a07cf57e-b70d-482b-8d56-ea78771021a1" name="PhasegridHome55_1_Ph3" originalIdInSource="551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f1f200f3-35fe-4ec5-8df9-afee9723b808" name="In"/>
+          <port xsi:type="esdl:InPort" id="f1f200f3-35fe-4ec5-8df9-afee9723b808" name="In" connectedTo="f8baf56d-a564-4c33-8deb-ed0be920a043"/>
           <port xsi:type="esdl:OutPort" id="306e11fc-5a45-407d-844a-5ab8711eb219" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="10d67b7e-3593-4db8-917c-3f8bcc2e8257" name="CableHome55_1" originalIdInSource="551" assetType="4x10Cu_as10__VG_YMVK_asmb" length="4.0">
         <port xsi:type="esdl:InPort" id="9718fe8b-fd1f-457c-a745-1e68e18d0581" name="In" connectedTo="908c6f3d-ec9b-48cd-8b8f-63c86cdaed8c"/>
@@ -4311,30 +4316,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98954935319556" lon="4.0966857786578394"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d3e99721-61e5-4cc9-95f3-8891a67d3762" name="Home57_1" originalIdInSource="571" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="d3e99721-61e5-4cc9-95f3-8891a67d3762" name="Home57_1" originalIdInSource="571" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         <asset xsi:type="esdl:EConnection" id="e3b05f0c-9b6f-4947-83af-9d3a46e9f645" name="ConnectionHome57_1" originalIdInSource="571" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ef1dd46a-e787-443d-a1be-1822855b3e71" name="In" connectedTo="eb147852-b3d2-4f44-9c46-28419666bbbe"/>
-          <port xsi:type="esdl:OutPort" id="962d7883-35ff-4485-81cd-edb1a11ac168" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="66878f8a-21bd-402b-9b9b-0286b2f8fa95" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2f556b58-cf73-4f0b-87e6-633683f9af02" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="962d7883-35ff-4485-81cd-edb1a11ac168" name="OutPh1" connectedTo="b08a313a-cd40-4dae-82fc-e4a19b37e4e3"/>
+          <port xsi:type="esdl:OutPort" id="66878f8a-21bd-402b-9b9b-0286b2f8fa95" name="OutPh2" connectedTo="d6a8a2da-731f-43fe-96e2-0281ffcd09b3"/>
+          <port xsi:type="esdl:OutPort" id="2f556b58-cf73-4f0b-87e6-633683f9af02" name="OutPh3" connectedTo="fff294e1-eb39-4e4d-a5bd-4f31e8463b79"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="40e818cd-7014-4032-94ba-18088dec7a4c" name="PhasegridHome57_1_Ph1" originalIdInSource="571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b08a313a-cd40-4dae-82fc-e4a19b37e4e3" name="In"/>
+          <port xsi:type="esdl:InPort" id="b08a313a-cd40-4dae-82fc-e4a19b37e4e3" name="In" connectedTo="962d7883-35ff-4485-81cd-edb1a11ac168"/>
           <port xsi:type="esdl:OutPort" id="e5b70fe3-fb30-41e9-aeea-81a51fbdef27" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f6976d83-a4ec-434e-b91f-266acdf5f869" name="PhasegridHome57_1_Ph2" originalIdInSource="571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d6a8a2da-731f-43fe-96e2-0281ffcd09b3" name="In"/>
+          <port xsi:type="esdl:InPort" id="d6a8a2da-731f-43fe-96e2-0281ffcd09b3" name="In" connectedTo="66878f8a-21bd-402b-9b9b-0286b2f8fa95"/>
           <port xsi:type="esdl:OutPort" id="9d871b47-6444-4192-981b-fd1a3739634c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c351c083-18c5-44c4-a160-14cb97d787f7" name="PhasegridHome57_1_Ph3" originalIdInSource="571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fff294e1-eb39-4e4d-a5bd-4f31e8463b79" name="In"/>
+          <port xsi:type="esdl:InPort" id="fff294e1-eb39-4e4d-a5bd-4f31e8463b79" name="In" connectedTo="2f556b58-cf73-4f0b-87e6-633683f9af02"/>
           <port xsi:type="esdl:OutPort" id="8a1452fd-e32b-4fcf-80d8-eab6ec9ba308" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ef3de7a6-c4f6-445d-b929-4890c5d2fdb2" name="CableHome57_1" originalIdInSource="571" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.7">
         <port xsi:type="esdl:InPort" id="889932ed-dc7d-42c2-a583-252fd6d6e0e9" name="In" connectedTo="21c67285-d672-45fd-ac01-312caac2e80c"/>
@@ -4344,30 +4350,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="726a3c72-bb02-4349-985c-07e16d4d9795" name="Home58_1" originalIdInSource="581" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="726a3c72-bb02-4349-985c-07e16d4d9795" name="Home58_1" originalIdInSource="581" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.983185177461706" lon="4.042130132622103"/>
         <asset xsi:type="esdl:EConnection" id="93d48375-bfe9-40d4-bbef-cdf3f3fb30b8" name="ConnectionHome58_1" originalIdInSource="581" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7d65a70c-32ba-4c45-b937-bdbb6844e49d" name="In" connectedTo="2d438d0e-b3c1-4002-9cbf-bdb5772bd8cc"/>
-          <port xsi:type="esdl:OutPort" id="29db7296-9fe2-492f-93b0-e1a65cfa491c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ea3f407d-0d78-4dc1-bb1f-519f8ac40e76" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7b58a397-8eb2-45c3-a1c6-221a2fc8a605" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="29db7296-9fe2-492f-93b0-e1a65cfa491c" name="OutPh1" connectedTo="f4054803-84ad-4108-8701-73297e7935f9"/>
+          <port xsi:type="esdl:OutPort" id="ea3f407d-0d78-4dc1-bb1f-519f8ac40e76" name="OutPh2" connectedTo="de3939bf-2d61-4363-9435-f49df14470ee"/>
+          <port xsi:type="esdl:OutPort" id="7b58a397-8eb2-45c3-a1c6-221a2fc8a605" name="OutPh3" connectedTo="6db08481-8df4-489c-a6fe-48d20b7f77a2"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3cab429d-88ac-418d-990d-d6badb0f9535" name="PhasegridHome58_1_Ph1" originalIdInSource="581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f4054803-84ad-4108-8701-73297e7935f9" name="In"/>
+          <port xsi:type="esdl:InPort" id="f4054803-84ad-4108-8701-73297e7935f9" name="In" connectedTo="29db7296-9fe2-492f-93b0-e1a65cfa491c"/>
           <port xsi:type="esdl:OutPort" id="46d5fdd5-c3b5-4222-bf1f-ac613f25fe7f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="140f0c02-4e73-4c46-89bf-0b70f6152840" name="PhasegridHome58_1_Ph2" originalIdInSource="581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="de3939bf-2d61-4363-9435-f49df14470ee" name="In"/>
+          <port xsi:type="esdl:InPort" id="de3939bf-2d61-4363-9435-f49df14470ee" name="In" connectedTo="ea3f407d-0d78-4dc1-bb1f-519f8ac40e76"/>
           <port xsi:type="esdl:OutPort" id="f0475bcb-8163-49b4-b46c-ddb8eab4e723" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="43d26514-b386-4fcf-a0a3-30105343bb28" name="PhasegridHome58_1_Ph3" originalIdInSource="581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6db08481-8df4-489c-a6fe-48d20b7f77a2" name="In"/>
+          <port xsi:type="esdl:InPort" id="6db08481-8df4-489c-a6fe-48d20b7f77a2" name="In" connectedTo="7b58a397-8eb2-45c3-a1c6-221a2fc8a605"/>
           <port xsi:type="esdl:OutPort" id="24d544e5-0905-433c-b744-ba19b1e65924" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="270cba21-5f76-423f-82ca-b31a9cf1c8c4" name="CableHome58_1" originalIdInSource="581" assetType="4x10Cu_as10__VG_YMVK_asmb" length="7.3">
         <port xsi:type="esdl:InPort" id="c5b6cfcb-1135-475b-a57b-5528b2c71775" name="In" connectedTo="7a9a8121-6c9f-4d6e-96cd-47daa2b42b06"/>
@@ -4377,30 +4384,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.983185177461706" lon="4.042130132622103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a49c4ff9-0ae8-4633-9403-f4811c5d0f1c" name="Home59_1" originalIdInSource="591" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a49c4ff9-0ae8-4633-9403-f4811c5d0f1c" name="Home59_1" originalIdInSource="591" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.983368228303156" lon="4.042415809293487"/>
         <asset xsi:type="esdl:EConnection" id="58c67ffb-c31d-44f1-95d6-4a7557ce6925" name="ConnectionHome59_1" originalIdInSource="591" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7ee6afc8-2207-49e6-bc43-434483131845" name="In" connectedTo="514ebca0-621e-418e-8ffc-a059f5064373"/>
-          <port xsi:type="esdl:OutPort" id="e0d72f6f-0a30-48a1-a823-8de324e0559b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="51e1e704-6e1c-4716-ae6c-94bd3d234373" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="21c72de1-671f-4c2d-a2a2-6215774e1447" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e0d72f6f-0a30-48a1-a823-8de324e0559b" name="OutPh1" connectedTo="318a75ee-d0ba-46fe-ab54-94d3bae30dd5"/>
+          <port xsi:type="esdl:OutPort" id="51e1e704-6e1c-4716-ae6c-94bd3d234373" name="OutPh2" connectedTo="412412f6-0c0b-475e-be5c-b9f558fb9a26"/>
+          <port xsi:type="esdl:OutPort" id="21c72de1-671f-4c2d-a2a2-6215774e1447" name="OutPh3" connectedTo="4dd5b7d1-0b81-4e8d-b36d-90978d857692"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="34c4588c-0d76-4a8a-b48d-aa77e56cb34e" name="PhasegridHome59_1_Ph1" originalIdInSource="591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="318a75ee-d0ba-46fe-ab54-94d3bae30dd5" name="In"/>
+          <port xsi:type="esdl:InPort" id="318a75ee-d0ba-46fe-ab54-94d3bae30dd5" name="In" connectedTo="e0d72f6f-0a30-48a1-a823-8de324e0559b"/>
           <port xsi:type="esdl:OutPort" id="67ae448e-3fb7-4890-b9b4-7ef4c7a2d55b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f9e894dc-d8a8-451a-80fa-53af1264a1eb" name="PhasegridHome59_1_Ph2" originalIdInSource="591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="412412f6-0c0b-475e-be5c-b9f558fb9a26" name="In"/>
+          <port xsi:type="esdl:InPort" id="412412f6-0c0b-475e-be5c-b9f558fb9a26" name="In" connectedTo="51e1e704-6e1c-4716-ae6c-94bd3d234373"/>
           <port xsi:type="esdl:OutPort" id="729b6a54-641e-4b3d-8be6-ece1848c63dc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1ca9d35a-df11-43d0-9b3d-6b031d45607f" name="PhasegridHome59_1_Ph3" originalIdInSource="591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4dd5b7d1-0b81-4e8d-b36d-90978d857692" name="In"/>
+          <port xsi:type="esdl:InPort" id="4dd5b7d1-0b81-4e8d-b36d-90978d857692" name="In" connectedTo="21c72de1-671f-4c2d-a2a2-6215774e1447"/>
           <port xsi:type="esdl:OutPort" id="70febab2-c965-4d92-a7d0-5d768f30364f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cd5921bb-7f20-414f-990b-3dbfb7625e97" name="CableHome59_1" originalIdInSource="591" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="92fc08d8-35bf-4dd3-bfaa-7cb885cfd82f" name="In" connectedTo="3a035894-024c-4475-a8e0-6103ec67d7d6"/>
@@ -4410,30 +4418,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.983368228303156" lon="4.042415809293487"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7b0a75ab-de8b-4f38-b458-b57ca2e819d1" name="Home62_1" originalIdInSource="621" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="7b0a75ab-de8b-4f38-b458-b57ca2e819d1" name="Home62_1" originalIdInSource="621" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.962330597146675" lon="4.042173144212071"/>
         <asset xsi:type="esdl:EConnection" id="24a50aff-a9f5-4e25-bb4e-8b06aee19361" name="ConnectionHome62_1" originalIdInSource="621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="02faeb82-9171-481d-a65b-2e7ba5a53116" name="In" connectedTo="dccb75cd-15f2-4f4b-8aa5-88362108b2b8"/>
-          <port xsi:type="esdl:OutPort" id="d433a219-181d-43aa-ac51-92df5612686c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="727ac998-04e3-40ad-bd22-6c6105bf58f7" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9f65d3d3-3dda-450f-9b3b-5ab5e3921504" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d433a219-181d-43aa-ac51-92df5612686c" name="OutPh1" connectedTo="d7fdb3d0-a160-4824-9ad1-bf5c8a4edc9a"/>
+          <port xsi:type="esdl:OutPort" id="727ac998-04e3-40ad-bd22-6c6105bf58f7" name="OutPh2" connectedTo="bd5341f7-e7bf-4edf-a1cb-84a6c1ef8c36"/>
+          <port xsi:type="esdl:OutPort" id="9f65d3d3-3dda-450f-9b3b-5ab5e3921504" name="OutPh3" connectedTo="6e2b94a0-d031-4cc3-93d3-066e3069b340"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="19306cfa-a936-41b5-a2a4-a4eeeb4ab62d" name="PhasegridHome62_1_Ph1" originalIdInSource="621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d7fdb3d0-a160-4824-9ad1-bf5c8a4edc9a" name="In"/>
+          <port xsi:type="esdl:InPort" id="d7fdb3d0-a160-4824-9ad1-bf5c8a4edc9a" name="In" connectedTo="d433a219-181d-43aa-ac51-92df5612686c"/>
           <port xsi:type="esdl:OutPort" id="7c0bb6e0-578c-49ad-b1d7-b39c91129d88" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a9f03b53-dbd0-4573-a8b9-2a27a1cdf06a" name="PhasegridHome62_1_Ph2" originalIdInSource="621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bd5341f7-e7bf-4edf-a1cb-84a6c1ef8c36" name="In"/>
+          <port xsi:type="esdl:InPort" id="bd5341f7-e7bf-4edf-a1cb-84a6c1ef8c36" name="In" connectedTo="727ac998-04e3-40ad-bd22-6c6105bf58f7"/>
           <port xsi:type="esdl:OutPort" id="f9ae5181-311d-4b0f-97cb-2a4c575bc580" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bae3f61d-abcb-4145-9d38-4bb3a1a404f3" name="PhasegridHome62_1_Ph3" originalIdInSource="621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6e2b94a0-d031-4cc3-93d3-066e3069b340" name="In"/>
+          <port xsi:type="esdl:InPort" id="6e2b94a0-d031-4cc3-93d3-066e3069b340" name="In" connectedTo="9f65d3d3-3dda-450f-9b3b-5ab5e3921504"/>
           <port xsi:type="esdl:OutPort" id="fd8d4ad8-1745-4c02-90b1-4ae26979eeb2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9513f3e5-4a3b-4cc4-ac49-c462ccf6d7bc" name="CableHome62_1" originalIdInSource="621" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.1">
         <port xsi:type="esdl:InPort" id="5f5f61c7-7ef9-4b93-8b61-8a6870b994a8" name="In" connectedTo="de43007e-c0cd-4eb0-850b-a23c706453ab"/>
@@ -4443,30 +4452,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.962330597146675" lon="4.042173144212071"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="05b2928d-7959-43c4-b2e9-26347a212a23" name="Home63_1" originalIdInSource="631" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="05b2928d-7959-43c4-b2e9-26347a212a23" name="Home63_1" originalIdInSource="631" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9623106197934" lon="4.040427565307639"/>
         <asset xsi:type="esdl:EConnection" id="bc7d47da-d116-4bef-859e-14ea6b7efab5" name="ConnectionHome63_1" originalIdInSource="631" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="60de874e-ff18-41fd-b67a-d2503e0a309d" name="In" connectedTo="065db2fc-ebc0-433b-b673-79fdd38c8bc9"/>
-          <port xsi:type="esdl:OutPort" id="63270fd8-8617-4054-a598-57c3b5130521" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d1313241-fb64-4cac-af17-4ebd0df1adf5" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3a6de05c-babf-4c28-b49a-2e3527df9618" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="63270fd8-8617-4054-a598-57c3b5130521" name="OutPh1" connectedTo="49143afd-8bd6-42f2-8aba-e3fe06edaebe"/>
+          <port xsi:type="esdl:OutPort" id="d1313241-fb64-4cac-af17-4ebd0df1adf5" name="OutPh2" connectedTo="1cf6a4c5-2261-4132-a766-a96096d3f3ef"/>
+          <port xsi:type="esdl:OutPort" id="3a6de05c-babf-4c28-b49a-2e3527df9618" name="OutPh3" connectedTo="91be1370-5053-4e53-ae02-821988d34f2f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8d7649a3-3b87-4c17-94a5-4532a24244f1" name="PhasegridHome63_1_Ph1" originalIdInSource="631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="49143afd-8bd6-42f2-8aba-e3fe06edaebe" name="In"/>
+          <port xsi:type="esdl:InPort" id="49143afd-8bd6-42f2-8aba-e3fe06edaebe" name="In" connectedTo="63270fd8-8617-4054-a598-57c3b5130521"/>
           <port xsi:type="esdl:OutPort" id="4c1977a4-e501-44e4-a8d2-a17a122d92a8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d589be73-6107-4a44-95a9-68f498ce2ece" name="PhasegridHome63_1_Ph2" originalIdInSource="631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1cf6a4c5-2261-4132-a766-a96096d3f3ef" name="In"/>
+          <port xsi:type="esdl:InPort" id="1cf6a4c5-2261-4132-a766-a96096d3f3ef" name="In" connectedTo="d1313241-fb64-4cac-af17-4ebd0df1adf5"/>
           <port xsi:type="esdl:OutPort" id="fe132408-dbe8-436f-98e7-9245a563ca1f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4e2ea558-fcaa-47a6-9eb4-4347d52f9d63" name="PhasegridHome63_1_Ph3" originalIdInSource="631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="91be1370-5053-4e53-ae02-821988d34f2f" name="In"/>
+          <port xsi:type="esdl:InPort" id="91be1370-5053-4e53-ae02-821988d34f2f" name="In" connectedTo="3a6de05c-babf-4c28-b49a-2e3527df9618"/>
           <port xsi:type="esdl:OutPort" id="af7cfbcb-add2-496f-a65d-4aa97497bda8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3b2a5fe4-c933-44c5-8e79-2eb76d9dcb70" name="CableHome63_1" originalIdInSource="631" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.1">
         <port xsi:type="esdl:InPort" id="76a78224-0fed-4b59-ac20-6a71295a7269" name="In" connectedTo="befcefa7-58d8-4ddd-9170-d9be7721dd03"/>
@@ -4476,30 +4486,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9623106197934" lon="4.040427565307639"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="539c2c40-7c39-4362-ba44-9d1c4a4da407" name="Home65_1" originalIdInSource="651" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="539c2c40-7c39-4362-ba44-9d1c4a4da407" name="Home65_1" originalIdInSource="651" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_G" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9844698415405" lon="4.044420992030577"/>
         <asset xsi:type="esdl:EConnection" id="21dd352b-9e6b-46cc-971f-1082ec3ea890" name="ConnectionHome65_1" originalIdInSource="651" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a9619af1-47ca-4099-b592-ea1643c19b51" name="In" connectedTo="ebb73c44-aae2-49e4-875b-dc8a0ec9e27a"/>
-          <port xsi:type="esdl:OutPort" id="038b55b8-7a53-411f-b3ca-8f0d93a019e0" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6d5bf6d7-3214-4fd7-97bc-535a8eea9fc2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d9cbbf4e-bcfa-4ba4-9a03-1b23c4a63140" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="038b55b8-7a53-411f-b3ca-8f0d93a019e0" name="OutPh1" connectedTo="197aed0d-0917-45c7-bab9-31a3cee567c2"/>
+          <port xsi:type="esdl:OutPort" id="6d5bf6d7-3214-4fd7-97bc-535a8eea9fc2" name="OutPh2" connectedTo="c6adf706-7f09-4094-a777-de12bf1d38f0"/>
+          <port xsi:type="esdl:OutPort" id="d9cbbf4e-bcfa-4ba4-9a03-1b23c4a63140" name="OutPh3" connectedTo="68e77fab-88a7-409e-ba2f-750c213b8b0d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d6d4b0f4-070f-4c7d-ad98-34c1e3de2a2b" name="PhasegridHome65_1_Ph1" originalIdInSource="651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="197aed0d-0917-45c7-bab9-31a3cee567c2" name="In"/>
+          <port xsi:type="esdl:InPort" id="197aed0d-0917-45c7-bab9-31a3cee567c2" name="In" connectedTo="038b55b8-7a53-411f-b3ca-8f0d93a019e0"/>
           <port xsi:type="esdl:OutPort" id="1072941f-f03b-4496-a14c-d074ec2ca8de" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="02a5052f-0be1-47e8-a851-8ef9f257ff27" name="PhasegridHome65_1_Ph2" originalIdInSource="651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c6adf706-7f09-4094-a777-de12bf1d38f0" name="In"/>
+          <port xsi:type="esdl:InPort" id="c6adf706-7f09-4094-a777-de12bf1d38f0" name="In" connectedTo="6d5bf6d7-3214-4fd7-97bc-535a8eea9fc2"/>
           <port xsi:type="esdl:OutPort" id="c200b3fb-907e-493c-a701-93939e572ca3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8e610040-f5ed-4e16-845f-8f414c5f0adf" name="PhasegridHome65_1_Ph3" originalIdInSource="651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="68e77fab-88a7-409e-ba2f-750c213b8b0d" name="In"/>
+          <port xsi:type="esdl:InPort" id="68e77fab-88a7-409e-ba2f-750c213b8b0d" name="In" connectedTo="d9cbbf4e-bcfa-4ba4-9a03-1b23c4a63140"/>
           <port xsi:type="esdl:OutPort" id="0fc1b72c-e9df-49d3-a80f-6eabe81decd3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05631e0e-1703-4bb9-bc96-3318dd5b7f61" name="CableHome65_1" originalIdInSource="651" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.3">
         <port xsi:type="esdl:InPort" id="c5ff8fd7-6f1c-4873-93fe-374aa5154b22" name="In" connectedTo="0cd36344-01c7-4e7c-8d46-42816e966cd9"/>
@@ -4509,30 +4520,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9844698415405" lon="4.044420992030577"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9bb48f0f-543c-4137-b033-bced2fa01b19" name="Home66_1" originalIdInSource="661" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9bb48f0f-543c-4137-b033-bced2fa01b19" name="Home66_1" originalIdInSource="661" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98519807847627" lon="4.029549092905524"/>
         <asset xsi:type="esdl:EConnection" id="8daf9590-e2a4-43d0-82d6-482322296b0d" name="ConnectionHome66_1" originalIdInSource="661" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fc05a174-ab8d-4ef2-8bdb-cd21ebe499ee" name="In" connectedTo="e20e8b40-5b25-40d0-8a73-733311420384"/>
-          <port xsi:type="esdl:OutPort" id="a907a0cd-94f1-4b0d-83e5-b339165648cb" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="13a95db2-7c14-41ec-8a23-d46d45ba35ae" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="81558779-a2fd-4684-8869-e41f40befb79" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a907a0cd-94f1-4b0d-83e5-b339165648cb" name="OutPh1" connectedTo="be08ca86-aeef-431f-910f-56643db047f5"/>
+          <port xsi:type="esdl:OutPort" id="13a95db2-7c14-41ec-8a23-d46d45ba35ae" name="OutPh2" connectedTo="8f47f233-bca9-45f3-97cd-7eee14b752ac"/>
+          <port xsi:type="esdl:OutPort" id="81558779-a2fd-4684-8869-e41f40befb79" name="OutPh3" connectedTo="0bef5dda-16b6-4b66-81cf-d879a57972cf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3c90a0f9-1dac-4f63-bbf0-32af6503bd6e" name="PhasegridHome66_1_Ph1" originalIdInSource="661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="be08ca86-aeef-431f-910f-56643db047f5" name="In"/>
+          <port xsi:type="esdl:InPort" id="be08ca86-aeef-431f-910f-56643db047f5" name="In" connectedTo="a907a0cd-94f1-4b0d-83e5-b339165648cb"/>
           <port xsi:type="esdl:OutPort" id="c4d21aca-93c2-49a7-bc1d-63fe11e9f448" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dc8f50c8-b5ba-4d93-b797-74cb6cbfbcdf" name="PhasegridHome66_1_Ph2" originalIdInSource="661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8f47f233-bca9-45f3-97cd-7eee14b752ac" name="In"/>
+          <port xsi:type="esdl:InPort" id="8f47f233-bca9-45f3-97cd-7eee14b752ac" name="In" connectedTo="13a95db2-7c14-41ec-8a23-d46d45ba35ae"/>
           <port xsi:type="esdl:OutPort" id="158867df-6105-4b29-9c4e-a34b0975b69d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0e7ed366-5f9c-45a8-b52f-b355a2130c77" name="PhasegridHome66_1_Ph3" originalIdInSource="661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0bef5dda-16b6-4b66-81cf-d879a57972cf" name="In"/>
+          <port xsi:type="esdl:InPort" id="0bef5dda-16b6-4b66-81cf-d879a57972cf" name="In" connectedTo="81558779-a2fd-4684-8869-e41f40befb79"/>
           <port xsi:type="esdl:OutPort" id="b2bfad70-2317-4ddb-b5b3-952080db56bf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5ed13e16-61cb-4462-a1bc-6118bff2007f" name="CableHome66_1" originalIdInSource="661" assetType="4x10Cu_as10__VG_YMVK_asmb" length="6.6">
         <port xsi:type="esdl:InPort" id="5474531f-ef6f-4341-9439-219abe7d1c69" name="In" connectedTo="7a996cba-4524-4b85-b3de-443f4912f000"/>
@@ -4542,30 +4554,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98519807847627" lon="4.029549092905524"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8fc7b442-9828-4eff-bd7f-4bdc8777d13a" name="Home67_1" originalIdInSource="671" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="8fc7b442-9828-4eff-bd7f-4bdc8777d13a" name="Home67_1" originalIdInSource="671" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99292257532764" lon="4.09280276459967"/>
         <asset xsi:type="esdl:EConnection" id="90109ff8-7feb-4244-a8bb-d6e92c66aace" name="ConnectionHome67_1" originalIdInSource="671" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d06e346e-fe12-49b3-b720-4d7b9484c184" name="In" connectedTo="b1f62bf9-180d-45f1-ac08-8e7054ef369f"/>
-          <port xsi:type="esdl:OutPort" id="723ba001-b3d8-4516-aa5b-da8903f7cadd" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="db54a7f0-f920-4506-9695-f01387107d90" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="95eeb69b-e5bd-477b-afa9-8bb9ee6c8890" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="723ba001-b3d8-4516-aa5b-da8903f7cadd" name="OutPh1" connectedTo="f106567c-e24d-437b-a322-0c13b0176ca8"/>
+          <port xsi:type="esdl:OutPort" id="db54a7f0-f920-4506-9695-f01387107d90" name="OutPh2" connectedTo="9768ec6e-8048-49b1-abbd-c7d4aeb29092"/>
+          <port xsi:type="esdl:OutPort" id="95eeb69b-e5bd-477b-afa9-8bb9ee6c8890" name="OutPh3" connectedTo="040bd562-d5db-4701-b6f6-ad61a54e53dc"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d6b94fa0-2a6e-4794-9252-1128e33353bb" name="PhasegridHome67_1_Ph1" originalIdInSource="671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f106567c-e24d-437b-a322-0c13b0176ca8" name="In"/>
+          <port xsi:type="esdl:InPort" id="f106567c-e24d-437b-a322-0c13b0176ca8" name="In" connectedTo="723ba001-b3d8-4516-aa5b-da8903f7cadd"/>
           <port xsi:type="esdl:OutPort" id="22945fdb-9b2c-461d-980e-d06ebeb31002" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f5ca773a-e4eb-4adb-a25e-3f26979e1b14" name="PhasegridHome67_1_Ph2" originalIdInSource="671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9768ec6e-8048-49b1-abbd-c7d4aeb29092" name="In"/>
+          <port xsi:type="esdl:InPort" id="9768ec6e-8048-49b1-abbd-c7d4aeb29092" name="In" connectedTo="db54a7f0-f920-4506-9695-f01387107d90"/>
           <port xsi:type="esdl:OutPort" id="d8149e50-cd62-492f-9505-49b1076f8ae2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="aa51acc8-ebe6-4219-a485-f312f828d9d8" name="PhasegridHome67_1_Ph3" originalIdInSource="671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="040bd562-d5db-4701-b6f6-ad61a54e53dc" name="In"/>
+          <port xsi:type="esdl:InPort" id="040bd562-d5db-4701-b6f6-ad61a54e53dc" name="In" connectedTo="95eeb69b-e5bd-477b-afa9-8bb9ee6c8890"/>
           <port xsi:type="esdl:OutPort" id="13fc3b6f-4a55-4138-a81e-96b93da146bf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="98b4396d-f1eb-44b7-affb-00881bd839e4" name="CableHome67_1" originalIdInSource="671" assetType="4x10Cu__VG_VMvKas" length="15.3">
         <port xsi:type="esdl:InPort" id="656d7d07-4bcd-40c5-8db5-16ec91d2d901" name="In" connectedTo="e3fd6ce9-fa0b-49db-ae04-bd5550d5dd80"/>
@@ -4575,30 +4588,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99292257532764" lon="4.09280276459967"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c205698b-711f-4ad0-8ae5-9cb2e3680f45" name="Home69_1" originalIdInSource="691" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="c205698b-711f-4ad0-8ae5-9cb2e3680f45" name="Home69_1" originalIdInSource="691" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         <asset xsi:type="esdl:EConnection" id="2342c209-4077-43d2-b718-78de7d2a6ac8" name="ConnectionHome69_1" originalIdInSource="691" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="28cc6def-7841-438e-8799-be415f583853" name="In" connectedTo="5b809a83-f131-4492-962f-26ed12fd0cae"/>
-          <port xsi:type="esdl:OutPort" id="daec1ca3-3171-43e5-99c8-3509020ffa7b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="12af63a4-af35-4c8f-b204-a4d8e6828245" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7112e43c-f2d8-4733-a3fe-fb79d3f93873" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="daec1ca3-3171-43e5-99c8-3509020ffa7b" name="OutPh1" connectedTo="e6409c73-147d-4e06-b57c-fa69eb6ed329"/>
+          <port xsi:type="esdl:OutPort" id="12af63a4-af35-4c8f-b204-a4d8e6828245" name="OutPh2" connectedTo="9235ab54-2c71-4183-90b5-58738ef7a301"/>
+          <port xsi:type="esdl:OutPort" id="7112e43c-f2d8-4733-a3fe-fb79d3f93873" name="OutPh3" connectedTo="df8b241b-1f27-4d18-9c8c-bdd3f672b32f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="066e865a-e3d8-41b1-8cd0-3d0f6c9e5a89" name="PhasegridHome69_1_Ph1" originalIdInSource="691">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e6409c73-147d-4e06-b57c-fa69eb6ed329" name="In"/>
+          <port xsi:type="esdl:InPort" id="e6409c73-147d-4e06-b57c-fa69eb6ed329" name="In" connectedTo="daec1ca3-3171-43e5-99c8-3509020ffa7b"/>
           <port xsi:type="esdl:OutPort" id="039aea8d-a911-43b7-bf56-51bb93e70760" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7fbfc4d4-6631-4c67-a13c-c1c964d4bac5" name="PhasegridHome69_1_Ph2" originalIdInSource="691">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9235ab54-2c71-4183-90b5-58738ef7a301" name="In"/>
+          <port xsi:type="esdl:InPort" id="9235ab54-2c71-4183-90b5-58738ef7a301" name="In" connectedTo="12af63a4-af35-4c8f-b204-a4d8e6828245"/>
           <port xsi:type="esdl:OutPort" id="37c580fd-a552-495d-b90b-36649a8ed3f5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="38cfe886-9168-4525-8742-256e1215b30c" name="PhasegridHome69_1_Ph3" originalIdInSource="691">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="df8b241b-1f27-4d18-9c8c-bdd3f672b32f" name="In"/>
+          <port xsi:type="esdl:InPort" id="df8b241b-1f27-4d18-9c8c-bdd3f672b32f" name="In" connectedTo="7112e43c-f2d8-4733-a3fe-fb79d3f93873"/>
           <port xsi:type="esdl:OutPort" id="548454bd-089b-46b6-8b0a-1886bd2cd42b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1eb13a36-ab1d-4114-be5c-75bd0b6ea619" name="CableHome69_1" originalIdInSource="691" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.7">
         <port xsi:type="esdl:InPort" id="ed7ece06-c673-4e2b-8a7d-90debd0fa8c6" name="In" connectedTo="eea2401e-76c4-4769-ab7d-a67503d0c022"/>
@@ -4608,30 +4622,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a93f07a0-d330-4c3e-bea8-4977a5331ec8" name="Home70_1" originalIdInSource="701" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="a93f07a0-d330-4c3e-bea8-4977a5331ec8" name="Home70_1" originalIdInSource="701" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         <asset xsi:type="esdl:EConnection" id="580eabaf-cdf7-41a4-870a-15fc6779f9b8" name="ConnectionHome70_1" originalIdInSource="701" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1f520379-16b6-4b29-9bc7-579444e6fa8e" name="In" connectedTo="b238a3d0-68a8-4fbc-b373-44a1b539ff1f"/>
-          <port xsi:type="esdl:OutPort" id="4dfd707b-5a86-4902-82f3-661f23365e63" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3de2531f-12b1-4f1f-a371-9357c11d3f60" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="35378e46-c994-4dfa-ba9b-77a24dc3d5eb" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4dfd707b-5a86-4902-82f3-661f23365e63" name="OutPh1" connectedTo="555608b4-66f7-42fe-b787-970b93710ab1"/>
+          <port xsi:type="esdl:OutPort" id="3de2531f-12b1-4f1f-a371-9357c11d3f60" name="OutPh2" connectedTo="6f836ad3-9678-4230-a003-f16acb9237ec"/>
+          <port xsi:type="esdl:OutPort" id="35378e46-c994-4dfa-ba9b-77a24dc3d5eb" name="OutPh3" connectedTo="55ae7c48-09bc-41a5-a0be-254f55624d09"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3b02b31b-54bc-4efb-83fa-4a503a4e4857" name="PhasegridHome70_1_Ph1" originalIdInSource="701">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="555608b4-66f7-42fe-b787-970b93710ab1" name="In"/>
+          <port xsi:type="esdl:InPort" id="555608b4-66f7-42fe-b787-970b93710ab1" name="In" connectedTo="4dfd707b-5a86-4902-82f3-661f23365e63"/>
           <port xsi:type="esdl:OutPort" id="d862bf21-f91a-4e66-8656-c81e8da5e2f3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="eb153d74-2613-40e0-bee0-95e4546e4099" name="PhasegridHome70_1_Ph2" originalIdInSource="701">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6f836ad3-9678-4230-a003-f16acb9237ec" name="In"/>
+          <port xsi:type="esdl:InPort" id="6f836ad3-9678-4230-a003-f16acb9237ec" name="In" connectedTo="3de2531f-12b1-4f1f-a371-9357c11d3f60"/>
           <port xsi:type="esdl:OutPort" id="e205224b-8fdc-4530-ba8c-8c48286cf7e8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fc857d84-c0e7-4a31-ac75-e2181a781add" name="PhasegridHome70_1_Ph3" originalIdInSource="701">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="55ae7c48-09bc-41a5-a0be-254f55624d09" name="In"/>
+          <port xsi:type="esdl:InPort" id="55ae7c48-09bc-41a5-a0be-254f55624d09" name="In" connectedTo="35378e46-c994-4dfa-ba9b-77a24dc3d5eb"/>
           <port xsi:type="esdl:OutPort" id="300ac66b-b4f6-455c-9b07-05fa49c257a2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="be7c0916-6198-4610-8b66-eec588419439" name="CableHome70_1" originalIdInSource="701" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.7">
         <port xsi:type="esdl:InPort" id="07c7c378-2546-41fd-83c0-371735f96d54" name="In" connectedTo="78847aae-95ad-48fb-94da-38cc26e3d397"/>
@@ -4641,30 +4656,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="961e4dbc-12f5-4ec4-a6b2-112b5a79ccfd" name="Home74_1" originalIdInSource="741" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="961e4dbc-12f5-4ec4-a6b2-112b5a79ccfd" name="Home74_1" originalIdInSource="741" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         <asset xsi:type="esdl:EConnection" id="89d0aa78-28f6-405e-94c9-e34f352e2b26" name="ConnectionHome74_1" originalIdInSource="741" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="53b7615b-72a7-4d0c-86e3-98ec93150f9c" name="In" connectedTo="885be439-93e3-419a-a8be-efba3067e803"/>
-          <port xsi:type="esdl:OutPort" id="9f2438fd-95f4-4632-9a7c-68ba439b217e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c4e819fe-5c7b-426e-8309-b827df5b1747" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7564ad53-2f7d-4ddf-a0aa-9fa4fb362dfd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="9f2438fd-95f4-4632-9a7c-68ba439b217e" name="OutPh1" connectedTo="c976705e-bf3b-4f71-a56c-b06e743e861f"/>
+          <port xsi:type="esdl:OutPort" id="c4e819fe-5c7b-426e-8309-b827df5b1747" name="OutPh2" connectedTo="a2933ad2-7f6d-46d5-af00-d9cd02063bb6"/>
+          <port xsi:type="esdl:OutPort" id="7564ad53-2f7d-4ddf-a0aa-9fa4fb362dfd" name="OutPh3" connectedTo="420772e6-e147-4998-bcfc-0f4e9708491b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="01030aff-1dce-4e6d-9296-d74492cf1c9a" name="PhasegridHome74_1_Ph1" originalIdInSource="741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c976705e-bf3b-4f71-a56c-b06e743e861f" name="In"/>
+          <port xsi:type="esdl:InPort" id="c976705e-bf3b-4f71-a56c-b06e743e861f" name="In" connectedTo="9f2438fd-95f4-4632-9a7c-68ba439b217e"/>
           <port xsi:type="esdl:OutPort" id="0c4f451f-c06c-4c43-b4fe-6d9c0b0b2836" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="54ecb790-174f-48d3-bae6-9af657efe3e5" name="PhasegridHome74_1_Ph2" originalIdInSource="741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a2933ad2-7f6d-46d5-af00-d9cd02063bb6" name="In"/>
+          <port xsi:type="esdl:InPort" id="a2933ad2-7f6d-46d5-af00-d9cd02063bb6" name="In" connectedTo="c4e819fe-5c7b-426e-8309-b827df5b1747"/>
           <port xsi:type="esdl:OutPort" id="f46ec5e6-72c8-4e71-90a5-da61d51b661b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="991bb3ac-321f-4f0a-854b-78f11bcfbd53" name="PhasegridHome74_1_Ph3" originalIdInSource="741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="420772e6-e147-4998-bcfc-0f4e9708491b" name="In"/>
+          <port xsi:type="esdl:InPort" id="420772e6-e147-4998-bcfc-0f4e9708491b" name="In" connectedTo="7564ad53-2f7d-4ddf-a0aa-9fa4fb362dfd"/>
           <port xsi:type="esdl:OutPort" id="300a2753-6cd2-461e-9d81-146744b073cc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="751b41fb-48da-4a99-bae8-ceda47c37efc" name="CableHome74_1" originalIdInSource="741" assetType="4x10Cu_as10__VG_YMVK_asmb" length="5.7">
         <port xsi:type="esdl:InPort" id="8eb96c2b-718c-4584-bd6e-6ed304086e02" name="In" connectedTo="fe7e0b2f-58b5-4fb2-bac5-54df49517350"/>
@@ -4674,30 +4690,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98575114417576" lon="4.046420900445677"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6d1debe5-edf0-49a9-a995-745f1886874f" name="Home76_1" originalIdInSource="761" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6d1debe5-edf0-49a9-a995-745f1886874f" name="Home76_1" originalIdInSource="761" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99513775877318" lon="4.114581780675795"/>
         <asset xsi:type="esdl:EConnection" id="46efcdb9-5797-4211-9be4-edcb5bf6bf73" name="ConnectionHome76_1" originalIdInSource="761" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5723b172-d595-444d-b53c-5964e59b2681" name="In" connectedTo="2dfa34dd-297b-404a-9eca-88fbc5b9a832"/>
-          <port xsi:type="esdl:OutPort" id="e5af052b-611f-48be-b29a-d3cb2fee1525" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="7265ada1-efaa-473e-a1db-dc1dba26e1e8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="04f262d4-06de-48dd-97fe-56f257adea73" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e5af052b-611f-48be-b29a-d3cb2fee1525" name="OutPh1" connectedTo="122fb23e-7931-4ba8-8487-e89ec704b125"/>
+          <port xsi:type="esdl:OutPort" id="7265ada1-efaa-473e-a1db-dc1dba26e1e8" name="OutPh2" connectedTo="102536df-ab6b-48fb-9513-fdedc6d07617"/>
+          <port xsi:type="esdl:OutPort" id="04f262d4-06de-48dd-97fe-56f257adea73" name="OutPh3" connectedTo="1c272a70-1ae7-4137-b1c6-aa089c3f2ca5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="500a2b7c-11ae-4f21-979a-ece9010dd0ba" name="PhasegridHome76_1_Ph1" originalIdInSource="761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="122fb23e-7931-4ba8-8487-e89ec704b125" name="In"/>
+          <port xsi:type="esdl:InPort" id="122fb23e-7931-4ba8-8487-e89ec704b125" name="In" connectedTo="e5af052b-611f-48be-b29a-d3cb2fee1525"/>
           <port xsi:type="esdl:OutPort" id="9467e7a6-d0b7-49dc-b605-e88436f8d8f5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cd3357d3-372c-4062-9e89-d3ae554ddf34" name="PhasegridHome76_1_Ph2" originalIdInSource="761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="102536df-ab6b-48fb-9513-fdedc6d07617" name="In"/>
+          <port xsi:type="esdl:InPort" id="102536df-ab6b-48fb-9513-fdedc6d07617" name="In" connectedTo="7265ada1-efaa-473e-a1db-dc1dba26e1e8"/>
           <port xsi:type="esdl:OutPort" id="76a6a217-9c34-4976-a75e-d04d5b289563" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7fcdbc06-1e83-400a-bbdd-c5b09073f0cd" name="PhasegridHome76_1_Ph3" originalIdInSource="761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1c272a70-1ae7-4137-b1c6-aa089c3f2ca5" name="In"/>
+          <port xsi:type="esdl:InPort" id="1c272a70-1ae7-4137-b1c6-aa089c3f2ca5" name="In" connectedTo="04f262d4-06de-48dd-97fe-56f257adea73"/>
           <port xsi:type="esdl:OutPort" id="9bcd0885-3119-43c8-9975-5e0e0beb9ae6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ed541a20-d7d3-42d0-9550-0ffcbc8c7d0b" name="CableHome76_1" originalIdInSource="761" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.1">
         <port xsi:type="esdl:InPort" id="bbb18b21-2ea0-4799-9169-2ee15fef7e40" name="In" connectedTo="7a88a52f-cc39-40da-a3aa-57eb1dcaf312"/>
@@ -4707,30 +4724,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99513775877318" lon="4.114581780675795"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9fd96b47-f7b3-46de-aa22-5697dbc3288b" name="Home78_1" originalIdInSource="781" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="9fd96b47-f7b3-46de-aa22-5697dbc3288b" name="Home78_1" originalIdInSource="781" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.988415836513624" lon="4.059445162003051"/>
         <asset xsi:type="esdl:EConnection" id="66647aa9-de03-465f-af1e-c6628a078e60" name="ConnectionHome78_1" originalIdInSource="781" assetType="3x50A" capacity="34641.016151377546">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="214ed2a4-03e1-46b8-ab10-84484f680342" name="In" connectedTo="3e261067-9a70-4202-84b6-7596b9e48300"/>
-          <port xsi:type="esdl:OutPort" id="81fc04d1-9097-47cc-8883-a06c6eb7371c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="deee3f69-9f39-463e-bf21-405e086aaafb" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7c28a6c2-7605-45a0-a6bd-8adbf2083c8d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="81fc04d1-9097-47cc-8883-a06c6eb7371c" name="OutPh1" connectedTo="74db5772-ea56-47ae-ae66-260822504421"/>
+          <port xsi:type="esdl:OutPort" id="deee3f69-9f39-463e-bf21-405e086aaafb" name="OutPh2" connectedTo="66124251-c328-478d-8187-40fdccfa353f"/>
+          <port xsi:type="esdl:OutPort" id="7c28a6c2-7605-45a0-a6bd-8adbf2083c8d" name="OutPh3" connectedTo="31c1e6fb-ac8d-4372-84cc-9d3363d00d29"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="36d9fb53-33e2-460e-9484-7116243a5572" name="PhasegridHome78_1_Ph1" originalIdInSource="781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="74db5772-ea56-47ae-ae66-260822504421" name="In"/>
+          <port xsi:type="esdl:InPort" id="74db5772-ea56-47ae-ae66-260822504421" name="In" connectedTo="81fc04d1-9097-47cc-8883-a06c6eb7371c"/>
           <port xsi:type="esdl:OutPort" id="48c540a8-ce3e-4e7e-94ac-2fbc208b3dde" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c5c747a5-cd43-45d7-bd12-80ad846cb1b5" name="PhasegridHome78_1_Ph2" originalIdInSource="781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="66124251-c328-478d-8187-40fdccfa353f" name="In"/>
+          <port xsi:type="esdl:InPort" id="66124251-c328-478d-8187-40fdccfa353f" name="In" connectedTo="deee3f69-9f39-463e-bf21-405e086aaafb"/>
           <port xsi:type="esdl:OutPort" id="3f107899-43d3-4fee-a9f9-13f9e3d4b5ce" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8399b312-7e22-45e6-acdb-3b1bd3b3413d" name="PhasegridHome78_1_Ph3" originalIdInSource="781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="31c1e6fb-ac8d-4372-84cc-9d3363d00d29" name="In"/>
+          <port xsi:type="esdl:InPort" id="31c1e6fb-ac8d-4372-84cc-9d3363d00d29" name="In" connectedTo="7c28a6c2-7605-45a0-a6bd-8adbf2083c8d"/>
           <port xsi:type="esdl:OutPort" id="f2b1d700-561c-4868-9008-244d091b3232" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="941cc942-334a-4710-9c84-8c51cb0adb58" name="CableHome78_1" originalIdInSource="781" assetType="4x10Cu_as10Cu__YMvK_asmb" length="20.4">
         <port xsi:type="esdl:InPort" id="71ccfe8b-ee40-4785-8056-d90f1657c31e" name="In" connectedTo="b7faba7a-a97a-4ce1-8e32-48fcde3b30eb"/>
@@ -4740,30 +4758,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.988415836513624" lon="4.059445162003051"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9a1556e3-4f35-466f-8385-b87e338be688" name="Home81_1" originalIdInSource="811" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_APP">
+      <asset xsi:type="esdl:Building" id="9a1556e3-4f35-466f-8385-b87e338be688" name="Home81_1" originalIdInSource="811" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_APP" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98662255462023" lon="4.092111043281382"/>
         <asset xsi:type="esdl:EConnection" id="543355d5-e570-4842-a2d7-ce3ee79cc815" name="ConnectionHome81_1" originalIdInSource="811" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5369f0ad-ba7c-4496-8f5b-759e77efa65d" name="In" connectedTo="772c5829-708c-405f-9766-4ba0102d50ba"/>
-          <port xsi:type="esdl:OutPort" id="16018e46-0e7c-4fb9-b222-09db2071ef6a" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f483400e-6c3a-414d-9854-fa8eb5b4ca5d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="52f13f25-a9c1-49f9-a5db-18e244eec7ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="16018e46-0e7c-4fb9-b222-09db2071ef6a" name="OutPh1" connectedTo="e607b27c-71ca-4355-834a-a480f86a1e2a"/>
+          <port xsi:type="esdl:OutPort" id="f483400e-6c3a-414d-9854-fa8eb5b4ca5d" name="OutPh2" connectedTo="84545095-0c85-41a7-83f3-b1cf15de3d04"/>
+          <port xsi:type="esdl:OutPort" id="52f13f25-a9c1-49f9-a5db-18e244eec7ab" name="OutPh3" connectedTo="e47a111d-c867-4dbd-ba75-687f26e38ee8"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c2bfb098-e42d-460a-b081-f1a32cff845b" name="PhasegridHome81_1_Ph1" originalIdInSource="811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e607b27c-71ca-4355-834a-a480f86a1e2a" name="In"/>
+          <port xsi:type="esdl:InPort" id="e607b27c-71ca-4355-834a-a480f86a1e2a" name="In" connectedTo="16018e46-0e7c-4fb9-b222-09db2071ef6a"/>
           <port xsi:type="esdl:OutPort" id="092fa3b1-1aa2-4f95-8394-5e4100eaea55" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="00e5d4eb-7bbc-4b3c-81f9-86589c2aaecc" name="PhasegridHome81_1_Ph2" originalIdInSource="811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="84545095-0c85-41a7-83f3-b1cf15de3d04" name="In"/>
+          <port xsi:type="esdl:InPort" id="84545095-0c85-41a7-83f3-b1cf15de3d04" name="In" connectedTo="f483400e-6c3a-414d-9854-fa8eb5b4ca5d"/>
           <port xsi:type="esdl:OutPort" id="69fea224-d25b-422d-8469-b7916714a12c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3f4f1049-0e8b-4243-a0fd-ce792b4aef13" name="PhasegridHome81_1_Ph3" originalIdInSource="811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e47a111d-c867-4dbd-ba75-687f26e38ee8" name="In"/>
+          <port xsi:type="esdl:InPort" id="e47a111d-c867-4dbd-ba75-687f26e38ee8" name="In" connectedTo="52f13f25-a9c1-49f9-a5db-18e244eec7ab"/>
           <port xsi:type="esdl:OutPort" id="24bb4c58-3d62-4dea-9e3c-3ac23ebaebb8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="109.66" height="9.0" windowArea="28.259999999999994" doorArea="8.36" flatRoofArea="11.7" slantedRoofArea="72.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="31e23db9-761f-4352-b522-969f180373f8" name="CableHome81_1" originalIdInSource="811" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="86567d3b-6273-4ace-8c3c-a3b1c7e2b4e9" name="In" connectedTo="4063b392-b4e5-49c8-9300-14764ac19e7f"/>
@@ -4773,30 +4792,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98662255462023" lon="4.092111043281382"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dbd89cc1-ac92-4104-8da7-e818d8ab9291" name="Home82_1" originalIdInSource="821" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="dbd89cc1-ac92-4104-8da7-e818d8ab9291" name="Home82_1" originalIdInSource="821" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995995370216235" lon="4.0461145634847036"/>
         <asset xsi:type="esdl:EConnection" id="30b758de-70d7-46fc-9049-c8f37cdce2c1" name="ConnectionHome82_1" originalIdInSource="821" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cf16e198-1f5f-416a-a34b-e33b6ac98395" name="In" connectedTo="627461fe-f127-4715-8da1-c754084d88c4"/>
-          <port xsi:type="esdl:OutPort" id="ca2ead1a-d82e-4493-b2ea-7ded66a246c1" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="7aa554d6-ed34-4534-86d4-8b5f17385f0a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e3f759f0-f4bb-4256-8794-d438ff25809f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ca2ead1a-d82e-4493-b2ea-7ded66a246c1" name="OutPh1" connectedTo="c4165093-8284-4f7e-b021-fc1307f54572"/>
+          <port xsi:type="esdl:OutPort" id="7aa554d6-ed34-4534-86d4-8b5f17385f0a" name="OutPh2" connectedTo="d188207b-edc2-45b6-aefd-a23b78635c73"/>
+          <port xsi:type="esdl:OutPort" id="e3f759f0-f4bb-4256-8794-d438ff25809f" name="OutPh3" connectedTo="b824d3ad-7e2a-4ed8-91e2-f15f01ac1caf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cd991c23-3981-485f-851a-e1b368ad8580" name="PhasegridHome82_1_Ph1" originalIdInSource="821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c4165093-8284-4f7e-b021-fc1307f54572" name="In"/>
+          <port xsi:type="esdl:InPort" id="c4165093-8284-4f7e-b021-fc1307f54572" name="In" connectedTo="ca2ead1a-d82e-4493-b2ea-7ded66a246c1"/>
           <port xsi:type="esdl:OutPort" id="638eac9e-4713-4d2f-b5e2-4c63754e8793" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2994fb45-32c9-44c9-bec0-4fd3f9c236f6" name="PhasegridHome82_1_Ph2" originalIdInSource="821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d188207b-edc2-45b6-aefd-a23b78635c73" name="In"/>
+          <port xsi:type="esdl:InPort" id="d188207b-edc2-45b6-aefd-a23b78635c73" name="In" connectedTo="7aa554d6-ed34-4534-86d4-8b5f17385f0a"/>
           <port xsi:type="esdl:OutPort" id="1ccc688c-6c6c-41e5-8326-7373778c05e2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="95770677-0531-4c41-b25c-dba1c3d2a2ba" name="PhasegridHome82_1_Ph3" originalIdInSource="821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b824d3ad-7e2a-4ed8-91e2-f15f01ac1caf" name="In"/>
+          <port xsi:type="esdl:InPort" id="b824d3ad-7e2a-4ed8-91e2-f15f01ac1caf" name="In" connectedTo="e3f759f0-f4bb-4256-8794-d438ff25809f"/>
           <port xsi:type="esdl:OutPort" id="88b48ebe-1605-47da-9043-2feb9c7cc99e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="723920e0-1a38-4903-ab3a-96269bc1376d" name="CableHome82_1" originalIdInSource="821" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.4">
         <port xsi:type="esdl:InPort" id="d5435492-90e8-454d-89c3-02361bbc8efa" name="In" connectedTo="6ccce33e-cca3-41c3-aaa8-ee71d760702a"/>
@@ -4806,30 +4826,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.995995370216235" lon="4.0461145634847036"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="be77ef9e-4d56-4190-a941-046c967ee084" name="Home87_1" originalIdInSource="871" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="be77ef9e-4d56-4190-a941-046c967ee084" name="Home87_1" originalIdInSource="871" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_B" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98593039915184" lon="4.0306916580281"/>
         <asset xsi:type="esdl:EConnection" id="8243572e-2c47-4815-85d9-546cf78b5677" name="ConnectionHome87_1" originalIdInSource="871" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="61069915-cd46-4ef9-b9b8-c0fc601f1a7a" name="In" connectedTo="32bceb2d-fc0d-47a3-ac02-67641d0747e5"/>
-          <port xsi:type="esdl:OutPort" id="0417b4d9-7054-4d56-be4a-f3bf9b07eb28" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="2466d0b1-1be4-4e47-ac2e-8ebf7a772e6c" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="bb8da76c-e1d3-423f-a7e3-ff8e0189f92d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0417b4d9-7054-4d56-be4a-f3bf9b07eb28" name="OutPh1" connectedTo="8f1f5416-1d65-40ec-b3f1-b3de8d75e791"/>
+          <port xsi:type="esdl:OutPort" id="2466d0b1-1be4-4e47-ac2e-8ebf7a772e6c" name="OutPh2" connectedTo="bf379adb-53a5-4604-b077-cfffba9c75df"/>
+          <port xsi:type="esdl:OutPort" id="bb8da76c-e1d3-423f-a7e3-ff8e0189f92d" name="OutPh3" connectedTo="0ca15b69-d8f2-4db7-ad17-b4a74956c860"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5dd2428d-43c3-404c-8002-e9b35b58e06e" name="PhasegridHome87_1_Ph1" originalIdInSource="871">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8f1f5416-1d65-40ec-b3f1-b3de8d75e791" name="In"/>
+          <port xsi:type="esdl:InPort" id="8f1f5416-1d65-40ec-b3f1-b3de8d75e791" name="In" connectedTo="0417b4d9-7054-4d56-be4a-f3bf9b07eb28"/>
           <port xsi:type="esdl:OutPort" id="0f64831c-5997-4576-9f7b-40c89b3247c1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7f1d80f2-5fa3-4da2-bc75-4b1d518420da" name="PhasegridHome87_1_Ph2" originalIdInSource="871">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bf379adb-53a5-4604-b077-cfffba9c75df" name="In"/>
+          <port xsi:type="esdl:InPort" id="bf379adb-53a5-4604-b077-cfffba9c75df" name="In" connectedTo="2466d0b1-1be4-4e47-ac2e-8ebf7a772e6c"/>
           <port xsi:type="esdl:OutPort" id="8b7fce82-8eb0-4118-9bf0-5fa9678c5c93" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5c46d9f5-5c28-4362-9649-1d3b23c1ddeb" name="PhasegridHome87_1_Ph3" originalIdInSource="871">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0ca15b69-d8f2-4db7-ad17-b4a74956c860" name="In"/>
+          <port xsi:type="esdl:InPort" id="0ca15b69-d8f2-4db7-ad17-b4a74956c860" name="In" connectedTo="bb8da76c-e1d3-423f-a7e3-ff8e0189f92d"/>
           <port xsi:type="esdl:OutPort" id="8910bb03-004b-4115-b1e6-8d7846492fe3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.3" height="9.0" windowArea="27.22" doorArea="6.93" flatRoofArea="19.02" slantedRoofArea="65.12"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="633482d7-082b-42a8-81bf-20bb22c8455c" name="CableHome87_1" originalIdInSource="871" assetType="4x10Cu_as10__VO_YMvK_asmb" length="7.6">
         <port xsi:type="esdl:InPort" id="b761cd1e-4672-4505-b142-f1da252494bd" name="In" connectedTo="06c47a0a-4398-4d11-a63d-af7473b95e8c"/>
@@ -4839,30 +4860,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98593039915184" lon="4.0306916580281"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="032bfb9e-c719-4fbc-ae6c-1fe9db930e0f" name="Home88_1" originalIdInSource="881" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="032bfb9e-c719-4fbc-ae6c-1fe9db930e0f" name="Home88_1" originalIdInSource="881" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.984469108346865" lon="4.028697637303527"/>
         <asset xsi:type="esdl:EConnection" id="3564374d-e14d-4744-8b1f-ef3c9b112a70" name="ConnectionHome88_1" originalIdInSource="881" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="534f2d98-ac68-43b5-95e9-bc8be426c4b6" name="In" connectedTo="ba6a8d6b-5850-49b2-b736-b62ee8697cfb"/>
-          <port xsi:type="esdl:OutPort" id="a7b7049f-e431-43e2-9da3-997a3a6881ad" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5a517c27-fdd9-4260-b7ae-f38fc4b37613" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7a7e00cd-ff4c-4948-a089-49b1d96081bd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a7b7049f-e431-43e2-9da3-997a3a6881ad" name="OutPh1" connectedTo="c41e375f-9843-4204-b2c4-930cf1f98a91"/>
+          <port xsi:type="esdl:OutPort" id="5a517c27-fdd9-4260-b7ae-f38fc4b37613" name="OutPh2" connectedTo="0ec74ab7-6145-4045-99a9-6c9f180ac7a0"/>
+          <port xsi:type="esdl:OutPort" id="7a7e00cd-ff4c-4948-a089-49b1d96081bd" name="OutPh3" connectedTo="7def2712-77ef-4070-a55f-2987e6c4ae88"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="596fbc62-93a2-4001-b4ca-649409ba3f3f" name="PhasegridHome88_1_Ph1" originalIdInSource="881">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c41e375f-9843-4204-b2c4-930cf1f98a91" name="In"/>
+          <port xsi:type="esdl:InPort" id="c41e375f-9843-4204-b2c4-930cf1f98a91" name="In" connectedTo="a7b7049f-e431-43e2-9da3-997a3a6881ad"/>
           <port xsi:type="esdl:OutPort" id="18316147-5165-48c7-9a7a-08011f1eab53" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="913e0567-9e03-4ad8-8e37-307d035e4968" name="PhasegridHome88_1_Ph2" originalIdInSource="881">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0ec74ab7-6145-4045-99a9-6c9f180ac7a0" name="In"/>
+          <port xsi:type="esdl:InPort" id="0ec74ab7-6145-4045-99a9-6c9f180ac7a0" name="In" connectedTo="5a517c27-fdd9-4260-b7ae-f38fc4b37613"/>
           <port xsi:type="esdl:OutPort" id="c243ff3d-5f20-47df-9d47-293d0ebcd91c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4493751b-3a1c-4f4b-b923-87a07a04c2f6" name="PhasegridHome88_1_Ph3" originalIdInSource="881">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7def2712-77ef-4070-a55f-2987e6c4ae88" name="In"/>
+          <port xsi:type="esdl:InPort" id="7def2712-77ef-4070-a55f-2987e6c4ae88" name="In" connectedTo="7a7e00cd-ff4c-4948-a089-49b1d96081bd"/>
           <port xsi:type="esdl:OutPort" id="20309ab8-0723-427a-bc75-b523e4416ae3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7c70aae6-4ae8-41e2-a833-5b7a706ddc6d" name="CableHome88_1" originalIdInSource="881" assetType="4x10Cu_as10__VO_YMvK_asmb" length="7.0">
         <port xsi:type="esdl:InPort" id="cc05878d-9c42-4cbe-ac7f-02c5e24862ad" name="In" connectedTo="a40d8405-eb2d-4cba-85d0-0a31a89a75a8"/>
@@ -4872,30 +4894,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.984469108346865" lon="4.028697637303527"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="acbf09b0-0c31-4e88-a15d-86b6f53757e8" name="Home90_1" originalIdInSource="901" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="acbf09b0-0c31-4e88-a15d-86b6f53757e8" name="Home90_1" originalIdInSource="901" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.993204951555306" lon="4.085805148538814"/>
         <asset xsi:type="esdl:EConnection" id="838f1b17-6070-469e-9310-a8653f512095" name="ConnectionHome90_1" originalIdInSource="901" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="14694269-2029-4a85-a399-acf771f24e71" name="In" connectedTo="8553b49c-081a-46cb-a98d-67381c3f3e03"/>
-          <port xsi:type="esdl:OutPort" id="8c48682b-7447-456e-bd84-49e1a0524504" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="0c47d68b-30eb-4ed3-a6aa-47c3d86aa817" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a34b7d85-113c-4a3f-a5e2-db89ad5d79e7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="8c48682b-7447-456e-bd84-49e1a0524504" name="OutPh1" connectedTo="efef70e2-eeeb-4a31-af65-36314a8d7dde"/>
+          <port xsi:type="esdl:OutPort" id="0c47d68b-30eb-4ed3-a6aa-47c3d86aa817" name="OutPh2" connectedTo="f7af1c0b-3efe-430e-9134-284d8125f342"/>
+          <port xsi:type="esdl:OutPort" id="a34b7d85-113c-4a3f-a5e2-db89ad5d79e7" name="OutPh3" connectedTo="46317d42-1f4d-456a-98f6-135f2a76a11c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="236d7153-8e24-4a59-8def-66e360b26f86" name="PhasegridHome90_1_Ph1" originalIdInSource="901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="efef70e2-eeeb-4a31-af65-36314a8d7dde" name="In"/>
+          <port xsi:type="esdl:InPort" id="efef70e2-eeeb-4a31-af65-36314a8d7dde" name="In" connectedTo="8c48682b-7447-456e-bd84-49e1a0524504"/>
           <port xsi:type="esdl:OutPort" id="f56fba48-ce32-4d18-98e2-1c31a9b14caa" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="104c6d26-1e4d-4c4f-9d89-5542c46c0924" name="PhasegridHome90_1_Ph2" originalIdInSource="901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f7af1c0b-3efe-430e-9134-284d8125f342" name="In"/>
+          <port xsi:type="esdl:InPort" id="f7af1c0b-3efe-430e-9134-284d8125f342" name="In" connectedTo="0c47d68b-30eb-4ed3-a6aa-47c3d86aa817"/>
           <port xsi:type="esdl:OutPort" id="43e5af7f-eed7-4ee4-a9f3-b007a3139b67" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e4bbda10-7cf9-4c74-b366-4b8a41fc19ad" name="PhasegridHome90_1_Ph3" originalIdInSource="901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="46317d42-1f4d-456a-98f6-135f2a76a11c" name="In"/>
+          <port xsi:type="esdl:InPort" id="46317d42-1f4d-456a-98f6-135f2a76a11c" name="In" connectedTo="a34b7d85-113c-4a3f-a5e2-db89ad5d79e7"/>
           <port xsi:type="esdl:OutPort" id="b32c8ab6-c690-43b3-bdce-822522372d2b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="df7ee648-621f-47cd-bf47-f1b854bab595" name="CableHome90_1" originalIdInSource="901" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="3ba94828-ae1e-40d6-a22d-4ae87c18f5e7" name="In" connectedTo="f8c9d8fb-5f26-4611-ba60-63d551742fc2"/>
@@ -4905,30 +4928,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.993204951555306" lon="4.085805148538814"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="43061a09-3ad2-426f-b493-638d442687ee" name="Home91_1" originalIdInSource="911" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="43061a09-3ad2-426f-b493-638d442687ee" name="Home91_1" originalIdInSource="911" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99320817132304" lon="4.086096282972339"/>
         <asset xsi:type="esdl:EConnection" id="f86bcfb0-7fca-4155-8eb1-ce977894838c" name="ConnectionHome91_1" originalIdInSource="911" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="450505f6-d553-40d4-b46f-01b1551edb39" name="In" connectedTo="f3801f46-d2ae-4975-b306-f5eb9e799ee8"/>
-          <port xsi:type="esdl:OutPort" id="fc615f73-169c-4033-b4e0-e72f1519cf2d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="9343c397-5f4b-4a92-a241-04ca51abc2d2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a7d66951-85d3-4083-b75a-833e3aca2d4a" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fc615f73-169c-4033-b4e0-e72f1519cf2d" name="OutPh1" connectedTo="15429699-5939-4666-bc84-8acaec96f79b"/>
+          <port xsi:type="esdl:OutPort" id="9343c397-5f4b-4a92-a241-04ca51abc2d2" name="OutPh2" connectedTo="1bec2204-7409-4bd8-b746-67c0152cb428"/>
+          <port xsi:type="esdl:OutPort" id="a7d66951-85d3-4083-b75a-833e3aca2d4a" name="OutPh3" connectedTo="969d9af7-8bc6-4c2a-8ab4-12dd449b4aec"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e7de9528-db7e-464a-b6a6-c23432f4a355" name="PhasegridHome91_1_Ph1" originalIdInSource="911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="15429699-5939-4666-bc84-8acaec96f79b" name="In"/>
+          <port xsi:type="esdl:InPort" id="15429699-5939-4666-bc84-8acaec96f79b" name="In" connectedTo="fc615f73-169c-4033-b4e0-e72f1519cf2d"/>
           <port xsi:type="esdl:OutPort" id="ce5b9936-71c5-4e60-b819-a99618e3e7b7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f91e1e6c-728f-4281-aa1f-a313d1ea2afd" name="PhasegridHome91_1_Ph2" originalIdInSource="911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1bec2204-7409-4bd8-b746-67c0152cb428" name="In"/>
+          <port xsi:type="esdl:InPort" id="1bec2204-7409-4bd8-b746-67c0152cb428" name="In" connectedTo="9343c397-5f4b-4a92-a241-04ca51abc2d2"/>
           <port xsi:type="esdl:OutPort" id="5b0eca4e-6bf2-4fc0-959d-46e2de40eb8f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cca28c91-7b69-4472-ae5f-b0c0d6742f1d" name="PhasegridHome91_1_Ph3" originalIdInSource="911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="969d9af7-8bc6-4c2a-8ab4-12dd449b4aec" name="In"/>
+          <port xsi:type="esdl:InPort" id="969d9af7-8bc6-4c2a-8ab4-12dd449b4aec" name="In" connectedTo="a7d66951-85d3-4083-b75a-833e3aca2d4a"/>
           <port xsi:type="esdl:OutPort" id="4f797199-6555-4c63-925b-8983d3921d6a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="60958aea-15fe-49bd-84a5-62617a60a516" name="CableHome91_1" originalIdInSource="911" assetType="4x10Cu_as10__VO_YMvK_asmb" length="14.0">
         <port xsi:type="esdl:InPort" id="2f58f854-3260-4553-908b-f1b5527ffdfd" name="In" connectedTo="cc3f2a84-a5c8-45c6-b240-af3212eac846"/>
@@ -4938,30 +4962,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99320817132304" lon="4.086096282972339"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6f2b1a94-bc12-46cb-92d2-0d2985d3431f" name="Home92_1" originalIdInSource="921" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="6f2b1a94-bc12-46cb-92d2-0d2985d3431f" name="Home92_1" originalIdInSource="921" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992709486811215" lon="4.057570668445983"/>
         <asset xsi:type="esdl:EConnection" id="fb7f4d3a-5fa2-4e6c-af83-cdfd7599d7af" name="ConnectionHome92_1" originalIdInSource="921" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ed6e9d43-cc91-413a-927a-d461f3d69bce" name="In" connectedTo="0ef0570f-913f-4bd7-adb1-0eb0dae1cab3"/>
-          <port xsi:type="esdl:OutPort" id="a1567f60-8f1b-47b9-bfb2-8f7103881ca2" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3d26728f-9093-4aef-87f2-20f6bada807f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="5322247b-c5e4-46e8-8d49-b73ba3739c87" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a1567f60-8f1b-47b9-bfb2-8f7103881ca2" name="OutPh1" connectedTo="d08de628-c3a7-4488-895e-116ec112e788"/>
+          <port xsi:type="esdl:OutPort" id="3d26728f-9093-4aef-87f2-20f6bada807f" name="OutPh2" connectedTo="e01acc2e-aaca-41ca-b026-58139756529c"/>
+          <port xsi:type="esdl:OutPort" id="5322247b-c5e4-46e8-8d49-b73ba3739c87" name="OutPh3" connectedTo="e06ec9dd-ae04-45b2-b934-0c4fc27481db"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="54673267-aa2f-465b-bde7-a7536e6fe38e" name="PhasegridHome92_1_Ph1" originalIdInSource="921">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d08de628-c3a7-4488-895e-116ec112e788" name="In"/>
+          <port xsi:type="esdl:InPort" id="d08de628-c3a7-4488-895e-116ec112e788" name="In" connectedTo="a1567f60-8f1b-47b9-bfb2-8f7103881ca2"/>
           <port xsi:type="esdl:OutPort" id="dd4334fe-2844-48fa-8b14-ad3519a1958b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9ec0f366-0030-402a-acf1-3e28ad922387" name="PhasegridHome92_1_Ph2" originalIdInSource="921">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e01acc2e-aaca-41ca-b026-58139756529c" name="In"/>
+          <port xsi:type="esdl:InPort" id="e01acc2e-aaca-41ca-b026-58139756529c" name="In" connectedTo="3d26728f-9093-4aef-87f2-20f6bada807f"/>
           <port xsi:type="esdl:OutPort" id="450f8a7e-1e17-4894-b78b-adfc18f7103e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f654494-0cea-4b74-9aff-9a5411748d63" name="PhasegridHome92_1_Ph3" originalIdInSource="921">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e06ec9dd-ae04-45b2-b934-0c4fc27481db" name="In"/>
+          <port xsi:type="esdl:InPort" id="e06ec9dd-ae04-45b2-b934-0c4fc27481db" name="In" connectedTo="5322247b-c5e4-46e8-8d49-b73ba3739c87"/>
           <port xsi:type="esdl:OutPort" id="515b46b4-a9d0-41c9-bbab-33816bde82f1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="478eb6af-5502-45da-81b5-8a34b1b7c714" name="CableHome92_1" originalIdInSource="921" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.6">
         <port xsi:type="esdl:InPort" id="8d526124-8564-49c8-a56d-2ce27fb0d518" name="In" connectedTo="adbf3be0-182f-4234-849e-4391b85bb502"/>
@@ -4971,30 +4996,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992709486811215" lon="4.057570668445983"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="74f08a03-f889-48c4-98fa-abc7aa86606a" name="Home93_1" originalIdInSource="931" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="74f08a03-f889-48c4-98fa-abc7aa86606a" name="Home93_1" originalIdInSource="931" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_B" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992709486811215" lon="4.057570668445983"/>
         <asset xsi:type="esdl:EConnection" id="27201222-d109-450c-8e85-a057638250e7" name="ConnectionHome93_1" originalIdInSource="931" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9cd7fd70-33a1-482f-8172-56625bd50df0" name="In" connectedTo="e6ea5c02-b429-421c-bc08-5231c67b2b8a"/>
-          <port xsi:type="esdl:OutPort" id="9e73f249-5298-429c-9029-5b25f335ff5a" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3f285db4-bbdf-4194-92c7-608470fb4f81" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6ecc25ec-49ae-450c-b214-eaeaba86680c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="9e73f249-5298-429c-9029-5b25f335ff5a" name="OutPh1" connectedTo="754c918a-11a6-4351-abe4-635b45390a01"/>
+          <port xsi:type="esdl:OutPort" id="3f285db4-bbdf-4194-92c7-608470fb4f81" name="OutPh2" connectedTo="76e7de04-0842-4dc6-962c-3013687b68f5"/>
+          <port xsi:type="esdl:OutPort" id="6ecc25ec-49ae-450c-b214-eaeaba86680c" name="OutPh3" connectedTo="03c6c6b9-608c-4edc-a9b5-1d1353c19007"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d5bde6dc-872c-4070-b512-478e5e1ca3dd" name="PhasegridHome93_1_Ph1" originalIdInSource="931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="754c918a-11a6-4351-abe4-635b45390a01" name="In"/>
+          <port xsi:type="esdl:InPort" id="754c918a-11a6-4351-abe4-635b45390a01" name="In" connectedTo="9e73f249-5298-429c-9029-5b25f335ff5a"/>
           <port xsi:type="esdl:OutPort" id="03790205-7073-49aa-9ecd-4d59b831b079" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8910c719-836a-497b-a261-7c80a6f61f18" name="PhasegridHome93_1_Ph2" originalIdInSource="931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="76e7de04-0842-4dc6-962c-3013687b68f5" name="In"/>
+          <port xsi:type="esdl:InPort" id="76e7de04-0842-4dc6-962c-3013687b68f5" name="In" connectedTo="3f285db4-bbdf-4194-92c7-608470fb4f81"/>
           <port xsi:type="esdl:OutPort" id="bfa21956-0e07-4665-8d13-09f13e6fae08" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8a3e2dde-d036-4c36-bd82-219144ea88bc" name="PhasegridHome93_1_Ph3" originalIdInSource="931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="03c6c6b9-608c-4edc-a9b5-1d1353c19007" name="In"/>
+          <port xsi:type="esdl:InPort" id="03c6c6b9-608c-4edc-a9b5-1d1353c19007" name="In" connectedTo="6ecc25ec-49ae-450c-b214-eaeaba86680c"/>
           <port xsi:type="esdl:OutPort" id="c41266a7-f68c-4db8-ab0b-44cbb258a5b5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b1a16a7a-fedb-427f-9a64-2ef8fc8fec8b" name="CableHome93_1" originalIdInSource="931" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.4">
         <port xsi:type="esdl:InPort" id="d168ab3b-d050-4bed-9040-7a4c4b8d8bf3" name="In" connectedTo="d36741a8-30c7-40b1-a7bb-4e5ec39437bd"/>
@@ -5004,30 +5030,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992709486811215" lon="4.057570668445983"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bbe92e7b-7a5b-4e70-bf2e-6f4a1494191b" name="Home95_1" originalIdInSource="951" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="bbe92e7b-7a5b-4e70-bf2e-6f4a1494191b" name="Home95_1" originalIdInSource="951" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99320817132304" lon="4.086096282972339"/>
         <asset xsi:type="esdl:EConnection" id="aec88ce8-954c-4e18-9ae8-a400b35f4254" name="ConnectionHome95_1" originalIdInSource="951" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2fdbc4d1-4638-4102-8e3a-b30466b0d86d" name="In" connectedTo="2505681e-fb82-4ec3-94d5-917e14592fae"/>
-          <port xsi:type="esdl:OutPort" id="e8895896-62b7-4121-b0b3-de18e4cdff5f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f665dc34-c279-4d57-b2b2-693f38adbb14" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e6ef5569-3d41-41dd-92ea-b438a7749821" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e8895896-62b7-4121-b0b3-de18e4cdff5f" name="OutPh1" connectedTo="da89c478-da36-4a15-94a6-58b2e49b9f25"/>
+          <port xsi:type="esdl:OutPort" id="f665dc34-c279-4d57-b2b2-693f38adbb14" name="OutPh2" connectedTo="e569ba55-f21c-4640-b218-f3bc994e72d0"/>
+          <port xsi:type="esdl:OutPort" id="e6ef5569-3d41-41dd-92ea-b438a7749821" name="OutPh3" connectedTo="86a88546-2bc0-4ded-beff-42f18b99c6ea"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="57e81c41-a6fe-4e73-b921-50791c10ddaa" name="PhasegridHome95_1_Ph1" originalIdInSource="951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="da89c478-da36-4a15-94a6-58b2e49b9f25" name="In"/>
+          <port xsi:type="esdl:InPort" id="da89c478-da36-4a15-94a6-58b2e49b9f25" name="In" connectedTo="e8895896-62b7-4121-b0b3-de18e4cdff5f"/>
           <port xsi:type="esdl:OutPort" id="26c60411-8aef-492b-ae2f-51a64610f159" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1f56b0fc-3936-4598-9d1d-e24d9c3dee3b" name="PhasegridHome95_1_Ph2" originalIdInSource="951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e569ba55-f21c-4640-b218-f3bc994e72d0" name="In"/>
+          <port xsi:type="esdl:InPort" id="e569ba55-f21c-4640-b218-f3bc994e72d0" name="In" connectedTo="f665dc34-c279-4d57-b2b2-693f38adbb14"/>
           <port xsi:type="esdl:OutPort" id="835ad976-27f6-45a0-adf5-6168adb18d18" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="df6219bf-60d9-467a-b04b-222b68256bc7" name="PhasegridHome95_1_Ph3" originalIdInSource="951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="86a88546-2bc0-4ded-beff-42f18b99c6ea" name="In"/>
+          <port xsi:type="esdl:InPort" id="86a88546-2bc0-4ded-beff-42f18b99c6ea" name="In" connectedTo="e6ef5569-3d41-41dd-92ea-b438a7749821"/>
           <port xsi:type="esdl:OutPort" id="e629ccc6-cb17-48e0-9e36-0a0b28177d7f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3c8c4919-d4c7-441c-b782-87b1ab6234ff" name="CableHome95_1" originalIdInSource="951" assetType="4x10Cu_as10__VO_YMvK_asmb" length="14.0">
         <port xsi:type="esdl:InPort" id="811ab358-a0dc-4809-bade-a02b52fd4092" name="In" connectedTo="b7046e2a-8979-41c0-9353-1ce9efd60ab4"/>
@@ -5037,30 +5064,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99320817132304" lon="4.086096282972339"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a4cd8d66-52f0-42ed-9543-417ae7e55d80" name="Home99_1" originalIdInSource="991" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="a4cd8d66-52f0-42ed-9543-417ae7e55d80" name="Home99_1" originalIdInSource="991" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9872085819911" lon="4.032400146358162"/>
         <asset xsi:type="esdl:EConnection" id="1ad2a3d7-c240-4f56-a535-08c83c012919" name="ConnectionHome99_1" originalIdInSource="991" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="21aab575-faec-473f-8e85-c3edd2906f82" name="In" connectedTo="74ffe993-7ad0-4b0d-891e-6d2038968732"/>
-          <port xsi:type="esdl:OutPort" id="77f923b3-d5c8-4d9c-9d70-f27439f80eb7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="059733f7-b60e-4d94-8058-50618ae4b8db" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="fbb32a06-195e-4ea9-b042-68b55654e253" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="77f923b3-d5c8-4d9c-9d70-f27439f80eb7" name="OutPh1" connectedTo="98eb2d28-98ac-4fb0-be6b-25b3e50f9b5c"/>
+          <port xsi:type="esdl:OutPort" id="059733f7-b60e-4d94-8058-50618ae4b8db" name="OutPh2" connectedTo="125d78da-7083-4912-acfd-8c363008c559"/>
+          <port xsi:type="esdl:OutPort" id="fbb32a06-195e-4ea9-b042-68b55654e253" name="OutPh3" connectedTo="df33df0e-8f88-4813-8a31-f4cfc1190864"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a31860eb-05ed-4639-b2cb-5f86abae9f5f" name="PhasegridHome99_1_Ph1" originalIdInSource="991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="98eb2d28-98ac-4fb0-be6b-25b3e50f9b5c" name="In"/>
+          <port xsi:type="esdl:InPort" id="98eb2d28-98ac-4fb0-be6b-25b3e50f9b5c" name="In" connectedTo="77f923b3-d5c8-4d9c-9d70-f27439f80eb7"/>
           <port xsi:type="esdl:OutPort" id="e11d2b0c-33b9-496b-8717-f1c117c43327" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a7ef5496-3468-4547-b183-961ab220a85a" name="PhasegridHome99_1_Ph2" originalIdInSource="991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="125d78da-7083-4912-acfd-8c363008c559" name="In"/>
+          <port xsi:type="esdl:InPort" id="125d78da-7083-4912-acfd-8c363008c559" name="In" connectedTo="059733f7-b60e-4d94-8058-50618ae4b8db"/>
           <port xsi:type="esdl:OutPort" id="2c07689f-8e96-4970-ada2-01dd30146f0c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7b88703d-9451-497c-a76a-3f50db022198" name="PhasegridHome99_1_Ph3" originalIdInSource="991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="df33df0e-8f88-4813-8a31-f4cfc1190864" name="In"/>
+          <port xsi:type="esdl:InPort" id="df33df0e-8f88-4813-8a31-f4cfc1190864" name="In" connectedTo="fbb32a06-195e-4ea9-b042-68b55654e253"/>
           <port xsi:type="esdl:OutPort" id="a164d1b7-5055-450f-9422-cdba087155ea" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e8ec1cd5-5164-4dbb-9857-40bf182b0111" name="CableHome99_1" originalIdInSource="991" assetType="4x10Cu_as10__VG_YMVK_asmb" length="1.1">
         <port xsi:type="esdl:InPort" id="32d27956-1161-447f-b196-7367974cfb2b" name="In" connectedTo="6b61acbe-6540-487a-935f-25de45f1c5f3"/>
@@ -5070,30 +5098,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9872085819911" lon="4.032400146358162"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9b73dca3-a42b-4e8e-a523-5dcf7a4ed8fa" name="Home102_1" originalIdInSource="1021" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="9b73dca3-a42b-4e8e-a523-5dcf7a4ed8fa" name="Home102_1" originalIdInSource="1021" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99655112276953" lon="4.047554197901023"/>
         <asset xsi:type="esdl:EConnection" id="2c91343e-7e27-4dae-914b-67568108b3d6" name="ConnectionHome102_1" originalIdInSource="1021" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d231d61a-7952-4a10-9432-efb517c5c60f" name="In" connectedTo="415f205d-17a9-404f-96ed-5779a8fa8e20"/>
-          <port xsi:type="esdl:OutPort" id="565b5248-acd8-4cdf-9711-1baadc3c7d7d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="4dcdf837-f148-42bd-ac54-5ce7edf3f968" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a90ad9dc-7196-489f-ac8c-a049e132100e" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="565b5248-acd8-4cdf-9711-1baadc3c7d7d" name="OutPh1" connectedTo="0f418193-e06e-410d-a963-30dd632609b7"/>
+          <port xsi:type="esdl:OutPort" id="4dcdf837-f148-42bd-ac54-5ce7edf3f968" name="OutPh2" connectedTo="c5613505-4a4c-4ab6-8273-0de3a00f3bc1"/>
+          <port xsi:type="esdl:OutPort" id="a90ad9dc-7196-489f-ac8c-a049e132100e" name="OutPh3" connectedTo="adfcb328-8c7e-4053-9d62-85a2d12a1e7b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="07c5297e-b7bc-48cf-a26b-447a2f23d181" name="PhasegridHome102_1_Ph1" originalIdInSource="1021">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0f418193-e06e-410d-a963-30dd632609b7" name="In"/>
+          <port xsi:type="esdl:InPort" id="0f418193-e06e-410d-a963-30dd632609b7" name="In" connectedTo="565b5248-acd8-4cdf-9711-1baadc3c7d7d"/>
           <port xsi:type="esdl:OutPort" id="1fde514e-73f1-46d7-9ae5-3f7c62e647db" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fdd25c23-a8d7-4d13-ad56-c6779e5c6128" name="PhasegridHome102_1_Ph2" originalIdInSource="1021">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c5613505-4a4c-4ab6-8273-0de3a00f3bc1" name="In"/>
+          <port xsi:type="esdl:InPort" id="c5613505-4a4c-4ab6-8273-0de3a00f3bc1" name="In" connectedTo="4dcdf837-f148-42bd-ac54-5ce7edf3f968"/>
           <port xsi:type="esdl:OutPort" id="fab6111e-371c-4b1f-81da-2e8cf5e0ade4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dd8c7416-6a63-4938-bcfd-9078f4e6b90f" name="PhasegridHome102_1_Ph3" originalIdInSource="1021">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="adfcb328-8c7e-4053-9d62-85a2d12a1e7b" name="In"/>
+          <port xsi:type="esdl:InPort" id="adfcb328-8c7e-4053-9d62-85a2d12a1e7b" name="In" connectedTo="a90ad9dc-7196-489f-ac8c-a049e132100e"/>
           <port xsi:type="esdl:OutPort" id="7fadcbb3-7fab-4d33-9cee-31e6c758daa6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2c95dc53-1012-461a-8b44-154d8036e629" name="CableHome102_1" originalIdInSource="1021" assetType="4x10Cu_as10__VO_YMvK_asmb" length="3.9">
         <port xsi:type="esdl:InPort" id="6656f3bb-954d-4644-bd20-9e685f1d898d" name="In" connectedTo="6ede6cac-d0bc-417e-a688-9adf1f7564f6"/>
@@ -5103,30 +5132,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99655112276953" lon="4.047554197901023"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7e11a131-5f64-4a97-9a12-722ef9312f67" name="Home105_1" originalIdInSource="1051" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="7e11a131-5f64-4a97-9a12-722ef9312f67" name="Home105_1" originalIdInSource="1051" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98993120154408" lon="4.082405675407113"/>
         <asset xsi:type="esdl:EConnection" id="e86420fd-388a-4e3a-94f2-64f1fecee713" name="ConnectionHome105_1" originalIdInSource="1051" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f45ee37d-9a7d-4861-a743-4cfc01d9be41" name="In" connectedTo="187838eb-ceac-454b-94a6-d8bc13a1a104"/>
-          <port xsi:type="esdl:OutPort" id="12b98c3d-890e-46a6-8087-464eff64b3e8" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="38bc74ec-3c33-4cf2-86b1-2561ddb8e6a3" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3da7aa95-61e3-4748-a7cc-f77ecaf8005b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="12b98c3d-890e-46a6-8087-464eff64b3e8" name="OutPh1" connectedTo="362d0c40-c26c-4da9-9aa6-e208c97ad9e3"/>
+          <port xsi:type="esdl:OutPort" id="38bc74ec-3c33-4cf2-86b1-2561ddb8e6a3" name="OutPh2" connectedTo="ec85854f-1c3e-4a1f-9f98-7634918efaa8"/>
+          <port xsi:type="esdl:OutPort" id="3da7aa95-61e3-4748-a7cc-f77ecaf8005b" name="OutPh3" connectedTo="b2c0a487-41c0-4a81-8109-0881d11e7c6f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="442e482c-9cf6-43c4-b0cb-2e85fd6c09aa" name="PhasegridHome105_1_Ph1" originalIdInSource="1051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="362d0c40-c26c-4da9-9aa6-e208c97ad9e3" name="In"/>
+          <port xsi:type="esdl:InPort" id="362d0c40-c26c-4da9-9aa6-e208c97ad9e3" name="In" connectedTo="12b98c3d-890e-46a6-8087-464eff64b3e8"/>
           <port xsi:type="esdl:OutPort" id="bb4a83c2-594f-4d48-9d36-a083f699f778" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9771ade3-d493-418f-860e-012bfce50b64" name="PhasegridHome105_1_Ph2" originalIdInSource="1051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec85854f-1c3e-4a1f-9f98-7634918efaa8" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec85854f-1c3e-4a1f-9f98-7634918efaa8" name="In" connectedTo="38bc74ec-3c33-4cf2-86b1-2561ddb8e6a3"/>
           <port xsi:type="esdl:OutPort" id="f8216ae3-7080-46a9-9459-1e8c80b59449" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="31d76f02-7faa-4e31-8608-3853a80b96e9" name="PhasegridHome105_1_Ph3" originalIdInSource="1051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b2c0a487-41c0-4a81-8109-0881d11e7c6f" name="In"/>
+          <port xsi:type="esdl:InPort" id="b2c0a487-41c0-4a81-8109-0881d11e7c6f" name="In" connectedTo="3da7aa95-61e3-4748-a7cc-f77ecaf8005b"/>
           <port xsi:type="esdl:OutPort" id="ab56249a-0ac8-4577-9cb7-4a0420d39a77" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d4b09c96-f807-44fc-ba06-01288345a4fa" name="CableHome105_1" originalIdInSource="1051" assetType="4x10Cu_as10__VG_YMVK_asmb" length="3.9">
         <port xsi:type="esdl:InPort" id="761d1c3d-0722-45be-88ce-d3885cf010b7" name="In" connectedTo="4b5a752e-44cf-46af-b6c3-5ad569e479d2"/>
@@ -5136,30 +5166,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98993120154408" lon="4.082405675407113"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="07433424-d50f-4612-adc4-8a8663687231" name="Home106_1" originalIdInSource="1061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="07433424-d50f-4612-adc4-8a8663687231" name="Home106_1" originalIdInSource="1061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98994733488539" lon="4.083861240199282"/>
         <asset xsi:type="esdl:EConnection" id="d81b7fe8-853f-4cc3-a2f9-39425af7d547" name="ConnectionHome106_1" originalIdInSource="1061" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="376ca1b0-0662-4b39-a277-06984ebf5246" name="In" connectedTo="666be850-7bdc-4a7f-8310-879e0fafe1e5"/>
-          <port xsi:type="esdl:OutPort" id="00657fd9-48d1-40b4-8c72-c7d5a16b7d2f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ffde77a5-5564-4f55-8089-3b54e21c225b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="31ccc285-3239-44b6-be0e-70d21a400632" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="00657fd9-48d1-40b4-8c72-c7d5a16b7d2f" name="OutPh1" connectedTo="102dbfe2-4c8a-410a-8b8a-929c267aa377"/>
+          <port xsi:type="esdl:OutPort" id="ffde77a5-5564-4f55-8089-3b54e21c225b" name="OutPh2" connectedTo="a7085879-1bcc-4e67-9632-2642bff4c500"/>
+          <port xsi:type="esdl:OutPort" id="31ccc285-3239-44b6-be0e-70d21a400632" name="OutPh3" connectedTo="c1d87d60-c4ee-4a1e-8f6f-c22ece1dd4b0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="320d9730-92a9-4379-9adb-5488e2fce774" name="PhasegridHome106_1_Ph1" originalIdInSource="1061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="102dbfe2-4c8a-410a-8b8a-929c267aa377" name="In"/>
+          <port xsi:type="esdl:InPort" id="102dbfe2-4c8a-410a-8b8a-929c267aa377" name="In" connectedTo="00657fd9-48d1-40b4-8c72-c7d5a16b7d2f"/>
           <port xsi:type="esdl:OutPort" id="20479626-04dc-4754-b57b-7a2f901dd5d3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6659f995-9a48-4904-aeb0-453c465adaa4" name="PhasegridHome106_1_Ph2" originalIdInSource="1061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a7085879-1bcc-4e67-9632-2642bff4c500" name="In"/>
+          <port xsi:type="esdl:InPort" id="a7085879-1bcc-4e67-9632-2642bff4c500" name="In" connectedTo="ffde77a5-5564-4f55-8089-3b54e21c225b"/>
           <port xsi:type="esdl:OutPort" id="c256dfbb-28d6-4941-8566-ca4fba90f280" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3dbe81f0-5c7e-4e6e-a940-c4c118d856ee" name="PhasegridHome106_1_Ph3" originalIdInSource="1061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c1d87d60-c4ee-4a1e-8f6f-c22ece1dd4b0" name="In"/>
+          <port xsi:type="esdl:InPort" id="c1d87d60-c4ee-4a1e-8f6f-c22ece1dd4b0" name="In" connectedTo="31ccc285-3239-44b6-be0e-70d21a400632"/>
           <port xsi:type="esdl:OutPort" id="5cb1b650-b750-455b-a3de-facd127854a6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f5a5371f-8e07-42ae-b237-6d096ee119b5" name="CableHome106_1" originalIdInSource="1061" assetType="4x10Cu_as10__VG_YMVK_asmb" length="4.0">
         <port xsi:type="esdl:InPort" id="13ff2203-9b94-4428-8408-8117391ec059" name="In" connectedTo="dfd6c785-81e2-48cf-9111-08fabb343dde"/>
@@ -5169,30 +5200,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98994733488539" lon="4.083861240199282"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0771885a-9acf-400f-b761-86dcad458813" name="Home107_1" originalIdInSource="1071" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0771885a-9acf-400f-b761-86dcad458813" name="Home107_1" originalIdInSource="1071" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_C" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98993442965274" lon="4.082696788269004"/>
         <asset xsi:type="esdl:EConnection" id="e118e0ac-637c-49fc-a7cc-91c25abd1be1" name="ConnectionHome107_1" originalIdInSource="1071" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="746dfa20-61c5-42fa-a3f6-f9061f131193" name="In" connectedTo="0d9130d1-cb03-4372-9f91-852fdcd5085d"/>
-          <port xsi:type="esdl:OutPort" id="2fd0a037-a2f2-4eb3-a3cd-913d7b9df1a6" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5cda25be-5f5f-405b-969a-4e5dbe5098a8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0c174177-4fca-4d2c-849e-d974dc69b322" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2fd0a037-a2f2-4eb3-a3cd-913d7b9df1a6" name="OutPh1" connectedTo="b93a57cd-5f9c-4654-995c-a7dc02fc70d3"/>
+          <port xsi:type="esdl:OutPort" id="5cda25be-5f5f-405b-969a-4e5dbe5098a8" name="OutPh2" connectedTo="26e53354-00e9-496b-8be2-3c764eda47fc"/>
+          <port xsi:type="esdl:OutPort" id="0c174177-4fca-4d2c-849e-d974dc69b322" name="OutPh3" connectedTo="0d4bc74c-83b1-49e4-b26d-fbf03835dd72"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8c923555-e10f-4e99-b21d-16409ac60a58" name="PhasegridHome107_1_Ph1" originalIdInSource="1071">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b93a57cd-5f9c-4654-995c-a7dc02fc70d3" name="In"/>
+          <port xsi:type="esdl:InPort" id="b93a57cd-5f9c-4654-995c-a7dc02fc70d3" name="In" connectedTo="2fd0a037-a2f2-4eb3-a3cd-913d7b9df1a6"/>
           <port xsi:type="esdl:OutPort" id="36e7805c-8cbd-42e3-9524-d6f388bea6ed" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1118cbf4-418a-4d93-ae33-83ff3c20f886" name="PhasegridHome107_1_Ph2" originalIdInSource="1071">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="26e53354-00e9-496b-8be2-3c764eda47fc" name="In"/>
+          <port xsi:type="esdl:InPort" id="26e53354-00e9-496b-8be2-3c764eda47fc" name="In" connectedTo="5cda25be-5f5f-405b-969a-4e5dbe5098a8"/>
           <port xsi:type="esdl:OutPort" id="c29d6ce3-a2c2-452f-b03f-a6eeb1a5521e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="35137147-260b-4223-9577-2d7b544f36d9" name="PhasegridHome107_1_Ph3" originalIdInSource="1071">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0d4bc74c-83b1-49e4-b26d-fbf03835dd72" name="In"/>
+          <port xsi:type="esdl:InPort" id="0d4bc74c-83b1-49e4-b26d-fbf03835dd72" name="In" connectedTo="0c174177-4fca-4d2c-849e-d974dc69b322"/>
           <port xsi:type="esdl:OutPort" id="37ede4ae-9b10-477c-bbc0-01f8db9b7feb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.6" height="9.0" windowArea="23.39" doorArea="7.0" flatRoofArea="17.33" slantedRoofArea="58.82"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="30af080f-909d-4eaa-9547-3b80dd3a12d5" name="CableHome107_1" originalIdInSource="1071" assetType="4x10Cu_as10__VG_YMVK_asmb" length="3.9">
         <port xsi:type="esdl:InPort" id="8d172ba3-5310-4005-90d2-dcdd32cfabf9" name="In" connectedTo="c89079cd-cfe6-43e9-9a43-304d5887bb97"/>
@@ -5202,30 +5234,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98993442965274" lon="4.082696788269004"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2bccec2c-1b8b-4768-a4d5-c851e17b5aad" name="Home109_1" originalIdInSource="1091" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2bccec2c-1b8b-4768-a4d5-c851e17b5aad" name="Home109_1" originalIdInSource="1091" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98994733488539" lon="4.083861240199282"/>
         <asset xsi:type="esdl:EConnection" id="ebad4b99-ce92-4315-919c-9745f6ccac2c" name="ConnectionHome109_1" originalIdInSource="1091" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5ccc7a5b-1881-42ed-b0fd-12341792c099" name="In" connectedTo="922ac35e-bb19-4054-93b1-a7594b903c4f"/>
-          <port xsi:type="esdl:OutPort" id="e70cbf17-9290-47f4-82b2-2de3f9c6e345" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a23bd044-096d-4133-be05-c5da1547957d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="66f0acdf-89b8-4e04-b67c-61bb8e8d624f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e70cbf17-9290-47f4-82b2-2de3f9c6e345" name="OutPh1" connectedTo="efdcdab7-c488-4f23-a4d0-de760dc652d6"/>
+          <port xsi:type="esdl:OutPort" id="a23bd044-096d-4133-be05-c5da1547957d" name="OutPh2" connectedTo="7a03b414-5923-4a1e-9dff-a0e4495a1a75"/>
+          <port xsi:type="esdl:OutPort" id="66f0acdf-89b8-4e04-b67c-61bb8e8d624f" name="OutPh3" connectedTo="ca6beee4-52b9-4225-99eb-700ac609d531"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6124382e-3266-4b2a-89e7-14ca91a804b6" name="PhasegridHome109_1_Ph1" originalIdInSource="1091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="efdcdab7-c488-4f23-a4d0-de760dc652d6" name="In"/>
+          <port xsi:type="esdl:InPort" id="efdcdab7-c488-4f23-a4d0-de760dc652d6" name="In" connectedTo="e70cbf17-9290-47f4-82b2-2de3f9c6e345"/>
           <port xsi:type="esdl:OutPort" id="4034108d-9116-4c30-892c-0c0703860e1c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4be815bb-26a0-422c-9d14-6b5f319fc0a5" name="PhasegridHome109_1_Ph2" originalIdInSource="1091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7a03b414-5923-4a1e-9dff-a0e4495a1a75" name="In"/>
+          <port xsi:type="esdl:InPort" id="7a03b414-5923-4a1e-9dff-a0e4495a1a75" name="In" connectedTo="a23bd044-096d-4133-be05-c5da1547957d"/>
           <port xsi:type="esdl:OutPort" id="703ca539-f59b-4fe0-a041-b429f391c969" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dc75aa00-962e-43bb-8608-81afb61b9be0" name="PhasegridHome109_1_Ph3" originalIdInSource="1091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ca6beee4-52b9-4225-99eb-700ac609d531" name="In"/>
+          <port xsi:type="esdl:InPort" id="ca6beee4-52b9-4225-99eb-700ac609d531" name="In" connectedTo="66f0acdf-89b8-4e04-b67c-61bb8e8d624f"/>
           <port xsi:type="esdl:OutPort" id="fe1a0267-254c-4f36-967a-e760bb0c6bb1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ccda7ab7-2b58-4ebf-86cd-72f3e18d3c82" name="CableHome109_1" originalIdInSource="1091" assetType="4x10Cu_as10__VG_YMVK_asmb" length="4.0">
         <port xsi:type="esdl:InPort" id="f1ebb8a5-8fe6-49f1-83fb-10db19e41b01" name="In" connectedTo="28295191-86a5-452f-b5aa-d7df573084f3"/>
@@ -5235,30 +5268,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98994733488539" lon="4.083861240199282"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="673e70a7-32a9-42d5-bdb1-1fc8bba4cb3b" name="Home110_1" originalIdInSource="1101" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="673e70a7-32a9-42d5-bdb1-1fc8bba4cb3b" name="Home110_1" originalIdInSource="1101" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99468984422906" lon="4.073821299911845"/>
         <asset xsi:type="esdl:EConnection" id="24daeadd-f618-499c-8bb8-aa3fc2b1f927" name="ConnectionHome110_1" originalIdInSource="1101" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9f7748e3-48ad-449b-b1d7-c1d4e737a29c" name="In" connectedTo="a1f620f4-932d-4547-93e4-ae279aa7ee7a"/>
-          <port xsi:type="esdl:OutPort" id="b42c957b-f748-4449-b78e-b330288d4902" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="cf2046aa-c34a-4d67-a67b-b74544ffe426" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e5ea3d6e-f8a7-43fc-bb7f-1a51f41eba2c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="b42c957b-f748-4449-b78e-b330288d4902" name="OutPh1" connectedTo="489a7eb5-64cc-4ad0-83c8-086654e34e51"/>
+          <port xsi:type="esdl:OutPort" id="cf2046aa-c34a-4d67-a67b-b74544ffe426" name="OutPh2" connectedTo="a1efe530-f32f-47aa-80fc-3daddbdf3ca4"/>
+          <port xsi:type="esdl:OutPort" id="e5ea3d6e-f8a7-43fc-bb7f-1a51f41eba2c" name="OutPh3" connectedTo="74482271-b768-4f95-bdf8-b4291ff429c6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="03b30438-92d5-4d24-83b3-3742aaf0e657" name="PhasegridHome110_1_Ph1" originalIdInSource="1101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="489a7eb5-64cc-4ad0-83c8-086654e34e51" name="In"/>
+          <port xsi:type="esdl:InPort" id="489a7eb5-64cc-4ad0-83c8-086654e34e51" name="In" connectedTo="b42c957b-f748-4449-b78e-b330288d4902"/>
           <port xsi:type="esdl:OutPort" id="cb310282-ca34-47c8-855e-093e199d91d7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0e0a3b68-b882-4613-82c1-7aede162141f" name="PhasegridHome110_1_Ph2" originalIdInSource="1101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a1efe530-f32f-47aa-80fc-3daddbdf3ca4" name="In"/>
+          <port xsi:type="esdl:InPort" id="a1efe530-f32f-47aa-80fc-3daddbdf3ca4" name="In" connectedTo="cf2046aa-c34a-4d67-a67b-b74544ffe426"/>
           <port xsi:type="esdl:OutPort" id="c92c840f-cd02-40b4-b614-c4e6c6821fa4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="06671f12-441f-4f9c-9dde-4dc0b2344ca7" name="PhasegridHome110_1_Ph3" originalIdInSource="1101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="74482271-b768-4f95-bdf8-b4291ff429c6" name="In"/>
+          <port xsi:type="esdl:InPort" id="74482271-b768-4f95-bdf8-b4291ff429c6" name="In" connectedTo="e5ea3d6e-f8a7-43fc-bb7f-1a51f41eba2c"/>
           <port xsi:type="esdl:OutPort" id="706d9079-c395-4384-bbe0-4bd0987442fa" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e93c9b68-5415-4614-9b0b-4f5d5c701b3b" name="CableHome110_1" originalIdInSource="1101" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.3">
         <port xsi:type="esdl:InPort" id="fd3a18a9-e9aa-4093-b6ce-0e32e24a677a" name="In" connectedTo="025d01c1-09a2-41fe-804b-234822bc32a0"/>
@@ -5268,30 +5302,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99468984422906" lon="4.073821299911845"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a58b0829-54ff-49b6-83db-c5586eeb3038" name="Home112_1" originalIdInSource="1121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="a58b0829-54ff-49b6-83db-c5586eeb3038" name="Home112_1" originalIdInSource="1121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.996307367116806" lon="4.073773917518068"/>
         <asset xsi:type="esdl:EConnection" id="68ff426b-d702-432a-9217-8aaa62f897ca" name="ConnectionHome112_1" originalIdInSource="1121" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1afe26ce-ecb8-461f-8f75-126ab8d31d25" name="In" connectedTo="5bf83d1a-2471-4cac-8bd9-4e6b52e44f49"/>
-          <port xsi:type="esdl:OutPort" id="7de9743a-8569-40e1-9403-8dcbb64cdf52" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="63d67547-b761-4baf-8bb2-adde931a77ec" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d7b84e7d-6a68-4448-aa87-68cd34851bab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7de9743a-8569-40e1-9403-8dcbb64cdf52" name="OutPh1" connectedTo="721fae30-5b6e-45d9-b3c0-e7c7cb1dadca"/>
+          <port xsi:type="esdl:OutPort" id="63d67547-b761-4baf-8bb2-adde931a77ec" name="OutPh2" connectedTo="13e96c52-f8ad-4ae8-9a61-07f2d8b96851"/>
+          <port xsi:type="esdl:OutPort" id="d7b84e7d-6a68-4448-aa87-68cd34851bab" name="OutPh3" connectedTo="877150e2-c68d-47cc-93d8-575dfefcf421"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fc908b91-32fd-452b-af55-e783c391141c" name="PhasegridHome112_1_Ph1" originalIdInSource="1121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="721fae30-5b6e-45d9-b3c0-e7c7cb1dadca" name="In"/>
+          <port xsi:type="esdl:InPort" id="721fae30-5b6e-45d9-b3c0-e7c7cb1dadca" name="In" connectedTo="7de9743a-8569-40e1-9403-8dcbb64cdf52"/>
           <port xsi:type="esdl:OutPort" id="1b1d273f-b903-4ea3-8ef3-010c42452c49" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1d96a28e-a4d5-4ea0-b7d3-4bc976a79719" name="PhasegridHome112_1_Ph2" originalIdInSource="1121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="13e96c52-f8ad-4ae8-9a61-07f2d8b96851" name="In"/>
+          <port xsi:type="esdl:InPort" id="13e96c52-f8ad-4ae8-9a61-07f2d8b96851" name="In" connectedTo="63d67547-b761-4baf-8bb2-adde931a77ec"/>
           <port xsi:type="esdl:OutPort" id="bf547226-6e39-4196-b583-bccc35135cac" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="48de9ef2-3c49-4d40-b0c4-44f40ca43aef" name="PhasegridHome112_1_Ph3" originalIdInSource="1121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="877150e2-c68d-47cc-93d8-575dfefcf421" name="In"/>
+          <port xsi:type="esdl:InPort" id="877150e2-c68d-47cc-93d8-575dfefcf421" name="In" connectedTo="d7b84e7d-6a68-4448-aa87-68cd34851bab"/>
           <port xsi:type="esdl:OutPort" id="cca0c3ae-ff84-4f18-8069-fb8be15b3239" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="234bd636-770d-4456-b05d-cf3578fcef22" name="CableHome112_1" originalIdInSource="1121" assetType="4x10Cu_re_as10__YCWY_mb" length="1.6">
         <port xsi:type="esdl:InPort" id="9aa21d7f-dd99-4fdc-badc-138ac366868e" name="In" connectedTo="3df74d27-b3cf-4fab-bac8-97d35d7d1633"/>
@@ -5301,30 +5336,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.996307367116806" lon="4.073773917518068"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1185a841-0ff8-4597-96b3-e4db78077b09" name="Home113_1" originalIdInSource="1131" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="1185a841-0ff8-4597-96b3-e4db78077b09" name="Home113_1" originalIdInSource="1131" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.996307367116806" lon="4.073773917518068"/>
         <asset xsi:type="esdl:EConnection" id="9958113c-aa18-40ea-9307-5f5edf39b050" name="ConnectionHome113_1" originalIdInSource="1131" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="41eadf70-ace1-4a8a-9606-03ef8c566abe" name="In" connectedTo="e746a62e-a093-4e4d-a56d-edeaf78d6709"/>
-          <port xsi:type="esdl:OutPort" id="759c3654-308b-46b6-8d7c-cc9157b01180" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d9f374e5-fde3-453e-9f2b-7540682001d6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7cd9426f-330b-4c67-9898-18ef290542c6" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="759c3654-308b-46b6-8d7c-cc9157b01180" name="OutPh1" connectedTo="06fb4071-1c94-4248-bbe3-dd0bfea87193"/>
+          <port xsi:type="esdl:OutPort" id="d9f374e5-fde3-453e-9f2b-7540682001d6" name="OutPh2" connectedTo="2c9964e3-f348-4ffa-89a3-b6be3d50673b"/>
+          <port xsi:type="esdl:OutPort" id="7cd9426f-330b-4c67-9898-18ef290542c6" name="OutPh3" connectedTo="b9fd2e7f-3192-433b-b0d1-d3a38b20e2e5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="232bcf82-22a4-42ee-888a-795ae849e0fb" name="PhasegridHome113_1_Ph1" originalIdInSource="1131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="06fb4071-1c94-4248-bbe3-dd0bfea87193" name="In"/>
+          <port xsi:type="esdl:InPort" id="06fb4071-1c94-4248-bbe3-dd0bfea87193" name="In" connectedTo="759c3654-308b-46b6-8d7c-cc9157b01180"/>
           <port xsi:type="esdl:OutPort" id="3fd814e9-9512-4e26-884d-b50e28e58078" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0487f21e-e6d4-4bfe-9201-0e9d0a6fbfcb" name="PhasegridHome113_1_Ph2" originalIdInSource="1131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2c9964e3-f348-4ffa-89a3-b6be3d50673b" name="In"/>
+          <port xsi:type="esdl:InPort" id="2c9964e3-f348-4ffa-89a3-b6be3d50673b" name="In" connectedTo="d9f374e5-fde3-453e-9f2b-7540682001d6"/>
           <port xsi:type="esdl:OutPort" id="53ba275a-d845-43ad-af4e-6f7548d36559" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="96385ccd-800e-4f62-89ba-745da0d79a23" name="PhasegridHome113_1_Ph3" originalIdInSource="1131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b9fd2e7f-3192-433b-b0d1-d3a38b20e2e5" name="In"/>
+          <port xsi:type="esdl:InPort" id="b9fd2e7f-3192-433b-b0d1-d3a38b20e2e5" name="In" connectedTo="7cd9426f-330b-4c67-9898-18ef290542c6"/>
           <port xsi:type="esdl:OutPort" id="4353323b-51fd-4209-b37c-64cef914c821" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b306b466-0132-445a-91a4-e9361c375e75" name="CableHome113_1" originalIdInSource="1131" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="34535144-76d9-458e-b8d2-45f71fa3fc27" name="In" connectedTo="e89b9c6a-2ea2-4697-b55b-45312db85f62"/>
@@ -5334,30 +5370,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.996307367116806" lon="4.073773917518068"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bafb03c0-ed65-4b8d-9d60-47cab033e5d8" name="Home115_1" originalIdInSource="1151" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="bafb03c0-ed65-4b8d-9d60-47cab033e5d8" name="Home115_1" originalIdInSource="1151" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_G" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99702626604627" lon="4.073752857412012"/>
         <asset xsi:type="esdl:EConnection" id="66cc2c99-adb0-4d6f-8ea8-12e622c0327c" name="ConnectionHome115_1" originalIdInSource="1151" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ecae4d45-f22b-4d1f-919f-aa105204ad7e" name="In" connectedTo="5d0fa403-5bdb-48e4-9df4-3a238a5851db"/>
-          <port xsi:type="esdl:OutPort" id="7571f2ee-c52a-45db-81c2-428c60893723" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c2862a79-bd43-4ef6-917f-82dcf3f19882" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="261e06b4-54d4-40e0-b730-0d6d9b13c271" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7571f2ee-c52a-45db-81c2-428c60893723" name="OutPh1" connectedTo="3706a291-33d3-48fa-94ca-bd9dc5bf4d01"/>
+          <port xsi:type="esdl:OutPort" id="c2862a79-bd43-4ef6-917f-82dcf3f19882" name="OutPh2" connectedTo="bb591fc8-24b7-40d3-86cd-1ee97783d295"/>
+          <port xsi:type="esdl:OutPort" id="261e06b4-54d4-40e0-b730-0d6d9b13c271" name="OutPh3" connectedTo="7b38c1d8-5421-4607-8bda-6db93137e597"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ffc8209d-7950-4e27-9fe5-7d9e717ba4c6" name="PhasegridHome115_1_Ph1" originalIdInSource="1151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3706a291-33d3-48fa-94ca-bd9dc5bf4d01" name="In"/>
+          <port xsi:type="esdl:InPort" id="3706a291-33d3-48fa-94ca-bd9dc5bf4d01" name="In" connectedTo="7571f2ee-c52a-45db-81c2-428c60893723"/>
           <port xsi:type="esdl:OutPort" id="ed635e83-a0b4-4fe8-aee3-69d47ab9b3af" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d640c7d3-fa35-46be-859f-f88ecd8c0a66" name="PhasegridHome115_1_Ph2" originalIdInSource="1151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bb591fc8-24b7-40d3-86cd-1ee97783d295" name="In"/>
+          <port xsi:type="esdl:InPort" id="bb591fc8-24b7-40d3-86cd-1ee97783d295" name="In" connectedTo="c2862a79-bd43-4ef6-917f-82dcf3f19882"/>
           <port xsi:type="esdl:OutPort" id="db6f8055-3fe1-406a-8316-1d6286c22f83" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b58375ad-b668-4caf-b0fb-5e7775b9e8c3" name="PhasegridHome115_1_Ph3" originalIdInSource="1151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7b38c1d8-5421-4607-8bda-6db93137e597" name="In"/>
+          <port xsi:type="esdl:InPort" id="7b38c1d8-5421-4607-8bda-6db93137e597" name="In" connectedTo="261e06b4-54d4-40e0-b730-0d6d9b13c271"/>
           <port xsi:type="esdl:OutPort" id="3bb53554-01fd-4457-909f-dc76ac44da6b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7530bb20-d1fe-4cef-86cc-d98771ee0392" name="CableHome115_1" originalIdInSource="1151" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="5632e4a7-09a1-4129-8464-00b5c1fb23da" name="In" connectedTo="ca9eeb51-6d72-4717-8e0c-63c98e7f593e"/>
@@ -5367,30 +5404,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99702626604627" lon="4.073752857412012"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="07b7aee2-e27a-4b9f-9754-622c11517b33" name="Home116_1" originalIdInSource="1161" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="07b7aee2-e27a-4b9f-9754-622c11517b33" name="Home116_1" originalIdInSource="1161" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99738571548057" lon="4.073742327067185"/>
         <asset xsi:type="esdl:EConnection" id="3db008d9-147a-4f25-9fb9-031dca19b251" name="ConnectionHome116_1" originalIdInSource="1161" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e1aba509-27df-47f8-8284-1dc7415f3c33" name="In" connectedTo="9c43f70d-dd0f-42c0-b40d-784bf3288c0c"/>
-          <port xsi:type="esdl:OutPort" id="d7a5e3a2-c31d-40fe-9f18-922761d3b32e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="76de576d-e0c0-4f31-9402-4cf20d6fdd99" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="115bae01-3002-4749-93c1-b9784ac100ca" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d7a5e3a2-c31d-40fe-9f18-922761d3b32e" name="OutPh1" connectedTo="d725d057-e95e-4380-9b51-dbc5a730cb7e"/>
+          <port xsi:type="esdl:OutPort" id="76de576d-e0c0-4f31-9402-4cf20d6fdd99" name="OutPh2" connectedTo="2ffe5dc7-b078-40ff-b8fc-b1f8076a270e"/>
+          <port xsi:type="esdl:OutPort" id="115bae01-3002-4749-93c1-b9784ac100ca" name="OutPh3" connectedTo="24099e6e-3a19-41c2-b3ba-675fc53d9e8d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="77ed5d55-6f4a-4cf0-8d92-b4cb3e56c481" name="PhasegridHome116_1_Ph1" originalIdInSource="1161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d725d057-e95e-4380-9b51-dbc5a730cb7e" name="In"/>
+          <port xsi:type="esdl:InPort" id="d725d057-e95e-4380-9b51-dbc5a730cb7e" name="In" connectedTo="d7a5e3a2-c31d-40fe-9f18-922761d3b32e"/>
           <port xsi:type="esdl:OutPort" id="23fccded-090b-447f-8071-e86d00cc224e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e6a72149-4829-4232-b534-4ac61e0d494b" name="PhasegridHome116_1_Ph2" originalIdInSource="1161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2ffe5dc7-b078-40ff-b8fc-b1f8076a270e" name="In"/>
+          <port xsi:type="esdl:InPort" id="2ffe5dc7-b078-40ff-b8fc-b1f8076a270e" name="In" connectedTo="76de576d-e0c0-4f31-9402-4cf20d6fdd99"/>
           <port xsi:type="esdl:OutPort" id="cdf57046-3733-4848-89a3-24299f2a1a34" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="21c3633e-4a89-494e-b77b-a94139178532" name="PhasegridHome116_1_Ph3" originalIdInSource="1161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="24099e6e-3a19-41c2-b3ba-675fc53d9e8d" name="In"/>
+          <port xsi:type="esdl:InPort" id="24099e6e-3a19-41c2-b3ba-675fc53d9e8d" name="In" connectedTo="115bae01-3002-4749-93c1-b9784ac100ca"/>
           <port xsi:type="esdl:OutPort" id="2e549058-644c-4865-9215-8e6ea87795d2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4dfb81ef-e42d-4bb4-ac87-95d20102ada5" name="CableHome116_1" originalIdInSource="1161" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.6">
         <port xsi:type="esdl:InPort" id="520c1bec-85e0-4cfd-b8d0-3e52885123f5" name="In" connectedTo="1d5f20d1-4e10-4b46-81cc-2ff754410a0d"/>
@@ -5400,30 +5438,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99738571548057" lon="4.073742327067185"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="438c7b46-8068-41c4-92b8-be2eda105019" name="Home119_1" originalIdInSource="1191" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="438c7b46-8068-41c4-92b8-be2eda105019" name="Home119_1" originalIdInSource="1191" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         <asset xsi:type="esdl:EConnection" id="d0f29654-c3d9-4770-9efd-48f92aa5f283" name="ConnectionHome119_1" originalIdInSource="1191" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="b15e6cb2-04ad-4e03-b3d2-73cfc0dc261d" name="In" connectedTo="48fefe3e-cbbf-4feb-8b5a-b7b41de29436"/>
-          <port xsi:type="esdl:OutPort" id="4721ab25-43d9-4cb3-8623-1a4029be9864" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a0cc117b-e948-4e33-91e3-68621e113182" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b16b3652-3472-470b-82ba-c0d35a7bdc1b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4721ab25-43d9-4cb3-8623-1a4029be9864" name="OutPh1" connectedTo="e1534e0b-4fb8-49b9-91d7-431e65aad404"/>
+          <port xsi:type="esdl:OutPort" id="a0cc117b-e948-4e33-91e3-68621e113182" name="OutPh2" connectedTo="4b6d8a91-926c-4524-9326-44476aee703d"/>
+          <port xsi:type="esdl:OutPort" id="b16b3652-3472-470b-82ba-c0d35a7bdc1b" name="OutPh3" connectedTo="b48d7097-f2e5-4cb6-8508-a98f85f95f0f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="761745a4-4696-47c0-a3ae-b68a11f3a47e" name="PhasegridHome119_1_Ph1" originalIdInSource="1191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e1534e0b-4fb8-49b9-91d7-431e65aad404" name="In"/>
+          <port xsi:type="esdl:InPort" id="e1534e0b-4fb8-49b9-91d7-431e65aad404" name="In" connectedTo="4721ab25-43d9-4cb3-8623-1a4029be9864"/>
           <port xsi:type="esdl:OutPort" id="146b0b18-6e69-4c06-a679-c110197e7fce" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="18ff5de7-5464-4ae5-b968-07b27cf75805" name="PhasegridHome119_1_Ph2" originalIdInSource="1191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4b6d8a91-926c-4524-9326-44476aee703d" name="In"/>
+          <port xsi:type="esdl:InPort" id="4b6d8a91-926c-4524-9326-44476aee703d" name="In" connectedTo="a0cc117b-e948-4e33-91e3-68621e113182"/>
           <port xsi:type="esdl:OutPort" id="a97f5718-9718-4bdc-81fb-4672d1426359" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="677875a0-2e08-48af-bde3-15b21d83997e" name="PhasegridHome119_1_Ph3" originalIdInSource="1191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b48d7097-f2e5-4cb6-8508-a98f85f95f0f" name="In"/>
+          <port xsi:type="esdl:InPort" id="b48d7097-f2e5-4cb6-8508-a98f85f95f0f" name="In" connectedTo="b16b3652-3472-470b-82ba-c0d35a7bdc1b"/>
           <port xsi:type="esdl:OutPort" id="5351e595-7015-48ec-8502-dcbe70ba326e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d360ed75-d5ae-43e7-be54-43c082bc64b1" name="CableHome119_1" originalIdInSource="1191" assetType="4x10Cu_as10__VO_YMvK_asmb" length="7.2">
         <port xsi:type="esdl:InPort" id="7d21b920-0662-4fd1-90ce-ac0a9b9cea1b" name="In" connectedTo="93e35bb1-1b7a-4ae2-83eb-2ca86b7a2426"/>
@@ -5433,30 +5472,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00026131022364" lon="4.073658077304692"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f3a2caa5-abbc-4072-9661-f346a03f6fdf" name="Home122_1" originalIdInSource="1221" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="f3a2caa5-abbc-4072-9661-f346a03f6fdf" name="Home122_1" originalIdInSource="1221" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00314015390926" lon="4.073865012870659"/>
         <asset xsi:type="esdl:EConnection" id="ccc2d988-73c2-4fb5-a235-5c4d602ee1ff" name="ConnectionHome122_1" originalIdInSource="1221" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fc34df5c-6ec6-4245-9ae5-700212b7a447" name="In" connectedTo="cba76a05-b52f-4d13-92b9-f64c4d65dbf1"/>
-          <port xsi:type="esdl:OutPort" id="53002d2e-1013-41c6-a097-f44796c0480c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="8762d0d7-d484-4813-afd8-3a615d47f20b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="33eb503d-2461-4056-ac9f-a54dfb461a79" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="53002d2e-1013-41c6-a097-f44796c0480c" name="OutPh1" connectedTo="038f036a-71ce-4125-a67a-e6d63ae4d543"/>
+          <port xsi:type="esdl:OutPort" id="8762d0d7-d484-4813-afd8-3a615d47f20b" name="OutPh2" connectedTo="de4c0c40-d32b-4402-a993-dc78b517e6d1"/>
+          <port xsi:type="esdl:OutPort" id="33eb503d-2461-4056-ac9f-a54dfb461a79" name="OutPh3" connectedTo="e383957f-32c5-49b7-a93d-ebe9a3e77907"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c4f01e0a-c540-4d4d-89ac-6e9049aa21c1" name="PhasegridHome122_1_Ph1" originalIdInSource="1221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="038f036a-71ce-4125-a67a-e6d63ae4d543" name="In"/>
+          <port xsi:type="esdl:InPort" id="038f036a-71ce-4125-a67a-e6d63ae4d543" name="In" connectedTo="53002d2e-1013-41c6-a097-f44796c0480c"/>
           <port xsi:type="esdl:OutPort" id="f14f7616-8d0e-47da-9f0f-3ae17d8f1489" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f60a21e6-ab3c-4a9f-813a-c354ef0fdb45" name="PhasegridHome122_1_Ph2" originalIdInSource="1221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="de4c0c40-d32b-4402-a993-dc78b517e6d1" name="In"/>
+          <port xsi:type="esdl:InPort" id="de4c0c40-d32b-4402-a993-dc78b517e6d1" name="In" connectedTo="8762d0d7-d484-4813-afd8-3a615d47f20b"/>
           <port xsi:type="esdl:OutPort" id="80e624c1-1c17-4556-9d62-abe48ca84830" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dbb5e709-3bc3-4357-ab75-4514136b645f" name="PhasegridHome122_1_Ph3" originalIdInSource="1221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e383957f-32c5-49b7-a93d-ebe9a3e77907" name="In"/>
+          <port xsi:type="esdl:InPort" id="e383957f-32c5-49b7-a93d-ebe9a3e77907" name="In" connectedTo="33eb503d-2461-4056-ac9f-a54dfb461a79"/>
           <port xsi:type="esdl:OutPort" id="02e697a7-bfbf-4724-96d4-a5caf6d3c235" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a7679cfd-3626-4c03-86a6-552ece2b90bb" name="CableHome122_1" originalIdInSource="1221" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="843d019a-9343-4894-a91d-92fb7ce49b08" name="In" connectedTo="88646dc9-1457-4a50-913e-aad67962b0a5"/>
@@ -5466,30 +5506,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00314015390926" lon="4.073865012870659"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="26af8f25-d2c2-4d34-8449-f0cb6a6edf35" name="Home124_1" originalIdInSource="1241" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="26af8f25-d2c2-4d34-8449-f0cb6a6edf35" name="Home124_1" originalIdInSource="1241" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00349310175284" lon="4.073272081369236"/>
         <asset xsi:type="esdl:EConnection" id="166d446e-4704-4eb3-8d96-33ee9fbb5160" name="ConnectionHome124_1" originalIdInSource="1241" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="844b3e8a-70ef-49d5-896e-9bc706f5e327" name="In" connectedTo="79adfda5-054d-46bf-92d4-433f9507d34a"/>
-          <port xsi:type="esdl:OutPort" id="bfe9f8ad-a1b1-421a-8126-044252d8e136" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b543a076-77d7-4a53-b7d4-f642b245574e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e3124c9f-0911-4f79-b13d-9f71ea701671" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bfe9f8ad-a1b1-421a-8126-044252d8e136" name="OutPh1" connectedTo="44c8230b-3837-41dc-8984-a1d51d2afc67"/>
+          <port xsi:type="esdl:OutPort" id="b543a076-77d7-4a53-b7d4-f642b245574e" name="OutPh2" connectedTo="ea3fbd47-81e2-4899-a548-e68ff1bda285"/>
+          <port xsi:type="esdl:OutPort" id="e3124c9f-0911-4f79-b13d-9f71ea701671" name="OutPh3" connectedTo="28ff4ffe-fa75-4516-a62f-f3279aea7a76"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f083bb58-b53a-4073-b9d2-7ecc6563d630" name="PhasegridHome124_1_Ph1" originalIdInSource="1241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="44c8230b-3837-41dc-8984-a1d51d2afc67" name="In"/>
+          <port xsi:type="esdl:InPort" id="44c8230b-3837-41dc-8984-a1d51d2afc67" name="In" connectedTo="bfe9f8ad-a1b1-421a-8126-044252d8e136"/>
           <port xsi:type="esdl:OutPort" id="492ba760-013c-445b-b6e3-fbf958249b72" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1d7d2e3f-f2a0-4499-926a-a2231879f77a" name="PhasegridHome124_1_Ph2" originalIdInSource="1241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ea3fbd47-81e2-4899-a548-e68ff1bda285" name="In"/>
+          <port xsi:type="esdl:InPort" id="ea3fbd47-81e2-4899-a548-e68ff1bda285" name="In" connectedTo="b543a076-77d7-4a53-b7d4-f642b245574e"/>
           <port xsi:type="esdl:OutPort" id="fa17f026-19d5-4b9b-b5da-08a4dc51e7fc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cb9f0368-cfce-44a0-9374-c97f17e90e64" name="PhasegridHome124_1_Ph3" originalIdInSource="1241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="28ff4ffe-fa75-4516-a62f-f3279aea7a76" name="In"/>
+          <port xsi:type="esdl:InPort" id="28ff4ffe-fa75-4516-a62f-f3279aea7a76" name="In" connectedTo="e3124c9f-0911-4f79-b13d-9f71ea701671"/>
           <port xsi:type="esdl:OutPort" id="f690c738-ec9d-465e-86d6-04dec9293880" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8bcc4603-e068-40c9-b8b0-d73656e11059" name="CableHome124_1" originalIdInSource="1241" assetType="4x10Cu_as10__VO_YMvK_asmb" length="2.1">
         <port xsi:type="esdl:InPort" id="0ad1d32b-1eab-49ec-9c2b-24416e67667c" name="In" connectedTo="5b74dfb3-f065-4ddd-b855-7fd30b64d14d"/>
@@ -5499,30 +5540,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00349310175284" lon="4.073272081369236"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b974a29b-1cb5-40a1-88eb-a3a496091e24" name="Home126_1" originalIdInSource="1261" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="b974a29b-1cb5-40a1-88eb-a3a496091e24" name="Home126_1" originalIdInSource="1261" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00619547079583" lon="4.073775490457986"/>
         <asset xsi:type="esdl:EConnection" id="ae92c36a-6ecd-4535-89f1-ab47576055b2" name="ConnectionHome126_1" originalIdInSource="1261" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="b69a9c48-e480-4944-a0e4-0c3537c18c83" name="In" connectedTo="d5755981-1c1a-49b9-a3cc-4c2bf9085ef0"/>
-          <port xsi:type="esdl:OutPort" id="76ce19f7-768b-47e0-b075-86ac5444e57e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d74d1ded-258f-44b4-bc8d-606c94932c7b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="fbf2ffe4-b43d-4bb0-a461-4cb0ff0596f5" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="76ce19f7-768b-47e0-b075-86ac5444e57e" name="OutPh1" connectedTo="add47e04-fdff-4b22-a8db-96fe08d65019"/>
+          <port xsi:type="esdl:OutPort" id="d74d1ded-258f-44b4-bc8d-606c94932c7b" name="OutPh2" connectedTo="a9878e6d-bfe6-47b5-b7c2-775389aca9ee"/>
+          <port xsi:type="esdl:OutPort" id="fbf2ffe4-b43d-4bb0-a461-4cb0ff0596f5" name="OutPh3" connectedTo="47cff09e-e431-4a29-bc57-5fe11c4d988d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="63440d92-9817-49db-bc7e-92d0de1fd780" name="PhasegridHome126_1_Ph1" originalIdInSource="1261">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="add47e04-fdff-4b22-a8db-96fe08d65019" name="In"/>
+          <port xsi:type="esdl:InPort" id="add47e04-fdff-4b22-a8db-96fe08d65019" name="In" connectedTo="76ce19f7-768b-47e0-b075-86ac5444e57e"/>
           <port xsi:type="esdl:OutPort" id="ae938e04-c8a1-418b-85dc-a837d05e52c1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="76eca38b-1edf-47db-85e4-2f3fbef28257" name="PhasegridHome126_1_Ph2" originalIdInSource="1261">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a9878e6d-bfe6-47b5-b7c2-775389aca9ee" name="In"/>
+          <port xsi:type="esdl:InPort" id="a9878e6d-bfe6-47b5-b7c2-775389aca9ee" name="In" connectedTo="d74d1ded-258f-44b4-bc8d-606c94932c7b"/>
           <port xsi:type="esdl:OutPort" id="46368b66-061d-46a4-b850-fed4b2c89a65" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6a06ca83-ac7a-47fe-ac5e-dd17c2ab2a4d" name="PhasegridHome126_1_Ph3" originalIdInSource="1261">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="47cff09e-e431-4a29-bc57-5fe11c4d988d" name="In"/>
+          <port xsi:type="esdl:InPort" id="47cff09e-e431-4a29-bc57-5fe11c4d988d" name="In" connectedTo="fbf2ffe4-b43d-4bb0-a461-4cb0ff0596f5"/>
           <port xsi:type="esdl:OutPort" id="c7a0dd14-33d9-4395-a245-1a55d6bb7f35" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e9974c0f-31e3-4f35-87fc-f9091a85ba80" name="CableHome126_1" originalIdInSource="1261" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.2">
         <port xsi:type="esdl:InPort" id="21158dbb-b266-477b-a62b-ac70317c8e70" name="In" connectedTo="2e660750-95a9-4031-a337-11c9bb517242"/>
@@ -5532,30 +5574,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00619547079583" lon="4.073775490457986"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="82f2dc99-8747-40fc-9818-f7c73fabaed9" name="Home127_1" originalIdInSource="1271" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="82f2dc99-8747-40fc-9818-f7c73fabaed9" name="Home127_1" originalIdInSource="1271" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00834891344291" lon="4.073421058072875"/>
         <asset xsi:type="esdl:EConnection" id="76c44855-190d-4a75-a0c4-bffb1b1c6f9a" name="ConnectionHome127_1" originalIdInSource="1271" assetType="3x35A" capacity="24248.71130596428">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fdc4b3b7-7c97-4f16-9a45-c35e14569a3c" name="In" connectedTo="86926014-f916-420c-91a7-0ff49671dc10"/>
-          <port xsi:type="esdl:OutPort" id="696c5ff0-2a08-4569-adc6-eaf77010eece" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e314698f-6661-4787-a796-20dc25b8b5e7" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="21e86226-65c2-4caa-b294-2ee1d5530474" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="696c5ff0-2a08-4569-adc6-eaf77010eece" name="OutPh1" connectedTo="d083a683-e1cf-4195-9640-ab2ed250a7f6"/>
+          <port xsi:type="esdl:OutPort" id="e314698f-6661-4787-a796-20dc25b8b5e7" name="OutPh2" connectedTo="9c2393ef-88e0-48e2-bd0e-3bdee148e412"/>
+          <port xsi:type="esdl:OutPort" id="21e86226-65c2-4caa-b294-2ee1d5530474" name="OutPh3" connectedTo="a41e2a76-e8ca-4eb2-93e4-0d9fa241985a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9fd903cf-fa2e-455f-a223-5ec68b4bf61d" name="PhasegridHome127_1_Ph1" originalIdInSource="1271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d083a683-e1cf-4195-9640-ab2ed250a7f6" name="In"/>
+          <port xsi:type="esdl:InPort" id="d083a683-e1cf-4195-9640-ab2ed250a7f6" name="In" connectedTo="696c5ff0-2a08-4569-adc6-eaf77010eece"/>
           <port xsi:type="esdl:OutPort" id="f3867d3d-2204-4edd-9eda-adfc2ea23ea8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c9ce3a1d-8b4d-40f5-8b6e-03403dab51c0" name="PhasegridHome127_1_Ph2" originalIdInSource="1271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9c2393ef-88e0-48e2-bd0e-3bdee148e412" name="In"/>
+          <port xsi:type="esdl:InPort" id="9c2393ef-88e0-48e2-bd0e-3bdee148e412" name="In" connectedTo="e314698f-6661-4787-a796-20dc25b8b5e7"/>
           <port xsi:type="esdl:OutPort" id="8fa267d9-4de8-44d0-a5cc-a8c0749611e5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f9e75251-f936-465a-80b8-68208b7d007d" name="PhasegridHome127_1_Ph3" originalIdInSource="1271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a41e2a76-e8ca-4eb2-93e4-0d9fa241985a" name="In"/>
+          <port xsi:type="esdl:InPort" id="a41e2a76-e8ca-4eb2-93e4-0d9fa241985a" name="In" connectedTo="21e86226-65c2-4caa-b294-2ee1d5530474"/>
           <port xsi:type="esdl:OutPort" id="2586b7b4-3254-4f92-8362-6f1475d2ad87" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ef29bcbe-2763-49a5-b7c7-f9b0c1ecc4ef" name="CableHome127_1" originalIdInSource="1271" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.4">
         <port xsi:type="esdl:InPort" id="b68cbda9-1bc4-4b5a-a233-0d5589ea421a" name="In" connectedTo="457471b7-f4a6-4cb5-9187-e8a32f69bf75"/>
@@ -5565,30 +5608,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00834891344291" lon="4.073421058072875"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="39484ef1-e5a6-4fea-8ff6-f27257d4ca15" name="Home128_1" originalIdInSource="1281" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="39484ef1-e5a6-4fea-8ff6-f27257d4ca15" name="Home128_1" originalIdInSource="1281" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995676912963944" lon="4.065637533383837"/>
         <asset xsi:type="esdl:EConnection" id="a4fb0294-5f60-48b7-abfc-eaec4879b746" name="ConnectionHome128_1" originalIdInSource="1281" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3e19cd68-16ee-46f6-9303-553e6963df14" name="In" connectedTo="2b9132e3-b115-44b7-b9df-d416b82ddafb"/>
-          <port xsi:type="esdl:OutPort" id="4abb55ec-780c-4693-8521-52737858006b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="de3ae8a5-ab04-4d92-9702-0100bb30fc08" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9cee1ca0-ecfd-4ce3-9c64-502ec64cd992" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4abb55ec-780c-4693-8521-52737858006b" name="OutPh1" connectedTo="f66635ff-1e59-4721-b5b6-7f85df01e6f6"/>
+          <port xsi:type="esdl:OutPort" id="de3ae8a5-ab04-4d92-9702-0100bb30fc08" name="OutPh2" connectedTo="8b07f995-1bf7-40da-9e3d-07012035ffe8"/>
+          <port xsi:type="esdl:OutPort" id="9cee1ca0-ecfd-4ce3-9c64-502ec64cd992" name="OutPh3" connectedTo="b6447304-9426-4820-a103-9af6f032ac3d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="23e05f82-a88c-45d0-9810-d705e0587a19" name="PhasegridHome128_1_Ph1" originalIdInSource="1281">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f66635ff-1e59-4721-b5b6-7f85df01e6f6" name="In"/>
+          <port xsi:type="esdl:InPort" id="f66635ff-1e59-4721-b5b6-7f85df01e6f6" name="In" connectedTo="4abb55ec-780c-4693-8521-52737858006b"/>
           <port xsi:type="esdl:OutPort" id="d7f1d426-4127-4607-abce-6ed04afcc669" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7fad0731-6ed5-424d-a8b6-71d478ac5dab" name="PhasegridHome128_1_Ph2" originalIdInSource="1281">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8b07f995-1bf7-40da-9e3d-07012035ffe8" name="In"/>
+          <port xsi:type="esdl:InPort" id="8b07f995-1bf7-40da-9e3d-07012035ffe8" name="In" connectedTo="de3ae8a5-ab04-4d92-9702-0100bb30fc08"/>
           <port xsi:type="esdl:OutPort" id="bcd3b5b0-6959-4b57-bf97-16572b5c3d0b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fb3366db-cced-4f65-9207-207fac32b356" name="PhasegridHome128_1_Ph3" originalIdInSource="1281">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b6447304-9426-4820-a103-9af6f032ac3d" name="In"/>
+          <port xsi:type="esdl:InPort" id="b6447304-9426-4820-a103-9af6f032ac3d" name="In" connectedTo="9cee1ca0-ecfd-4ce3-9c64-502ec64cd992"/>
           <port xsi:type="esdl:OutPort" id="648bf9d9-075b-45a2-a5d4-f1d458fc658e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0e035d94-8c12-4486-b9e0-69f65a88fa2b" name="CableHome128_1" originalIdInSource="1281" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.1">
         <port xsi:type="esdl:InPort" id="f245dab1-35aa-4d6f-81e0-e8eb6da5421c" name="In" connectedTo="6d717c40-ff1d-46ec-913e-49426d921db3"/>
@@ -5598,30 +5642,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.995676912963944" lon="4.065637533383837"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2c874b60-3304-4d7a-aba9-fb7a205d3ed0" name="Home129_1" originalIdInSource="1291" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="2c874b60-3304-4d7a-aba9-fb7a205d3ed0" name="Home129_1" originalIdInSource="1291" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99468984422906" lon="4.073821299911845"/>
         <asset xsi:type="esdl:EConnection" id="458809c0-a0d5-4ca7-af03-ca073200583e" name="ConnectionHome129_1" originalIdInSource="1291" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="769d6388-dca2-4f4c-8a8a-afca3510960d" name="In" connectedTo="dc8b1491-d2ca-40ea-b999-5d24947b9e47"/>
-          <port xsi:type="esdl:OutPort" id="89e7fbbe-e24c-4cc7-9d8f-f217c7a15f20" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="2c3caccf-bea9-4e1c-9e8a-27b564f2d951" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b130980d-1f4b-4f2c-bcad-dd82e7f1bfe8" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="89e7fbbe-e24c-4cc7-9d8f-f217c7a15f20" name="OutPh1" connectedTo="13eaa981-270e-4107-b06c-7b3311757c44"/>
+          <port xsi:type="esdl:OutPort" id="2c3caccf-bea9-4e1c-9e8a-27b564f2d951" name="OutPh2" connectedTo="0b692177-d3b8-4998-8369-7d701db5857a"/>
+          <port xsi:type="esdl:OutPort" id="b130980d-1f4b-4f2c-bcad-dd82e7f1bfe8" name="OutPh3" connectedTo="b00bc26c-1f16-438f-93fb-0a0ed804b572"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c0fc4b5e-9168-4392-b4ba-9326e9b49bfc" name="PhasegridHome129_1_Ph1" originalIdInSource="1291">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="13eaa981-270e-4107-b06c-7b3311757c44" name="In"/>
+          <port xsi:type="esdl:InPort" id="13eaa981-270e-4107-b06c-7b3311757c44" name="In" connectedTo="89e7fbbe-e24c-4cc7-9d8f-f217c7a15f20"/>
           <port xsi:type="esdl:OutPort" id="ea6ba63a-3861-4a55-a3d8-30332dd7836d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c54884dd-ede3-4bd3-b73e-90b8b87f2cca" name="PhasegridHome129_1_Ph2" originalIdInSource="1291">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0b692177-d3b8-4998-8369-7d701db5857a" name="In"/>
+          <port xsi:type="esdl:InPort" id="0b692177-d3b8-4998-8369-7d701db5857a" name="In" connectedTo="2c3caccf-bea9-4e1c-9e8a-27b564f2d951"/>
           <port xsi:type="esdl:OutPort" id="69a10fce-4ce0-41da-a43f-187447949c5e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="747b9078-579d-4902-9cdb-1010d18df34a" name="PhasegridHome129_1_Ph3" originalIdInSource="1291">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b00bc26c-1f16-438f-93fb-0a0ed804b572" name="In"/>
+          <port xsi:type="esdl:InPort" id="b00bc26c-1f16-438f-93fb-0a0ed804b572" name="In" connectedTo="b130980d-1f4b-4f2c-bcad-dd82e7f1bfe8"/>
           <port xsi:type="esdl:OutPort" id="c4c67ea3-c4c2-452d-957e-542916948edf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c1ae9bc5-2c0d-4f57-b55d-ab774cbf7104" name="CableHome129_1" originalIdInSource="1291" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.6">
         <port xsi:type="esdl:InPort" id="1ffb7d4b-14e0-4fa2-ad93-a9d6b94ff8af" name="In" connectedTo="07bb49ee-58b8-4a29-b655-76e0f5ea0824"/>
@@ -5631,30 +5676,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99468984422906" lon="4.073821299911845"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f23c3623-da5d-45ce-8c48-25037a88b82e" name="Home130_1" originalIdInSource="1301" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="f23c3623-da5d-45ce-8c48-25037a88b82e" name="Home130_1" originalIdInSource="1301" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.005476572837765" lon="4.073796555820037"/>
         <asset xsi:type="esdl:EConnection" id="c79311a6-4db4-41a6-b824-66f306cc09dc" name="ConnectionHome130_1" originalIdInSource="1301" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3d5ec32d-f4bc-4756-92ad-d4a011835074" name="In" connectedTo="d3f30b37-67d1-4c6f-a7ef-0937c460d21d"/>
-          <port xsi:type="esdl:OutPort" id="ddccc80a-50e5-4ba4-98b8-dc3a0a52cb44" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="73dc83a8-c60d-4262-9aae-844039dde06d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="4d1eab55-1bff-4a20-9480-28e53ad93e18" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ddccc80a-50e5-4ba4-98b8-dc3a0a52cb44" name="OutPh1" connectedTo="f194794f-4c1f-47ee-981a-1a4efb2466ff"/>
+          <port xsi:type="esdl:OutPort" id="73dc83a8-c60d-4262-9aae-844039dde06d" name="OutPh2" connectedTo="4478f5e1-7e71-4e6d-bd04-994ef66990b6"/>
+          <port xsi:type="esdl:OutPort" id="4d1eab55-1bff-4a20-9480-28e53ad93e18" name="OutPh3" connectedTo="ed4fb4d7-da3d-4205-873e-761e78a0bc7b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="70020c3d-e725-4af6-9c0f-676c23d84b99" name="PhasegridHome130_1_Ph1" originalIdInSource="1301">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f194794f-4c1f-47ee-981a-1a4efb2466ff" name="In"/>
+          <port xsi:type="esdl:InPort" id="f194794f-4c1f-47ee-981a-1a4efb2466ff" name="In" connectedTo="ddccc80a-50e5-4ba4-98b8-dc3a0a52cb44"/>
           <port xsi:type="esdl:OutPort" id="33e11f13-c1ef-406e-b8e7-0884e31e1a1d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="104b3443-d723-40b0-89c9-8effd5b31cbd" name="PhasegridHome130_1_Ph2" originalIdInSource="1301">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4478f5e1-7e71-4e6d-bd04-994ef66990b6" name="In"/>
+          <port xsi:type="esdl:InPort" id="4478f5e1-7e71-4e6d-bd04-994ef66990b6" name="In" connectedTo="73dc83a8-c60d-4262-9aae-844039dde06d"/>
           <port xsi:type="esdl:OutPort" id="9fc109f4-5d93-4cfd-9597-d427b51db1c5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0c388e46-ab90-4d7e-85c3-9dc4210cbac0" name="PhasegridHome130_1_Ph3" originalIdInSource="1301">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ed4fb4d7-da3d-4205-873e-761e78a0bc7b" name="In"/>
+          <port xsi:type="esdl:InPort" id="ed4fb4d7-da3d-4205-873e-761e78a0bc7b" name="In" connectedTo="4d1eab55-1bff-4a20-9480-28e53ad93e18"/>
           <port xsi:type="esdl:OutPort" id="4cd0a64a-6a50-49c1-a057-6b9ed922ac92" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4e53b85d-e54c-4e03-8fa1-a78961f911b4" name="CableHome130_1" originalIdInSource="1301" assetType="4x10Cu_as10__VO_YMvK_asmb" length="4.6">
         <port xsi:type="esdl:InPort" id="68482c6a-b671-44db-9f72-e746f33a8ebb" name="In" connectedTo="0b55d82f-da14-4694-a69f-f20dcbaac33f"/>
@@ -5664,30 +5710,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.005476572837765" lon="4.073796555820037"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="23473e07-cf57-4739-8833-7eddfa09f1c4" name="Home132_1" originalIdInSource="1321" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="23473e07-cf57-4739-8833-7eddfa09f1c4" name="Home132_1" originalIdInSource="1321" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_B" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.001469099023886" lon="4.085273962774436"/>
         <asset xsi:type="esdl:EConnection" id="5cf8878d-d02d-47bc-838c-e4faf70c9222" name="ConnectionHome132_1" originalIdInSource="1321" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0e794d28-5a60-4115-b2ff-d922dd3ea2ac" name="In" connectedTo="5e4353ff-f658-4ac2-b9ec-67193247717b"/>
-          <port xsi:type="esdl:OutPort" id="c70ef7b1-ca19-49b0-a11e-6b5332f0220d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="dc3859ea-b8d3-4c4e-82b7-1da34f039e7e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="539192c4-9be3-478c-9842-169488c5678d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c70ef7b1-ca19-49b0-a11e-6b5332f0220d" name="OutPh1" connectedTo="c0f53f57-991e-4ba3-99e0-b7708f5b9390"/>
+          <port xsi:type="esdl:OutPort" id="dc3859ea-b8d3-4c4e-82b7-1da34f039e7e" name="OutPh2" connectedTo="470fc4ae-56c4-462a-a27c-4e45f28c4b59"/>
+          <port xsi:type="esdl:OutPort" id="539192c4-9be3-478c-9842-169488c5678d" name="OutPh3" connectedTo="40d28e59-7676-4174-b524-71c4c63b4f69"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="72549cee-cf06-4803-aaa6-d6bc072f73ab" name="PhasegridHome132_1_Ph1" originalIdInSource="1321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c0f53f57-991e-4ba3-99e0-b7708f5b9390" name="In"/>
+          <port xsi:type="esdl:InPort" id="c0f53f57-991e-4ba3-99e0-b7708f5b9390" name="In" connectedTo="c70ef7b1-ca19-49b0-a11e-6b5332f0220d"/>
           <port xsi:type="esdl:OutPort" id="bb0ab959-1bec-444d-98e9-4d614c127762" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e656f7b2-7f0d-4868-bdf4-c55f98939721" name="PhasegridHome132_1_Ph2" originalIdInSource="1321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="470fc4ae-56c4-462a-a27c-4e45f28c4b59" name="In"/>
+          <port xsi:type="esdl:InPort" id="470fc4ae-56c4-462a-a27c-4e45f28c4b59" name="In" connectedTo="dc3859ea-b8d3-4c4e-82b7-1da34f039e7e"/>
           <port xsi:type="esdl:OutPort" id="2ef3b7eb-f5a4-4f40-8cae-6fcfad7ca926" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e8f33bfc-e9eb-4857-bfcc-aef57089603c" name="PhasegridHome132_1_Ph3" originalIdInSource="1321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="40d28e59-7676-4174-b524-71c4c63b4f69" name="In"/>
+          <port xsi:type="esdl:InPort" id="40d28e59-7676-4174-b524-71c4c63b4f69" name="In" connectedTo="539192c4-9be3-478c-9842-169488c5678d"/>
           <port xsi:type="esdl:OutPort" id="6314e82d-3217-48bd-9356-6634ac8ee630" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9b084c51-5952-481e-bb9f-f02f971f2378" name="CableHome132_1" originalIdInSource="1321" assetType="4x25Cu__VMvK" length="2.2">
         <port xsi:type="esdl:InPort" id="6d477966-6aa7-449c-be1b-8e78fc3d7bb7" name="In" connectedTo="68a4fac8-59a0-431c-a2c4-89312959fc9d"/>
@@ -5697,30 +5744,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.001469099023886" lon="4.085273962774436"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b51d9255-6f48-4f3b-86d7-2ad24ac35e51" name="Home135_1" originalIdInSource="1351" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b51d9255-6f48-4f3b-86d7-2ad24ac35e51" name="Home135_1" originalIdInSource="1351" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.996755258569884" lon="4.065605747831391"/>
         <asset xsi:type="esdl:EConnection" id="6b51a480-bd4f-4af1-94ee-3d255d1c8a1d" name="ConnectionHome135_1" originalIdInSource="1351" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f7c1f4cb-9668-45f8-81a8-4e92ac6d15a2" name="In" connectedTo="f6f8ee93-48e5-406b-90d9-d8e150680ba4"/>
-          <port xsi:type="esdl:OutPort" id="6399178c-e13b-4611-a47a-d6ac51c227a9" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="65e70dd7-c70c-48db-9ea7-57a39d0bed2b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2a963a8a-96dc-4023-9578-bc9f89ed1c44" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="6399178c-e13b-4611-a47a-d6ac51c227a9" name="OutPh1" connectedTo="c721f38d-b1a6-4b4c-a760-79de64cf540f"/>
+          <port xsi:type="esdl:OutPort" id="65e70dd7-c70c-48db-9ea7-57a39d0bed2b" name="OutPh2" connectedTo="f76e0e2d-506b-4e90-8c82-9a1c783b7c3a"/>
+          <port xsi:type="esdl:OutPort" id="2a963a8a-96dc-4023-9578-bc9f89ed1c44" name="OutPh3" connectedTo="4c12becf-8c71-4617-9e0f-b27591b9e44b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="93c7c601-e827-4ba4-b0cd-8b978524dc5b" name="PhasegridHome135_1_Ph1" originalIdInSource="1351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c721f38d-b1a6-4b4c-a760-79de64cf540f" name="In"/>
+          <port xsi:type="esdl:InPort" id="c721f38d-b1a6-4b4c-a760-79de64cf540f" name="In" connectedTo="6399178c-e13b-4611-a47a-d6ac51c227a9"/>
           <port xsi:type="esdl:OutPort" id="a308d128-99f5-45de-bee1-dae67a45c01c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ce53d3e4-41fe-495e-b52d-984f7b8e4b3d" name="PhasegridHome135_1_Ph2" originalIdInSource="1351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f76e0e2d-506b-4e90-8c82-9a1c783b7c3a" name="In"/>
+          <port xsi:type="esdl:InPort" id="f76e0e2d-506b-4e90-8c82-9a1c783b7c3a" name="In" connectedTo="65e70dd7-c70c-48db-9ea7-57a39d0bed2b"/>
           <port xsi:type="esdl:OutPort" id="05abc596-dd9e-46da-ac4a-65c859e26954" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4521ecc8-400a-4ddc-b355-87bc637e8e87" name="PhasegridHome135_1_Ph3" originalIdInSource="1351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4c12becf-8c71-4617-9e0f-b27591b9e44b" name="In"/>
+          <port xsi:type="esdl:InPort" id="4c12becf-8c71-4617-9e0f-b27591b9e44b" name="In" connectedTo="2a963a8a-96dc-4023-9578-bc9f89ed1c44"/>
           <port xsi:type="esdl:OutPort" id="e67faefd-c277-48b6-b877-fabbb7db71e1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ae51beb0-4967-4993-8006-d8831295f104" name="CableHome135_1" originalIdInSource="1351" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.0">
         <port xsi:type="esdl:InPort" id="f23a3c50-101b-47c8-9ec1-38478ce2a74b" name="In" connectedTo="9acc4443-de60-471a-b0e7-d90b87f40f99"/>
@@ -5730,30 +5778,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.996755258569884" lon="4.065605747831391"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0e441408-8a4b-41a5-aa17-c7da0c36776b" name="Home137_1" originalIdInSource="1371" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="0e441408-8a4b-41a5-aa17-c7da0c36776b" name="Home137_1" originalIdInSource="1371" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.997114707064604" lon="4.065595152255774"/>
         <asset xsi:type="esdl:EConnection" id="0209f0d1-dfdb-46ea-9b50-87878556fe29" name="ConnectionHome137_1" originalIdInSource="1371" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="87247e9a-d5c0-4aa8-9ad4-24ca9bd16d19" name="In" connectedTo="a1e3a8fe-afb7-4439-8ad5-738cd7ea1074"/>
-          <port xsi:type="esdl:OutPort" id="bc040f7f-8a9a-4ff5-a271-b4b0dbc6e39d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="aac512d6-862c-49d2-b99f-78a3ab4b7c2f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ee42be8e-1e72-4fd0-af76-7b7eb32f16fd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bc040f7f-8a9a-4ff5-a271-b4b0dbc6e39d" name="OutPh1" connectedTo="446e7cc1-560e-41f1-8831-0eb29ff208a5"/>
+          <port xsi:type="esdl:OutPort" id="aac512d6-862c-49d2-b99f-78a3ab4b7c2f" name="OutPh2" connectedTo="78cb67e0-e5bf-4870-a0b4-84e51d654a3c"/>
+          <port xsi:type="esdl:OutPort" id="ee42be8e-1e72-4fd0-af76-7b7eb32f16fd" name="OutPh3" connectedTo="d71031b9-c297-465b-b3d3-0d231204dbdf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bb2bc113-644c-49fa-b14e-b23e597d9797" name="PhasegridHome137_1_Ph1" originalIdInSource="1371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="446e7cc1-560e-41f1-8831-0eb29ff208a5" name="In"/>
+          <port xsi:type="esdl:InPort" id="446e7cc1-560e-41f1-8831-0eb29ff208a5" name="In" connectedTo="bc040f7f-8a9a-4ff5-a271-b4b0dbc6e39d"/>
           <port xsi:type="esdl:OutPort" id="adfbc70c-7815-45df-b395-6590f1844877" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ffa58b5d-dfd2-42d5-8a1d-3f77cbd55b36" name="PhasegridHome137_1_Ph2" originalIdInSource="1371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="78cb67e0-e5bf-4870-a0b4-84e51d654a3c" name="In"/>
+          <port xsi:type="esdl:InPort" id="78cb67e0-e5bf-4870-a0b4-84e51d654a3c" name="In" connectedTo="aac512d6-862c-49d2-b99f-78a3ab4b7c2f"/>
           <port xsi:type="esdl:OutPort" id="5c3e7f1b-9a20-43a5-a3ac-a0ea0a048ab1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="53fd3d2e-14ce-4aec-9c2d-0445776c7644" name="PhasegridHome137_1_Ph3" originalIdInSource="1371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d71031b9-c297-465b-b3d3-0d231204dbdf" name="In"/>
+          <port xsi:type="esdl:InPort" id="d71031b9-c297-465b-b3d3-0d231204dbdf" name="In" connectedTo="ee42be8e-1e72-4fd0-af76-7b7eb32f16fd"/>
           <port xsi:type="esdl:OutPort" id="09fb24d0-4a0b-4ccc-8637-7c564c8d82b8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="abed833f-4284-4788-b26c-2c2870e4363b" name="CableHome137_1" originalIdInSource="1371" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.0">
         <port xsi:type="esdl:InPort" id="cc399ef2-23d0-49b0-94bc-7e77bc245980" name="In" connectedTo="1a4c1875-f297-42da-bb73-24529a62c6af"/>
@@ -5763,30 +5812,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.997114707064604" lon="4.065595152255774"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="32166fb9-a001-4361-bd49-481dfd4fa5cd" name="Home138_1" originalIdInSource="1381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="32166fb9-a001-4361-bd49-481dfd4fa5cd" name="Home138_1" originalIdInSource="1381" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.999091673422335" lon="4.065536873090832"/>
         <asset xsi:type="esdl:EConnection" id="3b53f8fa-fdf1-459a-90b1-a527a0c9a6c3" name="ConnectionHome138_1" originalIdInSource="1381" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="163731e6-0674-4bf1-90dc-7e5af96f4502" name="In" connectedTo="f0083f3a-c62b-4942-b322-d34a2ce40e5a"/>
-          <port xsi:type="esdl:OutPort" id="f5507a7f-a5dd-4118-a10c-5905e7aa435a" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="0f3f8121-d039-4532-88eb-6b8bb4fe9a05" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0804c21e-aeea-476e-a140-3d66b7514a7c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f5507a7f-a5dd-4118-a10c-5905e7aa435a" name="OutPh1" connectedTo="1274e724-4135-4de7-bca0-121fd87e0423"/>
+          <port xsi:type="esdl:OutPort" id="0f3f8121-d039-4532-88eb-6b8bb4fe9a05" name="OutPh2" connectedTo="c80f552b-9cc9-4f96-a64b-ed3a2e3bd22f"/>
+          <port xsi:type="esdl:OutPort" id="0804c21e-aeea-476e-a140-3d66b7514a7c" name="OutPh3" connectedTo="4d1f730d-7cd1-40f7-b7c0-ccb8da9ea8f7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1c4f9f91-8d2d-4d8d-89fc-c6b640333cee" name="PhasegridHome138_1_Ph1" originalIdInSource="1381">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1274e724-4135-4de7-bca0-121fd87e0423" name="In"/>
+          <port xsi:type="esdl:InPort" id="1274e724-4135-4de7-bca0-121fd87e0423" name="In" connectedTo="f5507a7f-a5dd-4118-a10c-5905e7aa435a"/>
           <port xsi:type="esdl:OutPort" id="09c03315-41eb-454f-8232-7d1db2ab6928" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b07ab3e8-dc9b-4223-b0d5-c04d6bc4177e" name="PhasegridHome138_1_Ph2" originalIdInSource="1381">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c80f552b-9cc9-4f96-a64b-ed3a2e3bd22f" name="In"/>
+          <port xsi:type="esdl:InPort" id="c80f552b-9cc9-4f96-a64b-ed3a2e3bd22f" name="In" connectedTo="0f3f8121-d039-4532-88eb-6b8bb4fe9a05"/>
           <port xsi:type="esdl:OutPort" id="0cabd904-9fc2-4273-8f89-e9e96cece901" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8d30fe44-dce5-4e29-a528-1a3084ed55de" name="PhasegridHome138_1_Ph3" originalIdInSource="1381">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4d1f730d-7cd1-40f7-b7c0-ccb8da9ea8f7" name="In"/>
+          <port xsi:type="esdl:InPort" id="4d1f730d-7cd1-40f7-b7c0-ccb8da9ea8f7" name="In" connectedTo="0804c21e-aeea-476e-a140-3d66b7514a7c"/>
           <port xsi:type="esdl:OutPort" id="8ded67fb-4750-4914-ab2a-86218e028027" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9505b478-326b-4da8-96eb-575a8b6cd3eb" name="CableHome138_1" originalIdInSource="1381" assetType="4x10Cu_as10__VO_YMvK_asmb" length="7.4">
         <port xsi:type="esdl:InPort" id="000ede35-b851-449d-8e75-068b761c93c0" name="In" connectedTo="5b42dfce-2a2b-4456-995c-12a3fb487593"/>
@@ -5796,30 +5846,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.999091673422335" lon="4.065536873090832"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4313a4c7-7902-46e6-b23d-4422d22de13a" name="Home139_1" originalIdInSource="1391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="4313a4c7-7902-46e6-b23d-4422d22de13a" name="Home139_1" originalIdInSource="1391" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.999451121784915" lon="4.0655262762427915"/>
         <asset xsi:type="esdl:EConnection" id="39142335-b8ff-43da-ae7e-aa9a472bc6bf" name="ConnectionHome139_1" originalIdInSource="1391" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6a8bebd1-b5f5-4537-9756-26430ced149f" name="In" connectedTo="0cb5583c-3700-481d-96ef-ee171912fc6c"/>
-          <port xsi:type="esdl:OutPort" id="29874166-bf0d-467f-83e7-0eec14d66ea1" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a313e001-74a2-43cb-aa1c-83a42a2202af" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="54a4d6dc-c6c4-48b2-a54e-d63a04e9a8d2" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="29874166-bf0d-467f-83e7-0eec14d66ea1" name="OutPh1" connectedTo="99b54742-78f7-4945-9dea-84cdae8010a5"/>
+          <port xsi:type="esdl:OutPort" id="a313e001-74a2-43cb-aa1c-83a42a2202af" name="OutPh2" connectedTo="c8db2051-2232-4693-8638-f2a263890a25"/>
+          <port xsi:type="esdl:OutPort" id="54a4d6dc-c6c4-48b2-a54e-d63a04e9a8d2" name="OutPh3" connectedTo="47da5ead-0b81-40e8-82d9-aa628e642f73"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="324d988e-7746-4af1-9600-a194d946a0e2" name="PhasegridHome139_1_Ph1" originalIdInSource="1391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="99b54742-78f7-4945-9dea-84cdae8010a5" name="In"/>
+          <port xsi:type="esdl:InPort" id="99b54742-78f7-4945-9dea-84cdae8010a5" name="In" connectedTo="29874166-bf0d-467f-83e7-0eec14d66ea1"/>
           <port xsi:type="esdl:OutPort" id="920b2012-bd95-4423-be62-39001fe6569d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="667d4b2c-6eaa-459f-9323-9130ebe986a7" name="PhasegridHome139_1_Ph2" originalIdInSource="1391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c8db2051-2232-4693-8638-f2a263890a25" name="In"/>
+          <port xsi:type="esdl:InPort" id="c8db2051-2232-4693-8638-f2a263890a25" name="In" connectedTo="a313e001-74a2-43cb-aa1c-83a42a2202af"/>
           <port xsi:type="esdl:OutPort" id="990e7a88-395a-410f-9253-9b51149130e0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f5c1c28d-b6d1-4320-8b81-ecb1612e3e0d" name="PhasegridHome139_1_Ph3" originalIdInSource="1391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="47da5ead-0b81-40e8-82d9-aa628e642f73" name="In"/>
+          <port xsi:type="esdl:InPort" id="47da5ead-0b81-40e8-82d9-aa628e642f73" name="In" connectedTo="54a4d6dc-c6c4-48b2-a54e-d63a04e9a8d2"/>
           <port xsi:type="esdl:OutPort" id="6ceb9a87-9056-40f8-8a43-a93c955fa9fc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c5fac5c9-2785-4277-a1e5-78ea439750ad" name="CableHome139_1" originalIdInSource="1391" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="2df45360-1d16-4c3f-8f84-24f9419b38da" name="In" connectedTo="7b489b13-96da-46f1-9372-1a03e26210a2"/>
@@ -5829,30 +5880,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.999451121784915" lon="4.0655262762427915"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c713e6c5-5334-4562-906c-a51b41aa9d7f" name="Home141_1" originalIdInSource="1411" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="c713e6c5-5334-4562-906c-a51b41aa9d7f" name="Home141_1" originalIdInSource="1411" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00142808741507" lon="4.065467990078896"/>
         <asset xsi:type="esdl:EConnection" id="91e5c4d2-02ea-4e77-bad1-c726aff0b282" name="ConnectionHome141_1" originalIdInSource="1411" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d10b5db9-0af8-49a5-8090-43b954995e93" name="In" connectedTo="70ef5500-2d45-433c-a298-332ddbda19f4"/>
-          <port xsi:type="esdl:OutPort" id="0bd75c40-0f98-4520-8592-ef40c34e6bcf" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="bbcb4466-1cbc-46e8-ad07-4a0db48fac41" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="c2f13a32-7dc4-4c30-aadc-bd8d07e03491" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0bd75c40-0f98-4520-8592-ef40c34e6bcf" name="OutPh1" connectedTo="40099659-910d-4203-a7f9-f99aeaed371e"/>
+          <port xsi:type="esdl:OutPort" id="bbcb4466-1cbc-46e8-ad07-4a0db48fac41" name="OutPh2" connectedTo="c82b0906-f6e7-4142-8933-5b01ceec7528"/>
+          <port xsi:type="esdl:OutPort" id="c2f13a32-7dc4-4c30-aadc-bd8d07e03491" name="OutPh3" connectedTo="a279dd49-a20e-4bee-ac92-bf59b7835540"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3eb6cde5-48c4-4cf9-bcdf-20fde2bfdcfa" name="PhasegridHome141_1_Ph1" originalIdInSource="1411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="40099659-910d-4203-a7f9-f99aeaed371e" name="In"/>
+          <port xsi:type="esdl:InPort" id="40099659-910d-4203-a7f9-f99aeaed371e" name="In" connectedTo="0bd75c40-0f98-4520-8592-ef40c34e6bcf"/>
           <port xsi:type="esdl:OutPort" id="a9290d26-392b-4b20-ab94-840db0156180" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ca22d9d6-98c6-4170-9aa1-344efc537cdc" name="PhasegridHome141_1_Ph2" originalIdInSource="1411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c82b0906-f6e7-4142-8933-5b01ceec7528" name="In"/>
+          <port xsi:type="esdl:InPort" id="c82b0906-f6e7-4142-8933-5b01ceec7528" name="In" connectedTo="bbcb4466-1cbc-46e8-ad07-4a0db48fac41"/>
           <port xsi:type="esdl:OutPort" id="f912efb6-13c1-47e8-a039-34402402eee0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4625241f-03f9-486e-a311-476a14fc073b" name="PhasegridHome141_1_Ph3" originalIdInSource="1411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a279dd49-a20e-4bee-ac92-bf59b7835540" name="In"/>
+          <port xsi:type="esdl:InPort" id="a279dd49-a20e-4bee-ac92-bf59b7835540" name="In" connectedTo="c2f13a32-7dc4-4c30-aadc-bd8d07e03491"/>
           <port xsi:type="esdl:OutPort" id="ddf770e5-5829-40fb-b9cc-1841cfb4332a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="37.86" height="9.0" windowArea="18.17" doorArea="4.55" slantedRoofArea="58.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ccb2bf0e-402a-46dc-a6bd-696faa4ffe83" name="CableHome141_1" originalIdInSource="1411" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="61e8493d-5dfa-4ac5-b1c8-7d13cab8d28f" name="In" connectedTo="863d1225-fcf7-437b-9a98-b507cb5e564c"/>
@@ -5862,30 +5914,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00142808741507" lon="4.065467990078896"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7f9023b1-1bc7-4e93-b120-9b7f382a8ca3" name="Home142_1" originalIdInSource="1421" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7f9023b1-1bc7-4e93-b120-9b7f382a8ca3" name="Home142_1" originalIdInSource="1421" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00160781153269" lon="4.065462691043026"/>
         <asset xsi:type="esdl:EConnection" id="ff4cee92-cf3d-4bfe-9aa4-5573b68a5768" name="ConnectionHome142_1" originalIdInSource="1421" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e9212bd9-b279-487e-b066-d930d7d7d9b1" name="In" connectedTo="7fedce4c-80ca-49eb-aef2-478aa5cf8ab4"/>
-          <port xsi:type="esdl:OutPort" id="12831f44-8840-487d-9f86-5486683ddadb" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b16cc735-cc23-4833-aa28-5c81fbbb89ee" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8b837dcf-ab99-4e15-bf16-0ac6b9debd55" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="12831f44-8840-487d-9f86-5486683ddadb" name="OutPh1" connectedTo="dfdf0c4b-c1e9-47de-bf52-0afa6e5d47d9"/>
+          <port xsi:type="esdl:OutPort" id="b16cc735-cc23-4833-aa28-5c81fbbb89ee" name="OutPh2" connectedTo="629c8168-57dd-4a82-a971-c520d64f4fdb"/>
+          <port xsi:type="esdl:OutPort" id="8b837dcf-ab99-4e15-bf16-0ac6b9debd55" name="OutPh3" connectedTo="443273ea-a09b-46fe-ae81-910550f77c67"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e166adcb-14e1-4aa0-92ec-2b5117995939" name="PhasegridHome142_1_Ph1" originalIdInSource="1421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="dfdf0c4b-c1e9-47de-bf52-0afa6e5d47d9" name="In"/>
+          <port xsi:type="esdl:InPort" id="dfdf0c4b-c1e9-47de-bf52-0afa6e5d47d9" name="In" connectedTo="12831f44-8840-487d-9f86-5486683ddadb"/>
           <port xsi:type="esdl:OutPort" id="9a6098d6-7627-4165-aa8a-905d21eef8e9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="37d0fa4e-4da6-4a17-9026-ae1c0a2befc0" name="PhasegridHome142_1_Ph2" originalIdInSource="1421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="629c8168-57dd-4a82-a971-c520d64f4fdb" name="In"/>
+          <port xsi:type="esdl:InPort" id="629c8168-57dd-4a82-a971-c520d64f4fdb" name="In" connectedTo="b16cc735-cc23-4833-aa28-5c81fbbb89ee"/>
           <port xsi:type="esdl:OutPort" id="62bc2ca3-36d8-45d5-913e-cae2fe193638" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7b3aa24f-a52a-4489-adbe-c574485d837f" name="PhasegridHome142_1_Ph3" originalIdInSource="1421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="443273ea-a09b-46fe-ae81-910550f77c67" name="In"/>
+          <port xsi:type="esdl:InPort" id="443273ea-a09b-46fe-ae81-910550f77c67" name="In" connectedTo="8b837dcf-ab99-4e15-bf16-0ac6b9debd55"/>
           <port xsi:type="esdl:OutPort" id="74ccfb8a-8de3-41ab-bfa5-0c4643473434" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ab69aad1-f892-4565-8340-1194ac1dcb05" name="CableHome142_1" originalIdInSource="1421" assetType="4x10Cu_as10__VO_YMvK_asmb" length="23.3">
         <port xsi:type="esdl:InPort" id="15d7b848-3766-41a1-a136-824a79f424be" name="In" connectedTo="1d9d46c0-67c2-4e03-9482-9ac48f0bd312"/>
@@ -5895,30 +5948,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00160781153269" lon="4.065462691043026"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0e724293-772c-476d-9a80-b24db955e871" name="Home146_1" originalIdInSource="1461" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="0e724293-772c-476d-9a80-b24db955e871" name="Home146_1" originalIdInSource="1461" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96190267683086" lon="4.020649935920257"/>
         <asset xsi:type="esdl:EConnection" id="ef20f787-4092-4547-9c95-59f892bc9123" name="ConnectionHome146_1" originalIdInSource="1461" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f85a1f73-2fe3-454c-8784-4cce65725473" name="In" connectedTo="d9d993a5-3d3c-423e-aacf-7ccaac71dbd6"/>
-          <port xsi:type="esdl:OutPort" id="5714a7c1-edf2-4e41-b275-d05004d4281d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c042e59f-6323-47f4-b292-e255d35b2280" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="354860e0-850c-4c01-a42c-93ccccf3f4a9" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5714a7c1-edf2-4e41-b275-d05004d4281d" name="OutPh1" connectedTo="105d14ac-028a-4696-99e3-70d4f2f0ebb4"/>
+          <port xsi:type="esdl:OutPort" id="c042e59f-6323-47f4-b292-e255d35b2280" name="OutPh2" connectedTo="5d5a50db-0947-46e8-9f21-4fc157b3babe"/>
+          <port xsi:type="esdl:OutPort" id="354860e0-850c-4c01-a42c-93ccccf3f4a9" name="OutPh3" connectedTo="ebd75b26-76ab-46e7-9fd4-665bfa856768"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5351d2ab-eaa3-4e1e-899a-0ac2a5577406" name="PhasegridHome146_1_Ph1" originalIdInSource="1461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="105d14ac-028a-4696-99e3-70d4f2f0ebb4" name="In"/>
+          <port xsi:type="esdl:InPort" id="105d14ac-028a-4696-99e3-70d4f2f0ebb4" name="In" connectedTo="5714a7c1-edf2-4e41-b275-d05004d4281d"/>
           <port xsi:type="esdl:OutPort" id="45bdc42f-bd83-48d3-bac3-e12b9da5b543" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="577bcf4e-a01b-4695-9c0a-6821367e0b56" name="PhasegridHome146_1_Ph2" originalIdInSource="1461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5d5a50db-0947-46e8-9f21-4fc157b3babe" name="In"/>
+          <port xsi:type="esdl:InPort" id="5d5a50db-0947-46e8-9f21-4fc157b3babe" name="In" connectedTo="c042e59f-6323-47f4-b292-e255d35b2280"/>
           <port xsi:type="esdl:OutPort" id="8cdc7cf7-b391-48b0-b1f9-f83913b0cf92" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0c3ccc88-bb7c-4a2f-b08f-f54c60c23c37" name="PhasegridHome146_1_Ph3" originalIdInSource="1461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ebd75b26-76ab-46e7-9fd4-665bfa856768" name="In"/>
+          <port xsi:type="esdl:InPort" id="ebd75b26-76ab-46e7-9fd4-665bfa856768" name="In" connectedTo="354860e0-850c-4c01-a42c-93ccccf3f4a9"/>
           <port xsi:type="esdl:OutPort" id="ef1df0ca-e853-4989-8a52-dca1c7c0818d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6be43339-e100-4352-8d0c-6a0483d6c306" name="CableHome146_1" originalIdInSource="1461" assetType="4x10Cu_as10Cu__YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="ff32fa3b-7d67-4b23-8a16-90742aa8b15a" name="In" connectedTo="7873b146-4d13-42c4-a539-91da707bc046"/>
@@ -5928,30 +5982,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96190267683086" lon="4.020649935920257"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="57854ba2-7c50-4061-b73c-4c6d1df3db39" name="Home148_1" originalIdInSource="1481" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="57854ba2-7c50-4061-b73c-4c6d1df3db39" name="Home148_1" originalIdInSource="1481" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.961899295839174" lon="4.0203590108510525"/>
         <asset xsi:type="esdl:EConnection" id="22df0735-9fe3-40c3-bd0a-2527003cf020" name="ConnectionHome148_1" originalIdInSource="1481" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a0aeb5f2-2d8e-4194-b689-ddea800df0e4" name="In" connectedTo="375f1c18-ead5-473c-8669-186ac17573a7"/>
-          <port xsi:type="esdl:OutPort" id="7c6784fe-4565-4bd5-a2ae-506bf9d4a687" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f71f63c0-d55c-402e-8856-5f34c054ad54" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="cafbe8f5-24b0-4ec9-b10a-0c445f54d0eb" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7c6784fe-4565-4bd5-a2ae-506bf9d4a687" name="OutPh1" connectedTo="07f38c17-bac5-48c0-a4b6-7e3099a1ccfd"/>
+          <port xsi:type="esdl:OutPort" id="f71f63c0-d55c-402e-8856-5f34c054ad54" name="OutPh2" connectedTo="abfbe207-d8fa-4342-86ed-25e2375b6cb4"/>
+          <port xsi:type="esdl:OutPort" id="cafbe8f5-24b0-4ec9-b10a-0c445f54d0eb" name="OutPh3" connectedTo="b51be05d-7b83-4d75-9c43-66d8ffe686b5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="82134780-9360-4d65-9f37-cfb63ff39404" name="PhasegridHome148_1_Ph1" originalIdInSource="1481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="07f38c17-bac5-48c0-a4b6-7e3099a1ccfd" name="In"/>
+          <port xsi:type="esdl:InPort" id="07f38c17-bac5-48c0-a4b6-7e3099a1ccfd" name="In" connectedTo="7c6784fe-4565-4bd5-a2ae-506bf9d4a687"/>
           <port xsi:type="esdl:OutPort" id="a033c9c0-d627-4b6e-a892-10f99c0c2ecf" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ae6c4d7c-0283-4593-b063-a31a692021af" name="PhasegridHome148_1_Ph2" originalIdInSource="1481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="abfbe207-d8fa-4342-86ed-25e2375b6cb4" name="In"/>
+          <port xsi:type="esdl:InPort" id="abfbe207-d8fa-4342-86ed-25e2375b6cb4" name="In" connectedTo="f71f63c0-d55c-402e-8856-5f34c054ad54"/>
           <port xsi:type="esdl:OutPort" id="3f1b31ef-a49c-4e0a-9dc5-be17413a2c95" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2a75cea9-0370-4d0b-bca6-eb9157a53490" name="PhasegridHome148_1_Ph3" originalIdInSource="1481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b51be05d-7b83-4d75-9c43-66d8ffe686b5" name="In"/>
+          <port xsi:type="esdl:InPort" id="b51be05d-7b83-4d75-9c43-66d8ffe686b5" name="In" connectedTo="cafbe8f5-24b0-4ec9-b10a-0c445f54d0eb"/>
           <port xsi:type="esdl:OutPort" id="7d0c9e83-aa0c-4db3-98b5-2ccd0559889b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b43ca40a-b01a-4e2b-a95f-80955e74015e" name="CableHome148_1" originalIdInSource="1481" assetType="4x6Cu__GPLK" length="5.7">
         <port xsi:type="esdl:InPort" id="b53fee2f-4ed7-4147-84ba-666b7a9282e9" name="In" connectedTo="416a6420-64c6-4d54-8252-4d6d0dd20eb7"/>
@@ -5961,30 +6016,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.961899295839174" lon="4.0203590108510525"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="af2fcafb-cfcb-4be5-8529-6a1c665899e2" name="Home149_1" originalIdInSource="1491" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="af2fcafb-cfcb-4be5-8529-6a1c665899e2" name="Home149_1" originalIdInSource="1491" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97603894404782" lon="4.0304085251783555"/>
         <asset xsi:type="esdl:EConnection" id="83d13018-1280-4083-9dd3-b7b2450ac81b" name="ConnectionHome149_1" originalIdInSource="1491" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0002009b-9a8d-410a-b634-9c0b50e8eced" name="In" connectedTo="437c43cd-cb65-4a66-925b-bf579abe9bc9"/>
-          <port xsi:type="esdl:OutPort" id="d2c90bc5-c549-43fa-8834-ac377368c516" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="03aecf29-3542-406f-be26-d8c7f75ac7df" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a27db313-2e0d-4f81-b571-1dc114e9c943" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d2c90bc5-c549-43fa-8834-ac377368c516" name="OutPh1" connectedTo="ce7d33a9-a69d-4573-a3c4-6141476fda7a"/>
+          <port xsi:type="esdl:OutPort" id="03aecf29-3542-406f-be26-d8c7f75ac7df" name="OutPh2" connectedTo="746ee5ee-8fd6-4c19-abbf-52030c3f9f44"/>
+          <port xsi:type="esdl:OutPort" id="a27db313-2e0d-4f81-b571-1dc114e9c943" name="OutPh3" connectedTo="20915f4b-582b-43fc-b7ac-1f723a348db1"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e140e1b8-647f-4495-bc36-f4063bcfc42c" name="PhasegridHome149_1_Ph1" originalIdInSource="1491">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ce7d33a9-a69d-4573-a3c4-6141476fda7a" name="In"/>
+          <port xsi:type="esdl:InPort" id="ce7d33a9-a69d-4573-a3c4-6141476fda7a" name="In" connectedTo="d2c90bc5-c549-43fa-8834-ac377368c516"/>
           <port xsi:type="esdl:OutPort" id="3943290a-d617-484e-a754-0642f8aba8bc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="41d5b0fd-9c9e-41cf-9c54-5294dc232063" name="PhasegridHome149_1_Ph2" originalIdInSource="1491">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="746ee5ee-8fd6-4c19-abbf-52030c3f9f44" name="In"/>
+          <port xsi:type="esdl:InPort" id="746ee5ee-8fd6-4c19-abbf-52030c3f9f44" name="In" connectedTo="03aecf29-3542-406f-be26-d8c7f75ac7df"/>
           <port xsi:type="esdl:OutPort" id="d3e068c1-73d0-4a17-b58a-b3b3880c1fd2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a9422ba8-977b-433e-bd2f-d97f439b4112" name="PhasegridHome149_1_Ph3" originalIdInSource="1491">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="20915f4b-582b-43fc-b7ac-1f723a348db1" name="In"/>
+          <port xsi:type="esdl:InPort" id="20915f4b-582b-43fc-b7ac-1f723a348db1" name="In" connectedTo="a27db313-2e0d-4f81-b571-1dc114e9c943"/>
           <port xsi:type="esdl:OutPort" id="d992f710-bb4d-4582-99da-8ed1486fc99f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d84a621c-3a1e-4c75-bde6-336206565376" name="CableHome149_1" originalIdInSource="1491" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.8">
         <port xsi:type="esdl:InPort" id="49472d67-5993-4ce6-bb2c-7efdae349359" name="In" connectedTo="b2500fcb-bc79-479f-acb3-43f8ef40fd0f"/>
@@ -5994,30 +6050,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97603894404782" lon="4.0304085251783555"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fd5a70a4-e825-41f1-ba41-7751938a9786" name="Home149_2" originalIdInSource="1492" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="fd5a70a4-e825-41f1-ba41-7751938a9786" name="Home149_2" originalIdInSource="1492" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97603894404782" lon="4.0304085251783555"/>
         <asset xsi:type="esdl:EConnection" id="6e7da3b6-85cc-496f-9a1a-8d59821d2ace" name="ConnectionHome149_2" originalIdInSource="1492" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e11cae23-7567-496d-bf8d-760f34cdfb8d" name="In" connectedTo="075e6ebc-f107-4920-bff3-53acde1ea02b"/>
-          <port xsi:type="esdl:OutPort" id="e91fe0b5-8197-40f1-9c45-f2351ff07d42" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ba703fb8-7e7a-4f9f-a7ea-0dfdd0d43de1" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e81c1001-2a07-4799-b3ab-c289303abb75" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e91fe0b5-8197-40f1-9c45-f2351ff07d42" name="OutPh1" connectedTo="678d18fd-8e1a-44d0-9a57-d6af98d11cba"/>
+          <port xsi:type="esdl:OutPort" id="ba703fb8-7e7a-4f9f-a7ea-0dfdd0d43de1" name="OutPh2" connectedTo="20403495-7581-4700-9482-1681840a4d75"/>
+          <port xsi:type="esdl:OutPort" id="e81c1001-2a07-4799-b3ab-c289303abb75" name="OutPh3" connectedTo="0fa39503-4baf-4e1b-833f-eed197d5a16b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0242306c-51d7-4bb5-b1b5-c66d5c2c0be2" name="PhasegridHome149_2_Ph1" originalIdInSource="1492">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="678d18fd-8e1a-44d0-9a57-d6af98d11cba" name="In"/>
+          <port xsi:type="esdl:InPort" id="678d18fd-8e1a-44d0-9a57-d6af98d11cba" name="In" connectedTo="e91fe0b5-8197-40f1-9c45-f2351ff07d42"/>
           <port xsi:type="esdl:OutPort" id="d2c2092b-f99d-46a9-84b6-0c335372f027" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3b0c0c85-7dfd-4c40-bab3-43c9fe2288c8" name="PhasegridHome149_2_Ph2" originalIdInSource="1492">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="20403495-7581-4700-9482-1681840a4d75" name="In"/>
+          <port xsi:type="esdl:InPort" id="20403495-7581-4700-9482-1681840a4d75" name="In" connectedTo="ba703fb8-7e7a-4f9f-a7ea-0dfdd0d43de1"/>
           <port xsi:type="esdl:OutPort" id="403e4930-f5cc-4878-bd40-219d2dce0b39" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9277998d-92b1-4eb4-b03f-bbdafccda0b3" name="PhasegridHome149_2_Ph3" originalIdInSource="1492">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0fa39503-4baf-4e1b-833f-eed197d5a16b" name="In"/>
+          <port xsi:type="esdl:InPort" id="0fa39503-4baf-4e1b-833f-eed197d5a16b" name="In" connectedTo="e81c1001-2a07-4799-b3ab-c289303abb75"/>
           <port xsi:type="esdl:OutPort" id="8cbf5781-007a-468c-9921-54d67264c4b0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="20492c75-a399-46b7-a7aa-7e76693290af" name="CableHome149_2" originalIdInSource="1492" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.9">
         <port xsi:type="esdl:InPort" id="7d12d770-828b-4280-89bf-5ee25b53dd84" name="In" connectedTo="b2500fcb-bc79-479f-acb3-43f8ef40fd0f"/>
@@ -6027,30 +6084,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97603894404782" lon="4.0304085251783555"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dafee15b-7f9e-44f0-9218-f13cefa91884" name="Home150_1" originalIdInSource="1501" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="dafee15b-7f9e-44f0-9218-f13cefa91884" name="Home150_1" originalIdInSource="1501" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98006986725738" lon="4.036982941366732"/>
         <asset xsi:type="esdl:EConnection" id="5173bcda-b986-4e5c-88b1-eeb5fd584cb4" name="ConnectionHome150_1" originalIdInSource="1501" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8fc16c1c-7ff3-436e-a62f-3fa5044996cc" name="In" connectedTo="4f7108de-c637-4ca4-86f4-178f6e1cc6bc"/>
-          <port xsi:type="esdl:OutPort" id="bc898558-06e1-4674-bffe-3e2cfbcc1c17" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="34977ba5-32d0-4799-93ce-989bf31284ed" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d682a7c0-6dc3-4c98-adf5-12a72661793c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bc898558-06e1-4674-bffe-3e2cfbcc1c17" name="OutPh1" connectedTo="83770baa-b44f-4c57-bda8-12630f41da84"/>
+          <port xsi:type="esdl:OutPort" id="34977ba5-32d0-4799-93ce-989bf31284ed" name="OutPh2" connectedTo="de4c07ff-42f0-4fbd-8a86-7160b965f307"/>
+          <port xsi:type="esdl:OutPort" id="d682a7c0-6dc3-4c98-adf5-12a72661793c" name="OutPh3" connectedTo="a8d828ad-8c8b-48fe-9cbc-6878447c9b7f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9583b31a-8679-4008-8202-fe4318240b13" name="PhasegridHome150_1_Ph1" originalIdInSource="1501">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="83770baa-b44f-4c57-bda8-12630f41da84" name="In"/>
+          <port xsi:type="esdl:InPort" id="83770baa-b44f-4c57-bda8-12630f41da84" name="In" connectedTo="bc898558-06e1-4674-bffe-3e2cfbcc1c17"/>
           <port xsi:type="esdl:OutPort" id="a811060a-cfa2-4829-8f19-1e843a844c80" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fecf5b58-351b-49bc-97c8-042468761bd5" name="PhasegridHome150_1_Ph2" originalIdInSource="1501">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="de4c07ff-42f0-4fbd-8a86-7160b965f307" name="In"/>
+          <port xsi:type="esdl:InPort" id="de4c07ff-42f0-4fbd-8a86-7160b965f307" name="In" connectedTo="34977ba5-32d0-4799-93ce-989bf31284ed"/>
           <port xsi:type="esdl:OutPort" id="3c56a35f-a1bb-45d4-9a54-b80ea75cac0e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="894787ef-b8e8-44c4-955c-8e531dcf0fa4" name="PhasegridHome150_1_Ph3" originalIdInSource="1501">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a8d828ad-8c8b-48fe-9cbc-6878447c9b7f" name="In"/>
+          <port xsi:type="esdl:InPort" id="a8d828ad-8c8b-48fe-9cbc-6878447c9b7f" name="In" connectedTo="d682a7c0-6dc3-4c98-adf5-12a72661793c"/>
           <port xsi:type="esdl:OutPort" id="2a8d1f11-8c38-4f16-bc05-40726e1f2d32" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6a6cf86b-ae29-434a-934e-2d9cac74612a" name="CableHome150_1" originalIdInSource="1501" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.0">
         <port xsi:type="esdl:InPort" id="9672ec7c-7255-4721-a0ae-a9eaa3996108" name="In" connectedTo="7f8ac342-dc06-468e-bf46-5b012961e480"/>
@@ -6060,30 +6118,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98006986725738" lon="4.036982941366732"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a549b0d8-43a0-43cf-9bc0-213c7029ea07" name="Home151_1" originalIdInSource="1511" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a549b0d8-43a0-43cf-9bc0-213c7029ea07" name="Home151_1" originalIdInSource="1511" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980256270107496" lon="4.037559622934728"/>
         <asset xsi:type="esdl:EConnection" id="57a5343b-bfa5-48b9-838f-6e0903a08dcc" name="ConnectionHome151_1" originalIdInSource="1511" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d03acbc1-68b4-4409-a3bb-bea070613fa2" name="In" connectedTo="c91dc12a-6906-4173-96ad-9fc05671df44"/>
-          <port xsi:type="esdl:OutPort" id="c9a86389-eb69-4399-b61c-94fd5b89a0d5" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="65b4c34e-1fb3-4d1c-9e70-e1ff9a3bd100" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ddb59f65-4c16-4a68-a4c5-5eaae542cb7c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c9a86389-eb69-4399-b61c-94fd5b89a0d5" name="OutPh1" connectedTo="3f7edcdc-5436-4015-9818-a9edbdbc63b1"/>
+          <port xsi:type="esdl:OutPort" id="65b4c34e-1fb3-4d1c-9e70-e1ff9a3bd100" name="OutPh2" connectedTo="57b04e30-cba1-4bea-8f86-1be47b38bca9"/>
+          <port xsi:type="esdl:OutPort" id="ddb59f65-4c16-4a68-a4c5-5eaae542cb7c" name="OutPh3" connectedTo="1d913e3a-7e08-4d7c-9a21-85d12231cc48"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3414f5c0-54d4-4d23-8b02-ccc3f1a42ada" name="PhasegridHome151_1_Ph1" originalIdInSource="1511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3f7edcdc-5436-4015-9818-a9edbdbc63b1" name="In"/>
+          <port xsi:type="esdl:InPort" id="3f7edcdc-5436-4015-9818-a9edbdbc63b1" name="In" connectedTo="c9a86389-eb69-4399-b61c-94fd5b89a0d5"/>
           <port xsi:type="esdl:OutPort" id="3ddb4e5a-9ee2-4e21-a58a-e6c4da379269" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1338f107-6ad6-415c-833b-b0838597591b" name="PhasegridHome151_1_Ph2" originalIdInSource="1511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="57b04e30-cba1-4bea-8f86-1be47b38bca9" name="In"/>
+          <port xsi:type="esdl:InPort" id="57b04e30-cba1-4bea-8f86-1be47b38bca9" name="In" connectedTo="65b4c34e-1fb3-4d1c-9e70-e1ff9a3bd100"/>
           <port xsi:type="esdl:OutPort" id="f17a7333-59c0-41a4-9d6e-c825945940d0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="42c7a6a1-2331-48bc-8bbd-af8eec5b9b00" name="PhasegridHome151_1_Ph3" originalIdInSource="1511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1d913e3a-7e08-4d7c-9a21-85d12231cc48" name="In"/>
+          <port xsi:type="esdl:InPort" id="1d913e3a-7e08-4d7c-9a21-85d12231cc48" name="In" connectedTo="ddb59f65-4c16-4a68-a4c5-5eaae542cb7c"/>
           <port xsi:type="esdl:OutPort" id="b9d54eba-445e-49a3-ad29-95b46fc8a48e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="626fc3d1-8de9-4092-acc3-8e781dadaf5a" name="CableHome151_1" originalIdInSource="1511" assetType="4x10Cu__GPLK" length="5.3">
         <port xsi:type="esdl:InPort" id="c3c2b71c-dc7e-4c22-a3d5-098301794ab8" name="In" connectedTo="8230bedc-a3e0-4af0-9d46-0ec19c3587b4"/>
@@ -6093,30 +6152,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.980256270107496" lon="4.037559622934728"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7a785a8d-cbbb-4a09-b488-7515068c90c3" name="Home152_1" originalIdInSource="1521" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="7a785a8d-cbbb-4a09-b488-7515068c90c3" name="Home152_1" originalIdInSource="1521" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.967026473608186" lon="4.01292630204191"/>
         <asset xsi:type="esdl:EConnection" id="7fd18a1b-488c-412d-925c-c45d59c86f53" name="ConnectionHome152_1" originalIdInSource="1521" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6ec46033-3fde-46b3-b55c-b74d9a60012e" name="In" connectedTo="58e3f8c0-499a-4fd5-b227-fd92303ed60f"/>
-          <port xsi:type="esdl:OutPort" id="fd19b119-e6a5-4b7b-9173-1d45cddcb6f2" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6c54511b-7e3d-4170-b8dc-3033ce57a0f6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8ab516d1-a757-4d26-a6df-c5f55b421c78" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fd19b119-e6a5-4b7b-9173-1d45cddcb6f2" name="OutPh1" connectedTo="cdabc137-6726-4be9-b7c0-9c6776a09499"/>
+          <port xsi:type="esdl:OutPort" id="6c54511b-7e3d-4170-b8dc-3033ce57a0f6" name="OutPh2" connectedTo="a4ba6467-9fa1-4eaf-903a-4b1cf09d4ecb"/>
+          <port xsi:type="esdl:OutPort" id="8ab516d1-a757-4d26-a6df-c5f55b421c78" name="OutPh3" connectedTo="a7702e08-1c6f-4b24-95eb-84cbc23fcc8d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="856e6fbf-94a3-4c7d-a1ca-28efb61b3f06" name="PhasegridHome152_1_Ph1" originalIdInSource="1521">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cdabc137-6726-4be9-b7c0-9c6776a09499" name="In"/>
+          <port xsi:type="esdl:InPort" id="cdabc137-6726-4be9-b7c0-9c6776a09499" name="In" connectedTo="fd19b119-e6a5-4b7b-9173-1d45cddcb6f2"/>
           <port xsi:type="esdl:OutPort" id="ded9292f-54e7-472d-855a-32306a399183" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a98274a1-e1f5-4264-9165-ab3dd569a3eb" name="PhasegridHome152_1_Ph2" originalIdInSource="1521">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a4ba6467-9fa1-4eaf-903a-4b1cf09d4ecb" name="In"/>
+          <port xsi:type="esdl:InPort" id="a4ba6467-9fa1-4eaf-903a-4b1cf09d4ecb" name="In" connectedTo="6c54511b-7e3d-4170-b8dc-3033ce57a0f6"/>
           <port xsi:type="esdl:OutPort" id="ee3f2ffb-f580-4f63-ae25-1c584a06aad3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="86bf3014-cc08-4c6a-ab18-c35e1b2fae4e" name="PhasegridHome152_1_Ph3" originalIdInSource="1521">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a7702e08-1c6f-4b24-95eb-84cbc23fcc8d" name="In"/>
+          <port xsi:type="esdl:InPort" id="a7702e08-1c6f-4b24-95eb-84cbc23fcc8d" name="In" connectedTo="8ab516d1-a757-4d26-a6df-c5f55b421c78"/>
           <port xsi:type="esdl:OutPort" id="fbe09c93-84c8-435d-b172-0d437159cc20" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="355bbb98-6858-487e-914a-7c7635082c6e" name="CableHome152_1" originalIdInSource="1521" assetType="4x10Cu__GPLK" length="3.6">
         <port xsi:type="esdl:InPort" id="ad035b45-e9d3-4cdb-a3a3-7e1d9fa6bf1b" name="In" connectedTo="4372859a-f361-4c05-b7ab-042e5b0232eb"/>
@@ -6126,30 +6186,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.967026473608186" lon="4.01292630204191"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6d0cec5c-6cb4-451d-9685-87b2193962b5" name="Home153_1" originalIdInSource="1531" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6d0cec5c-6cb4-451d-9685-87b2193962b5" name="Home153_1" originalIdInSource="1531" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.968084392050905" lon="4.011147490014138"/>
         <asset xsi:type="esdl:EConnection" id="62e57a54-15b5-47ef-b83f-ebd95ba1c200" name="ConnectionHome153_1" originalIdInSource="1531" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="69bdc07f-433e-4092-9bab-4d46855a2897" name="In" connectedTo="2ed6f192-8f7a-4ed2-8f26-fd1d281f8291"/>
-          <port xsi:type="esdl:OutPort" id="efa79249-a4d6-4b25-bc6a-07bab4e08179" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b603558b-3806-41ec-bec8-8f3fd6af6198" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="84ab4738-a9ee-4c79-9629-d7a87a4b3855" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="efa79249-a4d6-4b25-bc6a-07bab4e08179" name="OutPh1" connectedTo="758e7120-251c-468a-afb5-8ce2006a7d05"/>
+          <port xsi:type="esdl:OutPort" id="b603558b-3806-41ec-bec8-8f3fd6af6198" name="OutPh2" connectedTo="131d09ca-bf19-4e9b-ad91-d2b646f93902"/>
+          <port xsi:type="esdl:OutPort" id="84ab4738-a9ee-4c79-9629-d7a87a4b3855" name="OutPh3" connectedTo="966708ce-1e9d-4d8f-a812-0f5491f7beac"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f03ba0b9-011b-4812-b0a3-a1a823e4a1bc" name="PhasegridHome153_1_Ph1" originalIdInSource="1531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="758e7120-251c-468a-afb5-8ce2006a7d05" name="In"/>
+          <port xsi:type="esdl:InPort" id="758e7120-251c-468a-afb5-8ce2006a7d05" name="In" connectedTo="efa79249-a4d6-4b25-bc6a-07bab4e08179"/>
           <port xsi:type="esdl:OutPort" id="98787ec9-2776-4410-8a0f-f2b1a54fb53c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e15d9437-d4ae-4704-bb9c-687b7d01d964" name="PhasegridHome153_1_Ph2" originalIdInSource="1531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="131d09ca-bf19-4e9b-ad91-d2b646f93902" name="In"/>
+          <port xsi:type="esdl:InPort" id="131d09ca-bf19-4e9b-ad91-d2b646f93902" name="In" connectedTo="b603558b-3806-41ec-bec8-8f3fd6af6198"/>
           <port xsi:type="esdl:OutPort" id="32edeb68-61a5-48c1-9d25-451cfe81a10a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d5a738c0-8078-4dd0-b92e-766a24104044" name="PhasegridHome153_1_Ph3" originalIdInSource="1531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="966708ce-1e9d-4d8f-a812-0f5491f7beac" name="In"/>
+          <port xsi:type="esdl:InPort" id="966708ce-1e9d-4d8f-a812-0f5491f7beac" name="In" connectedTo="84ab4738-a9ee-4c79-9629-d7a87a4b3855"/>
           <port xsi:type="esdl:OutPort" id="d434610e-3fae-4bd9-8897-425a894b3f39" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="403421a6-c2a5-49ff-9946-9813872a3d9f" name="CableHome153_1" originalIdInSource="1531" assetType="4x10Cu__GPLK" length="3.4">
         <port xsi:type="esdl:InPort" id="3120ea55-0276-4d0c-a77b-ca2b77b15568" name="In" connectedTo="95e8234f-e0cd-4677-86c8-f992b63a4181"/>
@@ -6159,30 +6220,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.968084392050905" lon="4.011147490014138"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="98e53263-a327-460e-ba6b-32e54db2fec9" name="Home154_1" originalIdInSource="1541" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="98e53263-a327-460e-ba6b-32e54db2fec9" name="Home154_1" originalIdInSource="1541" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96163760650835" lon="4.028806737789221"/>
         <asset xsi:type="esdl:EConnection" id="76f1cb71-0d06-4475-9421-250e4d74ca80" name="ConnectionHome154_1" originalIdInSource="1541" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2dd4b7ea-f3b9-4511-8bcc-6bccb3a15559" name="In" connectedTo="93d34a81-a793-404f-8e9e-66d1551284da"/>
-          <port xsi:type="esdl:OutPort" id="047c6ae0-f833-44f0-b1bc-1b91385e88bf" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="55580531-c2b0-4821-9bb6-214873ebccd8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2da6919c-0a8b-4b11-b90e-94e286e6d58d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="047c6ae0-f833-44f0-b1bc-1b91385e88bf" name="OutPh1" connectedTo="bcd19500-c378-48bb-9e1a-e31769c4c8bd"/>
+          <port xsi:type="esdl:OutPort" id="55580531-c2b0-4821-9bb6-214873ebccd8" name="OutPh2" connectedTo="466a652e-e6e0-4701-88b9-ced63411ee9c"/>
+          <port xsi:type="esdl:OutPort" id="2da6919c-0a8b-4b11-b90e-94e286e6d58d" name="OutPh3" connectedTo="4c80cbd3-98bd-4a52-a1f3-c81117f7fb08"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="258f5b6f-1400-4634-8fa5-fef3b51a4cac" name="PhasegridHome154_1_Ph1" originalIdInSource="1541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bcd19500-c378-48bb-9e1a-e31769c4c8bd" name="In"/>
+          <port xsi:type="esdl:InPort" id="bcd19500-c378-48bb-9e1a-e31769c4c8bd" name="In" connectedTo="047c6ae0-f833-44f0-b1bc-1b91385e88bf"/>
           <port xsi:type="esdl:OutPort" id="707de237-5e56-43c7-8c21-a330b8fe4f4d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="727592dd-1f8a-4dbe-9e23-108c3afbccc9" name="PhasegridHome154_1_Ph2" originalIdInSource="1541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="466a652e-e6e0-4701-88b9-ced63411ee9c" name="In"/>
+          <port xsi:type="esdl:InPort" id="466a652e-e6e0-4701-88b9-ced63411ee9c" name="In" connectedTo="55580531-c2b0-4821-9bb6-214873ebccd8"/>
           <port xsi:type="esdl:OutPort" id="0437f3c0-c710-4b27-9251-7e4c4200f54f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3ac24cb6-23f2-404e-ad87-a1454dceb14a" name="PhasegridHome154_1_Ph3" originalIdInSource="1541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4c80cbd3-98bd-4a52-a1f3-c81117f7fb08" name="In"/>
+          <port xsi:type="esdl:InPort" id="4c80cbd3-98bd-4a52-a1f3-c81117f7fb08" name="In" connectedTo="2da6919c-0a8b-4b11-b90e-94e286e6d58d"/>
           <port xsi:type="esdl:OutPort" id="2af16ef7-8b30-42d9-9772-45c9d3ca3049" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f2a87b2c-a5e3-43d7-929e-52eacc8dc70c" name="CableHome154_1" originalIdInSource="1541" assetType="4x10Cu_as10Cu__YMvK_asmb" length="6.8">
         <port xsi:type="esdl:InPort" id="4e7fdbff-71d5-4c3a-bc03-1b25f79d7880" name="In" connectedTo="65cc2b8d-6f55-4944-8a9b-b8b45fe26e49"/>
@@ -6192,30 +6254,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96163760650835" lon="4.028806737789221"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8ea3a40a-2441-40d9-9833-c64eb8b4e727" name="Home157_1" originalIdInSource="1571" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="8ea3a40a-2441-40d9-9833-c64eb8b4e727" name="Home157_1" originalIdInSource="1571" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99333418829162" lon="4.114050514327976"/>
         <asset xsi:type="esdl:EConnection" id="32e35862-2a11-4a57-9b05-dcab812b4c0d" name="ConnectionHome157_1" originalIdInSource="1571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="67f78fff-3db7-45b7-8d2f-d7f06e6913e1" name="In" connectedTo="4ac9dc91-ba2d-4af6-b587-9ba8359be865"/>
-          <port xsi:type="esdl:OutPort" id="b0658b83-d650-4471-9e43-6d5117a9024b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3a951c68-7776-403d-9d18-71136d4202ee" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="51af15d7-147a-4e09-b5ac-cbbfc261f2c6" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="b0658b83-d650-4471-9e43-6d5117a9024b" name="OutPh1" connectedTo="6cd6d4f1-df91-4ab8-aa9c-9724267d94b2"/>
+          <port xsi:type="esdl:OutPort" id="3a951c68-7776-403d-9d18-71136d4202ee" name="OutPh2" connectedTo="25412a55-788a-4c79-ba90-3087a56c3079"/>
+          <port xsi:type="esdl:OutPort" id="51af15d7-147a-4e09-b5ac-cbbfc261f2c6" name="OutPh3" connectedTo="8e49381d-d7b4-4cd5-8eeb-fb1347457d68"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5b35fc13-0d15-4406-b376-c739cf66533d" name="PhasegridHome157_1_Ph1" originalIdInSource="1571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6cd6d4f1-df91-4ab8-aa9c-9724267d94b2" name="In"/>
+          <port xsi:type="esdl:InPort" id="6cd6d4f1-df91-4ab8-aa9c-9724267d94b2" name="In" connectedTo="b0658b83-d650-4471-9e43-6d5117a9024b"/>
           <port xsi:type="esdl:OutPort" id="7dadadc1-1fb7-458a-8853-7f077f1503e4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8f4cf94f-6e95-4d5f-9223-e9bc42e7d98f" name="PhasegridHome157_1_Ph2" originalIdInSource="1571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="25412a55-788a-4c79-ba90-3087a56c3079" name="In"/>
+          <port xsi:type="esdl:InPort" id="25412a55-788a-4c79-ba90-3087a56c3079" name="In" connectedTo="3a951c68-7776-403d-9d18-71136d4202ee"/>
           <port xsi:type="esdl:OutPort" id="cf51b96d-3678-41a6-ad3a-6a56cd3d424a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2cf1f3e9-5a18-46f0-a179-d7ba02b2204a" name="PhasegridHome157_1_Ph3" originalIdInSource="1571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8e49381d-d7b4-4cd5-8eeb-fb1347457d68" name="In"/>
+          <port xsi:type="esdl:InPort" id="8e49381d-d7b4-4cd5-8eeb-fb1347457d68" name="In" connectedTo="51af15d7-147a-4e09-b5ac-cbbfc261f2c6"/>
           <port xsi:type="esdl:OutPort" id="663aa3ae-6623-42c0-9257-fc93cf685a1d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2b81048a-9142-46d1-8e0a-d0f4bd04c34d" name="CableHome157_1" originalIdInSource="1571" assetType="4x10Cu_re_as10__YCWY_mb" length="6.0">
         <port xsi:type="esdl:InPort" id="84ddd5b8-07b5-4633-b16b-c542a35db9e5" name="In" connectedTo="52e6a9a6-3582-4951-a3b6-89840778dffb"/>
@@ -6225,30 +6288,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99333418829162" lon="4.114050514327976"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e32952e6-79cd-4cfc-9174-e00a0e31b6ba" name="Home159_1" originalIdInSource="1591" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e32952e6-79cd-4cfc-9174-e00a0e31b6ba" name="Home159_1" originalIdInSource="1591" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99441885026033" lon="4.114602185032073"/>
         <asset xsi:type="esdl:EConnection" id="3241e329-e7c3-4d7d-afad-b36becf4fd06" name="ConnectionHome159_1" originalIdInSource="1591" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3b548c7c-bbc4-4e10-966b-321ad2f3baf9" name="In" connectedTo="60f20cbb-7eda-4d6a-a542-65f6ad7eff75"/>
-          <port xsi:type="esdl:OutPort" id="023d930a-c540-4bd7-aabc-00ef8c14549b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="68293cc2-a364-48dc-9aa8-fc73a09a0f75" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b22d63db-1e0d-4859-9a0c-63c3d9267c27" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="023d930a-c540-4bd7-aabc-00ef8c14549b" name="OutPh1" connectedTo="d6c37fa8-d61e-4afd-baa8-2c4ccf5678ee"/>
+          <port xsi:type="esdl:OutPort" id="68293cc2-a364-48dc-9aa8-fc73a09a0f75" name="OutPh2" connectedTo="a562bff3-a79f-4c68-8c4b-9a1766d1670a"/>
+          <port xsi:type="esdl:OutPort" id="b22d63db-1e0d-4859-9a0c-63c3d9267c27" name="OutPh3" connectedTo="ae244357-73dd-43c0-83b2-c93b4304d02f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="44ab3eaa-2029-4139-b5c6-a12f61f3ab8d" name="PhasegridHome159_1_Ph1" originalIdInSource="1591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d6c37fa8-d61e-4afd-baa8-2c4ccf5678ee" name="In"/>
+          <port xsi:type="esdl:InPort" id="d6c37fa8-d61e-4afd-baa8-2c4ccf5678ee" name="In" connectedTo="023d930a-c540-4bd7-aabc-00ef8c14549b"/>
           <port xsi:type="esdl:OutPort" id="ff0b6053-f4f1-4407-8160-4444164c028b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="86279882-34cd-49ba-8106-de085df3f82c" name="PhasegridHome159_1_Ph2" originalIdInSource="1591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a562bff3-a79f-4c68-8c4b-9a1766d1670a" name="In"/>
+          <port xsi:type="esdl:InPort" id="a562bff3-a79f-4c68-8c4b-9a1766d1670a" name="In" connectedTo="68293cc2-a364-48dc-9aa8-fc73a09a0f75"/>
           <port xsi:type="esdl:OutPort" id="277cf57a-4bd9-4ff4-a88c-98eaad3336e7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3255ea15-4eca-4dda-992e-460188b9817b" name="PhasegridHome159_1_Ph3" originalIdInSource="1591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae244357-73dd-43c0-83b2-c93b4304d02f" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae244357-73dd-43c0-83b2-c93b4304d02f" name="In" connectedTo="b22d63db-1e0d-4859-9a0c-63c3d9267c27"/>
           <port xsi:type="esdl:OutPort" id="35f6b6f7-93f7-40e1-bec5-e9b4e63015d9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8eb17e3d-3aeb-48bc-a215-37a64df31480" name="CableHome159_1" originalIdInSource="1591" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="e2af070c-df8d-4ec1-8d43-040565ac8e93" name="In" connectedTo="2e42d6b7-8e3b-4da7-9b83-f2d5a0ce9a2e"/>
@@ -6258,30 +6322,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99441885026033" lon="4.114602185032073"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cb5c38c1-9fd5-4928-bbf3-dad811680bd0" name="Home161_1" originalIdInSource="1611" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="cb5c38c1-9fd5-4928-bbf3-dad811680bd0" name="Home161_1" originalIdInSource="1611" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995676940104886" lon="4.114566476913853"/>
         <asset xsi:type="esdl:EConnection" id="f81d8e5b-2f0f-496b-b7ba-688965b1d95c" name="ConnectionHome161_1" originalIdInSource="1611" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6069318c-b639-46af-92cf-0b4944c732d0" name="In" connectedTo="81055965-5af8-4f6f-836a-3407ab08ffb4"/>
-          <port xsi:type="esdl:OutPort" id="7921d783-7823-42ab-a731-1f25de6a5527" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e8ef84c5-397e-4f55-9373-6bd8b7c21c61" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b2f88c97-58bb-4763-911c-928bcade0a6b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7921d783-7823-42ab-a731-1f25de6a5527" name="OutPh1" connectedTo="bb4ba51f-f095-40da-83ac-6dccb627e110"/>
+          <port xsi:type="esdl:OutPort" id="e8ef84c5-397e-4f55-9373-6bd8b7c21c61" name="OutPh2" connectedTo="b1959a02-7811-44eb-9382-9f6a0c5dd34e"/>
+          <port xsi:type="esdl:OutPort" id="b2f88c97-58bb-4763-911c-928bcade0a6b" name="OutPh3" connectedTo="7406c173-ed65-446c-8836-da1f8a6bb64d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="09d2b1af-8e7a-4572-9161-7f565ebdcc76" name="PhasegridHome161_1_Ph1" originalIdInSource="1611">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bb4ba51f-f095-40da-83ac-6dccb627e110" name="In"/>
+          <port xsi:type="esdl:InPort" id="bb4ba51f-f095-40da-83ac-6dccb627e110" name="In" connectedTo="7921d783-7823-42ab-a731-1f25de6a5527"/>
           <port xsi:type="esdl:OutPort" id="69446885-b675-452f-add6-eee76489657a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="57547fb5-6daa-4168-bfe5-8199abdd8ba3" name="PhasegridHome161_1_Ph2" originalIdInSource="1611">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b1959a02-7811-44eb-9382-9f6a0c5dd34e" name="In"/>
+          <port xsi:type="esdl:InPort" id="b1959a02-7811-44eb-9382-9f6a0c5dd34e" name="In" connectedTo="e8ef84c5-397e-4f55-9373-6bd8b7c21c61"/>
           <port xsi:type="esdl:OutPort" id="3aed4f10-ed54-44f0-adf8-5ae498b25a96" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b2a4ae78-ac5d-4cbd-8599-a80c448d0094" name="PhasegridHome161_1_Ph3" originalIdInSource="1611">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7406c173-ed65-446c-8836-da1f8a6bb64d" name="In"/>
+          <port xsi:type="esdl:InPort" id="7406c173-ed65-446c-8836-da1f8a6bb64d" name="In" connectedTo="b2f88c97-58bb-4763-911c-928bcade0a6b"/>
           <port xsi:type="esdl:OutPort" id="b10cf602-3d50-4edc-b89a-11a64617152a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f63998d5-85c2-421e-a9a2-f3653f429c4f" name="CableHome161_1" originalIdInSource="1611" assetType="4x10Cu_re_as10__YCWY_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="6a81b726-56b6-4fb7-88d0-5bdff94a65ec" name="In" connectedTo="8e41ee83-6c8f-4389-b806-1ff508a4e23f"/>
@@ -6291,30 +6356,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.995676940104886" lon="4.114566476913853"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="192d33a4-dbdd-43ce-a718-ecbfacb989b3" name="Home162_1" originalIdInSource="1621" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="192d33a4-dbdd-43ce-a718-ecbfacb989b3" name="Home162_1" originalIdInSource="1621" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9969381784735" lon="4.114821927800637"/>
         <asset xsi:type="esdl:EConnection" id="e5cfb93c-16e8-4539-bf41-554dab3831ab" name="ConnectionHome162_1" originalIdInSource="1621" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="253c9005-537c-4950-9924-a0afb5839723" name="In" connectedTo="6417d44c-eced-4dd9-a3bd-8f73a244131a"/>
-          <port xsi:type="esdl:OutPort" id="fc9d895f-eafd-4c9c-8234-e66121423fcc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f524e5d3-975b-4d61-9e3b-3f92bd630dac" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="97ffb0ef-6ccf-4b5c-908f-46fbad189855" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fc9d895f-eafd-4c9c-8234-e66121423fcc" name="OutPh1" connectedTo="8045eeea-73f8-43da-949e-9194e0242b19"/>
+          <port xsi:type="esdl:OutPort" id="f524e5d3-975b-4d61-9e3b-3f92bd630dac" name="OutPh2" connectedTo="27b592a2-f206-451e-a2d6-e4e67c124a76"/>
+          <port xsi:type="esdl:OutPort" id="97ffb0ef-6ccf-4b5c-908f-46fbad189855" name="OutPh3" connectedTo="24c3e9e4-5516-4756-902a-d9acdc7e4944"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f0954443-98b2-4acb-960b-f4d8a32d9ffd" name="PhasegridHome162_1_Ph1" originalIdInSource="1621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8045eeea-73f8-43da-949e-9194e0242b19" name="In"/>
+          <port xsi:type="esdl:InPort" id="8045eeea-73f8-43da-949e-9194e0242b19" name="In" connectedTo="fc9d895f-eafd-4c9c-8234-e66121423fcc"/>
           <port xsi:type="esdl:OutPort" id="1466dcfe-073a-4cc0-ab14-b9a4e20d1c6a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f12aecdd-71b1-43b7-ab26-1a438a580620" name="PhasegridHome162_1_Ph2" originalIdInSource="1621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="27b592a2-f206-451e-a2d6-e4e67c124a76" name="In"/>
+          <port xsi:type="esdl:InPort" id="27b592a2-f206-451e-a2d6-e4e67c124a76" name="In" connectedTo="f524e5d3-975b-4d61-9e3b-3f92bd630dac"/>
           <port xsi:type="esdl:OutPort" id="11ed4429-a358-4223-8e22-4adce0b7bc19" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="56772753-08d9-4532-8800-111f0237dd81" name="PhasegridHome162_1_Ph3" originalIdInSource="1621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="24c3e9e4-5516-4756-902a-d9acdc7e4944" name="In"/>
+          <port xsi:type="esdl:InPort" id="24c3e9e4-5516-4756-902a-d9acdc7e4944" name="In" connectedTo="97ffb0ef-6ccf-4b5c-908f-46fbad189855"/>
           <port xsi:type="esdl:OutPort" id="f8933e25-2642-4046-9340-a2252712707b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="63159f01-795f-4f75-868e-6c4c18194db6" name="CableHome162_1" originalIdInSource="1621" assetType="4x10Cu_as10__VO_YMvK_asmb" length="8.4">
         <port xsi:type="esdl:InPort" id="20f2a5e6-c16f-457e-9824-a1cf7e4c2dea" name="In" connectedTo="b1b6945c-77a4-46dd-a6a9-77a1a8342830"/>
@@ -6324,30 +6390,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9969381784735" lon="4.114821927800637"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4b54a70a-d0cf-4b05-ae38-5bf6d2d0a130" name="Home163_1" originalIdInSource="1631" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="4b54a70a-d0cf-4b05-ae38-5bf6d2d0a130" name="Home163_1" originalIdInSource="1631" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.997117905555015" lon="4.114816827289207"/>
         <asset xsi:type="esdl:EConnection" id="5e144d12-967d-42ed-8323-b53119492198" name="ConnectionHome163_1" originalIdInSource="1631" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1dd12f4e-cdc0-44e5-86d7-0ccd738f34df" name="In" connectedTo="9147c5a9-1e27-4333-9ac4-8489265e2b09"/>
-          <port xsi:type="esdl:OutPort" id="e4b76e4a-aadb-492c-92d3-06d19fbad2c9" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b4229d52-c6f0-4d47-a389-0aa0a4b380c9" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e9747ad4-64b8-4813-8073-a1fea118e39c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e4b76e4a-aadb-492c-92d3-06d19fbad2c9" name="OutPh1" connectedTo="bf952b37-f80d-4fb7-90ec-d0adc7c32e23"/>
+          <port xsi:type="esdl:OutPort" id="b4229d52-c6f0-4d47-a389-0aa0a4b380c9" name="OutPh2" connectedTo="6541d323-2b93-458e-9594-a43bd0aa304e"/>
+          <port xsi:type="esdl:OutPort" id="e9747ad4-64b8-4813-8073-a1fea118e39c" name="OutPh3" connectedTo="ae307d37-ebc4-41c8-9795-84f6d2768c82"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="093cb655-3581-4441-9534-8dd77fa27548" name="PhasegridHome163_1_Ph1" originalIdInSource="1631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bf952b37-f80d-4fb7-90ec-d0adc7c32e23" name="In"/>
+          <port xsi:type="esdl:InPort" id="bf952b37-f80d-4fb7-90ec-d0adc7c32e23" name="In" connectedTo="e4b76e4a-aadb-492c-92d3-06d19fbad2c9"/>
           <port xsi:type="esdl:OutPort" id="aa2a001b-5a0e-4e9d-816f-644d27daab9a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="878a8294-ab0c-4cfc-b899-f05e60ea1c79" name="PhasegridHome163_1_Ph2" originalIdInSource="1631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6541d323-2b93-458e-9594-a43bd0aa304e" name="In"/>
+          <port xsi:type="esdl:InPort" id="6541d323-2b93-458e-9594-a43bd0aa304e" name="In" connectedTo="b4229d52-c6f0-4d47-a389-0aa0a4b380c9"/>
           <port xsi:type="esdl:OutPort" id="f1af2bdf-eb8e-49ea-83ed-c8356188d147" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3091c87e-198e-404b-8af6-a3d4564d671f" name="PhasegridHome163_1_Ph3" originalIdInSource="1631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae307d37-ebc4-41c8-9795-84f6d2768c82" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae307d37-ebc4-41c8-9795-84f6d2768c82" name="In" connectedTo="e9747ad4-64b8-4813-8073-a1fea118e39c"/>
           <port xsi:type="esdl:OutPort" id="3aa690d9-4bb1-4d08-9321-c183219a89cd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1dddb701-180c-4d31-91a0-4b361acec2ac" name="CableHome163_1" originalIdInSource="1631" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.0">
         <port xsi:type="esdl:InPort" id="197eb350-69d8-4b5f-aeb4-1faad392fbcf" name="In" connectedTo="ed70e2d3-eb73-435b-bf3a-b132b08b1edc"/>
@@ -6357,30 +6424,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.997117905555015" lon="4.114816827289207"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c5527154-af38-4aed-80ca-c5eafd756dbb" name="Home164_1" originalIdInSource="1641" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="c5527154-af38-4aed-80ca-c5eafd756dbb" name="Home164_1" originalIdInSource="1641" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.998379143166055" lon="4.11507229308443"/>
         <asset xsi:type="esdl:EConnection" id="7c0ff472-5ab5-4524-a7af-b8ad081ed564" name="ConnectionHome164_1" originalIdInSource="1641" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f304ea93-cd58-42be-8380-0dd60ac9c529" name="In" connectedTo="f4115ec0-d08a-48a7-a55a-652c87cd3c87"/>
-          <port xsi:type="esdl:OutPort" id="85340d96-cf0e-4e9b-ba66-6c9eedd6698b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="977051e6-7b0d-47df-a3f4-7b827c7ec9ba" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="1f9ba2f5-fb41-4e16-87ce-d9fb7375a95b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="85340d96-cf0e-4e9b-ba66-6c9eedd6698b" name="OutPh1" connectedTo="b3cc0f2c-b568-4b7d-8584-2f63b73efc77"/>
+          <port xsi:type="esdl:OutPort" id="977051e6-7b0d-47df-a3f4-7b827c7ec9ba" name="OutPh2" connectedTo="5c7232ec-44a9-4cca-9002-19ba7febe6cf"/>
+          <port xsi:type="esdl:OutPort" id="1f9ba2f5-fb41-4e16-87ce-d9fb7375a95b" name="OutPh3" connectedTo="38314f18-ad1e-4292-8ae3-7f116165b7ee"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b4f2750d-cbec-4b83-bba0-fe99f66193c0" name="PhasegridHome164_1_Ph1" originalIdInSource="1641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b3cc0f2c-b568-4b7d-8584-2f63b73efc77" name="In"/>
+          <port xsi:type="esdl:InPort" id="b3cc0f2c-b568-4b7d-8584-2f63b73efc77" name="In" connectedTo="85340d96-cf0e-4e9b-ba66-6c9eedd6698b"/>
           <port xsi:type="esdl:OutPort" id="848dca0b-ad63-4a64-a591-fe54e1dcb086" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="885055ac-0455-4d40-b393-d5eb0f6fb7f0" name="PhasegridHome164_1_Ph2" originalIdInSource="1641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5c7232ec-44a9-4cca-9002-19ba7febe6cf" name="In"/>
+          <port xsi:type="esdl:InPort" id="5c7232ec-44a9-4cca-9002-19ba7febe6cf" name="In" connectedTo="977051e6-7b0d-47df-a3f4-7b827c7ec9ba"/>
           <port xsi:type="esdl:OutPort" id="909ff27e-7be8-452f-87ae-e10659c7dc84" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="00fa7375-50e8-4668-92dc-204dc61cae8f" name="PhasegridHome164_1_Ph3" originalIdInSource="1641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="38314f18-ad1e-4292-8ae3-7f116165b7ee" name="In"/>
+          <port xsi:type="esdl:InPort" id="38314f18-ad1e-4292-8ae3-7f116165b7ee" name="In" connectedTo="1f9ba2f5-fb41-4e16-87ce-d9fb7375a95b"/>
           <port xsi:type="esdl:OutPort" id="0b3b2073-21cf-4db5-8bca-651263e890ba" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fefbd247-bc22-4e0e-a3fe-5d5df39c6737" name="CableHome164_1" originalIdInSource="1641" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.5">
         <port xsi:type="esdl:InPort" id="1d8af2fa-0349-4877-a00a-ac222537f59f" name="In" connectedTo="7413e013-89f3-4212-aa99-64d437ae4291"/>
@@ -6390,30 +6458,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.998379143166055" lon="4.11507229308443"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e2455a12-4d81-468f-88a7-3648b561a55d" name="Home165_1" originalIdInSource="1651" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="e2455a12-4d81-468f-88a7-3648b561a55d" name="Home165_1" originalIdInSource="1651" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99982010707651" lon="4.115322674068076"/>
         <asset xsi:type="esdl:EConnection" id="9c5c1a34-33f0-43a1-a9db-a0a797e9f557" name="ConnectionHome165_1" originalIdInSource="1651" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2a07abbe-8ff4-4875-95df-dee85c49ee60" name="In" connectedTo="48403f4b-d7ab-47bf-9ea1-daf9a00796b9"/>
-          <port xsi:type="esdl:OutPort" id="fac0f3e9-9b44-4798-9b83-b832f3f25704" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="2a6e37d2-deeb-42e8-ba73-2a6526786b9b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6bddd0f0-11bc-4b46-8643-dce13b0aeb41" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fac0f3e9-9b44-4798-9b83-b832f3f25704" name="OutPh1" connectedTo="25635272-1496-41c3-82a4-a4767e5579f3"/>
+          <port xsi:type="esdl:OutPort" id="2a6e37d2-deeb-42e8-ba73-2a6526786b9b" name="OutPh2" connectedTo="a0f11c46-94cd-4a32-98a7-35c3813c4ac3"/>
+          <port xsi:type="esdl:OutPort" id="6bddd0f0-11bc-4b46-8643-dce13b0aeb41" name="OutPh3" connectedTo="f1792c6d-0640-4c87-8554-c4d5aa9e8137"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3a7e3777-cc90-4ff7-ab8c-6e4123c64620" name="PhasegridHome165_1_Ph1" originalIdInSource="1651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="25635272-1496-41c3-82a4-a4767e5579f3" name="In"/>
+          <port xsi:type="esdl:InPort" id="25635272-1496-41c3-82a4-a4767e5579f3" name="In" connectedTo="fac0f3e9-9b44-4798-9b83-b832f3f25704"/>
           <port xsi:type="esdl:OutPort" id="f6fb95cc-c811-4f8e-a9ac-a22ed563a073" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3ea2890c-0a21-46cc-a4a5-5659d9d9b680" name="PhasegridHome165_1_Ph2" originalIdInSource="1651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a0f11c46-94cd-4a32-98a7-35c3813c4ac3" name="In"/>
+          <port xsi:type="esdl:InPort" id="a0f11c46-94cd-4a32-98a7-35c3813c4ac3" name="In" connectedTo="2a6e37d2-deeb-42e8-ba73-2a6526786b9b"/>
           <port xsi:type="esdl:OutPort" id="293138d9-16c2-4aaa-8d2f-b84c19a57299" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d4b6da13-3c48-437d-b078-290cec53624b" name="PhasegridHome165_1_Ph3" originalIdInSource="1651">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f1792c6d-0640-4c87-8554-c4d5aa9e8137" name="In"/>
+          <port xsi:type="esdl:InPort" id="f1792c6d-0640-4c87-8554-c4d5aa9e8137" name="In" connectedTo="6bddd0f0-11bc-4b46-8643-dce13b0aeb41"/>
           <port xsi:type="esdl:OutPort" id="5aaa76a4-40c7-49c2-824c-600e2719be17" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="109.66" height="9.0" windowArea="28.259999999999994" doorArea="8.36" flatRoofArea="11.7" slantedRoofArea="72.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e75c6de7-67e0-4fde-8e0c-a5bbabbef4c5" name="CableHome165_1" originalIdInSource="1651" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.6">
         <port xsi:type="esdl:InPort" id="407f9e39-63e5-419f-86a8-e7ad10ed874d" name="In" connectedTo="bbd13a3f-2352-4295-9f5a-555eaafab94b"/>
@@ -6423,30 +6492,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99982010707651" lon="4.115322674068076"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3e3413bd-8bec-41f1-90f9-f77f0afd7d04" name="Home166_1" originalIdInSource="1661" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3e3413bd-8bec-41f1-90f9-f77f0afd7d04" name="Home166_1" originalIdInSource="1661" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99928092594613" lon="4.115337970580548"/>
         <asset xsi:type="esdl:EConnection" id="663f237b-49ae-417a-924f-f01489cb2cc5" name="ConnectionHome166_1" originalIdInSource="1661" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e72ebe0b-fb74-4f29-b3d6-5f5ec3613d18" name="In" connectedTo="60c0d237-b91e-4c2c-82b9-8a26bc3ef1c6"/>
-          <port xsi:type="esdl:OutPort" id="712841da-97bc-46ab-a569-692d3729c584" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ecc78a61-34c6-4b40-9511-88013a16abdf" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="035a996a-edb6-477d-a306-a96866d31b37" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="712841da-97bc-46ab-a569-692d3729c584" name="OutPh1" connectedTo="0364afb8-60ba-4817-91f7-4a1b51947222"/>
+          <port xsi:type="esdl:OutPort" id="ecc78a61-34c6-4b40-9511-88013a16abdf" name="OutPh2" connectedTo="724f9cbc-c561-49b8-9a0a-9c6ad09bd6c7"/>
+          <port xsi:type="esdl:OutPort" id="035a996a-edb6-477d-a306-a96866d31b37" name="OutPh3" connectedTo="288c6884-4fc3-4cf0-a0a2-d1ec7838ce36"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2eec3e8e-4ab5-488b-9bb0-847edb4b1c8e" name="PhasegridHome166_1_Ph1" originalIdInSource="1661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0364afb8-60ba-4817-91f7-4a1b51947222" name="In"/>
+          <port xsi:type="esdl:InPort" id="0364afb8-60ba-4817-91f7-4a1b51947222" name="In" connectedTo="712841da-97bc-46ab-a569-692d3729c584"/>
           <port xsi:type="esdl:OutPort" id="932f4e14-1166-43ea-8ce7-e15734a3ce92" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="650084eb-0bd0-42d8-ab39-cf21ff49506b" name="PhasegridHome166_1_Ph2" originalIdInSource="1661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="724f9cbc-c561-49b8-9a0a-9c6ad09bd6c7" name="In"/>
+          <port xsi:type="esdl:InPort" id="724f9cbc-c561-49b8-9a0a-9c6ad09bd6c7" name="In" connectedTo="ecc78a61-34c6-4b40-9511-88013a16abdf"/>
           <port xsi:type="esdl:OutPort" id="4087dd75-1d00-4f09-a904-47eb7c883e78" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f2a2c8f-f13c-4fc5-a193-2282afa51e5c" name="PhasegridHome166_1_Ph3" originalIdInSource="1661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="288c6884-4fc3-4cf0-a0a2-d1ec7838ce36" name="In"/>
+          <port xsi:type="esdl:InPort" id="288c6884-4fc3-4cf0-a0a2-d1ec7838ce36" name="In" connectedTo="035a996a-edb6-477d-a306-a96866d31b37"/>
           <port xsi:type="esdl:OutPort" id="b3f39f44-1af2-44a7-9eb4-cdd5e720ddbe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="48621bed-f92b-4da3-8885-cee9977139e6" name="CableHome166_1" originalIdInSource="1661" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.6">
         <port xsi:type="esdl:InPort" id="17b91720-d48a-46f6-b1fd-a9e0ff532233" name="In" connectedTo="06ab6379-9513-485d-93a2-84715bf3c0a5"/>
@@ -6456,30 +6526,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99928092594613" lon="4.115337970580548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f8e661d7-7905-45ef-81cc-82981434df7c" name="Home167_1" originalIdInSource="1671" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="f8e661d7-7905-45ef-81cc-82981434df7c" name="Home167_1" originalIdInSource="1671" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_B" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99269384756002" lon="4.040388773676428"/>
         <asset xsi:type="esdl:EConnection" id="6bcff7fe-a1f9-450b-825a-63fc3dc05d62" name="ConnectionHome167_1" originalIdInSource="1671" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ae0521b6-8df3-4e6a-9697-8ee57371cabe" name="In" connectedTo="ac2b130c-4ebb-484a-a101-ace7e552423e"/>
-          <port xsi:type="esdl:OutPort" id="75b49263-08bc-445c-a745-92fe86e8f67e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="69571035-3b17-453a-88a8-6a6378995ed2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="df29847c-5cda-4369-a255-11f8297214ac" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="75b49263-08bc-445c-a745-92fe86e8f67e" name="OutPh1" connectedTo="a129e1cc-c978-4e01-b697-18e6bc6942b7"/>
+          <port xsi:type="esdl:OutPort" id="69571035-3b17-453a-88a8-6a6378995ed2" name="OutPh2" connectedTo="76c90292-a9cd-424f-8b35-3adcaaf2253d"/>
+          <port xsi:type="esdl:OutPort" id="df29847c-5cda-4369-a255-11f8297214ac" name="OutPh3" connectedTo="fcb4306f-2a51-4210-9753-def4b78355f7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2bfb5f8a-4201-46f3-a7ed-0f4b534b44b0" name="PhasegridHome167_1_Ph1" originalIdInSource="1671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a129e1cc-c978-4e01-b697-18e6bc6942b7" name="In"/>
+          <port xsi:type="esdl:InPort" id="a129e1cc-c978-4e01-b697-18e6bc6942b7" name="In" connectedTo="75b49263-08bc-445c-a745-92fe86e8f67e"/>
           <port xsi:type="esdl:OutPort" id="af3fe48a-3056-47ef-ab09-28027af35d4e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e6f09d45-eafb-48d3-b737-208c9486c5f5" name="PhasegridHome167_1_Ph2" originalIdInSource="1671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="76c90292-a9cd-424f-8b35-3adcaaf2253d" name="In"/>
+          <port xsi:type="esdl:InPort" id="76c90292-a9cd-424f-8b35-3adcaaf2253d" name="In" connectedTo="69571035-3b17-453a-88a8-6a6378995ed2"/>
           <port xsi:type="esdl:OutPort" id="27f1aeed-15a8-4d35-90e4-51065f818ffe" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d4f17122-b2d1-485b-98c7-7ae447fd0b10" name="PhasegridHome167_1_Ph3" originalIdInSource="1671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fcb4306f-2a51-4210-9753-def4b78355f7" name="In"/>
+          <port xsi:type="esdl:InPort" id="fcb4306f-2a51-4210-9753-def4b78355f7" name="In" connectedTo="df29847c-5cda-4369-a255-11f8297214ac"/>
           <port xsi:type="esdl:OutPort" id="3d7fe6e3-565d-4d02-8838-63756d8d525e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="121546f6-3c48-482d-a8c3-823b35b3e452" name="CableHome167_1" originalIdInSource="1671" assetType="4x10Cu__GPLK" length="7.2">
         <port xsi:type="esdl:InPort" id="519901a3-9ad4-4ae2-a3f8-5edc28e1e313" name="In" connectedTo="9c38ef55-043f-4088-8593-6bdf3a7e02be"/>
@@ -6489,30 +6560,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99269384756002" lon="4.040388773676428"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="02f9c09e-1685-4eae-b743-8593bcf2980a" name="Home168_1" originalIdInSource="1681" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="02f9c09e-1685-4eae-b743-8593bcf2980a" name="Home168_1" originalIdInSource="1681" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.995263198641396" lon="4.044971490126336"/>
         <asset xsi:type="esdl:EConnection" id="d42466a1-a4c6-46bb-8fb9-b6f60506d604" name="ConnectionHome168_1" originalIdInSource="1681" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2862e0ef-f660-4354-8295-7481c4e75d17" name="In" connectedTo="e9b16c0f-a457-491c-bf57-2cf124cdaa5c"/>
-          <port xsi:type="esdl:OutPort" id="1b5e841b-3194-472e-b46d-930106c90a49" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="64248ce5-c48a-42a8-bb5a-f760dee4b95f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="47a90915-b361-4eb1-82e0-dbf66fdd4bfb" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="1b5e841b-3194-472e-b46d-930106c90a49" name="OutPh1" connectedTo="a3883631-e72b-4e07-97db-7860482f6a08"/>
+          <port xsi:type="esdl:OutPort" id="64248ce5-c48a-42a8-bb5a-f760dee4b95f" name="OutPh2" connectedTo="d0ce5e24-6b14-4639-9140-9a49aba84017"/>
+          <port xsi:type="esdl:OutPort" id="47a90915-b361-4eb1-82e0-dbf66fdd4bfb" name="OutPh3" connectedTo="fb4a7a31-37a1-42ce-90d8-0d116db3f759"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="494f73e3-8795-4f01-bc2a-1a018b6d6880" name="PhasegridHome168_1_Ph1" originalIdInSource="1681">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a3883631-e72b-4e07-97db-7860482f6a08" name="In"/>
+          <port xsi:type="esdl:InPort" id="a3883631-e72b-4e07-97db-7860482f6a08" name="In" connectedTo="1b5e841b-3194-472e-b46d-930106c90a49"/>
           <port xsi:type="esdl:OutPort" id="c59508d2-2b2f-4260-9a1d-f1560453c7f4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="524cd5e5-16d9-4311-ab64-b99058ecd9cf" name="PhasegridHome168_1_Ph2" originalIdInSource="1681">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d0ce5e24-6b14-4639-9140-9a49aba84017" name="In"/>
+          <port xsi:type="esdl:InPort" id="d0ce5e24-6b14-4639-9140-9a49aba84017" name="In" connectedTo="64248ce5-c48a-42a8-bb5a-f760dee4b95f"/>
           <port xsi:type="esdl:OutPort" id="906fa49b-737c-47ab-bee5-7430f3b60e5b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8a7c508c-e791-4f3b-aceb-53c02c43fdd0" name="PhasegridHome168_1_Ph3" originalIdInSource="1681">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fb4a7a31-37a1-42ce-90d8-0d116db3f759" name="In"/>
+          <port xsi:type="esdl:InPort" id="fb4a7a31-37a1-42ce-90d8-0d116db3f759" name="In" connectedTo="47a90915-b361-4eb1-82e0-dbf66fdd4bfb"/>
           <port xsi:type="esdl:OutPort" id="f9e93d6d-65de-4605-926d-e38e1015b081" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5d235a80-7a1f-489f-9f92-ab09e1884e1a" name="CableHome168_1" originalIdInSource="1681" assetType="4x10Cu__GPLK" length="1.5">
         <port xsi:type="esdl:InPort" id="c47b8e76-7e8a-4112-a1b9-a98c9023890d" name="In" connectedTo="4cfec590-2c0c-4b9c-8abb-cd996269df97"/>
@@ -6522,30 +6594,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.995263198641396" lon="4.044971490126336"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ebdd5fda-ffa4-470f-8f35-c7c9d8a5a775" name="Home171_1" originalIdInSource="1711" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="ebdd5fda-ffa4-470f-8f35-c7c9d8a5a775" name="Home171_1" originalIdInSource="1711" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_A" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.0010781962034" lon="4.115286980557033"/>
         <asset xsi:type="esdl:EConnection" id="c68093b0-55a5-4ab9-bd68-2d04752737b9" name="ConnectionHome171_1" originalIdInSource="1711" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="4af539b7-6214-479f-a977-2ec7d45f9aa4" name="In" connectedTo="63aa0984-28f7-4b1b-8535-7341de968fa2"/>
-          <port xsi:type="esdl:OutPort" id="6a75bfce-c831-4433-9a77-25c726e4e629" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="585df14b-4241-4472-bf6c-47b34e9470ee" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e841a191-7617-4add-b22e-213ba966ec2d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="6a75bfce-c831-4433-9a77-25c726e4e629" name="OutPh1" connectedTo="943235d4-959d-444a-9615-d48c47f84261"/>
+          <port xsi:type="esdl:OutPort" id="585df14b-4241-4472-bf6c-47b34e9470ee" name="OutPh2" connectedTo="8a0b4892-63af-4f58-bebf-0c14fa94920f"/>
+          <port xsi:type="esdl:OutPort" id="e841a191-7617-4add-b22e-213ba966ec2d" name="OutPh3" connectedTo="8cb2bdbb-4587-4815-b55a-4cc0dfc60675"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3108aaf0-15dc-4870-b267-c0c1333a8d92" name="PhasegridHome171_1_Ph1" originalIdInSource="1711">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="943235d4-959d-444a-9615-d48c47f84261" name="In"/>
+          <port xsi:type="esdl:InPort" id="943235d4-959d-444a-9615-d48c47f84261" name="In" connectedTo="6a75bfce-c831-4433-9a77-25c726e4e629"/>
           <port xsi:type="esdl:OutPort" id="2ae2bde0-a60b-43e6-bfcf-06ab494ec59f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b572cc08-dd25-45ea-b53e-9fd5f0469bb1" name="PhasegridHome171_1_Ph2" originalIdInSource="1711">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8a0b4892-63af-4f58-bebf-0c14fa94920f" name="In"/>
+          <port xsi:type="esdl:InPort" id="8a0b4892-63af-4f58-bebf-0c14fa94920f" name="In" connectedTo="585df14b-4241-4472-bf6c-47b34e9470ee"/>
           <port xsi:type="esdl:OutPort" id="44d9415a-e4d4-45e0-84cf-3a35eecb9279" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="76b1e01f-d492-4cb0-b05c-b1229dddb1c1" name="PhasegridHome171_1_Ph3" originalIdInSource="1711">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8cb2bdbb-4587-4815-b55a-4cc0dfc60675" name="In"/>
+          <port xsi:type="esdl:InPort" id="8cb2bdbb-4587-4815-b55a-4cc0dfc60675" name="In" connectedTo="e841a191-7617-4add-b22e-213ba966ec2d"/>
           <port xsi:type="esdl:OutPort" id="e2474157-d74e-4f4f-8d82-7bd91610860d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cdf7929b-0463-489b-99da-8276bc842931" name="CableHome171_1" originalIdInSource="1711" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.3">
         <port xsi:type="esdl:InPort" id="f35d120e-81e1-4a54-9e29-73747d5883d8" name="In" connectedTo="fe582c45-4bd8-4656-88fe-f8f756b5aa2f"/>
@@ -6555,30 +6628,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.0010781962034" lon="4.115286980557033"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5e20e49d-aea7-4bc4-833f-149540dea4e8" name="Home173_1" originalIdInSource="1731" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="5e20e49d-aea7-4bc4-833f-149540dea4e8" name="Home173_1" originalIdInSource="1731" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_A" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.0010781962034" lon="4.115286980557033"/>
         <asset xsi:type="esdl:EConnection" id="5869abe1-6f03-4976-b479-cb64d97fb666" name="ConnectionHome173_1" originalIdInSource="1731" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="aa409d1d-a444-49af-9d51-75695fca09d6" name="In" connectedTo="c6b23539-605b-4d5f-824e-0ed092f6f633"/>
-          <port xsi:type="esdl:OutPort" id="72b4030e-502f-496a-a9b7-b3ae4194c8ae" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="58150a8b-188a-4311-9b60-4cf3325bf901" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7d3411ff-4a15-40d8-8cb6-9f3837b5f4c9" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="72b4030e-502f-496a-a9b7-b3ae4194c8ae" name="OutPh1" connectedTo="92ef8d6b-8cce-4a1e-8eca-a9eaac4e507e"/>
+          <port xsi:type="esdl:OutPort" id="58150a8b-188a-4311-9b60-4cf3325bf901" name="OutPh2" connectedTo="c81c3936-d2aa-4866-b80d-cad7be53cf0b"/>
+          <port xsi:type="esdl:OutPort" id="7d3411ff-4a15-40d8-8cb6-9f3837b5f4c9" name="OutPh3" connectedTo="222b5ca2-214e-4fff-a955-62ec1d84d654"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cbc6dac5-e035-424e-9c5b-54bc03958393" name="PhasegridHome173_1_Ph1" originalIdInSource="1731">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="92ef8d6b-8cce-4a1e-8eca-a9eaac4e507e" name="In"/>
+          <port xsi:type="esdl:InPort" id="92ef8d6b-8cce-4a1e-8eca-a9eaac4e507e" name="In" connectedTo="72b4030e-502f-496a-a9b7-b3ae4194c8ae"/>
           <port xsi:type="esdl:OutPort" id="0cc6d119-bc0c-4b6e-8489-9810fdb2847a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a8f7f83e-484c-4228-97a3-3b7ca858996d" name="PhasegridHome173_1_Ph2" originalIdInSource="1731">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c81c3936-d2aa-4866-b80d-cad7be53cf0b" name="In"/>
+          <port xsi:type="esdl:InPort" id="c81c3936-d2aa-4866-b80d-cad7be53cf0b" name="In" connectedTo="58150a8b-188a-4311-9b60-4cf3325bf901"/>
           <port xsi:type="esdl:OutPort" id="15d1f989-ca39-4818-890d-2b1f655dd014" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b4773220-5448-469b-a8f0-c0e29f3a9b85" name="PhasegridHome173_1_Ph3" originalIdInSource="1731">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="222b5ca2-214e-4fff-a955-62ec1d84d654" name="In"/>
+          <port xsi:type="esdl:InPort" id="222b5ca2-214e-4fff-a955-62ec1d84d654" name="In" connectedTo="7d3411ff-4a15-40d8-8cb6-9f3837b5f4c9"/>
           <port xsi:type="esdl:OutPort" id="37cb5af3-558e-4045-84b1-9a56a6fd1b7d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="75347b9a-5b81-49d3-b3f3-06da8a96be24" name="CableHome173_1" originalIdInSource="1731" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="4c3853a0-b00d-44d9-9433-8063bb193894" name="In" connectedTo="2bffc0ce-e482-472f-9d9e-91e0809ae3c3"/>
@@ -6588,30 +6662,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.0010781962034" lon="4.115286980557033"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a7043264-18d6-429a-86bf-0f07768840f6" name="Home174_1" originalIdInSource="1741" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="a7043264-18d6-429a-86bf-0f07768840f6" name="Home174_1" originalIdInSource="1741" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99745968020398" lon="4.048400822184394"/>
         <asset xsi:type="esdl:EConnection" id="a63068aa-233e-473b-a0be-970a9c95e118" name="ConnectionHome174_1" originalIdInSource="1741" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d0d447c3-4d66-4691-9029-e9c2ea7e6925" name="In" connectedTo="19d8e69c-b23d-47b8-ac50-d7831606f7f3"/>
-          <port xsi:type="esdl:OutPort" id="7e453bd2-6341-436b-9e20-d83c9bd2189e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f7ef79bc-1177-40a3-8c19-9126d4bc933d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="409278ea-4821-4b6f-8411-a9c9cb6ccaef" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7e453bd2-6341-436b-9e20-d83c9bd2189e" name="OutPh1" connectedTo="b3d6fbde-5786-4636-a2c5-ec6db2aacc97"/>
+          <port xsi:type="esdl:OutPort" id="f7ef79bc-1177-40a3-8c19-9126d4bc933d" name="OutPh2" connectedTo="73adf48f-5823-4678-bc5e-15744636f829"/>
+          <port xsi:type="esdl:OutPort" id="409278ea-4821-4b6f-8411-a9c9cb6ccaef" name="OutPh3" connectedTo="a3e51257-9698-4e28-a1a6-fdf47b11948c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="54b887db-33fb-4e59-b924-929511ec7c1e" name="PhasegridHome174_1_Ph1" originalIdInSource="1741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b3d6fbde-5786-4636-a2c5-ec6db2aacc97" name="In"/>
+          <port xsi:type="esdl:InPort" id="b3d6fbde-5786-4636-a2c5-ec6db2aacc97" name="In" connectedTo="7e453bd2-6341-436b-9e20-d83c9bd2189e"/>
           <port xsi:type="esdl:OutPort" id="2f82937a-9053-443a-bfb1-89bf12a269bb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2d36a54d-b177-4947-8bde-cb5f4d7d6f7c" name="PhasegridHome174_1_Ph2" originalIdInSource="1741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="73adf48f-5823-4678-bc5e-15744636f829" name="In"/>
+          <port xsi:type="esdl:InPort" id="73adf48f-5823-4678-bc5e-15744636f829" name="In" connectedTo="f7ef79bc-1177-40a3-8c19-9126d4bc933d"/>
           <port xsi:type="esdl:OutPort" id="392d50f3-7abd-45ff-a67d-dd8bd6fb7dcb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f3d76949-f75a-421c-b450-8889e2307b29" name="PhasegridHome174_1_Ph3" originalIdInSource="1741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a3e51257-9698-4e28-a1a6-fdf47b11948c" name="In"/>
+          <port xsi:type="esdl:InPort" id="a3e51257-9698-4e28-a1a6-fdf47b11948c" name="In" connectedTo="409278ea-4821-4b6f-8411-a9c9cb6ccaef"/>
           <port xsi:type="esdl:OutPort" id="b069f5f5-3b8f-4a1a-8f49-9c060946a5e9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="811cfd84-e3bb-47a1-b2fd-1f5393dc28a5" name="CableHome174_1" originalIdInSource="1741" assetType="4x10Cu_as10Cu__YMvK_asmb" length="4.1">
         <port xsi:type="esdl:InPort" id="5d8ccc54-751f-4ead-b4af-e7b51b8f116a" name="In" connectedTo="66a682ee-cab2-4421-a461-45284884bc40"/>
@@ -6621,30 +6696,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99745968020398" lon="4.048400822184394"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2d1a66f9-102f-44ed-afdf-251040097232" name="Home176_1" originalIdInSource="1761" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="2d1a66f9-102f-44ed-afdf-251040097232" name="Home176_1" originalIdInSource="1761" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.000002285761916" lon="4.050655082060491"/>
         <asset xsi:type="esdl:EConnection" id="06c1b6df-97a6-471d-abce-1a53b7f143b9" name="ConnectionHome176_1" originalIdInSource="1761" assetType="3x80A" capacity="55425.62584220407">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8e728198-830a-41d2-92b6-ecaebeb7dd1b" name="In" connectedTo="09a92156-cdd9-4c67-882c-57a4276d6982"/>
-          <port xsi:type="esdl:OutPort" id="783d7c40-949b-467c-9b8a-91482765220f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="13ad9cbc-58fa-43e2-be2f-59dde55db0bc" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3cf44885-f581-4473-b318-aaca449d1eac" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="783d7c40-949b-467c-9b8a-91482765220f" name="OutPh1" connectedTo="d8162d2c-7271-4ef3-a909-723f11bf90be"/>
+          <port xsi:type="esdl:OutPort" id="13ad9cbc-58fa-43e2-be2f-59dde55db0bc" name="OutPh2" connectedTo="b3c606b9-5aea-4559-9275-31e7a6d23148"/>
+          <port xsi:type="esdl:OutPort" id="3cf44885-f581-4473-b318-aaca449d1eac" name="OutPh3" connectedTo="ae0da479-e14b-4658-bcd8-6e534ad0e630"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b2afa799-837b-4f50-a456-95232e0d084c" name="PhasegridHome176_1_Ph1" originalIdInSource="1761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d8162d2c-7271-4ef3-a909-723f11bf90be" name="In"/>
+          <port xsi:type="esdl:InPort" id="d8162d2c-7271-4ef3-a909-723f11bf90be" name="In" connectedTo="783d7c40-949b-467c-9b8a-91482765220f"/>
           <port xsi:type="esdl:OutPort" id="55269359-62f5-4770-b95c-c2b66c468d15" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e3299141-44c2-4343-aeb8-f3d68b18456f" name="PhasegridHome176_1_Ph2" originalIdInSource="1761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b3c606b9-5aea-4559-9275-31e7a6d23148" name="In"/>
+          <port xsi:type="esdl:InPort" id="b3c606b9-5aea-4559-9275-31e7a6d23148" name="In" connectedTo="13ad9cbc-58fa-43e2-be2f-59dde55db0bc"/>
           <port xsi:type="esdl:OutPort" id="b57fba87-3517-48ca-965a-40bd4235d338" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5b04ae1e-2d4d-4621-90d4-e9a0c6fc5a53" name="PhasegridHome176_1_Ph3" originalIdInSource="1761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae0da479-e14b-4658-bcd8-6e534ad0e630" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae0da479-e14b-4658-bcd8-6e534ad0e630" name="In" connectedTo="3cf44885-f581-4473-b318-aaca449d1eac"/>
           <port xsi:type="esdl:OutPort" id="350baf78-0b22-4c3d-9bcc-deb95ac5f853" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6cee5182-7855-4d46-b8e8-8070e2848b8a" name="CableHome176_1" originalIdInSource="1761" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.2">
         <port xsi:type="esdl:InPort" id="9e0bd32a-3807-46e0-94dc-a4dbf7c501d6" name="In" connectedTo="8af09d51-729e-4bbd-bd1b-3d5aaae4eb89"/>
@@ -6654,30 +6730,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000002285761916" lon="4.050655082060491"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="37df6716-3010-4fbb-92ed-99298140c014" name="Home177_1" originalIdInSource="1771" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="37df6716-3010-4fbb-92ed-99298140c014" name="Home177_1" originalIdInSource="1771" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.000600870244355" lon="4.05588023213326"/>
         <asset xsi:type="esdl:EConnection" id="75b72d10-7aa7-4cad-ac36-49c8d3a89403" name="ConnectionHome177_1" originalIdInSource="1771" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="13a28aa3-c4e8-4bdf-ab1e-be972e114faa" name="In" connectedTo="62f2daed-cfd0-4a8d-8b6e-33ce718b3bde"/>
-          <port xsi:type="esdl:OutPort" id="52d19cbd-20e4-45d8-81bc-a287e9fb2da3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="9b1118af-f78c-47e2-a18a-c08610ecddb9" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e64c0aa0-6b9e-489a-9bd1-6d7efb8d9a55" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="52d19cbd-20e4-45d8-81bc-a287e9fb2da3" name="OutPh1" connectedTo="8fb4280c-2600-486a-bb9e-863cec0e6add"/>
+          <port xsi:type="esdl:OutPort" id="9b1118af-f78c-47e2-a18a-c08610ecddb9" name="OutPh2" connectedTo="07ce7ddc-e873-4d4a-b39e-64b7c2673f40"/>
+          <port xsi:type="esdl:OutPort" id="e64c0aa0-6b9e-489a-9bd1-6d7efb8d9a55" name="OutPh3" connectedTo="63634717-ec19-4793-81e1-285201211e52"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="086796a0-6a40-4df7-a3a5-f53557484846" name="PhasegridHome177_1_Ph1" originalIdInSource="1771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8fb4280c-2600-486a-bb9e-863cec0e6add" name="In"/>
+          <port xsi:type="esdl:InPort" id="8fb4280c-2600-486a-bb9e-863cec0e6add" name="In" connectedTo="52d19cbd-20e4-45d8-81bc-a287e9fb2da3"/>
           <port xsi:type="esdl:OutPort" id="67fc884f-7ced-47c1-a3e2-d7ddb8bd4419" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8637b47e-9100-4e7a-8280-7cc080ad4cf3" name="PhasegridHome177_1_Ph2" originalIdInSource="1771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="07ce7ddc-e873-4d4a-b39e-64b7c2673f40" name="In"/>
+          <port xsi:type="esdl:InPort" id="07ce7ddc-e873-4d4a-b39e-64b7c2673f40" name="In" connectedTo="9b1118af-f78c-47e2-a18a-c08610ecddb9"/>
           <port xsi:type="esdl:OutPort" id="0113ecda-e67f-4a00-ac34-1e9755453ec8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a957de92-8972-4483-af92-4c4b1c810f53" name="PhasegridHome177_1_Ph3" originalIdInSource="1771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="63634717-ec19-4793-81e1-285201211e52" name="In"/>
+          <port xsi:type="esdl:InPort" id="63634717-ec19-4793-81e1-285201211e52" name="In" connectedTo="e64c0aa0-6b9e-489a-9bd1-6d7efb8d9a55"/>
           <port xsi:type="esdl:OutPort" id="aee266b0-b09c-49e0-a6ce-fc0a9c7a57b7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="80a3a61e-ceff-4193-a1e5-0f93e143e79b" name="CableHome177_1" originalIdInSource="1771" assetType="4x10Cu_as10Cu__YMvK_asmb" length="8.5">
         <port xsi:type="esdl:InPort" id="47f0a988-360a-4078-8c95-cb29f85bb799" name="In" connectedTo="9693e7f4-f8ef-47c3-881b-8c8f198be6c8"/>
@@ -6687,30 +6764,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000600870244355" lon="4.05588023213326"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f8914e70-f731-4727-a703-acec2c8270af" name="Home178_1" originalIdInSource="1781" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="f8914e70-f731-4727-a703-acec2c8270af" name="Home178_1" originalIdInSource="1781" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00133622750223" lon="4.057314804416471"/>
         <asset xsi:type="esdl:EConnection" id="77174fd3-cc9d-48f6-a971-361466a22cfc" name="ConnectionHome178_1" originalIdInSource="1781" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="554dfb45-7eae-4548-b49d-f31feca606a7" name="In" connectedTo="bba35d49-1c27-4cff-97e8-555423618eee"/>
-          <port xsi:type="esdl:OutPort" id="7e533b34-7e83-4e53-be75-6a3101b7c639" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="bdacdb7a-ebe3-46c3-a043-5ced5aabf55a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a55f0021-ec5d-4f55-ab95-6db0179495fd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7e533b34-7e83-4e53-be75-6a3101b7c639" name="OutPh1" connectedTo="496893d0-433b-4074-b27a-25f65c5f2f02"/>
+          <port xsi:type="esdl:OutPort" id="bdacdb7a-ebe3-46c3-a043-5ced5aabf55a" name="OutPh2" connectedTo="3957b342-2a21-4a3b-935b-216ad7257365"/>
+          <port xsi:type="esdl:OutPort" id="a55f0021-ec5d-4f55-ab95-6db0179495fd" name="OutPh3" connectedTo="e1ffa26d-0cf1-4704-abf4-b3426055f9ca"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f9b71a30-9c3f-4c8b-98f8-a65c8dc15805" name="PhasegridHome178_1_Ph1" originalIdInSource="1781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="496893d0-433b-4074-b27a-25f65c5f2f02" name="In"/>
+          <port xsi:type="esdl:InPort" id="496893d0-433b-4074-b27a-25f65c5f2f02" name="In" connectedTo="7e533b34-7e83-4e53-be75-6a3101b7c639"/>
           <port xsi:type="esdl:OutPort" id="71b6ab82-a7b7-4d23-a902-ccbf61fa16cd" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0a34ccf5-f0d4-4dd6-b223-d3ee275d113a" name="PhasegridHome178_1_Ph2" originalIdInSource="1781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3957b342-2a21-4a3b-935b-216ad7257365" name="In"/>
+          <port xsi:type="esdl:InPort" id="3957b342-2a21-4a3b-935b-216ad7257365" name="In" connectedTo="bdacdb7a-ebe3-46c3-a043-5ced5aabf55a"/>
           <port xsi:type="esdl:OutPort" id="26f18ade-0fa2-4c25-a03f-b7d85360027e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9241a0c8-ba71-4914-9720-b87109cbdc8e" name="PhasegridHome178_1_Ph3" originalIdInSource="1781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e1ffa26d-0cf1-4704-abf4-b3426055f9ca" name="In"/>
+          <port xsi:type="esdl:InPort" id="e1ffa26d-0cf1-4704-abf4-b3426055f9ca" name="In" connectedTo="a55f0021-ec5d-4f55-ab95-6db0179495fd"/>
           <port xsi:type="esdl:OutPort" id="b0189f44-431c-483f-b3ea-3e0defe7eb90" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e4b8589d-ed9e-4c3d-8b26-0643c629f6e0" name="CableHome178_1" originalIdInSource="1781" assetType="4x6Cu__GPLK" length="5.9">
         <port xsi:type="esdl:InPort" id="98ea1ebb-cbe9-405a-81a0-32476bbd5d78" name="In" connectedTo="b941c20b-2274-4a81-b869-5a4c6c8ce621"/>
@@ -6720,30 +6798,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00133622750223" lon="4.057314804416471"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2a16fdab-cee9-4f25-adc1-d25397984ebc" name="Home179_1" originalIdInSource="1791" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="2a16fdab-cee9-4f25-adc1-d25397984ebc" name="Home179_1" originalIdInSource="1791" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.987391656305384" lon="4.032685808574392"/>
         <asset xsi:type="esdl:EConnection" id="eed5c522-755a-4219-9f0f-4ae780c6b08a" name="ConnectionHome179_1" originalIdInSource="1791" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e28d4c54-a1f0-4267-a055-4b3ec6c3d05d" name="In" connectedTo="040bd985-036d-42d4-85aa-509afd925b47"/>
-          <port xsi:type="esdl:OutPort" id="87cceaa2-6844-4f4c-a2aa-bb9c5a4ea4c3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="4ce8a614-7c9d-41c2-8493-d312c2a1041f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0ffd0128-c831-4bbb-83af-ec2aef0bce77" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="87cceaa2-6844-4f4c-a2aa-bb9c5a4ea4c3" name="OutPh1" connectedTo="2c8d8bdf-51fe-4b3e-a414-568d0000e25c"/>
+          <port xsi:type="esdl:OutPort" id="4ce8a614-7c9d-41c2-8493-d312c2a1041f" name="OutPh2" connectedTo="31a7ef6f-632f-49d0-8a3a-80b53eb5200e"/>
+          <port xsi:type="esdl:OutPort" id="0ffd0128-c831-4bbb-83af-ec2aef0bce77" name="OutPh3" connectedTo="0036c8c6-f411-4e0a-a5a1-3b0a000ea9b5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="369271dc-fb70-4ee0-b1d2-c85769723007" name="PhasegridHome179_1_Ph1" originalIdInSource="1791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2c8d8bdf-51fe-4b3e-a414-568d0000e25c" name="In"/>
+          <port xsi:type="esdl:InPort" id="2c8d8bdf-51fe-4b3e-a414-568d0000e25c" name="In" connectedTo="87cceaa2-6844-4f4c-a2aa-bb9c5a4ea4c3"/>
           <port xsi:type="esdl:OutPort" id="b0b72c81-f7ff-4268-95e6-4d6e01293606" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cd7f13c1-dae5-403c-8f8e-d7cc0663e4a2" name="PhasegridHome179_1_Ph2" originalIdInSource="1791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="31a7ef6f-632f-49d0-8a3a-80b53eb5200e" name="In"/>
+          <port xsi:type="esdl:InPort" id="31a7ef6f-632f-49d0-8a3a-80b53eb5200e" name="In" connectedTo="4ce8a614-7c9d-41c2-8493-d312c2a1041f"/>
           <port xsi:type="esdl:OutPort" id="6a2b48f7-4ac8-459b-b341-ce34a0ae640e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a024b767-8380-40fd-8ae9-e667a13d6c3c" name="PhasegridHome179_1_Ph3" originalIdInSource="1791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0036c8c6-f411-4e0a-a5a1-3b0a000ea9b5" name="In"/>
+          <port xsi:type="esdl:InPort" id="0036c8c6-f411-4e0a-a5a1-3b0a000ea9b5" name="In" connectedTo="0ffd0128-c831-4bbb-83af-ec2aef0bce77"/>
           <port xsi:type="esdl:OutPort" id="1fa70676-8394-49dc-94ee-c8dfeb8713e8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0f15a592-60bd-49a9-940d-c4764bc2f29d" name="CableHome179_1" originalIdInSource="1791" assetType="4x10Cu_as10Cu__YMvK_asmb" length="7.0">
         <port xsi:type="esdl:InPort" id="8db42917-1542-445a-8ff9-175622e0fed2" name="In" connectedTo="a0543dbc-ad06-4f4e-9160-767b5ed71f28"/>
@@ -6753,30 +6832,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.987391656305384" lon="4.032685808574392"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c6d32051-2f44-406d-b45c-aa0e03d083fe" name="Home180_1" originalIdInSource="1801" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="c6d32051-2f44-406d-b45c-aa0e03d083fe" name="Home180_1" originalIdInSource="1801" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98885287980275" lon="4.034680088953625"/>
         <asset xsi:type="esdl:EConnection" id="9c39cde0-2377-4d02-8190-4678dcd060fc" name="ConnectionHome180_1" originalIdInSource="1801" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2265019c-3417-4a81-bdb0-ef20fa2460a9" name="In" connectedTo="9a344a77-7b2a-442f-bbf4-d518bcae1311"/>
-          <port xsi:type="esdl:OutPort" id="13c3bbeb-5699-43f1-84ca-2037cef6ed9e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d6a58019-0c44-4be6-98ff-41c9f4fbb794" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b7c68185-ee4a-476f-a803-6ce18ef76404" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="13c3bbeb-5699-43f1-84ca-2037cef6ed9e" name="OutPh1" connectedTo="ac6d8c31-118c-4ab0-9ff4-305e2a32f3a7"/>
+          <port xsi:type="esdl:OutPort" id="d6a58019-0c44-4be6-98ff-41c9f4fbb794" name="OutPh2" connectedTo="5a896caf-1c7b-444a-bbed-abd0fae1de41"/>
+          <port xsi:type="esdl:OutPort" id="b7c68185-ee4a-476f-a803-6ce18ef76404" name="OutPh3" connectedTo="f1da8705-069f-4d71-856b-58d7338c9f26"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="caded694-94b1-4701-b2d9-6ced8f8903e1" name="PhasegridHome180_1_Ph1" originalIdInSource="1801">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ac6d8c31-118c-4ab0-9ff4-305e2a32f3a7" name="In"/>
+          <port xsi:type="esdl:InPort" id="ac6d8c31-118c-4ab0-9ff4-305e2a32f3a7" name="In" connectedTo="13c3bbeb-5699-43f1-84ca-2037cef6ed9e"/>
           <port xsi:type="esdl:OutPort" id="361b7f5e-8bf2-4ad0-b628-6570fd3fb201" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f39bf1f5-e740-46aa-a7d9-e754992b818b" name="PhasegridHome180_1_Ph2" originalIdInSource="1801">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5a896caf-1c7b-444a-bbed-abd0fae1de41" name="In"/>
+          <port xsi:type="esdl:InPort" id="5a896caf-1c7b-444a-bbed-abd0fae1de41" name="In" connectedTo="d6a58019-0c44-4be6-98ff-41c9f4fbb794"/>
           <port xsi:type="esdl:OutPort" id="3d5ceab1-4c50-42cf-919c-0cd24c1a957b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f3674acf-e2ae-4edc-8723-a40f3fc4905e" name="PhasegridHome180_1_Ph3" originalIdInSource="1801">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f1da8705-069f-4d71-856b-58d7338c9f26" name="In"/>
+          <port xsi:type="esdl:InPort" id="f1da8705-069f-4d71-856b-58d7338c9f26" name="In" connectedTo="b7c68185-ee4a-476f-a803-6ce18ef76404"/>
           <port xsi:type="esdl:OutPort" id="fbac119e-3d2c-444f-ae45-a3f0d392e5aa" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b55b6177-40dc-4c34-a9e9-5826238d98fd" name="CableHome180_1" originalIdInSource="1801" assetType="4x10Cu__GPLK" length="7.3">
         <port xsi:type="esdl:InPort" id="9b9efe81-73ed-4b03-ab0c-2073e451c95f" name="In" connectedTo="a216f018-cae7-4810-9914-a9a2ae76c78e"/>
@@ -6786,30 +6866,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98885287980275" lon="4.034680088953625"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9c4c0952-32ef-48d9-add0-115b578e5a88" name="Home181_1" originalIdInSource="1811" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="9c4c0952-32ef-48d9-add0-115b578e5a88" name="Home181_1" originalIdInSource="1811" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989761529454874" lon="4.035526307603105"/>
         <asset xsi:type="esdl:EConnection" id="1852b64d-0a28-4b5f-9d88-7a423d177cf2" name="ConnectionHome181_1" originalIdInSource="1811" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="bbb0d641-8ff6-488e-9ca3-e7931bf9f17e" name="In" connectedTo="4320aa13-3e21-4ea3-9b80-6f476f805b27"/>
-          <port xsi:type="esdl:OutPort" id="db2dc143-2eff-4de7-bc13-163ede9fd167" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="bebfdf62-c2ca-45a1-9f15-335a0595ebb2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="1851a2db-ee7d-4df7-ba62-2bc859a32ef0" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="db2dc143-2eff-4de7-bc13-163ede9fd167" name="OutPh1" connectedTo="30b2cee6-5893-48fa-9701-b710963d7b48"/>
+          <port xsi:type="esdl:OutPort" id="bebfdf62-c2ca-45a1-9f15-335a0595ebb2" name="OutPh2" connectedTo="67865be7-d370-4f31-9dd4-657fe27efab7"/>
+          <port xsi:type="esdl:OutPort" id="1851a2db-ee7d-4df7-ba62-2bc859a32ef0" name="OutPh3" connectedTo="7ea65340-3d51-4098-92b8-6c1483a01ae1"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="17c03b19-70c8-4c36-be6c-5ce3362b05d2" name="PhasegridHome181_1_Ph1" originalIdInSource="1811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="30b2cee6-5893-48fa-9701-b710963d7b48" name="In"/>
+          <port xsi:type="esdl:InPort" id="30b2cee6-5893-48fa-9701-b710963d7b48" name="In" connectedTo="db2dc143-2eff-4de7-bc13-163ede9fd167"/>
           <port xsi:type="esdl:OutPort" id="a14e33b4-cf59-46ac-8483-2d5624b0e747" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="887d2909-dffc-406b-a1f7-8f207e8233d2" name="PhasegridHome181_1_Ph2" originalIdInSource="1811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="67865be7-d370-4f31-9dd4-657fe27efab7" name="In"/>
+          <port xsi:type="esdl:InPort" id="67865be7-d370-4f31-9dd4-657fe27efab7" name="In" connectedTo="bebfdf62-c2ca-45a1-9f15-335a0595ebb2"/>
           <port xsi:type="esdl:OutPort" id="fa52e54f-4dba-4110-986d-eec190abe680" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="041d6793-bf41-472f-814f-98a488dc9224" name="PhasegridHome181_1_Ph3" originalIdInSource="1811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7ea65340-3d51-4098-92b8-6c1483a01ae1" name="In"/>
+          <port xsi:type="esdl:InPort" id="7ea65340-3d51-4098-92b8-6c1483a01ae1" name="In" connectedTo="1851a2db-ee7d-4df7-ba62-2bc859a32ef0"/>
           <port xsi:type="esdl:OutPort" id="c9684b52-d504-48c3-883e-d4f154f65c84" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2d2d426d-5f75-441b-9841-ca4f9d278b2e" name="CableHome181_1" originalIdInSource="1811" assetType="4x10Cu__GPLK" length="6.3">
         <port xsi:type="esdl:InPort" id="76447828-0e6f-49f9-84a8-f91919cb6561" name="In" connectedTo="e5b950c1-6fc8-4d1e-b7f2-e7a01b412ce7"/>
@@ -6819,30 +6900,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989761529454874" lon="4.035526307603105"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6f267105-d3c7-4f76-a689-b1b96e205175" name="Home182_1" originalIdInSource="1821" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6f267105-d3c7-4f76-a689-b1b96e205175" name="Home182_1" originalIdInSource="1821" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99104632142915" lon="4.037817310886574"/>
         <asset xsi:type="esdl:EConnection" id="6057c525-9f5e-4171-b174-c513941bd842" name="ConnectionHome182_1" originalIdInSource="1821" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9e8bac8d-10a8-448a-b817-0baa6ad2789d" name="In" connectedTo="74184511-f5ab-4ffa-8217-693d2b6f8e27"/>
-          <port xsi:type="esdl:OutPort" id="d96613bf-a0e1-467d-941a-787b68a1b11d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c6753534-682b-4624-b97f-72b5ac799895" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="fb92619d-18f8-46e4-a433-3453ed4473e7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d96613bf-a0e1-467d-941a-787b68a1b11d" name="OutPh1" connectedTo="1bcc1a58-1f62-458e-a4d8-a92512865512"/>
+          <port xsi:type="esdl:OutPort" id="c6753534-682b-4624-b97f-72b5ac799895" name="OutPh2" connectedTo="b8a5720f-667b-4b0c-bb12-819651043b35"/>
+          <port xsi:type="esdl:OutPort" id="fb92619d-18f8-46e4-a433-3453ed4473e7" name="OutPh3" connectedTo="5fffecbf-047e-45aa-a0db-a071eb2235bb"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b1c60e8a-9a1a-467d-8ab7-a51e23927001" name="PhasegridHome182_1_Ph1" originalIdInSource="1821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1bcc1a58-1f62-458e-a4d8-a92512865512" name="In"/>
+          <port xsi:type="esdl:InPort" id="1bcc1a58-1f62-458e-a4d8-a92512865512" name="In" connectedTo="d96613bf-a0e1-467d-941a-787b68a1b11d"/>
           <port xsi:type="esdl:OutPort" id="fe7b2a41-08d1-4105-a439-e58b61e4cfea" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7814da18-0d11-499c-a986-cf9e1db0b579" name="PhasegridHome182_1_Ph2" originalIdInSource="1821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b8a5720f-667b-4b0c-bb12-819651043b35" name="In"/>
+          <port xsi:type="esdl:InPort" id="b8a5720f-667b-4b0c-bb12-819651043b35" name="In" connectedTo="c6753534-682b-4624-b97f-72b5ac799895"/>
           <port xsi:type="esdl:OutPort" id="01e5ca2c-41d4-4eb9-ad31-d2d8d60d744a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9f4971ad-89f2-4655-a8e5-7f0756cc7cae" name="PhasegridHome182_1_Ph3" originalIdInSource="1821">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5fffecbf-047e-45aa-a0db-a071eb2235bb" name="In"/>
+          <port xsi:type="esdl:InPort" id="5fffecbf-047e-45aa-a0db-a071eb2235bb" name="In" connectedTo="fb92619d-18f8-46e4-a433-3453ed4473e7"/>
           <port xsi:type="esdl:OutPort" id="d14cb988-1ebc-4400-a60a-033ad1e18bf9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a6d5444c-0db5-4622-829e-cff6703deab7" name="CableHome182_1" originalIdInSource="1821" assetType="4x10Cu_re_as10__YCWY_mb" length="8.1">
         <port xsi:type="esdl:InPort" id="4cce516e-58b0-4b66-9a84-b32343d9adb2" name="In" connectedTo="15d55202-ce30-448c-9acd-556b6b4b2227"/>
@@ -6852,30 +6934,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99104632142915" lon="4.037817310886574"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="77870bb5-9d3d-463e-aecf-7bf5e5632f2d" name="Home185_1" originalIdInSource="1851" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="77870bb5-9d3d-463e-aecf-7bf5e5632f2d" name="Home185_1" originalIdInSource="1851" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99324634052371" lon="4.041537100360862"/>
         <asset xsi:type="esdl:EConnection" id="e0ad1f75-2968-4b0c-bd44-d0bc9097db74" name="ConnectionHome185_1" originalIdInSource="1851" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d4e30482-cfad-490a-acaf-45e781b5701e" name="In" connectedTo="1d1c392e-c208-4259-8e54-7b1effbfef61"/>
-          <port xsi:type="esdl:OutPort" id="fdafe6cb-5a2f-47b2-8dc4-b8e71d30370f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="21844254-fa06-4e8d-a19f-47898bcb4293" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="c60bbb44-fac4-463c-a2c0-3e9f5742bd53" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fdafe6cb-5a2f-47b2-8dc4-b8e71d30370f" name="OutPh1" connectedTo="997e7658-03cd-415a-965f-4f9e2c7cbd21"/>
+          <port xsi:type="esdl:OutPort" id="21844254-fa06-4e8d-a19f-47898bcb4293" name="OutPh2" connectedTo="3261dcb9-30c1-4616-887d-241ea3fe9c04"/>
+          <port xsi:type="esdl:OutPort" id="c60bbb44-fac4-463c-a2c0-3e9f5742bd53" name="OutPh3" connectedTo="82fcb685-01f4-4ffc-b8ae-c4aedcd9b7c3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bd8f7ef2-904f-4e6d-96df-94ba24f6eccb" name="PhasegridHome185_1_Ph1" originalIdInSource="1851">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="997e7658-03cd-415a-965f-4f9e2c7cbd21" name="In"/>
+          <port xsi:type="esdl:InPort" id="997e7658-03cd-415a-965f-4f9e2c7cbd21" name="In" connectedTo="fdafe6cb-5a2f-47b2-8dc4-b8e71d30370f"/>
           <port xsi:type="esdl:OutPort" id="8aa5d4c3-cfa6-4727-a722-10563e73d281" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="40ca946e-ce6d-4a46-81bb-f1cd47aebe6b" name="PhasegridHome185_1_Ph2" originalIdInSource="1851">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3261dcb9-30c1-4616-887d-241ea3fe9c04" name="In"/>
+          <port xsi:type="esdl:InPort" id="3261dcb9-30c1-4616-887d-241ea3fe9c04" name="In" connectedTo="21844254-fa06-4e8d-a19f-47898bcb4293"/>
           <port xsi:type="esdl:OutPort" id="b10bce5e-6f64-4bf7-b8b0-fe59aaf8a9ab" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b123962d-01ef-43c4-9701-4c50198b6c14" name="PhasegridHome185_1_Ph3" originalIdInSource="1851">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="82fcb685-01f4-4ffc-b8ae-c4aedcd9b7c3" name="In"/>
+          <port xsi:type="esdl:InPort" id="82fcb685-01f4-4ffc-b8ae-c4aedcd9b7c3" name="In" connectedTo="c60bbb44-fac4-463c-a2c0-3e9f5742bd53"/>
           <port xsi:type="esdl:OutPort" id="c147aeb0-d329-4ada-a453-192d194fb7c9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7b2c97f8-e5e1-4ce5-b7c7-da7f16eac2b2" name="CableHome185_1" originalIdInSource="1851" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="0965a42b-0ea2-43b7-ac9c-254925aa550e" name="In" connectedTo="1887b91a-c02f-47b2-9f0f-2c00fe9f355e"/>
@@ -6885,30 +6968,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99324634052371" lon="4.041537100360862"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2a9b5385-d4d7-4396-8693-7adb3a690bca" name="Home186_1" originalIdInSource="1861" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="2a9b5385-d4d7-4396-8693-7adb3a690bca" name="Home186_1" originalIdInSource="1861" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99434464355002" lon="4.043251563134586"/>
         <asset xsi:type="esdl:EConnection" id="e7161116-b3a1-498e-a228-9ef614c5c6b9" name="ConnectionHome186_1" originalIdInSource="1861" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2f66276f-206a-4e47-b5ac-aae80f46b937" name="In" connectedTo="75b78604-9722-4266-bef0-970ff791ae8f"/>
-          <port xsi:type="esdl:OutPort" id="b6055dfa-a02a-4adf-8925-80f23ed887a5" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="fbb4939b-f29d-4e35-b979-c9ed38f7e8d5" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="c0c86ee7-5283-415d-b3f2-c601c87fe8ad" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="b6055dfa-a02a-4adf-8925-80f23ed887a5" name="OutPh1" connectedTo="92f637c5-7f3b-4da3-8cb4-4d32989695a7"/>
+          <port xsi:type="esdl:OutPort" id="fbb4939b-f29d-4e35-b979-c9ed38f7e8d5" name="OutPh2" connectedTo="2582ed2b-b566-4331-b8f1-c5cf388c8ac8"/>
+          <port xsi:type="esdl:OutPort" id="c0c86ee7-5283-415d-b3f2-c601c87fe8ad" name="OutPh3" connectedTo="4cab80e2-a0cd-409d-b62b-a24e74616aeb"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="18254b5c-5afb-4433-859a-5799f9058c7b" name="PhasegridHome186_1_Ph1" originalIdInSource="1861">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="92f637c5-7f3b-4da3-8cb4-4d32989695a7" name="In"/>
+          <port xsi:type="esdl:InPort" id="92f637c5-7f3b-4da3-8cb4-4d32989695a7" name="In" connectedTo="b6055dfa-a02a-4adf-8925-80f23ed887a5"/>
           <port xsi:type="esdl:OutPort" id="4d40b7b1-1a8f-4529-9d4d-1d0a5307a325" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7e678ae0-c04d-41fc-b410-1c18954396af" name="PhasegridHome186_1_Ph2" originalIdInSource="1861">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2582ed2b-b566-4331-b8f1-c5cf388c8ac8" name="In"/>
+          <port xsi:type="esdl:InPort" id="2582ed2b-b566-4331-b8f1-c5cf388c8ac8" name="In" connectedTo="fbb4939b-f29d-4e35-b979-c9ed38f7e8d5"/>
           <port xsi:type="esdl:OutPort" id="81ebc843-1338-4acf-a363-c2354867c8a9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d139e9e3-92a8-4e21-b793-0cb2afed29e3" name="PhasegridHome186_1_Ph3" originalIdInSource="1861">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4cab80e2-a0cd-409d-b62b-a24e74616aeb" name="In"/>
+          <port xsi:type="esdl:InPort" id="4cab80e2-a0cd-409d-b62b-a24e74616aeb" name="In" connectedTo="c0c86ee7-5283-415d-b3f2-c601c87fe8ad"/>
           <port xsi:type="esdl:OutPort" id="c2dc4a24-b069-4b1a-a261-24436a3a617f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.6" height="9.0" windowArea="23.39" doorArea="7.0" flatRoofArea="17.33" slantedRoofArea="58.82"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3238ea29-877d-4dcc-9077-bd9b30d1da19" name="CableHome186_1" originalIdInSource="1861" assetType="4x10Cu_as10Cu__YMvK_asmb" length="7.3">
         <port xsi:type="esdl:InPort" id="25079e1b-fdeb-4a49-ada8-3f96527b86b1" name="In" connectedTo="f933c5d8-4846-4a1c-9ceb-06ffb894f2c5"/>
@@ -6918,30 +7002,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99434464355002" lon="4.043251563134586"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e8869831-aac4-453e-9a07-01a764bc6559" name="Home190_1" originalIdInSource="1901" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="e8869831-aac4-453e-9a07-01a764bc6559" name="Home190_1" originalIdInSource="1901" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98967789692418" lon="4.09202280694053"/>
         <asset xsi:type="esdl:EConnection" id="fee3e8d3-3dd1-4b3a-a44d-1a13c2f70ffc" name="ConnectionHome190_1" originalIdInSource="1901" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8d1bfe32-b647-43ca-976b-ea7d1a474395" name="In" connectedTo="e51ef475-f9e5-4368-907d-ad274f0decf3"/>
-          <port xsi:type="esdl:OutPort" id="becaefea-48a5-4ebe-a63b-d3b1ed91343c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="df9f739a-0b87-49bd-a77d-59427ae10058" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="eeb9d182-5331-4292-a323-182476e7befe" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="becaefea-48a5-4ebe-a63b-d3b1ed91343c" name="OutPh1" connectedTo="622a4e69-0164-4088-a760-5f6d0c14f0a8"/>
+          <port xsi:type="esdl:OutPort" id="df9f739a-0b87-49bd-a77d-59427ae10058" name="OutPh2" connectedTo="d6353efa-26a7-4405-9ab4-4f5a4c5cbd76"/>
+          <port xsi:type="esdl:OutPort" id="eeb9d182-5331-4292-a323-182476e7befe" name="OutPh3" connectedTo="51a1c048-1733-4ce6-b4b9-9c730dca602f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="87a3ca10-d4c8-4e08-b71e-5e41bc1c1727" name="PhasegridHome190_1_Ph1" originalIdInSource="1901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="622a4e69-0164-4088-a760-5f6d0c14f0a8" name="In"/>
+          <port xsi:type="esdl:InPort" id="622a4e69-0164-4088-a760-5f6d0c14f0a8" name="In" connectedTo="becaefea-48a5-4ebe-a63b-d3b1ed91343c"/>
           <port xsi:type="esdl:OutPort" id="c2bc924d-8de6-4d17-b3dd-aac8bfba6426" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="24f292a5-0b7d-4415-92d6-1b43393443a2" name="PhasegridHome190_1_Ph2" originalIdInSource="1901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d6353efa-26a7-4405-9ab4-4f5a4c5cbd76" name="In"/>
+          <port xsi:type="esdl:InPort" id="d6353efa-26a7-4405-9ab4-4f5a4c5cbd76" name="In" connectedTo="df9f739a-0b87-49bd-a77d-59427ae10058"/>
           <port xsi:type="esdl:OutPort" id="07ed4c7f-7bd2-4b7e-a8f6-dbb4302bcde3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="651ed9e4-2117-4c3f-965f-a3d2125f4df1" name="PhasegridHome190_1_Ph3" originalIdInSource="1901">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="51a1c048-1733-4ce6-b4b9-9c730dca602f" name="In"/>
+          <port xsi:type="esdl:InPort" id="51a1c048-1733-4ce6-b4b9-9c730dca602f" name="In" connectedTo="eeb9d182-5331-4292-a323-182476e7befe"/>
           <port xsi:type="esdl:OutPort" id="83921cce-d347-4fc5-9336-77ebea770335" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="80606de7-12c4-482e-977e-ecdb28b3db44" name="CableHome190_1" originalIdInSource="1901" assetType="4x10Cu_as10Cu__YMvK_asmb" length="7.1">
         <port xsi:type="esdl:InPort" id="c1b9f480-eb9e-4456-a5ab-03f80aa23625" name="In" connectedTo="5d2f242f-5021-4a1c-99b9-4e4b53c2858f"/>
@@ -6951,30 +7036,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98967789692418" lon="4.09202280694053"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c2d5a0b0-a00d-496c-9294-d41427535113" name="Home191_1" originalIdInSource="1911" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="c2d5a0b0-a00d-496c-9294-d41427535113" name="Home191_1" originalIdInSource="1911" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98984479839339" lon="4.090853163482271"/>
         <asset xsi:type="esdl:EConnection" id="cdfd9b6f-3354-4ae7-b02f-ad7e76aa7e52" name="ConnectionHome191_1" originalIdInSource="1911" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="36de4302-980a-4f00-a3a9-8fa25d6bff93" name="In" connectedTo="0a065d5b-371d-46c4-b7d8-a63d29110339"/>
-          <port xsi:type="esdl:OutPort" id="9dc6fc2b-ecca-4f82-8301-2b54efce6e4b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3fcb7b45-f9e3-4e99-9df0-6c0f0b001ad9" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="4eac079f-4ad6-4e79-aa22-f5352fee925e" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="9dc6fc2b-ecca-4f82-8301-2b54efce6e4b" name="OutPh1" connectedTo="25b3f57b-36a4-4d4c-9b64-ebf66de62917"/>
+          <port xsi:type="esdl:OutPort" id="3fcb7b45-f9e3-4e99-9df0-6c0f0b001ad9" name="OutPh2" connectedTo="672a46de-4d0f-47e9-888d-e54b50a63838"/>
+          <port xsi:type="esdl:OutPort" id="4eac079f-4ad6-4e79-aa22-f5352fee925e" name="OutPh3" connectedTo="8a773fef-dff7-4359-92f7-a912a14707f3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e112dc38-db95-460b-becf-daabd3a625bc" name="PhasegridHome191_1_Ph1" originalIdInSource="1911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="25b3f57b-36a4-4d4c-9b64-ebf66de62917" name="In"/>
+          <port xsi:type="esdl:InPort" id="25b3f57b-36a4-4d4c-9b64-ebf66de62917" name="In" connectedTo="9dc6fc2b-ecca-4f82-8301-2b54efce6e4b"/>
           <port xsi:type="esdl:OutPort" id="0d1b509c-cf8e-47b1-b08c-669d1998ad62" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6567353c-ee41-4e32-9c32-abcb6f8e9a7d" name="PhasegridHome191_1_Ph2" originalIdInSource="1911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="672a46de-4d0f-47e9-888d-e54b50a63838" name="In"/>
+          <port xsi:type="esdl:InPort" id="672a46de-4d0f-47e9-888d-e54b50a63838" name="In" connectedTo="3fcb7b45-f9e3-4e99-9df0-6c0f0b001ad9"/>
           <port xsi:type="esdl:OutPort" id="231ac4db-db7b-42bd-aa0f-31b165fead8d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="43db4945-489a-4cc9-b39a-a6807786a415" name="PhasegridHome191_1_Ph3" originalIdInSource="1911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8a773fef-dff7-4359-92f7-a912a14707f3" name="In"/>
+          <port xsi:type="esdl:InPort" id="8a773fef-dff7-4359-92f7-a912a14707f3" name="In" connectedTo="4eac079f-4ad6-4e79-aa22-f5352fee925e"/>
           <port xsi:type="esdl:OutPort" id="14ed061e-6ec5-4778-87de-27c3535c594d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="36ec87e8-e00c-4a7b-a2d8-9212d22ba6be" name="CableHome191_1" originalIdInSource="1911" assetType="4x16Cu__VG_VMvK_as" length="4.7">
         <port xsi:type="esdl:InPort" id="60319cbf-9df5-4b0e-904c-4c9fc0939924" name="In" connectedTo="40644b7d-e4e6-401c-b6f8-caccfeda53b9"/>
@@ -6984,30 +7070,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98984479839339" lon="4.090853163482271"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="27531a1d-efbf-4c10-8ac4-3ed938315249" name="Home193_1" originalIdInSource="1931" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="27531a1d-efbf-4c10-8ac4-3ed938315249" name="Home193_1" originalIdInSource="1931" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.009806202902574" lon="4.075126357529971"/>
         <asset xsi:type="esdl:EConnection" id="2710aef4-6222-41b0-b553-f5dbe39989c1" name="ConnectionHome193_1" originalIdInSource="1931" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fb9a0236-2b97-4483-81ec-8ffced0bfb4f" name="In" connectedTo="35dbd7ca-84c7-4e78-b85d-875722ef911d"/>
-          <port xsi:type="esdl:OutPort" id="25a97d7d-15e6-45f6-9fa4-252d797fb07e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e2bf63f0-b491-4fc9-a3fd-dae0187d10df" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ac06b87f-169b-4ce5-833b-4ea2063d6161" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="25a97d7d-15e6-45f6-9fa4-252d797fb07e" name="OutPh1" connectedTo="9673c04d-dc78-4d53-811a-d0a5a397aa92"/>
+          <port xsi:type="esdl:OutPort" id="e2bf63f0-b491-4fc9-a3fd-dae0187d10df" name="OutPh2" connectedTo="ee62aa16-debc-4fd0-b060-6bc783728e1b"/>
+          <port xsi:type="esdl:OutPort" id="ac06b87f-169b-4ce5-833b-4ea2063d6161" name="OutPh3" connectedTo="c267f3b1-00e0-45a0-baf5-2ff72d275fe6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="25416516-c1d4-4023-97a5-f966b33aebb2" name="PhasegridHome193_1_Ph1" originalIdInSource="1931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9673c04d-dc78-4d53-811a-d0a5a397aa92" name="In"/>
+          <port xsi:type="esdl:InPort" id="9673c04d-dc78-4d53-811a-d0a5a397aa92" name="In" connectedTo="25a97d7d-15e6-45f6-9fa4-252d797fb07e"/>
           <port xsi:type="esdl:OutPort" id="38541b54-0628-4d90-9672-9908c9fe0a6d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="21007019-6632-4623-8887-7cc48c130e73" name="PhasegridHome193_1_Ph2" originalIdInSource="1931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ee62aa16-debc-4fd0-b060-6bc783728e1b" name="In"/>
+          <port xsi:type="esdl:InPort" id="ee62aa16-debc-4fd0-b060-6bc783728e1b" name="In" connectedTo="e2bf63f0-b491-4fc9-a3fd-dae0187d10df"/>
           <port xsi:type="esdl:OutPort" id="260aaf5e-83af-4dcc-9a98-b3125d3b4068" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ba71d600-0d4a-4637-8084-3cb2bdffd829" name="PhasegridHome193_1_Ph3" originalIdInSource="1931">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c267f3b1-00e0-45a0-baf5-2ff72d275fe6" name="In"/>
+          <port xsi:type="esdl:InPort" id="c267f3b1-00e0-45a0-baf5-2ff72d275fe6" name="In" connectedTo="ac06b87f-169b-4ce5-833b-4ea2063d6161"/>
           <port xsi:type="esdl:OutPort" id="3c90fe17-ae90-4ddb-a66b-49c077011c05" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ffef680f-c88d-4ce1-aaa9-5c332bc20d8b" name="CableHome193_1" originalIdInSource="1931" assetType="4x10Cu__GPLK" length="5.8">
         <port xsi:type="esdl:InPort" id="86e18fdd-0231-4f47-a9f7-13bc3ff1edfc" name="In" connectedTo="9bb27096-1898-44ee-a2ad-38a511b04178"/>
@@ -7017,30 +7104,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.009806202902574" lon="4.075126357529971"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d6dab901-2518-4aa8-bf9a-9f1307607bfd" name="Home194_1" originalIdInSource="1941" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="d6dab901-2518-4aa8-bf9a-9f1307607bfd" name="Home194_1" originalIdInSource="1941" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01109022715249" lon="4.077419522116778"/>
         <asset xsi:type="esdl:EConnection" id="dad8c29b-64fb-4265-a0f5-b853ce0c844a" name="ConnectionHome194_1" originalIdInSource="1941" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="94c2b6c9-509d-46e1-b474-d87adfc9b29c" name="In" connectedTo="32938868-b5c1-4a99-a3f2-8271d9ed538b"/>
-          <port xsi:type="esdl:OutPort" id="4f086920-f1f5-471b-854f-46458d4a6afa" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="def28d29-11c9-42db-81c5-4cb0192d4fea" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="60267a76-718b-4178-aeac-ba360dd16bb7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4f086920-f1f5-471b-854f-46458d4a6afa" name="OutPh1" connectedTo="c028d92f-ac97-4643-ba1e-176711455954"/>
+          <port xsi:type="esdl:OutPort" id="def28d29-11c9-42db-81c5-4cb0192d4fea" name="OutPh2" connectedTo="8536c7f6-5561-44e1-be7f-a87e850004c0"/>
+          <port xsi:type="esdl:OutPort" id="60267a76-718b-4178-aeac-ba360dd16bb7" name="OutPh3" connectedTo="fc3c44eb-a15c-4d82-8c91-f3a8fe0f4eac"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f9e26d89-62a8-48f7-92c6-89f07c2fbe4b" name="PhasegridHome194_1_Ph1" originalIdInSource="1941">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c028d92f-ac97-4643-ba1e-176711455954" name="In"/>
+          <port xsi:type="esdl:InPort" id="c028d92f-ac97-4643-ba1e-176711455954" name="In" connectedTo="4f086920-f1f5-471b-854f-46458d4a6afa"/>
           <port xsi:type="esdl:OutPort" id="3263bbeb-7a15-4faa-a411-783af30cee58" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ee4ca46a-c7f1-4462-a770-9bf51ef98691" name="PhasegridHome194_1_Ph2" originalIdInSource="1941">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8536c7f6-5561-44e1-be7f-a87e850004c0" name="In"/>
+          <port xsi:type="esdl:InPort" id="8536c7f6-5561-44e1-be7f-a87e850004c0" name="In" connectedTo="def28d29-11c9-42db-81c5-4cb0192d4fea"/>
           <port xsi:type="esdl:OutPort" id="db3abe33-be12-4e68-80de-3517215cf839" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ba48cc58-0f50-4651-8430-e8b3d4b79709" name="PhasegridHome194_1_Ph3" originalIdInSource="1941">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fc3c44eb-a15c-4d82-8c91-f3a8fe0f4eac" name="In"/>
+          <port xsi:type="esdl:InPort" id="fc3c44eb-a15c-4d82-8c91-f3a8fe0f4eac" name="In" connectedTo="60267a76-718b-4178-aeac-ba360dd16bb7"/>
           <port xsi:type="esdl:OutPort" id="d051738c-9ca7-45ab-881d-d5b705275ea0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fd39467a-f472-4ed3-844e-831825789c59" name="CableHome194_1" originalIdInSource="1941" assetType="4x10Cu_as10__VO_YMvK_asmb" length="8.1">
         <port xsi:type="esdl:InPort" id="9a90ac21-ecc8-4f7e-ba1a-5852c117bbc3" name="In" connectedTo="6a1b6413-7a41-4022-94f7-3bfb48adc7dc"/>
@@ -7050,30 +7138,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01109022715249" lon="4.077419522116778"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="77b5cf4b-9a3b-4c50-9bbd-a4b9e2f16ee7" name="Home195_1" originalIdInSource="1951" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="77b5cf4b-9a3b-4c50-9bbd-a4b9e2f16ee7" name="Home195_1" originalIdInSource="1951" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.012005047607566" lon="4.078849537396982"/>
         <asset xsi:type="esdl:EConnection" id="343b1f84-77b6-4c10-bb19-bce81b8a3764" name="ConnectionHome195_1" originalIdInSource="1951" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2026a39f-5b51-4ea1-9ffe-59a391ab5ba7" name="In" connectedTo="8aac1896-abe8-476c-8239-0512a763ac55"/>
-          <port xsi:type="esdl:OutPort" id="53552830-7be0-441a-b61b-44036954ce9c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="bb339550-ca82-46e4-ada9-082f42c289c5" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f72a8db7-b7dd-445c-af8f-939ed3d5e58e" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="53552830-7be0-441a-b61b-44036954ce9c" name="OutPh1" connectedTo="a478e07f-3c61-41bc-95c5-bc5f7afec482"/>
+          <port xsi:type="esdl:OutPort" id="bb339550-ca82-46e4-ada9-082f42c289c5" name="OutPh2" connectedTo="aca36ae0-8264-41e9-b98d-635624ddabae"/>
+          <port xsi:type="esdl:OutPort" id="f72a8db7-b7dd-445c-af8f-939ed3d5e58e" name="OutPh3" connectedTo="c1e5ad4c-a392-422f-b896-ca956b1c25b8"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9594bcb6-a541-40f0-80b0-88e371999990" name="PhasegridHome195_1_Ph1" originalIdInSource="1951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a478e07f-3c61-41bc-95c5-bc5f7afec482" name="In"/>
+          <port xsi:type="esdl:InPort" id="a478e07f-3c61-41bc-95c5-bc5f7afec482" name="In" connectedTo="53552830-7be0-441a-b61b-44036954ce9c"/>
           <port xsi:type="esdl:OutPort" id="b44f3017-0666-43a6-8296-4d304621fcef" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7c0149b3-c274-4a97-a30b-cdb1cb66031e" name="PhasegridHome195_1_Ph2" originalIdInSource="1951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="aca36ae0-8264-41e9-b98d-635624ddabae" name="In"/>
+          <port xsi:type="esdl:InPort" id="aca36ae0-8264-41e9-b98d-635624ddabae" name="In" connectedTo="bb339550-ca82-46e4-ada9-082f42c289c5"/>
           <port xsi:type="esdl:OutPort" id="a4beacf3-a530-4404-a55f-d0db41c042c3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="329fa568-71f8-4f8a-b525-7d603bf3d89b" name="PhasegridHome195_1_Ph3" originalIdInSource="1951">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c1e5ad4c-a392-422f-b896-ca956b1c25b8" name="In"/>
+          <port xsi:type="esdl:InPort" id="c1e5ad4c-a392-422f-b896-ca956b1c25b8" name="In" connectedTo="f72a8db7-b7dd-445c-af8f-939ed3d5e58e"/>
           <port xsi:type="esdl:OutPort" id="5062d091-e614-4372-90d8-da72ee6616d5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="46732772-5edc-49e8-ac16-36b2ef627de4" name="CableHome195_1" originalIdInSource="1951" assetType="4x10Cu__GPLK" length="7.8">
         <port xsi:type="esdl:InPort" id="334d659e-87a4-4282-9f7b-4e47584b03cf" name="In" connectedTo="f3b8c7c8-ad52-4022-8996-6373c6e80e57"/>
@@ -7083,30 +7172,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.012005047607566" lon="4.078849537396982"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3837857d-e10d-4502-9b46-09ecdc36e5ff" name="Home197_1" originalIdInSource="1971" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="3837857d-e10d-4502-9b46-09ecdc36e5ff" name="Home197_1" originalIdInSource="1971" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01255393157547" lon="4.079707574584621"/>
         <asset xsi:type="esdl:EConnection" id="ea78f7b9-b416-4471-a820-51dc10074538" name="ConnectionHome197_1" originalIdInSource="1971" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d13f1328-35a3-4689-bfd4-77c2b17ed86b" name="In" connectedTo="248a7206-ec5f-444b-bfac-93e0742f93c8"/>
-          <port xsi:type="esdl:OutPort" id="ef0921f3-6fd8-4022-8c79-36a6f54172ad" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5fc1d41b-2c4d-4126-984c-02ea6955c940" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8c0e1e02-ce93-4249-976e-e1be585e0812" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ef0921f3-6fd8-4022-8c79-36a6f54172ad" name="OutPh1" connectedTo="a905911b-969d-44f6-99c9-d38c5e06d26a"/>
+          <port xsi:type="esdl:OutPort" id="5fc1d41b-2c4d-4126-984c-02ea6955c940" name="OutPh2" connectedTo="1bf6fd7c-aba2-4a6c-9f6b-a4c5e4048ab4"/>
+          <port xsi:type="esdl:OutPort" id="8c0e1e02-ce93-4249-976e-e1be585e0812" name="OutPh3" connectedTo="13be1bed-a6a3-47a2-8aa8-38e8d493d860"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="02a0c24d-2dc8-4e1c-89ce-e5f23691102e" name="PhasegridHome197_1_Ph1" originalIdInSource="1971">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a905911b-969d-44f6-99c9-d38c5e06d26a" name="In"/>
+          <port xsi:type="esdl:InPort" id="a905911b-969d-44f6-99c9-d38c5e06d26a" name="In" connectedTo="ef0921f3-6fd8-4022-8c79-36a6f54172ad"/>
           <port xsi:type="esdl:OutPort" id="e68ec7a7-2c3c-42af-aefc-35d0571b82db" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dbabc0bf-1d9c-46a8-8d43-8a65c7c8cd59" name="PhasegridHome197_1_Ph2" originalIdInSource="1971">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1bf6fd7c-aba2-4a6c-9f6b-a4c5e4048ab4" name="In"/>
+          <port xsi:type="esdl:InPort" id="1bf6fd7c-aba2-4a6c-9f6b-a4c5e4048ab4" name="In" connectedTo="5fc1d41b-2c4d-4126-984c-02ea6955c940"/>
           <port xsi:type="esdl:OutPort" id="fb00d217-fba9-428a-bb43-9a5b40285028" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="02fbd5c8-45e2-4150-b0d1-a49360cc405d" name="PhasegridHome197_1_Ph3" originalIdInSource="1971">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="13be1bed-a6a3-47a2-8aa8-38e8d493d860" name="In"/>
+          <port xsi:type="esdl:InPort" id="13be1bed-a6a3-47a2-8aa8-38e8d493d860" name="In" connectedTo="8c0e1e02-ce93-4249-976e-e1be585e0812"/>
           <port xsi:type="esdl:OutPort" id="275ae71d-eea9-45b2-870a-059428a17826" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="78ec975d-3980-4f20-a71c-34462c5ae4a4" name="CableHome197_1" originalIdInSource="1971" assetType="4x10Cu_as10__VO_YMvK_asmb" length="8.3">
         <port xsi:type="esdl:InPort" id="bcfeb281-da65-4dc6-929c-63eeee07da67" name="In" connectedTo="0f4edd55-f27f-44e2-9d4a-45086fe682e8"/>
@@ -7116,30 +7206,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01255393157547" lon="4.079707574584621"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="550f3b66-dafa-4cc0-8171-e9c327d37fad" name="Home198_1" originalIdInSource="1981" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="550f3b66-dafa-4cc0-8171-e9c327d37fad" name="Home198_1" originalIdInSource="1981" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01365491187012" lon="4.081714978848548"/>
         <asset xsi:type="esdl:EConnection" id="69da4bd2-0b0e-4266-82d9-5080de60a5c5" name="ConnectionHome198_1" originalIdInSource="1981" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1bb6730f-d5e7-4f03-831c-f08d59a3145e" name="In" connectedTo="0d2bef75-dcfb-4e62-8fec-35e5833eee02"/>
-          <port xsi:type="esdl:OutPort" id="d29c24da-4c87-46f9-9f47-4b0b880e6cee" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="aead974e-75fa-45ca-92c1-aee584fe3482" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3e350544-1875-45e0-846b-4cf60a97cf1b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d29c24da-4c87-46f9-9f47-4b0b880e6cee" name="OutPh1" connectedTo="fafac7cb-a353-4a17-95cf-0b486251582b"/>
+          <port xsi:type="esdl:OutPort" id="aead974e-75fa-45ca-92c1-aee584fe3482" name="OutPh2" connectedTo="5c827519-b77c-41d1-b82b-c258426097ea"/>
+          <port xsi:type="esdl:OutPort" id="3e350544-1875-45e0-846b-4cf60a97cf1b" name="OutPh3" connectedTo="fc60a2ec-6204-4061-bcf9-9e8b0525b969"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9cbace13-e33b-462e-b3c5-f34b3be9544b" name="PhasegridHome198_1_Ph1" originalIdInSource="1981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fafac7cb-a353-4a17-95cf-0b486251582b" name="In"/>
+          <port xsi:type="esdl:InPort" id="fafac7cb-a353-4a17-95cf-0b486251582b" name="In" connectedTo="d29c24da-4c87-46f9-9f47-4b0b880e6cee"/>
           <port xsi:type="esdl:OutPort" id="40eec45a-dc88-42f3-8d16-befc21c4bfb3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="42614eed-8d05-42f7-af18-83ff28a603fe" name="PhasegridHome198_1_Ph2" originalIdInSource="1981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5c827519-b77c-41d1-b82b-c258426097ea" name="In"/>
+          <port xsi:type="esdl:InPort" id="5c827519-b77c-41d1-b82b-c258426097ea" name="In" connectedTo="aead974e-75fa-45ca-92c1-aee584fe3482"/>
           <port xsi:type="esdl:OutPort" id="f5381dcb-6451-4cf9-b488-20fb7084fd9b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="afc1584c-f47e-4273-baf2-8a344c23606b" name="PhasegridHome198_1_Ph3" originalIdInSource="1981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fc60a2ec-6204-4061-bcf9-9e8b0525b969" name="In"/>
+          <port xsi:type="esdl:InPort" id="fc60a2ec-6204-4061-bcf9-9e8b0525b969" name="In" connectedTo="3e350544-1875-45e0-846b-4cf60a97cf1b"/>
           <port xsi:type="esdl:OutPort" id="adff49af-862b-4760-8b02-166d904397e1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c9cc0615-7b4c-4570-9153-822b46d79869" name="CableHome198_1" originalIdInSource="1981" assetType="4x10Cu_as10__VO_YMvK_asmb" length="8.5">
         <port xsi:type="esdl:InPort" id="a3f0fcb4-5cec-4e61-ac56-5a82754a8517" name="In" connectedTo="05d2e07e-ca80-4ade-baca-efd97fdf1f2e"/>
@@ -7149,30 +7240,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01365491187012" lon="4.081714978848548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d74c4edc-eb38-403d-a320-cdf439fe8e72" name="Home199_1" originalIdInSource="1991" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="d74c4edc-eb38-403d-a320-cdf439fe8e72" name="Home199_1" originalIdInSource="1991" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01438349981091" lon="4.082567850324722"/>
         <asset xsi:type="esdl:EConnection" id="6bbcd9f3-6902-497c-8a5a-7325596e2966" name="ConnectionHome199_1" originalIdInSource="1991" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="61859732-bac3-4588-a206-1ae7ba20ed09" name="In" connectedTo="d2cb5dab-919e-416e-85ff-817006565099"/>
-          <port xsi:type="esdl:OutPort" id="3770efb3-9da9-43ff-9fa5-02dddf6d2c92" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="062c7c9a-5085-461b-aa36-a767fb4feed7" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9a8b7634-71aa-4ebb-aba4-015b33aa6e02" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="3770efb3-9da9-43ff-9fa5-02dddf6d2c92" name="OutPh1" connectedTo="376a7559-622e-4e7e-9f2e-e28faf82fecb"/>
+          <port xsi:type="esdl:OutPort" id="062c7c9a-5085-461b-aa36-a767fb4feed7" name="OutPh2" connectedTo="b8652365-e73a-4d89-bdda-eb79e2f003df"/>
+          <port xsi:type="esdl:OutPort" id="9a8b7634-71aa-4ebb-aba4-015b33aa6e02" name="OutPh3" connectedTo="abc527c1-1317-464a-87a3-ed380c557afb"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="29fcc507-b58d-441d-b03f-9dfd30cc7124" name="PhasegridHome199_1_Ph1" originalIdInSource="1991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="376a7559-622e-4e7e-9f2e-e28faf82fecb" name="In"/>
+          <port xsi:type="esdl:InPort" id="376a7559-622e-4e7e-9f2e-e28faf82fecb" name="In" connectedTo="3770efb3-9da9-43ff-9fa5-02dddf6d2c92"/>
           <port xsi:type="esdl:OutPort" id="705b3677-8ad1-4e80-ae0a-27cf2e5ac7b5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d3408306-b5ea-432e-92c4-a5c3c630dc78" name="PhasegridHome199_1_Ph2" originalIdInSource="1991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b8652365-e73a-4d89-bdda-eb79e2f003df" name="In"/>
+          <port xsi:type="esdl:InPort" id="b8652365-e73a-4d89-bdda-eb79e2f003df" name="In" connectedTo="062c7c9a-5085-461b-aa36-a767fb4feed7"/>
           <port xsi:type="esdl:OutPort" id="2c7a6d3a-7278-4a93-b6bd-f25da624cb88" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9542ded5-8c59-41d0-97b1-7c9cd20d1cab" name="PhasegridHome199_1_Ph3" originalIdInSource="1991">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="abc527c1-1317-464a-87a3-ed380c557afb" name="In"/>
+          <port xsi:type="esdl:InPort" id="abc527c1-1317-464a-87a3-ed380c557afb" name="In" connectedTo="9a8b7634-71aa-4ebb-aba4-015b33aa6e02"/>
           <port xsi:type="esdl:OutPort" id="d71c57e7-d01f-42f6-8b88-3f7c4a5a5388" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0770864f-b00d-4ba4-a502-3eba1ad2ac3f" name="CableHome199_1" originalIdInSource="1991" assetType="4x10Cu_as10__VO_YMvK_asmb" length="7.5">
         <port xsi:type="esdl:InPort" id="e0fb032d-a73d-4b15-b16b-7ad0bd7faa26" name="In" connectedTo="8ba1d62b-c751-4063-9336-2611c4788540"/>
@@ -7182,30 +7274,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01438349981091" lon="4.082567850324722"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d5ee45b2-08cd-4afa-a254-558911a4f6fe" name="Home200_1" originalIdInSource="2001" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="d5ee45b2-08cd-4afa-a254-558911a4f6fe" name="Home200_1" originalIdInSource="2001" assetType="2 onder 1 kap woning_2015_2018" energyLabel="LABEL_A" floorArea="159.89" buildingYear="2016" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01493558290265" lon="4.083717253937249"/>
         <asset xsi:type="esdl:EConnection" id="e26f3305-5144-4116-8d75-5de6ee046e57" name="ConnectionHome200_1" originalIdInSource="2001" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ccf5aae2-eebd-4117-97da-3b1d80e62090" name="In" connectedTo="91765b30-477a-4943-8fe3-7a18c4230e51"/>
-          <port xsi:type="esdl:OutPort" id="8e482d53-f1e0-4d44-8971-ff7faf8fa653" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="dc33b7d4-bb92-4a11-a3e0-8ac3335301bf" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="dae94b6f-7536-4c28-98a7-6d9103d80a24" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="8e482d53-f1e0-4d44-8971-ff7faf8fa653" name="OutPh1" connectedTo="000d68a4-50ce-4a0b-94db-63b5ee6fce06"/>
+          <port xsi:type="esdl:OutPort" id="dc33b7d4-bb92-4a11-a3e0-8ac3335301bf" name="OutPh2" connectedTo="b90b6d40-c227-4b9a-be76-d45f4ca147b3"/>
+          <port xsi:type="esdl:OutPort" id="dae94b6f-7536-4c28-98a7-6d9103d80a24" name="OutPh3" connectedTo="edda7ba3-970b-40f7-b3bb-acf587f0fa18"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e73e8049-4451-4989-8a55-627cd5ad0b4a" name="PhasegridHome200_1_Ph1" originalIdInSource="2001">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="000d68a4-50ce-4a0b-94db-63b5ee6fce06" name="In"/>
+          <port xsi:type="esdl:InPort" id="000d68a4-50ce-4a0b-94db-63b5ee6fce06" name="In" connectedTo="8e482d53-f1e0-4d44-8971-ff7faf8fa653"/>
           <port xsi:type="esdl:OutPort" id="b899ab06-f0b0-4500-98dc-663b143cb195" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="737fd20b-678c-4162-b8ca-c13c0a522090" name="PhasegridHome200_1_Ph2" originalIdInSource="2001">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b90b6d40-c227-4b9a-be76-d45f4ca147b3" name="In"/>
+          <port xsi:type="esdl:InPort" id="b90b6d40-c227-4b9a-be76-d45f4ca147b3" name="In" connectedTo="dc33b7d4-bb92-4a11-a3e0-8ac3335301bf"/>
           <port xsi:type="esdl:OutPort" id="c2dcba9d-5246-4691-a30e-63a68b447cbf" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="38341021-31b8-4f79-a64c-1641ed1e8db7" name="PhasegridHome200_1_Ph3" originalIdInSource="2001">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="edda7ba3-970b-40f7-b3bb-acf587f0fa18" name="In"/>
+          <port xsi:type="esdl:InPort" id="edda7ba3-970b-40f7-b3bb-acf587f0fa18" name="In" connectedTo="dae94b6f-7536-4c28-98a7-6d9103d80a24"/>
           <port xsi:type="esdl:OutPort" id="d69a4871-4a66-4c27-bace-ac538b7c420a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="93.94" height="9.0" windowArea="21.34" doorArea="7.23" slantedRoofArea="75.85"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="58216e4a-edb7-4837-a67d-2d61a1d0868a" name="CableHome200_1" originalIdInSource="2001" assetType="4x10Cu_as10__VO_YMvK_asmb" length="9.0">
         <port xsi:type="esdl:InPort" id="667945f1-3817-4ab6-8897-13231cb77293" name="In" connectedTo="fe95d44e-1b55-4b6b-b0de-7d2551a09be5"/>
@@ -7215,30 +7308,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01493558290265" lon="4.083717253937249"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2af4e17e-775b-4f15-8cea-87221f590532" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="2af4e17e-775b-4f15-8cea-87221f590532" name="Home201_1" originalIdInSource="2011" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.015523063408665" lon="4.088070758645056"/>
         <asset xsi:type="esdl:EConnection" id="573c38d4-62e6-4f37-92f5-276daa3b8ea4" name="ConnectionHome201_1" originalIdInSource="2011" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5390f6a2-97a4-408c-a8cd-163e60042911" name="In" connectedTo="221c336e-7cf6-45e2-a4f7-f990a2155fa2"/>
-          <port xsi:type="esdl:OutPort" id="15123351-9761-4dfc-844f-bca3e399f067" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b81f2dfb-d64c-48ac-868d-e1eb3b6d1515" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8742bd66-c359-49e4-b86c-1a02f2346686" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="15123351-9761-4dfc-844f-bca3e399f067" name="OutPh1" connectedTo="1bbb6294-771e-46e4-b7b0-378d27038308"/>
+          <port xsi:type="esdl:OutPort" id="b81f2dfb-d64c-48ac-868d-e1eb3b6d1515" name="OutPh2" connectedTo="93eee549-fd57-4e26-8621-defa4212810f"/>
+          <port xsi:type="esdl:OutPort" id="8742bd66-c359-49e4-b86c-1a02f2346686" name="OutPh3" connectedTo="78690bcc-fda4-4792-82e2-f709581ad238"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ce7da783-3226-4353-9f90-7fe6b5d24619" name="PhasegridHome201_1_Ph1" originalIdInSource="2011">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1bbb6294-771e-46e4-b7b0-378d27038308" name="In"/>
+          <port xsi:type="esdl:InPort" id="1bbb6294-771e-46e4-b7b0-378d27038308" name="In" connectedTo="15123351-9761-4dfc-844f-bca3e399f067"/>
           <port xsi:type="esdl:OutPort" id="7ab36a38-f45f-48de-a084-c7e73915c19e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6f9ba564-2572-4420-9562-ff1cb5970b81" name="PhasegridHome201_1_Ph2" originalIdInSource="2011">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="93eee549-fd57-4e26-8621-defa4212810f" name="In"/>
+          <port xsi:type="esdl:InPort" id="93eee549-fd57-4e26-8621-defa4212810f" name="In" connectedTo="b81f2dfb-d64c-48ac-868d-e1eb3b6d1515"/>
           <port xsi:type="esdl:OutPort" id="0aaae202-7309-4ad9-b22f-cba964024d0c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2a3798b8-04e1-48b9-8bb5-78eb547f5f8a" name="PhasegridHome201_1_Ph3" originalIdInSource="2011">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="78690bcc-fda4-4792-82e2-f709581ad238" name="In"/>
+          <port xsi:type="esdl:InPort" id="78690bcc-fda4-4792-82e2-f709581ad238" name="In" connectedTo="8742bd66-c359-49e4-b86c-1a02f2346686"/>
           <port xsi:type="esdl:OutPort" id="9d57f8e4-0b55-4c69-94d5-178c5c4d33ce" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b90c4b3f-76cc-4808-8079-921002fea78a" name="CableHome201_1" originalIdInSource="2011" assetType="4x10Cu__GPLK" length="6.0">
         <port xsi:type="esdl:InPort" id="ab5a3b28-0a37-401b-996e-1e9b3ef701a9" name="In" connectedTo="64d9c4a3-4028-42a3-b44c-4846f4998cdc"/>
@@ -7248,30 +7342,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.015523063408665" lon="4.088070758645056"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="165b526e-cae9-4414-9497-2862b05e8ad7" name="Home203_1" originalIdInSource="2031" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="165b526e-cae9-4414-9497-2862b05e8ad7" name="Home203_1" originalIdInSource="2031" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01571243026718" lon="4.088939390618695"/>
         <asset xsi:type="esdl:EConnection" id="a61bb934-9138-4d4f-8351-cd1026cea2b4" name="ConnectionHome203_1" originalIdInSource="2031" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e1317202-506c-4464-9bcf-4f9022633fc7" name="In" connectedTo="625093cd-9c8e-485c-ab92-546ebfb4fb8d"/>
-          <port xsi:type="esdl:OutPort" id="2f9287e3-e959-496e-8df8-d4949cf085d2" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="36356f02-8074-42b6-a6cf-3008fa0e32df" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="27f4e1d7-58ce-448e-b02e-8fc435623f75" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2f9287e3-e959-496e-8df8-d4949cf085d2" name="OutPh1" connectedTo="84e3c7f0-bf5e-4545-a11c-b80dad324f00"/>
+          <port xsi:type="esdl:OutPort" id="36356f02-8074-42b6-a6cf-3008fa0e32df" name="OutPh2" connectedTo="3e52d198-7dcd-446e-b9b0-e77d3bbb7e49"/>
+          <port xsi:type="esdl:OutPort" id="27f4e1d7-58ce-448e-b02e-8fc435623f75" name="OutPh3" connectedTo="39839a61-0a0e-414f-a1f5-4a14343a1078"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8b913b8b-0f55-407b-9de2-59e571bb2353" name="PhasegridHome203_1_Ph1" originalIdInSource="2031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="84e3c7f0-bf5e-4545-a11c-b80dad324f00" name="In"/>
+          <port xsi:type="esdl:InPort" id="84e3c7f0-bf5e-4545-a11c-b80dad324f00" name="In" connectedTo="2f9287e3-e959-496e-8df8-d4949cf085d2"/>
           <port xsi:type="esdl:OutPort" id="6bac7758-e7a8-4cc3-8576-c3745a1afa96" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="859eef30-d739-42c6-b250-2df659e071d6" name="PhasegridHome203_1_Ph2" originalIdInSource="2031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3e52d198-7dcd-446e-b9b0-e77d3bbb7e49" name="In"/>
+          <port xsi:type="esdl:InPort" id="3e52d198-7dcd-446e-b9b0-e77d3bbb7e49" name="In" connectedTo="36356f02-8074-42b6-a6cf-3008fa0e32df"/>
           <port xsi:type="esdl:OutPort" id="a1b48d2b-7e99-439c-b84d-ac9a1b3f3180" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="00496670-cbed-435a-a424-0c4663494a5c" name="PhasegridHome203_1_Ph3" originalIdInSource="2031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="39839a61-0a0e-414f-a1f5-4a14343a1078" name="In"/>
+          <port xsi:type="esdl:InPort" id="39839a61-0a0e-414f-a1f5-4a14343a1078" name="In" connectedTo="27f4e1d7-58ce-448e-b02e-8fc435623f75"/>
           <port xsi:type="esdl:OutPort" id="725d644f-5c1c-4076-9c02-b1014b68a1cd" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0100624b-6cac-4ac8-9127-a35872c24f7b" name="CableHome203_1" originalIdInSource="2031" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.3">
         <port xsi:type="esdl:InPort" id="79b2d7ab-4b61-4a98-955f-e57ec3306261" name="In" connectedTo="d55eaf0d-0764-4cad-894c-70834169c883"/>
@@ -7281,30 +7376,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01571243026718" lon="4.088939390618695"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="88e0d579-bd4f-434a-9995-5ccabdd33719" name="Home204_1" originalIdInSource="2041" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="88e0d579-bd4f-434a-9995-5ccabdd33719" name="Home204_1" originalIdInSource="2041" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.0160009763529" lon="4.098837802120935"/>
         <asset xsi:type="esdl:EConnection" id="f111071a-1330-4214-a960-a97f92495ef8" name="ConnectionHome204_1" originalIdInSource="2041" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3c301bf0-9f3f-43f6-920d-f9064164bffe" name="In" connectedTo="7026db37-e533-4c59-bcfb-f737600f81ba"/>
-          <port xsi:type="esdl:OutPort" id="381f1e27-d769-4cae-b858-5eb5a30bf345" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f89f61cd-cfe6-4c47-ab74-609e50eed13e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="39ba5950-b8a3-4150-8f80-c7da8d245c97" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="381f1e27-d769-4cae-b858-5eb5a30bf345" name="OutPh1" connectedTo="38004976-f79d-4ba8-9931-8ac5b4c92045"/>
+          <port xsi:type="esdl:OutPort" id="f89f61cd-cfe6-4c47-ab74-609e50eed13e" name="OutPh2" connectedTo="6a39d06b-67b6-4a95-9266-6ab75d3a620d"/>
+          <port xsi:type="esdl:OutPort" id="39ba5950-b8a3-4150-8f80-c7da8d245c97" name="OutPh3" connectedTo="04b9c29e-5967-4862-b228-30a13baf295f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4aef0580-84f4-4664-a939-19985360056b" name="PhasegridHome204_1_Ph1" originalIdInSource="2041">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="38004976-f79d-4ba8-9931-8ac5b4c92045" name="In"/>
+          <port xsi:type="esdl:InPort" id="38004976-f79d-4ba8-9931-8ac5b4c92045" name="In" connectedTo="381f1e27-d769-4cae-b858-5eb5a30bf345"/>
           <port xsi:type="esdl:OutPort" id="13438aa4-1099-4b0f-99f7-131bb19974f5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e18ea15e-116b-42d4-91a9-79ee14b5968b" name="PhasegridHome204_1_Ph2" originalIdInSource="2041">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6a39d06b-67b6-4a95-9266-6ab75d3a620d" name="In"/>
+          <port xsi:type="esdl:InPort" id="6a39d06b-67b6-4a95-9266-6ab75d3a620d" name="In" connectedTo="f89f61cd-cfe6-4c47-ab74-609e50eed13e"/>
           <port xsi:type="esdl:OutPort" id="bdf040f5-7b84-48ed-a2b2-4bbbb9094fdc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="10227011-b693-46e6-8ae0-67342cb8667a" name="PhasegridHome204_1_Ph3" originalIdInSource="2041">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="04b9c29e-5967-4862-b228-30a13baf295f" name="In"/>
+          <port xsi:type="esdl:InPort" id="04b9c29e-5967-4862-b228-30a13baf295f" name="In" connectedTo="39ba5950-b8a3-4150-8f80-c7da8d245c97"/>
           <port xsi:type="esdl:OutPort" id="c1a7483a-a7ad-46d2-9d2f-f05c09a856c8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5fdd936a-976f-46fa-bc68-4a4505be6d7d" name="CableHome204_1" originalIdInSource="2041" assetType="4x10Cu_as10__VO_YMvK_asmb" length="10.3">
         <port xsi:type="esdl:InPort" id="2dd2d587-8727-4da7-aeb5-0cd5ed4c1d5a" name="In" connectedTo="edb715eb-5c9b-4ad8-bef7-628632a2f10c"/>
@@ -7314,30 +7410,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.0160009763529" lon="4.098837802120935"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="15fa18a5-a061-4f1b-831e-1a2aa4dd5084" name="Home204_2" originalIdInSource="2042" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_APPP">
+      <asset xsi:type="esdl:Building" id="15fa18a5-a061-4f1b-831e-1a2aa4dd5084" name="Home204_2" originalIdInSource="2042" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_APPP" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01636680302534" lon="4.099410039370296"/>
         <asset xsi:type="esdl:EConnection" id="13877659-1160-4baa-ac46-21084bced6ea" name="ConnectionHome204_2" originalIdInSource="2042" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="68f5ea25-8600-4c97-bf81-4f61e238ddd9" name="In" connectedTo="eea97d0d-9fa0-404c-a73a-578685583ee3"/>
-          <port xsi:type="esdl:OutPort" id="94db17e1-b217-4437-9307-38232e6dfbb7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="4b8a643f-f539-4594-8275-222056d9b1f0" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="191392a8-6716-45bf-b087-e42459542e87" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="94db17e1-b217-4437-9307-38232e6dfbb7" name="OutPh1" connectedTo="438e5a59-eff3-4663-be6e-e2105e620668"/>
+          <port xsi:type="esdl:OutPort" id="4b8a643f-f539-4594-8275-222056d9b1f0" name="OutPh2" connectedTo="3a059a75-78bd-4aa8-804d-75170e379abf"/>
+          <port xsi:type="esdl:OutPort" id="191392a8-6716-45bf-b087-e42459542e87" name="OutPh3" connectedTo="015ccf3c-ca72-48b2-a947-1299b33ad47f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5f2d8800-fba0-482e-9291-31e987f7705a" name="PhasegridHome204_2_Ph1" originalIdInSource="2042">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="438e5a59-eff3-4663-be6e-e2105e620668" name="In"/>
+          <port xsi:type="esdl:InPort" id="438e5a59-eff3-4663-be6e-e2105e620668" name="In" connectedTo="94db17e1-b217-4437-9307-38232e6dfbb7"/>
           <port xsi:type="esdl:OutPort" id="9ffc3b4d-e7d3-42fb-b62a-bf1aed5efe26" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d00aeaca-46df-4b4e-9d24-dd08c750c2d7" name="PhasegridHome204_2_Ph2" originalIdInSource="2042">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3a059a75-78bd-4aa8-804d-75170e379abf" name="In"/>
+          <port xsi:type="esdl:InPort" id="3a059a75-78bd-4aa8-804d-75170e379abf" name="In" connectedTo="4b8a643f-f539-4594-8275-222056d9b1f0"/>
           <port xsi:type="esdl:OutPort" id="315505b7-d985-45a4-b31a-fed5f5f75e67" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7fcb5839-2549-46d4-b6d6-b9bddc59bad6" name="PhasegridHome204_2_Ph3" originalIdInSource="2042">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="015ccf3c-ca72-48b2-a947-1299b33ad47f" name="In"/>
+          <port xsi:type="esdl:InPort" id="015ccf3c-ca72-48b2-a947-1299b33ad47f" name="In" connectedTo="191392a8-6716-45bf-b087-e42459542e87"/>
           <port xsi:type="esdl:OutPort" id="cd6ba569-a04b-45b1-9645-d62fdea386ff" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="eeaa14fc-c587-4ff2-9e96-ea4f3177ae99" name="CableHome204_2" originalIdInSource="2042" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.1">
         <port xsi:type="esdl:InPort" id="f0cf45bb-37b8-4e4f-90e8-93a37329208b" name="In" connectedTo="edb715eb-5c9b-4ad8-bef7-628632a2f10c"/>
@@ -7347,30 +7444,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01636680302534" lon="4.099410039370296"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cccb7b49-0170-438b-8505-2fcacf564db4" name="Home205_1" originalIdInSource="2051" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="cccb7b49-0170-438b-8505-2fcacf564db4" name="Home205_1" originalIdInSource="2051" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.0167485456562" lon="4.101438729438632"/>
         <asset xsi:type="esdl:EConnection" id="25dfe95d-dad4-4f68-8989-4604654fcc99" name="ConnectionHome205_1" originalIdInSource="2051" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cab7c585-3e59-4dfa-a0af-9dea9d274504" name="In" connectedTo="946914e0-422d-4e45-859a-402544923714"/>
-          <port xsi:type="esdl:OutPort" id="fdaa64d4-d184-4acd-a658-3e02792b16b6" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="74a3ac4e-147a-4f6b-96bf-9860dce76686" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7b07f92e-fdd7-49e5-a40e-49badc7a5551" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fdaa64d4-d184-4acd-a658-3e02792b16b6" name="OutPh1" connectedTo="072227c5-5e3b-42b2-8200-19cc80119c0b"/>
+          <port xsi:type="esdl:OutPort" id="74a3ac4e-147a-4f6b-96bf-9860dce76686" name="OutPh2" connectedTo="bb6bdff2-e29c-4e80-b955-b5a73e6ee63e"/>
+          <port xsi:type="esdl:OutPort" id="7b07f92e-fdd7-49e5-a40e-49badc7a5551" name="OutPh3" connectedTo="000cf7af-0d54-4214-a2a3-fc13cdab533b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9e79e599-683b-473e-abe9-f0d1299f8a04" name="PhasegridHome205_1_Ph1" originalIdInSource="2051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="072227c5-5e3b-42b2-8200-19cc80119c0b" name="In"/>
+          <port xsi:type="esdl:InPort" id="072227c5-5e3b-42b2-8200-19cc80119c0b" name="In" connectedTo="fdaa64d4-d184-4acd-a658-3e02792b16b6"/>
           <port xsi:type="esdl:OutPort" id="c4320668-9198-4870-ae5b-3f4fef69e932" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1eb93aaa-44f7-4a96-9dc1-fd4cb78a2e17" name="PhasegridHome205_1_Ph2" originalIdInSource="2051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bb6bdff2-e29c-4e80-b955-b5a73e6ee63e" name="In"/>
+          <port xsi:type="esdl:InPort" id="bb6bdff2-e29c-4e80-b955-b5a73e6ee63e" name="In" connectedTo="74a3ac4e-147a-4f6b-96bf-9860dce76686"/>
           <port xsi:type="esdl:OutPort" id="53ed63fa-b87c-4dd0-af28-6254c9123953" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="26959148-bd04-495d-b69e-445f35e34fef" name="PhasegridHome205_1_Ph3" originalIdInSource="2051">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="000cf7af-0d54-4214-a2a3-fc13cdab533b" name="In"/>
+          <port xsi:type="esdl:InPort" id="000cf7af-0d54-4214-a2a3-fc13cdab533b" name="In" connectedTo="7b07f92e-fdd7-49e5-a40e-49badc7a5551"/>
           <port xsi:type="esdl:OutPort" id="203e1e25-c0ae-4d65-a888-bc74a388faab" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6161056b-5b7c-486b-a1b2-39aca9b77269" name="CableHome205_1" originalIdInSource="2051" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.7">
         <port xsi:type="esdl:InPort" id="f96ba380-4415-47b2-ac51-82184f308831" name="In" connectedTo="2d6d384d-2935-468e-b6aa-d7b8b0d54e0a"/>
@@ -7380,30 +7478,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.0167485456562" lon="4.101438729438632"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cd3ec3a2-0087-4e36-89b4-409a4371f6f3" name="Home206_1" originalIdInSource="2061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="cd3ec3a2-0087-4e36-89b4-409a4371f6f3" name="Home206_1" originalIdInSource="2061" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01660060309637" lon="4.104356765368789"/>
         <asset xsi:type="esdl:EConnection" id="f075c861-a447-4866-9795-e586a81a03fa" name="ConnectionHome206_1" originalIdInSource="2061" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="365a3471-eaa7-4920-b881-18ab8fd9025e" name="In" connectedTo="f35d12aa-cee7-474b-bf32-71c87816b8d8"/>
-          <port xsi:type="esdl:OutPort" id="bd3f80b2-7f6f-4217-a7d9-d70be0da358b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c0f9c90b-c1eb-4ac7-bcd8-7c74fd88e80f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="22ee8851-a35b-48eb-80e2-31415ab64285" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bd3f80b2-7f6f-4217-a7d9-d70be0da358b" name="OutPh1" connectedTo="0122aeb3-0785-4dfb-af8e-f51fa0671c7b"/>
+          <port xsi:type="esdl:OutPort" id="c0f9c90b-c1eb-4ac7-bcd8-7c74fd88e80f" name="OutPh2" connectedTo="809c9b89-32fa-4718-833c-12905bcac72e"/>
+          <port xsi:type="esdl:OutPort" id="22ee8851-a35b-48eb-80e2-31415ab64285" name="OutPh3" connectedTo="5af37620-64f6-4ac1-bc63-ff51e699089c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6ccbb0af-292d-4eac-86bc-d31e7c97bd90" name="PhasegridHome206_1_Ph1" originalIdInSource="2061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0122aeb3-0785-4dfb-af8e-f51fa0671c7b" name="In"/>
+          <port xsi:type="esdl:InPort" id="0122aeb3-0785-4dfb-af8e-f51fa0671c7b" name="In" connectedTo="bd3f80b2-7f6f-4217-a7d9-d70be0da358b"/>
           <port xsi:type="esdl:OutPort" id="35fdce90-e71c-4195-94ed-0590a0948ffe" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="86c098a7-0c6c-441b-9416-1f52fb771539" name="PhasegridHome206_1_Ph2" originalIdInSource="2061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="809c9b89-32fa-4718-833c-12905bcac72e" name="In"/>
+          <port xsi:type="esdl:InPort" id="809c9b89-32fa-4718-833c-12905bcac72e" name="In" connectedTo="c0f9c90b-c1eb-4ac7-bcd8-7c74fd88e80f"/>
           <port xsi:type="esdl:OutPort" id="9a51ba03-6bb5-4073-9321-41786042ba70" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="486eadeb-b9a3-48cf-b3f7-dde69a26b348" name="PhasegridHome206_1_Ph3" originalIdInSource="2061">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5af37620-64f6-4ac1-bc63-ff51e699089c" name="In"/>
+          <port xsi:type="esdl:InPort" id="5af37620-64f6-4ac1-bc63-ff51e699089c" name="In" connectedTo="22ee8851-a35b-48eb-80e2-31415ab64285"/>
           <port xsi:type="esdl:OutPort" id="e8c8a01a-e6b7-4b25-8b16-1ba6ab9a9635" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="81d16839-9318-4b78-bb11-f0ca1dd1c3e8" name="CableHome206_1" originalIdInSource="2061" assetType="4x10Cu_as10__VO_YMvK_asmb" length="6.0">
         <port xsi:type="esdl:InPort" id="41771e0c-ea2a-4ea0-b4b3-d370ba115f9b" name="In" connectedTo="7c576303-a2c9-4df8-927a-9200428fde91"/>
@@ -7413,30 +7512,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01660060309637" lon="4.104356765368789"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="10653c7a-2b47-4a76-b057-cbcdeee2fa6b" name="Home208_1" originalIdInSource="2081" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="10653c7a-2b47-4a76-b057-cbcdeee2fa6b" name="Home208_1" originalIdInSource="2081" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99020646787092" lon="4.074826238522048"/>
         <asset xsi:type="esdl:EConnection" id="02f7766c-ce58-44ac-ac4b-c540f4844426" name="ConnectionHome208_1" originalIdInSource="2081" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a3f63ed7-74f2-497e-92ae-9e34ed82e7b6" name="In" connectedTo="b5b4c9be-86e4-4faa-9c36-5f8ec06e86ba"/>
-          <port xsi:type="esdl:OutPort" id="a7a0d41b-2ad2-491a-a87b-738bcd834675" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f55ab8df-6021-4243-a7a1-0050618dfae4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7baac914-472e-4c4d-abde-c6c625b914ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a7a0d41b-2ad2-491a-a87b-738bcd834675" name="OutPh1" connectedTo="1b61959b-203a-4127-af3c-79e2218b6b20"/>
+          <port xsi:type="esdl:OutPort" id="f55ab8df-6021-4243-a7a1-0050618dfae4" name="OutPh2" connectedTo="38723ed9-6417-41a5-8ea9-f8b787564e9b"/>
+          <port xsi:type="esdl:OutPort" id="7baac914-472e-4c4d-abde-c6c625b914ab" name="OutPh3" connectedTo="0b436c72-e7cb-4e85-b4fb-baa5342edfc2"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="50bc3ec6-0577-4eec-b070-d6f2daf84cb5" name="PhasegridHome208_1_Ph1" originalIdInSource="2081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1b61959b-203a-4127-af3c-79e2218b6b20" name="In"/>
+          <port xsi:type="esdl:InPort" id="1b61959b-203a-4127-af3c-79e2218b6b20" name="In" connectedTo="a7a0d41b-2ad2-491a-a87b-738bcd834675"/>
           <port xsi:type="esdl:OutPort" id="4acc591a-7ef1-4be1-8fa3-b36412cd9898" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2155632f-800c-41fe-ba29-7580330134b4" name="PhasegridHome208_1_Ph2" originalIdInSource="2081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="38723ed9-6417-41a5-8ea9-f8b787564e9b" name="In"/>
+          <port xsi:type="esdl:InPort" id="38723ed9-6417-41a5-8ea9-f8b787564e9b" name="In" connectedTo="f55ab8df-6021-4243-a7a1-0050618dfae4"/>
           <port xsi:type="esdl:OutPort" id="8d54bfa0-0db6-4f3f-b5bc-d4d8dcc40262" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9e416039-7b2a-42a9-b98d-8a22a06f5727" name="PhasegridHome208_1_Ph3" originalIdInSource="2081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0b436c72-e7cb-4e85-b4fb-baa5342edfc2" name="In"/>
+          <port xsi:type="esdl:InPort" id="0b436c72-e7cb-4e85-b4fb-baa5342edfc2" name="In" connectedTo="7baac914-472e-4c4d-abde-c6c625b914ab"/>
           <port xsi:type="esdl:OutPort" id="5ab3280f-fcc5-4014-94c3-1ca0b88367f6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b4403220-b64a-48d4-b36b-089084f42999" name="CableHome208_1" originalIdInSource="2081" assetType="4x10Cu_as10__VO_YMvK_asmb" length="3.8">
         <port xsi:type="esdl:InPort" id="921105b9-5dce-4f68-b4fb-b96c9fc4d603" name="In" connectedTo="7f4e26b5-ba3c-468b-b7f5-db4df283b74d"/>
@@ -7446,30 +7546,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99020646787092" lon="4.074826238522048"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c3429803-b96d-4011-971e-3a7bef674db1" name="Home209_1" originalIdInSource="2091" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="c3429803-b96d-4011-971e-3a7bef674db1" name="Home209_1" originalIdInSource="2091" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99023566375094" lon="4.077446265685393"/>
         <asset xsi:type="esdl:EConnection" id="747a5965-b076-423e-b196-05c35f2d08ae" name="ConnectionHome209_1" originalIdInSource="2091" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="12db3c8d-740a-466f-be7f-1db2f057f28f" name="In" connectedTo="f215ca38-5bef-4dcd-8759-688f179470e7"/>
-          <port xsi:type="esdl:OutPort" id="7afe3b55-cd96-4bf6-a205-26827c37038d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f7f04d1e-f0e8-4d71-aa56-f7fa18578615" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9af03448-e79d-448e-aa67-f3a9e20e8cff" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7afe3b55-cd96-4bf6-a205-26827c37038d" name="OutPh1" connectedTo="5bd7f4d6-2a4b-409b-b46a-d4bbbdc289b7"/>
+          <port xsi:type="esdl:OutPort" id="f7f04d1e-f0e8-4d71-aa56-f7fa18578615" name="OutPh2" connectedTo="e38c7e99-3777-41ac-ab05-da987c506676"/>
+          <port xsi:type="esdl:OutPort" id="9af03448-e79d-448e-aa67-f3a9e20e8cff" name="OutPh3" connectedTo="f7774990-bbd5-4a2d-8a08-1b6ca266d2c0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0aa005ab-5d68-4c87-8422-887f5548e0a9" name="PhasegridHome209_1_Ph1" originalIdInSource="2091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5bd7f4d6-2a4b-409b-b46a-d4bbbdc289b7" name="In"/>
+          <port xsi:type="esdl:InPort" id="5bd7f4d6-2a4b-409b-b46a-d4bbbdc289b7" name="In" connectedTo="7afe3b55-cd96-4bf6-a205-26827c37038d"/>
           <port xsi:type="esdl:OutPort" id="5ff461b8-21d4-4d87-8f71-43942dbbea1a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="831518c9-c90c-4b21-a3d4-c5cd5ef924eb" name="PhasegridHome209_1_Ph2" originalIdInSource="2091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e38c7e99-3777-41ac-ab05-da987c506676" name="In"/>
+          <port xsi:type="esdl:InPort" id="e38c7e99-3777-41ac-ab05-da987c506676" name="In" connectedTo="f7f04d1e-f0e8-4d71-aa56-f7fa18578615"/>
           <port xsi:type="esdl:OutPort" id="6e09984b-c3cd-4668-910b-1207f0518fe0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c2352c39-68e4-4c7d-b13a-8541edcc8b9d" name="PhasegridHome209_1_Ph3" originalIdInSource="2091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f7774990-bbd5-4a2d-8a08-1b6ca266d2c0" name="In"/>
+          <port xsi:type="esdl:InPort" id="f7774990-bbd5-4a2d-8a08-1b6ca266d2c0" name="In" connectedTo="9af03448-e79d-448e-aa67-f3a9e20e8cff"/>
           <port xsi:type="esdl:OutPort" id="ae01e883-481f-4e12-9262-e384906d5b0f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3deebbcd-270c-41dc-9b0d-1226054b64a2" name="CableHome209_1" originalIdInSource="2091" assetType="4x10Cu_as10Cu__YMvK_asmb" length="3.7">
         <port xsi:type="esdl:InPort" id="0d851ae1-082a-4e05-b55a-7612962c9f75" name="In" connectedTo="8d7a8992-3529-4c78-b9f5-b3e884e02d11"/>
@@ -7479,30 +7580,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99023566375094" lon="4.077446265685393"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3d9bd4fb-9579-4d59-87c8-c10fb4ecc8c8" name="Home210_1" originalIdInSource="2101" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3d9bd4fb-9579-4d59-87c8-c10fb4ecc8c8" name="Home210_1" originalIdInSource="2101" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.016770801605084" lon="4.103477752307344"/>
         <asset xsi:type="esdl:EConnection" id="1294d8e6-139b-4560-8704-cd3f322dff38" name="ConnectionHome210_1" originalIdInSource="2101" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="170de8fc-0d94-4e7e-81de-7569833e22ed" name="In" connectedTo="667937cd-6f57-41ee-b6e1-09b497149040"/>
-          <port xsi:type="esdl:OutPort" id="aa014524-d902-4ca2-a77f-9088ba355931" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e8656d98-25a4-401d-97c7-a1d8033dbac0" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="fe9fc75d-0f4d-4334-ab26-795be824ad8c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="aa014524-d902-4ca2-a77f-9088ba355931" name="OutPh1" connectedTo="6ae297bb-5213-4fbe-ab4e-7a38689a6275"/>
+          <port xsi:type="esdl:OutPort" id="e8656d98-25a4-401d-97c7-a1d8033dbac0" name="OutPh2" connectedTo="7b6f9939-4698-454f-97a5-5eda6754b261"/>
+          <port xsi:type="esdl:OutPort" id="fe9fc75d-0f4d-4334-ab26-795be824ad8c" name="OutPh3" connectedTo="3848a897-f4cd-4dc6-95f0-dcdd96a8cee6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="196d119e-887b-4752-bae2-a4268965cbb3" name="PhasegridHome210_1_Ph1" originalIdInSource="2101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6ae297bb-5213-4fbe-ab4e-7a38689a6275" name="In"/>
+          <port xsi:type="esdl:InPort" id="6ae297bb-5213-4fbe-ab4e-7a38689a6275" name="In" connectedTo="aa014524-d902-4ca2-a77f-9088ba355931"/>
           <port xsi:type="esdl:OutPort" id="404f8411-6277-4c0e-b48b-e0a9b6ce4860" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d4bceb17-1acb-4644-9ccd-4a1005c0cdfa" name="PhasegridHome210_1_Ph2" originalIdInSource="2101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7b6f9939-4698-454f-97a5-5eda6754b261" name="In"/>
+          <port xsi:type="esdl:InPort" id="7b6f9939-4698-454f-97a5-5eda6754b261" name="In" connectedTo="e8656d98-25a4-401d-97c7-a1d8033dbac0"/>
           <port xsi:type="esdl:OutPort" id="8ebdd804-32e5-4a09-b610-da1065ad4321" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e7f9dc5c-01b5-4d41-a043-de525a60df29" name="PhasegridHome210_1_Ph3" originalIdInSource="2101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3848a897-f4cd-4dc6-95f0-dcdd96a8cee6" name="In"/>
+          <port xsi:type="esdl:InPort" id="3848a897-f4cd-4dc6-95f0-dcdd96a8cee6" name="In" connectedTo="fe9fc75d-0f4d-4334-ab26-795be824ad8c"/>
           <port xsi:type="esdl:OutPort" id="6c7627dc-045a-4aa9-810c-c23425c4f311" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d4146f52-e050-4fae-a99b-492a1ef98c8d" name="CableHome210_1" originalIdInSource="2101" assetType="4x10Cu__GPLK" length="5.1">
         <port xsi:type="esdl:InPort" id="ab9c31ee-7bf4-4bce-bd0a-4c66ba0c2677" name="In" connectedTo="1b563b8a-6ee6-42b4-ac92-ad76c1405e89"/>
@@ -7512,30 +7614,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.016770801605084" lon="4.103477752307344"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2330a79e-119e-40df-8787-c4adaf0d6b15" name="Home212_1" originalIdInSource="2121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="2330a79e-119e-40df-8787-c4adaf0d6b15" name="Home212_1" originalIdInSource="2121" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9686133410116" lon="4.010258052552361"/>
         <asset xsi:type="esdl:EConnection" id="ccf1b138-520e-4353-91fe-db4f7ef2089c" name="ConnectionHome212_1" originalIdInSource="2121" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="47f42ced-eb01-4104-afad-cb40a8e9c1b6" name="In" connectedTo="9eeb613c-d902-49d2-81ee-549d0e88b95c"/>
-          <port xsi:type="esdl:OutPort" id="401cc1a5-d6dc-4624-b27e-7366e895a2ce" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a30346c7-20ba-47d4-b494-65d113b522b9" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="34012342-7222-4f1c-bff0-785cc1bb7934" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="401cc1a5-d6dc-4624-b27e-7366e895a2ce" name="OutPh1" connectedTo="2e644323-1e4d-4a1b-86db-57601858fa43"/>
+          <port xsi:type="esdl:OutPort" id="a30346c7-20ba-47d4-b494-65d113b522b9" name="OutPh2" connectedTo="02a6a7cd-cdca-4e4c-ab02-3bebb3fd41e7"/>
+          <port xsi:type="esdl:OutPort" id="34012342-7222-4f1c-bff0-785cc1bb7934" name="OutPh3" connectedTo="bc3c616e-40e1-4d5b-95f9-4f02a4a1febf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="887bb146-8cdb-441a-b1a1-4ec9e1a05e7d" name="PhasegridHome212_1_Ph1" originalIdInSource="2121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2e644323-1e4d-4a1b-86db-57601858fa43" name="In"/>
+          <port xsi:type="esdl:InPort" id="2e644323-1e4d-4a1b-86db-57601858fa43" name="In" connectedTo="401cc1a5-d6dc-4624-b27e-7366e895a2ce"/>
           <port xsi:type="esdl:OutPort" id="8acef561-1a5d-4547-89e7-7d6899fe8999" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d4e3d44b-cc76-4e20-a67d-e4acb0deb0c4" name="PhasegridHome212_1_Ph2" originalIdInSource="2121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="02a6a7cd-cdca-4e4c-ab02-3bebb3fd41e7" name="In"/>
+          <port xsi:type="esdl:InPort" id="02a6a7cd-cdca-4e4c-ab02-3bebb3fd41e7" name="In" connectedTo="a30346c7-20ba-47d4-b494-65d113b522b9"/>
           <port xsi:type="esdl:OutPort" id="ce2be3ae-c82e-469b-b3d6-fbc6965e8dbc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3da31d80-3c79-4446-933b-8b954cf0bf31" name="PhasegridHome212_1_Ph3" originalIdInSource="2121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bc3c616e-40e1-4d5b-95f9-4f02a4a1febf" name="In"/>
+          <port xsi:type="esdl:InPort" id="bc3c616e-40e1-4d5b-95f9-4f02a4a1febf" name="In" connectedTo="34012342-7222-4f1c-bff0-785cc1bb7934"/>
           <port xsi:type="esdl:OutPort" id="4631b8b3-0506-4f26-8a91-1d5f1433600d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2298a0cc-8751-4b79-84d7-b21df607710f" name="CableHome212_1" originalIdInSource="2121" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.6">
         <port xsi:type="esdl:InPort" id="d9e109e2-34af-46c3-927b-0a359705cd64" name="In" connectedTo="93e61ad9-0490-41d9-97d8-c9460166bbd2"/>
@@ -7545,30 +7648,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9686133410116" lon="4.010258052552361"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9f365dc1-9f6e-46f0-825a-04419560c699" name="Home213_1" originalIdInSource="2131" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="9f365dc1-9f6e-46f0-825a-04419560c699" name="Home213_1" originalIdInSource="2131" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99068019691516" lon="4.037245900367235"/>
         <asset xsi:type="esdl:EConnection" id="c5c8523c-bede-4288-857b-cc1dcdf69bc9" name="ConnectionHome213_1" originalIdInSource="2131" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="18ebc13a-2108-4541-9272-8c674241b2b5" name="In" connectedTo="7e4bf612-c3bf-412c-b3b2-052969145a6b"/>
-          <port xsi:type="esdl:OutPort" id="bd43937d-5ff8-4e4f-a167-9e1887452b10" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="2cc6e30f-b83f-4ede-980c-a435f47bc11c" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3d3efc72-bed3-4c15-8f9b-7c6e993179ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bd43937d-5ff8-4e4f-a167-9e1887452b10" name="OutPh1" connectedTo="38631a50-ee5d-464b-8047-72743b24ae6a"/>
+          <port xsi:type="esdl:OutPort" id="2cc6e30f-b83f-4ede-980c-a435f47bc11c" name="OutPh2" connectedTo="3571105d-8031-4603-a7ba-cdf478eee986"/>
+          <port xsi:type="esdl:OutPort" id="3d3efc72-bed3-4c15-8f9b-7c6e993179ab" name="OutPh3" connectedTo="abfc0b54-841c-4679-b461-6c9d89539f93"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ac154ad4-c771-4f3d-921c-802c5184ff31" name="PhasegridHome213_1_Ph1" originalIdInSource="2131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="38631a50-ee5d-464b-8047-72743b24ae6a" name="In"/>
+          <port xsi:type="esdl:InPort" id="38631a50-ee5d-464b-8047-72743b24ae6a" name="In" connectedTo="bd43937d-5ff8-4e4f-a167-9e1887452b10"/>
           <port xsi:type="esdl:OutPort" id="5790bc44-0adf-46b6-a8f6-e6ff4b78e53d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="960bba16-a637-4a70-8084-c3752ab7a2c0" name="PhasegridHome213_1_Ph2" originalIdInSource="2131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3571105d-8031-4603-a7ba-cdf478eee986" name="In"/>
+          <port xsi:type="esdl:InPort" id="3571105d-8031-4603-a7ba-cdf478eee986" name="In" connectedTo="2cc6e30f-b83f-4ede-980c-a435f47bc11c"/>
           <port xsi:type="esdl:OutPort" id="0bb9f952-a5be-4ba3-bcbe-c5e78e77b7a2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="db18a64e-e347-4ca9-8403-08b14f7154f7" name="PhasegridHome213_1_Ph3" originalIdInSource="2131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="abfc0b54-841c-4679-b461-6c9d89539f93" name="In"/>
+          <port xsi:type="esdl:InPort" id="abfc0b54-841c-4679-b461-6c9d89539f93" name="In" connectedTo="3d3efc72-bed3-4c15-8f9b-7c6e993179ab"/>
           <port xsi:type="esdl:OutPort" id="ae3e15c2-abbb-4881-9380-b726e7ad0b27" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="94817ced-2a84-4a14-89b3-c3eeed6e11c4" name="CableHome213_1" originalIdInSource="2131" assetType="4x10Cu_re_as10__YCWY_mb" length="7.9">
         <port xsi:type="esdl:InPort" id="ec22d1d7-d62e-4bdd-b23f-d72f9c0cdf6e" name="In" connectedTo="eaa5766b-c086-4f60-b9e7-84d6a47c10b2"/>
@@ -7578,30 +7682,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99068019691516" lon="4.037245900367235"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dfde0c52-d69a-418f-94e0-14563a87b0b9" name="Home215_1" originalIdInSource="2151" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="dfde0c52-d69a-418f-94e0-14563a87b0b9" name="Home215_1" originalIdInSource="2151" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99513775877318" lon="4.114581780675795"/>
         <asset xsi:type="esdl:EConnection" id="98246942-1652-4687-8a1c-7b2c58eac558" name="ConnectionHome215_1" originalIdInSource="2151" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="dca8023f-78ae-4889-a94f-e5de9be2de10" name="In" connectedTo="1fb861b6-a409-4273-8b4c-1d38d1c0ccf5"/>
-          <port xsi:type="esdl:OutPort" id="790ab368-9bef-4568-9d84-a56e5a4f7909" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="cbb35d8f-d261-47c9-ad85-089843012f46" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ad04756b-0b36-4507-8e67-8dc6ad5f8fc3" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="790ab368-9bef-4568-9d84-a56e5a4f7909" name="OutPh1" connectedTo="5ab13ae5-9dfc-4e2d-a8ae-618e34ef023e"/>
+          <port xsi:type="esdl:OutPort" id="cbb35d8f-d261-47c9-ad85-089843012f46" name="OutPh2" connectedTo="1bb37a2f-9167-4718-a375-92bcfa539414"/>
+          <port xsi:type="esdl:OutPort" id="ad04756b-0b36-4507-8e67-8dc6ad5f8fc3" name="OutPh3" connectedTo="80ca7323-abbe-4563-846b-363d600fb9af"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dc60b3af-2dc8-481b-8672-98af39307172" name="PhasegridHome215_1_Ph1" originalIdInSource="2151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5ab13ae5-9dfc-4e2d-a8ae-618e34ef023e" name="In"/>
+          <port xsi:type="esdl:InPort" id="5ab13ae5-9dfc-4e2d-a8ae-618e34ef023e" name="In" connectedTo="790ab368-9bef-4568-9d84-a56e5a4f7909"/>
           <port xsi:type="esdl:OutPort" id="ed231e4c-35c0-4641-aefd-40c3061cb79b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7237aa87-fb4e-43d1-8425-b962d7d3a8e6" name="PhasegridHome215_1_Ph2" originalIdInSource="2151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1bb37a2f-9167-4718-a375-92bcfa539414" name="In"/>
+          <port xsi:type="esdl:InPort" id="1bb37a2f-9167-4718-a375-92bcfa539414" name="In" connectedTo="cbb35d8f-d261-47c9-ad85-089843012f46"/>
           <port xsi:type="esdl:OutPort" id="cefaa778-c321-431d-9e5d-454282255639" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="36eaa35f-0ddd-4310-a7d8-51dae5a6b4f5" name="PhasegridHome215_1_Ph3" originalIdInSource="2151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="80ca7323-abbe-4563-846b-363d600fb9af" name="In"/>
+          <port xsi:type="esdl:InPort" id="80ca7323-abbe-4563-846b-363d600fb9af" name="In" connectedTo="ad04756b-0b36-4507-8e67-8dc6ad5f8fc3"/>
           <port xsi:type="esdl:OutPort" id="dde44be5-ec31-442b-87eb-afeca77371c8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6bb8df93-783b-47cb-b09b-0daf6acca38c" name="CableHome215_1" originalIdInSource="2151" assetType="4x10Cu_as10__VO_YMvK_asmb" length="2.5">
         <port xsi:type="esdl:InPort" id="bb080004-31e3-4fde-99fe-edb9a01796b3" name="In" connectedTo="e9b83504-93b2-46a4-8020-838af3ff6679"/>
@@ -7611,30 +7716,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99513775877318" lon="4.114581780675795"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f3e802ca-2744-4f95-a5c7-1fa649a99b50" name="Home217_1" originalIdInSource="2171" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="f3e802ca-2744-4f95-a5c7-1fa649a99b50" name="Home217_1" originalIdInSource="2171" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_E" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96209420389491" lon="4.037232748011966"/>
         <asset xsi:type="esdl:EConnection" id="c92c653c-00d2-4795-a4ee-1bc31a77c26c" name="ConnectionHome217_1" originalIdInSource="2171" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a4d2c6ac-4054-4513-be5d-68550b7db43d" name="In" connectedTo="9dcf1f82-f116-4510-83bb-24633e56d9a2"/>
-          <port xsi:type="esdl:OutPort" id="22f05de8-39d6-444c-baa7-719d2ed395b7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f4f4d580-a9ba-4630-b88f-ffc6d5a729cd" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0ed5c306-d4cc-404f-9a18-774bd189f906" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="22f05de8-39d6-444c-baa7-719d2ed395b7" name="OutPh1" connectedTo="64d77a27-b45a-48c3-b3a4-d9227edf7cad"/>
+          <port xsi:type="esdl:OutPort" id="f4f4d580-a9ba-4630-b88f-ffc6d5a729cd" name="OutPh2" connectedTo="3776c2f3-823d-4483-9760-7fb48ffd2927"/>
+          <port xsi:type="esdl:OutPort" id="0ed5c306-d4cc-404f-9a18-774bd189f906" name="OutPh3" connectedTo="4f7d9e1d-0f03-4928-9f9c-8b3a9d3dbc42"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="63627b1f-3ce3-4079-8aa1-8d7cf0ec390e" name="PhasegridHome217_1_Ph1" originalIdInSource="2171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="64d77a27-b45a-48c3-b3a4-d9227edf7cad" name="In"/>
+          <port xsi:type="esdl:InPort" id="64d77a27-b45a-48c3-b3a4-d9227edf7cad" name="In" connectedTo="22f05de8-39d6-444c-baa7-719d2ed395b7"/>
           <port xsi:type="esdl:OutPort" id="1ba849a1-54f3-4398-a549-3d4c770d906e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="79ac321f-d741-4159-9b66-1e7d0f72c1a8" name="PhasegridHome217_1_Ph2" originalIdInSource="2171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3776c2f3-823d-4483-9760-7fb48ffd2927" name="In"/>
+          <port xsi:type="esdl:InPort" id="3776c2f3-823d-4483-9760-7fb48ffd2927" name="In" connectedTo="f4f4d580-a9ba-4630-b88f-ffc6d5a729cd"/>
           <port xsi:type="esdl:OutPort" id="8202bcce-eccd-43d2-8890-9461dbec45e7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="67a8dc1f-5fea-4e98-855d-88aaf92b995c" name="PhasegridHome217_1_Ph3" originalIdInSource="2171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4f7d9e1d-0f03-4928-9f9c-8b3a9d3dbc42" name="In"/>
+          <port xsi:type="esdl:InPort" id="4f7d9e1d-0f03-4928-9f9c-8b3a9d3dbc42" name="In" connectedTo="0ed5c306-d4cc-404f-9a18-774bd189f906"/>
           <port xsi:type="esdl:OutPort" id="87d3d0ae-1643-458f-acba-e7d7169e162e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c6019a2c-9fe0-4d43-a8c2-196fdac5fea7" name="CableHome217_1" originalIdInSource="2171" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.2">
         <port xsi:type="esdl:InPort" id="4952397d-4946-4b94-a034-fcf906bb14f0" name="In" connectedTo="40002f23-aed7-47cd-915c-8e72feffa365"/>
@@ -7644,30 +7750,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96209420389491" lon="4.037232748011966"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9e9779f4-4ff1-4485-941c-0f4cc0f2bb6f" name="Home217_2" originalIdInSource="2172" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_APP">
+      <asset xsi:type="esdl:Building" id="9e9779f4-4ff1-4485-941c-0f4cc0f2bb6f" name="Home217_2" originalIdInSource="2172" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_APP" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96209754315093" lon="4.037523675992488"/>
         <asset xsi:type="esdl:EConnection" id="887c7885-fc70-4be4-9dc9-70a9f8919dfb" name="ConnectionHome217_2" originalIdInSource="2172" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1842f2ea-c57c-44a9-8fc0-1bdb1a7bb7d6" name="In" connectedTo="283d7524-b7a2-4dc0-bdfa-2832509e1cbe"/>
-          <port xsi:type="esdl:OutPort" id="84e6dfd0-e823-491c-8d6b-14cd4fdb5d41" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="911517d9-6d43-4efa-b11d-243a05f310fe" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9e4552dc-dd8d-4144-9241-19af7af8e341" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="84e6dfd0-e823-491c-8d6b-14cd4fdb5d41" name="OutPh1" connectedTo="49838dda-de41-443f-9640-24697ad2f8b7"/>
+          <port xsi:type="esdl:OutPort" id="911517d9-6d43-4efa-b11d-243a05f310fe" name="OutPh2" connectedTo="b413fef7-8180-49d1-b604-bb15530cc0bb"/>
+          <port xsi:type="esdl:OutPort" id="9e4552dc-dd8d-4144-9241-19af7af8e341" name="OutPh3" connectedTo="18322f2a-26f6-45c7-8e85-961800d777c9"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="305eb87b-157a-40bb-b8e8-47f7f8133cd0" name="PhasegridHome217_2_Ph1" originalIdInSource="2172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="49838dda-de41-443f-9640-24697ad2f8b7" name="In"/>
+          <port xsi:type="esdl:InPort" id="49838dda-de41-443f-9640-24697ad2f8b7" name="In" connectedTo="84e6dfd0-e823-491c-8d6b-14cd4fdb5d41"/>
           <port xsi:type="esdl:OutPort" id="1e97e9a5-ad4e-4149-9d30-a5338f8bd5e9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="df15035b-2043-46b6-9787-f7a0f7b0769a" name="PhasegridHome217_2_Ph2" originalIdInSource="2172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b413fef7-8180-49d1-b604-bb15530cc0bb" name="In"/>
+          <port xsi:type="esdl:InPort" id="b413fef7-8180-49d1-b604-bb15530cc0bb" name="In" connectedTo="911517d9-6d43-4efa-b11d-243a05f310fe"/>
           <port xsi:type="esdl:OutPort" id="8930acc8-4630-4e1f-b705-fadee6242dbb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fa57f1bb-8eab-4bbd-8d81-e550cdec0dfb" name="PhasegridHome217_2_Ph3" originalIdInSource="2172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="18322f2a-26f6-45c7-8e85-961800d777c9" name="In"/>
+          <port xsi:type="esdl:InPort" id="18322f2a-26f6-45c7-8e85-961800d777c9" name="In" connectedTo="9e4552dc-dd8d-4144-9241-19af7af8e341"/>
           <port xsi:type="esdl:OutPort" id="bfaf5b6c-70a3-454b-b780-a58d4a6286b0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="176.12" height="9.0" windowArea="46.07999999999999" doorArea="9.35" flatRoofArea="19.51" slantedRoofArea="124.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="626b2053-cedf-4db7-92cb-d3cc66b41af7" name="CableHome217_2" originalIdInSource="2172" assetType="4x10Cu_as10__VO_YMvK_asmb" length="5.3">
         <port xsi:type="esdl:InPort" id="2d7d9e2c-5be3-4b7e-9dda-c9f25c492dd9" name="In" connectedTo="40002f23-aed7-47cd-915c-8e72feffa365"/>
@@ -7677,30 +7784,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96209754315093" lon="4.037523675992488"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="03a801c0-00db-479b-b6a0-12664a778633" name="Home225_1" originalIdInSource="2251" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="03a801c0-00db-479b-b6a0-12664a778633" name="Home225_1" originalIdInSource="2251" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_F" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96632048168819" lon="4.029538152638649"/>
         <asset xsi:type="esdl:EConnection" id="e16b5058-b0ef-4193-bb83-ceaa26f80208" name="ConnectionHome225_1" originalIdInSource="2251" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="b8458411-8c5c-48a5-a451-9afb9375357a" name="In" connectedTo="7196e1ef-0c6e-42b5-a7c0-7ba18e51fe39"/>
-          <port xsi:type="esdl:OutPort" id="a0c53f1e-5b43-4576-a49f-fcc8064d0982" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="806125e6-78e0-4854-bdcd-65b60e6746b4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b70365c5-f7d1-4275-890e-c632b05ddd37" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a0c53f1e-5b43-4576-a49f-fcc8064d0982" name="OutPh1" connectedTo="682df94e-b788-4385-af0c-d786b818e1a6"/>
+          <port xsi:type="esdl:OutPort" id="806125e6-78e0-4854-bdcd-65b60e6746b4" name="OutPh2" connectedTo="073686c5-675c-4fb1-aeec-546f826aac55"/>
+          <port xsi:type="esdl:OutPort" id="b70365c5-f7d1-4275-890e-c632b05ddd37" name="OutPh3" connectedTo="7a64fadd-91a7-497b-824b-77a4b3d6c9ab"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="97337920-e225-4cd0-a08a-c98c285fd79b" name="PhasegridHome225_1_Ph1" originalIdInSource="2251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="682df94e-b788-4385-af0c-d786b818e1a6" name="In"/>
+          <port xsi:type="esdl:InPort" id="682df94e-b788-4385-af0c-d786b818e1a6" name="In" connectedTo="a0c53f1e-5b43-4576-a49f-fcc8064d0982"/>
           <port xsi:type="esdl:OutPort" id="b3d773d4-ccb3-43c4-8f58-e6d059d14c77" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="80a99aab-e78a-4f9e-aa4a-005bd2825040" name="PhasegridHome225_1_Ph2" originalIdInSource="2251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="073686c5-675c-4fb1-aeec-546f826aac55" name="In"/>
+          <port xsi:type="esdl:InPort" id="073686c5-675c-4fb1-aeec-546f826aac55" name="In" connectedTo="806125e6-78e0-4854-bdcd-65b60e6746b4"/>
           <port xsi:type="esdl:OutPort" id="c234e647-9457-4d79-acb9-f29f0776b5b1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c008e10d-1074-4e7b-a25f-fcfc59ba4422" name="PhasegridHome225_1_Ph3" originalIdInSource="2251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7a64fadd-91a7-497b-824b-77a4b3d6c9ab" name="In"/>
+          <port xsi:type="esdl:InPort" id="7a64fadd-91a7-497b-824b-77a4b3d6c9ab" name="In" connectedTo="b70365c5-f7d1-4275-890e-c632b05ddd37"/>
           <port xsi:type="esdl:OutPort" id="4f4bb177-529d-47d7-a340-7913b7da9fd7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="457adfbf-cedd-4fc5-b93c-1da9fee467ce" name="CableHome225_1" originalIdInSource="2251" assetType="4x10Cu__GPLK" length="26.9">
         <port xsi:type="esdl:InPort" id="db42a7e5-303b-4007-883a-58a19bc0cd41" name="In" connectedTo="f8c8565a-faf5-490b-abd7-e0b2ded7cf99"/>
@@ -7710,30 +7818,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96632048168819" lon="4.029538152638649"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="eba158b1-c92c-4936-a631-daeaaa10a0ad" name="Home227_1" originalIdInSource="2271" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="eba158b1-c92c-4936-a631-daeaaa10a0ad" name="Home227_1" originalIdInSource="2271" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98565590708735" lon="4.102330196081115"/>
         <asset xsi:type="esdl:EConnection" id="80533813-7a38-46c8-bbc6-be8f302c7e50" name="ConnectionHome227_1" originalIdInSource="2271" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="70b99602-75c0-4997-bbe0-5cef6b0d9c3b" name="In" connectedTo="9e57908d-2234-4935-9de9-2017a6e8b6e3"/>
-          <port xsi:type="esdl:OutPort" id="f642fb9d-4a8c-45a4-97aa-fed908c3ab0b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a761e8a0-b8e8-401f-bce5-8574ea97162b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9fd2ff32-bf4c-4182-a761-494212898b6f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f642fb9d-4a8c-45a4-97aa-fed908c3ab0b" name="OutPh1" connectedTo="3e519958-4a58-4c8e-b3b4-5562427de394"/>
+          <port xsi:type="esdl:OutPort" id="a761e8a0-b8e8-401f-bce5-8574ea97162b" name="OutPh2" connectedTo="741e2899-899b-4ce5-b909-cb0f63702b72"/>
+          <port xsi:type="esdl:OutPort" id="9fd2ff32-bf4c-4182-a761-494212898b6f" name="OutPh3" connectedTo="6c170ab2-538c-4f53-98f8-62cbc5695a37"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3529ce86-cb7d-44d6-8711-f4f9f1ec271f" name="PhasegridHome227_1_Ph1" originalIdInSource="2271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3e519958-4a58-4c8e-b3b4-5562427de394" name="In"/>
+          <port xsi:type="esdl:InPort" id="3e519958-4a58-4c8e-b3b4-5562427de394" name="In" connectedTo="f642fb9d-4a8c-45a4-97aa-fed908c3ab0b"/>
           <port xsi:type="esdl:OutPort" id="5ad96311-d498-4176-a8fc-a7f1793938bf" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="71d18303-e631-48a4-9c49-855dc707ef21" name="PhasegridHome227_1_Ph2" originalIdInSource="2271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="741e2899-899b-4ce5-b909-cb0f63702b72" name="In"/>
+          <port xsi:type="esdl:InPort" id="741e2899-899b-4ce5-b909-cb0f63702b72" name="In" connectedTo="a761e8a0-b8e8-401f-bce5-8574ea97162b"/>
           <port xsi:type="esdl:OutPort" id="6897580d-755a-40e2-b54d-16cc66a30c51" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6633b342-6769-4f25-a2ac-39bd2e04e667" name="PhasegridHome227_1_Ph3" originalIdInSource="2271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6c170ab2-538c-4f53-98f8-62cbc5695a37" name="In"/>
+          <port xsi:type="esdl:InPort" id="6c170ab2-538c-4f53-98f8-62cbc5695a37" name="In" connectedTo="9fd2ff32-bf4c-4182-a761-494212898b6f"/>
           <port xsi:type="esdl:OutPort" id="959b920f-e497-4ee4-b65a-90e6cedb5815" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="464a06e4-2cfd-463c-a71b-f541184f2ccb" name="CableHome227_1" originalIdInSource="2271" assetType="4x10Cu_as10Cu__YMvK_asmb" length="33.3">
         <port xsi:type="esdl:InPort" id="072bab87-206c-4d02-a2e6-b7f2aef73861" name="In" connectedTo="3984a6cb-6f8b-4e8f-934d-9770e48dc4dc"/>
@@ -7743,30 +7852,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98565590708735" lon="4.102330196081115"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="32b9ec89-4bb9-424c-8b21-86adc8b316e8" name="Home245_1" originalIdInSource="2451" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="32b9ec89-4bb9-424c-8b21-86adc8b316e8" name="Home245_1" originalIdInSource="2451" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98996989131492" lon="4.08589903293406"/>
         <asset xsi:type="esdl:EConnection" id="a062969c-7b07-4bf5-838a-8fbedcb98866" name="ConnectionHome245_1" originalIdInSource="2451" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f61f5fce-e54a-492c-a393-915f1960c046" name="In" connectedTo="58b51145-e772-4caa-9af2-3da0b9d81bcf"/>
-          <port xsi:type="esdl:OutPort" id="c256dbd7-6a13-4d0e-9529-d1df9c695258" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="95d3c075-f9f5-4707-b822-a72403ecfa34" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3c7abb9f-a9d7-41e5-b78d-a6c120fbf723" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c256dbd7-6a13-4d0e-9529-d1df9c695258" name="OutPh1" connectedTo="b2548a15-1342-4e71-8ff8-577b70221e0b"/>
+          <port xsi:type="esdl:OutPort" id="95d3c075-f9f5-4707-b822-a72403ecfa34" name="OutPh2" connectedTo="25f387e7-8ba6-48bc-81af-49307d4a2cb1"/>
+          <port xsi:type="esdl:OutPort" id="3c7abb9f-a9d7-41e5-b78d-a6c120fbf723" name="OutPh3" connectedTo="52bca78e-28c3-4e83-a6eb-51baee84c6c0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="20f78a8e-f7e2-4ee8-86e4-c9761d3270df" name="PhasegridHome245_1_Ph1" originalIdInSource="2451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b2548a15-1342-4e71-8ff8-577b70221e0b" name="In"/>
+          <port xsi:type="esdl:InPort" id="b2548a15-1342-4e71-8ff8-577b70221e0b" name="In" connectedTo="c256dbd7-6a13-4d0e-9529-d1df9c695258"/>
           <port xsi:type="esdl:OutPort" id="689167ec-1c21-4f9d-b559-846f0f9d340e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c974e584-9297-4024-bf64-b271f5d18314" name="PhasegridHome245_1_Ph2" originalIdInSource="2451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="25f387e7-8ba6-48bc-81af-49307d4a2cb1" name="In"/>
+          <port xsi:type="esdl:InPort" id="25f387e7-8ba6-48bc-81af-49307d4a2cb1" name="In" connectedTo="95d3c075-f9f5-4707-b822-a72403ecfa34"/>
           <port xsi:type="esdl:OutPort" id="fb38b0c7-cfac-4304-824c-632f5e90e7d8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a447713c-4fb9-4860-ad67-e3d843f52866" name="PhasegridHome245_1_Ph3" originalIdInSource="2451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="52bca78e-28c3-4e83-a6eb-51baee84c6c0" name="In"/>
+          <port xsi:type="esdl:InPort" id="52bca78e-28c3-4e83-a6eb-51baee84c6c0" name="In" connectedTo="3c7abb9f-a9d7-41e5-b78d-a6c120fbf723"/>
           <port xsi:type="esdl:OutPort" id="eb54dcbc-ccd7-4183-9fb8-edfed0721821" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1d1b35f6-4bdc-42a7-b2fa-9dd9fa08ab8d" name="CableHome245_1" originalIdInSource="2451" assetType="4x10Cu_as10Cu__YMvK_asmb" length="4.0">
         <port xsi:type="esdl:InPort" id="37d773f4-5a1f-45be-bb66-be4306f93afd" name="In" connectedTo="3fbd8eee-39ce-4ffe-9b00-fbc4c5477b84"/>
@@ -7776,30 +7886,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98996989131492" lon="4.08589903293406"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d28ed2ca-6ef9-444a-b0e2-6e9c04ba85b6" name="Home251_1" originalIdInSource="2511" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="d28ed2ca-6ef9-444a-b0e2-6e9c04ba85b6" name="Home251_1" originalIdInSource="2511" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.962672302252216" lon="4.009567235087716"/>
         <asset xsi:type="esdl:EConnection" id="6b07bcb4-0234-41c8-bed0-0ab5935e5237" name="ConnectionHome251_1" originalIdInSource="2511" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="94f754fa-15a6-4227-91a0-f2221138242f" name="In" connectedTo="e5c60721-9623-4996-8ede-747250f386e0"/>
-          <port xsi:type="esdl:OutPort" id="457ede75-aee4-4a82-bb7b-67f1067cdc6b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="04b7c9e3-a46e-41c5-82f6-88ec561585bd" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="552d81f4-843a-46c9-ab33-c1c0c9ea7995" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="457ede75-aee4-4a82-bb7b-67f1067cdc6b" name="OutPh1" connectedTo="b6ddde70-67a0-4ffb-b4d5-522413e343f1"/>
+          <port xsi:type="esdl:OutPort" id="04b7c9e3-a46e-41c5-82f6-88ec561585bd" name="OutPh2" connectedTo="c3f3ad6f-1653-4ece-8a29-f29637acccc8"/>
+          <port xsi:type="esdl:OutPort" id="552d81f4-843a-46c9-ab33-c1c0c9ea7995" name="OutPh3" connectedTo="8096a90b-ff0a-4441-8980-c5b7a5dccb86"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8b14339a-78f7-4ed8-86d9-a5fa35d74136" name="PhasegridHome251_1_Ph1" originalIdInSource="2511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b6ddde70-67a0-4ffb-b4d5-522413e343f1" name="In"/>
+          <port xsi:type="esdl:InPort" id="b6ddde70-67a0-4ffb-b4d5-522413e343f1" name="In" connectedTo="457ede75-aee4-4a82-bb7b-67f1067cdc6b"/>
           <port xsi:type="esdl:OutPort" id="2b838e93-a4f2-4e39-8bd7-96616077021c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ac211c54-f6dd-4a52-aa94-096de98e05c4" name="PhasegridHome251_1_Ph2" originalIdInSource="2511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c3f3ad6f-1653-4ece-8a29-f29637acccc8" name="In"/>
+          <port xsi:type="esdl:InPort" id="c3f3ad6f-1653-4ece-8a29-f29637acccc8" name="In" connectedTo="04b7c9e3-a46e-41c5-82f6-88ec561585bd"/>
           <port xsi:type="esdl:OutPort" id="20e7570d-3524-4264-967d-7875868586a7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="688f53be-0bf2-4a61-a593-22f193d95573" name="PhasegridHome251_1_Ph3" originalIdInSource="2511">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8096a90b-ff0a-4441-8980-c5b7a5dccb86" name="In"/>
+          <port xsi:type="esdl:InPort" id="8096a90b-ff0a-4441-8980-c5b7a5dccb86" name="In" connectedTo="552d81f4-843a-46c9-ab33-c1c0c9ea7995"/>
           <port xsi:type="esdl:OutPort" id="25ece038-1179-4603-b370-d5ae1db50b70" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05ee82b3-08b5-4da5-86d3-71249f917cd5" name="CableHome251_1" originalIdInSource="2511" assetType="4x10Cu__VO_YMvKas" length="28.5">
         <port xsi:type="esdl:InPort" id="2ea3a5eb-6526-4e7f-8564-cd179f7fb33e" name="In" connectedTo="5ed843dd-514a-492c-82d5-5d453d8fd5eb"/>
@@ -7809,30 +7920,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.962672302252216" lon="4.009567235087716"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f1a1a687-9f74-4ea9-975e-28ce4b223743" name="Home251_2" originalIdInSource="2512" assetType="maisonnette_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="f1a1a687-9f74-4ea9-975e-28ce4b223743" name="Home251_2" originalIdInSource="2512" assetType="maisonnette_1975_1991" energyLabel="LABEL_B" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9626757099565" lon="4.009858164102798"/>
         <asset xsi:type="esdl:EConnection" id="50b49c7e-2fec-4328-b2fc-767cd8ada0ab" name="ConnectionHome251_2" originalIdInSource="2512" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="06b5b066-b50d-4864-876f-93ca3d57c980" name="In" connectedTo="43e2a6f5-93da-476b-9ea0-9f73fbae80f0"/>
-          <port xsi:type="esdl:OutPort" id="a9f3bd36-9b25-4ee0-be7f-8f65911cba92" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="47787bf3-d034-4897-86f1-e7d3d378dad8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="16142821-94ae-495c-9aac-734a61637256" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a9f3bd36-9b25-4ee0-be7f-8f65911cba92" name="OutPh1" connectedTo="1cb82636-7aaa-4c44-8d04-a95b6f77db72"/>
+          <port xsi:type="esdl:OutPort" id="47787bf3-d034-4897-86f1-e7d3d378dad8" name="OutPh2" connectedTo="0bec19f6-32c9-4cfb-8d1b-87093b723272"/>
+          <port xsi:type="esdl:OutPort" id="16142821-94ae-495c-9aac-734a61637256" name="OutPh3" connectedTo="0f2acde6-e494-49af-b6d8-ff19f7f9b309"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8716f5d6-76ed-4a45-ad31-b58cd0e02994" name="PhasegridHome251_2_Ph1" originalIdInSource="2512">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1cb82636-7aaa-4c44-8d04-a95b6f77db72" name="In"/>
+          <port xsi:type="esdl:InPort" id="1cb82636-7aaa-4c44-8d04-a95b6f77db72" name="In" connectedTo="a9f3bd36-9b25-4ee0-be7f-8f65911cba92"/>
           <port xsi:type="esdl:OutPort" id="d9a6c50b-2b7b-4d38-aa90-04296f46cd04" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e5d3f735-50b7-4e43-93ff-fd3658a18bb1" name="PhasegridHome251_2_Ph2" originalIdInSource="2512">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0bec19f6-32c9-4cfb-8d1b-87093b723272" name="In"/>
+          <port xsi:type="esdl:InPort" id="0bec19f6-32c9-4cfb-8d1b-87093b723272" name="In" connectedTo="47787bf3-d034-4897-86f1-e7d3d378dad8"/>
           <port xsi:type="esdl:OutPort" id="1e65b0bc-2239-4a4b-85e9-787ee59169cb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fc5581c1-e5c6-4121-88e8-32f6f98ba99b" name="PhasegridHome251_2_Ph3" originalIdInSource="2512">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0f2acde6-e494-49af-b6d8-ff19f7f9b309" name="In"/>
+          <port xsi:type="esdl:InPort" id="0f2acde6-e494-49af-b6d8-ff19f7f9b309" name="In" connectedTo="16142821-94ae-495c-9aac-734a61637256"/>
           <port xsi:type="esdl:OutPort" id="15350a1d-8777-4d4d-a827-34c6be13df2c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="36.96" height="11.0" windowArea="12.400000000000002" doorArea="4.35" slantedRoofArea="63.87"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a6d08651-e881-43e6-a313-e37d678d6495" name="CableHome251_2" originalIdInSource="2512" assetType="4x10Cu__VO_YMvKas" length="28.5">
         <port xsi:type="esdl:InPort" id="36e38908-d6aa-4e07-827b-3e678470a56c" name="In" connectedTo="5ed843dd-514a-492c-82d5-5d453d8fd5eb"/>
@@ -7842,30 +7954,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9626757099565" lon="4.009858164102798"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d7837bba-1c4a-4d81-aea5-59d1394a41da" name="Home253_1" originalIdInSource="2531" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="d7837bba-1c4a-4d81-aea5-59d1394a41da" name="Home253_1" originalIdInSource="2531" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.990078606089114" lon="4.0794893083999115"/>
         <asset xsi:type="esdl:EConnection" id="e62eb4f4-a166-42b0-be20-61dd742e1fd1" name="ConnectionHome253_1" originalIdInSource="2531" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e262d6ab-f015-4b89-8b9e-1c6427f4332a" name="In" connectedTo="41550430-60d7-4163-9809-6101c4b57e29"/>
-          <port xsi:type="esdl:OutPort" id="29904d5e-ec99-4baf-a354-3cf77119342d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="06a14d27-4f2d-4aaa-9ccc-2cc32f3866a0" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b74b6531-c964-4640-8822-11f5ba31ad98" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="29904d5e-ec99-4baf-a354-3cf77119342d" name="OutPh1" connectedTo="f90defc8-21f4-4773-92f5-c241846607fd"/>
+          <port xsi:type="esdl:OutPort" id="06a14d27-4f2d-4aaa-9ccc-2cc32f3866a0" name="OutPh2" connectedTo="4a736321-6f90-4ee3-976d-0459c67c456c"/>
+          <port xsi:type="esdl:OutPort" id="b74b6531-c964-4640-8822-11f5ba31ad98" name="OutPh3" connectedTo="c5568afb-7db0-42de-adac-aeda1b40f0cf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="72575bcb-c8a0-46d8-b7df-461b94ac54ed" name="PhasegridHome253_1_Ph1" originalIdInSource="2531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f90defc8-21f4-4773-92f5-c241846607fd" name="In"/>
+          <port xsi:type="esdl:InPort" id="f90defc8-21f4-4773-92f5-c241846607fd" name="In" connectedTo="29904d5e-ec99-4baf-a354-3cf77119342d"/>
           <port xsi:type="esdl:OutPort" id="ddbc4515-1bf5-458b-a73a-58f14fd08737" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="eca6422b-c3a9-4fca-b9b5-3dd88e269258" name="PhasegridHome253_1_Ph2" originalIdInSource="2531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4a736321-6f90-4ee3-976d-0459c67c456c" name="In"/>
+          <port xsi:type="esdl:InPort" id="4a736321-6f90-4ee3-976d-0459c67c456c" name="In" connectedTo="06a14d27-4f2d-4aaa-9ccc-2cc32f3866a0"/>
           <port xsi:type="esdl:OutPort" id="31aaf404-d46c-4086-9b34-48d6ac149898" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b9b4fe66-6d10-4ead-b5f2-507536a7b3d0" name="PhasegridHome253_1_Ph3" originalIdInSource="2531">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c5568afb-7db0-42de-adac-aeda1b40f0cf" name="In"/>
+          <port xsi:type="esdl:InPort" id="c5568afb-7db0-42de-adac-aeda1b40f0cf" name="In" connectedTo="b74b6531-c964-4640-8822-11f5ba31ad98"/>
           <port xsi:type="esdl:OutPort" id="0a02656e-b188-4310-808b-8aeb11947e42" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f1b5f9ab-b9fb-4667-9640-1a7072902932" name="CableHome253_1" originalIdInSource="2531" assetType="4x10Cu__VO_YMvKas" length="6.6">
         <port xsi:type="esdl:InPort" id="e9a6c7c6-f1d8-46a8-aa8b-0fe68152a49f" name="In" connectedTo="fc2497f5-2301-4ee1-af85-bdbec6151dce"/>
@@ -7875,30 +7988,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.990078606089114" lon="4.0794893083999115"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cfdc1d53-46c6-42b7-8a9e-a9f16e9be6fc" name="Home254_1" originalIdInSource="2541" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="cfdc1d53-46c6-42b7-8a9e-a9f16e9be6fc" name="Home254_1" originalIdInSource="2541" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_B" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99009800725077" lon="4.08123599039344"/>
         <asset xsi:type="esdl:EConnection" id="9cb30fa5-c8b3-4f01-9fbb-754d798654a3" name="ConnectionHome254_1" originalIdInSource="2541" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="415185a0-0db4-4895-963a-2ac6ac4b49f9" name="In" connectedTo="6ac08847-e9b9-45be-9a54-70a37ed7609a"/>
-          <port xsi:type="esdl:OutPort" id="ef5ac9bc-d3eb-485c-a927-fc6f044b5c75" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="54924a4d-29f8-48ac-bc7f-0f6ba91f24d1" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ca30487c-8274-4a48-896f-c3c87a3e0cc8" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ef5ac9bc-d3eb-485c-a927-fc6f044b5c75" name="OutPh1" connectedTo="feee8a2c-5782-406b-9dea-9886b45587bb"/>
+          <port xsi:type="esdl:OutPort" id="54924a4d-29f8-48ac-bc7f-0f6ba91f24d1" name="OutPh2" connectedTo="5428da8b-3af6-465b-9fe1-dbe81564c87c"/>
+          <port xsi:type="esdl:OutPort" id="ca30487c-8274-4a48-896f-c3c87a3e0cc8" name="OutPh3" connectedTo="5ac2298a-7709-4f59-9b85-8b1a0a5543eb"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c68a7efa-32a1-4e7e-b83a-863b339d4354" name="PhasegridHome254_1_Ph1" originalIdInSource="2541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="feee8a2c-5782-406b-9dea-9886b45587bb" name="In"/>
+          <port xsi:type="esdl:InPort" id="feee8a2c-5782-406b-9dea-9886b45587bb" name="In" connectedTo="ef5ac9bc-d3eb-485c-a927-fc6f044b5c75"/>
           <port xsi:type="esdl:OutPort" id="ffd10fdc-b567-4dd9-8b10-99b6772c7128" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d88507a3-ce8e-4ede-8f23-d739fa0a2404" name="PhasegridHome254_1_Ph2" originalIdInSource="2541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5428da8b-3af6-465b-9fe1-dbe81564c87c" name="In"/>
+          <port xsi:type="esdl:InPort" id="5428da8b-3af6-465b-9fe1-dbe81564c87c" name="In" connectedTo="54924a4d-29f8-48ac-bc7f-0f6ba91f24d1"/>
           <port xsi:type="esdl:OutPort" id="1039d236-b43f-409e-b2af-5fe9931385d4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="01ff93ec-96fb-4ea1-8964-4d1ef25ae0b8" name="PhasegridHome254_1_Ph3" originalIdInSource="2541">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5ac2298a-7709-4f59-9b85-8b1a0a5543eb" name="In"/>
+          <port xsi:type="esdl:InPort" id="5ac2298a-7709-4f59-9b85-8b1a0a5543eb" name="In" connectedTo="ca30487c-8274-4a48-896f-c3c87a3e0cc8"/>
           <port xsi:type="esdl:OutPort" id="d55c602c-d127-4987-ab55-c17356574148" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="109.66" height="9.0" windowArea="28.259999999999994" doorArea="8.36" flatRoofArea="11.7" slantedRoofArea="72.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bfbadfed-fd1d-4aff-867c-2197321d181b" name="CableHome254_1" originalIdInSource="2541" assetType="4x10Cu__VO_YMvKas" length="6.7">
         <port xsi:type="esdl:InPort" id="17087aa0-c749-4b4f-9694-721492d95bcf" name="In" connectedTo="efa65df6-be2b-4d3a-9455-8069db91ab3d"/>
@@ -7908,30 +8022,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99009800725077" lon="4.08123599039344"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9018742d-2449-4bbd-856e-fb8f4b11f553" name="Home255_1" originalIdInSource="2551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="9018742d-2449-4bbd-856e-fb8f4b11f553" name="Home255_1" originalIdInSource="2551" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99022918081899" lon="4.076864037087256"/>
         <asset xsi:type="esdl:EConnection" id="a0958088-20c6-4974-901d-ffebf5dc5353" name="ConnectionHome255_1" originalIdInSource="2551" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="59e8055f-d0ac-4128-95d7-f9552b01b293" name="In" connectedTo="69ec14b9-02ad-4f13-a512-e18e42e259a3"/>
-          <port xsi:type="esdl:OutPort" id="8c12fc04-ac83-4557-9157-b973d80e3070" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f39f8dcb-7e93-495e-9c67-12c821cbf261" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f0a95532-3c49-40d9-bd8c-1cf23ff3be2a" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="8c12fc04-ac83-4557-9157-b973d80e3070" name="OutPh1" connectedTo="424ba59b-ba2d-4e27-91ae-b9b8644c3f9e"/>
+          <port xsi:type="esdl:OutPort" id="f39f8dcb-7e93-495e-9c67-12c821cbf261" name="OutPh2" connectedTo="ee5db827-c4fd-4887-b119-ac513e96d261"/>
+          <port xsi:type="esdl:OutPort" id="f0a95532-3c49-40d9-bd8c-1cf23ff3be2a" name="OutPh3" connectedTo="1eae1205-1087-4d18-907f-60b801742972"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="50f078ef-0e85-4fe5-b4b9-495d31ebac08" name="PhasegridHome255_1_Ph1" originalIdInSource="2551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="424ba59b-ba2d-4e27-91ae-b9b8644c3f9e" name="In"/>
+          <port xsi:type="esdl:InPort" id="424ba59b-ba2d-4e27-91ae-b9b8644c3f9e" name="In" connectedTo="8c12fc04-ac83-4557-9157-b973d80e3070"/>
           <port xsi:type="esdl:OutPort" id="74286853-bfc8-4caa-8333-d08f1867fdc8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bac0362b-b4c3-4fc3-8c1c-128252c3b45e" name="PhasegridHome255_1_Ph2" originalIdInSource="2551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ee5db827-c4fd-4887-b119-ac513e96d261" name="In"/>
+          <port xsi:type="esdl:InPort" id="ee5db827-c4fd-4887-b119-ac513e96d261" name="In" connectedTo="f39f8dcb-7e93-495e-9c67-12c821cbf261"/>
           <port xsi:type="esdl:OutPort" id="18dceacb-068e-453a-8c78-f4d1d5e69c45" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f73da464-dd1b-4a78-9dba-22bb31562b50" name="PhasegridHome255_1_Ph3" originalIdInSource="2551">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1eae1205-1087-4d18-907f-60b801742972" name="In"/>
+          <port xsi:type="esdl:InPort" id="1eae1205-1087-4d18-907f-60b801742972" name="In" connectedTo="f0a95532-3c49-40d9-bd8c-1cf23ff3be2a"/>
           <port xsi:type="esdl:OutPort" id="c03e2570-bd70-43d8-add6-5ff7610a03b1" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5552ca17-9f8c-4510-9dbd-98256204e2f0" name="CableHome255_1" originalIdInSource="2551" assetType="4x10Cu__VO_YMvKas" length="6.5">
         <port xsi:type="esdl:InPort" id="aa9152a4-0c27-42cd-b8a6-9ea8a1dc45b0" name="In" connectedTo="af69a44a-628d-4f37-bd05-7643af48069b"/>
@@ -7941,30 +8056,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99022918081899" lon="4.076864037087256"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="32e50962-4326-4644-9fa8-98e89d2eb2cc" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="32e50962-4326-4644-9fa8-98e89d2eb2cc" name="Home257_1" originalIdInSource="2571" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98984159046702" lon="4.090562050438731"/>
         <asset xsi:type="esdl:EConnection" id="595b2808-0cd9-497e-9247-8fc76cc6b160" name="ConnectionHome257_1" originalIdInSource="2571" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="03104c3b-f858-427e-a628-182479ade206" name="In" connectedTo="3a514eda-0cb7-4541-88f0-8507374799e2"/>
-          <port xsi:type="esdl:OutPort" id="f2acaec2-53ef-45a2-b8fa-9ef1f3babc91" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="39e72708-a4f9-4344-938f-57b52f0330da" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ebdb2690-8a36-49e4-9529-868108b7d0ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f2acaec2-53ef-45a2-b8fa-9ef1f3babc91" name="OutPh1" connectedTo="65d34ee7-3673-4ab5-82fb-f98cb93f1c9d"/>
+          <port xsi:type="esdl:OutPort" id="39e72708-a4f9-4344-938f-57b52f0330da" name="OutPh2" connectedTo="68c228ef-f1d9-40cb-bbe7-18213cba772f"/>
+          <port xsi:type="esdl:OutPort" id="ebdb2690-8a36-49e4-9529-868108b7d0ab" name="OutPh3" connectedTo="c0b82b7a-4eb1-4c64-b49a-1f3749d9d4c7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6aceac01-b0c5-481a-83f6-5e33c7e556e9" name="PhasegridHome257_1_Ph1" originalIdInSource="2571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="65d34ee7-3673-4ab5-82fb-f98cb93f1c9d" name="In"/>
+          <port xsi:type="esdl:InPort" id="65d34ee7-3673-4ab5-82fb-f98cb93f1c9d" name="In" connectedTo="f2acaec2-53ef-45a2-b8fa-9ef1f3babc91"/>
           <port xsi:type="esdl:OutPort" id="b4db2424-7a54-47b3-abc2-9e1bee32d640" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4a85a966-3332-42e3-ba5f-30c9d591801e" name="PhasegridHome257_1_Ph2" originalIdInSource="2571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="68c228ef-f1d9-40cb-bbe7-18213cba772f" name="In"/>
+          <port xsi:type="esdl:InPort" id="68c228ef-f1d9-40cb-bbe7-18213cba772f" name="In" connectedTo="39e72708-a4f9-4344-938f-57b52f0330da"/>
           <port xsi:type="esdl:OutPort" id="cf713fab-fb63-4952-98e4-e1d7ef1c90dc" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="89c91d16-9bdd-49a2-81ec-819ff62285ca" name="PhasegridHome257_1_Ph3" originalIdInSource="2571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c0b82b7a-4eb1-4c64-b49a-1f3749d9d4c7" name="In"/>
+          <port xsi:type="esdl:InPort" id="c0b82b7a-4eb1-4c64-b49a-1f3749d9d4c7" name="In" connectedTo="ebdb2690-8a36-49e4-9529-868108b7d0ab"/>
           <port xsi:type="esdl:OutPort" id="8b6307cd-f0a8-42f2-81e4-b97159abda74" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="516ccbc8-48ac-45fb-9fd3-cc2b564517cf" name="CableHome257_1" originalIdInSource="2571" assetType="4x10Cu__VO_YMvKas" length="6.8">
         <port xsi:type="esdl:InPort" id="66fadca9-618d-4318-9738-79eaf384f77c" name="In" connectedTo="5862e19f-8542-401f-a6be-d9a16d98847a"/>
@@ -7974,30 +8090,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98984159046702" lon="4.090562050438731"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a4ce6201-35e0-4d02-9cd2-c3d814f605e1" name="Home258_1" originalIdInSource="2581" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="a4ce6201-35e0-4d02-9cd2-c3d814f605e1" name="Home258_1" originalIdInSource="2581" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_A" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989465096229964" lon="4.10542428794644"/>
         <asset xsi:type="esdl:EConnection" id="6e8899da-a677-42a0-8935-74f898a0950e" name="ConnectionHome258_1" originalIdInSource="2581" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9878159b-4654-4c53-aa71-aafe86250429" name="In" connectedTo="fc7c7198-d2ef-4282-9401-caeeb1c31de6"/>
-          <port xsi:type="esdl:OutPort" id="f2108bd7-0171-441f-8ddb-f1a01026232f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c500902d-1ae6-4286-a3ac-54c5ff65dc8a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0bb5357a-fcc3-4ceb-8603-5b187b2fb52a" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f2108bd7-0171-441f-8ddb-f1a01026232f" name="OutPh1" connectedTo="d7a657e1-c0ae-45ff-a191-24a2f4f32111"/>
+          <port xsi:type="esdl:OutPort" id="c500902d-1ae6-4286-a3ac-54c5ff65dc8a" name="OutPh2" connectedTo="681e1eb0-b06f-4c64-b44c-4ca44f01049e"/>
+          <port xsi:type="esdl:OutPort" id="0bb5357a-fcc3-4ceb-8603-5b187b2fb52a" name="OutPh3" connectedTo="34e205d2-b979-4cd4-b1d1-99fbecf2172b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f65822f4-b168-489a-b9e6-0583088a7677" name="PhasegridHome258_1_Ph1" originalIdInSource="2581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d7a657e1-c0ae-45ff-a191-24a2f4f32111" name="In"/>
+          <port xsi:type="esdl:InPort" id="d7a657e1-c0ae-45ff-a191-24a2f4f32111" name="In" connectedTo="f2108bd7-0171-441f-8ddb-f1a01026232f"/>
           <port xsi:type="esdl:OutPort" id="b18da2b8-cfc8-44d7-855b-b88a2d8d7806" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="de867aad-6ad4-4c5b-ab48-6684ab7f3a59" name="PhasegridHome258_1_Ph2" originalIdInSource="2581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="681e1eb0-b06f-4c64-b44c-4ca44f01049e" name="In"/>
+          <port xsi:type="esdl:InPort" id="681e1eb0-b06f-4c64-b44c-4ca44f01049e" name="In" connectedTo="c500902d-1ae6-4286-a3ac-54c5ff65dc8a"/>
           <port xsi:type="esdl:OutPort" id="354c8a7e-6a73-448f-825a-d8aee4b6a9a3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dc935940-6ea9-474a-a982-f28023c75451" name="PhasegridHome258_1_Ph3" originalIdInSource="2581">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="34e205d2-b979-4cd4-b1d1-99fbecf2172b" name="In"/>
+          <port xsi:type="esdl:InPort" id="34e205d2-b979-4cd4-b1d1-99fbecf2172b" name="In" connectedTo="0bb5357a-fcc3-4ceb-8603-5b187b2fb52a"/>
           <port xsi:type="esdl:OutPort" id="761577b0-7e0d-4bc7-99e9-8330361521a3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="03d6b479-929c-403a-b7f9-d0e0d3045abf" name="CableHome258_1" originalIdInSource="2581" assetType="4x10Cu__VO_YMvKas" length="6.5">
         <port xsi:type="esdl:InPort" id="862561a5-e296-4fdf-b141-f72ee309f18d" name="In" connectedTo="03cfe798-3f7f-470d-b79f-7daba071db9d"/>
@@ -8007,30 +8124,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989465096229964" lon="4.10542428794644"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0cc404a2-025e-4a0b-99fa-3cf9d598ae7d" name="Home259_1" originalIdInSource="2591" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0cc404a2-025e-4a0b-99fa-3cf9d598ae7d" name="Home259_1" originalIdInSource="2591" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99239453957505" lon="4.1102913165156165"/>
         <asset xsi:type="esdl:EConnection" id="fb897552-f503-4e5d-b913-52e2ef64a044" name="ConnectionHome259_1" originalIdInSource="2591" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="21b0226c-005a-4c2a-b346-ca5ac6d68d8b" name="In" connectedTo="010488c6-f77b-4b43-9cd5-eb768c8a729a"/>
-          <port xsi:type="esdl:OutPort" id="91c0723c-62ed-49e3-871d-59c4a0954d31" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="8f192597-7ab9-47c0-ab2e-85d90f7ed779" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="acd7b288-6a96-4d61-84f0-f4ed139b9e2f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="91c0723c-62ed-49e3-871d-59c4a0954d31" name="OutPh1" connectedTo="9add2767-9297-462d-a60d-72e722558565"/>
+          <port xsi:type="esdl:OutPort" id="8f192597-7ab9-47c0-ab2e-85d90f7ed779" name="OutPh2" connectedTo="5dd873c0-ed74-4624-acdd-87f3cabc5962"/>
+          <port xsi:type="esdl:OutPort" id="acd7b288-6a96-4d61-84f0-f4ed139b9e2f" name="OutPh3" connectedTo="7ce66a9f-ab8b-4bf5-a349-3a2d84d28468"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e53fb136-4e89-4558-bd24-5d13c0118cc2" name="PhasegridHome259_1_Ph1" originalIdInSource="2591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9add2767-9297-462d-a60d-72e722558565" name="In"/>
+          <port xsi:type="esdl:InPort" id="9add2767-9297-462d-a60d-72e722558565" name="In" connectedTo="91c0723c-62ed-49e3-871d-59c4a0954d31"/>
           <port xsi:type="esdl:OutPort" id="b3e6e0d5-26b6-418f-b376-061be3a14698" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b1f75333-3fd3-4b2c-ba96-66970d0b1cda" name="PhasegridHome259_1_Ph2" originalIdInSource="2591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5dd873c0-ed74-4624-acdd-87f3cabc5962" name="In"/>
+          <port xsi:type="esdl:InPort" id="5dd873c0-ed74-4624-acdd-87f3cabc5962" name="In" connectedTo="8f192597-7ab9-47c0-ab2e-85d90f7ed779"/>
           <port xsi:type="esdl:OutPort" id="a70e33e9-60ca-4900-a6b5-ab0484af0433" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c2735918-90ac-4561-9de8-cf202f766eaa" name="PhasegridHome259_1_Ph3" originalIdInSource="2591">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7ce66a9f-ab8b-4bf5-a349-3a2d84d28468" name="In"/>
+          <port xsi:type="esdl:InPort" id="7ce66a9f-ab8b-4bf5-a349-3a2d84d28468" name="In" connectedTo="acd7b288-6a96-4d61-84f0-f4ed139b9e2f"/>
           <port xsi:type="esdl:OutPort" id="b441d5a2-b0bd-4773-bc2b-691912521790" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="88.7" height="9.0" windowArea="18.82" doorArea="4.57" slantedRoofArea="58.46"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b6b19be3-b1b3-4f07-83f6-f08898d60d3d" name="CableHome259_1" originalIdInSource="2591" assetType="4x10Cu__VO_YMvKas" length="18.6">
         <port xsi:type="esdl:InPort" id="01d97bbd-4ba9-4964-95a3-b719472ef31d" name="In" connectedTo="64c87cd3-03e7-4c3f-ab73-80f2c5ba3579"/>
@@ -8040,30 +8158,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99239453957505" lon="4.1102913165156165"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="9f86f6a3-5e70-4768-9b40-68c2044bc6ac" name="Home260_1" originalIdInSource="2601" assetType="appartement_1975_1991" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="9f86f6a3-5e70-4768-9b40-68c2044bc6ac" name="Home260_1" originalIdInSource="2601" assetType="appartement_1975_1991" energyLabel="LABEL_A" floorArea="67.0" buildingYear="1983" surfaceArea="22" numberOfFloors="1">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99253946797758" lon="4.107083742933579"/>
         <asset xsi:type="esdl:EConnection" id="0ee223ba-237b-43f0-9bea-31918d088de6" name="ConnectionHome260_1" originalIdInSource="2601" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d68ad178-b39e-4f72-b8bd-579649f6e782" name="In" connectedTo="60bdd111-8ab6-448b-a0fe-b3d195160530"/>
-          <port xsi:type="esdl:OutPort" id="0a2c6514-1a85-4ffa-bae6-066ccd535826" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="29738d72-82c4-484c-ad2f-490687d543a3" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9b86624d-2726-4b4f-a38d-b5aff0fa7188" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0a2c6514-1a85-4ffa-bae6-066ccd535826" name="OutPh1" connectedTo="2a6f3f4b-8552-4b89-a507-4acc5a6b831d"/>
+          <port xsi:type="esdl:OutPort" id="29738d72-82c4-484c-ad2f-490687d543a3" name="OutPh2" connectedTo="6a78967f-eb5f-4c08-918f-d57735cf522a"/>
+          <port xsi:type="esdl:OutPort" id="9b86624d-2726-4b4f-a38d-b5aff0fa7188" name="OutPh3" connectedTo="556363b8-e98b-4925-8cc4-dbcec9e5f14d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f86dde7-f879-483e-ada3-d0f79000ff89" name="PhasegridHome260_1_Ph1" originalIdInSource="2601">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2a6f3f4b-8552-4b89-a507-4acc5a6b831d" name="In"/>
+          <port xsi:type="esdl:InPort" id="2a6f3f4b-8552-4b89-a507-4acc5a6b831d" name="In" connectedTo="0a2c6514-1a85-4ffa-bae6-066ccd535826"/>
           <port xsi:type="esdl:OutPort" id="7dbcf989-1844-4693-a0c5-f849e3d0f853" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d76ccad2-85d3-4f61-8d8b-0c03687899f0" name="PhasegridHome260_1_Ph2" originalIdInSource="2601">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6a78967f-eb5f-4c08-918f-d57735cf522a" name="In"/>
+          <port xsi:type="esdl:InPort" id="6a78967f-eb5f-4c08-918f-d57735cf522a" name="In" connectedTo="29738d72-82c4-484c-ad2f-490687d543a3"/>
           <port xsi:type="esdl:OutPort" id="2785aedf-af3b-4b64-93ac-2d9018bdedbe" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a7b7bc64-b746-4584-9855-19f75ce95ab0" name="PhasegridHome260_1_Ph3" originalIdInSource="2601">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="556363b8-e98b-4925-8cc4-dbcec9e5f14d" name="In"/>
+          <port xsi:type="esdl:InPort" id="556363b8-e98b-4925-8cc4-dbcec9e5f14d" name="In" connectedTo="9b86624d-2726-4b4f-a38d-b5aff0fa7188"/>
           <port xsi:type="esdl:OutPort" id="7681f733-bbf0-4dc6-be72-2d7241b28653" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="15.2" height="11.0" windowArea="10.07" doorArea="4.4" flatRoofArea="67.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d770030d-98a4-453f-8c98-c6ea0fe1c40a" name="CableHome260_1" originalIdInSource="2601" assetType="4x10Cu__VO_YMvKas" length="18.7">
         <port xsi:type="esdl:InPort" id="c1f0519d-1681-447d-8fd7-9407224c9299" name="In" connectedTo="d0f9458b-9883-46d5-b85b-1890b4abaedd"/>
@@ -8073,18 +8192,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99253946797758" lon="4.107083742933579"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dbd1e937-563b-4a69-85b9-c8593398b872" name="Home261_1" originalIdInSource="2611" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="dbd1e937-563b-4a69-85b9-c8593398b872" name="Home261_1" originalIdInSource="2611" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98930438545565" lon="4.107176090547247"/>
         <asset xsi:type="esdl:EConnection" id="288fa97a-f5c0-4b86-9702-3c52c385636f" name="ConnectionHome261_1" originalIdInSource="2611" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7515a628-20fb-4455-92c2-6673d89450dd" name="In" connectedTo="1a7ea485-5cf6-4627-a8fe-a552a853219a"/>
-          <port xsi:type="esdl:OutPort" id="4960de87-0003-4033-b482-bd100033855c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4960de87-0003-4033-b482-bd100033855c" name="OutPh3" connectedTo="63e8388e-9b5d-4664-88e8-f1b66150fcd2"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7a63960b-9618-48d7-89d2-289481e7d475" name="PhasegridHome261_1_Ph3" originalIdInSource="2611">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="63e8388e-9b5d-4664-88e8-f1b66150fcd2" name="In"/>
+          <port xsi:type="esdl:InPort" id="63e8388e-9b5d-4664-88e8-f1b66150fcd2" name="In" connectedTo="4960de87-0003-4033-b482-bd100033855c"/>
           <port xsi:type="esdl:OutPort" id="386cd813-e50a-458c-913a-e88f8fbe5dac" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6c3bd64c-50e1-44a3-80ae-2deca7e81a90" name="CableHome261_1" originalIdInSource="2611" assetType="4x10Cu__VO_YMvKas" length="6.5">
         <port xsi:type="esdl:InPort" id="0175b570-db92-408f-a393-81b6c33d7fe6" name="In" connectedTo="2613fb23-36e8-4009-bcf7-861cc150a1f9"/>
@@ -8094,30 +8214,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98930438545565" lon="4.107176090547247"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1b279972-32c2-4d33-b58e-1fb6b16b255c" name="Home262_1" originalIdInSource="2621" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="1b279972-32c2-4d33-b58e-1fb6b16b255c" name="Home262_1" originalIdInSource="2621" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01595946671116" lon="4.095051117877247"/>
         <asset xsi:type="esdl:EConnection" id="43da13ee-8c11-4d72-b9cc-1a09e0f95ad7" name="ConnectionHome262_1" originalIdInSource="2621" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="59dc8ab2-b679-47ea-94fc-2d412551444e" name="In" connectedTo="5f56b32c-e125-4ecb-8cb8-4f5ec5eb8905"/>
-          <port xsi:type="esdl:OutPort" id="7ef15d85-eac3-431f-9d2b-dcc9e458ebb3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="79509446-6ba3-428c-a7aa-fac93e673412" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="825ccb8d-c16e-451d-b71f-35268497ddda" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7ef15d85-eac3-431f-9d2b-dcc9e458ebb3" name="OutPh1" connectedTo="b129cd6f-e2c6-453b-8c2e-cb1bd8eee826"/>
+          <port xsi:type="esdl:OutPort" id="79509446-6ba3-428c-a7aa-fac93e673412" name="OutPh2" connectedTo="92a0d362-72da-4e45-bc61-91595f5d1df1"/>
+          <port xsi:type="esdl:OutPort" id="825ccb8d-c16e-451d-b71f-35268497ddda" name="OutPh3" connectedTo="005fdf9a-de52-4bcf-9dda-44a7f127850d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="025ac5e5-7953-4ebc-ace2-0d14561a49f7" name="PhasegridHome262_1_Ph1" originalIdInSource="2621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b129cd6f-e2c6-453b-8c2e-cb1bd8eee826" name="In"/>
+          <port xsi:type="esdl:InPort" id="b129cd6f-e2c6-453b-8c2e-cb1bd8eee826" name="In" connectedTo="7ef15d85-eac3-431f-9d2b-dcc9e458ebb3"/>
           <port xsi:type="esdl:OutPort" id="62b081b2-5588-4e53-b288-02bb5cf5b573" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d88ea9a1-91e1-4b5b-a185-549a31d87782" name="PhasegridHome262_1_Ph2" originalIdInSource="2621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="92a0d362-72da-4e45-bc61-91595f5d1df1" name="In"/>
+          <port xsi:type="esdl:InPort" id="92a0d362-72da-4e45-bc61-91595f5d1df1" name="In" connectedTo="79509446-6ba3-428c-a7aa-fac93e673412"/>
           <port xsi:type="esdl:OutPort" id="ac907e76-c153-4def-9ef4-8628e7c64d91" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5e1921ee-ce7d-46d3-8f2b-c3ee84bc0c8d" name="PhasegridHome262_1_Ph3" originalIdInSource="2621">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="005fdf9a-de52-4bcf-9dda-44a7f127850d" name="In"/>
+          <port xsi:type="esdl:InPort" id="005fdf9a-de52-4bcf-9dda-44a7f127850d" name="In" connectedTo="825ccb8d-c16e-451d-b71f-35268497ddda"/>
           <port xsi:type="esdl:OutPort" id="04bb2723-5b31-4444-9489-f8e17e7cc9e5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7d0bc056-15f6-4958-8ca6-2dc09ff6120c" name="CableHome262_1" originalIdInSource="2621" assetType="4x10Cu__VO_YMvKas" length="10.3">
         <port xsi:type="esdl:InPort" id="5e734820-4fc3-4e04-9d1c-ca78b6cce6fc" name="In" connectedTo="24a06dee-4938-4ad3-9d22-85f9319a56d0"/>
@@ -8127,30 +8248,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01595946671116" lon="4.095051117877247"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="90e59295-89bd-4347-bbfb-993b476aafab" name="Home263_1" originalIdInSource="2631" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="90e59295-89bd-4347-bbfb-993b476aafab" name="Home263_1" originalIdInSource="2631" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01592745333154" lon="4.092138289349981"/>
         <asset xsi:type="esdl:EConnection" id="19d8d7bd-690e-4e3a-bbd5-b18471551d01" name="ConnectionHome263_1" originalIdInSource="2631" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="31272517-a9f3-40c3-8409-3c2f6ca0bc4d" name="In" connectedTo="dda4fe72-6afa-4190-a006-7b403692c48e"/>
-          <port xsi:type="esdl:OutPort" id="2c1850f3-e47e-4279-85b4-960407daf2bd" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="07d6dcc2-f0f7-4b6a-b06b-38a001b22c8a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b9f57445-84af-47bb-aaea-f195fc27b831" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2c1850f3-e47e-4279-85b4-960407daf2bd" name="OutPh1" connectedTo="141ecd5d-274f-45f4-a208-b71b35c5dcf2"/>
+          <port xsi:type="esdl:OutPort" id="07d6dcc2-f0f7-4b6a-b06b-38a001b22c8a" name="OutPh2" connectedTo="98beec52-e1d6-49d7-af8e-9c2c52c3a505"/>
+          <port xsi:type="esdl:OutPort" id="b9f57445-84af-47bb-aaea-f195fc27b831" name="OutPh3" connectedTo="b6f75b91-f753-42ce-b041-b5854e240ada"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="06c99a09-4d4b-4f1f-a00f-c2c52fe9a1d8" name="PhasegridHome263_1_Ph1" originalIdInSource="2631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="141ecd5d-274f-45f4-a208-b71b35c5dcf2" name="In"/>
+          <port xsi:type="esdl:InPort" id="141ecd5d-274f-45f4-a208-b71b35c5dcf2" name="In" connectedTo="2c1850f3-e47e-4279-85b4-960407daf2bd"/>
           <port xsi:type="esdl:OutPort" id="57d289c5-2057-49e0-96e2-4866834a6a9e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="649ead59-7d3c-47e7-942b-99e7f0310506" name="PhasegridHome263_1_Ph2" originalIdInSource="2631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="98beec52-e1d6-49d7-af8e-9c2c52c3a505" name="In"/>
+          <port xsi:type="esdl:InPort" id="98beec52-e1d6-49d7-af8e-9c2c52c3a505" name="In" connectedTo="07d6dcc2-f0f7-4b6a-b06b-38a001b22c8a"/>
           <port xsi:type="esdl:OutPort" id="e52521b1-b151-40b3-a440-314e597a37ba" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="841331b6-b621-4d87-be84-ae62b9f2bbcf" name="PhasegridHome263_1_Ph3" originalIdInSource="2631">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b6f75b91-f753-42ce-b041-b5854e240ada" name="In"/>
+          <port xsi:type="esdl:InPort" id="b6f75b91-f753-42ce-b041-b5854e240ada" name="In" connectedTo="b9f57445-84af-47bb-aaea-f195fc27b831"/>
           <port xsi:type="esdl:OutPort" id="df1f2726-1fcd-4e13-a1a4-ce5f18752120" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2f0d1fc1-f41c-473e-ac65-c98dc7e35e06" name="CableHome263_1" originalIdInSource="2631" assetType="4x10Cu__VO_YMvKas" length="9.5">
         <port xsi:type="esdl:InPort" id="9148551c-933d-4d71-bc58-5acdaf07ba62" name="In" connectedTo="384452ec-9b10-4da2-9003-9472570a743e"/>
@@ -8160,30 +8282,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01592745333154" lon="4.092138289349981"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bfd23525-fbc9-4e56-a33a-70bf9963c735" name="Home264_1" originalIdInSource="2641" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="bfd23525-fbc9-4e56-a33a-70bf9963c735" name="Home264_1" originalIdInSource="2641" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_F" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01591141961379" lon="4.090681876885667"/>
         <asset xsi:type="esdl:EConnection" id="22427dc2-52a7-483c-8d9c-b22284707db2" name="ConnectionHome264_1" originalIdInSource="2641" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8d8ee4b7-10f0-4d69-9275-c1cb614ac111" name="In" connectedTo="58d41312-952a-4905-8f5f-ac297a69dbc5"/>
-          <port xsi:type="esdl:OutPort" id="e239d017-0aa1-42d1-af38-282adfe28752" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5681dd96-3b1d-475d-80cd-e67507e846cd" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f3cdd3ae-c266-42dc-b964-16bd582077b6" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e239d017-0aa1-42d1-af38-282adfe28752" name="OutPh1" connectedTo="7c044932-2529-4233-9c87-ba76cadd31e6"/>
+          <port xsi:type="esdl:OutPort" id="5681dd96-3b1d-475d-80cd-e67507e846cd" name="OutPh2" connectedTo="7879430b-aa50-4501-aedc-b242be52355e"/>
+          <port xsi:type="esdl:OutPort" id="f3cdd3ae-c266-42dc-b964-16bd582077b6" name="OutPh3" connectedTo="0eea8435-14a3-4b3b-9d8c-a00c19fad94b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2e399f79-8750-4c18-bb85-8dbb750784fd" name="PhasegridHome264_1_Ph1" originalIdInSource="2641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7c044932-2529-4233-9c87-ba76cadd31e6" name="In"/>
+          <port xsi:type="esdl:InPort" id="7c044932-2529-4233-9c87-ba76cadd31e6" name="In" connectedTo="e239d017-0aa1-42d1-af38-282adfe28752"/>
           <port xsi:type="esdl:OutPort" id="0135a0d7-f88a-4ad4-801f-beece602c515" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ee2f0efe-2cdc-4d22-9e05-68fed578b43e" name="PhasegridHome264_1_Ph2" originalIdInSource="2641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7879430b-aa50-4501-aedc-b242be52355e" name="In"/>
+          <port xsi:type="esdl:InPort" id="7879430b-aa50-4501-aedc-b242be52355e" name="In" connectedTo="5681dd96-3b1d-475d-80cd-e67507e846cd"/>
           <port xsi:type="esdl:OutPort" id="8903339c-98c3-45d5-a690-a054bfb661b4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="389b07f2-2462-4726-be14-553139a91628" name="PhasegridHome264_1_Ph3" originalIdInSource="2641">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0eea8435-14a3-4b3b-9d8c-a00c19fad94b" name="In"/>
+          <port xsi:type="esdl:InPort" id="0eea8435-14a3-4b3b-9d8c-a00c19fad94b" name="In" connectedTo="f3cdd3ae-c266-42dc-b964-16bd582077b6"/>
           <port xsi:type="esdl:OutPort" id="805af2b3-e589-41c5-aa2e-9972554aff52" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9635a250-4534-4061-899d-c561e2abfa03" name="CableHome264_1" originalIdInSource="2641" assetType="4x10Cu__VO_YMvKas" length="8.3">
         <port xsi:type="esdl:InPort" id="49c7800b-e26c-466f-9a31-1ffe975bd06d" name="In" connectedTo="acd0616a-afc2-4274-a213-ed31b6db3785"/>
@@ -8193,30 +8316,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01591141961379" lon="4.090681876885667"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="25ff710f-6d11-4070-8a29-9fd3d96b277f" name="Home266_1" originalIdInSource="2661" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="25ff710f-6d11-4070-8a29-9fd3d96b277f" name="Home266_1" originalIdInSource="2661" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99583776004019" lon="4.1128144506701725"/>
         <asset xsi:type="esdl:EConnection" id="142fb677-d190-4e48-b7cf-ee91ee611e1e" name="ConnectionHome266_1" originalIdInSource="2661" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9cdce227-c513-4f87-a175-1d5b4720bb64" name="In" connectedTo="588e9638-f96c-4e61-bee0-78f6aa305ac9"/>
-          <port xsi:type="esdl:OutPort" id="332d675a-cb93-42f7-8dfa-f2dc64138b74" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b028d0be-cf57-47a1-9f60-6165a7a7598b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e74cdaae-c93e-4893-a565-f0a416919120" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="332d675a-cb93-42f7-8dfa-f2dc64138b74" name="OutPh1" connectedTo="89097e59-0234-449c-a187-3cfda26f2fb6"/>
+          <port xsi:type="esdl:OutPort" id="b028d0be-cf57-47a1-9f60-6165a7a7598b" name="OutPh2" connectedTo="2cb3b5c9-d012-477b-8b7d-689c8739fd8a"/>
+          <port xsi:type="esdl:OutPort" id="e74cdaae-c93e-4893-a565-f0a416919120" name="OutPh3" connectedTo="aec86f88-a354-4d5c-8c45-8b5774bcd682"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f00a3114-2ac0-4e9e-8c7d-fca42ccde624" name="PhasegridHome266_1_Ph1" originalIdInSource="2661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="89097e59-0234-449c-a187-3cfda26f2fb6" name="In"/>
+          <port xsi:type="esdl:InPort" id="89097e59-0234-449c-a187-3cfda26f2fb6" name="In" connectedTo="332d675a-cb93-42f7-8dfa-f2dc64138b74"/>
           <port xsi:type="esdl:OutPort" id="d8a4fe4c-8b01-4183-bb91-361336d4eb06" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d9218bc3-c928-44f2-97a1-ce5ee3cc5545" name="PhasegridHome266_1_Ph2" originalIdInSource="2661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2cb3b5c9-d012-477b-8b7d-689c8739fd8a" name="In"/>
+          <port xsi:type="esdl:InPort" id="2cb3b5c9-d012-477b-8b7d-689c8739fd8a" name="In" connectedTo="b028d0be-cf57-47a1-9f60-6165a7a7598b"/>
           <port xsi:type="esdl:OutPort" id="886655a7-e5e6-4c32-9e2e-69684be7a6af" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0e47df29-4f3a-4035-83c0-a8819a818369" name="PhasegridHome266_1_Ph3" originalIdInSource="2661">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="aec86f88-a354-4d5c-8c45-8b5774bcd682" name="In"/>
+          <port xsi:type="esdl:InPort" id="aec86f88-a354-4d5c-8c45-8b5774bcd682" name="In" connectedTo="e74cdaae-c93e-4893-a565-f0a416919120"/>
           <port xsi:type="esdl:OutPort" id="bceae1eb-516c-4c5b-afd9-69c2d4ac63a4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c089fe93-968f-490f-be3e-ccb0645bbc58" name="CableHome266_1" originalIdInSource="2661" assetType="4x10Cu__VO_YMvKas" length="16.7">
         <port xsi:type="esdl:InPort" id="f363e28f-131b-4979-9973-520968c67358" name="In" connectedTo="432a08f1-48af-4bbe-8e9f-7435b0e81c26"/>
@@ -8226,30 +8350,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99583776004019" lon="4.1128144506701725"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="52bda3b3-fa31-4521-beee-30fefd9947bf" name="Home267_1" originalIdInSource="2671" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="52bda3b3-fa31-4521-beee-30fefd9947bf" name="Home267_1" originalIdInSource="2671" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.001481979736255" lon="4.086438715262987"/>
         <asset xsi:type="esdl:EConnection" id="048af3ed-ff2e-49db-bf54-12da1d473c4f" name="ConnectionHome267_1" originalIdInSource="2671" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="bfdfac08-5f27-482b-bef6-5533f6d376e9" name="In" connectedTo="888735bd-7020-4b37-9b86-f7f97ddf3a26"/>
-          <port xsi:type="esdl:OutPort" id="716d6929-8ee7-4e4a-96d8-afd635bace84" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="91bff797-23a8-431f-aa9e-ae44630de01a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="846507ec-7a3d-42a1-9302-3aeb5411aab1" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="716d6929-8ee7-4e4a-96d8-afd635bace84" name="OutPh1" connectedTo="7d37b544-cac2-497e-b91f-2638d0edb8b9"/>
+          <port xsi:type="esdl:OutPort" id="91bff797-23a8-431f-aa9e-ae44630de01a" name="OutPh2" connectedTo="dc5ce69e-afa8-410f-a8c3-6de3b719e44c"/>
+          <port xsi:type="esdl:OutPort" id="846507ec-7a3d-42a1-9302-3aeb5411aab1" name="OutPh3" connectedTo="b6c6a3e8-537a-4908-ac60-8600550b7ec7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f54c6beb-ae2d-4543-bcc1-ba8969c0bb8c" name="PhasegridHome267_1_Ph1" originalIdInSource="2671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7d37b544-cac2-497e-b91f-2638d0edb8b9" name="In"/>
+          <port xsi:type="esdl:InPort" id="7d37b544-cac2-497e-b91f-2638d0edb8b9" name="In" connectedTo="716d6929-8ee7-4e4a-96d8-afd635bace84"/>
           <port xsi:type="esdl:OutPort" id="d66929a4-f1e8-4cd9-9144-e53f182e19f7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5d256efc-561c-4f75-a2d8-76679fe470d7" name="PhasegridHome267_1_Ph2" originalIdInSource="2671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="dc5ce69e-afa8-410f-a8c3-6de3b719e44c" name="In"/>
+          <port xsi:type="esdl:InPort" id="dc5ce69e-afa8-410f-a8c3-6de3b719e44c" name="In" connectedTo="91bff797-23a8-431f-aa9e-ae44630de01a"/>
           <port xsi:type="esdl:OutPort" id="00bc409a-0c76-43f8-a5dd-0e7c3f7d3767" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b230adf2-1fb0-43bb-9276-cbec21217ad2" name="PhasegridHome267_1_Ph3" originalIdInSource="2671">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b6c6a3e8-537a-4908-ac60-8600550b7ec7" name="In"/>
+          <port xsi:type="esdl:InPort" id="b6c6a3e8-537a-4908-ac60-8600550b7ec7" name="In" connectedTo="846507ec-7a3d-42a1-9302-3aeb5411aab1"/>
           <port xsi:type="esdl:OutPort" id="3e203803-c872-423c-9a07-eda87c9099ff" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5ae8a737-b17d-42db-9499-64c17ad7568a" name="CableHome267_1" originalIdInSource="2671" assetType="4x10Cu__VO_YMvKas" length="11.5">
         <port xsi:type="esdl:InPort" id="1d8dea13-afdd-41b9-97d1-5707f46b4c8f" name="In" connectedTo="28adbf14-95b3-4d1c-a552-65de197cda92"/>
@@ -8259,30 +8384,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.001481979736255" lon="4.086438715262987"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="23fc3dde-5a8d-4584-b66d-ab835968b66c" name="Home267_2" originalIdInSource="2672" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="23fc3dde-5a8d-4584-b66d-ab835968b66c" name="Home267_2" originalIdInSource="2672" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00166170507436" lon="4.086433500289332"/>
         <asset xsi:type="esdl:EConnection" id="018979d1-6221-4296-92be-e710f856a861" name="ConnectionHome267_2" originalIdInSource="2672" assetType="3x40A" capacity="27712.812921102035">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c175677a-6961-4cdb-b939-909332553bc6" name="In" connectedTo="0b5c3808-85bb-4cc8-bce6-cf1096eb5e82"/>
-          <port xsi:type="esdl:OutPort" id="ffb97e48-37ca-45aa-bf7c-35922452332c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b513c651-8a57-4b33-8ddd-31f4870a065b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b0688e14-b7ca-4854-85a2-530490480a43" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ffb97e48-37ca-45aa-bf7c-35922452332c" name="OutPh1" connectedTo="23409dd4-56a5-4360-9a2f-40d1f28a4533"/>
+          <port xsi:type="esdl:OutPort" id="b513c651-8a57-4b33-8ddd-31f4870a065b" name="OutPh2" connectedTo="f11632b7-36a3-482d-810f-8ff838e15f0f"/>
+          <port xsi:type="esdl:OutPort" id="b0688e14-b7ca-4854-85a2-530490480a43" name="OutPh3" connectedTo="b4f0f538-21cd-4ab1-9008-04be8258a4e6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f5ec22e9-0479-4f2f-bd69-a8c3b7a27a80" name="PhasegridHome267_2_Ph1" originalIdInSource="2672">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="23409dd4-56a5-4360-9a2f-40d1f28a4533" name="In"/>
+          <port xsi:type="esdl:InPort" id="23409dd4-56a5-4360-9a2f-40d1f28a4533" name="In" connectedTo="ffb97e48-37ca-45aa-bf7c-35922452332c"/>
           <port xsi:type="esdl:OutPort" id="8bec66fa-5884-478c-91ea-5ba934ef607d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b2d8a3eb-8f64-4796-b3bb-39352fd470de" name="PhasegridHome267_2_Ph2" originalIdInSource="2672">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f11632b7-36a3-482d-810f-8ff838e15f0f" name="In"/>
+          <port xsi:type="esdl:InPort" id="f11632b7-36a3-482d-810f-8ff838e15f0f" name="In" connectedTo="b513c651-8a57-4b33-8ddd-31f4870a065b"/>
           <port xsi:type="esdl:OutPort" id="2d5e1884-13a1-4db4-bbb7-4f9da24d55cb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5731bf39-7b51-45a0-9c42-4bcedcf0d229" name="PhasegridHome267_2_Ph3" originalIdInSource="2672">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b4f0f538-21cd-4ab1-9008-04be8258a4e6" name="In"/>
+          <port xsi:type="esdl:InPort" id="b4f0f538-21cd-4ab1-9008-04be8258a4e6" name="In" connectedTo="b0688e14-b7ca-4854-85a2-530490480a43"/>
           <port xsi:type="esdl:OutPort" id="0ff23587-8574-46b2-9034-b5cfa9793056" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ff06d70a-c1d4-4a72-81b4-c0edd454a18e" name="CableHome267_2" originalIdInSource="2672" assetType="4x10Cu__VO_YMvKas" length="11.5">
         <port xsi:type="esdl:InPort" id="c2e93bba-e600-4b91-b5fe-d18e463c0d36" name="In" connectedTo="28adbf14-95b3-4d1c-a552-65de197cda92"/>
@@ -8292,30 +8418,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00166170507436" lon="4.086433500289332"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="49721124-3f9b-45aa-be45-bc5abbf9f21d" name="Home303_1" originalIdInSource="3031" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="49721124-3f9b-45aa-be45-bc5abbf9f21d" name="Home303_1" originalIdInSource="3031" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         <asset xsi:type="esdl:EConnection" id="ca416c48-1af5-46ca-b53f-a874e5b0b91e" name="ConnectionHome303_1" originalIdInSource="3031" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="15d9368e-1233-4061-911c-41461a1aa2b8" name="In" connectedTo="88101578-03f5-49a0-a52e-743fdf265ce7"/>
-          <port xsi:type="esdl:OutPort" id="06e9673a-a7c5-4b56-8de2-a006749a9fdc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="01b226ad-7b48-453c-861a-850b9aab4b91" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6659df84-15f5-4054-93e2-d9dc744b03ff" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="06e9673a-a7c5-4b56-8de2-a006749a9fdc" name="OutPh1" connectedTo="ae67ff2e-ead9-4d18-a48a-49830f432245"/>
+          <port xsi:type="esdl:OutPort" id="01b226ad-7b48-453c-861a-850b9aab4b91" name="OutPh2" connectedTo="3121c714-a62b-4fac-aa4f-2de364a5fc05"/>
+          <port xsi:type="esdl:OutPort" id="6659df84-15f5-4054-93e2-d9dc744b03ff" name="OutPh3" connectedTo="3404b0ac-cad5-4df2-ba31-33d52fd8372a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="11d6476c-f7b8-4e43-81b7-25e15bf31744" name="PhasegridHome303_1_Ph1" originalIdInSource="3031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae67ff2e-ead9-4d18-a48a-49830f432245" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae67ff2e-ead9-4d18-a48a-49830f432245" name="In" connectedTo="06e9673a-a7c5-4b56-8de2-a006749a9fdc"/>
           <port xsi:type="esdl:OutPort" id="f78e6971-0c7f-48c1-b223-e277bd19694a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ca7a0289-aba3-4fbd-bb98-4e376d2ff8de" name="PhasegridHome303_1_Ph2" originalIdInSource="3031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3121c714-a62b-4fac-aa4f-2de364a5fc05" name="In"/>
+          <port xsi:type="esdl:InPort" id="3121c714-a62b-4fac-aa4f-2de364a5fc05" name="In" connectedTo="01b226ad-7b48-453c-861a-850b9aab4b91"/>
           <port xsi:type="esdl:OutPort" id="21a1ba15-ab4b-443a-b1db-23709f4411d3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8ba10ea3-7bb3-4dce-83b5-0a25a35120cf" name="PhasegridHome303_1_Ph3" originalIdInSource="3031">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3404b0ac-cad5-4df2-ba31-33d52fd8372a" name="In"/>
+          <port xsi:type="esdl:InPort" id="3404b0ac-cad5-4df2-ba31-33d52fd8372a" name="In" connectedTo="6659df84-15f5-4054-93e2-d9dc744b03ff"/>
           <port xsi:type="esdl:OutPort" id="69bf64d3-7cb4-4640-855d-96b05f8f09af" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3c88a152-ca17-449a-a382-7b7740424081" name="CableHome303_1" originalIdInSource="3031" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c7eca899-068f-488e-8e7e-81d0d48e67c9" name="In" connectedTo="83c3dce8-4a72-4955-8b5e-d5c9542bff25"/>
@@ -8325,30 +8452,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8832be84-e402-4f3a-9490-caf87b374155" name="Home303_2" originalIdInSource="3032" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="8832be84-e402-4f3a-9490-caf87b374155" name="Home303_2" originalIdInSource="3032" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         <asset xsi:type="esdl:EConnection" id="92007c56-9bc1-4bfd-bad1-2e4b2a343e01" name="ConnectionHome303_2" originalIdInSource="3032" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cd4b63cc-f598-46a6-8414-92db169b11f3" name="In" connectedTo="7149a835-4f5f-4153-b4ed-3a942b106342"/>
-          <port xsi:type="esdl:OutPort" id="8fe16f36-37aa-42b6-887f-2f4c65453bd3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="21b15205-d31e-414a-90d1-85fc3173fe8f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="42501f19-f928-4dff-bc53-946ec520ff09" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="8fe16f36-37aa-42b6-887f-2f4c65453bd3" name="OutPh1" connectedTo="5d67603a-4fd0-4d1c-be18-a46653b042a0"/>
+          <port xsi:type="esdl:OutPort" id="21b15205-d31e-414a-90d1-85fc3173fe8f" name="OutPh2" connectedTo="9d22b3fe-0386-4c7a-b810-50f44ce3246d"/>
+          <port xsi:type="esdl:OutPort" id="42501f19-f928-4dff-bc53-946ec520ff09" name="OutPh3" connectedTo="7c2fbfb8-96f8-41dd-bfc3-e935adb2af83"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f78ddf5-9e4f-4bed-9cfd-1b82c616a5e6" name="PhasegridHome303_2_Ph1" originalIdInSource="3032">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5d67603a-4fd0-4d1c-be18-a46653b042a0" name="In"/>
+          <port xsi:type="esdl:InPort" id="5d67603a-4fd0-4d1c-be18-a46653b042a0" name="In" connectedTo="8fe16f36-37aa-42b6-887f-2f4c65453bd3"/>
           <port xsi:type="esdl:OutPort" id="cd9c3329-b619-4e6b-919f-29ab39211832" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b7f2e345-4aae-4d88-8671-96a38eb1230b" name="PhasegridHome303_2_Ph2" originalIdInSource="3032">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9d22b3fe-0386-4c7a-b810-50f44ce3246d" name="In"/>
+          <port xsi:type="esdl:InPort" id="9d22b3fe-0386-4c7a-b810-50f44ce3246d" name="In" connectedTo="21b15205-d31e-414a-90d1-85fc3173fe8f"/>
           <port xsi:type="esdl:OutPort" id="85399865-317f-4ae4-afee-44ad3e56589a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="448a52db-2b61-4b2b-a8bd-03a6dfa7bbc9" name="PhasegridHome303_2_Ph3" originalIdInSource="3032">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7c2fbfb8-96f8-41dd-bfc3-e935adb2af83" name="In"/>
+          <port xsi:type="esdl:InPort" id="7c2fbfb8-96f8-41dd-bfc3-e935adb2af83" name="In" connectedTo="42501f19-f928-4dff-bc53-946ec520ff09"/>
           <port xsi:type="esdl:OutPort" id="1f58c805-7107-4b43-a95d-e46030440aa5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d16c30aa-f3bb-4158-874d-7ec8f21bb30a" name="CableHome303_2" originalIdInSource="3032" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="64462f02-7f35-4039-a6ec-14d634ae2cff" name="In" connectedTo="83c3dce8-4a72-4955-8b5e-d5c9542bff25"/>
@@ -8358,30 +8486,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bac3fbbc-1c68-4776-830e-a17e63d38b2c" name="Home303_3" originalIdInSource="3033" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="bac3fbbc-1c68-4776-830e-a17e63d38b2c" name="Home303_3" originalIdInSource="3033" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         <asset xsi:type="esdl:EConnection" id="12baef5c-ed75-42d3-8169-229510234f14" name="ConnectionHome303_3" originalIdInSource="3033" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="46202de8-b117-458e-ac8b-1a5c6ada83d5" name="In" connectedTo="1ed6c5f9-089d-45d1-bd1a-95854971a660"/>
-          <port xsi:type="esdl:OutPort" id="607832e7-6dc2-4bda-87b3-97595f937836" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f31d4b3e-4071-4aa2-893a-2a91f28cfd98" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="45052b7f-aff3-4f77-a70d-e2535d2fa3aa" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="607832e7-6dc2-4bda-87b3-97595f937836" name="OutPh1" connectedTo="cbc84428-3a97-4c0d-b5fc-4770c7b12423"/>
+          <port xsi:type="esdl:OutPort" id="f31d4b3e-4071-4aa2-893a-2a91f28cfd98" name="OutPh2" connectedTo="99297812-6bf7-4b1b-bb3c-fd445f4b141f"/>
+          <port xsi:type="esdl:OutPort" id="45052b7f-aff3-4f77-a70d-e2535d2fa3aa" name="OutPh3" connectedTo="fd78e479-b2c8-4e11-94e0-296f088bbf3f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="eff0abc1-2f95-4c37-b00a-c961857f663b" name="PhasegridHome303_3_Ph1" originalIdInSource="3033">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cbc84428-3a97-4c0d-b5fc-4770c7b12423" name="In"/>
+          <port xsi:type="esdl:InPort" id="cbc84428-3a97-4c0d-b5fc-4770c7b12423" name="In" connectedTo="607832e7-6dc2-4bda-87b3-97595f937836"/>
           <port xsi:type="esdl:OutPort" id="492d3633-988e-4f13-9fcb-b5bcec08bfa6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="47ec18f4-bf63-46d2-9de0-038f7489b0d1" name="PhasegridHome303_3_Ph2" originalIdInSource="3033">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="99297812-6bf7-4b1b-bb3c-fd445f4b141f" name="In"/>
+          <port xsi:type="esdl:InPort" id="99297812-6bf7-4b1b-bb3c-fd445f4b141f" name="In" connectedTo="f31d4b3e-4071-4aa2-893a-2a91f28cfd98"/>
           <port xsi:type="esdl:OutPort" id="88681bb0-0da6-499f-b224-61ad34704f08" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0c3c2743-7ab0-4a30-aebd-b13d4bb89e2a" name="PhasegridHome303_3_Ph3" originalIdInSource="3033">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fd78e479-b2c8-4e11-94e0-296f088bbf3f" name="In"/>
+          <port xsi:type="esdl:InPort" id="fd78e479-b2c8-4e11-94e0-296f088bbf3f" name="In" connectedTo="45052b7f-aff3-4f77-a70d-e2535d2fa3aa"/>
           <port xsi:type="esdl:OutPort" id="4a05f1ec-dcf5-4273-873f-e61476c2aaba" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7b424bdf-75f5-4cc5-a672-588cd868079c" name="CableHome303_3" originalIdInSource="3033" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="feb985d7-646f-4fe6-826d-c16dcde98ecd" name="In" connectedTo="83c3dce8-4a72-4955-8b5e-d5c9542bff25"/>
@@ -8391,30 +8520,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98465219160903" lon="4.028983266976484"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="00b2ddb7-6a37-42d9-b506-1df4842aa1a5" name="Home308_1" originalIdInSource="3081" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="00b2ddb7-6a37-42d9-b506-1df4842aa1a5" name="Home308_1" originalIdInSource="3081" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.962150873383244" lon="4.04217853045701"/>
         <asset xsi:type="esdl:EConnection" id="b9aea3bb-9d4e-4c39-b8ca-6823262c63e8" name="ConnectionHome308_1" originalIdInSource="3081" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="07dd6cbb-4b47-4025-b1ac-914862d5d723" name="In" connectedTo="b95dbcd9-7083-46eb-abc0-f145ec916a99"/>
-          <port xsi:type="esdl:OutPort" id="4d671b48-1d06-4d5b-a863-1cec6b3f2336" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="0ee8d39c-edac-4b01-82ca-27527873c0e2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="baca152e-2da2-4dbe-af8d-0afc7a796594" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4d671b48-1d06-4d5b-a863-1cec6b3f2336" name="OutPh1" connectedTo="7c70894e-f8f4-404b-b4ec-e6ec7634bb78"/>
+          <port xsi:type="esdl:OutPort" id="0ee8d39c-edac-4b01-82ca-27527873c0e2" name="OutPh2" connectedTo="d25583a5-4a05-491d-8f30-995b949170ff"/>
+          <port xsi:type="esdl:OutPort" id="baca152e-2da2-4dbe-af8d-0afc7a796594" name="OutPh3" connectedTo="b61a61e4-2fbd-43ab-8aa5-1d8e82f3227e"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fc3e5024-96de-4dd4-85b2-cb79e92e6ae7" name="PhasegridHome308_1_Ph1" originalIdInSource="3081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7c70894e-f8f4-404b-b4ec-e6ec7634bb78" name="In"/>
+          <port xsi:type="esdl:InPort" id="7c70894e-f8f4-404b-b4ec-e6ec7634bb78" name="In" connectedTo="4d671b48-1d06-4d5b-a863-1cec6b3f2336"/>
           <port xsi:type="esdl:OutPort" id="c50508bd-5d88-49f6-aa78-1cfa701b1768" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b3456431-5b61-42e9-b220-97c5d616dbda" name="PhasegridHome308_1_Ph2" originalIdInSource="3081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d25583a5-4a05-491d-8f30-995b949170ff" name="In"/>
+          <port xsi:type="esdl:InPort" id="d25583a5-4a05-491d-8f30-995b949170ff" name="In" connectedTo="0ee8d39c-edac-4b01-82ca-27527873c0e2"/>
           <port xsi:type="esdl:OutPort" id="5ed0dda8-c3b5-4799-a6d3-1b7a7c4ebb85" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="545c4617-dd80-4c0b-8406-fe757efbd0d7" name="PhasegridHome308_1_Ph3" originalIdInSource="3081">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b61a61e4-2fbd-43ab-8aa5-1d8e82f3227e" name="In"/>
+          <port xsi:type="esdl:InPort" id="b61a61e4-2fbd-43ab-8aa5-1d8e82f3227e" name="In" connectedTo="baca152e-2da2-4dbe-af8d-0afc7a796594"/>
           <port xsi:type="esdl:OutPort" id="cfa28fb5-0b38-41c4-9cf1-c6c37275f228" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="332903e3-9ae8-4a4e-b172-2ea54774c69e" name="CableHome308_1" originalIdInSource="3081" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="2c00e500-c331-4bbb-89de-47d1bef78cb2" name="In" connectedTo="8a944a2a-7e0f-41f2-bad5-a54fb3139c73"/>
@@ -8424,30 +8554,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.962150873383244" lon="4.04217853045701"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0da2fc63-0eeb-4fe3-b473-71d44ab9169c" name="Home308_2" originalIdInSource="3082" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="0da2fc63-0eeb-4fe3-b473-71d44ab9169c" name="Home308_2" originalIdInSource="3082" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96232726938678" lon="4.041882214270334"/>
         <asset xsi:type="esdl:EConnection" id="a8bf9aba-5273-4b9c-a82e-a7ef4fc23423" name="ConnectionHome308_2" originalIdInSource="3082" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6df883dd-516f-42e9-b446-dfede401e42a" name="In" connectedTo="e8ba9f8c-17c7-44b9-a1ce-758eb767bc1d"/>
-          <port xsi:type="esdl:OutPort" id="d9aac528-4610-4855-afdc-7c9a6d92e7b1" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="98ca5772-5256-4723-b17d-e63990846eb2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="efcf6475-1831-430b-8995-ec66424b92c4" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d9aac528-4610-4855-afdc-7c9a6d92e7b1" name="OutPh1" connectedTo="e42bfa8f-ddce-4a52-a2aa-0787d5b3a46c"/>
+          <port xsi:type="esdl:OutPort" id="98ca5772-5256-4723-b17d-e63990846eb2" name="OutPh2" connectedTo="78a6b90a-f3dc-4085-bc4d-be3a4f30fa07"/>
+          <port xsi:type="esdl:OutPort" id="efcf6475-1831-430b-8995-ec66424b92c4" name="OutPh3" connectedTo="1f6d78de-a5b3-4dee-9c9d-27ca2ae40608"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8a4b52bb-c08b-4c1d-a48b-d4c97b553344" name="PhasegridHome308_2_Ph1" originalIdInSource="3082">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e42bfa8f-ddce-4a52-a2aa-0787d5b3a46c" name="In"/>
+          <port xsi:type="esdl:InPort" id="e42bfa8f-ddce-4a52-a2aa-0787d5b3a46c" name="In" connectedTo="d9aac528-4610-4855-afdc-7c9a6d92e7b1"/>
           <port xsi:type="esdl:OutPort" id="f4ef4587-f6e8-4dcc-993a-bae88ced6553" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="039085ee-b66d-4bff-a38f-90a8265a39f3" name="PhasegridHome308_2_Ph2" originalIdInSource="3082">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="78a6b90a-f3dc-4085-bc4d-be3a4f30fa07" name="In"/>
+          <port xsi:type="esdl:InPort" id="78a6b90a-f3dc-4085-bc4d-be3a4f30fa07" name="In" connectedTo="98ca5772-5256-4723-b17d-e63990846eb2"/>
           <port xsi:type="esdl:OutPort" id="2038b55a-48b2-46c0-825a-c5de142c3f06" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8c5022d6-96e4-4db7-89f8-754fbdadd87c" name="PhasegridHome308_2_Ph3" originalIdInSource="3082">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1f6d78de-a5b3-4dee-9c9d-27ca2ae40608" name="In"/>
+          <port xsi:type="esdl:InPort" id="1f6d78de-a5b3-4dee-9c9d-27ca2ae40608" name="In" connectedTo="efcf6475-1831-430b-8995-ec66424b92c4"/>
           <port xsi:type="esdl:OutPort" id="a0413365-11d0-4b41-a546-cfa1a49afd21" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7dd0209c-e9a2-4949-8d0b-c91cc755544f" name="CableHome308_2" originalIdInSource="3082" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7775344c-17e8-4fd5-8a7e-a1d1f5aaedae" name="In" connectedTo="8a944a2a-7e0f-41f2-bad5-a54fb3139c73"/>
@@ -8457,30 +8588,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96232726938678" lon="4.041882214270334"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="803a47fa-19bc-4614-89d7-125f796a2d14" name="Home310_1" originalIdInSource="3101" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="803a47fa-19bc-4614-89d7-125f796a2d14" name="Home310_1" originalIdInSource="3101" assetType="2 onder 1 kap woning_1975_1991" energyLabel="LABEL_D" floorArea="129.8" buildingYear="1983" surfaceArea="61" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96193783998058" lon="4.0392746427622575"/>
         <asset xsi:type="esdl:EConnection" id="0ee67e01-e1a9-43f4-9477-a11ca426006a" name="ConnectionHome310_1" originalIdInSource="3101" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="58ae5d60-363d-4317-8ae1-82761dc44e6f" name="In" connectedTo="89b65ab8-9701-40d0-8d36-0d8e3e6dd4b0"/>
-          <port xsi:type="esdl:OutPort" id="7654eb07-ea24-4e22-aa2a-a96fc5180ec7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6f739ddb-7e96-4ab5-bed6-6d23dff2af71" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8b63a5be-585f-441d-845f-23bcd5b68dc7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7654eb07-ea24-4e22-aa2a-a96fc5180ec7" name="OutPh1" connectedTo="d60744ce-26fd-4541-963d-a808c0b76a81"/>
+          <port xsi:type="esdl:OutPort" id="6f739ddb-7e96-4ab5-bed6-6d23dff2af71" name="OutPh2" connectedTo="5098cac6-3e63-40ca-ad79-f04cc5d88548"/>
+          <port xsi:type="esdl:OutPort" id="8b63a5be-585f-441d-845f-23bcd5b68dc7" name="OutPh3" connectedTo="b950958b-71ea-4577-8409-0da10ea86b3c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3027de50-ac6a-4df1-9900-de413ddb78fe" name="PhasegridHome310_1_Ph1" originalIdInSource="3101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d60744ce-26fd-4541-963d-a808c0b76a81" name="In"/>
+          <port xsi:type="esdl:InPort" id="d60744ce-26fd-4541-963d-a808c0b76a81" name="In" connectedTo="7654eb07-ea24-4e22-aa2a-a96fc5180ec7"/>
           <port xsi:type="esdl:OutPort" id="8da42567-e3d8-4c37-8ec0-7824edcb64d3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2ac16a9f-cc19-408c-bfec-0933dcb4821c" name="PhasegridHome310_1_Ph2" originalIdInSource="3101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5098cac6-3e63-40ca-ad79-f04cc5d88548" name="In"/>
+          <port xsi:type="esdl:InPort" id="5098cac6-3e63-40ca-ad79-f04cc5d88548" name="In" connectedTo="6f739ddb-7e96-4ab5-bed6-6d23dff2af71"/>
           <port xsi:type="esdl:OutPort" id="b60f5954-1d8d-41f4-8614-863d1791535e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a7cb33f3-5c07-43a1-bffd-cbe1ac44c149" name="PhasegridHome310_1_Ph3" originalIdInSource="3101">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b950958b-71ea-4577-8409-0da10ea86b3c" name="In"/>
+          <port xsi:type="esdl:InPort" id="b950958b-71ea-4577-8409-0da10ea86b3c" name="In" connectedTo="8b63a5be-585f-441d-845f-23bcd5b68dc7"/>
           <port xsi:type="esdl:OutPort" id="10e2b0a1-cd65-4520-b902-dbbedb308fac" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="94.22" height="9.0" windowArea="24.229999999999997" doorArea="6.51" flatRoofArea="14.8" slantedRoofArea="64.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="9dcf0f49-238f-48ed-9f79-87a61a1b1eb1" name="CableHome310_1" originalIdInSource="3101" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="791e2b75-35f3-452f-82b5-ad1ec819b937" name="In" connectedTo="ddb6a2bf-b8df-4079-a7b7-d379a07ec809"/>
@@ -8490,30 +8622,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96193783998058" lon="4.0392746427622575"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f29a07a7-3f5e-4b29-bb78-14d1b7088519" name="Home310_2" originalIdInSource="3102" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="f29a07a7-3f5e-4b29-bb78-14d1b7088519" name="Home310_2" originalIdInSource="3102" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96211422863725" lon="4.03897831664306"/>
         <asset xsi:type="esdl:EConnection" id="6757742e-ee48-4bdf-8547-be5055fe3684" name="ConnectionHome310_2" originalIdInSource="3102" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8d3bef8e-0b25-4950-89f9-19f2375ce77e" name="In" connectedTo="2b73e3f9-8a12-4353-991c-1680d4dfcb1f"/>
-          <port xsi:type="esdl:OutPort" id="39a1dd7c-f580-420e-b7ae-1eca96a3e6b6" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="28715c1d-24ef-4b6d-8d00-a549ba1273d2" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="19389ff5-81ae-4bdd-8d1e-e1f15216f019" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="39a1dd7c-f580-420e-b7ae-1eca96a3e6b6" name="OutPh1" connectedTo="e5759f1f-c703-49dc-bbbf-023fe053bbba"/>
+          <port xsi:type="esdl:OutPort" id="28715c1d-24ef-4b6d-8d00-a549ba1273d2" name="OutPh2" connectedTo="e188a468-198a-4476-807b-ca64dd048bc8"/>
+          <port xsi:type="esdl:OutPort" id="19389ff5-81ae-4bdd-8d1e-e1f15216f019" name="OutPh3" connectedTo="e5ff3bf7-906b-4d4b-91c2-50a75846ee05"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cb9a35c8-5218-4412-a7b3-51d67ed191d3" name="PhasegridHome310_2_Ph1" originalIdInSource="3102">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e5759f1f-c703-49dc-bbbf-023fe053bbba" name="In"/>
+          <port xsi:type="esdl:InPort" id="e5759f1f-c703-49dc-bbbf-023fe053bbba" name="In" connectedTo="39a1dd7c-f580-420e-b7ae-1eca96a3e6b6"/>
           <port xsi:type="esdl:OutPort" id="1ffe1f79-c87e-46b2-887e-00c5c37fb778" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5d34a180-ef30-4f4d-9423-652e6c953b8e" name="PhasegridHome310_2_Ph2" originalIdInSource="3102">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e188a468-198a-4476-807b-ca64dd048bc8" name="In"/>
+          <port xsi:type="esdl:InPort" id="e188a468-198a-4476-807b-ca64dd048bc8" name="In" connectedTo="28715c1d-24ef-4b6d-8d00-a549ba1273d2"/>
           <port xsi:type="esdl:OutPort" id="60deac10-e16c-4b73-8508-7479b05306ac" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="944fb07f-8753-478d-8c58-86c214108113" name="PhasegridHome310_2_Ph3" originalIdInSource="3102">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e5ff3bf7-906b-4d4b-91c2-50a75846ee05" name="In"/>
+          <port xsi:type="esdl:InPort" id="e5ff3bf7-906b-4d4b-91c2-50a75846ee05" name="In" connectedTo="19389ff5-81ae-4bdd-8d1e-e1f15216f019"/>
           <port xsi:type="esdl:OutPort" id="580d4d22-9a3b-4cee-92e0-6d24fbcb34ea" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="481d255a-afb8-4c5d-ac4b-39860e64c80a" name="CableHome310_2" originalIdInSource="3102" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="1bef526b-6eb3-4473-b6f0-7c1a5b92a28b" name="In" connectedTo="ddb6a2bf-b8df-4079-a7b7-d379a07ec809"/>
@@ -8523,30 +8656,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96211422863725" lon="4.03897831664306"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bb7bba36-0eb1-42f4-8922-d9063584e8cb" name="Home312_1" originalIdInSource="3121" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="bb7bba36-0eb1-42f4-8922-d9063584e8cb" name="Home312_1" originalIdInSource="3121" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.961524948242584" lon="4.034630647694691"/>
         <asset xsi:type="esdl:EConnection" id="311627f8-86d1-4aea-9711-22a53df3eb28" name="ConnectionHome312_1" originalIdInSource="3121" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c01a219b-c98e-43ec-bcd5-a11e71830097" name="In" connectedTo="62b7dde3-6568-4f03-99c5-356e739ec180"/>
-          <port xsi:type="esdl:OutPort" id="066882e4-f2d7-44ff-9701-b63c18944c4e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="168a6f00-3d80-4fc5-82bc-72b9a9df25a5" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="608e3f21-d642-43da-96f2-a2da146b8aca" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="066882e4-f2d7-44ff-9701-b63c18944c4e" name="OutPh1" connectedTo="bf3f427c-0915-4730-a82c-c2effdbe8005"/>
+          <port xsi:type="esdl:OutPort" id="168a6f00-3d80-4fc5-82bc-72b9a9df25a5" name="OutPh2" connectedTo="0bc70cdb-8c46-406b-a2c4-942a1f0a55b9"/>
+          <port xsi:type="esdl:OutPort" id="608e3f21-d642-43da-96f2-a2da146b8aca" name="OutPh3" connectedTo="d8772d1e-e451-4b03-8772-2baa07da13f5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1568826a-504b-4b67-b23c-e06be2e2ec95" name="PhasegridHome312_1_Ph1" originalIdInSource="3121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bf3f427c-0915-4730-a82c-c2effdbe8005" name="In"/>
+          <port xsi:type="esdl:InPort" id="bf3f427c-0915-4730-a82c-c2effdbe8005" name="In" connectedTo="066882e4-f2d7-44ff-9701-b63c18944c4e"/>
           <port xsi:type="esdl:OutPort" id="a2b7bba6-f693-4b5c-bf69-d0a20005cb7a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="811b93f0-f082-43ab-b874-330380f4814b" name="PhasegridHome312_1_Ph2" originalIdInSource="3121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0bc70cdb-8c46-406b-a2c4-942a1f0a55b9" name="In"/>
+          <port xsi:type="esdl:InPort" id="0bc70cdb-8c46-406b-a2c4-942a1f0a55b9" name="In" connectedTo="168a6f00-3d80-4fc5-82bc-72b9a9df25a5"/>
           <port xsi:type="esdl:OutPort" id="523b0109-3f36-45fe-b10d-eae802b4e640" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="26a98986-9159-44f9-8b1f-172539cad8f1" name="PhasegridHome312_1_Ph3" originalIdInSource="3121">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d8772d1e-e451-4b03-8772-2baa07da13f5" name="In"/>
+          <port xsi:type="esdl:InPort" id="d8772d1e-e451-4b03-8772-2baa07da13f5" name="In" connectedTo="608e3f21-d642-43da-96f2-a2da146b8aca"/>
           <port xsi:type="esdl:OutPort" id="c94e01e0-a688-4033-95dd-7cf65f096d8d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05cb631f-7d20-4470-906c-4507b1c3e461" name="CableHome312_1" originalIdInSource="3121" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="e09673c3-c1c0-4c8a-96ac-2c7705f2aafe" name="In" connectedTo="73685903-8742-4ed5-a0a9-6523f43893fc"/>
@@ -8556,30 +8690,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.961524948242584" lon="4.034630647694691"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3fcf54c8-a3f6-46f1-a4a2-53fb90bd30a5" name="Home312_2" originalIdInSource="3122" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="3fcf54c8-a3f6-46f1-a4a2-53fb90bd30a5" name="Home312_2" originalIdInSource="3122" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96170132515263" lon="4.034334306171984"/>
         <asset xsi:type="esdl:EConnection" id="7835a1d2-2f3b-4719-9ef6-df9ff21d0ce0" name="ConnectionHome312_2" originalIdInSource="3122" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fd026b54-9d23-4ecf-a80c-70748abfed37" name="In" connectedTo="4bef355e-7da3-4caf-838f-9a2856e7b5d1"/>
-          <port xsi:type="esdl:OutPort" id="2df8c328-d678-4624-8972-320f68cba0fd" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6d67e07f-6505-485c-a3d6-b6033fb47a8a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0c393823-a882-4051-b951-0df5c709bb93" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2df8c328-d678-4624-8972-320f68cba0fd" name="OutPh1" connectedTo="c858bfd8-4cbe-4cb0-af4c-874d495bf5f5"/>
+          <port xsi:type="esdl:OutPort" id="6d67e07f-6505-485c-a3d6-b6033fb47a8a" name="OutPh2" connectedTo="f3f0fda9-43f3-43a7-9ede-9729fbcf3998"/>
+          <port xsi:type="esdl:OutPort" id="0c393823-a882-4051-b951-0df5c709bb93" name="OutPh3" connectedTo="645a1478-9b55-4c02-bb41-eb83dafe9a4f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="96693977-7541-414c-9263-518288511ee9" name="PhasegridHome312_2_Ph1" originalIdInSource="3122">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c858bfd8-4cbe-4cb0-af4c-874d495bf5f5" name="In"/>
+          <port xsi:type="esdl:InPort" id="c858bfd8-4cbe-4cb0-af4c-874d495bf5f5" name="In" connectedTo="2df8c328-d678-4624-8972-320f68cba0fd"/>
           <port xsi:type="esdl:OutPort" id="4d2f51ee-59fa-4348-b5bd-2ee5a3bf885b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5d39e494-f3f9-4b5b-bf8e-161a5ca96300" name="PhasegridHome312_2_Ph2" originalIdInSource="3122">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f3f0fda9-43f3-43a7-9ede-9729fbcf3998" name="In"/>
+          <port xsi:type="esdl:InPort" id="f3f0fda9-43f3-43a7-9ede-9729fbcf3998" name="In" connectedTo="6d67e07f-6505-485c-a3d6-b6033fb47a8a"/>
           <port xsi:type="esdl:OutPort" id="162f771f-4a18-47d3-a93d-901e7e4202d3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3465a8a5-b9e6-4be1-a2c7-cacda4f40d84" name="PhasegridHome312_2_Ph3" originalIdInSource="3122">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="645a1478-9b55-4c02-bb41-eb83dafe9a4f" name="In"/>
+          <port xsi:type="esdl:InPort" id="645a1478-9b55-4c02-bb41-eb83dafe9a4f" name="In" connectedTo="0c393823-a882-4051-b951-0df5c709bb93"/>
           <port xsi:type="esdl:OutPort" id="266fca03-a3d9-4742-832d-a9297f061625" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="96cd57ca-2218-4deb-898f-4a6870e4fba5" name="CableHome312_2" originalIdInSource="3122" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="76b14b4f-e35c-425c-abc3-4ad9ce2ee098" name="In" connectedTo="73685903-8742-4ed5-a0a9-6523f43893fc"/>
@@ -8589,30 +8724,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96170132515263" lon="4.034334306171984"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="06697e4a-7c99-4c73-a134-9c089ed44d67" name="Home314_1" originalIdInSource="3141" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="06697e4a-7c99-4c73-a134-9c089ed44d67" name="Home314_1" originalIdInSource="3141" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96161743086317" lon="4.027061193640321"/>
         <asset xsi:type="esdl:EConnection" id="34a574d9-e304-451f-b7cc-8a1db628d955" name="ConnectionHome314_1" originalIdInSource="3141" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ad450833-72c6-45d4-a083-c809c148132c" name="In" connectedTo="71cec652-ede3-4eff-a912-faad50e7fa23"/>
-          <port xsi:type="esdl:OutPort" id="6cccc7b3-8058-40c4-8413-02fb455825a6" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ca01d4fa-5eb3-4d14-b5a1-8de34368a8d8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6aa70bb8-4314-4269-913b-ed2330102418" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="6cccc7b3-8058-40c4-8413-02fb455825a6" name="OutPh1" connectedTo="2dcfa15e-1e8a-4480-9025-fdd658c31d62"/>
+          <port xsi:type="esdl:OutPort" id="ca01d4fa-5eb3-4d14-b5a1-8de34368a8d8" name="OutPh2" connectedTo="317c6f1d-8e89-45cb-90a3-76ba3bcb2be0"/>
+          <port xsi:type="esdl:OutPort" id="6aa70bb8-4314-4269-913b-ed2330102418" name="OutPh3" connectedTo="177583ac-59ec-4e07-81b5-438dd6ec8024"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="da086b2f-061b-4e1a-82d6-1e2f06d5e1ff" name="PhasegridHome314_1_Ph1" originalIdInSource="3141">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2dcfa15e-1e8a-4480-9025-fdd658c31d62" name="In"/>
+          <port xsi:type="esdl:InPort" id="2dcfa15e-1e8a-4480-9025-fdd658c31d62" name="In" connectedTo="6cccc7b3-8058-40c4-8413-02fb455825a6"/>
           <port xsi:type="esdl:OutPort" id="6d7f3e7b-19b4-46fc-9b26-ec7cc80ddb1d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b5efaf90-ab48-4036-83db-77bec27aff30" name="PhasegridHome314_1_Ph2" originalIdInSource="3141">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="317c6f1d-8e89-45cb-90a3-76ba3bcb2be0" name="In"/>
+          <port xsi:type="esdl:InPort" id="317c6f1d-8e89-45cb-90a3-76ba3bcb2be0" name="In" connectedTo="ca01d4fa-5eb3-4d14-b5a1-8de34368a8d8"/>
           <port xsi:type="esdl:OutPort" id="e94781ae-7257-477a-bee5-fbb1d33a2685" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5f088f31-b509-4c22-be3f-2f07791da164" name="PhasegridHome314_1_Ph3" originalIdInSource="3141">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="177583ac-59ec-4e07-81b5-438dd6ec8024" name="In"/>
+          <port xsi:type="esdl:InPort" id="177583ac-59ec-4e07-81b5-438dd6ec8024" name="In" connectedTo="6aa70bb8-4314-4269-913b-ed2330102418"/>
           <port xsi:type="esdl:OutPort" id="fc4b2b2b-bdcd-41e4-8b3d-7842fe5ac43c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="19029923-efd0-46f8-9223-26d2795f270f" name="CableHome314_1" originalIdInSource="3141" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="6cf5fee8-6c75-42c3-beaf-2d8e7f0c60d4" name="In" connectedTo="87b910f2-fd95-47ef-a909-a09f969b62be"/>
@@ -8622,30 +8758,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96161743086317" lon="4.027061193640321"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7d483d8c-4ab0-47ca-bdf6-da5c71e69ef2" name="Home314_2" originalIdInSource="3142" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="7d483d8c-4ab0-47ca-bdf6-da5c71e69ef2" name="Home314_2" originalIdInSource="3142" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96179378858829" lon="4.026764821932208"/>
         <asset xsi:type="esdl:EConnection" id="8b27bc1d-5358-423e-8416-d9be9d349902" name="ConnectionHome314_2" originalIdInSource="3142" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3216f016-cd00-403f-a28d-b529137fc7ce" name="In" connectedTo="0d04269e-3c38-4971-bb3a-ac9b9220e079"/>
-          <port xsi:type="esdl:OutPort" id="f77f6f6e-1bb5-4cfd-9df8-2622e9876a84" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a5612089-1675-4d3a-846e-805f678776d6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="dc05aa97-fdc1-481c-a222-c10c59915d9d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f77f6f6e-1bb5-4cfd-9df8-2622e9876a84" name="OutPh1" connectedTo="81cb54a2-d2ef-41aa-850b-8e313da4a5f5"/>
+          <port xsi:type="esdl:OutPort" id="a5612089-1675-4d3a-846e-805f678776d6" name="OutPh2" connectedTo="d98bf195-b2d4-46ca-a599-58cf96a7718b"/>
+          <port xsi:type="esdl:OutPort" id="dc05aa97-fdc1-481c-a222-c10c59915d9d" name="OutPh3" connectedTo="43e40cea-1e1f-44cd-b403-119522753770"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a7ede38e-97d9-4fd5-8753-e7e32ba363b8" name="PhasegridHome314_2_Ph1" originalIdInSource="3142">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="81cb54a2-d2ef-41aa-850b-8e313da4a5f5" name="In"/>
+          <port xsi:type="esdl:InPort" id="81cb54a2-d2ef-41aa-850b-8e313da4a5f5" name="In" connectedTo="f77f6f6e-1bb5-4cfd-9df8-2622e9876a84"/>
           <port xsi:type="esdl:OutPort" id="7a317216-bbbd-4a3c-8270-69f6a6a044a7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b972a168-f23a-457f-a2d6-81376412e332" name="PhasegridHome314_2_Ph2" originalIdInSource="3142">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d98bf195-b2d4-46ca-a599-58cf96a7718b" name="In"/>
+          <port xsi:type="esdl:InPort" id="d98bf195-b2d4-46ca-a599-58cf96a7718b" name="In" connectedTo="a5612089-1675-4d3a-846e-805f678776d6"/>
           <port xsi:type="esdl:OutPort" id="e7684a4d-bb26-4d76-aeab-8d4286b78a31" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="50520e90-2793-4621-a0f8-7ff83623270d" name="PhasegridHome314_2_Ph3" originalIdInSource="3142">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="43e40cea-1e1f-44cd-b403-119522753770" name="In"/>
+          <port xsi:type="esdl:InPort" id="43e40cea-1e1f-44cd-b403-119522753770" name="In" connectedTo="dc05aa97-fdc1-481c-a222-c10c59915d9d"/>
           <port xsi:type="esdl:OutPort" id="e99e2a61-d699-4a36-abd5-f311d590e0eb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fef20008-dc3c-45ab-b360-19a0ec157b37" name="CableHome314_2" originalIdInSource="3142" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="78dad366-e876-4904-9b1d-cbd6dc493ec5" name="In" connectedTo="87b910f2-fd95-47ef-a909-a09f969b62be"/>
@@ -8655,30 +8792,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96179378858829" lon="4.026764821932208"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="34938fe4-5ed5-49b6-b0f5-8711b39327c5" name="Home316_1" originalIdInSource="3161" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="34938fe4-5ed5-49b6-b0f5-8711b39327c5" name="Home316_1" originalIdInSource="3161" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.961583747222214" lon="4.024151957414382"/>
         <asset xsi:type="esdl:EConnection" id="ec3a0eed-2ec2-426e-bf98-bff1cd144f29" name="ConnectionHome316_1" originalIdInSource="3161" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3717d962-b77d-4066-83a1-52746af4283e" name="In" connectedTo="925ef3ac-25f2-49a4-8da9-c852b323cc11"/>
-          <port xsi:type="esdl:OutPort" id="5c0a702e-e97e-4e13-84a2-6ba13dd5526e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e3de936c-22c9-4db0-9694-85791f831a67" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b58cbbf2-7512-4fc1-9620-97e5a73da536" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5c0a702e-e97e-4e13-84a2-6ba13dd5526e" name="OutPh1" connectedTo="ec0f9924-51e4-46d3-8831-87067f177837"/>
+          <port xsi:type="esdl:OutPort" id="e3de936c-22c9-4db0-9694-85791f831a67" name="OutPh2" connectedTo="d1f9cc06-48d9-49df-a8d9-0deca9a8abdc"/>
+          <port xsi:type="esdl:OutPort" id="b58cbbf2-7512-4fc1-9620-97e5a73da536" name="OutPh3" connectedTo="0dfd72fd-8063-4f9a-bd0f-710ad593afbb"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e819a43a-e0bf-4291-98e9-5f9919175616" name="PhasegridHome316_1_Ph1" originalIdInSource="3161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec0f9924-51e4-46d3-8831-87067f177837" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec0f9924-51e4-46d3-8831-87067f177837" name="In" connectedTo="5c0a702e-e97e-4e13-84a2-6ba13dd5526e"/>
           <port xsi:type="esdl:OutPort" id="d8e08b19-3db1-463b-b9cb-b89e294b9fe8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="36aecb38-37ef-48d4-9381-5201491a83ab" name="PhasegridHome316_1_Ph2" originalIdInSource="3161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d1f9cc06-48d9-49df-a8d9-0deca9a8abdc" name="In"/>
+          <port xsi:type="esdl:InPort" id="d1f9cc06-48d9-49df-a8d9-0deca9a8abdc" name="In" connectedTo="e3de936c-22c9-4db0-9694-85791f831a67"/>
           <port xsi:type="esdl:OutPort" id="84297a04-ce8b-40e2-81e3-5765da6e925d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d2d82a82-d15c-4b90-a6b6-8ec339e2d057" name="PhasegridHome316_1_Ph3" originalIdInSource="3161">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0dfd72fd-8063-4f9a-bd0f-710ad593afbb" name="In"/>
+          <port xsi:type="esdl:InPort" id="0dfd72fd-8063-4f9a-bd0f-710ad593afbb" name="In" connectedTo="b58cbbf2-7512-4fc1-9620-97e5a73da536"/>
           <port xsi:type="esdl:OutPort" id="dfbd16ba-db0c-4932-b769-0aa104ff10d5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1e99f287-d64f-459d-82a7-dfdf84b42a44" name="CableHome316_1" originalIdInSource="3161" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="0af02fd5-65db-46ef-b918-01a8fc730e7f" name="In" connectedTo="d5842715-91b4-4e9c-86f9-980acc7558ea"/>
@@ -8688,30 +8826,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.961583747222214" lon="4.024151957414382"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="379ccd7b-431f-4c6a-a729-dc3d342ecfda" name="Home316_2" originalIdInSource="3162" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="379ccd7b-431f-4c6a-a729-dc3d342ecfda" name="Home316_2" originalIdInSource="3162" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_B" floorArea="136.67" buildingYear="2010" surfaceArea="56" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96176009757647" lon="4.023855574565627"/>
         <asset xsi:type="esdl:EConnection" id="91b4be04-b93c-4a87-9e42-35ca81feb8b4" name="ConnectionHome316_2" originalIdInSource="3162" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="07783198-0c65-4375-a2a9-6cf1f3645fad" name="In" connectedTo="a549d7a6-156c-4546-a233-2405ff189eb1"/>
-          <port xsi:type="esdl:OutPort" id="0de3c539-711e-421b-bb41-b6dbccfe20ec" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b89a7850-f3ac-45ce-9626-2deab51fe64e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9e7ed9c5-0370-48a4-a6d0-1e32ca2adee5" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0de3c539-711e-421b-bb41-b6dbccfe20ec" name="OutPh1" connectedTo="4aff7bc9-aa20-482f-9af5-9f457a6bc45b"/>
+          <port xsi:type="esdl:OutPort" id="b89a7850-f3ac-45ce-9626-2deab51fe64e" name="OutPh2" connectedTo="c28b46a7-e369-4563-a3dc-fb770eaeace3"/>
+          <port xsi:type="esdl:OutPort" id="9e7ed9c5-0370-48a4-a6d0-1e32ca2adee5" name="OutPh3" connectedTo="bc1825d8-c4b3-4cfd-b213-c11977909408"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8f6c1649-73a3-4535-9fa2-149fc7e86e7e" name="PhasegridHome316_2_Ph1" originalIdInSource="3162">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4aff7bc9-aa20-482f-9af5-9f457a6bc45b" name="In"/>
+          <port xsi:type="esdl:InPort" id="4aff7bc9-aa20-482f-9af5-9f457a6bc45b" name="In" connectedTo="0de3c539-711e-421b-bb41-b6dbccfe20ec"/>
           <port xsi:type="esdl:OutPort" id="2d6e3959-06f1-438e-8a45-b14bb11f89b5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9d57056d-a045-4a05-a211-b2cfbf809209" name="PhasegridHome316_2_Ph2" originalIdInSource="3162">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c28b46a7-e369-4563-a3dc-fb770eaeace3" name="In"/>
+          <port xsi:type="esdl:InPort" id="c28b46a7-e369-4563-a3dc-fb770eaeace3" name="In" connectedTo="b89a7850-f3ac-45ce-9626-2deab51fe64e"/>
           <port xsi:type="esdl:OutPort" id="c5977fb6-0faf-4e3b-b88b-9c0603bf40d8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3571b5a4-236a-4334-93c5-fe80b112e691" name="PhasegridHome316_2_Ph3" originalIdInSource="3162">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bc1825d8-c4b3-4cfd-b213-c11977909408" name="In"/>
+          <port xsi:type="esdl:InPort" id="bc1825d8-c4b3-4cfd-b213-c11977909408" name="In" connectedTo="9e7ed9c5-0370-48a4-a6d0-1e32ca2adee5"/>
           <port xsi:type="esdl:OutPort" id="ab5c43e0-0f71-4d95-a867-f149be72db93" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="110.98" height="9.0" windowArea="26.930000000000003" doorArea="5.08" flatRoofArea="10.22" slantedRoofArea="59.38"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7478f8e8-2aee-4af4-81b6-70a825857d2c" name="CableHome316_2" originalIdInSource="3162" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="528286e2-1650-40b4-9bae-2517aab047d0" name="In" connectedTo="d5842715-91b4-4e9c-86f9-980acc7558ea"/>
@@ -8721,18 +8860,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96176009757647" lon="4.023855574565627"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4e1f822b-2c2c-4980-b93a-2d2dbebf5140" name="Home318_1" originalIdInSource="3181" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="4e1f822b-2c2c-4980-b93a-2d2dbebf5140" name="Home318_1" originalIdInSource="3181" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.96173647105365" lon="4.021819104406131"/>
         <asset xsi:type="esdl:EConnection" id="92681943-1803-42b2-a7b8-11b2fcad3614" name="ConnectionHome318_1" originalIdInSource="3181" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cb2b2dce-2a15-43bf-bd92-abed132fede0" name="In" connectedTo="cff36e57-c8ff-482e-9e36-f8936cb0927d"/>
-          <port xsi:type="esdl:OutPort" id="8fead56a-8fd6-4f63-b8ac-16eb842c43e9" name="OutPh1"/>
+          <port xsi:type="esdl:OutPort" id="8fead56a-8fd6-4f63-b8ac-16eb842c43e9" name="OutPh1" connectedTo="c9791a44-97e7-4d1f-812b-3cba18872b13"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="305a7ea5-a42d-4db7-a9d8-4d0fa1f931c2" name="PhasegridHome318_1_Ph1" originalIdInSource="3181">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c9791a44-97e7-4d1f-812b-3cba18872b13" name="In"/>
+          <port xsi:type="esdl:InPort" id="c9791a44-97e7-4d1f-812b-3cba18872b13" name="In" connectedTo="8fead56a-8fd6-4f63-b8ac-16eb842c43e9"/>
           <port xsi:type="esdl:OutPort" id="e15feb84-cd93-4d1d-928c-ac9a5aa49579" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7de59b37-5a58-4e17-9a30-3e47bac9a4a6" name="CableHome318_1" originalIdInSource="3181" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="3674cb0f-c31f-4553-82d9-f6380aa1f4c1" name="In" connectedTo="78ddf7f7-dcfc-4755-aa73-e330b39e64dc"/>
@@ -8742,30 +8882,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.96173647105365" lon="4.021819104406131"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a22b182-3a11-4839-b004-3a472f9814a3" name="Home318_2" originalIdInSource="3182" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_AP">
+      <asset xsi:type="esdl:Building" id="0a22b182-3a11-4839-b004-3a472f9814a3" name="Home318_2" originalIdInSource="3182" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_AP" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.961912815488475" lon="4.021522711430835"/>
         <asset xsi:type="esdl:EConnection" id="354054df-3c31-4895-96a3-d8ae92f4d0d7" name="ConnectionHome318_2" originalIdInSource="3182" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="55941a3e-37e8-403d-b613-ccb481b3add7" name="In" connectedTo="e3b9e966-012d-47de-9eb2-4cba825c74f2"/>
-          <port xsi:type="esdl:OutPort" id="13148d3d-edc4-4450-8b10-7bc3e1cb8f6b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="23f06bec-7ad0-493b-958b-8d015f358b8f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="5254adea-8488-4fd9-8e80-4c830087b26b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="13148d3d-edc4-4450-8b10-7bc3e1cb8f6b" name="OutPh1" connectedTo="8fed22b9-2caf-43c7-8ac2-876c1f448fb9"/>
+          <port xsi:type="esdl:OutPort" id="23f06bec-7ad0-493b-958b-8d015f358b8f" name="OutPh2" connectedTo="e6d22532-8336-4d4c-995c-db412d1559e3"/>
+          <port xsi:type="esdl:OutPort" id="5254adea-8488-4fd9-8e80-4c830087b26b" name="OutPh3" connectedTo="54b93574-2e9a-4c1b-94e0-6a0b71cf301b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1a24798e-0c37-44c4-bb3a-4ee48d33ec1b" name="PhasegridHome318_2_Ph1" originalIdInSource="3182">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8fed22b9-2caf-43c7-8ac2-876c1f448fb9" name="In"/>
+          <port xsi:type="esdl:InPort" id="8fed22b9-2caf-43c7-8ac2-876c1f448fb9" name="In" connectedTo="13148d3d-edc4-4450-8b10-7bc3e1cb8f6b"/>
           <port xsi:type="esdl:OutPort" id="c4112476-9d95-4b22-89e8-4d43a347bb3c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ba182268-81b6-4776-b4ed-720512f92ee3" name="PhasegridHome318_2_Ph2" originalIdInSource="3182">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e6d22532-8336-4d4c-995c-db412d1559e3" name="In"/>
+          <port xsi:type="esdl:InPort" id="e6d22532-8336-4d4c-995c-db412d1559e3" name="In" connectedTo="23f06bec-7ad0-493b-958b-8d015f358b8f"/>
           <port xsi:type="esdl:OutPort" id="abca620e-7a62-4b0f-9914-317d25797e93" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8f2f7520-6e0b-43cf-9cea-7df874ea54a0" name="PhasegridHome318_2_Ph3" originalIdInSource="3182">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="54b93574-2e9a-4c1b-94e0-6a0b71cf301b" name="In"/>
+          <port xsi:type="esdl:InPort" id="54b93574-2e9a-4c1b-94e0-6a0b71cf301b" name="In" connectedTo="5254adea-8488-4fd9-8e80-4c830087b26b"/>
           <port xsi:type="esdl:OutPort" id="1a5d5b1d-d912-48ee-8e05-7394d6153fa3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="176.12" height="9.0" windowArea="46.07999999999999" doorArea="9.35" flatRoofArea="19.51" slantedRoofArea="124.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ebb7c931-1e04-41dc-aa03-c6edeb765710" name="CableHome318_2" originalIdInSource="3182" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="1a1d6796-297e-4519-9039-e212663a77d7" name="In" connectedTo="78ddf7f7-dcfc-4755-aa73-e330b39e64dc"/>
@@ -8775,30 +8916,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.961912815488475" lon="4.021522711430835"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6ad4ca21-0625-43d0-9f77-e0e5f18fe976" name="Home321_1" originalIdInSource="3211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="6ad4ca21-0625-43d0-9f77-e0e5f18fe976" name="Home321_1" originalIdInSource="3211" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         <asset xsi:type="esdl:EConnection" id="4034d2e4-c5fe-4ff1-8794-ddc026bb371a" name="ConnectionHome321_1" originalIdInSource="3211" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="91b2ad11-177e-48e8-b618-a78a13aa8352" name="In" connectedTo="25b410cc-ce90-42d6-8490-8aea3370bdcb"/>
-          <port xsi:type="esdl:OutPort" id="5040f5c1-7827-4528-b915-628803911010" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c448e8cd-72fd-43d1-9b46-bbb171559e3e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2abd44d1-da70-4c6a-adc9-3ac0153a9fdb" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5040f5c1-7827-4528-b915-628803911010" name="OutPh1" connectedTo="d26546e2-bfe6-4fa0-9917-d6888414fbbc"/>
+          <port xsi:type="esdl:OutPort" id="c448e8cd-72fd-43d1-9b46-bbb171559e3e" name="OutPh2" connectedTo="6804eb93-c6dd-4e17-85e4-63794b08c00d"/>
+          <port xsi:type="esdl:OutPort" id="2abd44d1-da70-4c6a-adc9-3ac0153a9fdb" name="OutPh3" connectedTo="43af3b28-0d98-4790-aa7c-40cc6ae360bf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7d0a141b-026e-4253-bd9a-c3d31637b4b4" name="PhasegridHome321_1_Ph1" originalIdInSource="3211">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d26546e2-bfe6-4fa0-9917-d6888414fbbc" name="In"/>
+          <port xsi:type="esdl:InPort" id="d26546e2-bfe6-4fa0-9917-d6888414fbbc" name="In" connectedTo="5040f5c1-7827-4528-b915-628803911010"/>
           <port xsi:type="esdl:OutPort" id="be225c03-43f4-45c7-8953-eae722664f8e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a8a6e493-d79c-4e09-b68e-fc9e7a728d4b" name="PhasegridHome321_1_Ph2" originalIdInSource="3211">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6804eb93-c6dd-4e17-85e4-63794b08c00d" name="In"/>
+          <port xsi:type="esdl:InPort" id="6804eb93-c6dd-4e17-85e4-63794b08c00d" name="In" connectedTo="c448e8cd-72fd-43d1-9b46-bbb171559e3e"/>
           <port xsi:type="esdl:OutPort" id="6803ee16-047f-49bc-8415-89eddb3e3c6e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="32c82bc4-0434-4d1a-aeab-a9d0d1f3b791" name="PhasegridHome321_1_Ph3" originalIdInSource="3211">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="43af3b28-0d98-4790-aa7c-40cc6ae360bf" name="In"/>
+          <port xsi:type="esdl:InPort" id="43af3b28-0d98-4790-aa7c-40cc6ae360bf" name="In" connectedTo="2abd44d1-da70-4c6a-adc9-3ac0153a9fdb"/>
           <port xsi:type="esdl:OutPort" id="95c6d6ba-defe-4581-8894-f06e9231d975" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d11c69fe-4809-4743-b610-40e21f3eb262" name="CableHome321_1" originalIdInSource="3211" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="0f44ed33-7089-4244-857a-0bdb117f88c8" name="In" connectedTo="c5f47c91-afb6-4fab-b2f4-0e7cf5f4d5f7"/>
@@ -8808,30 +8950,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="312e447f-9ba1-4745-a3b5-949121d3591a" name="Home322_1" originalIdInSource="3221" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="312e447f-9ba1-4745-a3b5-949121d3591a" name="Home322_1" originalIdInSource="3221" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         <asset xsi:type="esdl:EConnection" id="bc419cf3-abaa-44e8-aad4-dfb7c0730e14" name="ConnectionHome322_1" originalIdInSource="3221" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0edd37d6-19bd-40c2-8a26-c63400c3c697" name="In" connectedTo="11e84846-a554-4b62-a531-93c9e5dc00cc"/>
-          <port xsi:type="esdl:OutPort" id="510649fe-ff22-46e7-80c9-35d9c09f467e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="957be529-426c-4e19-8004-108638e5d8c6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d1d562be-268b-4ac8-aa15-0f99c190cb33" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="510649fe-ff22-46e7-80c9-35d9c09f467e" name="OutPh1" connectedTo="3c09ae1e-cc13-4091-93ba-456844109994"/>
+          <port xsi:type="esdl:OutPort" id="957be529-426c-4e19-8004-108638e5d8c6" name="OutPh2" connectedTo="e9f1b052-3a24-47e9-bdad-1e9a51e2c471"/>
+          <port xsi:type="esdl:OutPort" id="d1d562be-268b-4ac8-aa15-0f99c190cb33" name="OutPh3" connectedTo="cf602ad0-0efa-40ed-b454-f7bd59293fc6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f702faf-6a49-420e-be39-c5b0e00d1a71" name="PhasegridHome322_1_Ph1" originalIdInSource="3221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3c09ae1e-cc13-4091-93ba-456844109994" name="In"/>
+          <port xsi:type="esdl:InPort" id="3c09ae1e-cc13-4091-93ba-456844109994" name="In" connectedTo="510649fe-ff22-46e7-80c9-35d9c09f467e"/>
           <port xsi:type="esdl:OutPort" id="60091626-25f6-4273-9c19-7a0a9378669b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4b8f3420-28c1-4c97-80b4-9d79b333a7b3" name="PhasegridHome322_1_Ph2" originalIdInSource="3221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e9f1b052-3a24-47e9-bdad-1e9a51e2c471" name="In"/>
+          <port xsi:type="esdl:InPort" id="e9f1b052-3a24-47e9-bdad-1e9a51e2c471" name="In" connectedTo="957be529-426c-4e19-8004-108638e5d8c6"/>
           <port xsi:type="esdl:OutPort" id="cb4fdc42-fc79-4812-987f-8f96b2d407bd" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c9389f02-a762-4efe-bba9-0752976d1fa0" name="PhasegridHome322_1_Ph3" originalIdInSource="3221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cf602ad0-0efa-40ed-b454-f7bd59293fc6" name="In"/>
+          <port xsi:type="esdl:InPort" id="cf602ad0-0efa-40ed-b454-f7bd59293fc6" name="In" connectedTo="d1d562be-268b-4ac8-aa15-0f99c190cb33"/>
           <port xsi:type="esdl:OutPort" id="6a7ee5de-6c60-4a71-8da5-a8bca4ca5bb5" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="93bf7151-9ec7-4b05-b67b-38080cf94c07" name="CableHome322_1" originalIdInSource="3221" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="a4fce561-6f7c-4f55-9e49-4901df041d2f" name="In" connectedTo="5fabc050-ed98-4d2a-8e5e-f563ff898abc"/>
@@ -8841,30 +8984,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a2306d14-998b-43c8-be76-6eafd5dd501b" name="Home322_2" originalIdInSource="3222" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a2306d14-998b-43c8-be76-6eafd5dd501b" name="Home322_2" originalIdInSource="3222" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98190713476668" lon="4.040421517931984"/>
         <asset xsi:type="esdl:EConnection" id="afd831fe-8210-4fc6-b391-3ab450c55199" name="ConnectionHome322_2" originalIdInSource="3222" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3af896cb-4a01-44c1-9cc2-721d0750928e" name="In" connectedTo="a7c295e5-cce6-4e76-a6d7-4c9bbda5ec95"/>
-          <port xsi:type="esdl:OutPort" id="78bd655e-beed-4a69-8309-ff69ffe4e7b2" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="205b063c-d741-4a87-b992-b7295bc54628" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="74d03771-ec02-414c-ba5d-58fe5cbc811e" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="78bd655e-beed-4a69-8309-ff69ffe4e7b2" name="OutPh1" connectedTo="9c81847e-fa1c-4f67-862a-1175a7d644f7"/>
+          <port xsi:type="esdl:OutPort" id="205b063c-d741-4a87-b992-b7295bc54628" name="OutPh2" connectedTo="b352e1cb-502f-4589-8bda-21b1eae96c13"/>
+          <port xsi:type="esdl:OutPort" id="74d03771-ec02-414c-ba5d-58fe5cbc811e" name="OutPh3" connectedTo="0d6f4eb2-0aa8-4240-875b-3f0fcd7531ec"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b454135b-ce6c-4747-b059-6fe56c048598" name="PhasegridHome322_2_Ph1" originalIdInSource="3222">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9c81847e-fa1c-4f67-862a-1175a7d644f7" name="In"/>
+          <port xsi:type="esdl:InPort" id="9c81847e-fa1c-4f67-862a-1175a7d644f7" name="In" connectedTo="78bd655e-beed-4a69-8309-ff69ffe4e7b2"/>
           <port xsi:type="esdl:OutPort" id="6394ce51-f038-45ad-ad58-9c514338c602" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c0819aca-3913-4fac-a304-2b4cdcfdd36a" name="PhasegridHome322_2_Ph2" originalIdInSource="3222">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b352e1cb-502f-4589-8bda-21b1eae96c13" name="In"/>
+          <port xsi:type="esdl:InPort" id="b352e1cb-502f-4589-8bda-21b1eae96c13" name="In" connectedTo="205b063c-d741-4a87-b992-b7295bc54628"/>
           <port xsi:type="esdl:OutPort" id="daa37693-4d05-414f-bba2-010e9b747067" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f210c444-e821-4487-9150-cc314e50c652" name="PhasegridHome322_2_Ph3" originalIdInSource="3222">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0d6f4eb2-0aa8-4240-875b-3f0fcd7531ec" name="In"/>
+          <port xsi:type="esdl:InPort" id="0d6f4eb2-0aa8-4240-875b-3f0fcd7531ec" name="In" connectedTo="74d03771-ec02-414c-ba5d-58fe5cbc811e"/>
           <port xsi:type="esdl:OutPort" id="7fa3c03f-f16b-4636-9068-0194e7a6610a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c9c33fd2-4817-4fb7-bf62-0773541763e8" name="CableHome322_2" originalIdInSource="3222" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6eca7d40-a982-4b4a-9db2-85fa145d0ceb" name="In" connectedTo="5fabc050-ed98-4d2a-8e5e-f563ff898abc"/>
@@ -8874,30 +9018,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98190713476668" lon="4.040421517931984"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4644e358-e886-438f-9710-d3920ba38454" name="Home324_1" originalIdInSource="3241" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="4644e358-e886-438f-9710-d3920ba38454" name="Home324_1" originalIdInSource="3241" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         <asset xsi:type="esdl:EConnection" id="82be83b8-905b-40aa-b681-2c59ee948f34" name="ConnectionHome324_1" originalIdInSource="3241" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1adede96-8f2a-43da-836d-8c6ae07a6d5b" name="In" connectedTo="fdd94252-8737-4ffe-974b-b8e4d28d332d"/>
-          <port xsi:type="esdl:OutPort" id="2050c4ff-e40e-4781-b7d3-6edacd60bf9c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e6b7451a-5fba-4cc6-b804-bb8633b9ae83" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8b84ed0a-237e-42dc-8125-7c266db8e150" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2050c4ff-e40e-4781-b7d3-6edacd60bf9c" name="OutPh1" connectedTo="6862d7fb-01de-47f5-98d5-4bbccd1c32b8"/>
+          <port xsi:type="esdl:OutPort" id="e6b7451a-5fba-4cc6-b804-bb8633b9ae83" name="OutPh2" connectedTo="db45f6b9-724a-4ecc-b915-1b098cb5d760"/>
+          <port xsi:type="esdl:OutPort" id="8b84ed0a-237e-42dc-8125-7c266db8e150" name="OutPh3" connectedTo="deb72a8b-855e-4cfa-8b89-a3b96d8d5fc7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="45a3b7f4-1771-4fe6-bd5e-29f274cda1c2" name="PhasegridHome324_1_Ph1" originalIdInSource="3241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6862d7fb-01de-47f5-98d5-4bbccd1c32b8" name="In"/>
+          <port xsi:type="esdl:InPort" id="6862d7fb-01de-47f5-98d5-4bbccd1c32b8" name="In" connectedTo="2050c4ff-e40e-4781-b7d3-6edacd60bf9c"/>
           <port xsi:type="esdl:OutPort" id="d49a4855-304b-4051-aeca-5dfed8cc2cab" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="083ac816-607b-4f67-8ed2-ef4ed8d5a43c" name="PhasegridHome324_1_Ph2" originalIdInSource="3241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="db45f6b9-724a-4ecc-b915-1b098cb5d760" name="In"/>
+          <port xsi:type="esdl:InPort" id="db45f6b9-724a-4ecc-b915-1b098cb5d760" name="In" connectedTo="e6b7451a-5fba-4cc6-b804-bb8633b9ae83"/>
           <port xsi:type="esdl:OutPort" id="3c61bb51-1ec7-4898-96ea-563be6f92fb6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="92ccada6-0984-461a-ad03-fcc7c62d77cf" name="PhasegridHome324_1_Ph3" originalIdInSource="3241">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="deb72a8b-855e-4cfa-8b89-a3b96d8d5fc7" name="In"/>
+          <port xsi:type="esdl:InPort" id="deb72a8b-855e-4cfa-8b89-a3b96d8d5fc7" name="In" connectedTo="8b84ed0a-237e-42dc-8125-7c266db8e150"/>
           <port xsi:type="esdl:OutPort" id="3d933306-2fab-4540-a2c7-7f1e20128b68" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2564b008-bcd7-4790-9f35-739b5cebdb95" name="CableHome324_1" originalIdInSource="3241" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="6e8b2187-8dc2-4980-80ec-3067bc0476d5" name="In" connectedTo="aefa9107-b92c-40ad-b1f5-f587964d6e54"/>
@@ -8907,30 +9052,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.980815461765204" lon="4.039289696509737"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a92911b-296b-4b1a-a069-a1a087aeff39" name="Home333_1" originalIdInSource="3331" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="0a92911b-296b-4b1a-a069-a1a087aeff39" name="Home333_1" originalIdInSource="3331" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.966704384308116" lon="4.0161378206969385"/>
         <asset xsi:type="esdl:EConnection" id="ae023563-b03d-4ad8-b667-86953606a809" name="ConnectionHome333_1" originalIdInSource="3331" assetType="3x35A" capacity="24248.71130596428">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8452b459-ade0-4328-9260-f7f37241d353" name="In" connectedTo="9db8f286-ff90-4393-96b0-7ad2f7981dd5"/>
-          <port xsi:type="esdl:OutPort" id="dd43d6fe-f61d-4566-80fa-f5d096f208b8" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3d96de36-65e5-42dd-9c85-17ab0f22e857" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="02081d1c-8f51-4d32-b595-f631997eb779" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="dd43d6fe-f61d-4566-80fa-f5d096f208b8" name="OutPh1" connectedTo="ea884d1d-fb23-4a3a-ad15-95504d755a65"/>
+          <port xsi:type="esdl:OutPort" id="3d96de36-65e5-42dd-9c85-17ab0f22e857" name="OutPh2" connectedTo="3ca945a8-5e55-4947-add1-52c5c35c578c"/>
+          <port xsi:type="esdl:OutPort" id="02081d1c-8f51-4d32-b595-f631997eb779" name="OutPh3" connectedTo="30d17be6-892f-4ce5-93d4-875e84ae11e6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e2e5173a-1d7f-4d87-b125-88c20b11dc62" name="PhasegridHome333_1_Ph1" originalIdInSource="3331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ea884d1d-fb23-4a3a-ad15-95504d755a65" name="In"/>
+          <port xsi:type="esdl:InPort" id="ea884d1d-fb23-4a3a-ad15-95504d755a65" name="In" connectedTo="dd43d6fe-f61d-4566-80fa-f5d096f208b8"/>
           <port xsi:type="esdl:OutPort" id="158835ab-2da6-4d4e-959f-b4eeba3c7845" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9bdfa415-cf92-4392-ac19-e927e85e124e" name="PhasegridHome333_1_Ph2" originalIdInSource="3331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3ca945a8-5e55-4947-add1-52c5c35c578c" name="In"/>
+          <port xsi:type="esdl:InPort" id="3ca945a8-5e55-4947-add1-52c5c35c578c" name="In" connectedTo="3d96de36-65e5-42dd-9c85-17ab0f22e857"/>
           <port xsi:type="esdl:OutPort" id="5e01a121-489c-4c81-b55e-a86a274a2329" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b1e6aafe-2f9b-408a-857f-eb158aba1b59" name="PhasegridHome333_1_Ph3" originalIdInSource="3331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="30d17be6-892f-4ce5-93d4-875e84ae11e6" name="In"/>
+          <port xsi:type="esdl:InPort" id="30d17be6-892f-4ce5-93d4-875e84ae11e6" name="In" connectedTo="02081d1c-8f51-4d32-b595-f631997eb779"/>
           <port xsi:type="esdl:OutPort" id="190a9667-6f08-4f0c-b19f-b3b262c56f2d" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="09304bf1-c8b5-4886-b236-0f12698b1d13" name="CableHome333_1" originalIdInSource="3331" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="6e00f412-1898-48a2-bfab-2a090c9af8d2" name="In" connectedTo="0b56f148-9880-4c60-be4d-e31c1602dcd1"/>
@@ -8940,30 +9086,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.966704384308116" lon="4.0161378206969385"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="01e87400-b6c9-4d31-92ea-f3d33af8fc40" name="Home333_2" originalIdInSource="3332" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="01e87400-b6c9-4d31-92ea-f3d33af8fc40" name="Home333_2" originalIdInSource="3332" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.966880714104505" lon="4.015841372533365"/>
         <asset xsi:type="esdl:EConnection" id="a079c486-b3e6-4807-a78b-a8b662b397b7" name="ConnectionHome333_2" originalIdInSource="3332" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="886e15f0-49b0-4f6f-a92d-5014fd28b5ac" name="In" connectedTo="17af592a-29c1-4ccb-8576-c08d281f6ea5"/>
-          <port xsi:type="esdl:OutPort" id="2c800dff-408c-4f65-a59e-238eb27e1f7e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="952d3e9d-615f-4b5d-b70b-cc4dce4ba7b5" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ace990cd-d159-4033-b5b7-6353feeae7f2" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2c800dff-408c-4f65-a59e-238eb27e1f7e" name="OutPh1" connectedTo="04aae98c-3008-4be6-9ff2-55fe75acbbf0"/>
+          <port xsi:type="esdl:OutPort" id="952d3e9d-615f-4b5d-b70b-cc4dce4ba7b5" name="OutPh2" connectedTo="b53803e5-b373-425d-8303-c129071560c7"/>
+          <port xsi:type="esdl:OutPort" id="ace990cd-d159-4033-b5b7-6353feeae7f2" name="OutPh3" connectedTo="fb041401-4a21-4758-afb4-1a3db727b74c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5b53eb4e-4df5-4266-8b3e-3443a3586826" name="PhasegridHome333_2_Ph1" originalIdInSource="3332">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="04aae98c-3008-4be6-9ff2-55fe75acbbf0" name="In"/>
+          <port xsi:type="esdl:InPort" id="04aae98c-3008-4be6-9ff2-55fe75acbbf0" name="In" connectedTo="2c800dff-408c-4f65-a59e-238eb27e1f7e"/>
           <port xsi:type="esdl:OutPort" id="e6f88f47-15ee-4269-853f-476f607cdfbb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d669cec4-44f4-4ee8-bfd1-1eff32ed1dc3" name="PhasegridHome333_2_Ph2" originalIdInSource="3332">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b53803e5-b373-425d-8303-c129071560c7" name="In"/>
+          <port xsi:type="esdl:InPort" id="b53803e5-b373-425d-8303-c129071560c7" name="In" connectedTo="952d3e9d-615f-4b5d-b70b-cc4dce4ba7b5"/>
           <port xsi:type="esdl:OutPort" id="d2187ae5-ad8f-49e4-bd6e-5352ba49950f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="74c2c344-6e82-41bd-b769-870c1bc9ef8a" name="PhasegridHome333_2_Ph3" originalIdInSource="3332">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fb041401-4a21-4758-afb4-1a3db727b74c" name="In"/>
+          <port xsi:type="esdl:InPort" id="fb041401-4a21-4758-afb4-1a3db727b74c" name="In" connectedTo="ace990cd-d159-4033-b5b7-6353feeae7f2"/>
           <port xsi:type="esdl:OutPort" id="70eaefe1-2a63-4bad-8785-d39e371a6e51" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="59c3a792-0f56-4e37-b3a1-6a8cefab2bd9" name="CableHome333_2" originalIdInSource="3332" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="824df278-b742-4bcd-806d-c5c27c7a0f75" name="In" connectedTo="0b56f148-9880-4c60-be4d-e31c1602dcd1"/>
@@ -8973,30 +9120,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.966880714104505" lon="4.015841372533365"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4ba5474a-f4d8-43c2-88ec-a152fc283def" name="Home335_1" originalIdInSource="3351" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="4ba5474a-f4d8-43c2-88ec-a152fc283def" name="Home335_1" originalIdInSource="3351" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97055637873204" lon="4.022715052750818"/>
         <asset xsi:type="esdl:EConnection" id="98a2cd80-e4f1-415b-904f-8a8f9bf0f6ea" name="ConnectionHome335_1" originalIdInSource="3351" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0883902b-3b65-480d-9c87-41e9aa2d6cec" name="In" connectedTo="90643005-cc9e-410a-8044-3e07bbc50db9"/>
-          <port xsi:type="esdl:OutPort" id="647d9586-aaf2-4cab-9703-0f35a82d77d5" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="86917425-04fa-4dda-8dda-4d07ff7f71ca" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0292a66c-7ab5-4ae0-ba4a-280f00fff719" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="647d9586-aaf2-4cab-9703-0f35a82d77d5" name="OutPh1" connectedTo="7cb0b51e-e6e8-44fd-b8bb-4bf394793742"/>
+          <port xsi:type="esdl:OutPort" id="86917425-04fa-4dda-8dda-4d07ff7f71ca" name="OutPh2" connectedTo="2720142c-6274-407e-b129-b646f522107d"/>
+          <port xsi:type="esdl:OutPort" id="0292a66c-7ab5-4ae0-ba4a-280f00fff719" name="OutPh3" connectedTo="54788f4c-58d4-4146-9fba-24de926bc16e"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5308140c-69f2-4e8c-8cfd-c0d92dcc0cc8" name="PhasegridHome335_1_Ph1" originalIdInSource="3351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7cb0b51e-e6e8-44fd-b8bb-4bf394793742" name="In"/>
+          <port xsi:type="esdl:InPort" id="7cb0b51e-e6e8-44fd-b8bb-4bf394793742" name="In" connectedTo="647d9586-aaf2-4cab-9703-0f35a82d77d5"/>
           <port xsi:type="esdl:OutPort" id="f3537e9a-65ef-44d4-be85-70fa26f55f17" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fad507e7-f07e-4244-b1ad-269f99b30515" name="PhasegridHome335_1_Ph2" originalIdInSource="3351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2720142c-6274-407e-b129-b646f522107d" name="In"/>
+          <port xsi:type="esdl:InPort" id="2720142c-6274-407e-b129-b646f522107d" name="In" connectedTo="86917425-04fa-4dda-8dda-4d07ff7f71ca"/>
           <port xsi:type="esdl:OutPort" id="ec07865e-87da-4d6d-88df-c1f9cf75a3b9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="492d27b4-a486-46a2-9607-763126acdce4" name="PhasegridHome335_1_Ph3" originalIdInSource="3351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="54788f4c-58d4-4146-9fba-24de926bc16e" name="In"/>
+          <port xsi:type="esdl:InPort" id="54788f4c-58d4-4146-9fba-24de926bc16e" name="In" connectedTo="0292a66c-7ab5-4ae0-ba4a-280f00fff719"/>
           <port xsi:type="esdl:OutPort" id="bd929ee4-a389-4178-b785-4b9f815212f7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="21a76279-d45e-42a7-8c07-a887ff3cef84" name="CableHome335_1" originalIdInSource="3351" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="1113dd6d-dd89-4f9d-9258-617b79839bb8" name="In" connectedTo="ae48e5d6-7e5f-4343-af68-6770197fd954"/>
@@ -9006,30 +9154,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97055637873204" lon="4.022715052750818"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="460b0296-9201-408d-ad8f-dde436861bd9" name="Home335_2" originalIdInSource="3352" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="460b0296-9201-408d-ad8f-dde436861bd9" name="Home335_2" originalIdInSource="3352" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_C" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97073272501281" lon="4.022418604691695"/>
         <asset xsi:type="esdl:EConnection" id="2dfa2bae-7503-4c42-bceb-01715922cc34" name="ConnectionHome335_2" originalIdInSource="3352" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="74f5c575-7664-4019-b801-2445ca557ec3" name="In" connectedTo="197a97ef-48d9-4e75-87ce-e1e7c0b9f6f7"/>
-          <port xsi:type="esdl:OutPort" id="bda373df-2b25-4962-9853-43c56f85d8d7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="1bc50998-0d00-4be7-bc64-25a0c4017f54" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="24b9e093-d047-42fb-a104-5ac87ed6321f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="bda373df-2b25-4962-9853-43c56f85d8d7" name="OutPh1" connectedTo="c4d156f3-7227-45fc-813d-359b8522616b"/>
+          <port xsi:type="esdl:OutPort" id="1bc50998-0d00-4be7-bc64-25a0c4017f54" name="OutPh2" connectedTo="09aa34c7-e757-4630-a6c5-e9f587289a15"/>
+          <port xsi:type="esdl:OutPort" id="24b9e093-d047-42fb-a104-5ac87ed6321f" name="OutPh3" connectedTo="d044f370-ff21-4474-a8ca-485b89e389e1"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="21c5d72b-eae2-4e2f-94d6-d4b28852aab7" name="PhasegridHome335_2_Ph1" originalIdInSource="3352">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c4d156f3-7227-45fc-813d-359b8522616b" name="In"/>
+          <port xsi:type="esdl:InPort" id="c4d156f3-7227-45fc-813d-359b8522616b" name="In" connectedTo="bda373df-2b25-4962-9853-43c56f85d8d7"/>
           <port xsi:type="esdl:OutPort" id="ce5bcb0e-7a13-40df-8000-cee9334352a8" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3a633efd-c496-4014-81e1-775365dac102" name="PhasegridHome335_2_Ph2" originalIdInSource="3352">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="09aa34c7-e757-4630-a6c5-e9f587289a15" name="In"/>
+          <port xsi:type="esdl:InPort" id="09aa34c7-e757-4630-a6c5-e9f587289a15" name="In" connectedTo="1bc50998-0d00-4be7-bc64-25a0c4017f54"/>
           <port xsi:type="esdl:OutPort" id="2e943b06-e318-4928-9dea-52c4c1e7b417" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a37185bf-c6e5-4d7f-becc-1b0770f4d9ae" name="PhasegridHome335_2_Ph3" originalIdInSource="3352">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d044f370-ff21-4474-a8ca-485b89e389e1" name="In"/>
+          <port xsi:type="esdl:InPort" id="d044f370-ff21-4474-a8ca-485b89e389e1" name="In" connectedTo="24b9e093-d047-42fb-a104-5ac87ed6321f"/>
           <port xsi:type="esdl:OutPort" id="a7559323-fb67-43c6-abf6-5b2f4fca7a70" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="51b17709-c82d-428b-a9bb-306c96789989" name="CableHome335_2" originalIdInSource="3352" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b12cc696-043d-4da1-9146-66f751e0db1d" name="In" connectedTo="ae48e5d6-7e5f-4343-af68-6770197fd954"/>
@@ -9039,30 +9188,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97073272501281" lon="4.022418604691695"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b0f426c3-831b-4d19-bb13-168836724758" name="Home335_3" originalIdInSource="3353" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b0f426c3-831b-4d19-bb13-168836724758" name="Home335_3" originalIdInSource="3353" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_C" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97073272501281" lon="4.022418604691695"/>
         <asset xsi:type="esdl:EConnection" id="bbe3a22c-8205-43de-ba37-3f550d64382a" name="ConnectionHome335_3" originalIdInSource="3353" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9d708ec1-2873-400d-9278-8a481154f8d0" name="In" connectedTo="59d27379-8435-4865-ab12-3ee84c284a45"/>
-          <port xsi:type="esdl:OutPort" id="0d04fc5a-24ff-4a8c-99f5-db5afb208771" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b1798777-4105-48d2-bb2e-849fb9fe42a1" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e88dc445-aab4-4e2b-8eb7-f9e896cb8c1f" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0d04fc5a-24ff-4a8c-99f5-db5afb208771" name="OutPh1" connectedTo="76ed2ce5-ae57-4e15-ab11-5a5743c45bb4"/>
+          <port xsi:type="esdl:OutPort" id="b1798777-4105-48d2-bb2e-849fb9fe42a1" name="OutPh2" connectedTo="e0d2bca5-0a9a-4192-9aa6-0cda66ddafc7"/>
+          <port xsi:type="esdl:OutPort" id="e88dc445-aab4-4e2b-8eb7-f9e896cb8c1f" name="OutPh3" connectedTo="877d32c5-890b-46b5-9389-ebfacac4d73a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="895d9a2f-173c-4c1f-95d3-e21d60199086" name="PhasegridHome335_3_Ph1" originalIdInSource="3353">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="76ed2ce5-ae57-4e15-ab11-5a5743c45bb4" name="In"/>
+          <port xsi:type="esdl:InPort" id="76ed2ce5-ae57-4e15-ab11-5a5743c45bb4" name="In" connectedTo="0d04fc5a-24ff-4a8c-99f5-db5afb208771"/>
           <port xsi:type="esdl:OutPort" id="4ce2b9f9-f8e8-4cba-aaa4-a3f58f6154a1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6fb82c25-bfd1-4aef-9ea6-cc4938f03412" name="PhasegridHome335_3_Ph2" originalIdInSource="3353">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e0d2bca5-0a9a-4192-9aa6-0cda66ddafc7" name="In"/>
+          <port xsi:type="esdl:InPort" id="e0d2bca5-0a9a-4192-9aa6-0cda66ddafc7" name="In" connectedTo="b1798777-4105-48d2-bb2e-849fb9fe42a1"/>
           <port xsi:type="esdl:OutPort" id="985e551b-f0ab-4231-aebd-ad9ec92ef6c2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f3ca3add-4c77-4560-b565-17c1eb5eec03" name="PhasegridHome335_3_Ph3" originalIdInSource="3353">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="877d32c5-890b-46b5-9389-ebfacac4d73a" name="In"/>
+          <port xsi:type="esdl:InPort" id="877d32c5-890b-46b5-9389-ebfacac4d73a" name="In" connectedTo="e88dc445-aab4-4e2b-8eb7-f9e896cb8c1f"/>
           <port xsi:type="esdl:OutPort" id="d7986bb6-f24a-4add-bc6e-783a0fa03f07" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bdae919b-c50b-46e7-9ebd-15c3a4f29b69" name="CableHome335_3" originalIdInSource="3353" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7e10b35a-6ff4-4b13-9404-66e9cc85a7df" name="In" connectedTo="ae48e5d6-7e5f-4343-af68-6770197fd954"/>
@@ -9072,30 +9222,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97073272501281" lon="4.022418604691695"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0e4bf7fa-c8e7-4cec-b59f-7aa1da23c0da" name="Home337_1" originalIdInSource="3371" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="0e4bf7fa-c8e7-4cec-b59f-7aa1da23c0da" name="Home337_1" originalIdInSource="3371" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97274677020784" lon="4.025559419540386"/>
         <asset xsi:type="esdl:EConnection" id="aec6aa40-1560-42ca-931b-73a71675abef" name="ConnectionHome337_1" originalIdInSource="3371" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="632ed3b2-f5b5-41b0-a1f0-3ab7587fd5af" name="In" connectedTo="5e6a2882-70c4-46e5-895f-26a9d939c8e8"/>
-          <port xsi:type="esdl:OutPort" id="ea630746-f803-40e8-babb-0ceb93ad832d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6eb6da06-0046-4efc-b5f3-9731147c3eac" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="74de87fd-5f01-40cb-8ed9-a492d497c9d7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ea630746-f803-40e8-babb-0ceb93ad832d" name="OutPh1" connectedTo="2a498134-82c6-4f8e-a00d-cd8666cfe7ce"/>
+          <port xsi:type="esdl:OutPort" id="6eb6da06-0046-4efc-b5f3-9731147c3eac" name="OutPh2" connectedTo="0ab0b43b-4ccb-4137-8d81-2dc382d175db"/>
+          <port xsi:type="esdl:OutPort" id="74de87fd-5f01-40cb-8ed9-a492d497c9d7" name="OutPh3" connectedTo="ad96501f-e9b8-4aeb-b659-c2a089ec6e3c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0310c9b7-b141-4e28-9d52-39a7e4e4234a" name="PhasegridHome337_1_Ph1" originalIdInSource="3371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2a498134-82c6-4f8e-a00d-cd8666cfe7ce" name="In"/>
+          <port xsi:type="esdl:InPort" id="2a498134-82c6-4f8e-a00d-cd8666cfe7ce" name="In" connectedTo="ea630746-f803-40e8-babb-0ceb93ad832d"/>
           <port xsi:type="esdl:OutPort" id="92d2d7b9-82d5-4d4e-b62d-c8afc135a805" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6f989f16-8e04-4eda-bd64-8233cbdb0dc8" name="PhasegridHome337_1_Ph2" originalIdInSource="3371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0ab0b43b-4ccb-4137-8d81-2dc382d175db" name="In"/>
+          <port xsi:type="esdl:InPort" id="0ab0b43b-4ccb-4137-8d81-2dc382d175db" name="In" connectedTo="6eb6da06-0046-4efc-b5f3-9731147c3eac"/>
           <port xsi:type="esdl:OutPort" id="d867c826-e038-4a89-ad16-61be5500ccd6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b1bee907-9491-49f2-896c-bbc4675a214e" name="PhasegridHome337_1_Ph3" originalIdInSource="3371">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ad96501f-e9b8-4aeb-b659-c2a089ec6e3c" name="In"/>
+          <port xsi:type="esdl:InPort" id="ad96501f-e9b8-4aeb-b659-c2a089ec6e3c" name="In" connectedTo="74de87fd-5f01-40cb-8ed9-a492d497c9d7"/>
           <port xsi:type="esdl:OutPort" id="fdf07652-5865-449b-bc7b-d61b3f5cf002" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="42fc640d-8803-4274-a382-8f23c1375d85" name="CableHome337_1" originalIdInSource="3371" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="1bba965e-2fd2-4bd5-86aa-56decf3b8d51" name="In" connectedTo="ad52fe9f-1c21-49ca-b649-db623bb58fda"/>
@@ -9105,30 +9256,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97274677020784" lon="4.025559419540386"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c171b9a5-9d8b-4d4a-b4b5-a0c825965852" name="Home337_2" originalIdInSource="3372" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="c171b9a5-9d8b-4d4a-b4b5-a0c825965852" name="Home337_2" originalIdInSource="3372" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97292312359162" lon="4.025262968042366"/>
         <asset xsi:type="esdl:EConnection" id="57c04d72-e748-4f16-a7fe-57054e5a8317" name="ConnectionHome337_2" originalIdInSource="3372" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="33dd94ac-ed89-4848-95ec-da0bf0f0b8c8" name="In" connectedTo="909c30af-42b8-42b9-b43b-97aad49d35f8"/>
-          <port xsi:type="esdl:OutPort" id="2158a1a0-6486-4bd3-a58e-3f531f4af394" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="03bd85cb-9bf8-433e-bead-47b1bf0fbd80" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="19011ce0-37cc-4010-a716-1273e1fe7b31" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="2158a1a0-6486-4bd3-a58e-3f531f4af394" name="OutPh1" connectedTo="e93f5f6a-a80b-478a-8800-fd378a9c8699"/>
+          <port xsi:type="esdl:OutPort" id="03bd85cb-9bf8-433e-bead-47b1bf0fbd80" name="OutPh2" connectedTo="713eb8be-54a0-4a05-93ab-a6f8479f5554"/>
+          <port xsi:type="esdl:OutPort" id="19011ce0-37cc-4010-a716-1273e1fe7b31" name="OutPh3" connectedTo="67cf7b5f-1c9a-4a90-935d-634a24baaae9"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0890b3ac-9193-468c-9389-528ad784c1f7" name="PhasegridHome337_2_Ph1" originalIdInSource="3372">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e93f5f6a-a80b-478a-8800-fd378a9c8699" name="In"/>
+          <port xsi:type="esdl:InPort" id="e93f5f6a-a80b-478a-8800-fd378a9c8699" name="In" connectedTo="2158a1a0-6486-4bd3-a58e-3f531f4af394"/>
           <port xsi:type="esdl:OutPort" id="62cdd931-737c-4723-9edb-d44c42691074" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1b8baa04-4bf9-47c1-8249-0cb446bf8c54" name="PhasegridHome337_2_Ph2" originalIdInSource="3372">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="713eb8be-54a0-4a05-93ab-a6f8479f5554" name="In"/>
+          <port xsi:type="esdl:InPort" id="713eb8be-54a0-4a05-93ab-a6f8479f5554" name="In" connectedTo="03bd85cb-9bf8-433e-bead-47b1bf0fbd80"/>
           <port xsi:type="esdl:OutPort" id="f4aa2e21-c028-4658-af7a-ef957d1c8364" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="46d5014e-a8e3-416e-883e-dd3bb261d82f" name="PhasegridHome337_2_Ph3" originalIdInSource="3372">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="67cf7b5f-1c9a-4a90-935d-634a24baaae9" name="In"/>
+          <port xsi:type="esdl:InPort" id="67cf7b5f-1c9a-4a90-935d-634a24baaae9" name="In" connectedTo="19011ce0-37cc-4010-a716-1273e1fe7b31"/>
           <port xsi:type="esdl:OutPort" id="3fada52a-aca1-4384-a2d6-5de188bb8a6c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="65aa0fa9-117f-4d50-85f7-b0102ea04a13" name="CableHome337_2" originalIdInSource="3372" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="8f52c914-afa7-4965-9444-baae054942c9" name="In" connectedTo="ad52fe9f-1c21-49ca-b649-db623bb58fda"/>
@@ -9138,30 +9290,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97292312359162" lon="4.025262968042366"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="35f0dd33-d29a-48aa-ad4f-10312e38ec6b" name="Home339_1" originalIdInSource="3391" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="35f0dd33-d29a-48aa-ad4f-10312e38ec6b" name="Home339_1" originalIdInSource="3391" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_G" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97329940704056" lon="4.026707053895593"/>
         <asset xsi:type="esdl:EConnection" id="06e58226-9ff9-436c-89e1-009cfff4c932" name="ConnectionHome339_1" originalIdInSource="3391" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2bca74d3-c5e8-4645-8460-9e9598d4b0ec" name="In" connectedTo="dffb0ee1-097d-43c0-80ae-cb660661d9b1"/>
-          <port xsi:type="esdl:OutPort" id="e732299d-ea7d-4004-8b90-e88f81d10978" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5cc847c3-c673-423a-b078-726fa4bd06d8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ffedc5fd-94c6-455a-824d-4e72e6e2ce43" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e732299d-ea7d-4004-8b90-e88f81d10978" name="OutPh1" connectedTo="5c053931-b4ac-4513-b52f-744318c23896"/>
+          <port xsi:type="esdl:OutPort" id="5cc847c3-c673-423a-b078-726fa4bd06d8" name="OutPh2" connectedTo="45bc1f2f-cb3c-45eb-80bb-d37227491e76"/>
+          <port xsi:type="esdl:OutPort" id="ffedc5fd-94c6-455a-824d-4e72e6e2ce43" name="OutPh3" connectedTo="c9fafba0-8020-491a-a3c3-3e8b3c29efc3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9a792824-ed69-40b5-94a3-eb2d3895ddaa" name="PhasegridHome339_1_Ph1" originalIdInSource="3391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5c053931-b4ac-4513-b52f-744318c23896" name="In"/>
+          <port xsi:type="esdl:InPort" id="5c053931-b4ac-4513-b52f-744318c23896" name="In" connectedTo="e732299d-ea7d-4004-8b90-e88f81d10978"/>
           <port xsi:type="esdl:OutPort" id="7b2698ff-c51b-452e-8fc8-73d2a39e1f7c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9630dc10-9fc2-472b-a910-99149b366f81" name="PhasegridHome339_1_Ph2" originalIdInSource="3391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="45bc1f2f-cb3c-45eb-80bb-d37227491e76" name="In"/>
+          <port xsi:type="esdl:InPort" id="45bc1f2f-cb3c-45eb-80bb-d37227491e76" name="In" connectedTo="5cc847c3-c673-423a-b078-726fa4bd06d8"/>
           <port xsi:type="esdl:OutPort" id="7d83012b-0165-4b73-ac16-050b22354f96" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="68360d04-2d10-44b6-bd2d-4aab46710477" name="PhasegridHome339_1_Ph3" originalIdInSource="3391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c9fafba0-8020-491a-a3c3-3e8b3c29efc3" name="In"/>
+          <port xsi:type="esdl:InPort" id="c9fafba0-8020-491a-a3c3-3e8b3c29efc3" name="In" connectedTo="ffedc5fd-94c6-455a-824d-4e72e6e2ce43"/>
           <port xsi:type="esdl:OutPort" id="2065b3eb-61d3-4c5a-a8cf-0ca33ee921eb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="aaa4d938-4c19-432b-92fc-89911a5c97bf" name="CableHome339_1" originalIdInSource="3391" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="8a185ff1-a92a-4760-8c4d-f209e4fe67f8" name="In" connectedTo="b604e7c7-f034-4d0d-9338-2afe7c92ef65"/>
@@ -9171,30 +9324,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97329940704056" lon="4.026707053895593"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="053bd16b-b964-4568-9d0e-51247961084d" name="Home339_2" originalIdInSource="3392" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="053bd16b-b964-4568-9d0e-51247961084d" name="Home339_2" originalIdInSource="3392" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97347576330614" lon="4.026410603210296"/>
         <asset xsi:type="esdl:EConnection" id="8077c9af-8ced-4f14-9f85-e32b0d54227c" name="ConnectionHome339_2" originalIdInSource="3392" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c5e3010c-8907-4a62-b0f8-40f188e621c2" name="In" connectedTo="ee080477-6731-4503-8fe2-04f73192bed4"/>
-          <port xsi:type="esdl:OutPort" id="3a5a7251-0fb5-4b87-a19f-797adf804f25" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="75675f9c-9007-41cf-b1b9-93ed9549de18" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f4a64aa4-a7ca-4518-b3d5-00415c3809e5" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="3a5a7251-0fb5-4b87-a19f-797adf804f25" name="OutPh1" connectedTo="0d57d169-ba93-44c9-ba82-9b5d5d8cf652"/>
+          <port xsi:type="esdl:OutPort" id="75675f9c-9007-41cf-b1b9-93ed9549de18" name="OutPh2" connectedTo="ec2b4961-6d9b-467c-9035-296984b53d40"/>
+          <port xsi:type="esdl:OutPort" id="f4a64aa4-a7ca-4518-b3d5-00415c3809e5" name="OutPh3" connectedTo="ec0bfbc4-bc88-4cf8-91fb-ba13a4435849"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="397d4dba-fe5e-40b4-8ebb-1a8ff905ce57" name="PhasegridHome339_2_Ph1" originalIdInSource="3392">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0d57d169-ba93-44c9-ba82-9b5d5d8cf652" name="In"/>
+          <port xsi:type="esdl:InPort" id="0d57d169-ba93-44c9-ba82-9b5d5d8cf652" name="In" connectedTo="3a5a7251-0fb5-4b87-a19f-797adf804f25"/>
           <port xsi:type="esdl:OutPort" id="aeb80915-c33e-483a-8ba7-b3ec2a725e4a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ce9f1d88-5549-4fa9-b0be-ebeddfff591b" name="PhasegridHome339_2_Ph2" originalIdInSource="3392">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec2b4961-6d9b-467c-9035-296984b53d40" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec2b4961-6d9b-467c-9035-296984b53d40" name="In" connectedTo="75675f9c-9007-41cf-b1b9-93ed9549de18"/>
           <port xsi:type="esdl:OutPort" id="92881082-129d-4211-b308-dea3d3fa5b84" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4a9cb74d-6376-40eb-a531-24be4ee3ad74" name="PhasegridHome339_2_Ph3" originalIdInSource="3392">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec0bfbc4-bc88-4cf8-91fb-ba13a4435849" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec0bfbc4-bc88-4cf8-91fb-ba13a4435849" name="In" connectedTo="f4a64aa4-a7ca-4518-b3d5-00415c3809e5"/>
           <port xsi:type="esdl:OutPort" id="0a93423b-5f08-4401-96ba-3363c4c8af07" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="53de832d-2dad-4e43-8642-b058ff96d158" name="CableHome339_2" originalIdInSource="3392" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="a13c2cd6-a1e9-4750-9a28-7f11936590fe" name="In" connectedTo="b604e7c7-f034-4d0d-9338-2afe7c92ef65"/>
@@ -9204,30 +9358,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97347576330614" lon="4.026410603210296"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="46beac3b-3790-4e0e-9c1a-f88565b06157" name="Home341_1" originalIdInSource="3411" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="46beac3b-3790-4e0e-9c1a-f88565b06157" name="Home341_1" originalIdInSource="3411" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97567278364913" lon="4.029837365504037"/>
         <asset xsi:type="esdl:EConnection" id="5539426a-42e4-4151-bbe5-421c9821b422" name="ConnectionHome341_1" originalIdInSource="3411" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="bb065783-e053-4d73-9a17-0813445c5533" name="In" connectedTo="5c159ed1-0753-45e5-9eba-c6b6707556ae"/>
-          <port xsi:type="esdl:OutPort" id="75b78856-9708-4191-ab79-2f972ef3da94" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="099b7cf8-8d89-4f71-8326-07c95c0c492a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ae4e147d-e846-46b5-93f0-a38c2ce48061" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="75b78856-9708-4191-ab79-2f972ef3da94" name="OutPh1" connectedTo="3d1607a4-78e0-4be3-a240-557ca2a6b513"/>
+          <port xsi:type="esdl:OutPort" id="099b7cf8-8d89-4f71-8326-07c95c0c492a" name="OutPh2" connectedTo="80e29df7-f26f-46b4-b52d-afa325796c2b"/>
+          <port xsi:type="esdl:OutPort" id="ae4e147d-e846-46b5-93f0-a38c2ce48061" name="OutPh3" connectedTo="74b30cb0-9a98-4daa-825e-99fc0b54b399"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a5a0cd93-4be6-47c6-8801-58c448f2d366" name="PhasegridHome341_1_Ph1" originalIdInSource="3411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3d1607a4-78e0-4be3-a240-557ca2a6b513" name="In"/>
+          <port xsi:type="esdl:InPort" id="3d1607a4-78e0-4be3-a240-557ca2a6b513" name="In" connectedTo="75b78856-9708-4191-ab79-2f972ef3da94"/>
           <port xsi:type="esdl:OutPort" id="e77f0410-5547-4a01-8f02-0b49e476de1e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fd1b5c69-cfd7-40ad-b6cf-296af6d56d1a" name="PhasegridHome341_1_Ph2" originalIdInSource="3411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="80e29df7-f26f-46b4-b52d-afa325796c2b" name="In"/>
+          <port xsi:type="esdl:InPort" id="80e29df7-f26f-46b4-b52d-afa325796c2b" name="In" connectedTo="099b7cf8-8d89-4f71-8326-07c95c0c492a"/>
           <port xsi:type="esdl:OutPort" id="641a5aff-6d97-4b2c-ad24-8f9b5780577d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9584222d-d0d1-44f2-a5f4-3def4d58fc35" name="PhasegridHome341_1_Ph3" originalIdInSource="3411">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="74b30cb0-9a98-4daa-825e-99fc0b54b399" name="In"/>
+          <port xsi:type="esdl:InPort" id="74b30cb0-9a98-4daa-825e-99fc0b54b399" name="In" connectedTo="ae4e147d-e846-46b5-93f0-a38c2ce48061"/>
           <port xsi:type="esdl:OutPort" id="fc9344b8-5a61-464d-be97-2cb3e4f7b288" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="96ebbff7-0cd3-46d9-84ff-3030fafeffa8" name="CableHome341_1" originalIdInSource="3411" assetType="4x10Cu__VO_YMvKas" length="8.9">
         <port xsi:type="esdl:InPort" id="76e21ed1-33f5-499d-9fc3-606a1d334e2c" name="In" connectedTo="ff9e41a2-b93d-48fe-bda0-5b51d7a1010b"/>
@@ -9237,30 +9392,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97567278364913" lon="4.029837365504037"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3745608e-c053-4981-946e-0cd0e29c4752" name="Home342_1" originalIdInSource="3421" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3745608e-c053-4981-946e-0cd0e29c4752" name="Home342_1" originalIdInSource="3421" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97567278364913" lon="4.029837365504037"/>
         <asset xsi:type="esdl:EConnection" id="8df8143d-9d47-45b1-b411-e3f77ca8ea15" name="ConnectionHome342_1" originalIdInSource="3421" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5fd64753-d870-436a-be56-39c3b807e18d" name="In" connectedTo="f4821092-aa2f-4931-a03e-a82443020ada"/>
-          <port xsi:type="esdl:OutPort" id="0a8b56fa-07ce-41e2-a63c-05a9c6625b3b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="844b939c-d69f-43a4-8416-7953fb6328b4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="dd1348d5-1cce-4ef7-bfd3-17806e1a8fe0" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0a8b56fa-07ce-41e2-a63c-05a9c6625b3b" name="OutPh1" connectedTo="02f771cb-9596-4d80-a74f-a7271ffc1e17"/>
+          <port xsi:type="esdl:OutPort" id="844b939c-d69f-43a4-8416-7953fb6328b4" name="OutPh2" connectedTo="d3077bff-3814-40da-b52e-7188632f1810"/>
+          <port xsi:type="esdl:OutPort" id="dd1348d5-1cce-4ef7-bfd3-17806e1a8fe0" name="OutPh3" connectedTo="fead2cca-9578-46c7-8c05-bf7bd2e96385"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7953df95-1cb0-4ea7-a81d-9f16c4b58fc1" name="PhasegridHome342_1_Ph1" originalIdInSource="3421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="02f771cb-9596-4d80-a74f-a7271ffc1e17" name="In"/>
+          <port xsi:type="esdl:InPort" id="02f771cb-9596-4d80-a74f-a7271ffc1e17" name="In" connectedTo="0a8b56fa-07ce-41e2-a63c-05a9c6625b3b"/>
           <port xsi:type="esdl:OutPort" id="6cdc8fc6-6fed-4dd5-803d-0bc2fc4075be" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0da5e971-6515-45fe-91df-71276c3bbb9e" name="PhasegridHome342_1_Ph2" originalIdInSource="3421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d3077bff-3814-40da-b52e-7188632f1810" name="In"/>
+          <port xsi:type="esdl:InPort" id="d3077bff-3814-40da-b52e-7188632f1810" name="In" connectedTo="844b939c-d69f-43a4-8416-7953fb6328b4"/>
           <port xsi:type="esdl:OutPort" id="cfc7dbde-bfc0-4d2e-836e-8ae7d08b3a7f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="97794a52-4857-49c8-a2dd-fff48ca61fe8" name="PhasegridHome342_1_Ph3" originalIdInSource="3421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fead2cca-9578-46c7-8c05-bf7bd2e96385" name="In"/>
+          <port xsi:type="esdl:InPort" id="fead2cca-9578-46c7-8c05-bf7bd2e96385" name="In" connectedTo="dd1348d5-1cce-4ef7-bfd3-17806e1a8fe0"/>
           <port xsi:type="esdl:OutPort" id="fbff6f58-8d33-4ae3-9bd0-7bd60ea9b193" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c2aef8ee-2fe8-4ac1-9996-a59ebc2377fd" name="CableHome342_1" originalIdInSource="3421" assetType="4x10Cu__VO_YMvKas" length="8.9">
         <port xsi:type="esdl:InPort" id="bffd0a1d-1be5-4a1d-851a-820809deb1e1" name="In" connectedTo="31352ec5-7747-4d75-b511-285d8370849a"/>
@@ -9270,30 +9426,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97567278364913" lon="4.029837365504037"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1e7668cf-c587-468c-ab13-3c38f7f716f0" name="Home345_1" originalIdInSource="3451" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="1e7668cf-c587-468c-ab13-3c38f7f716f0" name="Home345_1" originalIdInSource="3451" assetType="Rijwoning hoek_2006_2014" energyLabel="LABEL_A" floorArea="136.67" buildingYear="2010" surfaceArea="56" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         <asset xsi:type="esdl:EConnection" id="560e20b2-95ce-4025-b33f-5f02443529f5" name="ConnectionHome345_1" originalIdInSource="3451" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="999934d5-fb8c-4430-b904-0d5ab2bcdb56" name="In" connectedTo="aadadbfb-12ba-4670-96ba-816fd48165e2"/>
-          <port xsi:type="esdl:OutPort" id="6f76fa08-0960-4db5-9b48-2f1630c41f99" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="746ad98e-6eb0-414b-98dd-dc5d0aaa99bd" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8aa27971-4e52-4440-9cd0-2637badb3f0d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="6f76fa08-0960-4db5-9b48-2f1630c41f99" name="OutPh1" connectedTo="ef27baa2-0d71-4c53-bdda-e8ce02ec22f2"/>
+          <port xsi:type="esdl:OutPort" id="746ad98e-6eb0-414b-98dd-dc5d0aaa99bd" name="OutPh2" connectedTo="522b82e2-ea3e-4e0d-953e-bbeabe20dde3"/>
+          <port xsi:type="esdl:OutPort" id="8aa27971-4e52-4440-9cd0-2637badb3f0d" name="OutPh3" connectedTo="340b912f-6803-4137-ae04-625586f6d84e"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a394d34c-bd96-49c8-ac6f-911f0c32bc16" name="PhasegridHome345_1_Ph1" originalIdInSource="3451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ef27baa2-0d71-4c53-bdda-e8ce02ec22f2" name="In"/>
+          <port xsi:type="esdl:InPort" id="ef27baa2-0d71-4c53-bdda-e8ce02ec22f2" name="In" connectedTo="6f76fa08-0960-4db5-9b48-2f1630c41f99"/>
           <port xsi:type="esdl:OutPort" id="6431c83e-a896-4281-bbd3-34374d22128e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4207906e-61b4-43a5-a110-5ca448b9e29b" name="PhasegridHome345_1_Ph2" originalIdInSource="3451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="522b82e2-ea3e-4e0d-953e-bbeabe20dde3" name="In"/>
+          <port xsi:type="esdl:InPort" id="522b82e2-ea3e-4e0d-953e-bbeabe20dde3" name="In" connectedTo="746ad98e-6eb0-414b-98dd-dc5d0aaa99bd"/>
           <port xsi:type="esdl:OutPort" id="4015c347-b522-4b02-8f67-25b9bf3cc933" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="84822cc2-09c9-4a8c-b3c7-bd1903ecbc56" name="PhasegridHome345_1_Ph3" originalIdInSource="3451">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="340b912f-6803-4137-ae04-625586f6d84e" name="In"/>
+          <port xsi:type="esdl:InPort" id="340b912f-6803-4137-ae04-625586f6d84e" name="In" connectedTo="8aa27971-4e52-4440-9cd0-2637badb3f0d"/>
           <port xsi:type="esdl:OutPort" id="acba0d14-b996-43a0-af12-9521f0a50eed" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="110.98" height="9.0" windowArea="26.930000000000003" doorArea="5.08" flatRoofArea="10.22" slantedRoofArea="59.38"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cca66571-b9cc-4a16-b4a6-c2c8773ecc7c" name="CableHome345_1" originalIdInSource="3451" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="749ec475-2268-48e5-9565-2ac0323ca6a7" name="In" connectedTo="cb37dcb4-e0a6-4911-8a2a-6bf57d7045c7"/>
@@ -9303,30 +9460,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b7b27133-0416-4227-97b9-6c809aa00c97" name="Home346_1" originalIdInSource="3461" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="b7b27133-0416-4227-97b9-6c809aa00c97" name="Home346_1" originalIdInSource="3461" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         <asset xsi:type="esdl:EConnection" id="0c61d5c7-89f5-42fe-a7bf-4fee4eab4cf9" name="ConnectionHome346_1" originalIdInSource="3461" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fbe37501-12c6-421e-b6e2-af2baf32469c" name="In" connectedTo="4c20d8a9-5012-491a-8a59-41c7da5d5eae"/>
-          <port xsi:type="esdl:OutPort" id="07c113a6-5295-4c2f-b718-d7777c528692" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="77787d0e-0223-45d7-88e1-6a5e97942a98" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0ccfc3b3-388d-4695-ac9d-d4b2f87c37ae" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="07c113a6-5295-4c2f-b718-d7777c528692" name="OutPh1" connectedTo="4f44cfd7-3168-49fc-bdcf-b70bd6ca33fa"/>
+          <port xsi:type="esdl:OutPort" id="77787d0e-0223-45d7-88e1-6a5e97942a98" name="OutPh2" connectedTo="88949de2-81ab-4fd4-9584-1a284882e32e"/>
+          <port xsi:type="esdl:OutPort" id="0ccfc3b3-388d-4695-ac9d-d4b2f87c37ae" name="OutPh3" connectedTo="71853fb2-784b-4ac0-9edc-1bbc4b9ad783"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1b863fc3-8b98-449f-8afd-a0240d4ea413" name="PhasegridHome346_1_Ph1" originalIdInSource="3461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4f44cfd7-3168-49fc-bdcf-b70bd6ca33fa" name="In"/>
+          <port xsi:type="esdl:InPort" id="4f44cfd7-3168-49fc-bdcf-b70bd6ca33fa" name="In" connectedTo="07c113a6-5295-4c2f-b718-d7777c528692"/>
           <port xsi:type="esdl:OutPort" id="52b70b73-ca92-4ed5-8583-a037c88d0ac4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="97a82db9-efef-482f-b1b3-df7d1b7ff65f" name="PhasegridHome346_1_Ph2" originalIdInSource="3461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="88949de2-81ab-4fd4-9584-1a284882e32e" name="In"/>
+          <port xsi:type="esdl:InPort" id="88949de2-81ab-4fd4-9584-1a284882e32e" name="In" connectedTo="77787d0e-0223-45d7-88e1-6a5e97942a98"/>
           <port xsi:type="esdl:OutPort" id="7ce778d4-b9f9-4870-9fdb-8dc3362ff846" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ec78687e-4224-425d-817a-a3592002dbbc" name="PhasegridHome346_1_Ph3" originalIdInSource="3461">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="71853fb2-784b-4ac0-9edc-1bbc4b9ad783" name="In"/>
+          <port xsi:type="esdl:InPort" id="71853fb2-784b-4ac0-9edc-1bbc4b9ad783" name="In" connectedTo="0ccfc3b3-388d-4695-ac9d-d4b2f87c37ae"/>
           <port xsi:type="esdl:OutPort" id="123f0a20-942c-4578-9ef2-497607ddec52" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7eefbea8-e1f5-4486-bd5e-40f85430d3c2" name="CableHome346_1" originalIdInSource="3461" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="a563c5f8-c541-4b91-8b0a-1f0bf2800e16" name="In" connectedTo="da680f25-4770-4f42-a33f-52540e582bfe"/>
@@ -9336,30 +9494,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3b421ac7-a9a3-417e-b371-ad53305aa6d0" name="Home346_2" originalIdInSource="3462" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3b421ac7-a9a3-417e-b371-ad53305aa6d0" name="Home346_2" originalIdInSource="3462" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.978788404973045" lon="4.034983555856922"/>
         <asset xsi:type="esdl:EConnection" id="0e266523-6797-4f6d-8e4f-71bdfd51b5c6" name="ConnectionHome346_2" originalIdInSource="3462" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="95528e0d-3ef7-4d6d-9c14-39139f8a9bfd" name="In" connectedTo="3951879a-8446-4568-8908-cf6f7b739962"/>
-          <port xsi:type="esdl:OutPort" id="03192a38-6a7f-4af6-a5d6-37cf3b10636e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f94a59bf-97a0-4b93-90c9-22adda617c3f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0583b759-c399-4b05-a1e8-e36da4111d61" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="03192a38-6a7f-4af6-a5d6-37cf3b10636e" name="OutPh1" connectedTo="eeffcf13-d246-49a5-bee1-afd5668f4a60"/>
+          <port xsi:type="esdl:OutPort" id="f94a59bf-97a0-4b93-90c9-22adda617c3f" name="OutPh2" connectedTo="ca7b4020-2f9a-4c30-9137-fac540dc88a7"/>
+          <port xsi:type="esdl:OutPort" id="0583b759-c399-4b05-a1e8-e36da4111d61" name="OutPh3" connectedTo="07bc9c93-067e-4036-9c61-2d519c0a5c8b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="aee5c32f-5d4a-4d27-bc16-c1881d84e443" name="PhasegridHome346_2_Ph1" originalIdInSource="3462">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="eeffcf13-d246-49a5-bee1-afd5668f4a60" name="In"/>
+          <port xsi:type="esdl:InPort" id="eeffcf13-d246-49a5-bee1-afd5668f4a60" name="In" connectedTo="03192a38-6a7f-4af6-a5d6-37cf3b10636e"/>
           <port xsi:type="esdl:OutPort" id="8820a103-5962-4e40-bd8a-cc44d472cbb3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="41fe917d-5578-469f-b5f7-24dfbe8cc459" name="PhasegridHome346_2_Ph2" originalIdInSource="3462">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ca7b4020-2f9a-4c30-9137-fac540dc88a7" name="In"/>
+          <port xsi:type="esdl:InPort" id="ca7b4020-2f9a-4c30-9137-fac540dc88a7" name="In" connectedTo="f94a59bf-97a0-4b93-90c9-22adda617c3f"/>
           <port xsi:type="esdl:OutPort" id="09c8cd61-6d10-481c-993b-ff63808511fd" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="35a3ec5c-903d-44d1-b81e-51ae76f9f3da" name="PhasegridHome346_2_Ph3" originalIdInSource="3462">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="07bc9c93-067e-4036-9c61-2d519c0a5c8b" name="In"/>
+          <port xsi:type="esdl:InPort" id="07bc9c93-067e-4036-9c61-2d519c0a5c8b" name="In" connectedTo="0583b759-c399-4b05-a1e8-e36da4111d61"/>
           <port xsi:type="esdl:OutPort" id="6e438079-7a49-4449-9051-3b550f25cadb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5933e8c3-a91f-4a7d-8854-2b31ed0d2923" name="CableHome346_2" originalIdInSource="3462" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="578ef150-f7f4-49b6-8389-6ea61ff8b13e" name="In" connectedTo="da680f25-4770-4f42-a33f-52540e582bfe"/>
@@ -9369,30 +9528,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.978788404973045" lon="4.034983555856922"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f5118e0c-47b8-49b6-b8df-8791231cd7c3" name="Home348_1" originalIdInSource="3481" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="f5118e0c-47b8-49b6-b8df-8791231cd7c3" name="Home348_1" originalIdInSource="3481" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         <asset xsi:type="esdl:EConnection" id="89b065f2-9f15-45c1-9785-47d1928595f3" name="ConnectionHome348_1" originalIdInSource="3481" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6d4efa51-118c-4cca-a0a3-c434110eb8ce" name="In" connectedTo="6cb18026-4736-4f95-8855-47b1ba1bfeb2"/>
-          <port xsi:type="esdl:OutPort" id="e6e0d6fe-bcca-41bc-9384-e38d0dcfc34c" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="7aeec38f-ecb6-4488-9aae-2c969d6ed84b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="684b7c29-733a-441c-a5c6-acd3b2c30081" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e6e0d6fe-bcca-41bc-9384-e38d0dcfc34c" name="OutPh1" connectedTo="ec6d5e3b-f163-4133-be0e-ac8c58b63164"/>
+          <port xsi:type="esdl:OutPort" id="7aeec38f-ecb6-4488-9aae-2c969d6ed84b" name="OutPh2" connectedTo="f630ccea-2629-4823-9576-fff102cb2e0d"/>
+          <port xsi:type="esdl:OutPort" id="684b7c29-733a-441c-a5c6-acd3b2c30081" name="OutPh3" connectedTo="50d6b280-cea4-4e46-b8ab-775003fe8df3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c48153c7-2851-4a5d-b79e-5a37b41a209c" name="PhasegridHome348_1_Ph1" originalIdInSource="3481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec6d5e3b-f163-4133-be0e-ac8c58b63164" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec6d5e3b-f163-4133-be0e-ac8c58b63164" name="In" connectedTo="e6e0d6fe-bcca-41bc-9384-e38d0dcfc34c"/>
           <port xsi:type="esdl:OutPort" id="7e9d8505-bbf5-4b9e-a1a0-204e02f90bdb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="580254e2-bfc6-4d47-8601-b4333ea6372c" name="PhasegridHome348_1_Ph2" originalIdInSource="3481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f630ccea-2629-4823-9576-fff102cb2e0d" name="In"/>
+          <port xsi:type="esdl:InPort" id="f630ccea-2629-4823-9576-fff102cb2e0d" name="In" connectedTo="7aeec38f-ecb6-4488-9aae-2c969d6ed84b"/>
           <port xsi:type="esdl:OutPort" id="7ad20af1-1137-443b-ad97-1840df9cb0f3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="63a5d3df-e9c8-4ed6-8528-32de1e09f0bb" name="PhasegridHome348_1_Ph3" originalIdInSource="3481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="50d6b280-cea4-4e46-b8ab-775003fe8df3" name="In"/>
+          <port xsi:type="esdl:InPort" id="50d6b280-cea4-4e46-b8ab-775003fe8df3" name="In" connectedTo="684b7c29-733a-441c-a5c6-acd3b2c30081"/>
           <port xsi:type="esdl:OutPort" id="dc1e8925-5b56-4a2a-acff-020341c0195a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d67d32bd-4476-45d2-afbc-9005f1cb9428" name="CableHome348_1" originalIdInSource="3481" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="4c7798d8-870c-4730-a87c-cedab4c5799a" name="In" connectedTo="b6dad2a0-c2b8-42d6-bfd1-2603c499c587"/>
@@ -9402,30 +9562,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.97824589037576" lon="4.034708776111723"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c4cfaca4-e44e-483a-acd9-382079f7a4b9" name="Home357_1" originalIdInSource="3571" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="c4cfaca4-e44e-483a-acd9-382079f7a4b9" name="Home357_1" originalIdInSource="3571" assetType="Vrijstaande woning_2015_2018" energyLabel="LABEL_B" floorArea="194.25" buildingYear="2016" surfaceArea="92" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98356040972731" lon="4.0278516563316265"/>
         <asset xsi:type="esdl:EConnection" id="3f93bb95-2840-471f-8c43-56ab6d79ff59" name="ConnectionHome357_1" originalIdInSource="3571" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e00b6222-665f-487d-8066-d9196a217e62" name="In" connectedTo="cadd53d5-66b1-4da5-b53e-ca65e2fc304e"/>
-          <port xsi:type="esdl:OutPort" id="63505032-ae5f-4702-8aec-f57474476793" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="cb5e4761-c6e7-4db8-91cd-62de8bbc0a81" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="9a4e654e-ac71-45d4-98e7-b804a4ec65c9" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="63505032-ae5f-4702-8aec-f57474476793" name="OutPh1" connectedTo="ed773535-0faf-4af6-9945-547255eed035"/>
+          <port xsi:type="esdl:OutPort" id="cb5e4761-c6e7-4db8-91cd-62de8bbc0a81" name="OutPh2" connectedTo="7f8eece6-e89b-403f-a7d2-a7e917f98596"/>
+          <port xsi:type="esdl:OutPort" id="9a4e654e-ac71-45d4-98e7-b804a4ec65c9" name="OutPh3" connectedTo="d451bc18-c870-4d5b-bc15-d25bea31022e"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3166eade-cdb7-4596-a23f-4ac643208fdd" name="PhasegridHome357_1_Ph1" originalIdInSource="3571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ed773535-0faf-4af6-9945-547255eed035" name="In"/>
+          <port xsi:type="esdl:InPort" id="ed773535-0faf-4af6-9945-547255eed035" name="In" connectedTo="63505032-ae5f-4702-8aec-f57474476793"/>
           <port xsi:type="esdl:OutPort" id="f6657e26-63b8-471c-b2a2-928ca243f512" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0818bd58-a8ed-4d3f-ab54-cc137a1ab57d" name="PhasegridHome357_1_Ph2" originalIdInSource="3571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7f8eece6-e89b-403f-a7d2-a7e917f98596" name="In"/>
+          <port xsi:type="esdl:InPort" id="7f8eece6-e89b-403f-a7d2-a7e917f98596" name="In" connectedTo="cb5e4761-c6e7-4db8-91cd-62de8bbc0a81"/>
           <port xsi:type="esdl:OutPort" id="e9ca6c7c-e59b-4fcb-8f97-a04d7219bfa4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7491cbec-7b8b-4493-b66e-af59a6c9a384" name="PhasegridHome357_1_Ph3" originalIdInSource="3571">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d451bc18-c870-4d5b-bc15-d25bea31022e" name="In"/>
+          <port xsi:type="esdl:InPort" id="d451bc18-c870-4d5b-bc15-d25bea31022e" name="In" connectedTo="9a4e654e-ac71-45d4-98e7-b804a4ec65c9"/>
           <port xsi:type="esdl:OutPort" id="7fac9c73-1d6c-4e46-95ce-5ac27af2771f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="176.12" height="9.0" windowArea="46.07999999999999" doorArea="9.35" flatRoofArea="19.51" slantedRoofArea="124.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="309452a5-239e-4740-8879-d37ba6140f76" name="CableHome357_1" originalIdInSource="3571" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="f0684df6-fd45-44d2-a590-1cbbd01bb665" name="In" connectedTo="9e6041e8-a05c-4b33-a626-0c1d9ac4f62a"/>
@@ -9435,30 +9596,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98356040972731" lon="4.0278516563316265"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0f6e77f9-d2eb-4212-b7e9-0f081d642025" name="Home357_2" originalIdInSource="3572" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="0f6e77f9-d2eb-4212-b7e9-0f081d642025" name="Home357_2" originalIdInSource="3572" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_C" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98373676839712" lon="4.027555141926559"/>
         <asset xsi:type="esdl:EConnection" id="3981cc60-98b3-4151-95c5-5ea4c9290fe7" name="ConnectionHome357_2" originalIdInSource="3572" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d887916d-3d52-4251-9105-5a8b512b94e5" name="In" connectedTo="188cb5d8-22d0-4e3a-90ca-5b54d55515d9"/>
-          <port xsi:type="esdl:OutPort" id="a25bcb2f-a97e-4210-8937-c9f59e254509" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="63d07fa3-243a-4131-a23a-8f00020f7410" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="213936eb-4c83-4d1b-a64d-50e76954138d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a25bcb2f-a97e-4210-8937-c9f59e254509" name="OutPh1" connectedTo="b9942e59-a60a-4632-b648-e12c715434d5"/>
+          <port xsi:type="esdl:OutPort" id="63d07fa3-243a-4131-a23a-8f00020f7410" name="OutPh2" connectedTo="bbcb5384-1d89-4363-a6e6-2abaf4a84970"/>
+          <port xsi:type="esdl:OutPort" id="213936eb-4c83-4d1b-a64d-50e76954138d" name="OutPh3" connectedTo="28c88f15-5919-443f-b12a-0fb03bbaa39b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1db08b20-fed9-46b5-be97-13948ff715e2" name="PhasegridHome357_2_Ph1" originalIdInSource="3572">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b9942e59-a60a-4632-b648-e12c715434d5" name="In"/>
+          <port xsi:type="esdl:InPort" id="b9942e59-a60a-4632-b648-e12c715434d5" name="In" connectedTo="a25bcb2f-a97e-4210-8937-c9f59e254509"/>
           <port xsi:type="esdl:OutPort" id="71f5d589-7bcb-4f40-9f72-7d75ff517257" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e79841bd-06dd-4fbd-810d-55708bdba990" name="PhasegridHome357_2_Ph2" originalIdInSource="3572">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bbcb5384-1d89-4363-a6e6-2abaf4a84970" name="In"/>
+          <port xsi:type="esdl:InPort" id="bbcb5384-1d89-4363-a6e6-2abaf4a84970" name="In" connectedTo="63d07fa3-243a-4131-a23a-8f00020f7410"/>
           <port xsi:type="esdl:OutPort" id="10a7fb11-82e2-4344-bd48-c309590cdf0d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="76cf5518-eba5-47f5-a9b3-e7ce5b7dddd9" name="PhasegridHome357_2_Ph3" originalIdInSource="3572">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="28c88f15-5919-443f-b12a-0fb03bbaa39b" name="In"/>
+          <port xsi:type="esdl:InPort" id="28c88f15-5919-443f-b12a-0fb03bbaa39b" name="In" connectedTo="213936eb-4c83-4d1b-a64d-50e76954138d"/>
           <port xsi:type="esdl:OutPort" id="1c6dbef6-d344-42ec-aa2a-734b956be383" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="37.86" height="9.0" windowArea="18.17" doorArea="4.55" slantedRoofArea="58.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1d2a0802-98b1-410f-9a0f-a10c2aa9cb04" name="CableHome357_2" originalIdInSource="3572" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="c8ff64b2-6862-4adc-9e41-7ef01c16cdc8" name="In" connectedTo="9e6041e8-a05c-4b33-a626-0c1d9ac4f62a"/>
@@ -9468,30 +9630,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98373676839712" lon="4.027555141926559"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2949accd-82a3-45a0-85de-e2ca39ee4e1f" name="Home376_1" originalIdInSource="3761" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="2949accd-82a3-45a0-85de-e2ca39ee4e1f" name="Home376_1" originalIdInSource="3761" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992813136497766" lon="4.099212869692134"/>
         <asset xsi:type="esdl:EConnection" id="8a6b77c2-c9e4-4827-8d89-26fdc2400f14" name="ConnectionHome376_1" originalIdInSource="3761" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7129c6f2-7a91-4274-b18a-0d57430b80c2" name="In" connectedTo="e368a157-a478-406c-8f47-b53a2968f880"/>
-          <port xsi:type="esdl:OutPort" id="61c31f71-330b-4218-81b7-93cbb365de2f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="33fc90c3-18b5-40c8-8b3e-b13294347fd9" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="164ea4df-e9e1-479d-bf2f-5cf370063bf9" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="61c31f71-330b-4218-81b7-93cbb365de2f" name="OutPh1" connectedTo="06642d48-7385-45ec-b16d-ee373cbe212a"/>
+          <port xsi:type="esdl:OutPort" id="33fc90c3-18b5-40c8-8b3e-b13294347fd9" name="OutPh2" connectedTo="7fc74ff5-95b6-4aba-98f5-e36ca23913e4"/>
+          <port xsi:type="esdl:OutPort" id="164ea4df-e9e1-479d-bf2f-5cf370063bf9" name="OutPh3" connectedTo="874971cd-b9fe-4cf6-a5ee-c0859e1ad033"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="753559a0-8cb1-436b-a5ab-18ae3a57c2ea" name="PhasegridHome376_1_Ph1" originalIdInSource="3761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="06642d48-7385-45ec-b16d-ee373cbe212a" name="In"/>
+          <port xsi:type="esdl:InPort" id="06642d48-7385-45ec-b16d-ee373cbe212a" name="In" connectedTo="61c31f71-330b-4218-81b7-93cbb365de2f"/>
           <port xsi:type="esdl:OutPort" id="7e320215-6dd9-4cc8-aedb-18be901dc6d7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6499d9f9-6b2c-4233-b215-5cc90ca5bb1e" name="PhasegridHome376_1_Ph2" originalIdInSource="3761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7fc74ff5-95b6-4aba-98f5-e36ca23913e4" name="In"/>
+          <port xsi:type="esdl:InPort" id="7fc74ff5-95b6-4aba-98f5-e36ca23913e4" name="In" connectedTo="33fc90c3-18b5-40c8-8b3e-b13294347fd9"/>
           <port xsi:type="esdl:OutPort" id="f1d2b5cb-dc8b-4f72-a940-eb920f1870da" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4bc2566c-a430-47fd-8ea7-17e12e88d37d" name="PhasegridHome376_1_Ph3" originalIdInSource="3761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="874971cd-b9fe-4cf6-a5ee-c0859e1ad033" name="In"/>
+          <port xsi:type="esdl:InPort" id="874971cd-b9fe-4cf6-a5ee-c0859e1ad033" name="In" connectedTo="164ea4df-e9e1-479d-bf2f-5cf370063bf9"/>
           <port xsi:type="esdl:OutPort" id="423b6238-7d79-4556-a5c9-ec6c0b81894e" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a269f0b4-efd3-4409-8428-6fb47df9778e" name="CableHome376_1" originalIdInSource="3761" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="3af6654d-696b-44d1-979c-4a6b08066341" name="In" connectedTo="858de398-45ce-4d39-b118-17bbad2e831b"/>
@@ -9501,30 +9664,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992813136497766" lon="4.099212869692134"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="63fa0fb6-808c-4373-8147-07ec4ee1cf8d" name="Home377_1" originalIdInSource="3771" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="63fa0fb6-808c-4373-8147-07ec4ee1cf8d" name="Home377_1" originalIdInSource="3771" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_F" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98814053800366" lon="4.051008613673593"/>
         <asset xsi:type="esdl:EConnection" id="1b509539-8b66-48f7-9af2-4d71ff0e75fa" name="ConnectionHome377_1" originalIdInSource="3771" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cc64f364-1f39-4771-a241-6a825a3c8301" name="In" connectedTo="21fce538-fb78-49e0-976d-1b1ce9eefe29"/>
-          <port xsi:type="esdl:OutPort" id="85f921dd-78f3-4e87-a556-83fe1edeb2f8" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="44e9826c-e3a1-4079-956f-ff85f6060980" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b84ee427-6a59-41fa-8ecc-623da2d51d40" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="85f921dd-78f3-4e87-a556-83fe1edeb2f8" name="OutPh1" connectedTo="ca5dc56c-a7cf-4cc7-a45e-9be3719bf65d"/>
+          <port xsi:type="esdl:OutPort" id="44e9826c-e3a1-4079-956f-ff85f6060980" name="OutPh2" connectedTo="45041f51-b6b2-4380-becb-e2434e1d81b1"/>
+          <port xsi:type="esdl:OutPort" id="b84ee427-6a59-41fa-8ecc-623da2d51d40" name="OutPh3" connectedTo="8c18f2e7-5f20-43b6-ba9a-4b1bf40506be"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="372296e4-724a-49b8-a4d4-9a9e5e9cc7ff" name="PhasegridHome377_1_Ph1" originalIdInSource="3771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ca5dc56c-a7cf-4cc7-a45e-9be3719bf65d" name="In"/>
+          <port xsi:type="esdl:InPort" id="ca5dc56c-a7cf-4cc7-a45e-9be3719bf65d" name="In" connectedTo="85f921dd-78f3-4e87-a556-83fe1edeb2f8"/>
           <port xsi:type="esdl:OutPort" id="04764462-6be9-438e-9bce-0ff4bf582eb4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="46fe3381-2328-44fc-85c3-5c658f8cb9b3" name="PhasegridHome377_1_Ph2" originalIdInSource="3771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="45041f51-b6b2-4380-becb-e2434e1d81b1" name="In"/>
+          <port xsi:type="esdl:InPort" id="45041f51-b6b2-4380-becb-e2434e1d81b1" name="In" connectedTo="44e9826c-e3a1-4079-956f-ff85f6060980"/>
           <port xsi:type="esdl:OutPort" id="567f7414-b024-4e61-8400-48db98dbab2b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="89396dc7-b01e-4b6f-98ba-514e534dafad" name="PhasegridHome377_1_Ph3" originalIdInSource="3771">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8c18f2e7-5f20-43b6-ba9a-4b1bf40506be" name="In"/>
+          <port xsi:type="esdl:InPort" id="8c18f2e7-5f20-43b6-ba9a-4b1bf40506be" name="In" connectedTo="b84ee427-6a59-41fa-8ecc-623da2d51d40"/>
           <port xsi:type="esdl:OutPort" id="7310cbc5-2a05-40f7-aa6f-1f2b2e634d19" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4b8b30c0-df91-4120-b1bf-bd9ae9380e93" name="CableHome377_1" originalIdInSource="3771" assetType="4x4Cu__VMvK" length="1.0">
         <port xsi:type="esdl:InPort" id="c89a231e-b5af-481e-a429-342e2ce67240" name="In" connectedTo="80b4ef7c-c3c5-4efc-b72a-45a8eea4fabc"/>
@@ -9534,30 +9698,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98814053800366" lon="4.051008613673593"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7b2d55a7-3e74-42ff-ab87-e276b4c81798" name="Home377_2" originalIdInSource="3772" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7b2d55a7-3e74-42ff-ab87-e276b4c81798" name="Home377_2" originalIdInSource="3772" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98831695513083" lon="4.050712159369456"/>
         <asset xsi:type="esdl:EConnection" id="fe5e1d4f-8953-497b-a2b7-b1c5c1aa7c05" name="ConnectionHome377_2" originalIdInSource="3772" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5288e0f3-2cf7-47bf-9932-10361c5c32ad" name="In" connectedTo="4edd4e4a-628d-4198-ab38-d378e2be1bd4"/>
-          <port xsi:type="esdl:OutPort" id="4447bee2-b84e-42f6-a3bc-0848ae2bd6a2" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="722538d5-85ea-44e3-89d1-66748993522e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="890651e1-563b-4763-86af-86010d169417" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="4447bee2-b84e-42f6-a3bc-0848ae2bd6a2" name="OutPh1" connectedTo="52306474-a6d5-4a40-908a-6a890627d0cb"/>
+          <port xsi:type="esdl:OutPort" id="722538d5-85ea-44e3-89d1-66748993522e" name="OutPh2" connectedTo="636cb4a3-6b23-473b-aa5f-9157c27cf0d7"/>
+          <port xsi:type="esdl:OutPort" id="890651e1-563b-4763-86af-86010d169417" name="OutPh3" connectedTo="7f690d6d-b02c-4b7b-9b4f-b74a92a127a6"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2253b2e6-1385-42a8-a411-c2dba569bfde" name="PhasegridHome377_2_Ph1" originalIdInSource="3772">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="52306474-a6d5-4a40-908a-6a890627d0cb" name="In"/>
+          <port xsi:type="esdl:InPort" id="52306474-a6d5-4a40-908a-6a890627d0cb" name="In" connectedTo="4447bee2-b84e-42f6-a3bc-0848ae2bd6a2"/>
           <port xsi:type="esdl:OutPort" id="6bb4e7ce-b520-4991-a8c3-b3af57bbe796" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="96492c3b-3471-4ef5-8960-88d0ffa71d90" name="PhasegridHome377_2_Ph2" originalIdInSource="3772">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="636cb4a3-6b23-473b-aa5f-9157c27cf0d7" name="In"/>
+          <port xsi:type="esdl:InPort" id="636cb4a3-6b23-473b-aa5f-9157c27cf0d7" name="In" connectedTo="722538d5-85ea-44e3-89d1-66748993522e"/>
           <port xsi:type="esdl:OutPort" id="958825db-16a3-4cfe-b609-d52a10dd7d0f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2504b52b-562c-4879-8f67-ced840342656" name="PhasegridHome377_2_Ph3" originalIdInSource="3772">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7f690d6d-b02c-4b7b-9b4f-b74a92a127a6" name="In"/>
+          <port xsi:type="esdl:InPort" id="7f690d6d-b02c-4b7b-9b4f-b74a92a127a6" name="In" connectedTo="890651e1-563b-4763-86af-86010d169417"/>
           <port xsi:type="esdl:OutPort" id="a5b06c6c-2543-47f2-881f-957827ba91fa" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05660e96-7b08-4028-a9d2-2ebf2ab6cd99" name="CableHome377_2" originalIdInSource="3772" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="04303ebf-778d-4bcc-a49b-3104c4f4d24d" name="In" connectedTo="80b4ef7c-c3c5-4efc-b72a-45a8eea4fabc"/>
@@ -9567,30 +9732,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98831695513083" lon="4.050712159369456"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7a4ec54b-f19e-495f-95f4-c5eaa74384e0" name="Home379_1" originalIdInSource="3791" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="7a4ec54b-f19e-495f-95f4-c5eaa74384e0" name="Home379_1" originalIdInSource="3791" assetType="Rijwoning tussen_1965_1974" energyLabel="LABEL_C" floorArea="114.9" buildingYear="1970" surfaceArea="48" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98942172918039" lon="4.053008874075552"/>
         <asset xsi:type="esdl:EConnection" id="23598d74-1434-4c5e-ae15-01837d51d917" name="ConnectionHome379_1" originalIdInSource="3791" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6eba9bb7-c63d-4c75-a21e-8eecb72ad3ac" name="In" connectedTo="58ab9a98-ef25-4b6d-a9a5-e448da940512"/>
-          <port xsi:type="esdl:OutPort" id="041dd2ee-da35-47c9-ae38-fab244e17211" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="367199ab-6dec-4847-936f-a8c7c424bbde" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="86606e40-623e-4c3a-ad22-c4c35e30cf59" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="041dd2ee-da35-47c9-ae38-fab244e17211" name="OutPh1" connectedTo="d4b5c207-a1b0-476b-9675-68e7fdbe1f09"/>
+          <port xsi:type="esdl:OutPort" id="367199ab-6dec-4847-936f-a8c7c424bbde" name="OutPh2" connectedTo="0517394e-ad16-473e-8bca-c73eb9f93f35"/>
+          <port xsi:type="esdl:OutPort" id="86606e40-623e-4c3a-ad22-c4c35e30cf59" name="OutPh3" connectedTo="ed3e257a-5356-4f85-8604-477b60a6540d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f47b61a-3ce8-428a-9a10-4aee690dc484" name="PhasegridHome379_1_Ph1" originalIdInSource="3791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d4b5c207-a1b0-476b-9675-68e7fdbe1f09" name="In"/>
+          <port xsi:type="esdl:InPort" id="d4b5c207-a1b0-476b-9675-68e7fdbe1f09" name="In" connectedTo="041dd2ee-da35-47c9-ae38-fab244e17211"/>
           <port xsi:type="esdl:OutPort" id="ed240041-c194-4c75-b132-f5b146930998" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c3c7d9ad-eeae-4253-b3cc-a34394ac6eec" name="PhasegridHome379_1_Ph2" originalIdInSource="3791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0517394e-ad16-473e-8bca-c73eb9f93f35" name="In"/>
+          <port xsi:type="esdl:InPort" id="0517394e-ad16-473e-8bca-c73eb9f93f35" name="In" connectedTo="367199ab-6dec-4847-936f-a8c7c424bbde"/>
           <port xsi:type="esdl:OutPort" id="6d901f29-0110-40a6-b153-1b8443619f76" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="332a08ce-d977-497e-a6c6-6379465ed54f" name="PhasegridHome379_1_Ph3" originalIdInSource="3791">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ed3e257a-5356-4f85-8604-477b60a6540d" name="In"/>
+          <port xsi:type="esdl:InPort" id="ed3e257a-5356-4f85-8604-477b60a6540d" name="In" connectedTo="86606e40-623e-4c3a-ad22-c4c35e30cf59"/>
           <port xsi:type="esdl:OutPort" id="fef9500a-8102-4570-9418-58030e26b410" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="37.67" height="9.0" windowArea="24.98" doorArea="4.6" slantedRoofArea="55.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="5ed19209-ea44-42bf-9212-623259087771" name="CableHome379_1" originalIdInSource="3791" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="20a48e22-cd3e-476e-8a3a-55c6d58517b7" name="In" connectedTo="6a03a71a-4e1f-4e42-9c88-27a43911a55d"/>
@@ -9600,30 +9766,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98942172918039" lon="4.053008874075552"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3ae64b3b-fdc8-4e54-8d42-bc328b70d486" name="Home379_2" originalIdInSource="3792" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="3ae64b3b-fdc8-4e54-8d42-bc328b70d486" name="Home379_2" originalIdInSource="3792" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98959815131333" lon="4.052712419079521"/>
         <asset xsi:type="esdl:EConnection" id="09f5744b-bdf6-4925-b6a8-a0667cfdae75" name="ConnectionHome379_2" originalIdInSource="3792" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="38fb0ab2-d968-4ed5-ab65-f0412b73b50d" name="In" connectedTo="21b1ec57-10c9-4418-8afc-db7c4f3428fd"/>
-          <port xsi:type="esdl:OutPort" id="d6421b3f-bda0-4ee6-87b2-31f04728a5e6" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="02d38e35-2dbe-4610-88a0-15e8bab40ed6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="fd77b58e-bc6b-477b-a6cb-4d993a9a478e" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d6421b3f-bda0-4ee6-87b2-31f04728a5e6" name="OutPh1" connectedTo="4f3daf8b-8a83-49a0-9141-65990f16e4d0"/>
+          <port xsi:type="esdl:OutPort" id="02d38e35-2dbe-4610-88a0-15e8bab40ed6" name="OutPh2" connectedTo="335028ad-3ac3-40a2-b298-3b2afe38712e"/>
+          <port xsi:type="esdl:OutPort" id="fd77b58e-bc6b-477b-a6cb-4d993a9a478e" name="OutPh3" connectedTo="d31e9a39-c3f3-4667-b299-b7f72b3a01a7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a948c4f0-3360-4cdd-b71a-700e2b70a90a" name="PhasegridHome379_2_Ph1" originalIdInSource="3792">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4f3daf8b-8a83-49a0-9141-65990f16e4d0" name="In"/>
+          <port xsi:type="esdl:InPort" id="4f3daf8b-8a83-49a0-9141-65990f16e4d0" name="In" connectedTo="d6421b3f-bda0-4ee6-87b2-31f04728a5e6"/>
           <port xsi:type="esdl:OutPort" id="417eadb5-cf72-4b94-b90d-86df4289bd11" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="9b785e66-f837-42fd-93af-748c05a1dd9d" name="PhasegridHome379_2_Ph2" originalIdInSource="3792">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="335028ad-3ac3-40a2-b298-3b2afe38712e" name="In"/>
+          <port xsi:type="esdl:InPort" id="335028ad-3ac3-40a2-b298-3b2afe38712e" name="In" connectedTo="02d38e35-2dbe-4610-88a0-15e8bab40ed6"/>
           <port xsi:type="esdl:OutPort" id="7adb11f3-a279-432b-a9d8-15ad1421dfb4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d8db05f0-669f-4c2a-9429-07a1c6ae933a" name="PhasegridHome379_2_Ph3" originalIdInSource="3792">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d31e9a39-c3f3-4667-b299-b7f72b3a01a7" name="In"/>
+          <port xsi:type="esdl:InPort" id="d31e9a39-c3f3-4667-b299-b7f72b3a01a7" name="In" connectedTo="fd77b58e-bc6b-477b-a6cb-4d993a9a478e"/>
           <port xsi:type="esdl:OutPort" id="6dfaf88a-fe80-4504-bf85-b66c643657e8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="0a8b9ce6-93a5-4a6f-b51e-41998cab8917" name="CableHome379_2" originalIdInSource="3792" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3328d77f-4599-4934-a560-a6e49f8957b0" name="In" connectedTo="6a03a71a-4e1f-4e42-9c88-27a43911a55d"/>
@@ -9633,30 +9800,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98959815131333" lon="4.052712419079521"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="3c5b5292-4c06-4e5c-8715-7f29ac61d937" name="Home381_1" originalIdInSource="3811" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="3c5b5292-4c06-4e5c-8715-7f29ac61d937" name="Home381_1" originalIdInSource="3811" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.991438254299695" lon="4.056443491444652"/>
         <asset xsi:type="esdl:EConnection" id="c3c4bd57-2383-49d5-9569-040a8dd77ab7" name="ConnectionHome381_1" originalIdInSource="3811" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c3714824-bed9-463c-a692-ca6df67fb1dc" name="In" connectedTo="c7839c31-ac57-46ab-9c83-edb098bde42a"/>
-          <port xsi:type="esdl:OutPort" id="5b814e0d-2070-4617-9807-7318011bf779" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="14205135-75eb-4e77-a3d6-383e67c3ade1" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0fb2441d-4bd7-46cb-b975-5d07d0113f08" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5b814e0d-2070-4617-9807-7318011bf779" name="OutPh1" connectedTo="87433669-9262-409d-9277-6791c8fa6a22"/>
+          <port xsi:type="esdl:OutPort" id="14205135-75eb-4e77-a3d6-383e67c3ade1" name="OutPh2" connectedTo="52129ae6-0cff-4426-91ff-8b938c5b0cb2"/>
+          <port xsi:type="esdl:OutPort" id="0fb2441d-4bd7-46cb-b975-5d07d0113f08" name="OutPh3" connectedTo="3add5486-8bf1-4f86-a6a3-89c520bcc110"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e4451575-34ac-41c5-9ac7-045325a3b328" name="PhasegridHome381_1_Ph1" originalIdInSource="3811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="87433669-9262-409d-9277-6791c8fa6a22" name="In"/>
+          <port xsi:type="esdl:InPort" id="87433669-9262-409d-9277-6791c8fa6a22" name="In" connectedTo="5b814e0d-2070-4617-9807-7318011bf779"/>
           <port xsi:type="esdl:OutPort" id="1681db23-d410-44b3-8d07-b29d25bc98a9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="94cc1108-f1c3-4068-ba33-89e69238a13d" name="PhasegridHome381_1_Ph2" originalIdInSource="3811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="52129ae6-0cff-4426-91ff-8b938c5b0cb2" name="In"/>
+          <port xsi:type="esdl:InPort" id="52129ae6-0cff-4426-91ff-8b938c5b0cb2" name="In" connectedTo="14205135-75eb-4e77-a3d6-383e67c3ade1"/>
           <port xsi:type="esdl:OutPort" id="ee6fe6c8-8efd-449e-84cf-071ab066b47b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="21dd5606-1b53-4f80-b978-c93c47558e46" name="PhasegridHome381_1_Ph3" originalIdInSource="3811">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3add5486-8bf1-4f86-a6a3-89c520bcc110" name="In"/>
+          <port xsi:type="esdl:InPort" id="3add5486-8bf1-4f86-a6a3-89c520bcc110" name="In" connectedTo="0fb2441d-4bd7-46cb-b975-5d07d0113f08"/>
           <port xsi:type="esdl:OutPort" id="2e20b8ce-7257-46d6-92d1-a6a81e8002a3" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4ff41c97-16eb-4667-908b-e1dc8b81f985" name="CableHome381_1" originalIdInSource="3811" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="eefcec6b-6caf-4558-9a06-bdeb3cea2af7" name="In" connectedTo="d697ca3b-1642-4be1-b6b5-85aa906aa64f"/>
@@ -9666,30 +9834,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.991438254299695" lon="4.056443491444652"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0a44b4e9-0298-48a7-a3e4-8b1c3fa786d4" name="Home381_2" originalIdInSource="3812" assetType="maisonnette_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="0a44b4e9-0298-48a7-a3e4-8b1c3fa786d4" name="Home381_2" originalIdInSource="3812" assetType="maisonnette_before_1964" energyLabel="LABEL_A" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99161468503651" lon="4.05614703648031"/>
         <asset xsi:type="esdl:EConnection" id="96efb114-bfd0-436c-a849-31b5f74f424d" name="ConnectionHome381_2" originalIdInSource="3812" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="535ae356-6e81-4a87-a5dc-81e3635f91a4" name="In" connectedTo="5e61e390-58a9-40a6-8888-da70fffb477d"/>
-          <port xsi:type="esdl:OutPort" id="1d82d840-e62f-4a87-a5c1-7a1fbc1a8ebe" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a024cd84-f308-4e4a-8491-59a7d0fd258a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="11fc9160-1b5e-4d2b-8ba9-ec72eea8b8ed" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="1d82d840-e62f-4a87-a5c1-7a1fbc1a8ebe" name="OutPh1" connectedTo="0fd0e915-74e5-437a-ba21-2aad758096dc"/>
+          <port xsi:type="esdl:OutPort" id="a024cd84-f308-4e4a-8491-59a7d0fd258a" name="OutPh2" connectedTo="cf6f2cce-9987-47f5-946e-f1639258ef94"/>
+          <port xsi:type="esdl:OutPort" id="11fc9160-1b5e-4d2b-8ba9-ec72eea8b8ed" name="OutPh3" connectedTo="8c05247d-5ab4-4399-9ade-2506b1287893"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="17972db7-13fb-4eb3-8f24-ae93de6ebc01" name="PhasegridHome381_2_Ph1" originalIdInSource="3812">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0fd0e915-74e5-437a-ba21-2aad758096dc" name="In"/>
+          <port xsi:type="esdl:InPort" id="0fd0e915-74e5-437a-ba21-2aad758096dc" name="In" connectedTo="1d82d840-e62f-4a87-a5c1-7a1fbc1a8ebe"/>
           <port xsi:type="esdl:OutPort" id="d0cce27f-b08c-4dee-ac61-0d896b68ebb2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cf9aafc4-9bd9-4d9f-b343-a05ab488dc85" name="PhasegridHome381_2_Ph2" originalIdInSource="3812">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cf6f2cce-9987-47f5-946e-f1639258ef94" name="In"/>
+          <port xsi:type="esdl:InPort" id="cf6f2cce-9987-47f5-946e-f1639258ef94" name="In" connectedTo="a024cd84-f308-4e4a-8491-59a7d0fd258a"/>
           <port xsi:type="esdl:OutPort" id="121ad3ec-7bac-473e-bd68-557ddb3f9c85" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="44c68642-56b2-4bc5-ace7-f072cb3f43a0" name="PhasegridHome381_2_Ph3" originalIdInSource="3812">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8c05247d-5ab4-4399-9ade-2506b1287893" name="In"/>
+          <port xsi:type="esdl:InPort" id="8c05247d-5ab4-4399-9ade-2506b1287893" name="In" connectedTo="11fc9160-1b5e-4d2b-8ba9-ec72eea8b8ed"/>
           <port xsi:type="esdl:OutPort" id="51e7353d-7d87-42c1-8f14-ad10600214db" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c2eae987-005c-4de2-9a8c-aabfb4f5ad59" name="CableHome381_2" originalIdInSource="3812" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="08c0b835-3826-4071-8597-a3e8119b312b" name="In" connectedTo="d697ca3b-1642-4be1-b6b5-85aa906aa64f"/>
@@ -9699,30 +9868,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99161468503651" lon="4.05614703648031"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ddd5611b-0d2f-4c48-b008-b419d257643f" name="Home391_1" originalIdInSource="3911" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="ddd5611b-0d2f-4c48-b008-b419d257643f" name="Home391_1" originalIdInSource="3911" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99882676285412" lon="4.073991373520489"/>
         <asset xsi:type="esdl:EConnection" id="100b33ce-9513-4abd-8f01-b1722fc80544" name="ConnectionHome391_1" originalIdInSource="3911" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e1ad7061-e515-4ef7-b0b0-0fa578f4776c" name="In" connectedTo="f4145a50-6673-46b1-a9c5-ea0d186d139a"/>
-          <port xsi:type="esdl:OutPort" id="5fdc08dc-8020-4ed4-b849-210ce590434b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f0a21658-752e-4921-8995-75c9b10260d8" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="55852f4a-cee0-4125-943c-03d757c6f524" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5fdc08dc-8020-4ed4-b849-210ce590434b" name="OutPh1" connectedTo="4d43c784-f601-4bae-930f-8cfdb9fec869"/>
+          <port xsi:type="esdl:OutPort" id="f0a21658-752e-4921-8995-75c9b10260d8" name="OutPh2" connectedTo="2d4e6f6a-a663-419b-a56b-d6089abb449b"/>
+          <port xsi:type="esdl:OutPort" id="55852f4a-cee0-4125-943c-03d757c6f524" name="OutPh3" connectedTo="da19c305-880b-4d17-8da7-5c282b68a40d"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6ef14813-b2e7-4e9a-a086-28bc8162e520" name="PhasegridHome391_1_Ph1" originalIdInSource="3911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4d43c784-f601-4bae-930f-8cfdb9fec869" name="In"/>
+          <port xsi:type="esdl:InPort" id="4d43c784-f601-4bae-930f-8cfdb9fec869" name="In" connectedTo="5fdc08dc-8020-4ed4-b849-210ce590434b"/>
           <port xsi:type="esdl:OutPort" id="6307795c-1e98-4696-b9a7-1cfd70fcb69f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="498f856b-143f-42a2-a280-eab1e5c35715" name="PhasegridHome391_1_Ph2" originalIdInSource="3911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2d4e6f6a-a663-419b-a56b-d6089abb449b" name="In"/>
+          <port xsi:type="esdl:InPort" id="2d4e6f6a-a663-419b-a56b-d6089abb449b" name="In" connectedTo="f0a21658-752e-4921-8995-75c9b10260d8"/>
           <port xsi:type="esdl:OutPort" id="46ce3031-f121-4c04-aa99-b1663e590338" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b30f42b2-625f-4490-b73d-491b0c1f57fb" name="PhasegridHome391_1_Ph3" originalIdInSource="3911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="da19c305-880b-4d17-8da7-5c282b68a40d" name="In"/>
+          <port xsi:type="esdl:InPort" id="da19c305-880b-4d17-8da7-5c282b68a40d" name="In" connectedTo="55852f4a-cee0-4125-943c-03d757c6f524"/>
           <port xsi:type="esdl:OutPort" id="b82da355-8403-4acb-9b12-a3d66b0defda" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="37.86" height="9.0" windowArea="18.17" doorArea="4.55" slantedRoofArea="58.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="4109aadd-3944-4e68-8692-672d804efd90" name="CableHome391_1" originalIdInSource="3911" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="da78e2fd-7379-409c-9c53-384c45c45bbe" name="In" connectedTo="b4018c9e-aa09-48d3-871b-9e13ff3e4d6b"/>
@@ -9732,30 +9902,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99882676285412" lon="4.073991373520489"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cdedaae2-2336-40f9-8107-789f89216c86" name="Home391_2" originalIdInSource="3912" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="cdedaae2-2336-40f9-8107-789f89216c86" name="Home391_2" originalIdInSource="3912" assetType="Rijwoning hoek_1975_1991" energyLabel="LABEL_C" floorArea="112.97" buildingYear="1983" surfaceArea="50" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.999003237683624" lon="4.073694938107958"/>
         <asset xsi:type="esdl:EConnection" id="94c7370b-459a-4d2e-822b-25d643a9122b" name="ConnectionHome391_2" originalIdInSource="3912" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="51d2843a-edc0-45e0-8dac-f8269402917a" name="In" connectedTo="f414551d-faf9-437c-bf32-f1d3d157791e"/>
-          <port xsi:type="esdl:OutPort" id="fda3cca3-c3d7-4e50-8ac1-ef689d23b25e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="1ce5cb6c-c09c-4e33-80fa-2132e057c634" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b25e2342-40d9-4f0c-9eb1-679f6c3acfb4" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fda3cca3-c3d7-4e50-8ac1-ef689d23b25e" name="OutPh1" connectedTo="84c8ab3e-c06e-4491-bd4f-49b99bd96c94"/>
+          <port xsi:type="esdl:OutPort" id="1ce5cb6c-c09c-4e33-80fa-2132e057c634" name="OutPh2" connectedTo="eafed455-0d02-4d50-bf79-b2124b3eee80"/>
+          <port xsi:type="esdl:OutPort" id="b25e2342-40d9-4f0c-9eb1-679f6c3acfb4" name="OutPh3" connectedTo="524c0e8f-e819-4571-a5b5-38f55108e38a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c0f077ac-bca1-4eef-b942-88f90f52078b" name="PhasegridHome391_2_Ph1" originalIdInSource="3912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="84c8ab3e-c06e-4491-bd4f-49b99bd96c94" name="In"/>
+          <port xsi:type="esdl:InPort" id="84c8ab3e-c06e-4491-bd4f-49b99bd96c94" name="In" connectedTo="fda3cca3-c3d7-4e50-8ac1-ef689d23b25e"/>
           <port xsi:type="esdl:OutPort" id="0ce3985e-1293-4eee-bcc4-a263f7e6a8f5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fad68736-cfc8-4267-9d61-5f2451ca9ced" name="PhasegridHome391_2_Ph2" originalIdInSource="3912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="eafed455-0d02-4d50-bf79-b2124b3eee80" name="In"/>
+          <port xsi:type="esdl:InPort" id="eafed455-0d02-4d50-bf79-b2124b3eee80" name="In" connectedTo="1ce5cb6c-c09c-4e33-80fa-2132e057c634"/>
           <port xsi:type="esdl:OutPort" id="2e07e58c-a6c0-43dc-8bb1-9206d25561f6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="87a06db0-22e8-4147-a2aa-985e8b213c5d" name="PhasegridHome391_2_Ph3" originalIdInSource="3912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="524c0e8f-e819-4571-a5b5-38f55108e38a" name="In"/>
+          <port xsi:type="esdl:InPort" id="524c0e8f-e819-4571-a5b5-38f55108e38a" name="In" connectedTo="b25e2342-40d9-4f0c-9eb1-679f6c3acfb4"/>
           <port xsi:type="esdl:OutPort" id="bb347c52-73ed-40c6-949c-64df2561d887" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="88.7" height="9.0" windowArea="18.82" doorArea="4.57" slantedRoofArea="58.46"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b17d26db-b040-4b4f-866a-f9f02a84469d" name="CableHome391_2" originalIdInSource="3912" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="ee652078-689f-4a94-903b-5930396cc13e" name="In" connectedTo="b4018c9e-aa09-48d3-871b-9e13ff3e4d6b"/>
@@ -9765,30 +9936,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.999003237683624" lon="4.073694938107958"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="73d2ac1f-bc25-4baa-b072-9ac5e2eb7d03" name="Home391_3" originalIdInSource="3913" assetType="appartement_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="73d2ac1f-bc25-4baa-b072-9ac5e2eb7d03" name="Home391_3" originalIdInSource="3913" assetType="appartement_before_1964" energyLabel="LABEL_F" floorArea="67.0" buildingYear="1955" surfaceArea="22" numberOfFloors="1">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.999003237683624" lon="4.073694938107958"/>
         <asset xsi:type="esdl:EConnection" id="758f0cf3-a9e1-4b1f-aff9-6a28a8d821c7" name="ConnectionHome391_3" originalIdInSource="3913" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="362ae79a-6b56-4a57-afe2-b7d0f4493f8e" name="In" connectedTo="5a9b40bf-a93c-4765-9699-ae8fddba9f7b"/>
-          <port xsi:type="esdl:OutPort" id="606bd572-2e91-4a58-83ee-bf1ad8333720" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="89482472-256f-4bb9-ad19-a03c32b8473d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="4e037c0a-e3d5-46bf-bed5-d515fba6f048" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="606bd572-2e91-4a58-83ee-bf1ad8333720" name="OutPh1" connectedTo="18bbc268-fc11-45bd-9a85-8f6db548ce2d"/>
+          <port xsi:type="esdl:OutPort" id="89482472-256f-4bb9-ad19-a03c32b8473d" name="OutPh2" connectedTo="00ddeee2-8bad-4918-babe-38da4abad3c7"/>
+          <port xsi:type="esdl:OutPort" id="4e037c0a-e3d5-46bf-bed5-d515fba6f048" name="OutPh3" connectedTo="5b742e3e-aacd-4bff-872d-7b0870a5527b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b025c64e-606d-4ce7-9ac4-e2c14b01353e" name="PhasegridHome391_3_Ph1" originalIdInSource="3913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="18bbc268-fc11-45bd-9a85-8f6db548ce2d" name="In"/>
+          <port xsi:type="esdl:InPort" id="18bbc268-fc11-45bd-9a85-8f6db548ce2d" name="In" connectedTo="606bd572-2e91-4a58-83ee-bf1ad8333720"/>
           <port xsi:type="esdl:OutPort" id="4ce77135-a362-4e09-9e30-e2049b764fdf" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e8a1f714-5ff2-4e90-8e77-618777e4e003" name="PhasegridHome391_3_Ph2" originalIdInSource="3913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="00ddeee2-8bad-4918-babe-38da4abad3c7" name="In"/>
+          <port xsi:type="esdl:InPort" id="00ddeee2-8bad-4918-babe-38da4abad3c7" name="In" connectedTo="89482472-256f-4bb9-ad19-a03c32b8473d"/>
           <port xsi:type="esdl:OutPort" id="39453181-478c-41a5-9cd8-951fb0f5231e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3c6f0988-be8b-4c87-bab1-ff3c8ad834ca" name="PhasegridHome391_3_Ph3" originalIdInSource="3913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5b742e3e-aacd-4bff-872d-7b0870a5527b" name="In"/>
+          <port xsi:type="esdl:InPort" id="5b742e3e-aacd-4bff-872d-7b0870a5527b" name="In" connectedTo="4e037c0a-e3d5-46bf-bed5-d515fba6f048"/>
           <port xsi:type="esdl:OutPort" id="e0b44891-4dee-43e2-b723-5d6c60e1cadc" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="25.026666666666667" height="12.0" windowArea="14.226666666666665" doorArea="5.67" flatRoofArea="22.33333333333333"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="a7ac461f-ae4a-4735-bc98-6413d823f52e" name="CableHome391_3" originalIdInSource="3913" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="556bde48-1670-4fd2-b307-b5ae8966d3d2" name="In" connectedTo="b4018c9e-aa09-48d3-871b-9e13ff3e4d6b"/>
@@ -9798,30 +9970,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.999003237683624" lon="4.073694938107958"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6e264b98-fd88-4505-bd9f-94fe7d7f480a" name="Home396_1" originalIdInSource="3961" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="6e264b98-fd88-4505-bd9f-94fe7d7f480a" name="Home396_1" originalIdInSource="3961" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_B" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.000803734118435" lon="4.073933461700211"/>
         <asset xsi:type="esdl:EConnection" id="0955b92d-2431-46aa-9421-a5334d4014a7" name="ConnectionHome396_1" originalIdInSource="3961" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d4a9c89a-0fa5-4bbb-a5ea-15c6b1f1e65e" name="In" connectedTo="384cc1ed-9252-4385-912d-633710dd12f6"/>
-          <port xsi:type="esdl:OutPort" id="0abb1abd-9a15-4a4f-8a90-4601e80de607" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="9feb9d66-c827-4dbd-9848-dcb4e38994ca" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7e43982e-c12c-4855-a56b-fb4e67431117" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0abb1abd-9a15-4a4f-8a90-4601e80de607" name="OutPh1" connectedTo="ccf982c3-ec40-43c6-8af1-ba464d8104b9"/>
+          <port xsi:type="esdl:OutPort" id="9feb9d66-c827-4dbd-9848-dcb4e38994ca" name="OutPh2" connectedTo="4ee4e560-ad28-45d3-98f7-4d0572334ad1"/>
+          <port xsi:type="esdl:OutPort" id="7e43982e-c12c-4855-a56b-fb4e67431117" name="OutPh3" connectedTo="8bc9c243-7fab-404c-ae73-1a047976f8a8"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6cbae3cb-798c-4dee-8901-eee02413ea9b" name="PhasegridHome396_1_Ph1" originalIdInSource="3961">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ccf982c3-ec40-43c6-8af1-ba464d8104b9" name="In"/>
+          <port xsi:type="esdl:InPort" id="ccf982c3-ec40-43c6-8af1-ba464d8104b9" name="In" connectedTo="0abb1abd-9a15-4a4f-8a90-4601e80de607"/>
           <port xsi:type="esdl:OutPort" id="6a197c76-f3d0-4f85-8ffe-f1b872060d2e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3f34afc4-76af-491f-ad6b-4a9cdce36b9f" name="PhasegridHome396_1_Ph2" originalIdInSource="3961">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4ee4e560-ad28-45d3-98f7-4d0572334ad1" name="In"/>
+          <port xsi:type="esdl:InPort" id="4ee4e560-ad28-45d3-98f7-4d0572334ad1" name="In" connectedTo="9feb9d66-c827-4dbd-9848-dcb4e38994ca"/>
           <port xsi:type="esdl:OutPort" id="487000f1-6d36-4ea4-ad13-46495c7fd893" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4a5686ba-e65e-4bef-b387-dd7386edcc8e" name="PhasegridHome396_1_Ph3" originalIdInSource="3961">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8bc9c243-7fab-404c-ae73-1a047976f8a8" name="In"/>
+          <port xsi:type="esdl:InPort" id="8bc9c243-7fab-404c-ae73-1a047976f8a8" name="In" connectedTo="7e43982e-c12c-4855-a56b-fb4e67431117"/>
           <port xsi:type="esdl:OutPort" id="79c61d5c-baa2-4fb0-b962-244b51d89689" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="97f5f3ec-a485-499a-b74f-f07f02858d94" name="CableHome396_1" originalIdInSource="3961" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="6eefc69e-b95d-41fb-ac83-d81357af4b63" name="In" connectedTo="c1c9a98a-f08b-40bf-ae12-7f3996570d6a"/>
@@ -9831,30 +10004,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.000803734118435" lon="4.073933461700211"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="afc73c38-f343-4058-a843-8a5a7f34ee68" name="Home396_2" originalIdInSource="3962" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="afc73c38-f343-4058-a843-8a5a7f34ee68" name="Home396_2" originalIdInSource="3962" assetType="Rijwoning tussen_1975_1991" energyLabel="LABEL_B" floorArea="113.6" buildingYear="1983" surfaceArea="49" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.00098020870601" lon="4.073637012918354"/>
         <asset xsi:type="esdl:EConnection" id="084f198d-85d4-4bb7-b39b-2a5cc27625e8" name="ConnectionHome396_2" originalIdInSource="3962" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8af5e731-c2d3-4d33-9958-df4d34960641" name="In" connectedTo="f6b91da7-aa36-4b8e-bf42-83c0419a82f7"/>
-          <port xsi:type="esdl:OutPort" id="16dd12cc-420a-45c2-ac16-793f65d04c27" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="69530303-6b02-44c6-9733-d4c1597fc783" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="79034a64-6878-42a1-8832-b3c84a0cb0ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="16dd12cc-420a-45c2-ac16-793f65d04c27" name="OutPh1" connectedTo="33c49f2e-0c54-42ae-bcd7-802842d52e18"/>
+          <port xsi:type="esdl:OutPort" id="69530303-6b02-44c6-9733-d4c1597fc783" name="OutPh2" connectedTo="68d1507d-d47e-4aae-ad6d-591bb7ad8ed1"/>
+          <port xsi:type="esdl:OutPort" id="79034a64-6878-42a1-8832-b3c84a0cb0ab" name="OutPh3" connectedTo="2634d262-5399-4fd2-9553-f1b540bef0f0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="db3bcd78-a9cc-4b43-82aa-3163470dc5e4" name="PhasegridHome396_2_Ph1" originalIdInSource="3962">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="33c49f2e-0c54-42ae-bcd7-802842d52e18" name="In"/>
+          <port xsi:type="esdl:InPort" id="33c49f2e-0c54-42ae-bcd7-802842d52e18" name="In" connectedTo="16dd12cc-420a-45c2-ac16-793f65d04c27"/>
           <port xsi:type="esdl:OutPort" id="0801f238-0687-4fbd-b89e-5cb70b62b907" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f11ba4e5-4876-4748-b970-313880303cfe" name="PhasegridHome396_2_Ph2" originalIdInSource="3962">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="68d1507d-d47e-4aae-ad6d-591bb7ad8ed1" name="In"/>
+          <port xsi:type="esdl:InPort" id="68d1507d-d47e-4aae-ad6d-591bb7ad8ed1" name="In" connectedTo="69530303-6b02-44c6-9733-d4c1597fc783"/>
           <port xsi:type="esdl:OutPort" id="d4136e5f-9ba9-4a24-9298-2210d2d0688a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="65eca438-44ef-4655-a874-790967ac5a61" name="PhasegridHome396_2_Ph3" originalIdInSource="3962">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2634d262-5399-4fd2-9553-f1b540bef0f0" name="In"/>
+          <port xsi:type="esdl:InPort" id="2634d262-5399-4fd2-9553-f1b540bef0f0" name="In" connectedTo="79034a64-6878-42a1-8832-b3c84a0cb0ab"/>
           <port xsi:type="esdl:OutPort" id="2161796c-1c9e-4e3b-8c12-49df40ffadf9" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="37.86" height="9.0" windowArea="18.17" doorArea="4.55" slantedRoofArea="58.4"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="6ebd3b58-cfd2-48ec-8bfe-ec4e9b1a0e21" name="CableHome396_2" originalIdInSource="3962" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="144822c9-51d6-41f2-8dc0-468600d6da43" name="In" connectedTo="c1c9a98a-f08b-40bf-ae12-7f3996570d6a"/>
@@ -9864,30 +10038,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.00098020870601" lon="4.073637012918354"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d6e2773e-00a1-4193-9de8-186cea0fa97e" name="Home398_1" originalIdInSource="3981" assetType="maisonnette_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="d6e2773e-00a1-4193-9de8-186cea0fa97e" name="Home398_1" originalIdInSource="3981" assetType="maisonnette_before_1964" energyLabel="LABEL_D" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.002783954257666" lon="4.074166739491368"/>
         <asset xsi:type="esdl:EConnection" id="afa35ba2-233f-4710-9716-f5bcdf60af25" name="ConnectionHome398_1" originalIdInSource="3981" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="3e1290db-000c-4f49-9169-56ebb25e9e5b" name="In" connectedTo="492493c1-c36f-4573-85a8-78bea1bd5df8"/>
-          <port xsi:type="esdl:OutPort" id="a88b01bd-0648-4c8c-b57d-fcf31a686b89" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c543974b-701d-4bad-9e6c-b39b602de0c4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f1d74fcd-887d-4608-ba2f-494016f65936" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a88b01bd-0648-4c8c-b57d-fcf31a686b89" name="OutPh1" connectedTo="1078443b-0468-4b0d-afc8-778ed769e894"/>
+          <port xsi:type="esdl:OutPort" id="c543974b-701d-4bad-9e6c-b39b602de0c4" name="OutPh2" connectedTo="f718d440-1828-467e-a631-99a1436e5832"/>
+          <port xsi:type="esdl:OutPort" id="f1d74fcd-887d-4608-ba2f-494016f65936" name="OutPh3" connectedTo="fa4b181b-3481-429e-b81a-cf60db80336f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6319c617-c858-4419-97b1-eead559eaa48" name="PhasegridHome398_1_Ph1" originalIdInSource="3981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1078443b-0468-4b0d-afc8-778ed769e894" name="In"/>
+          <port xsi:type="esdl:InPort" id="1078443b-0468-4b0d-afc8-778ed769e894" name="In" connectedTo="a88b01bd-0648-4c8c-b57d-fcf31a686b89"/>
           <port xsi:type="esdl:OutPort" id="439ed9c4-4db2-4242-9f04-566cb121c2c9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e98218f5-af68-46fe-bda5-de010e02aae4" name="PhasegridHome398_1_Ph2" originalIdInSource="3981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f718d440-1828-467e-a631-99a1436e5832" name="In"/>
+          <port xsi:type="esdl:InPort" id="f718d440-1828-467e-a631-99a1436e5832" name="In" connectedTo="c543974b-701d-4bad-9e6c-b39b602de0c4"/>
           <port xsi:type="esdl:OutPort" id="dfd85494-cda3-408c-81d5-4c62463f72aa" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="1673c45c-57d7-4334-b58e-450e4d2a3eca" name="PhasegridHome398_1_Ph3" originalIdInSource="3981">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fa4b181b-3481-429e-b81a-cf60db80336f" name="In"/>
+          <port xsi:type="esdl:InPort" id="fa4b181b-3481-429e-b81a-cf60db80336f" name="In" connectedTo="f1d74fcd-887d-4608-ba2f-494016f65936"/>
           <port xsi:type="esdl:OutPort" id="8194e9f4-6302-40f2-8ec4-9e90301e70b2" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="568b3f7a-9399-41cf-aa7c-9d346955691a" name="CableHome398_1" originalIdInSource="3981" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="7a76444d-d1b7-4959-83aa-3266ceedb093" name="In" connectedTo="d0c64fe1-3eae-4f02-a16d-350e825f9fea"/>
@@ -9897,30 +10072,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.002783954257666" lon="4.074166739491368"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="11b5d64e-090d-4f0a-843b-2daea0136c81" name="Home398_2" originalIdInSource="3982" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="11b5d64e-090d-4f0a-843b-2daea0136c81" name="Home398_2" originalIdInSource="3982" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.002960429340554" lon="4.073870278457093"/>
         <asset xsi:type="esdl:EConnection" id="efd51c06-5e3f-40a2-a363-609952483567" name="ConnectionHome398_2" originalIdInSource="3982" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="4cfe1e34-492d-4bae-bdf8-ce6e513975c0" name="In" connectedTo="51e8eff3-fea5-44a4-8207-13b7fa80e6a7"/>
-          <port xsi:type="esdl:OutPort" id="82e7f639-3e35-40f6-9376-66dc269122b7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="89683d94-42df-4c64-a943-8c281708ca9e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="986a7485-4a36-48ce-ac22-c7a4c7be9848" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="82e7f639-3e35-40f6-9376-66dc269122b7" name="OutPh1" connectedTo="dbe0742b-91d9-4867-b213-e9748e7e0372"/>
+          <port xsi:type="esdl:OutPort" id="89683d94-42df-4c64-a943-8c281708ca9e" name="OutPh2" connectedTo="56b7ee0f-5053-49ec-92f3-c0c4bc3564db"/>
+          <port xsi:type="esdl:OutPort" id="986a7485-4a36-48ce-ac22-c7a4c7be9848" name="OutPh3" connectedTo="42a92e64-66f5-49f2-8bd3-6d43ba659f93"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c20ed0dc-f40f-4a7b-8188-6c8d71f1bb30" name="PhasegridHome398_2_Ph1" originalIdInSource="3982">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="dbe0742b-91d9-4867-b213-e9748e7e0372" name="In"/>
+          <port xsi:type="esdl:InPort" id="dbe0742b-91d9-4867-b213-e9748e7e0372" name="In" connectedTo="82e7f639-3e35-40f6-9376-66dc269122b7"/>
           <port xsi:type="esdl:OutPort" id="e3b67361-e99d-41c6-bec0-f6f608fecd47" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e0541768-e2fc-4eca-a235-a331eb99d008" name="PhasegridHome398_2_Ph2" originalIdInSource="3982">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="56b7ee0f-5053-49ec-92f3-c0c4bc3564db" name="In"/>
+          <port xsi:type="esdl:InPort" id="56b7ee0f-5053-49ec-92f3-c0c4bc3564db" name="In" connectedTo="89683d94-42df-4c64-a943-8c281708ca9e"/>
           <port xsi:type="esdl:OutPort" id="e7034d5c-e23f-4a4b-8e3c-b35bda32fad7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6f23be6f-a220-45ba-8f35-e1c4e8f9f7ae" name="PhasegridHome398_2_Ph3" originalIdInSource="3982">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="42a92e64-66f5-49f2-8bd3-6d43ba659f93" name="In"/>
+          <port xsi:type="esdl:InPort" id="42a92e64-66f5-49f2-8bd3-6d43ba659f93" name="In" connectedTo="986a7485-4a36-48ce-ac22-c7a4c7be9848"/>
           <port xsi:type="esdl:OutPort" id="a9da1de7-e816-42c7-98b0-9bca4d4ccec6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d22e7511-3bd7-4066-8c94-87f3e9a462af" name="CableHome398_2" originalIdInSource="3982" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="cf4d7ba4-756c-41bd-96a6-d1f443ad5fc5" name="In" connectedTo="d0c64fe1-3eae-4f02-a16d-350e825f9fea"/>
@@ -9930,30 +10106,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.002960429340554" lon="4.073870278457093"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6d8a332f-5337-4dfa-9f97-120c42437f81" name="Home409_1" originalIdInSource="4091" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6d8a332f-5337-4dfa-9f97-120c42437f81" name="Home409_1" originalIdInSource="4091" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.990503814023235" lon="4.037542423045395"/>
         <asset xsi:type="esdl:EConnection" id="2ff7e6ab-8dc0-4638-81d7-4ffeeac2ec42" name="ConnectionHome409_1" originalIdInSource="4091" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1ee04fe3-f554-41f2-a296-0253c0f49b90" name="In" connectedTo="f52f97d1-9f91-4e02-9115-8a84541bdd99"/>
-          <port xsi:type="esdl:OutPort" id="d4ba3352-3194-4b8d-b3c8-22ffe3603b75" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="bae8d2bd-b0fa-4a77-8706-5a687febb91a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d747db2d-7dbc-4e87-b8e7-9f84f847b45b" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="d4ba3352-3194-4b8d-b3c8-22ffe3603b75" name="OutPh1" connectedTo="a0ced54d-ca2c-4e9c-9908-609641759a55"/>
+          <port xsi:type="esdl:OutPort" id="bae8d2bd-b0fa-4a77-8706-5a687febb91a" name="OutPh2" connectedTo="a7c17a1d-e78d-4ab4-8062-6d184b6d04d7"/>
+          <port xsi:type="esdl:OutPort" id="d747db2d-7dbc-4e87-b8e7-9f84f847b45b" name="OutPh3" connectedTo="b450b115-7c39-4fb9-b51c-174c631687f0"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5a04d1bd-543e-45d5-8947-5fd07768c5e0" name="PhasegridHome409_1_Ph1" originalIdInSource="4091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a0ced54d-ca2c-4e9c-9908-609641759a55" name="In"/>
+          <port xsi:type="esdl:InPort" id="a0ced54d-ca2c-4e9c-9908-609641759a55" name="In" connectedTo="d4ba3352-3194-4b8d-b3c8-22ffe3603b75"/>
           <port xsi:type="esdl:OutPort" id="41bb2829-0959-482d-88d4-4ea3f37ea9ac" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3b1a9a32-1b42-480b-a766-fe33f866b942" name="PhasegridHome409_1_Ph2" originalIdInSource="4091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a7c17a1d-e78d-4ab4-8062-6d184b6d04d7" name="In"/>
+          <port xsi:type="esdl:InPort" id="a7c17a1d-e78d-4ab4-8062-6d184b6d04d7" name="In" connectedTo="bae8d2bd-b0fa-4a77-8706-5a687febb91a"/>
           <port xsi:type="esdl:OutPort" id="ff3c87f0-997d-4a40-adb3-ce65aaaeadee" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5e91bac4-5ca4-4d69-b91a-439e64567a21" name="PhasegridHome409_1_Ph3" originalIdInSource="4091">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b450b115-7c39-4fb9-b51c-174c631687f0" name="In"/>
+          <port xsi:type="esdl:InPort" id="b450b115-7c39-4fb9-b51c-174c631687f0" name="In" connectedTo="d747db2d-7dbc-4e87-b8e7-9f84f847b45b"/>
           <port xsi:type="esdl:OutPort" id="663d71f8-d5da-44e1-a95f-3c1e9fbbf080" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fd66e69e-648d-487a-84a6-3b376ef3a9c6" name="CableHome409_1" originalIdInSource="4091" assetType="4x10Cu_re_as10__YCWY_mb" length="1.0">
         <port xsi:type="esdl:InPort" id="9dcc5268-3135-4084-ab68-133e0b13bcdb" name="In" connectedTo="4c57658b-aa57-4f0f-abbf-7c8639ef693e"/>
@@ -9963,18 +10140,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.990503814023235" lon="4.037542423045395"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="385a9b3f-3797-479c-89ef-e462bb41a94c" name="Home409_2" originalIdInSource="4092" assetType="maisonnette_before_1964" energyLabel="LABEL_G">
+      <asset xsi:type="esdl:Building" id="385a9b3f-3797-479c-89ef-e462bb41a94c" name="Home409_2" originalIdInSource="4092" assetType="maisonnette_before_1964" energyLabel="LABEL_G" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99068019691516" lon="4.037245900367235"/>
         <asset xsi:type="esdl:EConnection" id="514c8401-0895-4476-a2fe-03ca9c8a8467" name="ConnectionHome409_2" originalIdInSource="4092" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="6eac728e-daef-4708-92bb-c3540ca3a80e" name="In" connectedTo="01c54a14-348c-48fd-92ec-db60b88c6318"/>
-          <port xsi:type="esdl:OutPort" id="12ada8c6-272e-440e-a945-86d0230dc6c8" name="OutPh1"/>
+          <port xsi:type="esdl:OutPort" id="12ada8c6-272e-440e-a945-86d0230dc6c8" name="OutPh1" connectedTo="31aa2977-2a85-495d-8032-fc8ddcd9982f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="65488fe3-6d3e-44c5-a6da-a02282ef6d5c" name="PhasegridHome409_2_Ph1" originalIdInSource="4092">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="31aa2977-2a85-495d-8032-fc8ddcd9982f" name="In"/>
+          <port xsi:type="esdl:InPort" id="31aa2977-2a85-495d-8032-fc8ddcd9982f" name="In" connectedTo="12ada8c6-272e-440e-a945-86d0230dc6c8"/>
           <port xsi:type="esdl:OutPort" id="8058d1f8-f18c-4901-9427-e627dded1bc8" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="ab5dd022-611d-4c34-914d-e0f82a056844" name="CableHome409_2" originalIdInSource="4092" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="43635f9b-496d-484b-a082-993b0bf14e8e" name="In" connectedTo="4c57658b-aa57-4f0f-abbf-7c8639ef693e"/>
@@ -9984,30 +10162,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99068019691516" lon="4.037245900367235"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="916de320-5192-42cc-81af-466bb9b24a7a" name="Home413_1" originalIdInSource="4131" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="916de320-5192-42cc-81af-466bb9b24a7a" name="Home413_1" originalIdInSource="4131" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_B" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99220849216541" lon="4.109714174051653"/>
         <asset xsi:type="esdl:EConnection" id="01535425-f9d7-4777-b522-34029b643ee2" name="ConnectionHome413_1" originalIdInSource="4131" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="461ddb69-52e9-4257-9009-60bf931ded61" name="In" connectedTo="5f4fbe4e-1b0e-4234-b578-cee4ba80f6f5"/>
-          <port xsi:type="esdl:OutPort" id="a657b298-2b19-4e55-a873-e1a886311573" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="7bf6ef41-35f1-4813-94ff-28275a78259e" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="63a85515-e414-4200-bf16-4ac9b2ccd4bb" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a657b298-2b19-4e55-a873-e1a886311573" name="OutPh1" connectedTo="df2ea96d-0a86-40a3-abfc-08ed0504f15e"/>
+          <port xsi:type="esdl:OutPort" id="7bf6ef41-35f1-4813-94ff-28275a78259e" name="OutPh2" connectedTo="fbadc124-59fb-4e21-872c-201b50c0d309"/>
+          <port xsi:type="esdl:OutPort" id="63a85515-e414-4200-bf16-4ac9b2ccd4bb" name="OutPh3" connectedTo="a45cb173-e021-4772-b199-8a6fd6f9b8a3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cbf326a3-7f34-47f4-8408-70537c11eb88" name="PhasegridHome413_1_Ph1" originalIdInSource="4131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="df2ea96d-0a86-40a3-abfc-08ed0504f15e" name="In"/>
+          <port xsi:type="esdl:InPort" id="df2ea96d-0a86-40a3-abfc-08ed0504f15e" name="In" connectedTo="a657b298-2b19-4e55-a873-e1a886311573"/>
           <port xsi:type="esdl:OutPort" id="8b81ff4c-092f-47e9-92cb-509e3a786a7a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4df7537b-6c9d-46f7-9a94-02953627870e" name="PhasegridHome413_1_Ph2" originalIdInSource="4131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fbadc124-59fb-4e21-872c-201b50c0d309" name="In"/>
+          <port xsi:type="esdl:InPort" id="fbadc124-59fb-4e21-872c-201b50c0d309" name="In" connectedTo="7bf6ef41-35f1-4813-94ff-28275a78259e"/>
           <port xsi:type="esdl:OutPort" id="d6a31f9c-5d73-499c-9436-3d06823450de" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="dc28258c-b447-43de-ab92-158f29dea022" name="PhasegridHome413_1_Ph3" originalIdInSource="4131">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a45cb173-e021-4772-b199-8a6fd6f9b8a3" name="In"/>
+          <port xsi:type="esdl:InPort" id="a45cb173-e021-4772-b199-8a6fd6f9b8a3" name="In" connectedTo="63a85515-e414-4200-bf16-4ac9b2ccd4bb"/>
           <port xsi:type="esdl:OutPort" id="ccd8a8f4-ca47-4183-8258-e6d8acc5183f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="918f6a44-bb0d-4f7e-9d34-e8e5bdb7d34f" name="CableHome413_1" originalIdInSource="4131" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="0a7c2d58-d5ec-4665-8fd3-83cbefc4fdfd" name="In" connectedTo="0a79ce7c-987d-44f4-9728-ace8d3398fdf"/>
@@ -10017,30 +10196,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99220849216541" lon="4.109714174051653"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a24a74f7-305d-4445-a368-a2dd3e6095cb" name="Home413_2" originalIdInSource="4132" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="a24a74f7-305d-4445-a368-a2dd3e6095cb" name="Home413_2" originalIdInSource="4132" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992385057755996" lon="4.109417922468816"/>
         <asset xsi:type="esdl:EConnection" id="b407a92d-699a-44bd-ad55-d7b6aab9dfc6" name="ConnectionHome413_2" originalIdInSource="4132" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fedfc233-30bd-4426-a653-2acfedf976f3" name="In" connectedTo="a9b72d22-164a-48ce-bf14-0dcdaed2855d"/>
-          <port xsi:type="esdl:OutPort" id="cada6a16-a2cb-4d94-88d7-9ff67e519012" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e0a02bb3-933f-4141-bd29-79c569602f95" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="db7a52a3-0cc2-46a2-afbe-4c3f0d550160" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="cada6a16-a2cb-4d94-88d7-9ff67e519012" name="OutPh1" connectedTo="64b397f3-6883-4982-acaa-d7ca4a8acd0d"/>
+          <port xsi:type="esdl:OutPort" id="e0a02bb3-933f-4141-bd29-79c569602f95" name="OutPh2" connectedTo="4e8b0ffc-7ee3-480b-a178-5793f80c21c4"/>
+          <port xsi:type="esdl:OutPort" id="db7a52a3-0cc2-46a2-afbe-4c3f0d550160" name="OutPh3" connectedTo="bf8c8577-f354-440a-adc5-f60fb8ef681f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ce9413e8-e0a8-482a-bfe5-8841a2c7f574" name="PhasegridHome413_2_Ph1" originalIdInSource="4132">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="64b397f3-6883-4982-acaa-d7ca4a8acd0d" name="In"/>
+          <port xsi:type="esdl:InPort" id="64b397f3-6883-4982-acaa-d7ca4a8acd0d" name="In" connectedTo="cada6a16-a2cb-4d94-88d7-9ff67e519012"/>
           <port xsi:type="esdl:OutPort" id="8fe78bfe-91d6-4050-8631-32fc94a2dce5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fccccca5-6bfa-45cc-83ff-71c011cce9aa" name="PhasegridHome413_2_Ph2" originalIdInSource="4132">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4e8b0ffc-7ee3-480b-a178-5793f80c21c4" name="In"/>
+          <port xsi:type="esdl:InPort" id="4e8b0ffc-7ee3-480b-a178-5793f80c21c4" name="In" connectedTo="e0a02bb3-933f-4141-bd29-79c569602f95"/>
           <port xsi:type="esdl:OutPort" id="70160e11-1ede-4c5d-9268-d1137264de14" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="81c96221-d50e-46b8-b354-ac9d49572ac6" name="PhasegridHome413_2_Ph3" originalIdInSource="4132">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bf8c8577-f354-440a-adc5-f60fb8ef681f" name="In"/>
+          <port xsi:type="esdl:InPort" id="bf8c8577-f354-440a-adc5-f60fb8ef681f" name="In" connectedTo="db7a52a3-0cc2-46a2-afbe-4c3f0d550160"/>
           <port xsi:type="esdl:OutPort" id="3a4db0f1-0936-476d-8b07-ff68368fe1a6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="24809a93-7310-40bb-895b-b8c58c29b52e" name="CableHome413_2" originalIdInSource="4132" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e3dd210c-7103-410c-954e-6591a4ed2a52" name="In" connectedTo="0a79ce7c-987d-44f4-9728-ace8d3398fdf"/>
@@ -10050,30 +10230,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992385057755996" lon="4.109417922468816"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="74dfaf1b-2462-4b5a-9d6d-03f2079f42f1" name="Home415_1" originalIdInSource="4151" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="74dfaf1b-2462-4b5a-9d6d-03f2079f42f1" name="Home415_1" originalIdInSource="4151" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99235974121354" lon="4.10708887375933"/>
         <asset xsi:type="esdl:EConnection" id="b027fb48-df7c-45aa-b76d-64f8ee702479" name="ConnectionHome415_1" originalIdInSource="4151" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7d6ddc64-9631-4e24-9852-536766a80da4" name="In" connectedTo="78776665-8c2e-4998-8e04-9a5020419c51"/>
-          <port xsi:type="esdl:OutPort" id="c2847959-c674-4fbe-9337-9ddb396b47f7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ce6ce236-12e8-40ad-bb97-58d8fc9721ff" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="a683196c-bd32-476b-b96d-79a8e604d882" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c2847959-c674-4fbe-9337-9ddb396b47f7" name="OutPh1" connectedTo="ac51a58a-c659-4034-85f8-5a4a61090234"/>
+          <port xsi:type="esdl:OutPort" id="ce6ce236-12e8-40ad-bb97-58d8fc9721ff" name="OutPh2" connectedTo="df8eb71b-ead9-44cf-b72d-8cfa2800b862"/>
+          <port xsi:type="esdl:OutPort" id="a683196c-bd32-476b-b96d-79a8e604d882" name="OutPh3" connectedTo="efa73f42-3aca-47b0-ad2f-8641eb9348fd"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="405a2b5e-279e-4ae1-9a04-db8dc4d921af" name="PhasegridHome415_1_Ph1" originalIdInSource="4151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ac51a58a-c659-4034-85f8-5a4a61090234" name="In"/>
+          <port xsi:type="esdl:InPort" id="ac51a58a-c659-4034-85f8-5a4a61090234" name="In" connectedTo="c2847959-c674-4fbe-9337-9ddb396b47f7"/>
           <port xsi:type="esdl:OutPort" id="c6a2092e-a9c8-43ce-99cd-e7f915fcb6c3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c8c11176-632b-4c68-a48a-3228331f30ab" name="PhasegridHome415_1_Ph2" originalIdInSource="4151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="df8eb71b-ead9-44cf-b72d-8cfa2800b862" name="In"/>
+          <port xsi:type="esdl:InPort" id="df8eb71b-ead9-44cf-b72d-8cfa2800b862" name="In" connectedTo="ce6ce236-12e8-40ad-bb97-58d8fc9721ff"/>
           <port xsi:type="esdl:OutPort" id="132b2f65-0baf-4b5b-8637-c2f1dda53e06" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5c91b371-e8bb-4ba4-9637-04d6b55905ef" name="PhasegridHome415_1_Ph3" originalIdInSource="4151">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="efa73f42-3aca-47b0-ad2f-8641eb9348fd" name="In"/>
+          <port xsi:type="esdl:InPort" id="efa73f42-3aca-47b0-ad2f-8641eb9348fd" name="In" connectedTo="a683196c-bd32-476b-b96d-79a8e604d882"/>
           <port xsi:type="esdl:OutPort" id="ff501183-ee0a-42ec-a44f-72dd49db6c41" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e794a80f-1414-4706-9990-d46848a2fb9b" name="CableHome415_1" originalIdInSource="4151" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="8d8fa913-71b8-4fb2-ba0b-c106f55175e3" name="In" connectedTo="548c183e-c007-41d8-bd41-9cb47c990b8c"/>
@@ -10083,30 +10264,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99235974121354" lon="4.10708887375933"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ed3e13f1-9f01-4b07-88a3-a831da52cb33" name="Home415_2" originalIdInSource="4152" assetType="maisonnette_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="ed3e13f1-9f01-4b07-88a3-a831da52cb33" name="Home415_2" originalIdInSource="4152" assetType="maisonnette_before_1964" energyLabel="LABEL_E" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99253313160637" lon="4.106501478897132"/>
         <asset xsi:type="esdl:EConnection" id="3e3bd0e1-cd24-421f-b950-9ed58e9a93af" name="ConnectionHome415_2" originalIdInSource="4152" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f42bf162-f587-427d-8d87-6a9a659331d6" name="In" connectedTo="bf8a4632-128f-4434-9abe-30ba47193324"/>
-          <port xsi:type="esdl:OutPort" id="7be1ad73-84fa-4319-ac9a-f92d7c922068" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="4867c919-88b1-48bd-8b23-56b6e2874cea" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="484cc928-1009-4310-be0d-4505863ea3b7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7be1ad73-84fa-4319-ac9a-f92d7c922068" name="OutPh1" connectedTo="f7ebc2ff-654c-427f-98e2-8ef5df346b83"/>
+          <port xsi:type="esdl:OutPort" id="4867c919-88b1-48bd-8b23-56b6e2874cea" name="OutPh2" connectedTo="dfacc3be-f4ff-4b32-8665-0c0e8a7de8d0"/>
+          <port xsi:type="esdl:OutPort" id="484cc928-1009-4310-be0d-4505863ea3b7" name="OutPh3" connectedTo="ffc64fb9-2ac4-4f76-9419-85f394b3edb9"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4baf5748-1782-4dd6-a0dc-61d037968fb1" name="PhasegridHome415_2_Ph1" originalIdInSource="4152">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f7ebc2ff-654c-427f-98e2-8ef5df346b83" name="In"/>
+          <port xsi:type="esdl:InPort" id="f7ebc2ff-654c-427f-98e2-8ef5df346b83" name="In" connectedTo="7be1ad73-84fa-4319-ac9a-f92d7c922068"/>
           <port xsi:type="esdl:OutPort" id="004a24bc-aa1b-45df-8093-a0b2eae65ae6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a1279e63-1ea4-4b4c-b26e-f2c3051283af" name="PhasegridHome415_2_Ph2" originalIdInSource="4152">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="dfacc3be-f4ff-4b32-8665-0c0e8a7de8d0" name="In"/>
+          <port xsi:type="esdl:InPort" id="dfacc3be-f4ff-4b32-8665-0c0e8a7de8d0" name="In" connectedTo="4867c919-88b1-48bd-8b23-56b6e2874cea"/>
           <port xsi:type="esdl:OutPort" id="f392aaf2-14c0-4698-bfb6-cf795f124cc2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8685395b-fa01-463d-998d-91e7b3204346" name="PhasegridHome415_2_Ph3" originalIdInSource="4152">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ffc64fb9-2ac4-4f76-9419-85f394b3edb9" name="In"/>
+          <port xsi:type="esdl:InPort" id="ffc64fb9-2ac4-4f76-9419-85f394b3edb9" name="In" connectedTo="484cc928-1009-4310-be0d-4505863ea3b7"/>
           <port xsi:type="esdl:OutPort" id="eaca6eba-9350-4480-b3b1-5c9b9354c8f0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="bd775b4b-d59a-476a-b960-b9fe43f4e78b" name="CableHome415_2" originalIdInSource="4152" assetType="4x10Cu_as10Cu__YMvK_asmb" length="3.0">
         <port xsi:type="esdl:InPort" id="a32497ab-4f78-4d21-91eb-08bac4721bdd" name="In" connectedTo="548c183e-c007-41d8-bd41-9cb47c990b8c"/>
@@ -10116,30 +10298,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99253313160637" lon="4.106501478897132"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="60e1eacd-f2b8-41e1-b980-5708efb2125f" name="Home417_1" originalIdInSource="4171" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="60e1eacd-f2b8-41e1-b980-5708efb2125f" name="Home417_1" originalIdInSource="4171" assetType="2 onder 1 kap woning_1992_2005" energyLabel="LABEL_C" floorArea="143.9" buildingYear="1998" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992504582282834" lon="4.103881293081074"/>
         <asset xsi:type="esdl:EConnection" id="0efeeae2-9280-40c9-baee-162edcbe443e" name="ConnectionHome417_1" originalIdInSource="4171" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="aed6a88c-1c52-4ebd-9c64-377b2621a642" name="In" connectedTo="ed6066ca-cdb0-4614-8a3d-869449703e8d"/>
-          <port xsi:type="esdl:OutPort" id="3954ff23-ef9e-4bc2-97ef-c6ec9c3a09c4" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="a29c0fd4-d5d5-4535-9173-5bdd79ec48be" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0b032c35-4232-440b-be20-d40e4af05080" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="3954ff23-ef9e-4bc2-97ef-c6ec9c3a09c4" name="OutPh1" connectedTo="6de5790e-4b8f-4805-8494-678a57b36b2b"/>
+          <port xsi:type="esdl:OutPort" id="a29c0fd4-d5d5-4535-9173-5bdd79ec48be" name="OutPh2" connectedTo="ea032370-e4a4-490a-844e-bcad7201b6b9"/>
+          <port xsi:type="esdl:OutPort" id="0b032c35-4232-440b-be20-d40e4af05080" name="OutPh3" connectedTo="577aaf89-e333-448b-8f5c-271060100c3e"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3b0a808d-3ec8-4f9c-bdb8-47fd83044a51" name="PhasegridHome417_1_Ph1" originalIdInSource="4171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6de5790e-4b8f-4805-8494-678a57b36b2b" name="In"/>
+          <port xsi:type="esdl:InPort" id="6de5790e-4b8f-4805-8494-678a57b36b2b" name="In" connectedTo="3954ff23-ef9e-4bc2-97ef-c6ec9c3a09c4"/>
           <port xsi:type="esdl:OutPort" id="cc6b1d12-b187-452e-bd2b-02eb07858331" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="93d87e3f-f23d-41a8-980f-3e044004e956" name="PhasegridHome417_1_Ph2" originalIdInSource="4171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ea032370-e4a4-490a-844e-bcad7201b6b9" name="In"/>
+          <port xsi:type="esdl:InPort" id="ea032370-e4a4-490a-844e-bcad7201b6b9" name="In" connectedTo="a29c0fd4-d5d5-4535-9173-5bdd79ec48be"/>
           <port xsi:type="esdl:OutPort" id="29e92683-2b9e-422f-883f-fe3390e7e457" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c8b8a783-837c-41d0-8f42-0bc44f3aef4a" name="PhasegridHome417_1_Ph3" originalIdInSource="4171">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="577aaf89-e333-448b-8f5c-271060100c3e" name="In"/>
+          <port xsi:type="esdl:InPort" id="577aaf89-e333-448b-8f5c-271060100c3e" name="In" connectedTo="0b032c35-4232-440b-be20-d40e4af05080"/>
           <port xsi:type="esdl:OutPort" id="cf538f8c-ea12-4960-8410-a0396e8aaabb" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.3" height="9.0" windowArea="27.22" doorArea="6.93" flatRoofArea="19.02" slantedRoofArea="65.12"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="63343568-a3a7-42b6-bde6-66239ba21e9d" name="CableHome417_1" originalIdInSource="4171" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="a901e4ea-cddf-4a35-94f1-9e0eba223e97" name="In" connectedTo="7673ab38-f475-4d70-a959-f63aea349dc0"/>
@@ -10149,30 +10332,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992504582282834" lon="4.103881293081074"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="968a1a04-9fb7-4f22-b93c-a50d50467993" name="Home417_2" originalIdInSource="4172" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="968a1a04-9fb7-4f22-b93c-a50d50467993" name="Home417_2" originalIdInSource="4172" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992681133095466" lon="4.103585016691568"/>
         <asset xsi:type="esdl:EConnection" id="3eeed6bb-136c-4472-9610-c4f1d7ebb93e" name="ConnectionHome417_2" originalIdInSource="4172" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="01fd12ab-794b-4f88-aa6f-3f2431e3d57e" name="In" connectedTo="c99eb9be-3ef8-4202-af3f-bf16f5dfca45"/>
-          <port xsi:type="esdl:OutPort" id="b1568b35-c75d-4739-9c25-9536dce258af" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="18a7903c-b91f-43df-95e4-b635d72c856a" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d3f98796-1ded-4c2f-9082-702ebae53486" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="b1568b35-c75d-4739-9c25-9536dce258af" name="OutPh1" connectedTo="d312e6ea-a62f-4f7e-b763-2ab5d7cf2a00"/>
+          <port xsi:type="esdl:OutPort" id="18a7903c-b91f-43df-95e4-b635d72c856a" name="OutPh2" connectedTo="922ba83d-d757-4b54-b6db-7434b6fed6db"/>
+          <port xsi:type="esdl:OutPort" id="d3f98796-1ded-4c2f-9082-702ebae53486" name="OutPh3" connectedTo="8d9ede2d-eefc-44c7-9f50-7ebebec8f7e2"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c7add9a8-34a0-495d-af13-24de2f2e8deb" name="PhasegridHome417_2_Ph1" originalIdInSource="4172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d312e6ea-a62f-4f7e-b763-2ab5d7cf2a00" name="In"/>
+          <port xsi:type="esdl:InPort" id="d312e6ea-a62f-4f7e-b763-2ab5d7cf2a00" name="In" connectedTo="b1568b35-c75d-4739-9c25-9536dce258af"/>
           <port xsi:type="esdl:OutPort" id="43f7f797-77d0-4e1e-8387-3bf5aa7c946d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b5311b6e-f11d-4577-8daf-34e67f169d97" name="PhasegridHome417_2_Ph2" originalIdInSource="4172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="922ba83d-d757-4b54-b6db-7434b6fed6db" name="In"/>
+          <port xsi:type="esdl:InPort" id="922ba83d-d757-4b54-b6db-7434b6fed6db" name="In" connectedTo="18a7903c-b91f-43df-95e4-b635d72c856a"/>
           <port xsi:type="esdl:OutPort" id="1b21a817-f920-43ba-8795-b051d6729f3f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="44a5461d-29ee-4581-8701-88b42dd395cd" name="PhasegridHome417_2_Ph3" originalIdInSource="4172">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8d9ede2d-eefc-44c7-9f50-7ebebec8f7e2" name="In"/>
+          <port xsi:type="esdl:InPort" id="8d9ede2d-eefc-44c7-9f50-7ebebec8f7e2" name="In" connectedTo="d3f98796-1ded-4c2f-9082-702ebae53486"/>
           <port xsi:type="esdl:OutPort" id="0925a9c0-e1ac-4fd2-b859-c1614332431f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1cdc8a5f-6f9d-4214-836b-cfb2c7cf15d2" name="CableHome417_2" originalIdInSource="4172" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="f3859a36-e42e-4654-a479-9b690be7abd6" name="In" connectedTo="7673ab38-f475-4d70-a959-f63aea349dc0"/>
@@ -10182,30 +10366,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992681133095466" lon="4.103585016691568"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a90a5bb9-bdf3-4e1f-8c67-ef4030d16040" name="Home419_1" originalIdInSource="4191" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="a90a5bb9-bdf3-4e1f-8c67-ef4030d16040" name="Home419_1" originalIdInSource="4191" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99266206338046" lon="4.1018382215718585"/>
         <asset xsi:type="esdl:EConnection" id="cd80aa3a-f8b5-4081-8e9c-b1a04686ad60" name="ConnectionHome419_1" originalIdInSource="4191" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e145d321-46c5-4bfe-8a04-82c0d8d9f86c" name="In" connectedTo="de321649-d2eb-4053-96d5-7f47157a7c9b"/>
-          <port xsi:type="esdl:OutPort" id="659184c4-465f-4739-b4d4-acbf77f4da2f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="199efe18-ec17-44f4-a7c9-441e6ab12869" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="65da09ff-703f-4857-a606-7972561249dd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="659184c4-465f-4739-b4d4-acbf77f4da2f" name="OutPh1" connectedTo="d0d195bb-446d-4e78-8831-8ad7ef599e2b"/>
+          <port xsi:type="esdl:OutPort" id="199efe18-ec17-44f4-a7c9-441e6ab12869" name="OutPh2" connectedTo="e9813db3-ee2b-4212-9f37-298162ee901a"/>
+          <port xsi:type="esdl:OutPort" id="65da09ff-703f-4857-a606-7972561249dd" name="OutPh3" connectedTo="ce21ccc7-4b5e-40fc-bbaf-d12216400929"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a8bd9c43-07f2-499c-8cee-7ee0ac70cc19" name="PhasegridHome419_1_Ph1" originalIdInSource="4191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d0d195bb-446d-4e78-8831-8ad7ef599e2b" name="In"/>
+          <port xsi:type="esdl:InPort" id="d0d195bb-446d-4e78-8831-8ad7ef599e2b" name="In" connectedTo="659184c4-465f-4739-b4d4-acbf77f4da2f"/>
           <port xsi:type="esdl:OutPort" id="5bb8ec82-472e-4e4d-9b8e-6cd672f94973" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="697c1d80-7253-423e-9ace-1c060cc9c39d" name="PhasegridHome419_1_Ph2" originalIdInSource="4191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e9813db3-ee2b-4212-9f37-298162ee901a" name="In"/>
+          <port xsi:type="esdl:InPort" id="e9813db3-ee2b-4212-9f37-298162ee901a" name="In" connectedTo="199efe18-ec17-44f4-a7c9-441e6ab12869"/>
           <port xsi:type="esdl:OutPort" id="d17915cf-0b41-42da-8626-56d9300907a4" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8dcebc3d-1563-4eab-b1f1-d0289edfb4df" name="PhasegridHome419_1_Ph3" originalIdInSource="4191">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ce21ccc7-4b5e-40fc-bbaf-d12216400929" name="In"/>
+          <port xsi:type="esdl:InPort" id="ce21ccc7-4b5e-40fc-bbaf-d12216400929" name="In" connectedTo="65da09ff-703f-4857-a606-7972561249dd"/>
           <port xsi:type="esdl:OutPort" id="d419f77a-440b-4e30-9376-366a7bdfca46" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="c89a4e63-10de-4c6e-9715-f437d3785a52" name="CableHome419_1" originalIdInSource="4191" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="808b5320-21b5-4713-8112-9af5ef3c7b3d" name="In" connectedTo="82117a47-2941-4cea-a7cb-21b86b9b1084"/>
@@ -10215,30 +10400,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99266206338046" lon="4.1018382215718585"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="7c03e52a-dbb0-4046-a2fb-0909c3bae8b4" name="Home419_2" originalIdInSource="4192" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="7c03e52a-dbb0-4046-a2fb-0909c3bae8b4" name="Home419_2" originalIdInSource="4192" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_D" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99284496994028" lon="4.10212420322399"/>
         <asset xsi:type="esdl:EConnection" id="dc96659f-bc1a-4424-938d-d3b480ed2232" name="ConnectionHome419_2" originalIdInSource="4192" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0bdcbbbc-bfb1-48f0-bf1f-7339f7ac41f9" name="In" connectedTo="fa212f5d-fa97-4a90-972a-41a92a4df91e"/>
-          <port xsi:type="esdl:OutPort" id="54cb0e96-e667-4608-bc20-8164d5810a39" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="0e69ba62-3eca-437b-8f17-e4c5b42760f6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f2768f28-69ce-4e47-b402-29c38037e510" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="54cb0e96-e667-4608-bc20-8164d5810a39" name="OutPh1" connectedTo="fad6a62c-5d9d-48b9-b52c-49f1f1e0abce"/>
+          <port xsi:type="esdl:OutPort" id="0e69ba62-3eca-437b-8f17-e4c5b42760f6" name="OutPh2" connectedTo="af36cfff-4d35-4339-b293-65f24d6b3212"/>
+          <port xsi:type="esdl:OutPort" id="f2768f28-69ce-4e47-b402-29c38037e510" name="OutPh3" connectedTo="3e330cd2-27b3-4f8a-85e8-79af50db2d3f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b812a26b-c17d-437f-9ea9-3c1415c94ac3" name="PhasegridHome419_2_Ph1" originalIdInSource="4192">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fad6a62c-5d9d-48b9-b52c-49f1f1e0abce" name="In"/>
+          <port xsi:type="esdl:InPort" id="fad6a62c-5d9d-48b9-b52c-49f1f1e0abce" name="In" connectedTo="54cb0e96-e667-4608-bc20-8164d5810a39"/>
           <port xsi:type="esdl:OutPort" id="31d06469-6d12-4491-8e47-eb8c6ee2760c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a0c292b9-58c0-4d57-a7cc-f19effea95e0" name="PhasegridHome419_2_Ph2" originalIdInSource="4192">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="af36cfff-4d35-4339-b293-65f24d6b3212" name="In"/>
+          <port xsi:type="esdl:InPort" id="af36cfff-4d35-4339-b293-65f24d6b3212" name="In" connectedTo="0e69ba62-3eca-437b-8f17-e4c5b42760f6"/>
           <port xsi:type="esdl:OutPort" id="ea96147d-4072-4541-9b84-865e246a0099" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4b902d08-03fa-4e61-add5-0131ac84d653" name="PhasegridHome419_2_Ph3" originalIdInSource="4192">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3e330cd2-27b3-4f8a-85e8-79af50db2d3f" name="In"/>
+          <port xsi:type="esdl:InPort" id="3e330cd2-27b3-4f8a-85e8-79af50db2d3f" name="In" connectedTo="f2768f28-69ce-4e47-b402-29c38037e510"/>
           <port xsi:type="esdl:OutPort" id="f82cbad9-eda8-4b97-9d10-6a0629abfed4" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="540db461-38ce-4050-a703-6f442414b801" name="CableHome419_2" originalIdInSource="4192" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="f7e3c16e-b253-4508-b0a0-3b38349d1f87" name="In" connectedTo="82117a47-2941-4cea-a7cb-21b86b9b1084"/>
@@ -10248,30 +10434,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99284496994028" lon="4.10212420322399"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="09c29ada-31c4-4426-9e69-634373fac575" name="Home420_1" originalIdInSource="4201" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="09c29ada-31c4-4426-9e69-634373fac575" name="Home420_1" originalIdInSource="4201" assetType="Rijwoning hoek_1992_2005" energyLabel="LABEL_B" floorArea="128.79" buildingYear="1998" surfaceArea="62" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99264933583181" lon="4.10067369244353"/>
         <asset xsi:type="esdl:EConnection" id="e5d13aca-3c7c-49fb-bc65-3258af6420eb" name="ConnectionHome420_1" originalIdInSource="4201" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="b50c633e-c33a-42d8-9792-9189eb998f9c" name="In" connectedTo="5cb224a2-a394-4557-887c-3beb4803a151"/>
-          <port xsi:type="esdl:OutPort" id="99bf450a-4709-485b-9753-ab6368a1ca3f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="470d0cde-f2ee-465c-aa75-b36db9e45d6c" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b0e77cbe-d5ae-4257-887a-1a603db31e3d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="99bf450a-4709-485b-9753-ab6368a1ca3f" name="OutPh1" connectedTo="832cef1f-598c-45af-b92d-137b9e0fee32"/>
+          <port xsi:type="esdl:OutPort" id="470d0cde-f2ee-465c-aa75-b36db9e45d6c" name="OutPh2" connectedTo="77e9b4d4-08ce-4cc2-bbcc-4f0edb23f8e7"/>
+          <port xsi:type="esdl:OutPort" id="b0e77cbe-d5ae-4257-887a-1a603db31e3d" name="OutPh3" connectedTo="30e4ad5c-ef21-407a-b5c1-4bf92045eb70"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a0e96d3f-5276-4fa2-bbfa-bad616443ddf" name="PhasegridHome420_1_Ph1" originalIdInSource="4201">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="832cef1f-598c-45af-b92d-137b9e0fee32" name="In"/>
+          <port xsi:type="esdl:InPort" id="832cef1f-598c-45af-b92d-137b9e0fee32" name="In" connectedTo="99bf450a-4709-485b-9753-ab6368a1ca3f"/>
           <port xsi:type="esdl:OutPort" id="fb64c01d-f4f4-4c5f-8077-7f75e6b291e5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4d76ef76-55cd-4cdb-8e9d-08ca01e54eeb" name="PhasegridHome420_1_Ph2" originalIdInSource="4201">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="77e9b4d4-08ce-4cc2-bbcc-4f0edb23f8e7" name="In"/>
+          <port xsi:type="esdl:InPort" id="77e9b4d4-08ce-4cc2-bbcc-4f0edb23f8e7" name="In" connectedTo="470d0cde-f2ee-465c-aa75-b36db9e45d6c"/>
           <port xsi:type="esdl:OutPort" id="81b1829c-72df-4a13-98e6-d9488e62c49f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4d0cf940-c464-4dd6-a94d-df66719faaba" name="PhasegridHome420_1_Ph3" originalIdInSource="4201">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="30e4ad5c-ef21-407a-b5c1-4bf92045eb70" name="In"/>
+          <port xsi:type="esdl:InPort" id="30e4ad5c-ef21-407a-b5c1-4bf92045eb70" name="In" connectedTo="b0e77cbe-d5ae-4257-887a-1a603db31e3d"/>
           <port xsi:type="esdl:OutPort" id="ef9d25cf-f7bd-4425-8a10-0af529dfa908" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="103.6" height="9.0" windowArea="23.39" doorArea="7.0" flatRoofArea="17.33" slantedRoofArea="58.82"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f719d534-3939-44ac-ac42-a0433055eb6f" name="CableHome420_1" originalIdInSource="4201" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="30af85ec-e535-49b8-82ca-096235ace90c" name="In" connectedTo="b68f642e-16e8-4233-94a7-1cf1b8d8c696"/>
@@ -10281,30 +10468,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99264933583181" lon="4.10067369244353"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6977e7f6-e288-4df1-83a1-0f7e3f6e5b65" name="Home420_2" originalIdInSource="4202" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6977e7f6-e288-4df1-83a1-0f7e3f6e5b65" name="Home420_2" originalIdInSource="4202" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99282587851799" lon="4.100377402533337"/>
         <asset xsi:type="esdl:EConnection" id="8b67f522-147f-46b8-a881-dc82e4777d16" name="ConnectionHome420_2" originalIdInSource="4202" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="4d3f1e33-6166-4340-af34-ec57e0ea611e" name="In" connectedTo="62dbdebb-fffb-4447-9847-b83dbeab26da"/>
-          <port xsi:type="esdl:OutPort" id="cba414ad-99e8-453c-bd6e-ca685126aa87" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="0249f79c-cc21-422e-b4e3-53f0fee7d911" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="aea5bac8-a106-4ccc-939b-e26a6fbd71f5" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="cba414ad-99e8-453c-bd6e-ca685126aa87" name="OutPh1" connectedTo="8681e3d5-8c0c-4553-9b62-13aaf218c003"/>
+          <port xsi:type="esdl:OutPort" id="0249f79c-cc21-422e-b4e3-53f0fee7d911" name="OutPh2" connectedTo="a3561ea1-2450-4523-b7a2-164a37f0c5f3"/>
+          <port xsi:type="esdl:OutPort" id="aea5bac8-a106-4ccc-939b-e26a6fbd71f5" name="OutPh3" connectedTo="c3aa0d77-8fb1-4bd5-bb2d-abc32a5ef129"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0c0d1dd5-fe24-42e8-8806-fdc68f172f5f" name="PhasegridHome420_2_Ph1" originalIdInSource="4202">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8681e3d5-8c0c-4553-9b62-13aaf218c003" name="In"/>
+          <port xsi:type="esdl:InPort" id="8681e3d5-8c0c-4553-9b62-13aaf218c003" name="In" connectedTo="cba414ad-99e8-453c-bd6e-ca685126aa87"/>
           <port xsi:type="esdl:OutPort" id="c7128920-35fe-4acd-b1b9-151249bea24f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fbd08ba6-47a8-435a-b668-6638eefe28d3" name="PhasegridHome420_2_Ph2" originalIdInSource="4202">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a3561ea1-2450-4523-b7a2-164a37f0c5f3" name="In"/>
+          <port xsi:type="esdl:InPort" id="a3561ea1-2450-4523-b7a2-164a37f0c5f3" name="In" connectedTo="0249f79c-cc21-422e-b4e3-53f0fee7d911"/>
           <port xsi:type="esdl:OutPort" id="ba5ee3e3-fff0-46bc-96d5-ae040d427c45" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="63378a22-d953-4173-bdee-b2df10e36842" name="PhasegridHome420_2_Ph3" originalIdInSource="4202">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c3aa0d77-8fb1-4bd5-bb2d-abc32a5ef129" name="In"/>
+          <port xsi:type="esdl:InPort" id="c3aa0d77-8fb1-4bd5-bb2d-abc32a5ef129" name="In" connectedTo="aea5bac8-a106-4ccc-939b-e26a6fbd71f5"/>
           <port xsi:type="esdl:OutPort" id="349a7651-1fe6-40fd-a5d0-5882634bfb0c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="25410e12-0e2b-4c7d-804d-cb0995f10cbf" name="CableHome420_2" originalIdInSource="4202" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="080cbafd-9d30-4d29-8a79-5b608de44d69" name="In" connectedTo="b68f642e-16e8-4233-94a7-1cf1b8d8c696"/>
@@ -10314,30 +10502,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99282587851799" lon="4.100377402533337"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e5add44e-ad1c-403a-81ce-02fd3278edb5" name="Home422_1" originalIdInSource="4221" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e5add44e-ad1c-403a-81ce-02fd3278edb5" name="Home422_1" originalIdInSource="4221" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992813136497766" lon="4.099212869692134"/>
         <asset xsi:type="esdl:EConnection" id="a0fadae5-d76c-451d-8624-9637e40e042c" name="ConnectionHome422_1" originalIdInSource="4221" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="c52d0534-f312-47c0-a23d-1046348874c0" name="In" connectedTo="e6dd88ba-c8f2-4e54-8ddb-160a211b1935"/>
-          <port xsi:type="esdl:OutPort" id="18558325-ea6a-4394-aa06-a94c56b651dc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b2468f36-05f8-40b1-9208-8ae78b003618" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="4ec35b3a-5e1a-4163-911e-45793cfc21ab" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="18558325-ea6a-4394-aa06-a94c56b651dc" name="OutPh1" connectedTo="644c0e92-c783-45c7-b150-967ba15ce235"/>
+          <port xsi:type="esdl:OutPort" id="b2468f36-05f8-40b1-9208-8ae78b003618" name="OutPh2" connectedTo="00ba4d40-a69f-49d9-b696-1ff08f17144a"/>
+          <port xsi:type="esdl:OutPort" id="4ec35b3a-5e1a-4163-911e-45793cfc21ab" name="OutPh3" connectedTo="a4c1cb8f-6599-44c6-809b-d25029696c3c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e46dac5d-d3b2-4e60-8c3a-16bcb63a9296" name="PhasegridHome422_1_Ph1" originalIdInSource="4221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="644c0e92-c783-45c7-b150-967ba15ce235" name="In"/>
+          <port xsi:type="esdl:InPort" id="644c0e92-c783-45c7-b150-967ba15ce235" name="In" connectedTo="18558325-ea6a-4394-aa06-a94c56b651dc"/>
           <port xsi:type="esdl:OutPort" id="bfaefd97-1194-4454-8aab-f24fe10ba9c9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d6e22b78-9a1a-4190-aee7-c78a52abb0c0" name="PhasegridHome422_1_Ph2" originalIdInSource="4221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="00ba4d40-a69f-49d9-b696-1ff08f17144a" name="In"/>
+          <port xsi:type="esdl:InPort" id="00ba4d40-a69f-49d9-b696-1ff08f17144a" name="In" connectedTo="b2468f36-05f8-40b1-9208-8ae78b003618"/>
           <port xsi:type="esdl:OutPort" id="68287eb8-a771-46d2-8f9a-96bc83777053" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="5dce945f-fdae-4b92-9503-843b10f1af0e" name="PhasegridHome422_1_Ph3" originalIdInSource="4221">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a4c1cb8f-6599-44c6-809b-d25029696c3c" name="In"/>
+          <port xsi:type="esdl:InPort" id="a4c1cb8f-6599-44c6-809b-d25029696c3c" name="In" connectedTo="4ec35b3a-5e1a-4163-911e-45793cfc21ab"/>
           <port xsi:type="esdl:OutPort" id="fe080a4a-481a-4516-9133-6920bbae4bfa" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fbf12dfd-a9ba-4066-8569-453712036d59" name="CableHome422_1" originalIdInSource="4221" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="e337b1fe-2bd2-4b50-99a5-34f46675e8b5" name="In" connectedTo="7d9519f4-be88-46de-94ee-13cc1c33b8d2"/>
@@ -10347,30 +10536,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992813136497766" lon="4.099212869692134"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5cb22b01-b519-4f94-9a5e-f766855af500" name="Home423_1" originalIdInSource="4231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="5cb22b01-b519-4f94-9a5e-f766855af500" name="Home423_1" originalIdInSource="4231" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99279400185942" lon="4.097466071860903"/>
         <asset xsi:type="esdl:EConnection" id="2ce92cee-ffdd-4665-9ac7-840bff7b3672" name="ConnectionHome423_1" originalIdInSource="4231" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="db259383-0a0c-4262-b038-297cde4ff407" name="In" connectedTo="2c3a6f3b-5bcf-4481-aad4-468920d11426"/>
-          <port xsi:type="esdl:OutPort" id="f44fe7d1-5e9d-4108-84d9-2f73de828a09" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ebf92593-2510-4a8e-a5fa-18c20172e722" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="61710706-e568-48c7-adc9-22482cf4c876" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f44fe7d1-5e9d-4108-84d9-2f73de828a09" name="OutPh1" connectedTo="c8df15b9-9bfe-4046-a72b-cc2e0597af99"/>
+          <port xsi:type="esdl:OutPort" id="ebf92593-2510-4a8e-a5fa-18c20172e722" name="OutPh2" connectedTo="d6a0c1f2-fb01-4334-912d-3e63b7978408"/>
+          <port xsi:type="esdl:OutPort" id="61710706-e568-48c7-adc9-22482cf4c876" name="OutPh3" connectedTo="267f2139-5b72-47d5-a195-a58d9d40da2b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="27d43066-ce99-46db-86d0-e3ccf854c095" name="PhasegridHome423_1_Ph1" originalIdInSource="4231">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c8df15b9-9bfe-4046-a72b-cc2e0597af99" name="In"/>
+          <port xsi:type="esdl:InPort" id="c8df15b9-9bfe-4046-a72b-cc2e0597af99" name="In" connectedTo="f44fe7d1-5e9d-4108-84d9-2f73de828a09"/>
           <port xsi:type="esdl:OutPort" id="272f1381-07e4-491a-b4b4-dac5ccd49999" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e4610e7a-e60c-430f-835a-313fd8cd90db" name="PhasegridHome423_1_Ph2" originalIdInSource="4231">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d6a0c1f2-fb01-4334-912d-3e63b7978408" name="In"/>
+          <port xsi:type="esdl:InPort" id="d6a0c1f2-fb01-4334-912d-3e63b7978408" name="In" connectedTo="ebf92593-2510-4a8e-a5fa-18c20172e722"/>
           <port xsi:type="esdl:OutPort" id="cf0cf022-2a95-4b6d-837b-e3aaa6e24aca" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="44598974-0e25-4dcb-89dc-6ca1586f5250" name="PhasegridHome423_1_Ph3" originalIdInSource="4231">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="267f2139-5b72-47d5-a195-a58d9d40da2b" name="In"/>
+          <port xsi:type="esdl:InPort" id="267f2139-5b72-47d5-a195-a58d9d40da2b" name="In" connectedTo="61710706-e568-48c7-adc9-22482cf4c876"/>
           <port xsi:type="esdl:OutPort" id="bde1dc27-d3ed-4d4d-b1d8-cc7ef5bc1b66" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8b7a2cd5-742c-4759-ace8-fe6b3b8d8342" name="CableHome423_1" originalIdInSource="4231" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="ed4967c8-5172-4fb4-b7a5-e6a6357f2820" name="In" connectedTo="4e882532-b1ce-4d56-8894-49fea40b638e"/>
@@ -10380,30 +10570,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99279400185942" lon="4.097466071860903"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="433a60af-2b57-4c33-b28b-76b7af7b913d" name="Home423_2" originalIdInSource="4232" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="433a60af-2b57-4c33-b28b-76b7af7b913d" name="Home423_2" originalIdInSource="4232" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99261108404051" lon="4.097180109633211"/>
         <asset xsi:type="esdl:EConnection" id="df85a684-a2ec-412d-b239-7f40a93b5a46" name="ConnectionHome423_2" originalIdInSource="4232" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a73cd416-6803-447c-8246-4fbbef479781" name="In" connectedTo="6dc1f684-c675-4e7e-8467-ba13b46fa91e"/>
-          <port xsi:type="esdl:OutPort" id="3cf415a7-82bf-4cf4-a863-fcddb9c43b97" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e96cfbd4-5ded-46bd-a981-546c6484f801" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="2072846f-bdc9-4147-8fa6-4e30b1396aa8" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="3cf415a7-82bf-4cf4-a863-fcddb9c43b97" name="OutPh1" connectedTo="6e889401-9be6-45cf-9fc2-427ac44fd23b"/>
+          <port xsi:type="esdl:OutPort" id="e96cfbd4-5ded-46bd-a981-546c6484f801" name="OutPh2" connectedTo="4ae96237-02e7-4356-b8fe-bb1877bc0e7d"/>
+          <port xsi:type="esdl:OutPort" id="2072846f-bdc9-4147-8fa6-4e30b1396aa8" name="OutPh3" connectedTo="447c6695-a2f7-4a9b-87d2-a0bf70555fa8"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e4b4516f-2afc-415c-a884-9cd61336b8c8" name="PhasegridHome423_2_Ph1" originalIdInSource="4232">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6e889401-9be6-45cf-9fc2-427ac44fd23b" name="In"/>
+          <port xsi:type="esdl:InPort" id="6e889401-9be6-45cf-9fc2-427ac44fd23b" name="In" connectedTo="3cf415a7-82bf-4cf4-a863-fcddb9c43b97"/>
           <port xsi:type="esdl:OutPort" id="61e07bf2-6da0-41b6-99f0-f27eb7b5a84a" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="29497434-d7aa-4ccf-88aa-853ef5036bc4" name="PhasegridHome423_2_Ph2" originalIdInSource="4232">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4ae96237-02e7-4356-b8fe-bb1877bc0e7d" name="In"/>
+          <port xsi:type="esdl:InPort" id="4ae96237-02e7-4356-b8fe-bb1877bc0e7d" name="In" connectedTo="e96cfbd4-5ded-46bd-a981-546c6484f801"/>
           <port xsi:type="esdl:OutPort" id="f8023e62-3d5a-4820-923a-1182a91bdac5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d63dad49-13d6-470e-bf69-b7a90de9a436" name="PhasegridHome423_2_Ph3" originalIdInSource="4232">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="447c6695-a2f7-4a9b-87d2-a0bf70555fa8" name="In"/>
+          <port xsi:type="esdl:InPort" id="447c6695-a2f7-4a9b-87d2-a0bf70555fa8" name="In" connectedTo="2072846f-bdc9-4147-8fa6-4e30b1396aa8"/>
           <port xsi:type="esdl:OutPort" id="c330dab9-79ce-4932-a142-f7265982fc62" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="36eadc0c-9cff-4ab7-bc74-aead0f1a7342" name="CableHome423_2" originalIdInSource="4232" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="103c9577-2f40-41db-8553-97bfed4358fa" name="In" connectedTo="4e882532-b1ce-4d56-8894-49fea40b638e"/>
@@ -10413,30 +10604,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99261108404051" lon="4.097180109633211"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d323b03f-b6db-4202-8f09-3c481c0585f6" name="Home425_1" originalIdInSource="4251" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="d323b03f-b6db-4202-8f09-3c481c0585f6" name="Home425_1" originalIdInSource="4251" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_B" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.992944977337594" lon="4.094840698381598"/>
         <asset xsi:type="esdl:EConnection" id="f98c80ff-1c0a-4a1c-9242-1b2c59d08898" name="ConnectionHome425_1" originalIdInSource="4251" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fe2c3ba0-e349-4332-91ee-4b993172c08c" name="In" connectedTo="69b077cb-5182-4214-82bf-d9fc3dc413f0"/>
-          <port xsi:type="esdl:OutPort" id="3f87025e-7d37-42b6-bac1-5e280adb55f3" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="df0303a1-d5c0-43fe-8ba8-4824141ef4b6" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="5a2266af-55c1-48f7-a47d-205b4022d81d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="3f87025e-7d37-42b6-bac1-5e280adb55f3" name="OutPh1" connectedTo="e2dfe832-c6f8-4643-bc6f-b69edb10af06"/>
+          <port xsi:type="esdl:OutPort" id="df0303a1-d5c0-43fe-8ba8-4824141ef4b6" name="OutPh2" connectedTo="50faace2-a3e5-47be-ac37-be41d9a17cec"/>
+          <port xsi:type="esdl:OutPort" id="5a2266af-55c1-48f7-a47d-205b4022d81d" name="OutPh3" connectedTo="052acc78-ffb6-4978-ac2c-ea958bf64877"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d7bec372-50b3-495c-9ff0-fdcd1290f401" name="PhasegridHome425_1_Ph1" originalIdInSource="4251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e2dfe832-c6f8-4643-bc6f-b69edb10af06" name="In"/>
+          <port xsi:type="esdl:InPort" id="e2dfe832-c6f8-4643-bc6f-b69edb10af06" name="In" connectedTo="3f87025e-7d37-42b6-bac1-5e280adb55f3"/>
           <port xsi:type="esdl:OutPort" id="2fc9171d-f432-4fcb-8061-a16a16dc5e60" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8655c618-4148-4ad2-a7ed-a1c37339100a" name="PhasegridHome425_1_Ph2" originalIdInSource="4251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="50faace2-a3e5-47be-ac37-be41d9a17cec" name="In"/>
+          <port xsi:type="esdl:InPort" id="50faace2-a3e5-47be-ac37-be41d9a17cec" name="In" connectedTo="df0303a1-d5c0-43fe-8ba8-4824141ef4b6"/>
           <port xsi:type="esdl:OutPort" id="fb66ead8-2ec0-44e1-ac11-2afc211ddf3d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8479df15-c2e2-448b-a397-5e7b3f3a02b4" name="PhasegridHome425_1_Ph3" originalIdInSource="4251">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="052acc78-ffb6-4978-ac2c-ea958bf64877" name="In"/>
+          <port xsi:type="esdl:InPort" id="052acc78-ffb6-4978-ac2c-ea958bf64877" name="In" connectedTo="5a2266af-55c1-48f7-a47d-205b4022d81d"/>
           <port xsi:type="esdl:OutPort" id="58bf8164-ebac-4171-afe8-45a9cea93cca" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="109.66" height="9.0" windowArea="28.259999999999994" doorArea="8.36" flatRoofArea="11.7" slantedRoofArea="72.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="479dd28c-d9d5-4e03-82aa-81d51fc69d48" name="CableHome425_1" originalIdInSource="4251" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="431379d3-fca5-42a3-bfe5-6ec5b582d1d2" name="In" connectedTo="dc6dd486-21e5-4be8-aea0-5ad35a0f29cd"/>
@@ -10446,30 +10638,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.992944977337594" lon="4.094840698381598"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="dd88b1a0-7b68-417a-90b9-b04936fdb424" name="Home425_2" originalIdInSource="4252" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="dd88b1a0-7b68-417a-90b9-b04936fdb424" name="Home425_2" originalIdInSource="4252" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99312150524318" lon="4.094544383670511"/>
         <asset xsi:type="esdl:EConnection" id="bfbd4c1b-0101-4ee8-bfb7-4dc709adb8b4" name="ConnectionHome425_2" originalIdInSource="4252" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1b4293de-e13a-40e9-8a96-1ef124e786c7" name="In" connectedTo="dd0f6e9d-9d5f-4b9a-8bf2-a8d50bb02237"/>
-          <port xsi:type="esdl:OutPort" id="cbca0d6b-9cd2-4b4a-9ba2-b4fad1899577" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="5f0b1f9c-fdb9-4f2c-8af1-04a6b981811f" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b080aad0-7c5e-4474-9b14-285a4efc0be1" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="cbca0d6b-9cd2-4b4a-9ba2-b4fad1899577" name="OutPh1" connectedTo="1053e6f5-232a-4023-9d4a-10a06ecc8def"/>
+          <port xsi:type="esdl:OutPort" id="5f0b1f9c-fdb9-4f2c-8af1-04a6b981811f" name="OutPh2" connectedTo="d92b15b8-5dcc-4951-8992-816803ad0df7"/>
+          <port xsi:type="esdl:OutPort" id="b080aad0-7c5e-4474-9b14-285a4efc0be1" name="OutPh3" connectedTo="a84a2906-8672-474d-9e48-6583d020f820"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fcaa1f78-aa1b-4378-b30c-9d4984af2be5" name="PhasegridHome425_2_Ph1" originalIdInSource="4252">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1053e6f5-232a-4023-9d4a-10a06ecc8def" name="In"/>
+          <port xsi:type="esdl:InPort" id="1053e6f5-232a-4023-9d4a-10a06ecc8def" name="In" connectedTo="cbca0d6b-9cd2-4b4a-9ba2-b4fad1899577"/>
           <port xsi:type="esdl:OutPort" id="d71c0802-825b-47b8-933e-09698c63b793" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b2631378-0f5c-4f89-b162-4d8f488a85b3" name="PhasegridHome425_2_Ph2" originalIdInSource="4252">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d92b15b8-5dcc-4951-8992-816803ad0df7" name="In"/>
+          <port xsi:type="esdl:InPort" id="d92b15b8-5dcc-4951-8992-816803ad0df7" name="In" connectedTo="5f0b1f9c-fdb9-4f2c-8af1-04a6b981811f"/>
           <port xsi:type="esdl:OutPort" id="aa0f11f7-ab0b-4513-a195-14748eebb289" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="52f240ab-d3c7-41c2-b573-9c972d2f7888" name="PhasegridHome425_2_Ph3" originalIdInSource="4252">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a84a2906-8672-474d-9e48-6583d020f820" name="In"/>
+          <port xsi:type="esdl:InPort" id="a84a2906-8672-474d-9e48-6583d020f820" name="In" connectedTo="b080aad0-7c5e-4474-9b14-285a4efc0be1"/>
           <port xsi:type="esdl:OutPort" id="3c4990ac-ff4a-4fe7-ae45-5f6ea3233b87" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="07fab1b4-60b5-418a-8ab6-0563e6a4b46c" name="CableHome425_2" originalIdInSource="4252" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="b6d2e287-adef-4d6d-8f82-6b685bb86383" name="In" connectedTo="dc6dd486-21e5-4be8-aea0-5ad35a0f29cd"/>
@@ -10479,30 +10672,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99312150524318" lon="4.094544383670511"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="5934fe56-f4ac-49e1-a14d-f74159464cdf" name="Home427_1" originalIdInSource="4271" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="5934fe56-f4ac-49e1-a14d-f74159464cdf" name="Home427_1" originalIdInSource="4271" assetType="Vrijstaande woning_1975_1991" energyLabel="LABEL_C" floorArea="161.0" buildingYear="1983" surfaceArea="93" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99294177921126" lon="4.094549564840572"/>
         <asset xsi:type="esdl:EConnection" id="c2d8bb37-033c-4136-ad43-2decad0cfeee" name="ConnectionHome427_1" originalIdInSource="4271" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="2598d42d-0ad2-4cd8-ab49-53d7d0b8523c" name="In" connectedTo="0b76e98a-ec83-4ba1-9389-cd707e238fca"/>
-          <port xsi:type="esdl:OutPort" id="5457d579-cc08-4d07-88af-8d1f194d3d84" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="75096baa-19bf-4740-9c8a-75f7df36aebe" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="be2d579a-59e7-428c-8282-f7ea95f80d92" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5457d579-cc08-4d07-88af-8d1f194d3d84" name="OutPh1" connectedTo="967d1114-0327-4a12-bf0c-1881758298dc"/>
+          <port xsi:type="esdl:OutPort" id="75096baa-19bf-4740-9c8a-75f7df36aebe" name="OutPh2" connectedTo="0f68ad56-9f27-4b75-bd94-5f5449446f3c"/>
+          <port xsi:type="esdl:OutPort" id="be2d579a-59e7-428c-8282-f7ea95f80d92" name="OutPh3" connectedTo="b776ebaa-3f19-4640-a415-e3269e0ba9ac"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="19c8e478-8a4a-4443-bb39-dfcb22be6803" name="PhasegridHome427_1_Ph1" originalIdInSource="4271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="967d1114-0327-4a12-bf0c-1881758298dc" name="In"/>
+          <port xsi:type="esdl:InPort" id="967d1114-0327-4a12-bf0c-1881758298dc" name="In" connectedTo="5457d579-cc08-4d07-88af-8d1f194d3d84"/>
           <port xsi:type="esdl:OutPort" id="2b6ef702-3bd9-4fed-b1c9-9d90ce20b662" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2f97b3e6-8b72-441d-b075-29d1c73efa77" name="PhasegridHome427_1_Ph2" originalIdInSource="4271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0f68ad56-9f27-4b75-bd94-5f5449446f3c" name="In"/>
+          <port xsi:type="esdl:InPort" id="0f68ad56-9f27-4b75-bd94-5f5449446f3c" name="In" connectedTo="75096baa-19bf-4740-9c8a-75f7df36aebe"/>
           <port xsi:type="esdl:OutPort" id="c5dc94fe-11f8-45c5-adf5-6126588448b1" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cfdd6e61-2248-4ab3-a69d-6075d0569507" name="PhasegridHome427_1_Ph3" originalIdInSource="4271">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b776ebaa-3f19-4640-a415-e3269e0ba9ac" name="In"/>
+          <port xsi:type="esdl:InPort" id="b776ebaa-3f19-4640-a415-e3269e0ba9ac" name="In" connectedTo="be2d579a-59e7-428c-8282-f7ea95f80d92"/>
           <port xsi:type="esdl:OutPort" id="3aa398d5-f837-4d6a-a54e-a58ceb152818" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="126.42" height="9.0" windowArea="31.4" doorArea="8.0" flatRoofArea="19.6" slantedRoofArea="100.86"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d80b91dd-2394-494e-a066-6e90ef118a43" name="CableHome427_1" originalIdInSource="4271" assetType="4x10Cu__VO_YMvKas" length="18.8">
         <port xsi:type="esdl:InPort" id="f9a6bc2c-1bce-4ba7-97e4-8068f6c3895e" name="In" connectedTo="9912cf66-5849-48d4-ac37-c8f0157d4e57"/>
@@ -10512,30 +10706,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99294177921126" lon="4.094549564840572"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="fc04f8e2-52f7-43cf-818c-77baeecf28d2" name="Home431_1" originalIdInSource="4311" assetType="appartement_1975_1991" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="fc04f8e2-52f7-43cf-818c-77baeecf28d2" name="Home431_1" originalIdInSource="4311" assetType="appartement_1975_1991" energyLabel="LABEL_E" floorArea="67.0" buildingYear="1983" surfaceArea="22" numberOfFloors="1">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         <asset xsi:type="esdl:EConnection" id="17970b13-99bb-4604-bd22-4bba64093264" name="ConnectionHome431_1" originalIdInSource="4311" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="427277b7-925f-4f63-9d2f-9572141f7ee1" name="In" connectedTo="0611681d-0686-4524-9867-ac6a1d819fc8"/>
-          <port xsi:type="esdl:OutPort" id="29d9585b-6a13-4403-87d8-af156464f2bc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="6cad8c5c-26c1-4693-ac08-942c7ea859e0" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8244a90c-a950-4612-9866-b041b4943bf2" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="29d9585b-6a13-4403-87d8-af156464f2bc" name="OutPh1" connectedTo="ac4c3d20-0c86-44b2-87d9-15bb1859a228"/>
+          <port xsi:type="esdl:OutPort" id="6cad8c5c-26c1-4693-ac08-942c7ea859e0" name="OutPh2" connectedTo="bc34bcd2-eeaa-452e-ad22-74f8da294447"/>
+          <port xsi:type="esdl:OutPort" id="8244a90c-a950-4612-9866-b041b4943bf2" name="OutPh3" connectedTo="8d9154e7-9c78-4b61-ae9a-45dcee904400"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="210a81ac-895c-4b8e-a187-fca0176f8669" name="PhasegridHome431_1_Ph1" originalIdInSource="4311">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ac4c3d20-0c86-44b2-87d9-15bb1859a228" name="In"/>
+          <port xsi:type="esdl:InPort" id="ac4c3d20-0c86-44b2-87d9-15bb1859a228" name="In" connectedTo="29d9585b-6a13-4403-87d8-af156464f2bc"/>
           <port xsi:type="esdl:OutPort" id="2b974d7b-4119-41e6-ae73-dfe6fc9c4048" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="65f07af3-680f-4328-9002-9aa02450da72" name="PhasegridHome431_1_Ph2" originalIdInSource="4311">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bc34bcd2-eeaa-452e-ad22-74f8da294447" name="In"/>
+          <port xsi:type="esdl:InPort" id="bc34bcd2-eeaa-452e-ad22-74f8da294447" name="In" connectedTo="6cad8c5c-26c1-4693-ac08-942c7ea859e0"/>
           <port xsi:type="esdl:OutPort" id="1ea58b24-53bd-401b-99ef-fa2c7d6929e9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3b348df1-0e80-4dcd-933e-cb52c73d8336" name="PhasegridHome431_1_Ph3" originalIdInSource="4311">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8d9154e7-9c78-4b61-ae9a-45dcee904400" name="In"/>
+          <port xsi:type="esdl:InPort" id="8d9154e7-9c78-4b61-ae9a-45dcee904400" name="In" connectedTo="8244a90c-a950-4612-9866-b041b4943bf2"/>
           <port xsi:type="esdl:OutPort" id="d2c7be98-276c-44b2-aebf-e1c83e9dd70b" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.4" height="11.0" windowArea="11.19" doorArea="4.4" flatRoofArea="67.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="399c0068-ddc5-45d9-909c-7484853d012f" name="CableHome431_1" originalIdInSource="4311" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="883d8ad7-801a-4389-b829-252ce9f94325" name="In" connectedTo="ab289e8d-6d0e-4558-9f0e-5bd45fce9ae0"/>
@@ -10545,30 +10740,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6bb2d3dd-2a70-4484-a168-f8194484a3bb" name="Home432_1" originalIdInSource="4321" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="6bb2d3dd-2a70-4484-a168-f8194484a3bb" name="Home432_1" originalIdInSource="4321" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_B" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         <asset xsi:type="esdl:EConnection" id="28a767a1-c868-42c4-9091-0f6f771df57b" name="ConnectionHome432_1" originalIdInSource="4321" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="f0699cc5-eada-4239-8bee-1b9b194ef4b9" name="In" connectedTo="87701c9d-0ac9-4419-82d3-92c86f90f380"/>
-          <port xsi:type="esdl:OutPort" id="ab76a35c-2cb3-40a2-87ab-81923379d93e" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e54ff35e-60e5-4710-a8f2-6f499bf7dfd0" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="1fd33651-8180-4e76-aad7-0074e9968b44" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ab76a35c-2cb3-40a2-87ab-81923379d93e" name="OutPh1" connectedTo="605c77c7-7afa-45a7-aab7-d90cacc2a79c"/>
+          <port xsi:type="esdl:OutPort" id="e54ff35e-60e5-4710-a8f2-6f499bf7dfd0" name="OutPh2" connectedTo="5adcbdfe-14c1-4f5f-ad60-86e0ff38de49"/>
+          <port xsi:type="esdl:OutPort" id="1fd33651-8180-4e76-aad7-0074e9968b44" name="OutPh3" connectedTo="be0907b9-e82c-49c7-9610-20e94cc38adc"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4891bd27-2578-4a46-9b3e-eacd02cd6590" name="PhasegridHome432_1_Ph1" originalIdInSource="4321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="605c77c7-7afa-45a7-aab7-d90cacc2a79c" name="In"/>
+          <port xsi:type="esdl:InPort" id="605c77c7-7afa-45a7-aab7-d90cacc2a79c" name="In" connectedTo="ab76a35c-2cb3-40a2-87ab-81923379d93e"/>
           <port xsi:type="esdl:OutPort" id="c56b18af-b3ff-48b7-b8d8-b865fd9bb124" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bbbe35c5-94ca-4c06-96df-660e614967ad" name="PhasegridHome432_1_Ph2" originalIdInSource="4321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5adcbdfe-14c1-4f5f-ad60-86e0ff38de49" name="In"/>
+          <port xsi:type="esdl:InPort" id="5adcbdfe-14c1-4f5f-ad60-86e0ff38de49" name="In" connectedTo="e54ff35e-60e5-4710-a8f2-6f499bf7dfd0"/>
           <port xsi:type="esdl:OutPort" id="8188b105-79f8-414c-afd7-99a9ef94e065" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="69eb8710-de0e-4e6b-ab6b-6e5a5c59ed93" name="PhasegridHome432_1_Ph3" originalIdInSource="4321">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="be0907b9-e82c-49c7-9610-20e94cc38adc" name="In"/>
+          <port xsi:type="esdl:InPort" id="be0907b9-e82c-49c7-9610-20e94cc38adc" name="In" connectedTo="1fd33651-8180-4e76-aad7-0074e9968b44"/>
           <port xsi:type="esdl:OutPort" id="56a043e2-a571-4282-8776-51a214418a3c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f735eddd-7e92-4c80-9248-ea863d7b8293" name="CableHome432_1" originalIdInSource="4321" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="6eee8e7c-024a-45a4-b970-00096b9de0c4" name="In" connectedTo="7bc327bf-31bb-4da7-88b6-a56b0deffe42"/>
@@ -10578,30 +10774,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="317c7d9e-e3ad-4a07-a0fd-22553386a671" name="Home432_2" originalIdInSource="4322" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="317c7d9e-e3ad-4a07-a0fd-22553386a671" name="Home432_2" originalIdInSource="4322" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_D" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99306702661143" lon="4.089595100974817"/>
         <asset xsi:type="esdl:EConnection" id="dc575119-8470-47bf-aa3c-0ba3d951f818" name="ConnectionHome432_2" originalIdInSource="4322" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fc222057-2f30-4885-9451-caf0bf8abac5" name="In" connectedTo="42695ee0-2920-43c3-a589-7188e1622946"/>
-          <port xsi:type="esdl:OutPort" id="eb50e9ce-2540-4206-a48c-b65e576f7915" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b1868ed5-f57f-4844-8347-300123e35687" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="ba19b523-3d34-4000-8c8a-d228b346c51d" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="eb50e9ce-2540-4206-a48c-b65e576f7915" name="OutPh1" connectedTo="1f1545a2-b918-4dbc-83ed-b3b533d4bc58"/>
+          <port xsi:type="esdl:OutPort" id="b1868ed5-f57f-4844-8347-300123e35687" name="OutPh2" connectedTo="633315ac-81e1-4cd2-9e3a-14e7675343ac"/>
+          <port xsi:type="esdl:OutPort" id="ba19b523-3d34-4000-8c8a-d228b346c51d" name="OutPh3" connectedTo="057d2c95-abf5-4172-bdd2-cfd6a6cec0ff"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="94ca6340-32f8-497b-a1a8-b4e719d1a53b" name="PhasegridHome432_2_Ph1" originalIdInSource="4322">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1f1545a2-b918-4dbc-83ed-b3b533d4bc58" name="In"/>
+          <port xsi:type="esdl:InPort" id="1f1545a2-b918-4dbc-83ed-b3b533d4bc58" name="In" connectedTo="eb50e9ce-2540-4206-a48c-b65e576f7915"/>
           <port xsi:type="esdl:OutPort" id="06266b7a-2b88-4c0c-a85a-9fcaac7fd0e3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="41c0f8f0-2b2c-4bf3-a767-a82e7c1fc6a0" name="PhasegridHome432_2_Ph2" originalIdInSource="4322">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="633315ac-81e1-4cd2-9e3a-14e7675343ac" name="In"/>
+          <port xsi:type="esdl:InPort" id="633315ac-81e1-4cd2-9e3a-14e7675343ac" name="In" connectedTo="b1868ed5-f57f-4844-8347-300123e35687"/>
           <port xsi:type="esdl:OutPort" id="973d7af4-66bf-4dc6-aeb1-30cffcce01f3" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="83e8964e-08d9-421e-beee-ba1cdfd06f69" name="PhasegridHome432_2_Ph3" originalIdInSource="4322">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="057d2c95-abf5-4172-bdd2-cfd6a6cec0ff" name="In"/>
+          <port xsi:type="esdl:InPort" id="057d2c95-abf5-4172-bdd2-cfd6a6cec0ff" name="In" connectedTo="ba19b523-3d34-4000-8c8a-d228b346c51d"/>
           <port xsi:type="esdl:OutPort" id="0db2ee0e-bb77-4e8b-bc9f-4109fa9c1cf0" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="8bf7057d-f158-4665-9bf5-df7bd81d1162" name="CableHome432_2" originalIdInSource="4322" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="04d32b46-2545-4255-b613-18de0e335247" name="In" connectedTo="7bc327bf-31bb-4da7-88b6-a56b0deffe42"/>
@@ -10611,30 +10808,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99306702661143" lon="4.089595100974817"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="b0822bd7-a4cf-4266-9421-cc62ee0cf9fc" name="Home433_1" originalIdInSource="4331" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="b0822bd7-a4cf-4266-9421-cc62ee0cf9fc" name="Home433_1" originalIdInSource="4331" assetType="Vrijstaande woning_before_1964" energyLabel="LABEL_D" floorArea="153.28" buildingYear="1964" surfaceArea="89" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         <asset xsi:type="esdl:EConnection" id="92923b40-97d3-4491-bf71-30e46f956dbd" name="ConnectionHome433_1" originalIdInSource="4331" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="326c101e-b2d5-4223-bbd4-a865d8511a7f" name="In" connectedTo="bf2388e6-6a4e-467e-bbb4-a86408b10470"/>
-          <port xsi:type="esdl:OutPort" id="8176d015-405a-46d8-8935-6a84e2728276" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="16bea19e-11b6-40de-b347-ddce39bcba2d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0bce6e35-e91e-4c10-9527-818ed71c3839" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="8176d015-405a-46d8-8935-6a84e2728276" name="OutPh1" connectedTo="7e9b852a-fe6a-4fb2-bb8c-d5db96f67ca1"/>
+          <port xsi:type="esdl:OutPort" id="16bea19e-11b6-40de-b347-ddce39bcba2d" name="OutPh2" connectedTo="638c409f-1135-484a-a079-d0fa9c8a9263"/>
+          <port xsi:type="esdl:OutPort" id="0bce6e35-e91e-4c10-9527-818ed71c3839" name="OutPh3" connectedTo="5b086ca0-237c-4f67-a57e-8d41e1919d2c"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0f4fe761-cc6a-4b98-ab91-1d6365b3fa97" name="PhasegridHome433_1_Ph1" originalIdInSource="4331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7e9b852a-fe6a-4fb2-bb8c-d5db96f67ca1" name="In"/>
+          <port xsi:type="esdl:InPort" id="7e9b852a-fe6a-4fb2-bb8c-d5db96f67ca1" name="In" connectedTo="8176d015-405a-46d8-8935-6a84e2728276"/>
           <port xsi:type="esdl:OutPort" id="e3da4b21-a9f6-419f-880f-f6dd7a2c75f9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ed007506-fce8-44f0-a0ac-372596d87397" name="PhasegridHome433_1_Ph2" originalIdInSource="4331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="638c409f-1135-484a-a079-d0fa9c8a9263" name="In"/>
+          <port xsi:type="esdl:InPort" id="638c409f-1135-484a-a079-d0fa9c8a9263" name="In" connectedTo="16bea19e-11b6-40de-b347-ddce39bcba2d"/>
           <port xsi:type="esdl:OutPort" id="f1936721-305c-444b-b81c-5f5bcc3107f7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="af1f8949-6081-480d-a39c-393604be24ba" name="PhasegridHome433_1_Ph3" originalIdInSource="4331">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5b086ca0-237c-4f67-a57e-8d41e1919d2c" name="In"/>
+          <port xsi:type="esdl:InPort" id="5b086ca0-237c-4f67-a57e-8d41e1919d2c" name="In" connectedTo="0bce6e35-e91e-4c10-9527-818ed71c3839"/>
           <port xsi:type="esdl:OutPort" id="2ddf6d80-72c8-4f33-a48d-0d1fc82bf639" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="131.12" height="9.0" windowArea="28.360000000000007" doorArea="8.04" flatRoofArea="29.31" slantedRoofArea="84.42"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="1cb5ec89-2d03-4490-a671-d6e7d9429d22" name="CableHome433_1" originalIdInSource="4331" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="7a7f138d-04b8-4490-b0af-6d8f96b85a74" name="In" connectedTo="8fd906e6-b6cb-42cb-a32f-f31cdb8ebad4"/>
@@ -10644,30 +10842,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99288408977179" lon="4.089309169295115"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="33796676-a8c1-4053-806e-eadfddb8cce2" name="Home435_1" originalIdInSource="4351" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="33796676-a8c1-4053-806e-eadfddb8cce2" name="Home435_1" originalIdInSource="4351" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_E" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99299621585858" lon="4.08319016751276"/>
         <asset xsi:type="esdl:EConnection" id="fa390e85-176f-4d9f-935c-c864dc10eab6" name="ConnectionHome435_1" originalIdInSource="4351" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="96869a37-34a5-40d9-92b8-56ba557bbd7f" name="In" connectedTo="696b142b-cac7-4e0d-aaf6-1f0915ae9cdb"/>
-          <port xsi:type="esdl:OutPort" id="87023dda-0c84-417b-a3cc-dc047bb52b7d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="ff40b555-5b5e-4a46-8d45-a36f33c9a0d1" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="e1006a33-886b-479a-a611-556a26a2a0f1" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="87023dda-0c84-417b-a3cc-dc047bb52b7d" name="OutPh1" connectedTo="6dfd9151-92a3-4c73-982d-69a48f766015"/>
+          <port xsi:type="esdl:OutPort" id="ff40b555-5b5e-4a46-8d45-a36f33c9a0d1" name="OutPh2" connectedTo="9ffdc1e8-bcd7-465d-a55e-c038e7524bf6"/>
+          <port xsi:type="esdl:OutPort" id="e1006a33-886b-479a-a611-556a26a2a0f1" name="OutPh3" connectedTo="66617b0b-51e1-471a-8a08-0426e9869ac5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e6ee88a2-8c05-411b-ba6c-c8f9238788e0" name="PhasegridHome435_1_Ph1" originalIdInSource="4351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="6dfd9151-92a3-4c73-982d-69a48f766015" name="In"/>
+          <port xsi:type="esdl:InPort" id="6dfd9151-92a3-4c73-982d-69a48f766015" name="In" connectedTo="87023dda-0c84-417b-a3cc-dc047bb52b7d"/>
           <port xsi:type="esdl:OutPort" id="052dd4e7-3bce-407a-a955-e0319a701485" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3969b815-2d44-4121-832a-5bf9ba47012a" name="PhasegridHome435_1_Ph2" originalIdInSource="4351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9ffdc1e8-bcd7-465d-a55e-c038e7524bf6" name="In"/>
+          <port xsi:type="esdl:InPort" id="9ffdc1e8-bcd7-465d-a55e-c038e7524bf6" name="In" connectedTo="ff40b555-5b5e-4a46-8d45-a36f33c9a0d1"/>
           <port xsi:type="esdl:OutPort" id="a6e16b49-a1ec-47bb-982a-e158b8f21ffb" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="29bb67bf-3297-4077-b694-7c0094f48cb7" name="PhasegridHome435_1_Ph3" originalIdInSource="4351">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="66617b0b-51e1-471a-8a08-0426e9869ac5" name="In"/>
+          <port xsi:type="esdl:InPort" id="66617b0b-51e1-471a-8a08-0426e9869ac5" name="In" connectedTo="e1006a33-886b-479a-a611-556a26a2a0f1"/>
           <port xsi:type="esdl:OutPort" id="bc0d1b3e-e33d-4fa4-991a-57c460bc6f8c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="05647100-16e9-47f1-9238-027d1169b097" name="CableHome435_1" originalIdInSource="4351" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="e9457d0e-c683-47d5-8485-0dd389eedc31" name="In" connectedTo="998a14fa-9828-4eb7-b29d-c697ea8442ab"/>
@@ -10677,30 +10876,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99299621585858" lon="4.08319016751276"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="1b279e30-257c-42ac-a392-7a911f4223dc" name="Home436_1" originalIdInSource="4361" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="1b279e30-257c-42ac-a392-7a911f4223dc" name="Home436_1" originalIdInSource="4361" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99299621585858" lon="4.08319016751276"/>
         <asset xsi:type="esdl:EConnection" id="1cb675c8-ba9a-42e6-af3e-6b64aa4be6fb" name="ConnectionHome436_1" originalIdInSource="4361" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="1cac606b-0c30-4afc-b490-a9bcc327272c" name="In" connectedTo="a685a09e-a4fc-4e3a-b81f-6aacbe8a04f7"/>
-          <port xsi:type="esdl:OutPort" id="665d74c6-10cf-4a30-9f91-79b4b723c7dc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="f2974686-734e-4187-92bf-1c55def47393" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b42af5c3-2298-4a61-bd09-8d2afca94218" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="665d74c6-10cf-4a30-9f91-79b4b723c7dc" name="OutPh1" connectedTo="cb438871-73d2-47d1-948e-a6ae53e26537"/>
+          <port xsi:type="esdl:OutPort" id="f2974686-734e-4187-92bf-1c55def47393" name="OutPh2" connectedTo="680d592a-30d3-4b6e-80a0-1718c83bd0e9"/>
+          <port xsi:type="esdl:OutPort" id="b42af5c3-2298-4a61-bd09-8d2afca94218" name="OutPh3" connectedTo="595307b4-cb11-44dc-a2c6-2e464dfafb1a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8c477393-3c3b-47a5-9672-39cb2f81d645" name="PhasegridHome436_1_Ph1" originalIdInSource="4361">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cb438871-73d2-47d1-948e-a6ae53e26537" name="In"/>
+          <port xsi:type="esdl:InPort" id="cb438871-73d2-47d1-948e-a6ae53e26537" name="In" connectedTo="665d74c6-10cf-4a30-9f91-79b4b723c7dc"/>
           <port xsi:type="esdl:OutPort" id="1d9f00b7-b19d-4c32-a58b-e857b3ce8218" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="6aaa1e2b-d890-4ffe-9184-8c74437886f0" name="PhasegridHome436_1_Ph2" originalIdInSource="4361">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="680d592a-30d3-4b6e-80a0-1718c83bd0e9" name="In"/>
+          <port xsi:type="esdl:InPort" id="680d592a-30d3-4b6e-80a0-1718c83bd0e9" name="In" connectedTo="f2974686-734e-4187-92bf-1c55def47393"/>
           <port xsi:type="esdl:OutPort" id="d2cd9bc6-e7fd-491e-83c1-2754e62522d6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2c1c16ea-5470-4091-af56-c1a92b0f4b47" name="PhasegridHome436_1_Ph3" originalIdInSource="4361">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="595307b4-cb11-44dc-a2c6-2e464dfafb1a" name="In"/>
+          <port xsi:type="esdl:InPort" id="595307b4-cb11-44dc-a2c6-2e464dfafb1a" name="In" connectedTo="b42af5c3-2298-4a61-bd09-8d2afca94218"/>
           <port xsi:type="esdl:OutPort" id="98210edf-1a21-4053-872c-4d3ed44591ce" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="65072d4a-c493-4a8e-8a02-32b05ac27eb3" name="CableHome436_1" originalIdInSource="4361" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="b41eebbb-f1a5-477c-829b-cad0458d9ccb" name="In" connectedTo="8479e753-a29b-40f9-9edf-407ccfcf2b6c"/>
@@ -10710,30 +10910,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99299621585858" lon="4.08319016751276"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="55e59326-1df8-4927-90e6-b05e24b610de" name="Home436_2" originalIdInSource="4362" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="55e59326-1df8-4927-90e6-b05e24b610de" name="Home436_2" originalIdInSource="4362" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99333952446526" lon="4.081724038946178"/>
         <asset xsi:type="esdl:EConnection" id="7d9c72a5-7cf2-4614-acda-83728dd76e5c" name="ConnectionHome436_2" originalIdInSource="4362" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="142aad70-539f-48c7-9f65-df76aed6bb0e" name="In" connectedTo="4dc3bfa4-59e4-49d7-8fed-2d029cb9b8ee"/>
-          <port xsi:type="esdl:OutPort" id="0210ed16-1d3f-4f6e-86c0-bab0f1f8f9a8" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="c24e9b84-acbb-4946-9cf1-ef6a918fadfe" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="0734d456-5523-4ad2-9b14-148cff91a6ea" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="0210ed16-1d3f-4f6e-86c0-bab0f1f8f9a8" name="OutPh1" connectedTo="e207a429-9e46-4d6d-89e5-57467cb537db"/>
+          <port xsi:type="esdl:OutPort" id="c24e9b84-acbb-4946-9cf1-ef6a918fadfe" name="OutPh2" connectedTo="5058abd9-0876-4bb6-b213-ab2ead6b1742"/>
+          <port xsi:type="esdl:OutPort" id="0734d456-5523-4ad2-9b14-148cff91a6ea" name="OutPh3" connectedTo="525d0480-2cf4-4b05-b7c9-e13f10689c75"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b0111c85-bf49-4023-8db4-d4f20f68338a" name="PhasegridHome436_2_Ph1" originalIdInSource="4362">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e207a429-9e46-4d6d-89e5-57467cb537db" name="In"/>
+          <port xsi:type="esdl:InPort" id="e207a429-9e46-4d6d-89e5-57467cb537db" name="In" connectedTo="0210ed16-1d3f-4f6e-86c0-bab0f1f8f9a8"/>
           <port xsi:type="esdl:OutPort" id="34f06a08-0443-4086-b354-013ae0a91bce" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ccf117da-ee2b-490c-8e83-54ff1f119061" name="PhasegridHome436_2_Ph2" originalIdInSource="4362">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="5058abd9-0876-4bb6-b213-ab2ead6b1742" name="In"/>
+          <port xsi:type="esdl:InPort" id="5058abd9-0876-4bb6-b213-ab2ead6b1742" name="In" connectedTo="c24e9b84-acbb-4946-9cf1-ef6a918fadfe"/>
           <port xsi:type="esdl:OutPort" id="0c04e764-49d0-438a-b0f1-5d39b109ab81" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c75ae817-9093-4b17-89e1-4fb75456edb2" name="PhasegridHome436_2_Ph3" originalIdInSource="4362">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="525d0480-2cf4-4b05-b7c9-e13f10689c75" name="In"/>
+          <port xsi:type="esdl:InPort" id="525d0480-2cf4-4b05-b7c9-e13f10689c75" name="In" connectedTo="0734d456-5523-4ad2-9b14-148cff91a6ea"/>
           <port xsi:type="esdl:OutPort" id="2d39cda5-26c8-4835-92e6-33abc3771eff" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="88503370-7b6a-4372-b98e-27cf9c4428e7" name="CableHome436_2" originalIdInSource="4362" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="3f21c09f-131b-4071-9ae7-3b710b43e834" name="In" connectedTo="8479e753-a29b-40f9-9edf-407ccfcf2b6c"/>
@@ -10743,30 +10944,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99333952446526" lon="4.081724038946178"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8fb9a64a-26a2-4a8f-bbed-8e109fed0411" name="Home439_1" originalIdInSource="4391" assetType="maisonnette_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8fb9a64a-26a2-4a8f-bbed-8e109fed0411" name="Home439_1" originalIdInSource="4391" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         <asset xsi:type="esdl:EConnection" id="175e08a8-734d-45c8-b8c1-8cd214943e28" name="ConnectionHome439_1" originalIdInSource="4391" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="4d37023b-677a-4a62-9e2a-a077eca6d0cd" name="In" connectedTo="3766e82f-ad60-4565-bd1d-1e3463735aa5"/>
-          <port xsi:type="esdl:OutPort" id="e9278c82-34df-4c28-aeea-e7f288cf5ce9" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3426b4cf-34c6-4be6-96db-36b81518b320" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b3e6ab3b-4e0f-46a2-a618-10c69f84f48c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="e9278c82-34df-4c28-aeea-e7f288cf5ce9" name="OutPh1" connectedTo="eb7b6c34-5e01-4e54-afb2-6cca8e088a92"/>
+          <port xsi:type="esdl:OutPort" id="3426b4cf-34c6-4be6-96db-36b81518b320" name="OutPh2" connectedTo="cafff723-0c2a-41d1-94a5-5b77ef55b21e"/>
+          <port xsi:type="esdl:OutPort" id="b3e6ab3b-4e0f-46a2-a618-10c69f84f48c" name="OutPh3" connectedTo="32a348ec-0f3b-47ab-b339-5aeb9f440ed5"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d1889e41-4c0f-430b-bbe2-25c09ba01c45" name="PhasegridHome439_1_Ph1" originalIdInSource="4391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="eb7b6c34-5e01-4e54-afb2-6cca8e088a92" name="In"/>
+          <port xsi:type="esdl:InPort" id="eb7b6c34-5e01-4e54-afb2-6cca8e088a92" name="In" connectedTo="e9278c82-34df-4c28-aeea-e7f288cf5ce9"/>
           <port xsi:type="esdl:OutPort" id="118aa8fd-6db0-403a-8057-2b70da9ead5c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3d19daea-9126-4d3e-871d-544efa4dc114" name="PhasegridHome439_1_Ph2" originalIdInSource="4391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cafff723-0c2a-41d1-94a5-5b77ef55b21e" name="In"/>
+          <port xsi:type="esdl:InPort" id="cafff723-0c2a-41d1-94a5-5b77ef55b21e" name="In" connectedTo="3426b4cf-34c6-4be6-96db-36b81518b320"/>
           <port xsi:type="esdl:OutPort" id="278ee66d-eaf0-46d7-9332-b332ce1c7a7c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b96910a1-f2d1-4be2-80d8-a6d455f42ea5" name="PhasegridHome439_1_Ph3" originalIdInSource="4391">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="32a348ec-0f3b-47ab-b339-5aeb9f440ed5" name="In"/>
+          <port xsi:type="esdl:InPort" id="32a348ec-0f3b-47ab-b339-5aeb9f440ed5" name="In" connectedTo="b3e6ab3b-4e0f-46a2-a618-10c69f84f48c"/>
           <port xsi:type="esdl:OutPort" id="5f51fe18-b99f-4a0c-9314-433f66eb3caf" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="18.48" height="11.0" windowArea="11.159999999999998" doorArea="4.35" slantedRoofArea="63.87"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="052dfad7-673c-418c-9c22-60649a090e07" name="CableHome439_1" originalIdInSource="4391" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="46399573-70be-4247-8a2f-d4b0ab7b8877" name="In" connectedTo="161084d9-16eb-431a-a104-196ec93cfb8f"/>
@@ -10776,30 +10978,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="356e1cc6-b33a-4ef9-9d36-3279a80905bf" name="Home440_1" originalIdInSource="4401" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="356e1cc6-b33a-4ef9-9d36-3279a80905bf" name="Home440_1" originalIdInSource="4401" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         <asset xsi:type="esdl:EConnection" id="bb6d92ab-3957-430b-add6-0187441116f1" name="ConnectionHome440_1" originalIdInSource="4401" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="5c6a9b44-8d9c-4457-bf8d-533dde046a83" name="In" connectedTo="7376599b-9e0e-4e36-9823-eaa5f9989659"/>
-          <port xsi:type="esdl:OutPort" id="ed98f8c2-6ff4-4424-8e16-79e85781bb4f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d86e6ae5-09a8-4672-9884-feb381740b31" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b58ca29b-6ead-4314-b15a-90be6e12ad04" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="ed98f8c2-6ff4-4424-8e16-79e85781bb4f" name="OutPh1" connectedTo="f3ed3a3a-b2e0-403f-a40f-d647ba75403f"/>
+          <port xsi:type="esdl:OutPort" id="d86e6ae5-09a8-4672-9884-feb381740b31" name="OutPh2" connectedTo="39b5dc1d-94da-49ec-9b15-6e05d328fbfc"/>
+          <port xsi:type="esdl:OutPort" id="b58ca29b-6ead-4314-b15a-90be6e12ad04" name="OutPh3" connectedTo="b0e103db-5f4f-4df5-aae8-ea9ae46b7daf"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="75fb22f6-82a9-4a92-a22b-79be3bf78a01" name="PhasegridHome440_1_Ph1" originalIdInSource="4401">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f3ed3a3a-b2e0-403f-a40f-d647ba75403f" name="In"/>
+          <port xsi:type="esdl:InPort" id="f3ed3a3a-b2e0-403f-a40f-d647ba75403f" name="In" connectedTo="ed98f8c2-6ff4-4424-8e16-79e85781bb4f"/>
           <port xsi:type="esdl:OutPort" id="0711ba71-3a5f-4973-9e3b-f5ae56707de0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7183975d-d55c-4684-8b61-b8456c1068e0" name="PhasegridHome440_1_Ph2" originalIdInSource="4401">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="39b5dc1d-94da-49ec-9b15-6e05d328fbfc" name="In"/>
+          <port xsi:type="esdl:InPort" id="39b5dc1d-94da-49ec-9b15-6e05d328fbfc" name="In" connectedTo="d86e6ae5-09a8-4672-9884-feb381740b31"/>
           <port xsi:type="esdl:OutPort" id="7ee21b6c-8023-4b28-9b19-45717f67937f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4f40eecd-d544-445d-b083-01642d7788c2" name="PhasegridHome440_1_Ph3" originalIdInSource="4401">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b0e103db-5f4f-4df5-aae8-ea9ae46b7daf" name="In"/>
+          <port xsi:type="esdl:InPort" id="b0e103db-5f4f-4df5-aae8-ea9ae46b7daf" name="In" connectedTo="b58ca29b-6ead-4314-b15a-90be6e12ad04"/>
           <port xsi:type="esdl:OutPort" id="6d473517-e77f-4264-ba37-3e41b8c8921a" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="30.434999999999995" height="11.0" windowArea="17.025000000000002" doorArea="6.09" flatRoofArea="25.26"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="e65b6fb1-dcb7-4b65-bbd9-e4538166186a" name="CableHome440_1" originalIdInSource="4401" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="97a7b067-725a-4c33-b479-28f3e0ca52a0" name="In" connectedTo="472a403a-da8a-437f-8579-55a40dbbbb4a"/>
@@ -10809,30 +11012,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9931242232759" lon="4.07852680338572"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="6d365a46-4826-42c7-ab10-0c31b8b62912" name="Home440_2" originalIdInSource="4402" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="6d365a46-4826-42c7-ab10-0c31b8b62912" name="Home440_2" originalIdInSource="4402" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99331365958969" lon="4.079394961291198"/>
         <asset xsi:type="esdl:EConnection" id="6c138715-b348-4977-be0c-2d9944f6b9d7" name="ConnectionHome440_2" originalIdInSource="4402" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="909c8e2c-e578-42d9-abcd-7e6e29d1513b" name="In" connectedTo="47a814bc-1920-42f5-a5d1-9482c95e0508"/>
-          <port xsi:type="esdl:OutPort" id="76824381-ca4d-4036-87ab-2091f6d3b750" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="9a218602-7e37-4d25-b7b9-9038f3cd4c76" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="7c7d749c-9adf-4ea6-8e1e-91f22b96f759" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="76824381-ca4d-4036-87ab-2091f6d3b750" name="OutPh1" connectedTo="88fab707-ea45-4e1e-8185-7771435421bb"/>
+          <port xsi:type="esdl:OutPort" id="9a218602-7e37-4d25-b7b9-9038f3cd4c76" name="OutPh2" connectedTo="740dea80-4c64-4b1f-ad1c-08727147f318"/>
+          <port xsi:type="esdl:OutPort" id="7c7d749c-9adf-4ea6-8e1e-91f22b96f759" name="OutPh3" connectedTo="f2292a3d-46f1-4ac2-b667-72ccf1073804"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="893e2f74-8bdd-4adf-8e14-9b0f9ddcdb3f" name="PhasegridHome440_2_Ph1" originalIdInSource="4402">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="88fab707-ea45-4e1e-8185-7771435421bb" name="In"/>
+          <port xsi:type="esdl:InPort" id="88fab707-ea45-4e1e-8185-7771435421bb" name="In" connectedTo="76824381-ca4d-4036-87ab-2091f6d3b750"/>
           <port xsi:type="esdl:OutPort" id="bd8d80df-b3e9-498c-a91c-e149e7c1dd83" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="ea82b93c-4f9c-471d-8086-f0f490c6a8f7" name="PhasegridHome440_2_Ph2" originalIdInSource="4402">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="740dea80-4c64-4b1f-ad1c-08727147f318" name="In"/>
+          <port xsi:type="esdl:InPort" id="740dea80-4c64-4b1f-ad1c-08727147f318" name="In" connectedTo="9a218602-7e37-4d25-b7b9-9038f3cd4c76"/>
           <port xsi:type="esdl:OutPort" id="b060bc2b-b361-4d7b-8ed8-a6bd5c3796fa" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0a622057-d989-4d21-a59d-3885c2b88353" name="PhasegridHome440_2_Ph3" originalIdInSource="4402">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f2292a3d-46f1-4ac2-b667-72ccf1073804" name="In"/>
+          <port xsi:type="esdl:InPort" id="f2292a3d-46f1-4ac2-b667-72ccf1073804" name="In" connectedTo="7c7d749c-9adf-4ea6-8e1e-91f22b96f759"/>
           <port xsi:type="esdl:OutPort" id="230bb97d-0554-4baa-ae99-ee43a1672836" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="2c5f61b1-e547-49a4-b086-007e0455d431" name="CableHome440_2" originalIdInSource="4402" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="695f1ba4-ed6e-4949-b27b-9a6ef1f3d8e5" name="In" connectedTo="472a403a-da8a-437f-8579-55a40dbbbb4a"/>
@@ -10842,30 +11046,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99331365958969" lon="4.079394961291198"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="37086056-6048-45df-a7ab-44be47376d98" name="Home442_1" originalIdInSource="4421" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP">
+      <asset xsi:type="esdl:Building" id="37086056-6048-45df-a7ab-44be47376d98" name="Home442_1" originalIdInSource="4421" assetType="Vrijstaande woning_2006_2014" energyLabel="LABEL_APPP" floorArea="201.98" buildingYear="2010" surfaceArea="110" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98955892934166" lon="4.097559113950591"/>
         <asset xsi:type="esdl:EConnection" id="bbacc3a2-0c8b-436b-b21f-bffc451ab3be" name="ConnectionHome442_1" originalIdInSource="4421" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="fb1ed6f9-0bfb-4eb3-8e45-b7ee04d89502" name="In" connectedTo="a80a0b04-cb80-4a8f-aa62-0fd52b5e565b"/>
-          <port xsi:type="esdl:OutPort" id="74c67e1b-0c96-4916-976a-8115e801a953" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="91422e08-7f29-48e1-afb9-dfd096212892" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="1d41f5c1-c7cc-48e9-be3d-43ea486644c2" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="74c67e1b-0c96-4916-976a-8115e801a953" name="OutPh1" connectedTo="9997408a-4036-43b7-b24a-98ec08ff012e"/>
+          <port xsi:type="esdl:OutPort" id="91422e08-7f29-48e1-afb9-dfd096212892" name="OutPh2" connectedTo="c8383271-8e58-4c91-8a0a-b5cfac02a90f"/>
+          <port xsi:type="esdl:OutPort" id="1d41f5c1-c7cc-48e9-be3d-43ea486644c2" name="OutPh3" connectedTo="934713df-d096-472b-a680-54c5a66a07f3"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="22670850-11a9-40ef-a9a9-ad24099af242" name="PhasegridHome442_1_Ph1" originalIdInSource="4421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9997408a-4036-43b7-b24a-98ec08ff012e" name="In"/>
+          <port xsi:type="esdl:InPort" id="9997408a-4036-43b7-b24a-98ec08ff012e" name="In" connectedTo="74c67e1b-0c96-4916-976a-8115e801a953"/>
           <port xsi:type="esdl:OutPort" id="20f93f56-ebd9-42cc-a190-42633c2a88e6" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e89dad4b-15c1-4d16-a2f7-7f113b3b198d" name="PhasegridHome442_1_Ph2" originalIdInSource="4421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c8383271-8e58-4c91-8a0a-b5cfac02a90f" name="In"/>
+          <port xsi:type="esdl:InPort" id="c8383271-8e58-4c91-8a0a-b5cfac02a90f" name="In" connectedTo="91422e08-7f29-48e1-afb9-dfd096212892"/>
           <port xsi:type="esdl:OutPort" id="54abdb28-5a05-493a-bce5-2d8b17612457" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="76f12efd-c1b4-4de1-8233-1b6e4e1f66f1" name="PhasegridHome442_1_Ph3" originalIdInSource="4421">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="934713df-d096-472b-a680-54c5a66a07f3" name="In"/>
+          <port xsi:type="esdl:InPort" id="934713df-d096-472b-a680-54c5a66a07f3" name="In" connectedTo="1d41f5c1-c7cc-48e9-be3d-43ea486644c2"/>
           <port xsi:type="esdl:OutPort" id="7ae54cba-6a91-4dc4-b136-c8e2971e47f6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="152.78" height="9.0" windowArea="37.72" doorArea="11.52" flatRoofArea="21.05" slantedRoofArea="112.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="dc5097e9-ea2f-4980-a2a5-dd48bbc3db93" name="CableHome442_1" originalIdInSource="4421" assetType="4x10Cu__VO_YMvKas" length="6.8">
         <port xsi:type="esdl:InPort" id="58c0b699-ade7-451b-90de-42fd0d41ab0e" name="In" connectedTo="f73c82cf-4505-4199-ba61-0eb14f41af84"/>
@@ -10875,30 +11080,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98955892934166" lon="4.097559113950591"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="c86a05a0-818d-49c0-8209-33cf82beb223" name="Home442_2" originalIdInSource="4422" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="c86a05a0-818d-49c0-8209-33cf82beb223" name="Home442_2" originalIdInSource="4422" assetType="Rijwoning tussen_2006_2014" energyLabel="LABEL_A" floorArea="119.13" buildingYear="2010" surfaceArea="51" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989562119949966" lon="4.097850225810317"/>
         <asset xsi:type="esdl:EConnection" id="20dca062-7201-4517-b7f7-715cc0178e06" name="ConnectionHome442_2" originalIdInSource="4422" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="8a98481f-ee46-42c6-80f3-005c42023b80" name="In" connectedTo="b32bbddd-d31a-42ef-91c3-4d8427d355a3"/>
-          <port xsi:type="esdl:OutPort" id="1edc859c-500f-4f16-b80a-8171715d48cd" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="2157c19a-91af-4c5c-95c8-f96e8235caa4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="d78ecda3-282b-4fee-98e8-5de60163858c" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="1edc859c-500f-4f16-b80a-8171715d48cd" name="OutPh1" connectedTo="ec840e19-f5fc-4507-a644-513861886253"/>
+          <port xsi:type="esdl:OutPort" id="2157c19a-91af-4c5c-95c8-f96e8235caa4" name="OutPh2" connectedTo="965b41a3-48e1-4036-9a5e-c18895009a16"/>
+          <port xsi:type="esdl:OutPort" id="d78ecda3-282b-4fee-98e8-5de60163858c" name="OutPh3" connectedTo="e72f2bea-0ec7-443f-8dc5-b746ad193ab7"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d989fc89-4bd4-4cc0-992c-2a22776bfe8a" name="PhasegridHome442_2_Ph1" originalIdInSource="4422">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ec840e19-f5fc-4507-a644-513861886253" name="In"/>
+          <port xsi:type="esdl:InPort" id="ec840e19-f5fc-4507-a644-513861886253" name="In" connectedTo="1edc859c-500f-4f16-b80a-8171715d48cd"/>
           <port xsi:type="esdl:OutPort" id="a3fa2215-0608-4ea4-b17a-0bde8fc2fa61" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a8c741c6-b40e-4ec2-8a7f-9ab450b5bc3b" name="PhasegridHome442_2_Ph2" originalIdInSource="4422">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="965b41a3-48e1-4036-9a5e-c18895009a16" name="In"/>
+          <port xsi:type="esdl:InPort" id="965b41a3-48e1-4036-9a5e-c18895009a16" name="In" connectedTo="2157c19a-91af-4c5c-95c8-f96e8235caa4"/>
           <port xsi:type="esdl:OutPort" id="aefdd3b6-48af-45ec-9ac4-ca619c00a427" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="413f275a-5b31-4195-a80f-840943ab6393" name="PhasegridHome442_2_Ph3" originalIdInSource="4422">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e72f2bea-0ec7-443f-8dc5-b746ad193ab7" name="In"/>
+          <port xsi:type="esdl:InPort" id="e72f2bea-0ec7-443f-8dc5-b746ad193ab7" name="In" connectedTo="d78ecda3-282b-4fee-98e8-5de60163858c"/>
           <port xsi:type="esdl:OutPort" id="82246049-5c91-4653-a165-4fdca2d4babe" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="41.11" height="9.0" windowArea="19.8" doorArea="6.0" slantedRoofArea="61.67"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f7650780-7cc7-4539-b204-4977e258d62b" name="CableHome442_2" originalIdInSource="4422" assetType="4x10Cu__VO_YMvKas" length="6.8">
         <port xsi:type="esdl:InPort" id="5157f302-0e7b-4ee4-a3b2-a15011407495" name="In" connectedTo="f73c82cf-4505-4199-ba61-0eb14f41af84"/>
@@ -10908,30 +11114,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989562119949966" lon="4.097850225810317"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="4be8458c-800b-4e04-aafd-8b325b4e8506" name="Home443_1" originalIdInSource="4431" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="4be8458c-800b-4e04-aafd-8b325b4e8506" name="Home443_1" originalIdInSource="4431" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98971310470894" lon="4.095225042863392"/>
         <asset xsi:type="esdl:EConnection" id="8f43571d-3144-494b-9dd0-7bcd37804639" name="ConnectionHome443_1" originalIdInSource="4431" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="85ed39f8-1884-46f9-93fd-786b91f93f02" name="In" connectedTo="0d667b7c-3749-49fe-a70a-80d963633084"/>
-          <port xsi:type="esdl:OutPort" id="b4f533ed-3a04-41d2-adba-de67cf659789" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="1738e57e-6ce1-42a1-bf72-ce35f78cda57" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="30f0b963-0687-4a35-982e-460963828d69" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="b4f533ed-3a04-41d2-adba-de67cf659789" name="OutPh1" connectedTo="31ffe3f9-41b3-41e5-ad2a-61375b92b70e"/>
+          <port xsi:type="esdl:OutPort" id="1738e57e-6ce1-42a1-bf72-ce35f78cda57" name="OutPh2" connectedTo="0af41deb-c9f7-4a10-bd29-d3fd2625b6bf"/>
+          <port xsi:type="esdl:OutPort" id="30f0b963-0687-4a35-982e-460963828d69" name="OutPh3" connectedTo="c3b5234a-b008-4694-8330-cc59c0f4939f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="347dc04d-f926-4b61-b41f-7b6e727e01e5" name="PhasegridHome443_1_Ph1" originalIdInSource="4431">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="31ffe3f9-41b3-41e5-ad2a-61375b92b70e" name="In"/>
+          <port xsi:type="esdl:InPort" id="31ffe3f9-41b3-41e5-ad2a-61375b92b70e" name="In" connectedTo="b4f533ed-3a04-41d2-adba-de67cf659789"/>
           <port xsi:type="esdl:OutPort" id="98b0efaf-2f66-4f45-abba-7f6c807eed70" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="26db1bf6-e959-4205-b32d-39ebcda13bf5" name="PhasegridHome443_1_Ph2" originalIdInSource="4431">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0af41deb-c9f7-4a10-bd29-d3fd2625b6bf" name="In"/>
+          <port xsi:type="esdl:InPort" id="0af41deb-c9f7-4a10-bd29-d3fd2625b6bf" name="In" connectedTo="1738e57e-6ce1-42a1-bf72-ce35f78cda57"/>
           <port xsi:type="esdl:OutPort" id="54c47c8c-5006-44fd-82cb-5998b833b92c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fcba9a9d-927b-44fa-8a41-2e83b66b1460" name="PhasegridHome443_1_Ph3" originalIdInSource="4431">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c3b5234a-b008-4694-8330-cc59c0f4939f" name="In"/>
+          <port xsi:type="esdl:InPort" id="c3b5234a-b008-4694-8330-cc59c0f4939f" name="In" connectedTo="30f0b963-0687-4a35-982e-460963828d69"/>
           <port xsi:type="esdl:OutPort" id="7e06dfcd-2ae5-4c7e-82c9-0ad6960df477" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="63fff199-28a6-4a06-8352-0bd6551a8bd9" name="CableHome443_1" originalIdInSource="4431" assetType="4x10Cu__VO_YMvKas" length="6.8">
         <port xsi:type="esdl:InPort" id="76a61755-89da-4c3a-88b9-5449a4b90efa" name="In" connectedTo="5775db12-00c5-4f37-a847-3ebf5e83dcde"/>
@@ -10941,30 +11148,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98971310470894" lon="4.095225042863392"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="f8245d0f-6707-485a-8f83-06c2f568632b" name="Home444_1" originalIdInSource="4441" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="f8245d0f-6707-485a-8f83-06c2f568632b" name="Home444_1" originalIdInSource="4441" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98789665042962" lon="4.093530215107103"/>
         <asset xsi:type="esdl:EConnection" id="dcc47770-e1c4-4f05-91c5-cd3d45887b52" name="ConnectionHome444_1" originalIdInSource="4441" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="ce620cb8-6191-40f0-9cad-9c7913f5643c" name="In" connectedTo="415c1bae-fb3e-41a5-9c7d-23b2a785ad60"/>
-          <port xsi:type="esdl:OutPort" id="96cf94fa-6e45-4cde-a987-c9d09c91e0ef" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="1fb5b791-66f5-408a-be60-720ea247bf40" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b536daa9-c299-4d43-9fdf-82c8ddd5fa51" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="96cf94fa-6e45-4cde-a987-c9d09c91e0ef" name="OutPh1" connectedTo="005ed05d-790b-4cda-b2dd-09ba8aa399d6"/>
+          <port xsi:type="esdl:OutPort" id="1fb5b791-66f5-408a-be60-720ea247bf40" name="OutPh2" connectedTo="7cf8c569-4faa-4a92-8918-2f7d18594056"/>
+          <port xsi:type="esdl:OutPort" id="b536daa9-c299-4d43-9fdf-82c8ddd5fa51" name="OutPh3" connectedTo="cb581655-42ad-4340-a5b2-abf5610180ed"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d0f6e5be-d6a6-4d5d-b550-4712652d7938" name="PhasegridHome444_1_Ph1" originalIdInSource="4441">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="005ed05d-790b-4cda-b2dd-09ba8aa399d6" name="In"/>
+          <port xsi:type="esdl:InPort" id="005ed05d-790b-4cda-b2dd-09ba8aa399d6" name="In" connectedTo="96cf94fa-6e45-4cde-a987-c9d09c91e0ef"/>
           <port xsi:type="esdl:OutPort" id="64b4c367-918b-4475-8bea-e05af1d0c00b" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="fbc3371c-e918-44bf-b6d6-9a958ad21117" name="PhasegridHome444_1_Ph2" originalIdInSource="4441">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7cf8c569-4faa-4a92-8918-2f7d18594056" name="In"/>
+          <port xsi:type="esdl:InPort" id="7cf8c569-4faa-4a92-8918-2f7d18594056" name="In" connectedTo="1fb5b791-66f5-408a-be60-720ea247bf40"/>
           <port xsi:type="esdl:OutPort" id="c057a589-a99c-41bf-9cf3-f5359e752f3e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7b23d4ca-5abd-4aa4-854d-6c2e77cb102c" name="PhasegridHome444_1_Ph3" originalIdInSource="4441">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cb581655-42ad-4340-a5b2-abf5610180ed" name="In"/>
+          <port xsi:type="esdl:InPort" id="cb581655-42ad-4340-a5b2-abf5610180ed" name="In" connectedTo="b536daa9-c299-4d43-9fdf-82c8ddd5fa51"/>
           <port xsi:type="esdl:OutPort" id="bc0f18e1-42bd-4cd3-ac46-a350b08afc25" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="93cb7cdb-4de0-41c3-a3da-7226afb0fe1a" name="CableHome444_1" originalIdInSource="4441" assetType="4x10Cu__VO_YMvKas" length="19.1">
         <port xsi:type="esdl:InPort" id="63e56f45-a5e4-4f9b-8a9f-2bef56e8e4d2" name="In" connectedTo="3b827335-5bbe-47b2-9394-ce25474db971"/>
@@ -10974,30 +11182,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98789665042962" lon="4.093530215107103"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="e3e4a446-1ca6-4f4f-809e-fbe9f999f2ca" name="Home447_1" originalIdInSource="4471" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="e3e4a446-1ca6-4f4f-809e-fbe9f999f2ca" name="Home447_1" originalIdInSource="4471" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         <asset xsi:type="esdl:EConnection" id="878820d3-98f8-4bee-842d-3ab7501e4235" name="ConnectionHome447_1" originalIdInSource="4471" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0357bf2a-ba50-4879-9179-2a425b1a5f15" name="In" connectedTo="e6c00843-994d-452a-aa1e-ce397ed192b8"/>
-          <port xsi:type="esdl:OutPort" id="46e7e9f6-eaa4-4823-82d9-497e6a9ac3e4" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="367e6b68-cc93-4b9c-87cd-b808760d0033" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="23859d33-6e00-4137-987f-918f8faa9f18" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="46e7e9f6-eaa4-4823-82d9-497e6a9ac3e4" name="OutPh1" connectedTo="cb8d332f-7aae-4c9e-bffa-2516a080ca37"/>
+          <port xsi:type="esdl:OutPort" id="367e6b68-cc93-4b9c-87cd-b808760d0033" name="OutPh2" connectedTo="b9db977e-5e49-43b5-9b9d-3f0d16b15cb3"/>
+          <port xsi:type="esdl:OutPort" id="23859d33-6e00-4137-987f-918f8faa9f18" name="OutPh3" connectedTo="bdf7a09c-06f2-47be-b743-42e811794d4f"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3095de8e-9b5c-4bbb-8f36-2a0dafb84ee2" name="PhasegridHome447_1_Ph1" originalIdInSource="4471">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cb8d332f-7aae-4c9e-bffa-2516a080ca37" name="In"/>
+          <port xsi:type="esdl:InPort" id="cb8d332f-7aae-4c9e-bffa-2516a080ca37" name="In" connectedTo="46e7e9f6-eaa4-4823-82d9-497e6a9ac3e4"/>
           <port xsi:type="esdl:OutPort" id="c9b7cc4c-c59b-4986-8739-df8270393ad9" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a47d55ec-41d7-44ce-ba82-6710419686bc" name="PhasegridHome447_1_Ph2" originalIdInSource="4471">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b9db977e-5e49-43b5-9b9d-3f0d16b15cb3" name="In"/>
+          <port xsi:type="esdl:InPort" id="b9db977e-5e49-43b5-9b9d-3f0d16b15cb3" name="In" connectedTo="367e6b68-cc93-4b9c-87cd-b808760d0033"/>
           <port xsi:type="esdl:OutPort" id="7fbbe7ce-5eb9-4c02-9c05-cf667a7eb303" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="28dca7bf-1a19-4f84-8f20-451857736e5a" name="PhasegridHome447_1_Ph3" originalIdInSource="4471">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bdf7a09c-06f2-47be-b743-42e811794d4f" name="In"/>
+          <port xsi:type="esdl:InPort" id="bdf7a09c-06f2-47be-b743-42e811794d4f" name="In" connectedTo="23859d33-6e00-4137-987f-918f8faa9f18"/>
           <port xsi:type="esdl:OutPort" id="fb8678b9-f303-4aa8-892c-0b34d1be5371" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b886f824-a8c8-450c-8ca9-2e254a84f70c" name="CableHome447_1" originalIdInSource="4471" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="f87a0c4f-baa8-44fb-bb5d-350e4c2b3c12" name="In" connectedTo="83a8d252-406d-43ad-aa13-b673dc92298f"/>
@@ -11007,30 +11216,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a17a46bf-c420-41ff-a851-4ea17a349009" name="Home448_1" originalIdInSource="4481" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="a17a46bf-c420-41ff-a851-4ea17a349009" name="Home448_1" originalIdInSource="4481" assetType="2 onder 1 kap woning_2006_2014" energyLabel="LABEL_A" floorArea="152.35" buildingYear="2010" surfaceArea="68" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         <asset xsi:type="esdl:EConnection" id="3a056c54-4a07-4b38-ada1-5d4ce9e45bfa" name="ConnectionHome448_1" originalIdInSource="4481" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="98e4b0a3-fd37-496e-a3b3-4757c1c3a7a3" name="In" connectedTo="9df850e6-790f-4001-9b08-b90446e4818a"/>
-          <port xsi:type="esdl:OutPort" id="6b9d25a1-adbc-4590-9cd4-8065d567fbd7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="156b206b-6468-46fb-ace7-dd2f72a80b3d" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="3af355e0-9cf3-4bfd-8984-bf6684999fb8" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="6b9d25a1-adbc-4590-9cd4-8065d567fbd7" name="OutPh1" connectedTo="66d39208-382d-4c61-8ae3-e1743e8698a3"/>
+          <port xsi:type="esdl:OutPort" id="156b206b-6468-46fb-ace7-dd2f72a80b3d" name="OutPh2" connectedTo="8b1f0942-07d1-4674-b6f7-602f6da56c99"/>
+          <port xsi:type="esdl:OutPort" id="3af355e0-9cf3-4bfd-8984-bf6684999fb8" name="OutPh3" connectedTo="80c94397-028a-4fc1-b9e1-dee58f559492"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="c0749a08-10db-4279-9a3d-0c8dcd3b5d2d" name="PhasegridHome448_1_Ph1" originalIdInSource="4481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="66d39208-382d-4c61-8ae3-e1743e8698a3" name="In"/>
+          <port xsi:type="esdl:InPort" id="66d39208-382d-4c61-8ae3-e1743e8698a3" name="In" connectedTo="6b9d25a1-adbc-4590-9cd4-8065d567fbd7"/>
           <port xsi:type="esdl:OutPort" id="b84e07b8-9cf1-4f4f-99e8-884ce385b1d5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="172aba10-0f90-4934-b335-3d04acd81627" name="PhasegridHome448_1_Ph2" originalIdInSource="4481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8b1f0942-07d1-4674-b6f7-602f6da56c99" name="In"/>
+          <port xsi:type="esdl:InPort" id="8b1f0942-07d1-4674-b6f7-602f6da56c99" name="In" connectedTo="156b206b-6468-46fb-ace7-dd2f72a80b3d"/>
           <port xsi:type="esdl:OutPort" id="7780ba6d-eac2-495a-982a-304d7e8cff89" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="e671d6ec-531f-4518-8946-ecc8525aa927" name="PhasegridHome448_1_Ph3" originalIdInSource="4481">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="80c94397-028a-4fc1-b9e1-dee58f559492" name="In"/>
+          <port xsi:type="esdl:InPort" id="80c94397-028a-4fc1-b9e1-dee58f559492" name="In" connectedTo="3af355e0-9cf3-4bfd-8984-bf6684999fb8"/>
           <port xsi:type="esdl:OutPort" id="9d890b85-e727-4490-9eed-f06f4ae155f7" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="109.66" height="9.0" windowArea="28.259999999999994" doorArea="8.36" flatRoofArea="11.7" slantedRoofArea="72.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="44ff5aa6-8dd5-47d1-a5ae-835feadb2689" name="CableHome448_1" originalIdInSource="4481" assetType="4x10Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="b338af2b-af7b-4a91-a886-36e619025101" name="In" connectedTo="0ecacd0a-0dc9-42be-beca-0ea433eaa7c2"/>
@@ -11040,18 +11250,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="2faaf402-8e6c-4989-8766-e75bf9b94a8a" name="Home448_2" originalIdInSource="4482" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="2faaf402-8e6c-4989-8766-e75bf9b94a8a" name="Home448_2" originalIdInSource="4482" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_A" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98981590112892" lon="4.088233147818993"/>
         <asset xsi:type="esdl:EConnection" id="00717d8b-40ba-42d6-9e38-9872b3653303" name="ConnectionHome448_2" originalIdInSource="4482" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0f0d74ae-28d7-4dfd-a095-297a3cf717cd" name="In" connectedTo="9eca39e1-0e00-41db-90be-8e086d43696b"/>
-          <port xsi:type="esdl:OutPort" id="7e66e0e5-1cd5-46d6-9335-0f3336848118" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="7e66e0e5-1cd5-46d6-9335-0f3336848118" name="OutPh3" connectedTo="d2333ece-e023-40b2-8d12-a9907d87ea33"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="cde94589-cc1d-4a18-aa14-56ca8e0a3b13" name="PhasegridHome448_2_Ph3" originalIdInSource="4482">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="d2333ece-e023-40b2-8d12-a9907d87ea33" name="In"/>
+          <port xsi:type="esdl:InPort" id="d2333ece-e023-40b2-8d12-a9907d87ea33" name="In" connectedTo="7e66e0e5-1cd5-46d6-9335-0f3336848118"/>
           <port xsi:type="esdl:OutPort" id="94072efb-0a72-4286-9a15-3145a660d68c" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="66b24649-d381-4ddd-8da3-30a5bba93a32" name="CableHome448_2" originalIdInSource="4482" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="81275536-5279-43e7-8e9f-3c5a1262f3ac" name="In" connectedTo="0ecacd0a-0dc9-42be-beca-0ea433eaa7c2"/>
@@ -11061,30 +11272,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98981590112892" lon="4.088233147818993"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="99a487b2-45a6-44d6-a2a7-a52d08c65258" name="Home472_1" originalIdInSource="4721" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="99a487b2-45a6-44d6-a2a7-a52d08c65258" name="Home472_1" originalIdInSource="4721" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98685931297831" lon="4.049008467540727"/>
         <asset xsi:type="esdl:EConnection" id="80d594a4-1eaf-4aa9-9fef-2f5d4f77abef" name="ConnectionHome472_1" originalIdInSource="4721" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="04ddf117-e155-47ae-ba53-cd56b1d7ffcc" name="In" connectedTo="db1ad9ee-d5a9-4a89-a02f-7f3b9f3efab7"/>
-          <port xsi:type="esdl:OutPort" id="a562b8cf-9366-410f-9081-826146935dda" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="e5cb1c6b-a4fd-46a5-8f37-20015c43269b" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b1d7e3ed-1a80-4581-8857-865c9efab243" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a562b8cf-9366-410f-9081-826146935dda" name="OutPh1" connectedTo="2a888a29-37a0-486c-9fca-fe9fc9beccd3"/>
+          <port xsi:type="esdl:OutPort" id="e5cb1c6b-a4fd-46a5-8f37-20015c43269b" name="OutPh2" connectedTo="3566cc1b-85c8-4b7d-a324-ea781ba0d6fd"/>
+          <port xsi:type="esdl:OutPort" id="b1d7e3ed-1a80-4581-8857-865c9efab243" name="OutPh3" connectedTo="e6cfe776-de52-4b71-8862-6969492cd87b"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f5b8ffc6-0b46-40f0-ae31-06d2ac978fe4" name="PhasegridHome472_1_Ph1" originalIdInSource="4721">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2a888a29-37a0-486c-9fca-fe9fc9beccd3" name="In"/>
+          <port xsi:type="esdl:InPort" id="2a888a29-37a0-486c-9fca-fe9fc9beccd3" name="In" connectedTo="a562b8cf-9366-410f-9081-826146935dda"/>
           <port xsi:type="esdl:OutPort" id="0bbd1352-fbb9-44a3-895c-7fd861d4aea7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b8655fa7-2678-4587-b1c1-86f3a3ffc0fa" name="PhasegridHome472_1_Ph2" originalIdInSource="4721">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="3566cc1b-85c8-4b7d-a324-ea781ba0d6fd" name="In"/>
+          <port xsi:type="esdl:InPort" id="3566cc1b-85c8-4b7d-a324-ea781ba0d6fd" name="In" connectedTo="e5cb1c6b-a4fd-46a5-8f37-20015c43269b"/>
           <port xsi:type="esdl:OutPort" id="61304a09-7255-4f70-9f0b-12fe6db52d51" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2eaf8c5e-c9e5-4b30-9355-a45d136a2ebf" name="PhasegridHome472_1_Ph3" originalIdInSource="4721">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="e6cfe776-de52-4b71-8862-6969492cd87b" name="In"/>
+          <port xsi:type="esdl:InPort" id="e6cfe776-de52-4b71-8862-6969492cd87b" name="In" connectedTo="b1d7e3ed-1a80-4581-8857-865c9efab243"/>
           <port xsi:type="esdl:OutPort" id="c59cbebc-68f3-451f-86f9-9f3c75003365" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b2d52fc7-1060-44d2-bdf7-b4791436d4ee" name="CableHome472_1" originalIdInSource="4721" assetType="4x4Cu__GPLK" length="1.0">
         <port xsi:type="esdl:InPort" id="b9129be5-1c65-4292-85ac-40894526a9c2" name="In" connectedTo="c904e5a5-b668-433d-acde-8d83b3f14c08"/>
@@ -11094,30 +11306,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98685931297831" lon="4.049008467540727"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8f0abf42-304e-42eb-9c16-cce04a401125" name="Home472_2" originalIdInSource="4722" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8f0abf42-304e-42eb-9c16-cce04a401125" name="Home472_2" originalIdInSource="4722" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98703572509986" lon="4.048712013929473"/>
         <asset xsi:type="esdl:EConnection" id="758681a5-4e46-4561-b42e-d61903d55572" name="ConnectionHome472_2" originalIdInSource="4722" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e83ac719-eefd-4fff-b944-e956ad07a1dd" name="In" connectedTo="27fb5eac-05cf-44fb-8f3b-9c75a1ca34e1"/>
-          <port xsi:type="esdl:OutPort" id="c814f559-d321-41ae-8325-bf372b467b46" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d260dc26-ad49-415e-8134-b4206d664776" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f2137db7-02e8-40b0-a938-987b3c71f7a7" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="c814f559-d321-41ae-8325-bf372b467b46" name="OutPh1" connectedTo="1f62128c-3485-49c2-a423-c5fa0722988f"/>
+          <port xsi:type="esdl:OutPort" id="d260dc26-ad49-415e-8134-b4206d664776" name="OutPh2" connectedTo="16f1f722-8d64-4907-83a7-b749659bae6d"/>
+          <port xsi:type="esdl:OutPort" id="f2137db7-02e8-40b0-a938-987b3c71f7a7" name="OutPh3" connectedTo="0213fcd2-eb72-42b7-87f7-daf6d17b9324"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="55f67c29-680a-435f-aa43-81718d70cdef" name="PhasegridHome472_2_Ph1" originalIdInSource="4722">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1f62128c-3485-49c2-a423-c5fa0722988f" name="In"/>
+          <port xsi:type="esdl:InPort" id="1f62128c-3485-49c2-a423-c5fa0722988f" name="In" connectedTo="c814f559-d321-41ae-8325-bf372b467b46"/>
           <port xsi:type="esdl:OutPort" id="18674999-35d6-405a-8038-9db49da8547e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="96de690f-6fe0-4bbe-b1f0-abd125352df3" name="PhasegridHome472_2_Ph2" originalIdInSource="4722">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="16f1f722-8d64-4907-83a7-b749659bae6d" name="In"/>
+          <port xsi:type="esdl:InPort" id="16f1f722-8d64-4907-83a7-b749659bae6d" name="In" connectedTo="d260dc26-ad49-415e-8134-b4206d664776"/>
           <port xsi:type="esdl:OutPort" id="4a04f009-67de-4e32-bad2-48b736976dfd" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="12ca4698-544c-475a-bda4-b33aab4ead02" name="PhasegridHome472_2_Ph3" originalIdInSource="4722">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="0213fcd2-eb72-42b7-87f7-daf6d17b9324" name="In"/>
+          <port xsi:type="esdl:InPort" id="0213fcd2-eb72-42b7-87f7-daf6d17b9324" name="In" connectedTo="f2137db7-02e8-40b0-a938-987b3c71f7a7"/>
           <port xsi:type="esdl:OutPort" id="1a3ecb69-5162-4d10-a7dc-f636da542006" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3caaa147-2b16-47b1-a51e-a9d60cf4ebf9" name="CableHome472_2" originalIdInSource="4722" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="54254e38-97ba-4e2a-8097-f906b731b7de" name="In" connectedTo="c904e5a5-b668-433d-acde-8d83b3f14c08"/>
@@ -11127,30 +11340,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98703572509986" lon="4.048712013929473"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="706fd8bb-e46d-4109-b53d-1433626fd10a" name="Home474_1" originalIdInSource="4741" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="706fd8bb-e46d-4109-b53d-1433626fd10a" name="Home474_1" originalIdInSource="4741" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_F" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99033684500928" lon="4.054437701470538"/>
         <asset xsi:type="esdl:EConnection" id="1085c498-7c4a-455e-96ab-bab06ae3004f" name="ConnectionHome474_1" originalIdInSource="4741" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="0b5e26f7-cecb-4c52-b497-9cf06ddc653f" name="In" connectedTo="70926bfe-4781-45d1-86ba-5ef74af7432f"/>
-          <port xsi:type="esdl:OutPort" id="a66d57d4-4fef-4f7b-8e29-5c14df4f91f7" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="35db6c35-5571-447e-b3ea-43cd851ec068" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="13657ae2-6695-4646-90e5-09c2454d6128" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="a66d57d4-4fef-4f7b-8e29-5c14df4f91f7" name="OutPh1" connectedTo="bf47468b-f9bb-4787-b341-b5edece4e02a"/>
+          <port xsi:type="esdl:OutPort" id="35db6c35-5571-447e-b3ea-43cd851ec068" name="OutPh2" connectedTo="4d844627-6eb5-4eae-ac47-1368c6d50968"/>
+          <port xsi:type="esdl:OutPort" id="13657ae2-6695-4646-90e5-09c2454d6128" name="OutPh3" connectedTo="ee8e2a56-5eca-43a1-80ef-252078e0186a"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="3bb95355-0d6a-46a4-82f7-eb2e0dd2d038" name="PhasegridHome474_1_Ph1" originalIdInSource="4741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="bf47468b-f9bb-4787-b341-b5edece4e02a" name="In"/>
+          <port xsi:type="esdl:InPort" id="bf47468b-f9bb-4787-b341-b5edece4e02a" name="In" connectedTo="a66d57d4-4fef-4f7b-8e29-5c14df4f91f7"/>
           <port xsi:type="esdl:OutPort" id="ff57f8e7-3a98-4c97-9847-61a8fb9d1262" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="daf5babe-5424-4981-a5d7-c2aaa06cd5d0" name="PhasegridHome474_1_Ph2" originalIdInSource="4741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="4d844627-6eb5-4eae-ac47-1368c6d50968" name="In"/>
+          <port xsi:type="esdl:InPort" id="4d844627-6eb5-4eae-ac47-1368c6d50968" name="In" connectedTo="35db6c35-5571-447e-b3ea-43cd851ec068"/>
           <port xsi:type="esdl:OutPort" id="9f8baa1e-ab34-497a-8dc0-7edb7f94e8c5" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="18876c62-d8c3-4956-a71d-95f0579c93ad" name="PhasegridHome474_1_Ph3" originalIdInSource="4741">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ee8e2a56-5eca-43a1-80ef-252078e0186a" name="In"/>
+          <port xsi:type="esdl:InPort" id="ee8e2a56-5eca-43a1-80ef-252078e0186a" name="In" connectedTo="13657ae2-6695-4646-90e5-09c2454d6128"/>
           <port xsi:type="esdl:OutPort" id="4a299657-719b-43ed-8548-371325ab0188" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="908c74b3-cabe-483b-b424-f4d89b52762d" name="CableHome474_1" originalIdInSource="4741" assetType="4x10Cu_as10__VO_YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="bf82189b-89c9-4c61-bb9b-2590cc561d7d" name="In" connectedTo="132826ff-347f-4bf9-8293-28cd3372f114"/>
@@ -11160,30 +11374,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99033684500928" lon="4.054437701470538"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="bb45f71f-02be-4b7c-ba69-975e24c33c9c" name="Home474_2" originalIdInSource="4742" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="bb45f71f-02be-4b7c-ba69-975e24c33c9c" name="Home474_2" originalIdInSource="4742" assetType="Vrijstaande woning_1992_2005" energyLabel="LABEL_C" floorArea="178.6" buildingYear="1998" surfaceArea="102" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99051327071787" lon="4.054141245980902"/>
         <asset xsi:type="esdl:EConnection" id="1f6dcca9-156e-4177-bc51-db0f272d416b" name="ConnectionHome474_2" originalIdInSource="4742" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="04b4ebad-0d81-4338-8c39-0646afc1bace" name="In" connectedTo="bbc30cfe-6ec6-4b31-91ae-49bab603e965"/>
-          <port xsi:type="esdl:OutPort" id="42b2cf5c-8544-4190-bd9b-25a27ba9141f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="9a297ba4-f93b-42e8-a215-40b599cdaf01" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6f6c9bf0-3aad-4be5-bb44-ec0495488edd" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="42b2cf5c-8544-4190-bd9b-25a27ba9141f" name="OutPh1" connectedTo="56c5f0ef-86f1-4cc5-bd05-7b631f437930"/>
+          <port xsi:type="esdl:OutPort" id="9a297ba4-f93b-42e8-a215-40b599cdaf01" name="OutPh2" connectedTo="fad716f9-a7e6-42bc-aa62-823fe7214568"/>
+          <port xsi:type="esdl:OutPort" id="6f6c9bf0-3aad-4be5-bb44-ec0495488edd" name="OutPh3" connectedTo="2e844fe5-c9f2-47ab-993f-36b9f1b05968"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2846debf-cc54-4012-91e9-a436c67c398a" name="PhasegridHome474_2_Ph1" originalIdInSource="4742">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="56c5f0ef-86f1-4cc5-bd05-7b631f437930" name="In"/>
+          <port xsi:type="esdl:InPort" id="56c5f0ef-86f1-4cc5-bd05-7b631f437930" name="In" connectedTo="42b2cf5c-8544-4190-bd9b-25a27ba9141f"/>
           <port xsi:type="esdl:OutPort" id="93d8208a-a62d-4576-914d-eba5fdb471f7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="4813a539-e103-4430-8e0f-bc0631063068" name="PhasegridHome474_2_Ph2" originalIdInSource="4742">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fad716f9-a7e6-42bc-aa62-823fe7214568" name="In"/>
+          <port xsi:type="esdl:InPort" id="fad716f9-a7e6-42bc-aa62-823fe7214568" name="In" connectedTo="9a297ba4-f93b-42e8-a215-40b599cdaf01"/>
           <port xsi:type="esdl:OutPort" id="e07fc0ec-3983-4208-9abb-ad315a1b1eba" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="7dde7468-bacd-403f-8fa3-965c103bbb62" name="PhasegridHome474_2_Ph3" originalIdInSource="4742">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="2e844fe5-c9f2-47ab-993f-36b9f1b05968" name="In"/>
+          <port xsi:type="esdl:InPort" id="2e844fe5-c9f2-47ab-993f-36b9f1b05968" name="In" connectedTo="6f6c9bf0-3aad-4be5-bb44-ec0495488edd"/>
           <port xsi:type="esdl:OutPort" id="30a20b78-5b8e-4b8a-9904-24dd31119b31" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="133.3" height="9.0" windowArea="39.06" doorArea="10.09" flatRoofArea="18.75" slantedRoofArea="116.8"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="d0a62677-41f3-4b9d-8349-1d3e36d5bd79" name="CableHome474_2" originalIdInSource="4742" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="5ba863e0-4e0f-4379-b75d-e74373d9b593" name="In" connectedTo="132826ff-347f-4bf9-8293-28cd3372f114"/>
@@ -11193,30 +11408,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99051327071787" lon="4.054141245980902"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="cb511544-f5af-4889-813f-3fd653f513f9" name="Home476_1" originalIdInSource="4761" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="cb511544-f5af-4889-813f-3fd653f513f9" name="Home476_1" originalIdInSource="4761" assetType="2 onder 1 kap woning_before_1964" energyLabel="LABEL_C" floorArea="122.89" buildingYear="1964" surfaceArea="66" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.9892631514048" lon="4.103391650608301"/>
         <asset xsi:type="esdl:EConnection" id="9ce52fed-f8ce-4f26-b4f1-83d0efbea0fd" name="ConnectionHome476_1" originalIdInSource="4761" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="d92fe1f5-f9fa-47ff-bc91-e3b2f6e012cb" name="In" connectedTo="9fd0a7a5-3902-4591-85f0-34c5be0b87e0"/>
-          <port xsi:type="esdl:OutPort" id="5d7829f4-aa6e-4766-b5c3-07d7661b594f" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="8ca5a97c-8bf2-42e7-aae5-57634f2241ee" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="b5c0bcfd-4859-4585-8ba0-44f944c48218" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="5d7829f4-aa6e-4766-b5c3-07d7661b594f" name="OutPh1" connectedTo="f0d988d5-5047-4e16-8e45-f07d8bbc773e"/>
+          <port xsi:type="esdl:OutPort" id="8ca5a97c-8bf2-42e7-aae5-57634f2241ee" name="OutPh2" connectedTo="7ea33d24-0f49-46a3-9a70-81d9df6920d1"/>
+          <port xsi:type="esdl:OutPort" id="b5c0bcfd-4859-4585-8ba0-44f944c48218" name="OutPh3" connectedTo="395bcc0b-583e-4765-a796-360c64af5687"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="0a0b9c0c-f04a-4fa5-bf62-a11b8aaf0e34" name="PhasegridHome476_1_Ph1" originalIdInSource="4761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="f0d988d5-5047-4e16-8e45-f07d8bbc773e" name="In"/>
+          <port xsi:type="esdl:InPort" id="f0d988d5-5047-4e16-8e45-f07d8bbc773e" name="In" connectedTo="5d7829f4-aa6e-4766-b5c3-07d7661b594f"/>
           <port xsi:type="esdl:OutPort" id="12a7b132-0285-4f51-b12c-33b904f6ee9c" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="91b18fad-9f3c-422d-b557-f58e6253a333" name="PhasegridHome476_1_Ph2" originalIdInSource="4761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7ea33d24-0f49-46a3-9a70-81d9df6920d1" name="In"/>
+          <port xsi:type="esdl:InPort" id="7ea33d24-0f49-46a3-9a70-81d9df6920d1" name="In" connectedTo="8ca5a97c-8bf2-42e7-aae5-57634f2241ee"/>
           <port xsi:type="esdl:OutPort" id="88adeef0-b85f-4cf2-8b54-fea457204d53" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="a673239f-5a0d-4874-b2a9-a2a4b6a153c4" name="PhasegridHome476_1_Ph3" originalIdInSource="4761">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="395bcc0b-583e-4765-a796-360c64af5687" name="In"/>
+          <port xsi:type="esdl:InPort" id="395bcc0b-583e-4765-a796-360c64af5687" name="In" connectedTo="b5c0bcfd-4859-4585-8ba0-44f944c48218"/>
           <port xsi:type="esdl:OutPort" id="90760de0-206c-4a23-903f-7604cbf71564" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="87.26" height="9.0" windowArea="22.919999999999995" doorArea="6.86" flatRoofArea="20.73" slantedRoofArea="53.6"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="21308690-81d9-4b0f-b4d6-616c6ad198fe" name="CableHome476_1" originalIdInSource="4761" assetType="4x10Cu_as10Cu__YMvK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="d6ebaa40-13f2-4d30-b5e8-a972b1601455" name="In" connectedTo="7bb8ff3a-25ab-4536-9396-b1cd926a1513"/>
@@ -11226,30 +11442,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.9892631514048" lon="4.103391650608301"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="ef70b120-debe-40d8-8ae8-ccddd82701bd" name="Home476_2" originalIdInSource="4762" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A">
+      <asset xsi:type="esdl:Building" id="ef70b120-debe-40d8-8ae8-ccddd82701bd" name="Home476_2" originalIdInSource="4762" assetType="Rijwoning hoek_before_1964" energyLabel="LABEL_A" floorArea="100.9" buildingYear="1955" surfaceArea="46" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98943970113183" lon="4.103095393829407"/>
         <asset xsi:type="esdl:EConnection" id="253a35eb-9817-45a8-8766-31c1a28a5db9" name="ConnectionHome476_2" originalIdInSource="4762" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7a9b4a7d-79a9-40ca-924a-8da2c256b527" name="In" connectedTo="7e62de50-5c8b-446d-aaff-18fe5a30868a"/>
-          <port xsi:type="esdl:OutPort" id="209a6a5e-bd28-453f-8b12-8b4b2d1c9296" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="b9ac9317-2a26-441b-b68b-4154801c6e25" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="f6030371-b58b-43b6-8ff6-736a88916e88" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="209a6a5e-bd28-453f-8b12-8b4b2d1c9296" name="OutPh1" connectedTo="78e83400-8d48-4ba3-82da-8b1849f82880"/>
+          <port xsi:type="esdl:OutPort" id="b9ac9317-2a26-441b-b68b-4154801c6e25" name="OutPh2" connectedTo="fe44f93c-18c9-4ba2-a827-f3f712564409"/>
+          <port xsi:type="esdl:OutPort" id="f6030371-b58b-43b6-8ff6-736a88916e88" name="OutPh3" connectedTo="23fa7b7a-be99-4606-8516-5e508b78cbbe"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f21d9978-40ac-452a-922e-9f515a4f85b0" name="PhasegridHome476_2_Ph1" originalIdInSource="4762">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="78e83400-8d48-4ba3-82da-8b1849f82880" name="In"/>
+          <port xsi:type="esdl:InPort" id="78e83400-8d48-4ba3-82da-8b1849f82880" name="In" connectedTo="209a6a5e-bd28-453f-8b12-8b4b2d1c9296"/>
           <port xsi:type="esdl:OutPort" id="afd3d5d1-d56c-4acc-b2b5-59926f8d56ac" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b77463c8-3951-45a9-8cd2-d23c9a90b907" name="PhasegridHome476_2_Ph2" originalIdInSource="4762">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="fe44f93c-18c9-4ba2-a827-f3f712564409" name="In"/>
+          <port xsi:type="esdl:InPort" id="fe44f93c-18c9-4ba2-a827-f3f712564409" name="In" connectedTo="b9ac9317-2a26-441b-b68b-4154801c6e25"/>
           <port xsi:type="esdl:OutPort" id="4335c585-3360-4f3d-93f2-82e087a0d165" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="8654a127-b2a2-48d9-8622-5a6c39364ce4" name="PhasegridHome476_2_Ph3" originalIdInSource="4762">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="23fa7b7a-be99-4606-8516-5e508b78cbbe" name="In"/>
+          <port xsi:type="esdl:InPort" id="23fa7b7a-be99-4606-8516-5e508b78cbbe" name="In" connectedTo="f6030371-b58b-43b6-8ff6-736a88916e88"/>
           <port xsi:type="esdl:OutPort" id="9180405b-10c6-4668-b93c-8d8575416d77" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="86.02" height="9.0" windowArea="20.1" doorArea="5.31" flatRoofArea="12.72" slantedRoofArea="48.15"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="3bc64731-3c06-4bbc-aed4-078289834b07" name="CableHome476_2" originalIdInSource="4762" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="bf411731-5dba-4cd0-90c7-bca8ab13cfb7" name="In" connectedTo="7bb8ff3a-25ab-4536-9396-b1cd926a1513"/>
@@ -11259,30 +11476,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98943970113183" lon="4.103095393829407"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="751bcdd7-1d5f-4c22-a9c8-d11f32baea17" name="Home478_1" originalIdInSource="4781" assetType="maisonnette_before_1964" energyLabel="LABEL_F">
+      <asset xsi:type="esdl:Building" id="751bcdd7-1d5f-4c22-a9c8-d11f32baea17" name="Home478_1" originalIdInSource="4781" assetType="maisonnette_before_1964" energyLabel="LABEL_F" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.98958761888924" lon="4.1001791224051765"/>
         <asset xsi:type="esdl:EConnection" id="caceb801-dff4-4721-a3bd-8379f7e7f01a" name="ConnectionHome478_1" originalIdInSource="4781" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="9e842231-7d73-47f4-b66d-8c5f12963087" name="In" connectedTo="e22831ca-3f3f-46ef-8364-b587603f5dd2"/>
-          <port xsi:type="esdl:OutPort" id="fa41aa41-ea5a-45d3-9dc6-6faae09c22bf" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="d32c0d11-64f3-47ac-95b1-6024f17cb30c" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="6a0922d2-b11a-400e-9822-bca6a6ba8fad" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="fa41aa41-ea5a-45d3-9dc6-6faae09c22bf" name="OutPh1" connectedTo="95a089c9-a9d5-47d0-a39b-9bcae32a20ec"/>
+          <port xsi:type="esdl:OutPort" id="d32c0d11-64f3-47ac-95b1-6024f17cb30c" name="OutPh2" connectedTo="13fd0dc5-9dc1-4eff-8e4d-4e790054aeeb"/>
+          <port xsi:type="esdl:OutPort" id="6a0922d2-b11a-400e-9822-bca6a6ba8fad" name="OutPh3" connectedTo="9478f347-ae60-4565-a099-90b9642fe477"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="18c7e674-b6d7-4975-8522-22a28902aa75" name="PhasegridHome478_1_Ph1" originalIdInSource="4781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="95a089c9-a9d5-47d0-a39b-9bcae32a20ec" name="In"/>
+          <port xsi:type="esdl:InPort" id="95a089c9-a9d5-47d0-a39b-9bcae32a20ec" name="In" connectedTo="fa41aa41-ea5a-45d3-9dc6-6faae09c22bf"/>
           <port xsi:type="esdl:OutPort" id="70e50faf-c9cd-4612-b998-256aee8af436" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="eb780a07-d542-406b-ba29-5776860ce6ef" name="PhasegridHome478_1_Ph2" originalIdInSource="4781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="13fd0dc5-9dc1-4eff-8e4d-4e790054aeeb" name="In"/>
+          <port xsi:type="esdl:InPort" id="13fd0dc5-9dc1-4eff-8e4d-4e790054aeeb" name="In" connectedTo="d32c0d11-64f3-47ac-95b1-6024f17cb30c"/>
           <port xsi:type="esdl:OutPort" id="3477d752-13c4-404f-9ab9-2a1ba97cddba" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="bd429d56-d5b1-4a69-92a3-bd960cfb74bd" name="PhasegridHome478_1_Ph3" originalIdInSource="4781">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9478f347-ae60-4565-a099-90b9642fe477" name="In"/>
+          <port xsi:type="esdl:InPort" id="9478f347-ae60-4565-a099-90b9642fe477" name="In" connectedTo="6a0922d2-b11a-400e-9822-bca6a6ba8fad"/>
           <port xsi:type="esdl:OutPort" id="ff1befd5-2a58-4241-953b-4f8a89760ef6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="20.29" height="11.0" windowArea="16.13" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="106d6f29-85b6-4891-955f-cd38b8d94693" name="CableHome478_1" originalIdInSource="4781" assetType="4x10Cu__VO_YMvKas" length="6.7">
         <port xsi:type="esdl:InPort" id="053a0e39-4a10-4fe9-add3-2e873248c966" name="In" connectedTo="92c8b172-6b74-4843-8415-d1f68172cca4"/>
@@ -11292,18 +11510,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.98958761888924" lon="4.1001791224051765"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="749bf742-da27-4c93-b992-a3dd9cc664ba" name="Home483_1" originalIdInSource="4831" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="749bf742-da27-4c93-b992-a3dd9cc664ba" name="Home483_1" originalIdInSource="4831" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_C" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         <asset xsi:type="esdl:EConnection" id="beeb072e-cb00-4664-8161-56db8a053348" name="ConnectionHome483_1" originalIdInSource="4831" assetType="1x25A" capacity="5750.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="cbcf683f-00fa-4aab-82b4-f970e37cf5c7" name="In" connectedTo="d38e7919-54dd-4be4-850c-77f75e2f9f72"/>
-          <port xsi:type="esdl:OutPort" id="41aa1c24-46ac-4947-95ab-fbc595a69e3c" name="OutPh2"/>
+          <port xsi:type="esdl:OutPort" id="41aa1c24-46ac-4947-95ab-fbc595a69e3c" name="OutPh2" connectedTo="c7961211-4cd5-4bcf-b271-0db38b55aa30"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="669f59d1-ea57-4225-b1bb-7d733dce2034" name="PhasegridHome483_1_Ph2" originalIdInSource="4831">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="c7961211-4cd5-4bcf-b271-0db38b55aa30" name="In"/>
+          <port xsi:type="esdl:InPort" id="c7961211-4cd5-4bcf-b271-0db38b55aa30" name="In" connectedTo="41aa1c24-46ac-4947-95ab-fbc595a69e3c"/>
           <port xsi:type="esdl:OutPort" id="206c2d84-a30f-4ac6-ac04-f66429029c5f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="b7166d2d-43b5-4d87-96f8-e9229f6d3fed" name="CableHome483_1" originalIdInSource="4831" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="28ce6824-6b5d-4437-91ef-d9f3e930d8f4" name="In" connectedTo="49ada60f-e2b9-4278-8b65-ac7cabd6f528"/>
@@ -11313,30 +11532,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.989639389044505" lon="4.0885294652767765"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d84c51e5-040e-4ec5-83a1-840dba1f137b" name="Home489_1" originalIdInSource="4891" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E">
+      <asset xsi:type="esdl:Building" id="d84c51e5-040e-4ec5-83a1-840dba1f137b" name="Home489_1" originalIdInSource="4891" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_E" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="52.01598183319244" lon="4.097090100696548"/>
         <asset xsi:type="esdl:EConnection" id="b6ab9c79-70d6-4442-a70a-e1368349a5bd" name="ConnectionHome489_1" originalIdInSource="4891" assetType="3x25A" capacity="17320.508075688773">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="492690aa-c4cd-4f76-8369-5c436109f1da" name="In" connectedTo="ebbdd011-6de9-4715-a3e2-a8f0f7915f65"/>
-          <port xsi:type="esdl:OutPort" id="da2fc5c4-604b-47f6-9fa9-9eff77343ffc" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="859e22a1-19dc-4e98-ba5c-33217b3f21d4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8708f66a-18b4-4249-97b5-80f69ac152b8" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="da2fc5c4-604b-47f6-9fa9-9eff77343ffc" name="OutPh1" connectedTo="172a29b2-4fa5-42bc-bce5-85106687f3c9"/>
+          <port xsi:type="esdl:OutPort" id="859e22a1-19dc-4e98-ba5c-33217b3f21d4" name="OutPh2" connectedTo="b5812c59-fff5-40d6-999c-755bb3d2ebce"/>
+          <port xsi:type="esdl:OutPort" id="8708f66a-18b4-4249-97b5-80f69ac152b8" name="OutPh3" connectedTo="9c0e9c57-e097-4d5d-9723-5baa17013f52"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="122427f8-bc7e-452e-be95-867563673186" name="PhasegridHome489_1_Ph1" originalIdInSource="4891">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="172a29b2-4fa5-42bc-bce5-85106687f3c9" name="In"/>
+          <port xsi:type="esdl:InPort" id="172a29b2-4fa5-42bc-bce5-85106687f3c9" name="In" connectedTo="da2fc5c4-604b-47f6-9fa9-9eff77343ffc"/>
           <port xsi:type="esdl:OutPort" id="f4ccf411-3e34-4d0c-821c-39f68a91953d" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="2cb96a03-2179-4c3f-9a67-a4da3417e9ba" name="PhasegridHome489_1_Ph2" originalIdInSource="4891">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b5812c59-fff5-40d6-999c-755bb3d2ebce" name="In"/>
+          <port xsi:type="esdl:InPort" id="b5812c59-fff5-40d6-999c-755bb3d2ebce" name="In" connectedTo="859e22a1-19dc-4e98-ba5c-33217b3f21d4"/>
           <port xsi:type="esdl:OutPort" id="747cff5a-c5a6-4f32-acf2-bb35ca486fb7" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="62f7363a-608f-43f6-ac9e-65885c07005f" name="PhasegridHome489_1_Ph3" originalIdInSource="4891">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="9c0e9c57-e097-4d5d-9723-5baa17013f52" name="In"/>
+          <port xsi:type="esdl:InPort" id="9c0e9c57-e097-4d5d-9723-5baa17013f52" name="In" connectedTo="8708f66a-18b4-4249-97b5-80f69ac152b8"/>
           <port xsi:type="esdl:OutPort" id="916b20d7-84c9-418a-9e94-8aab2e578729" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="7e1c1873-55f8-4b64-9880-1308ad87eebe" name="CableHome489_1" originalIdInSource="4891" assetType="4x10Cu__VO_YMvKas" length="11.3">
         <port xsi:type="esdl:InPort" id="1f9ac5eb-0ae6-477e-b750-af29a9631329" name="In" connectedTo="74cbe8ee-a18f-44ab-bf3f-bf3b4941f48a"/>
@@ -11346,30 +11566,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="52.01598183319244" lon="4.097090100696548"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="8438c48a-5afe-489e-84b0-23bc71aa4faa" name="Home491_1" originalIdInSource="4911" assetType="maisonnette_1975_1991" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="8438c48a-5afe-489e-84b0-23bc71aa4faa" name="Home491_1" originalIdInSource="4911" assetType="maisonnette_1975_1991" energyLabel="LABEL_C" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99895038006264" lon="4.053016577475479"/>
         <asset xsi:type="esdl:EConnection" id="a725a91b-c644-4884-927d-27415c403073" name="ConnectionHome491_1" originalIdInSource="4911" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="e3966ee2-90a8-42c1-b8eb-8b9da04183dd" name="In" connectedTo="889246c1-ed11-42a0-b325-92407d753d80"/>
-          <port xsi:type="esdl:OutPort" id="f957d12f-8e09-457f-8870-c40398162920" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="65a12b7f-1e85-46cb-87b9-056d6dd20bb4" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="74c9b345-cd50-4969-a9f9-e52366646899" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="f957d12f-8e09-457f-8870-c40398162920" name="OutPh1" connectedTo="50e61aed-262b-49a7-a357-b1f6a022f252"/>
+          <port xsi:type="esdl:OutPort" id="65a12b7f-1e85-46cb-87b9-056d6dd20bb4" name="OutPh2" connectedTo="ae4b42b4-c7ec-4e98-87d9-b9e76ec5957a"/>
+          <port xsi:type="esdl:OutPort" id="74c9b345-cd50-4969-a9f9-e52366646899" name="OutPh3" connectedTo="7be4ba45-8aaa-4029-ad72-183cb3c340f8"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="450851e0-634a-441d-88ef-53ab04f3cc1a" name="PhasegridHome491_1_Ph1" originalIdInSource="4911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="50e61aed-262b-49a7-a357-b1f6a022f252" name="In"/>
+          <port xsi:type="esdl:InPort" id="50e61aed-262b-49a7-a357-b1f6a022f252" name="In" connectedTo="f957d12f-8e09-457f-8870-c40398162920"/>
           <port xsi:type="esdl:OutPort" id="2c59a7a2-a132-4dad-b13e-8a4a365f4e5f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="27755762-7de2-4f04-aa16-60073304fce4" name="PhasegridHome491_1_Ph2" originalIdInSource="4911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae4b42b4-c7ec-4e98-87d9-b9e76ec5957a" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae4b42b4-c7ec-4e98-87d9-b9e76ec5957a" name="In" connectedTo="65a12b7f-1e85-46cb-87b9-056d6dd20bb4"/>
           <port xsi:type="esdl:OutPort" id="989c8d40-71a1-4f01-af50-bab38961e86f" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d38f222e-1d73-40b9-bb2a-a31efa8d660d" name="PhasegridHome491_1_Ph3" originalIdInSource="4911">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="7be4ba45-8aaa-4029-ad72-183cb3c340f8" name="In"/>
+          <port xsi:type="esdl:InPort" id="7be4ba45-8aaa-4029-ad72-183cb3c340f8" name="In" connectedTo="74c9b345-cd50-4969-a9f9-e52366646899"/>
           <port xsi:type="esdl:OutPort" id="ddc67dcb-725a-4375-8e77-1c9060c6a0ce" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="27.72" height="11.0" windowArea="11.78" doorArea="4.35" slantedRoofArea="31.935"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="990191a4-e2cb-4c1c-b014-d4ab33f46272" name="CableHome491_1" originalIdInSource="4911" assetType="4x16Cu_as16__VG_YMVK_asmb" length="1.0">
         <port xsi:type="esdl:InPort" id="a7c2844f-b5de-4972-bf4c-e1dce0383ae1" name="In" connectedTo="3ce707fa-0f4e-47d8-a206-cdb68dde743c"/>
@@ -11379,30 +11600,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99895038006264" lon="4.053016577475479"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="0e71d0f5-c05a-4bfa-9763-15ce78a28320" name="Home491_2" originalIdInSource="4912" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D">
+      <asset xsi:type="esdl:Building" id="0e71d0f5-c05a-4bfa-9763-15ce78a28320" name="Home491_2" originalIdInSource="4912" assetType="Rijwoning tussen_before_1964" energyLabel="LABEL_D" floorArea="97.87" buildingYear="1955" surfaceArea="44" numberOfFloors="3">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         <asset xsi:type="esdl:EConnection" id="e016c2d4-6f6d-493b-8a59-b77dd0e7626c" name="ConnectionHome491_2" originalIdInSource="4912" assetType="1x40A" capacity="9200.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="7e022c0b-2715-40cd-aeee-4eefe4dcba91" name="In" connectedTo="b8cdd319-5434-4f7a-a1b3-ca4761330bab"/>
-          <port xsi:type="esdl:OutPort" id="eb795b4b-40c8-4459-a21f-542b0e11045d" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="3e6bd868-2640-44d1-a8f3-9c132fb64889" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="8960b26b-6b97-44d3-a637-a20ce82add34" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="eb795b4b-40c8-4459-a21f-542b0e11045d" name="OutPh1" connectedTo="1486ad25-d8dd-4b57-ac3e-e1fcfae3988f"/>
+          <port xsi:type="esdl:OutPort" id="3e6bd868-2640-44d1-a8f3-9c132fb64889" name="OutPh2" connectedTo="8f096a41-8fe3-4ddb-a6d3-f0940fbdaaeb"/>
+          <port xsi:type="esdl:OutPort" id="8960b26b-6b97-44d3-a637-a20ce82add34" name="OutPh3" connectedTo="cb6764f8-7020-4d3f-9ad0-a1f04bf95380"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="f93b04e2-d250-4f2e-856f-4e62bdb59bfa" name="PhasegridHome491_2_Ph1" originalIdInSource="4912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1486ad25-d8dd-4b57-ac3e-e1fcfae3988f" name="In"/>
+          <port xsi:type="esdl:InPort" id="1486ad25-d8dd-4b57-ac3e-e1fcfae3988f" name="In" connectedTo="eb795b4b-40c8-4459-a21f-542b0e11045d"/>
           <port xsi:type="esdl:OutPort" id="4de0d334-4afb-4b39-bd77-cc8bf6e7b6d2" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="06727090-d178-43df-a3fc-48afc74e878f" name="PhasegridHome491_2_Ph2" originalIdInSource="4912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="8f096a41-8fe3-4ddb-a6d3-f0940fbdaaeb" name="In"/>
+          <port xsi:type="esdl:InPort" id="8f096a41-8fe3-4ddb-a6d3-f0940fbdaaeb" name="In" connectedTo="3e6bd868-2640-44d1-a8f3-9c132fb64889"/>
           <port xsi:type="esdl:OutPort" id="66cc9a84-4d16-44ae-9042-025585428d0e" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="42c5af35-1361-42d4-87f8-569eada21f33" name="PhasegridHome491_2_Ph3" originalIdInSource="4912">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="cb6764f8-7020-4d3f-9ad0-a1f04bf95380" name="In"/>
+          <port xsi:type="esdl:InPort" id="cb6764f8-7020-4d3f-9ad0-a1f04bf95380" name="In" connectedTo="8960b26b-6b97-44d3-a637-a20ce82add34"/>
           <port xsi:type="esdl:OutPort" id="f0f6342f-b060-426f-8d15-90b63c49b732" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="39.78" height="9.0" windowArea="19.86" doorArea="4.82" slantedRoofArea="48.0"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="fc7a62a9-ba19-4d9c-911f-beaaab6c4119" name="CableHome491_2" originalIdInSource="4912" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="e6e38ffb-05a4-435e-b229-878741586946" name="In" connectedTo="3ce707fa-0f4e-47d8-a206-cdb68dde743c"/>
@@ -11412,30 +11634,31 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="a90eb473-290a-4781-91eb-ef07136396cc" name="Home491_3" originalIdInSource="4913" assetType="maisonnette_before_1964" energyLabel="LABEL_C">
+      <asset xsi:type="esdl:Building" id="a90eb473-290a-4781-91eb-ef07136396cc" name="Home491_3" originalIdInSource="4913" assetType="maisonnette_before_1964" energyLabel="LABEL_C" floorArea="101.04" buildingYear="1964" surfaceArea="25" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         <asset xsi:type="esdl:EConnection" id="ae3ea1e5-d0c6-409c-b1e1-5539b946d782" name="ConnectionHome491_3" originalIdInSource="4913" assetType="3x50A" capacity="34641.016151377546">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="a007edc4-f40c-4b6a-89d9-393ed08a4206" name="In" connectedTo="579d9fef-a116-44d6-9fc4-f30b75914b7a"/>
-          <port xsi:type="esdl:OutPort" id="130cb105-0be9-4db7-99cb-d29c459d966b" name="OutPh1"/>
-          <port xsi:type="esdl:OutPort" id="40a91492-0517-4b50-bf55-14593facc4d3" name="OutPh2"/>
-          <port xsi:type="esdl:OutPort" id="279c7e1f-bca9-47d6-824a-0d36c8827ab6" name="OutPh3"/>
+          <port xsi:type="esdl:OutPort" id="130cb105-0be9-4db7-99cb-d29c459d966b" name="OutPh1" connectedTo="a8d95ea6-27c0-4cb6-b780-698ab19e0dcf"/>
+          <port xsi:type="esdl:OutPort" id="40a91492-0517-4b50-bf55-14593facc4d3" name="OutPh2" connectedTo="b9ea5a13-4e7d-4c14-905e-fe02a9f56b29"/>
+          <port xsi:type="esdl:OutPort" id="279c7e1f-bca9-47d6-824a-0d36c8827ab6" name="OutPh3" connectedTo="ae213989-56c4-43e9-b272-a7a09af47b26"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="d96e379f-237b-4bd9-83a0-36cd2f3ee389" name="PhasegridHome491_3_Ph1" originalIdInSource="4913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="a8d95ea6-27c0-4cb6-b780-698ab19e0dcf" name="In"/>
+          <port xsi:type="esdl:InPort" id="a8d95ea6-27c0-4cb6-b780-698ab19e0dcf" name="In" connectedTo="130cb105-0be9-4db7-99cb-d29c459d966b"/>
           <port xsi:type="esdl:OutPort" id="9abd11bc-2f33-47d7-bcc7-b4a63cccfaf0" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="87d9f914-2aa7-419a-9219-c0182aca6515" name="PhasegridHome491_3_Ph2" originalIdInSource="4913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="b9ea5a13-4e7d-4c14-905e-fe02a9f56b29" name="In"/>
+          <port xsi:type="esdl:InPort" id="b9ea5a13-4e7d-4c14-905e-fe02a9f56b29" name="In" connectedTo="40a91492-0517-4b50-bf55-14593facc4d3"/>
           <port xsi:type="esdl:OutPort" id="aa598f6f-12d4-4698-a1ad-f08f5cab2dec" name="Out"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="b08a23c2-e065-4b35-9d8e-ab842470f0ef" name="PhasegridHome491_3_Ph3" originalIdInSource="4913">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="160.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="ae213989-56c4-43e9-b272-a7a09af47b26" name="In"/>
+          <port xsi:type="esdl:InPort" id="ae213989-56c4-43e9-b272-a7a09af47b26" name="In" connectedTo="279c7e1f-bca9-47d6-824a-0d36c8827ab6"/>
           <port xsi:type="esdl:OutPort" id="294c3f71-66c4-43be-98fd-4e09629e361f" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="40.58" height="11.0" windowArea="17.919999999999998" doorArea="6.09" flatRoofArea="50.52"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="f2c31cde-c5f8-4887-bf2e-b3266a124429" name="CableHome491_3" originalIdInSource="4913" assetType="4x10Cu__VO_YMvKas" length="1.0">
         <port xsi:type="esdl:InPort" id="b8459a9a-c41e-4b70-8a4a-9cf618ad5ba7" name="In" connectedTo="3ce707fa-0f4e-47d8-a206-cdb68dde743c"/>
@@ -11445,18 +11668,19 @@
           <point xsi:type="esdl:Point" CRS="WGS84" lat="51.99912680175404" lon="4.0527200591599755"/>
         </geometry>
       </asset>
-      <asset xsi:type="esdl:Building" id="d08e78dd-ecd4-46ff-a2c6-7bc76a932182" name="Home496_1" originalIdInSource="4961" assetType="maisonnette_1975_1991" energyLabel="LABEL_B">
+      <asset xsi:type="esdl:Building" id="d08e78dd-ecd4-46ff-a2c6-7bc76a932182" name="Home496_1" originalIdInSource="4961" assetType="maisonnette_1975_1991" energyLabel="LABEL_B" floorArea="85.77" buildingYear="1983" surfaceArea="21" numberOfFloors="2">
         <geometry xsi:type="esdl:Point" CRS="WGS84" lat="51.989420624559855" lon="4.101348725237434"/>
         <asset xsi:type="esdl:EConnection" id="5d0143da-3cfb-4929-9cac-fe7a33f56da7" name="ConnectionHome496_1" originalIdInSource="4961" assetType="1x35A" capacity="8050.0">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="260.0" lon="52.0"/>
           <port xsi:type="esdl:InPort" id="80d4c3f9-88c7-43fe-ac99-e50331c5e624" name="In" connectedTo="c40294f6-bfe2-4122-808b-61de22f8d9ab"/>
-          <port xsi:type="esdl:OutPort" id="0b23d1d8-e7b3-4815-9461-b52364401885" name="OutPh2"/>
+          <port xsi:type="esdl:OutPort" id="0b23d1d8-e7b3-4815-9461-b52364401885" name="OutPh2" connectedTo="1ca6c50d-5379-48c1-94ff-7b3794f9a592"/>
         </asset>
         <asset xsi:type="esdl:ElectricityNetwork" id="92dbc23c-948b-4497-9d45-8934f4490f51" name="PhasegridHome496_1_Ph2" originalIdInSource="4961">
           <geometry xsi:type="esdl:Point" CRS="Simple" lat="360.0" lon="236.0"/>
-          <port xsi:type="esdl:InPort" id="1ca6c50d-5379-48c1-94ff-7b3794f9a592" name="In"/>
+          <port xsi:type="esdl:InPort" id="1ca6c50d-5379-48c1-94ff-7b3794f9a592" name="In" connectedTo="0b23d1d8-e7b3-4815-9461-b52364401885"/>
           <port xsi:type="esdl:OutPort" id="0d8026f4-bac0-40ba-9e10-bfe67caeb7b6" name="Out"/>
         </asset>
+        <buildinginformation xsi:type="esdl:BuildingStructureInformation" wallArea="18.48" height="11.0" windowArea="11.159999999999998" doorArea="4.35" slantedRoofArea="63.87"/>
       </asset>
       <asset xsi:type="esdl:ElectricityCable" id="cd45e0cb-fd31-4859-9165-d635a79ca0ba" name="CableHome496_1" originalIdInSource="4961" assetType="4x10Cu__VO_YMvKas" length="6.7">
         <port xsi:type="esdl:InPort" id="24b5a93c-cbdf-4b9c-9284-57957a5afc69" name="In" connectedTo="3b46e24a-60c4-46f3-93e7-ae1a36a56126"/>

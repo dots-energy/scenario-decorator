@@ -29,6 +29,14 @@ class PvSpecification:
 
 @dataclass_json
 @dataclass
+class HybridHeatpumpSpecification:
+    fraction_houses_hhp : float = 0.0
+    gas_heater_efficiency : float = 0.96
+    gass_thermal_power_mean : float = 18000.0
+    gass_thermal_power_std : float = 0.0
+
+@dataclass_json
+@dataclass
 class BatterySpecification:
     fraction_houses_pv_battery : float = 0.0
     capacity_kwh_mean : float = 10.0

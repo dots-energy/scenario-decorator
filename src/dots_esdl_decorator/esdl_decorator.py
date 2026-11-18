@@ -13,7 +13,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from esdl.esdl_handler import EEnum, EnergySystemHandler
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationMetaData, BuildingIsolationSpecification, EvSpecification, EvProfileSpecification, HeatProfileSpecification, HeatingProfileMetaData, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationMetaData, BuildingIsolationSpecification, EvSpecification, EvProfileSpecification, HeatProfileSpecification, HeatingProfileMetaData, HybridHeatpumpSpecification, ProfileMetaData, PvSpecification, TouSpecification, WeatherDataSpecification
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -428,7 +428,8 @@ class EsdlBuilder:
         heatpump.port.append(outport_buffer)
 
 
-    def add_heat_pump_to_houses(self, fraction_houses_hp : float, fraction_houses_hhp : float, hw_profile_names : list[str]):
+    def add_heat_pump_to_houses(self, fraction_houses_hp : float, hybrid_heatpump_specification : HybridHeatpumpSpecification, hw_profile_names : list[str]):
+        fraction_houses_hhp = hybrid_heatpump_specification.fraction_houses_hhp
         if fraction_houses_hhp + fraction_houses_hp > 1.0:
             raise ValueError("Fraciton of houses for heatpump and hybrid heatpump should at most sum to 1.0")
 
@@ -486,7 +487,12 @@ class EsdlBuilder:
                 elif i in houses_indices_hhp:
     
                     heat_pump = HybridHeatPump(name='hhp_' + house.name, id=str(uuid.uuid4()), powerFactor=0.98,
-                                               assetType='air_water', heatPumpThermalPower=10000.0, gasHeaterThermalPower=18000.0)
+                                               assetType='air_water', heatPumpThermalPower=10000.0,
+                                               gasHeaterEfficiency=hybrid_heatpump_specification.gas_heater_efficiency,
+                                               gasHeaterThermalPower=float(self.rng.normal(
+                                                   hybrid_heatpump_specification.gass_thermal_power_mean,
+                                                   hybrid_heatpump_specification.gass_thermal_power_std,
+                                               )))
                     if isolation_params is not None and not isolation_params.empty:
                         w_power = float(isolation_params.iloc[0][self.isolation_params_data.spec.hybridheatPumpThermalPower_col])
                         sh_buffer_size = float(isolation_params.iloc[0][self.isolation_params_data.spec.hhp_sh_buffer_volume_col])
@@ -789,7 +795,11 @@ def main() -> int:
     parse_isolation_parameters(params, esdl_decorator)
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
-    fraction_houses_hhp = params.get('fraction_houses_hhp', 0.0)
+    hybrid_heatpump_specification_params = params.get(
+        'hybrid_heatpump_specification',
+        {'fraction_houses_hhp': params.get('fraction_houses_hhp', 0.0)},
+    )
+    hybrid_heatpump_specification = HybridHeatpumpSpecification.from_dict(hybrid_heatpump_specification_params)
     fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
 
     congestion_management_active = params.get('congestion_management_active', False)
@@ -803,7 +813,7 @@ def main() -> int:
         ]
 
     esdl_decorator.add_pvs_and_batteries_to_houses(pv_specification, battery_specification)
-    esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp, dhw_profile_names)
+    esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, hybrid_heatpump_specification, dhw_profile_names)
     ev_profile_params : EvProfileSpecification =  EvProfileSpecification.from_dict(params.get('ev_profiles', {}))
     esdl_decorator.add_ev_chargingstation(ev_specification, ev_profile_params)
     esdl_decorator.add_econnection_information(fraction_houses_dyn)

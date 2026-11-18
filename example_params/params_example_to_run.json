@@ -14,12 +14,18 @@
     "harmonize_profiles_to_year" : 2050,
     "target_days": 365,
     "fraction_houses_hp" : 0.23,
-    "fraction_houses_hhp" : 0.77,
+    "hybrid_heatpump_specification" : {
+        "fraction_houses_hhp" : 0.77,
+        "gas_heater_efficiency" : 0.96,
+        "gass_thermal_power_mean" : 18000.0,
+        "gass_thermal_power_std" : 0.0
+    },
     "fraction_houses_ev" : 0.3,
     "gass_price_eur_m3" : 1.0,
     "defalut_lon" : 51.532534,
     "defalut_lat" : 3.882267,
     "congestion_management_active" : false,
+    "fraction_houses_dyn" : 1.0,
     "weather_data" : {
         "path": "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/weather-data.csv",
         "soil_temperature_column": "soil_temperature_celcius",
@@ -115,7 +121,7 @@
           "profile_file": "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/heat_profiles/maisonnette_1965_1974.csv"
         },
         {
-          "profile_name": "mansionette_1975_1991",
+          "profile_name": "maisonnette_1975_1991",
           "profile_file": "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/heat_profiles/maisonnette_1975_1991.csv"
         },
         {
@@ -131,7 +137,7 @@
           "profile_file": "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/heat_profiles/maisonnette_2015_2018.csv"
         },
         {
-          "profile_name": "mansionette_before_1964",
+          "profile_name": "maisonnette_before_1964",
           "profile_file": "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/heat_profiles/maisonnette_before_1965.csv"
         },
         {
@@ -218,7 +224,7 @@
     "base_load_profiles" : [
         {
             "profile_file" : "C:/Users/20180029/OneDrive - TU Eindhoven/MS_network_generator/Data/ISIE/ISIE/unnormalized_profiles.csv",
-            "normalize" : false
+            "normalize" : true
         }
     ],
     "ev_profiles" : {
@@ -231,13 +237,14 @@
     },
     "ev_specification" : {
         "fraction_houses_ev" : 0.3,
-        "min_charge_rate_kwh" : 4.2,
+        "min_charge_rate_kwh" : 1.4,
         "min_soc_percentage" : 0.3,
         "max_soc_kwh" : 75,
         "efficiency" : 0.95
     },
     "building_isolation" : {
         "isolation_params_file" : "test/input_files/building_isolation_params.csv",
+        "asset_type_col" : "ID",
         "building_year_col" : "buildingYear",
         "rcFloor_col" : "rcFloor",
         "rcRoof_col" : "rcRoof",
@@ -245,7 +252,9 @@
         "uDoor_col" : "uDoor",
         "uWindow_col" : "uWindow",
         "heatPumpThermalPower_col" : "heatPumpThermalPower",
-        "sh_buffer_volume_col" : "sh_buffer_volume",
-        "dhw_buffer_volume_col" : "dhw_buffer_volume"
+        "sh_buffer_volume_hp_col" : "sh_buffer_volume",
+        "dhw_buffer_volume_hp_col" : "dhw_buffer_volume",
+        "hybridheatPumpThermalPower_col" : "hybridheatPumpThermalPower",
+        "hhp_sh_buffer_volume_col" : "hhp_sh_buffer_volume"
     }
 }

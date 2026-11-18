@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 from esdl import Battery, Building, BuildingStructureInformation, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvProfileSpecification, EvSpecification, HeatProfileSpecification, PvSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvProfileSpecification, EvSpecification, HeatProfileSpecification, HybridHeatpumpSpecification, PvSpecification, WeatherDataSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder, parse_isolation_parameters
 
 class Test(unittest.TestCase):
@@ -53,17 +53,31 @@ class Test(unittest.TestCase):
     def test_add_hp_counts_houses(self):
 
         fraction_houses_hp = 0.5
-        fraction_houses_hhp = 0.5
+        hybrid_heatpump_specification = HybridHeatpumpSpecification(
+            fraction_houses_hhp=0.5,
+            gas_heater_efficiency=0.91,
+            gass_thermal_power_mean=16000.0,
+            gass_thermal_power_std=0.0,
+        )
 
-        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, fraction_houses_hhp, ['profile1', 'profile2'])
+        self.esdl_decorator.add_heat_pump_to_houses(fraction_houses_hp, hybrid_heatpump_specification, ['profile1', 'profile2'])
 
         houses_with_heatpump = self.get_amount_of_assets_with_type_in_building(HeatPump)
         houses_with_heatpump_hhp = self.get_amount_of_assets_with_type_in_building(HybridHeatPump)
 
         expected_hp = round(fraction_houses_hp * self.n_buildings)
-        expected_hpp = round(fraction_houses_hhp * self.n_buildings)
+        expected_hpp = round(hybrid_heatpump_specification.fraction_houses_hhp * self.n_buildings)
         self.assertEqual(houses_with_heatpump, expected_hp)
         self.assertEqual(houses_with_heatpump_hhp, expected_hpp)
+        hybrid_heatpumps = [
+            asset
+            for building in self.esdl_decorator.energy_system.eAllContents()
+            if isinstance(building, Building)
+            for asset in building.asset
+            if isinstance(asset, HybridHeatPump)
+        ]
+        self.assertTrue(all(asset.gasHeaterEfficiency == 0.91 for asset in hybrid_heatpumps))
+        self.assertTrue(all(asset.gasHeaterThermalPower == 16000.0 for asset in hybrid_heatpumps))
 
     def test_add_ev_counts_houses(self):
 

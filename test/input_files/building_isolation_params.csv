@@ -1,38 +1,37 @@
-ID,type,buildingYear,rcFloor,rcRoof,rcWall,uDoor,uWindow,heatPumpThermalPower,sh_buffer_volume,dhw_buffer_volume
-vrijstaande woning_before_1964,vrijstaande woning,1964,3.5,3.5,1.7,1.4,1.4,14000,280,200
-vrijstaande woning_1965_1974,vrijstaande woning,1970,3.5,3.5,1.7,1.4,1.4,14000,280,200
-vrijstaande woning_1975_1991,vrijstaande woning,1983,3.5,3.5,1.7,1.4,1.4,14000,280,200
-vrijstaande woning_1992_2005,vrijstaande woning,1998,3.5,3.5,2.5,1.4,1.4,14000,280,200
-vrijstaande woning_2006_2014,vrijstaande woning,2010,3.5,3.5,2.5,1.4,1.4,11000,220,200
-vrijstaande woning_2015_2018,vrijstaande woning,2016,3.5,6,4.5,1.4,1.4,11000,220,200
-2 onder 1 kap_before_1964,2 onder 1 kap,1964,3.5,3.5,1.7,1.4,1.4,12000,240,200
-2 onder 1 kap_1965_1974,2 onder 1 kap,1970,3.5,3.5,1.7,1.4,1.4,12000,240,200
-2 onder 1 kap_1975_1991,2 onder 1 kap,1983,3.5,3.5,1.7,1.4,1.4,12000,240,200
-2 onder 1 kap_1992_2005,2 onder 1 kap,1998,3.5,3.5,2.5,1.4,1.4,12000,240,200
-2 onder 1 kap_2006_2014,2 onder 1 kap,2010,3.5,3.5,2.5,1.4,1.4,10000,200,200
-2 onder 1 kap_2015_2018,2 onder 1 kap,2016,3.5,6,4.5,1.4,1.4,10000,200,200
-rijwoning hoek_before_1964,rijwoning hoek,1970,3.5,3.5,1.7,1.4,1.4,11000,220,200
-rijwoning hoek_1965_1974,rijwoning hoek,1970,3.5,3.5,1.7,1.4,1.4,11000,220,200
-rijwoning hoek_1975_1991,rijwoning hoek,1983,3.5,3.5,1.7,1.4,1.4,11000,220,200
-rijwoning hoek_1992_2005,rijwoning hoek,1998,3.5,3.5,2.5,1.4,1.4,11000,220,200
-rijwoning hoek_2006_2014,rijwoning hoek,2010,3.5,3.5,2.5,1.4,1.4,8500,170,200
-rijwoning hoek_2015_2018,rijwoning hoek,2016,3.5,6,4.5,1.4,1.4,8500,170,200
-rijwoning tussen_before_1946,rijwoning tussen,1945,3.5,3.5,1.7,1.4,1.4,10000,200,200
-rijwoning tussen_1946_1964,rijwoning tussen,1955,3.5,3.5,1.7,1.4,1.4,10000,200,200
-rijwoning tussen_1965_1974,rijwoning tussen,1970,3.5,3.5,1.7,1.4,1.4,10000,200,200
-rijwoning tussen_1975_1991,rijwoning tussen,1983,3.5,3.5,1.7,1.4,1.4,10000,200,200
-rijwoning tussen_1992_2005,rijwoning tussen,1998,3.5,3.5,2.5,1.4,1.4,10000,200,200
-rijwoning tussen_2006_2014,rijwoning tussen,2010,3.5,3.5,2.5,1.4,1.4,8000,160,200
-rijwoning tussen_2015_2018,rijwoning tussen,2016,3.5,6,4.5,1.4,1.4,8000,160,200
-maisonnette_before_1964,maisonnette,1964,3.5,3.5,1.7,1.4,1.4,8500,170,200
-maisonnette_1965_1974,maisonnette,1970,3.5,3.5,1.7,1.4,1.4,8500,170,200
-maisonnette_1975_1991,maisonnette,1983,3.5,3.5,1.7,1.4,1.4,8500,170,200
-maisonnette_1992_2005,maisonnette,1998,3.5,3.5,2.5,1.4,1.4,8500,170,200
-maisonnette_2006_2014,maisonnette,2010,3.5,3.5,2.5,1.4,1.4,8500,170,200
-maisonnette_2015_2018,maisonnette,2016,3.5,6,4.5,1.4,1.4,7500,150,200
-appartement_1964,appartement,1955,3.5,3.5,1.7,1.4,1.4,8500,170,200
-appartement_1965_1974,appartement,1970,3.5,3.5,1.7,1.4,1.4,8500,170,200
-appartement_1975_1991,appartement,1983,3.5,3.5,1.7,1.4,1.4,8500,170,200
-appartement_1992_2005,appartement,1998,3.5,3.5,2.5,1.4,1.4,8500,170,200
-appartement_2006_2014,appartement,2010,3.5,3.5,2.5,1.4,1.4,8000,160,200
-appartement_2015_2018,appartement,2016,3.5,6,4.5,1.4,1.4,7000,140,200
+ID,type,buildingYear,rcFloor,rcRoof,rcWall,uDoor,uWindow,heatPumpThermalPower,sh_buffer_volume,dhw_buffer_volume,hybridheatPumpThermalPower,hhp_sh_buffer_volume
+vrijstaande woning_before_1964,vrijstaande woning,1964,3.5,3.5,1.7,1.4,1.4,14000,0.28,0.2,8000,0.16
+vrijstaande woning_1965_1974,vrijstaande woning,1970,3.5,3.5,1.7,1.4,1.4,14000,0.28,0.2,8000,0.16
+vrijstaande woning_1975_1991,vrijstaande woning,1983,3.5,3.5,1.7,1.4,1.4,14000,0.28,0.2,8000,0.16
+vrijstaande woning_1992_2005,vrijstaande woning,1998,3.5,3.5,2.5,1.4,1.4,14000,0.28,0.2,8000,0.16
+vrijstaande woning_2006_2014,vrijstaande woning,2010,3.5,3.5,2.5,1.4,1.4,11000,0.22,0.2,8000,0.16
+vrijstaande woning_2015_2018,vrijstaande woning,2016,3.5,6,4.5,1.4,1.4,11000,0.22,0.2,8000,0.16
+2 onder 1 kap woning_before_1964,2 onder 1 kap,1964,3.5,3.5,1.7,1.4,1.4,12000,0.24,0.2,6000,0.12
+2 onder 1 kap woning_1965_1974,2 onder 1 kap,1970,3.5,3.5,1.7,1.4,1.4,12000,0.24,0.2,6000,0.12
+2 onder 1 kap woning_1975_1991,2 onder 1 kap,1983,3.5,3.5,1.7,1.4,1.4,12000,0.24,0.2,6000,0.12
+2 onder 1 kap woning_1992_2005,2 onder 1 kap,1998,3.5,3.5,2.5,1.4,1.4,12000,0.24,0.2,6000,0.12
+2 onder 1 kap woning_2006_2014,2 onder 1 kap,2010,3.5,3.5,2.5,1.4,1.4,10000,0.2,0.2,6000,0.12
+2 onder 1 kap woning_2015_2018,2 onder 1 kap,2016,3.5,6,4.5,1.4,1.4,10000,0.2,0.2,6000,0.12
+rijwoning hoek_before_1964,rijwoning hoek,1970,3.5,3.5,1.7,1.4,1.4,11000,0.22,0.2,5000,0.1
+rijwoning hoek_1965_1974,rijwoning hoek,1970,3.5,3.5,1.7,1.4,1.4,11000,0.22,0.2,5000,0.1
+rijwoning hoek_1975_1991,rijwoning hoek,1983,3.5,3.5,1.7,1.4,1.4,11000,0.22,0.2,5000,0.1
+rijwoning hoek_1992_2005,rijwoning hoek,1998,3.5,3.5,2.5,1.4,1.4,11000,0.22,0.2,5000,0.1
+rijwoning hoek_2006_2014,rijwoning hoek,2010,3.5,3.5,2.5,1.4,1.4,8500,0.17,0.2,5000,0.1
+rijwoning hoek_2015_2018,rijwoning hoek,2016,3.5,6,4.5,1.4,1.4,8500,0.17,0.2,5000,0.1
+rijwoning tussen_before_1964,rijwoning tussen,1955,3.5,3.5,1.7,1.4,1.4,10000,0.2,0.2,4000,0.08
+rijwoning tussen_1965_1974,rijwoning tussen,1970,3.5,3.5,1.7,1.4,1.4,10000,0.2,0.2,4000,0.08
+rijwoning tussen_1975_1991,rijwoning tussen,1983,3.5,3.5,1.7,1.4,1.4,10000,0.2,0.2,4000,0.08
+rijwoning tussen_1992_2005,rijwoning tussen,1998,3.5,3.5,2.5,1.4,1.4,10000,0.2,0.2,4000,0.08
+rijwoning tussen_2006_2014,rijwoning tussen,2010,3.5,3.5,2.5,1.4,1.4,8000,0.16,0.2,4000,0.08
+rijwoning tussen_2015_2018,rijwoning tussen,2016,3.5,6,4.5,1.4,1.4,8000,0.16,0.2,4000,0.08
+maisonnette_before_1964,maisonnette,1964,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+maisonnette_1965_1974,maisonnette,1970,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+maisonnette_1975_1991,maisonnette,1983,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+maisonnette_1992_2005,maisonnette,1998,3.5,3.5,2.5,1.4,1.4,8500,0.17,0.2,4000,0.08
+maisonnette_2006_2014,maisonnette,2010,3.5,3.5,2.5,1.4,1.4,8500,0.17,0.2,4000,0.08
+maisonnette_2015_2018,maisonnette,2016,3.5,6,4.5,1.4,1.4,7500,0.15,0.2,4000,0.08
+appartement_before_1964,appartement,1955,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+appartement_1965_1974,appartement,1970,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+appartement_1975_1991,appartement,1983,3.5,3.5,1.7,1.4,1.4,8500,0.17,0.2,4000,0.08
+appartement_1992_2005,appartement,1998,3.5,3.5,2.5,1.4,1.4,8500,0.17,0.2,4000,0.08
+appartement_2006_2014,appartement,2010,3.5,3.5,2.5,1.4,1.4,8000,0.16,0.2,4000,0.08
+appartement_2015_2018,appartement,2016,3.5,6,4.5,1.4,1.4,7000,0.14,0.2,4000,0.08

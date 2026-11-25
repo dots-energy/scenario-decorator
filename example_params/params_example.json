@@ -54,7 +54,8 @@
         {
             "profile_name" : "test_name_hw",
             "profile_file" : "test/input_files/dhw_profiles_example.csv",
-            "amount_of_profiles" : 5
+            "amount_of_profiles" : 5,
+            "unit" : "L/s"
         }
     ],
     "space_heating_profiles" : [

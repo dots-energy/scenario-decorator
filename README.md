@@ -29,6 +29,12 @@ Below an overview of all paramters and their description can be found. Some gene
         "gass_thermal_power_mean" : 18000.0, // mean gas heater thermal power
         "gass_thermal_power_std" : 0.0 // standard deviation of gas heater thermal power
     },
+    "econnection_specification" : {
+        "fraction_houses_dyn" : 0.5, // fraction of houses with a dynamic energy contract
+        "flat_rate_dyn" : 0.35, // flat rate for a dynamic contract typically the energy tax per kwh
+        "static_price_contract" :  0.08, // the static price when having a fixed energy contract
+        "fraction_houses_ems" : 0.5 // fraction of houses with an energy management system (ems)
+    },
     "gass_price_eur_m3" : 1.0, // the assumed global gass price per m3
     "defalut_lon" : 51.532534, // default longitude for the location of rooftop pv
     "defalut_lat" : 3.882267, // default latitude for the location of rooftop pv
@@ -248,12 +254,12 @@ The EV `unit` parameter specifies the unit of `energy_demand_column`; it does no
 
 ### Time-of-use tariff
 
-Each row describes a tariff interval and its weight. The current parser expects recurring month/day and time values in `MM-DDTHH:MM` form (without a year), as shown here.
+Each row describes a tariff interval and its weight. The current parser expects recurring year/month/day and time values in `YYYY-MM-DDTHH:MM` form, as shown here.
 
 | from_tou_month_hour_val | to_tou_month_hour_val | tou_weight |
 | --- | --- | ---: |
-| 01-01T00:00 | 01-01T01:00 | 0.7 |
-| 01-01T01:00 | 01-01T07:00 | 0.5 |
+| 2000-01-01T00:00 | 01-01T01:00 | 0.7 |
+| 2000-01-01T01:00 | 01-01T07:00 | 0.5 |
 
 ### Datetime format
 

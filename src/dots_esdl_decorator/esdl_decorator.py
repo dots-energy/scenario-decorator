@@ -18,7 +18,7 @@ from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, Batter
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 
 
-def _parse_esdl_unit(unit: str, expected_physical_quantity: str | None = None) -> QuantityAndUnitType:
+def _parse_esdl_unit(unit: str, expected_physical_quantity: str | None = None) -> QuantityAndUnitType | None:
     unit_definitions = {
         "W": ("POWER", "WATT", None),
         "kW": ("POWER", "WATT", "KILO"),
@@ -33,8 +33,8 @@ def _parse_esdl_unit(unit: str, expected_physical_quantity: str | None = None) -
     }
     unit = unit.strip()
     if unit not in unit_definitions:
-        supported_units = ", ".join(unit_definitions)
-        raise ValueError(f"Unsupported unit '{unit}'. Supported units: {supported_units}")
+        logging.warning(f"Unsupported unit '{unit}' in esdl, setting unit in description")
+        return None
 
     physical_quantity, unit_name, multiplier = unit_definitions[unit]
     if expected_physical_quantity is not None and physical_quantity != expected_physical_quantity:
@@ -127,9 +127,7 @@ class EsdlBuilder:
         profile_start = min_date
         if self.harmonize_profiles_to_year is not None:
             target_start = min_date.replace(
-                    year=self.harmonize_profiles_to_year,
-                    month=1,
-                    day=1,
+                    year=self.harmonize_profiles_to_year
                 )
             target_day_of_week = target_start.weekday()
             days_to_shift = (target_day_of_week - min_date.weekday()) % 7
@@ -142,7 +140,7 @@ class EsdlBuilder:
             else:
                 samples_to_shift = days_to_shift * samples_per_day
                 values = values[samples_to_shift:] + values[:samples_to_shift]
-            profile_start = target_start
+            profile_start = profile_start.replace(year=self.harmonize_profiles_to_year)
 
         timeseries_profile = TimeSeriesProfile(startDateTime=profile_start, timestep=delta_t)
         timeseries_profile.profileQuantityAndUnit = unit
@@ -238,13 +236,8 @@ class EsdlBuilder:
         )
         cols = self.rng.choice(column_choices, size=amount_of_profiles_to_chose)
         for col, temp in zip(cols, temps):
-            quantity_and_unit = None
-            description = ""
-            if heating_demand_type == HeatDemandTypeEnum.from_string('SPACE_HEATING'):
-                quantity_and_unit = _parse_esdl_unit(heat_profile_specification.unit)
-            if heating_demand_type == HeatDemandTypeEnum.from_string('HOT_TAPWATER'):
-                description = "Unit: L/S"
-            
+            quantity_and_unit = _parse_esdl_unit(heat_profile_specification.unit)
+
             time_series_profile = self.create_time_series_profile_from_df(heat_profiles, heat_profiles.columns[col], quantity_and_unit, target_days=self.target_days)
             comfort_range = 4.0
             heating_demand = HeatingDemand(type=heating_demand_type, minTemperature=temp, maxTemperature=temp + comfort_range)
@@ -256,7 +249,7 @@ class EsdlBuilder:
             heating_demand.name = esdl_heat_profile_name
             in_port = InPort(id=str(uuid.uuid4()), name="In")
             heating_demand.port.append(in_port)
-            heating_demand.description = description
+            heating_demand.description = f"Unit: {heat_profile_specification.unit}"
             heating_demand.port.append(OutPort(id=str(uuid.uuid4()), name="Out"))
             heating_demand.port[1].profile.append(time_series_profile)
             self.heat_profiles_mapping[heat_profile_name].ports.append(in_port)
@@ -276,12 +269,13 @@ class EsdlBuilder:
         cols = column_choices if self.amount_of_connections >= len(column_choices) else self.rng.choice(column_choices, size=self.amount_of_connections, replace=False )
 
         for col_name in cols:
-            quantity_and_unit = _parse_esdl_unit(base_load_profile_specification.unit)
+            quantity_and_unit = _parse_esdl_unit(base_load_profile_specification.unit, expected_physical_quantity="POWER")
+
             time_series_profile = self.create_time_series_profile_from_df(base_load_profiles, col_name, quantity_and_unit, target_days=self.target_days)
             electricity_demand = ElectricityDemand(id=str(uuid.uuid4()))
             esdl_base_load_profile_name = f"base_load_{col_name}"
 
-            electricity_demand.description = esdl_base_load_profile_name
+            electricity_demand.description = f"{esdl_base_load_profile_name}, Unit: {base_load_profile_specification.unit}"
             electricity_demand.name = f"Total: {totals[col_name]} kwh"
             electricity_demand.powerFactor = 0.95
             in_port = InPort(id=str(uuid.uuid4()), name="In")
@@ -626,8 +620,8 @@ class EsdlBuilder:
 
     def add_tou_measure(self, tou_spec : TouSpecification):
         tou_df = pd.read_csv(tou_spec.profile_file)
-        tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='%m-%dT%H:%M')
-        tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='%m-%dT%H:%M')
+        tou_df[tou_spec.from_date_time_col] = pd.to_datetime(tou_df[tou_spec.from_date_time_col], format='ISO8601')
+        tou_df[tou_spec.to_date_time_col] = pd.to_datetime(tou_df[tou_spec.to_date_time_col], format='ISO8601')
 
         tou_measure = Measure(name = "time of use", id=str(uuid.uuid4()))
         cost_information = CostInformation(id=str(uuid.uuid4()), name=f"time of use, fixed costs: €{tou_spec.fixed_tou_rate_eur}")

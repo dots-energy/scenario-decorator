@@ -4,9 +4,9 @@ import pandas as pd
 import unittest
 from unittest.mock import patch
 
-from esdl import Battery, Building, BuildingStructureInformation, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, PVInstallation, TimeSeriesProfile
+from esdl import Battery, Building, BuildingStructureInformation, EVChargingStation, ElectricityDemand, HeatDemandTypeEnum, HeatPump, HybridHeatPump, Measure, PVInstallation, TimeSeriesProfile
 
-from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvProfileSpecification, EvSpecification, HeatProfileSpecification, HybridHeatpumpSpecification, PvSpecification, WeatherDataSpecification
+from dots_esdl_decorator.dataclasses import BaseLoadProfileSpecification, BatterySpecification, BuildingIsolationSpecification, EvProfileSpecification, EvSpecification, HeatProfileSpecification, HybridHeatpumpSpecification, PvSpecification, TouSpecification, WeatherDataSpecification
 from dots_esdl_decorator.esdl_decorator import EsdlBuilder, parse_isolation_parameters
 
 class Test(unittest.TestCase):
@@ -31,9 +31,6 @@ class Test(unittest.TestCase):
                 if any(isinstance(a, asset_type) for a in e.asset):
                     ret_val += 1
         return ret_val
-
-    def tearDown(self):
-        return super().tearDown()
 
     def test_add_pvs_and_batteries_counts_houses(self):
 
@@ -131,14 +128,13 @@ class Test(unittest.TestCase):
         )
         buildings = [asset for asset in self.esdl_decorator.energy_system.eAllContents() if isinstance(asset, Building)]
         for building in buildings:
-            building.assetType = "vrijstaande woning_before_1965"
+            building.assetType = "vrijstaande woning_before_1964"
 
         self.esdl_decorator.add_building_isolation(specification)
 
         self.assertEqual(len(buildings), self.n_buildings)
-        self.assertTrue(all(building.buildingYear == 1964 for building in buildings))
-        self.assertTrue(all(len(building.buildinginformation) == 1 for building in buildings))
-        building_information : BuildingStructureInformation = buildings[0].buildinginformation[0]
+        self.assertTrue(all(len(building.buildinginformation) == 2 for building in buildings))
+        building_information : BuildingStructureInformation = buildings[0].buildinginformation[1]
         self.assertIsInstance(building_information, BuildingStructureInformation)
         self.assertAlmostEqual(building_information.rcFloor, 3.5)
         self.assertAlmostEqual(building_information.rcRoof, 3.5)
@@ -172,8 +168,8 @@ class Test(unittest.TestCase):
         sh_spec = HeatProfileSpecification(test_profiles_file, "sh", 2, "kW")
         self.esdl_decorator.add_heat_profiles(sh_spec, HeatDemandTypeEnum.from_string("SPACE_HEATING"))
         heating_demands = self.esdl_decorator.heat_profiles_mapping['sh'].demands
-        heating_demands_18_degrees = [demand for demand in heating_demands if demand.minTemperature == 18 and demand.maxTemperature == 18]
-        heating_demands_21_degrees = [demand for demand in heating_demands if demand.minTemperature == 21 and demand.maxTemperature == 21]
+        heating_demands_18_degrees = [demand for demand in heating_demands if demand.minTemperature == 18 and demand.maxTemperature == 22]
+        heating_demands_21_degrees = [demand for demand in heating_demands if demand.minTemperature == 21 and demand.maxTemperature == 25]
         self.assertEqual(len(heating_demands), 2)
         self.assertEqual(len(heating_demands_18_degrees), 1)
         self.assertEqual(len(heating_demands_21_degrees), 1)
@@ -219,7 +215,11 @@ class Test(unittest.TestCase):
 
 
     def test_add_tou(self):
-        pass
+        test_tou_file = Path(__file__).parent / "input_files" / "tou_dataset.csv"
+        self.esdl_decorator.add_tou_measure(TouSpecification(test_tou_file, 0.60, "from_tou_month_hour_val", "to_tou_month_hour_val", "tou_weight"))
+        measures = [obj for obj in self.esdl_decorator.energy_system.eAllContents() if isinstance(obj, Measure)]
+        self.assertEqual(len(measures), 1)
+        self.assertEqual(len(measures[0].costInformation.variableOperationalCosts.element), 66)
 
     def test_add_base_load_profiles(self):
         test_profiles_file = Path(__file__).parent / "input_files" / "base_load_profiles_example.csv"
@@ -234,7 +234,7 @@ class Test(unittest.TestCase):
         for e_demand in e_demands:
             time_series_profile = e_demand.port[1].profile[0]
             total_value = float(e_demand.name.split(" ")[1])
-            col_name = e_demand.description.split("_")[-1]
+            col_name = e_demand.description.split("_")[-1].split(",")[0]
             for value, expected in zip(time_series_profile.values, profiles_df[col_name]):
                 self.assertAlmostEqual(value * total_value, expected, places=2)
 
@@ -246,7 +246,7 @@ class Test(unittest.TestCase):
 
         market_profile : TimeSeriesProfile = esdl_decorator.energy_system.services.service[0].marketPrice
 
-        self.assertEqual(market_profile.startDateTime, datetime(harmonize_year, 1, 1, 0, 0))
+        self.assertEqual(market_profile.startDateTime, datetime(harmonize_year, 3, 1, 0, 0))
         self.assertEqual(market_profile.values[0], 130.01)
         self.assertEqual(market_profile.values[-1], 124.22)
 

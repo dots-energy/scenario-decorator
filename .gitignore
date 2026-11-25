@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+example_params/params_example_to_run.json
+example_params/params_example_small_test.json
+.vscode/

@@ -1,0 +1,107 @@
+{
+    "pv_specification" : {
+        "fraction_houses_pv" : 0.28,
+        "surface_area_min" : 6,
+        "surface_area_max" : 16
+    },
+    "battery_specification" : {
+        "fraction_houses_pv_battery" : 0.06,
+        "capacity_kwh_mean" : 17.68,
+        "capacity_kwh_std" : 1.32,
+        "efficiency" : 0.9,
+        "power_kw_to_energy_kwh_ratio" : 4
+    },
+    "ev_specification" : {
+        "fraction_houses_ev" : 0.3,
+        "min_charge_rate_kwh" : 4.2,
+        "min_soc_percentage_v2g" : 0.3,
+        "capacity_kwh_mean" : 75,
+        "capacity_kwh_std" : 0.0,
+        "efficiency" : 0.95
+    },
+    "harmonize_profiles_to_year" : 2060,
+    "target_days": 365,
+    "fraction_houses_hp" : 0.23,
+    "hybrid_heatpump_specification" : {
+        "fraction_houses_hhp" : 0.77,
+        "gas_heater_efficiency" : 0.96,
+        "gass_thermal_power_mean" : 18000.0,
+        "gass_thermal_power_std" : 0.0
+    },
+    "gass_price_eur_m3" : 1.0,
+    "defalut_lon" : 51.532534,
+    "defalut_lat" : 3.882267,
+    "econnection_specification" : {
+        "fraction_houses_dyn" : 0.5,
+        "flat_rate_dyn" : 0.35,
+        "static_price_contract" :  0.08,
+        "fraction_houses_ems" : 0.5
+    },
+    "weather_data" : {
+        "path": "test/input_files/weather-data.csv",
+        "soil_temperature_column": "soil_temperature_celcius",
+        "solar_irradiance_column": "solar_radiation_W/m2",
+        "outside_temperature_column": "air_temperature_celcius",
+        "measure_data_location_lat" : 51.532534,
+        "measure_data_location_lon" : 3.882267
+    },
+    "da_market_data" : {
+        "path": "test/input_files/da_prices_example.csv",
+        "price_column" : "Day-ahead Price [EUR/MWh]",
+        "price_unit" : "EUR/MWh"
+    },
+    "dhw_profiles" : [
+        {
+            "profile_name" : "test_name_hw",
+            "profile_file" : "test/input_files/dhw_profiles_example.csv",
+            "amount_of_profiles" : 5,
+            "unit" : "L/s"
+        }
+    ],
+    "space_heating_profiles" : [
+        {
+            "profile_name" : "test_name_sh",
+            "profile_file" : "test/input_files/sh_profiles_example.csv",
+            "amount_of_profiles" : 5,
+            "unit" : "kW"
+        }
+    ],
+    "base_load_profiles" : [
+        {
+            "profile_file" : "test/input_files/base_load_profiles_example.csv",
+            "normalize" : false,
+            "unit" : "kW"
+        }
+    ],
+    "ev_profiles" : {
+        "profile_file" : "test/input_files/ev_profiles_example.csv",
+        "connection_start_date_time_column" : "ConnectionStartDateTime",
+        "connection_end_date_time_column" : "ConnectionEndDateTime",
+        "charging_station_identifier_column" : "household",
+        "energy_demand_column" : "Energy",
+        "unit" : "kWh",
+        "charging_power_column" : "Power"
+    },
+    "tou_specification" : {
+      "profile_file" : "test/input_files/tou_dataset.csv",
+      "from_date_time_col" : "from_tou_month_hour_val",
+      "to_date_time_col" : "to_tou_month_hour_val",
+      "value_col" : "tou_weight",
+      "fixed_tou_rate_eur" : 0.60
+    },
+    "building_isolation" : {
+        "isolation_params_file" : "test/input_files/building_isolation_params.csv",
+        "asset_type_col" : "ID",
+        "building_year_col" : "buildingYear",
+        "rcFloor_col" : "rcFloor",
+        "rcRoof_col" : "rcRoof",
+        "rcWall_col" : "rcWall",
+        "uDoor_col" : "uDoor",
+        "uWindow_col" : "uWindow",
+        "heatPumpThermalPower_col" : "heatPumpThermalPower",
+        "sh_buffer_volume_hp_col" : "sh_buffer_volume",
+        "dhw_buffer_volume_hp_col" : "dhw_buffer_volume",
+        "hybridheatPumpThermalPower_col" : "hybridheatPumpThermalPower",
+        "hhp_sh_buffer_volume_col" : "hhp_sh_buffer_volume"
+    }
+}

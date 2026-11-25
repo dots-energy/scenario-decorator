@@ -1,0 +1,32 @@
+[project]
+name = "dots_esdl_decorator"
+version = "1.0.1"
+description = "ESDL decorator CLI to add weather, markets and assets to an ESDL file"
+authors = [ { name = "Leo van Schooten", email = "l.g.t.v.schooten@tue.nl" }, { name = "Gijs Verhoeven", email = "g.verhoeven.1@tue.nl" } ]
+readme = "README.md"
+license = "MIT"
+license-files = [
+    "LICENSE"
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy==2.4.6",
+    "pandas==3.0.3",
+    "pyESDL==26.5",
+    "dataclasses-json==0.6.7"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dots-energy/scenario-decorator/"
+"Issues" = "https://github.com/dots-energy/scenario-decorator/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+dots-esdl-decorator = "dots_esdl_decorator.esdl_decorator:main"

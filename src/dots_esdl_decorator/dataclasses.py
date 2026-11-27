@@ -61,6 +61,7 @@ class EvSpecification:
     capacity_kwh_mean : float = 75
     capacity_kwh_std : float = 0.0
     efficiency : float = 0.95
+    fraction_ev_v2g : float = 0.0
 
 @dataclass_json
 @dataclass

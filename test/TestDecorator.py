@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 from pathlib import Path
 import pandas as pd
 import unittest
@@ -30,6 +31,15 @@ class Test(unittest.TestCase):
             if isinstance(e, Building):
                 if any(isinstance(a, asset_type) for a in e.asset):
                     ret_val += 1
+        return ret_val
+
+    def get_all_assets_of_type_in_building(self, asset_type):
+        ret_val = []
+        for e in self.esdl_decorator.energy_system.instance[0].area.asset:
+            if isinstance(e, Building):
+                for asset in e.asset:
+                    if isinstance(asset, asset_type):
+                        ret_val.append(asset)
         return ret_val
 
     def test_save_esdl_uses_provided_output_path(self):
@@ -99,6 +109,18 @@ class Test(unittest.TestCase):
 
         expected_ev = round(fraction_houses_ev * self.n_buildings)
         self.assertEqual(houses_with_ev, expected_ev)
+
+    def test_add_ev_v2g_counts(self):
+        fraction_houses_ev = 0.5
+        fraction_ev_v2g = 0.5
+
+        self.esdl_decorator.add_ev_chargingstation(EvSpecification(fraction_houses_ev=fraction_houses_ev, fraction_ev_v2g=fraction_ev_v2g), None)
+        ev_charging_stations : list[EVChargingStation] = self.get_all_assets_of_type_in_building(EVChargingStation)
+        houses_with_v2g = len([charging_station for charging_station in ev_charging_stations if json.loads(charging_station.description)['implements_v2g']])
+        expected_ev = round(fraction_houses_ev * self.n_buildings)
+        expected_ev_with_v2g = round(fraction_ev_v2g * expected_ev)
+
+        self.assertEqual(houses_with_v2g, expected_ev_with_v2g)
 
     def test_add_weather_data(self):
 

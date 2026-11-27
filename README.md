@@ -78,7 +78,8 @@ Below an overview of all paramters and their description can be found. Some gene
         "min_charge_rate_kw" : 4.2, // the minimal charge rate of the ev in KW
         "min_soc_percentage" : 0.3, // the minimal soc percentage an must always when implementing v2g behaviour
         "max_soc_kwh" : 75, // the maximum soc in kwh of the ev
-        "efficiency" : 0.95 // the (dis)charge efficiency of the evs
+        "efficiency" : 0.95, // the (dis)charge efficiency of the evs
+        "fraction_ev_v2g" : 0.5 // the fraction of ev charging stations implementing v2g beahviour
     },
     "ev_profiles" : {
         "profile_file" : "test/input_files/ev_profiles_example.csv", // path to the ev profiles dataset

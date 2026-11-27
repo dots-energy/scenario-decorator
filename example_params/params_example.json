@@ -17,7 +17,8 @@
         "min_soc_percentage_v2g" : 0.3,
         "capacity_kwh_mean" : 75,
         "capacity_kwh_std" : 0.0,
-        "efficiency" : 0.95
+        "efficiency" : 0.95,
+        "fraction_ev_v2g" : 0.5
     },
     "harmonize_profiles_to_year" : 2060,
     "target_days": 365,

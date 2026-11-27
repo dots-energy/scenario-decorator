@@ -674,6 +674,7 @@ class EsdlBuilder:
         if output_path is None:
             input_path = Path(self.esdl_name)
             output_path = Path('decorated_' + input_path.name)
+        logging.info(f"Done decorating ESDL file writing output to: {str(output_path)}")
         esh.save(str(output_path))
 
 

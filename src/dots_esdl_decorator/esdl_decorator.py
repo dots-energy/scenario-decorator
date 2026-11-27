@@ -437,8 +437,6 @@ class EsdlBuilder:
             house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
     
             dhw_names_options = hw_profile_names
-            profile_name = self.rng.choice(dhw_names_options)
-            dhw_profile_name = profile_name.replace("dhw_profiles_", "")
     
             for i in house_indices_hp:
                 house_indices.remove(i)
@@ -500,7 +498,7 @@ class EsdlBuilder:
                 demand_sh = self.connect_heating_demand_heatpump_to_profile(sh_profile_connecting_asset, house.assetType.lower())
     
                 dhw_names_options = hw_profile_names
-                profile_name = self.rng.choice(dhw_names_options)
+                profile_name = self.rng.choice(dhw_names_options) if len(dhw_names_options) > 0 else "No Profile"
                 demand_hw = self.connect_heating_demand_heatpump_to_profile(hw_profile_connecting_asset, profile_name)
     
                 # add to a random phase
@@ -671,11 +669,13 @@ class EsdlBuilder:
         self.energy_system.measures.measure.append(congestion_measure)
 
 
-    def save_esdl(self):
+    def save_esdl(self, output_path: str | Path | None = None):
         esh = EnergySystemHandler(energy_system=self.energy_system)
-        input_path = Path(self.esdl_name)
-        out_name = 'decorated_' + input_path.name
-        esh.save(out_name)
+        if output_path is None:
+            input_path = Path(self.esdl_name)
+            output_path = Path('decorated_' + input_path.name)
+        logging.info(f"Done decorating ESDL file writing output to: {str(output_path)}")
+        esh.save(str(output_path))
 
 
     @staticmethod
@@ -772,6 +772,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Decorate an ESDL file using JSON parameters")
     parser.add_argument('esdl', help='Path to the input ESDL file')
     parser.add_argument('params', help='Path to a JSON file with parameters')
+    parser.add_argument('--output', '--o', dest='output', help='Path where the output ESDL file will be stored')
     args = parser.parse_args()
 
     try:
@@ -814,7 +815,6 @@ def main() -> int:
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     hybrid_heatpump_specification = HybridHeatpumpSpecification.from_dict(params.get('hybrid_heatpump_specification',{} ))
-    fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
 
     congestion_management_active = params.get('congestion_management_active', False)
     esdl_decorator.add_congestion_measure(congestion_management_active)
@@ -832,7 +832,7 @@ def main() -> int:
     esdl_decorator.add_ev_chargingstation(ev_specification, ev_profile_params)
     econnection_spec = EConnectionSpecification.from_dict(params.get('econnection_specification',{}))
     esdl_decorator.add_econnection_information(econnection_spec)
-    esdl_decorator.save_esdl()
+    esdl_decorator.save_esdl(args.output)
 
     return 0
 

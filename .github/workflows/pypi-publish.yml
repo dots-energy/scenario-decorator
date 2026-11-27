@@ -1,20 +1,40 @@
 name: Publish Python 🐍 distribution 📦 to PyPI or TestPyPI
 
-on: push
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     name: Build distribution 📦
     runs-on: ubuntu-latest
+    outputs:
+      version_changed: ${{ steps.version.outputs.changed }}
 
     steps:
     - uses: actions/checkout@v7
       with:
         persist-credentials: false
+        fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v7
       with:
         python-version: "3.x"
+    - name: Check whether package version changed from previous commit
+      id: version
+      if: github.event_name == 'pull_request'
+      env:
+        PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      run: |
+        previous_version=$(git show "$PR_HEAD_SHA^:pyproject.toml" | python -c "import sys, tomllib; print(tomllib.load(sys.stdin.buffer)['project']['version'])")
+        head_version=$(git show "$PR_HEAD_SHA:pyproject.toml" | python -c "import sys, tomllib; print(tomllib.load(sys.stdin.buffer)['project']['version'])")
+        if [ "$previous_version" = "$head_version" ]; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        fi
     - name: Install pypa/build
       run: >-
         python3 -m
@@ -54,7 +74,7 @@ jobs:
   publish-to-testpypi:
     name: >-
       Publish Python 🐍 distribution 📦 to TestPyPI
-      if: ${{ github.event.pull_request.base.ref == 'main' }}
+    if: github.event_name == 'pull_request' && needs.build.outputs.version_changed == 'true'
     needs:
     - build
     runs-on: ubuntu-latest

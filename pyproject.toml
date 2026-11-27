@@ -1,6 +1,6 @@
 [project]
 name = "dots_esdl_decorator"
-version = "1.0.1"
+version = "1.0.2"
 description = "ESDL decorator CLI to add weather, markets and assets to an ESDL file"
 authors = [ { name = "Leo van Schooten", email = "l.g.t.v.schooten@tue.nl" }, { name = "Gijs Verhoeven", email = "g.verhoeven.1@tue.nl" } ]
 readme = "README.md"

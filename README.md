@@ -300,3 +300,7 @@ Parameters must be configured using a json file an example can be found here.
 ```
 dots-esdl-decorator test/input_files/test.esdl example_params/params_example.json
 ```
+By default, the decorated file is saved as `decorated_<input filename>` in the current directory. Use `--output` or `--o` to specify a destination:
+```
+dots-esdl-decorator test/input_files/test.esdl example_params/params_example.json --o output/decorated.esdl
+```

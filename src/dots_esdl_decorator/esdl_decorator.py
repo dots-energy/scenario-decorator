@@ -525,9 +525,8 @@ class EsdlBuilder:
         else:
             ret_val = 'fixed_contract'
         return ret_val
-        
 
-    
+
     def add_econnection_information(self, econnection_spec : EConnectionSpecification):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                   isinstance(esdl_element, Building)]
@@ -672,11 +671,15 @@ class EsdlBuilder:
         self.energy_system.measures.measure.append(congestion_measure)
 
 
-    def save_esdl(self, output_path: str | Path | None = None):
+    def save_esdl(self, output_path: str | None = None):
+        logging.info(str(Path(output_path).parent.is_dir()))
         esh = EnergySystemHandler(energy_system=self.energy_system)
         if output_path is None:
             input_path = Path(self.esdl_name)
             output_path = Path('decorated_' + input_path.name)
+        elif not Path(output_path).parent.exists():
+            output_path_pathlib = Path(output_path)
+            output_path_pathlib.parent.mkdir()
         logging.info(f"Done decorating ESDL file writing output to: {str(output_path)}")
         esh.save(str(output_path))
 

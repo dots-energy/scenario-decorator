@@ -525,9 +525,8 @@ class EsdlBuilder:
         else:
             ret_val = 'fixed_contract'
         return ret_val
-        
 
-    
+
     def add_econnection_information(self, econnection_spec : EConnectionSpecification):
         houses = [esdl_element for esdl_element in self.energy_system.eAllContents() if
                   isinstance(esdl_element, Building)]
@@ -566,6 +565,8 @@ class EsdlBuilder:
             n_ev = round(ev_specification.fraction_houses_ev * n_houses)
             # Generate random house indices
             house_indices_ev = self.rng.choice(range(0, n_houses), size=n_ev, replace=False)
+            n_v2g = round(n_ev * ev_specification.fraction_ev_v2g)
+            house_indices_ev_v2g = self.rng.choice(house_indices_ev, size=n_v2g, replace=False)
     
             ev_entities_in_data = []
             if ev_profile_params is not None and ev_profile_params.profile_file != '' and Path(ev_profile_params.profile_file).exists():
@@ -600,6 +601,7 @@ class EsdlBuilder:
                 ev_specification_dict.pop('capacity_kwh_mean', None)
                 ev_specification_dict.pop('capacity_kwh_std', None)
                 ev_specification_dict['capacity_kwh'] = self.rng.normal(ev_specification.capacity_kwh_mean, ev_specification.capacity_kwh_std)
+                ev_specification_dict['implements_v2g'] = True if house_index in house_indices_ev_v2g else False
                 charging_station = EVChargingStation(name='chargingstation_' + house.name, id=str(uuid.uuid4()),
                                                           power=power_w, fullLoadHours=int(annual_load/power_w),
                                                           powerFactor=powerfactor, assetType='privateEV', description=json.dumps(ev_specification_dict))
@@ -669,11 +671,14 @@ class EsdlBuilder:
         self.energy_system.measures.measure.append(congestion_measure)
 
 
-    def save_esdl(self, output_path: str | Path | None = None):
+    def save_esdl(self, output_path: str | None = None):
         esh = EnergySystemHandler(energy_system=self.energy_system)
         if output_path is None:
             input_path = Path(self.esdl_name)
             output_path = Path('decorated_' + input_path.name)
+        elif not Path(output_path).parent.exists():
+            output_path_pathlib = Path(output_path)
+            output_path_pathlib.parent.mkdir()
         logging.info(f"Done decorating ESDL file writing output to: {str(output_path)}")
         esh.save(str(output_path))
 

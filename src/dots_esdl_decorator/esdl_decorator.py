@@ -672,7 +672,6 @@ class EsdlBuilder:
 
 
     def save_esdl(self, output_path: str | None = None):
-        logging.info(str(Path(output_path).parent.is_dir()))
         esh = EnergySystemHandler(energy_system=self.energy_system)
         if output_path is None:
             input_path = Path(self.esdl_name)

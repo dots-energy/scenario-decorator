@@ -669,11 +669,12 @@ class EsdlBuilder:
         self.energy_system.measures.measure.append(congestion_measure)
 
 
-    def save_esdl(self):
+    def save_esdl(self, output_path: str | Path | None = None):
         esh = EnergySystemHandler(energy_system=self.energy_system)
-        input_path = Path(self.esdl_name)
-        out_name = 'decorated_' + input_path.name
-        esh.save(out_name)
+        if output_path is None:
+            input_path = Path(self.esdl_name)
+            output_path = Path('decorated_' + input_path.name)
+        esh.save(str(output_path))
 
 
     @staticmethod
@@ -770,6 +771,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Decorate an ESDL file using JSON parameters")
     parser.add_argument('esdl', help='Path to the input ESDL file')
     parser.add_argument('params', help='Path to a JSON file with parameters')
+    parser.add_argument('--output', '--o', dest='output', help='Path where the output ESDL file will be stored')
     args = parser.parse_args()
 
     try:
@@ -829,7 +831,7 @@ def main() -> int:
     esdl_decorator.add_ev_chargingstation(ev_specification, ev_profile_params)
     econnection_spec = EConnectionSpecification.from_dict(params.get('econnection_specification',{}))
     esdl_decorator.add_econnection_information(econnection_spec)
-    esdl_decorator.save_esdl()
+    esdl_decorator.save_esdl(args.output)
 
     return 0
 

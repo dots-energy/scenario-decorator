@@ -32,6 +32,19 @@ class Test(unittest.TestCase):
                     ret_val += 1
         return ret_val
 
+    def test_save_esdl_uses_provided_output_path(self):
+        output_path = Path("output") / "decorated.esdl"
+        with patch("dots_esdl_decorator.esdl_decorator.EnergySystemHandler") as handler_class:
+            self.esdl_decorator.save_esdl(output_path)
+
+        handler_class.return_value.save.assert_called_once_with(str(output_path))
+
+    def test_save_esdl_keeps_default_output_path(self):
+        with patch("dots_esdl_decorator.esdl_decorator.EnergySystemHandler") as handler_class:
+            self.esdl_decorator.save_esdl()
+
+        handler_class.return_value.save.assert_called_once_with("decorated_test.esdl")
+
     def test_add_pvs_and_batteries_counts_houses(self):
 
         pv_specification = PvSpecification(0.5)

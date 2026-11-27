@@ -437,8 +437,6 @@ class EsdlBuilder:
             house_indices_hp = self.rng.choice(house_indices, size=n_hp, replace=False)
     
             dhw_names_options = hw_profile_names
-            profile_name = self.rng.choice(dhw_names_options)
-            dhw_profile_name = profile_name.replace("dhw_profiles_", "")
     
             for i in house_indices_hp:
                 house_indices.remove(i)
@@ -500,7 +498,7 @@ class EsdlBuilder:
                 demand_sh = self.connect_heating_demand_heatpump_to_profile(sh_profile_connecting_asset, house.assetType.lower())
     
                 dhw_names_options = hw_profile_names
-                profile_name = self.rng.choice(dhw_names_options)
+                profile_name = self.rng.choice(dhw_names_options) if len(dhw_names_options) > 0 else "No Profile"
                 demand_hw = self.connect_heating_demand_heatpump_to_profile(hw_profile_connecting_asset, profile_name)
     
                 # add to a random phase
@@ -814,7 +812,6 @@ def main() -> int:
 
     fraction_houses_hp = params.get('fraction_houses_hp', 0.0)
     hybrid_heatpump_specification = HybridHeatpumpSpecification.from_dict(params.get('hybrid_heatpump_specification',{} ))
-    fraction_houses_dyn = params.get('fraction_houses_dyn', 0.0)
 
     congestion_management_active = params.get('congestion_management_active', False)
     esdl_decorator.add_congestion_measure(congestion_management_active)

@@ -1,6 +1,10 @@
 name: Publish Python 🐍 distribution 📦 to PyPI or TestPyPI
 
-on: push
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -54,7 +58,7 @@ jobs:
   publish-to-testpypi:
     name: >-
       Publish Python 🐍 distribution 📦 to TestPyPI
-      if: ${{ github.event.pull_request.base.ref == 'main' }}
+    if: github.event_name == 'pull_request'
     needs:
     - build
     runs-on: ubuntu-latest
